@@ -1,0 +1,10 @@
+BHL — SITE DE TEST COMPLET
+
+1. Extraire tous les fichiers dans un même dossier.
+2. Ouvrir index.html dans Chrome.
+3. Utiliser le menu pour naviguer entre Actualités, FORBES et Équipes.
+
+Les pages FORBES et Équipes sont configurées pour interroger l’API Google Apps Script déjà déployée.
+Ce site est un prototype local : il n’est pas encore publié sur Internet.
+
+Si les données ne chargent pas, vérifiez que le déploiement Apps Script reste accessible et que l’URL /exec est inchangée.
