@@ -89,6 +89,25 @@ select,input,.search{background:#ffffff !important;color:#171717 !important;bord
   border:1px solid #ffffff !important;
 }
 </style>
+
+<style>
+/* BHL — fond gris pâle, cartes blanches et titres aux couleurs de l'équipe */
+:root{--bg:#eef0f2!important;--panel:#fff!important;--panel2:#f7f8f9!important;--line:#dfe2e6!important;--text:#191919!important;--muted:#626b75!important;--team-color:#cc0000;--team-ink:#fff}
+body{background:#eef0f2!important;color:#191919!important}
+.card,.stat,.tablewrap,.banner,.status,.table-wrap,.hero-card,.news-card,.side,.panel,.table-toolbar{background:#fff!important;color:#191919!important;border-color:#dfe2e6!important;box-shadow:0 2px 10px #00000008}
+.banner{background:#fff!important;border-left:5px solid var(--team-color)!important}
+.section-head h3,.card h3,.section-head h2{background:var(--team-color)!important;color:var(--team-ink)!important;padding:9px 13px!important;border-radius:7px!important;display:inline-block!important}
+.kicker{color:var(--team-color)!important}
+th,table th{background:var(--team-color)!important;color:#fff!important;border-color:var(--team-color)!important}
+td,table td{color:#252525!important;border-color:#e7e9ec!important}
+tbody tr:hover{background:#f5f6f7!important}
+select,input,.search{background:#fff!important;color:#191919!important;border-color:#d4d8dd!important}
+.tab{color:#626b75!important}.tab.active{color:var(--team-color)!important;border-bottom-color:var(--team-color)!important}
+.teamchip{background:#fff!important;color:#4b535c!important;border-color:#dfe2e6!important}
+.teamchip:hover,.teamchip.active{background:var(--team-color)!important;color:#fff!important;border-color:var(--team-color)!important}
+.pill{background:#f1f2f4!important;color:#343a40!important;border-color:#dfe2e6!important}
+.footer{color:#626b75!important;border-color:#dfe2e6!important}
+</style>
 </head><body><header class="topbar"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8494aa">/ LIGUE</span></span></a><nav class="navlinks"><a href="bhl-accueil-forbes-connecte.html">Classement</a><a href="bhl-equipes-connectees.html">Équipes</a><a href="index.html">Actualités</a><a href="bhl-equipes-connectees.html#fiche">Palmarès</a></nav><span class="status" id="apiStatus">● Données du classeur</span></div></header><main class="wrap"><section class="hero"><div><div class="eyebrow">Ligue de hockey · Depuis la saison 1</div><h1>La passion du hockey.<br><span style="color:#ff6877">La fierté de la BHL.</span></h1><p>Classements, statistiques, équipes et palmarès : retrouvez au même endroit l’univers de la BHL.</p></div><aside class="hero-card"><div><div class="card-label">Équipe au sommet du classement</div><div class="big-stat">#1 <span style="font-size:20px;color:#ff6877;letter-spacing:0">MONTRÉAL</span></div><div style="font-size:12px;color:var(--muted)">Canadiens · selon l’onglet officiel FORBES</div></div><div class="stat-row"><div><b>313–107</b>Victoires–défaites</div><div><b>74,5 %</b>Pourcentage de victoires</div><div><b>7</b>Rondes gagnées</div></div></aside></section><section id="classement"><div class="section-head"><div><div class="eyebrow">Les chiffres de la ligue</div><h2>Classement général</h2><p>Les 16 équipes, classées selon le rang indiqué dans FORBES.</p></div><div class="updated" id="sourceStatus">Source : classeur BHL · onglet FORBES</div></div><div class="table-wrap"><div class="table-toolbar"><span>CLASSEMENT BHL <span class="pill">16 équipes</span></span><input class="search" id="teamSearch" type="search" placeholder="Rechercher une équipe…" aria-label="Rechercher une équipe"></div><table><thead><tr><th>Rang</th><th>Équipe</th><th style="text-align:right">Victoires</th><th style="text-align:right">Défaites</th><th style="text-align:right">% victoires</th><th style="text-align:right">Valeur</th><th style="text-align:right">Coupes Béliveau</th><th style="text-align:right">Trophées</th></tr></thead><tbody id="teams"><tr data-name="montréal canadiens"><td class="rank">01</td><td><div class="team"><span class="crest">MC</span><span class="team-name">MONTRÉAL CANADIENS</span></div></td><td class="num">313</td><td class="num">107</td><td class="num strong">74.5%</td><td class="num">$1,091.60 M</td><td class="num">1</td><td class="num">20</td></tr>
 <tr data-name="ottawa senators"><td class="rank">02</td><td><div class="team"><span class="crest">OS</span><span class="team-name">OTTAWA SENATORS</span></div></td><td class="num">270</td><td class="num">173</td><td class="num strong">60.9%</td><td class="num">$973.80 M</td><td class="num">1</td><td class="num">17</td></tr>
 <tr data-name="hartford whalers"><td class="rank">03</td><td><div class="team"><span class="crest">HW</span><span class="team-name">HARTFORD WHALERS</span></div></td><td class="num">279</td><td class="num">160</td><td class="num strong">63.6%</td><td class="num">$959.05 M</td><td class="num">1</td><td class="num">14</td></tr>
