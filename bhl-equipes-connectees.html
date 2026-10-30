@@ -52,8 +52,48 @@ select,input,.search{background:#ffffff !important;color:#171717 !important;bord
 .news-card:hover{border-color:#cc0000 !important}
 .footer{border-color:#e1e3e6 !important}
 </style>
+<style>
+/* Navigation mobile BHL */
+.menu-toggle{display:none;align-items:center;justify-content:center;gap:8px;background:#cc0000;color:#fff;border:0;border-radius:8px;padding:10px 13px;font-weight:800;font-size:14px;cursor:pointer}
+.menu-toggle .hamburger{font-size:19px;line-height:1}
+@media(max-width:760px){
+  .nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:12px!important;position:relative}
+  .brand{margin-right:auto}
+  .menu-toggle{display:flex;order:2}
+  .nav>nav.links,.nav>nav.navlinks{display:none!important;order:4;flex:0 0 100%;width:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border:1px solid #e1e3e6;border-radius:10px;padding:6px;margin:0}
+  .nav>nav.links.is-open,.nav>nav.navlinks.is-open{display:flex!important}
+  .nav>nav.links a,.nav>nav.navlinks a{display:block;padding:13px 12px;color:#171717!important;border-bottom:1px solid #eceef0;text-decoration:none}
+  .nav>nav.links a:last-child,.nav>nav.navlinks a:last-child{border-bottom:0}
+  .account,.nav>.status,.nav>.kicker{order:3}
+  .account{margin-left:0}
+}
+</style>
+<style>
+/* BHL RED HEADER */
+.top,.topbar{
+  background:#CC0000 !important;
+  border-bottom-color:#A80000 !important;
+}
+.top .brand,.topbar .brand,
+.top .navlinks,.topbar .navlinks,
+.top .links,.topbar .links,
+.top .navlinks a,.topbar .navlinks a,
+.top .links a,.topbar .links a{
+  color:#ffffff !important;
+}
+.top .navlinks a:hover,.topbar .navlinks a:hover,
+.top .links a:hover,.topbar .links a:hover{
+  color:#ffffff !important;
+  opacity:.82;
+}
+.top .menu-toggle,.topbar .menu-toggle{
+  background:#ffffff !important;
+  color:#CC0000 !important;
+  border:1px solid #ffffff !important;
+}
+</style>
 </head><body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="bhl-accueil-actualites.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a></nav><span class="kicker">16 organisations</span></div></header>
+<header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a></nav><span class="kicker">16 organisations</span></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>Les statistiques et l’historique sont chargés depuis ton Google Sheets. Choisis une organisation pour consulter sa fiche.</p></div><div class="selectbox"><label for="teamSelect">Choose a team</label><select id="teamSelect"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div><div class="ranktag">RANG FORBES<b id="forbesRank">—</b></div></div>
@@ -109,4 +149,38 @@ if(currentTab==='seasons'){$('#panel').innerHTML=`<div class="section-head"><div
 if(currentTab==='honours'){$('#panel').innerHTML=`<div class="section-head"><div><h3>Palmarès et distinctions</h3><p>${t.honours.length} distinction(s) répertoriée(s) dans le classeur.</p></div></div><div class="tablewrap"><table><thead><tr><th>Saison</th><th>Équipe</th><th>Distinction</th><th>Gagnant</th><th>Détail</th></tr></thead><tbody>${t.honours.map(h=>`<tr><td><b>${esc(h.season)}</b></td><td>${teamLogo(h.team)}${esc(h.team)}</td><td><span class="pill">${esc(h.award)}</span></td><td>${esc(h.winner||'—')}</td><td>${esc(h.detail||'—')}</td></tr>`).join('')||'<tr><td colspan="5">Aucune distinction répertoriée.</td></tr>'}</tbody></table></div>`;}}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{currentTab=b.dataset.tab;renderPanel()}));
 (async()=>{try{status('Loading live data from Google Sheets…');const [teamsResp,forbesResp]=await Promise.all([jsonp('TEAMS'),jsonp('FORBES')]);if(!teamsResp.ok||!forbesResp.ok)throw new Error('L’API a renvoyé une réponse invalide.');forbesData=(forbesResp.data?.rows||[]).slice(2);for(const t of TEAMS){const raw=teamsResp.teams?.[t.sheet];if(raw&&!raw.error)teamData[t.sheet]=parseTeam(t.sheet,raw)}drawTeams();if(!Object.keys(teamData).length)throw new Error('Aucune fiche d’équipe n’a été reçue.');status('Connected · données reçues pour '+Object.keys(teamData).length+' équipes depuis Google Sheets.','ok');choose(selected); }catch(e){status('Connexion impossible : '+e.message+'. Vérifie que la version déployée inclut le code JSONP.','error');$('#teamName').textContent='Connexion non disponible';$('#panel').innerHTML='<div class="card">Les données n’ont pas pu être chargées. Recharge la page après avoir vérifié le déploiement de l’API.</div>';}})();
-</script></body></html>
+</script>
+<script>
+(function(){
+  const nav = document.querySelector('.nav');
+  const links = nav && nav.querySelector('nav.links, nav.navlinks');
+  if (!nav || !links || nav.querySelector('.menu-toggle')) return;
+  const button = document.createElement('button');
+  button.className = 'menu-toggle';
+  button.type = 'button';
+  button.setAttribute('aria-expanded','false');
+  button.setAttribute('aria-label','Ouvrir le menu');
+  button.innerHTML = '<span class="hamburger" aria-hidden="true">☰</span><span>MENU</span>';
+  links.id = links.id || 'bhl-mobile-navigation';
+  button.setAttribute('aria-controls', links.id);
+  const brand = nav.querySelector('.brand');
+  if (brand && brand.nextSibling) nav.insertBefore(button, brand.nextSibling);
+  else nav.insertBefore(button, links);
+  button.addEventListener('click', function(){
+    const open = links.classList.toggle('is-open');
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    button.querySelector('.hamburger').textContent = open ? '✕' : '☰';
+  });
+  links.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      links.classList.remove('is-open');
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label','Ouvrir le menu');
+      button.querySelector('.hamburger').textContent = '☰';
+    });
+  });
+})();
+</script>
+
+</body></html>

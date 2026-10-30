@@ -51,6 +51,46 @@ select,input,.search{background:#ffffff !important;color:#171717 !important;bord
 .news-card:hover{border-color:#cc0000 !important}
 .footer{border-color:#e1e3e6 !important}
 </style>
+<style>
+/* Navigation mobile BHL */
+.menu-toggle{display:none;align-items:center;justify-content:center;gap:8px;background:#cc0000;color:#fff;border:0;border-radius:8px;padding:10px 13px;font-weight:800;font-size:14px;cursor:pointer}
+.menu-toggle .hamburger{font-size:19px;line-height:1}
+@media(max-width:760px){
+  .nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:12px!important;position:relative}
+  .brand{margin-right:auto}
+  .menu-toggle{display:flex;order:2}
+  .nav>nav.links,.nav>nav.navlinks{display:none!important;order:4;flex:0 0 100%;width:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border:1px solid #e1e3e6;border-radius:10px;padding:6px;margin:0}
+  .nav>nav.links.is-open,.nav>nav.navlinks.is-open{display:flex!important}
+  .nav>nav.links a,.nav>nav.navlinks a{display:block;padding:13px 12px;color:#171717!important;border-bottom:1px solid #eceef0;text-decoration:none}
+  .nav>nav.links a:last-child,.nav>nav.navlinks a:last-child{border-bottom:0}
+  .account,.nav>.status,.nav>.kicker{order:3}
+  .account{margin-left:0}
+}
+</style>
+<style>
+/* BHL RED HEADER */
+.top,.topbar{
+  background:#CC0000 !important;
+  border-bottom-color:#A80000 !important;
+}
+.top .brand,.topbar .brand,
+.top .navlinks,.topbar .navlinks,
+.top .links,.topbar .links,
+.top .navlinks a,.topbar .navlinks a,
+.top .links a,.topbar .links a{
+  color:#ffffff !important;
+}
+.top .navlinks a:hover,.topbar .navlinks a:hover,
+.top .links a:hover,.topbar .links a:hover{
+  color:#ffffff !important;
+  opacity:.82;
+}
+.top .menu-toggle,.topbar .menu-toggle{
+  background:#ffffff !important;
+  color:#CC0000 !important;
+  border:1px solid #ffffff !important;
+}
+</style>
 </head><body>
 <header class="topbar"><div class="wrap nav"><a class="brand" href="#top"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ LIGUE</span></span></a><nav class="links"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">Classement</a><a href="bhl-equipes-connectees.html">Équipes</a><a href="bhl-equipes-connectees.html#fiche">Palmarès</a><a href="bhl-accueil-forbes-connecte.html">Forbes</a></nav><a class="account" href="#connexion">CONNEXION ↗</a></div></header>
 <main class="wrap" id="top"><section class="intro"><div><div class="kicker">La ligue · Les coulisses · La compétition</div><h1>Les nouvelles de la <span style="color:#ff6877">BHL.</span></h1><p>Toute l’actualité de la ligue, directement au cœur de l’action.</p></div><span class="season">● Saison BHL</span></section>
@@ -62,4 +102,38 @@ select,input,.search{background:#ffffff !important;color:#171717 !important;bord
 </div><div class="empty-note">Les cartes ci-dessus sont des exemples de présentation, pas des nouvelles réelles. Le contenu sera alimenté par les articles soumis par les participants et approuvés par un administrateur.</div></section>
 <section class="lower"><div class="panel"><div class="kicker">Votre voix dans la ligue</div><h2>Vous avez une nouvelle à partager?</h2><p>Les participants pourront se connecter, rédiger un article et proposer une image. Chaque publication sera envoyée à l’administration pour approbation avant d’être visible publiquement.</p><a class="button" href="#connexion">CONNEXION / SOUMETTRE UN ARTICLE</a><div class="note">Fonctionnalité prévue — le formulaire et les comptes ne sont pas encore connectés.</div></div><div class="panel" id="classement"><div class="kicker">À consulter</div><h2>Le reste de la BHL</h2><div class="rank-mini"><span class="rank-num">01</span><span class="rank-name">Classement FORBES</span><span class="rank-stat">16 équipes ↗</span></div><div class="rank-mini" id="equipes"><span class="rank-num">02</span><span class="rank-name">Fiches des équipes</span><span class="rank-stat">Bientôt ↗</span></div><div class="rank-mini" id="palmares"><span class="rank-num">03</span><span class="rank-name">Trophées et palmarès</span><span class="rank-stat">Bientôt ↗</span></div><div class="rank-mini" id="forbes"><span class="rank-num">04</span><span class="rank-name">Statistiques FORBES</span><span class="rank-stat">Voir la page ↗</span></div><div class="note">Ces liens seront reliés aux pages correspondantes lors de l’intégration du site.</div></div></section>
 <footer class="footer"><span>© BHL · Prototype de la page d’accueil consacrée aux actualités</span><span>Maquette visuelle — aucune connexion à une base de données pour le moment.</span></footer></main>
-<script>document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.news-card').forEach(card=>card.style.display=(btn.dataset.cat==='Toutes'||card.dataset.category===btn.dataset.cat)?'':'none')}));</script></body></html>
+<script>document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.news-card').forEach(card=>card.style.display=(btn.dataset.cat==='Toutes'||card.dataset.category===btn.dataset.cat)?'':'none')}));</script>
+<script>
+(function(){
+  const nav = document.querySelector('.nav');
+  const links = nav && nav.querySelector('nav.links, nav.navlinks');
+  if (!nav || !links || nav.querySelector('.menu-toggle')) return;
+  const button = document.createElement('button');
+  button.className = 'menu-toggle';
+  button.type = 'button';
+  button.setAttribute('aria-expanded','false');
+  button.setAttribute('aria-label','Ouvrir le menu');
+  button.innerHTML = '<span class="hamburger" aria-hidden="true">☰</span><span>MENU</span>';
+  links.id = links.id || 'bhl-mobile-navigation';
+  button.setAttribute('aria-controls', links.id);
+  const brand = nav.querySelector('.brand');
+  if (brand && brand.nextSibling) nav.insertBefore(button, brand.nextSibling);
+  else nav.insertBefore(button, links);
+  button.addEventListener('click', function(){
+    const open = links.classList.toggle('is-open');
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    button.querySelector('.hamburger').textContent = open ? '✕' : '☰';
+  });
+  links.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      links.classList.remove('is-open');
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label','Ouvrir le menu');
+      button.querySelector('.hamburger').textContent = '☰';
+    });
+  });
+})();
+</script>
+
+</body></html>

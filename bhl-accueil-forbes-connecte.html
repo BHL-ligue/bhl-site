@@ -49,6 +49,46 @@ select,input,.search{background:#ffffff !important;color:#171717 !important;bord
 .news-card:hover{border-color:#cc0000 !important}
 .footer{border-color:#e1e3e6 !important}
 </style>
+<style>
+/* Navigation mobile BHL */
+.menu-toggle{display:none;align-items:center;justify-content:center;gap:8px;background:#cc0000;color:#fff;border:0;border-radius:8px;padding:10px 13px;font-weight:800;font-size:14px;cursor:pointer}
+.menu-toggle .hamburger{font-size:19px;line-height:1}
+@media(max-width:760px){
+  .nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:12px!important;position:relative}
+  .brand{margin-right:auto}
+  .menu-toggle{display:flex;order:2}
+  .nav>nav.links,.nav>nav.navlinks{display:none!important;order:4;flex:0 0 100%;width:100%;flex-direction:column;align-items:stretch;gap:0;background:#fff;border:1px solid #e1e3e6;border-radius:10px;padding:6px;margin:0}
+  .nav>nav.links.is-open,.nav>nav.navlinks.is-open{display:flex!important}
+  .nav>nav.links a,.nav>nav.navlinks a{display:block;padding:13px 12px;color:#171717!important;border-bottom:1px solid #eceef0;text-decoration:none}
+  .nav>nav.links a:last-child,.nav>nav.navlinks a:last-child{border-bottom:0}
+  .account,.nav>.status,.nav>.kicker{order:3}
+  .account{margin-left:0}
+}
+</style>
+<style>
+/* BHL RED HEADER */
+.top,.topbar{
+  background:#CC0000 !important;
+  border-bottom-color:#A80000 !important;
+}
+.top .brand,.topbar .brand,
+.top .navlinks,.topbar .navlinks,
+.top .links,.topbar .links,
+.top .navlinks a,.topbar .navlinks a,
+.top .links a,.topbar .links a{
+  color:#ffffff !important;
+}
+.top .navlinks a:hover,.topbar .navlinks a:hover,
+.top .links a:hover,.topbar .links a:hover{
+  color:#ffffff !important;
+  opacity:.82;
+}
+.top .menu-toggle,.topbar .menu-toggle{
+  background:#ffffff !important;
+  color:#CC0000 !important;
+  border:1px solid #ffffff !important;
+}
+</style>
 </head><body><header class="topbar"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8494aa">/ LIGUE</span></span></a><nav class="navlinks"><a href="bhl-accueil-forbes-connecte.html">Classement</a><a href="bhl-equipes-connectees.html">Équipes</a><a href="index.html">Actualités</a><a href="bhl-equipes-connectees.html#fiche">Palmarès</a></nav><span class="status" id="apiStatus">● Données du classeur</span></div></header><main class="wrap"><section class="hero"><div><div class="eyebrow">Ligue de hockey · Depuis la saison 1</div><h1>La passion du hockey.<br><span style="color:#ff6877">La fierté de la BHL.</span></h1><p>Classements, statistiques, équipes et palmarès : retrouvez au même endroit l’univers de la BHL.</p></div><aside class="hero-card"><div><div class="card-label">Équipe au sommet du classement</div><div class="big-stat">#1 <span style="font-size:20px;color:#ff6877;letter-spacing:0">MONTRÉAL</span></div><div style="font-size:12px;color:var(--muted)">Canadiens · selon l’onglet officiel FORBES</div></div><div class="stat-row"><div><b>313–107</b>Victoires–défaites</div><div><b>74,5 %</b>Pourcentage de victoires</div><div><b>7</b>Rondes gagnées</div></div></aside></section><section id="classement"><div class="section-head"><div><div class="eyebrow">Les chiffres de la ligue</div><h2>Classement général</h2><p>Les 16 équipes, classées selon le rang indiqué dans FORBES.</p></div><div class="updated" id="sourceStatus">Source : classeur BHL · onglet FORBES</div></div><div class="table-wrap"><div class="table-toolbar"><span>CLASSEMENT BHL <span class="pill">16 équipes</span></span><input class="search" id="teamSearch" type="search" placeholder="Rechercher une équipe…" aria-label="Rechercher une équipe"></div><table><thead><tr><th>Rang</th><th>Équipe</th><th style="text-align:right">Victoires</th><th style="text-align:right">Défaites</th><th style="text-align:right">% victoires</th><th style="text-align:right">Valeur</th><th style="text-align:right">Coupes Béliveau</th><th style="text-align:right">Trophées</th></tr></thead><tbody id="teams"><tr data-name="montréal canadiens"><td class="rank">01</td><td><div class="team"><span class="crest">MC</span><span class="team-name">MONTRÉAL CANADIENS</span></div></td><td class="num">313</td><td class="num">107</td><td class="num strong">74.5%</td><td class="num">$1,091.60 M</td><td class="num">1</td><td class="num">20</td></tr>
 <tr data-name="ottawa senators"><td class="rank">02</td><td><div class="team"><span class="crest">OS</span><span class="team-name">OTTAWA SENATORS</span></div></td><td class="num">270</td><td class="num">173</td><td class="num strong">60.9%</td><td class="num">$973.80 M</td><td class="num">1</td><td class="num">17</td></tr>
 <tr data-name="hartford whalers"><td class="rank">03</td><td><div class="team"><span class="crest">HW</span><span class="team-name">HARTFORD WHALERS</span></div></td><td class="num">279</td><td class="num">160</td><td class="num strong">63.6%</td><td class="num">$959.05 M</td><td class="num">1</td><td class="num">14</td></tr>
@@ -71,4 +111,38 @@ document.getElementById('teamSearch').addEventListener('input',filterTeams);
 function setApiStatus(ok, message){const badge=document.getElementById('apiStatus');badge.textContent=ok?'● Connexion API active':'● Mode aperçu';badge.style.color=ok?'#a9f1cb':'#ffd39a';badge.style.background=ok?'#15352d':'#3b2d1b';document.getElementById('sourceStatus').textContent=ok?'Source en direct : Google Sheets · FORBES':'Source : instantané local · API non confirmée';document.getElementById('footerStatus').textContent=message;}
 function jsonp(url, timeoutMs=12000){return new Promise((resolve,reject)=>{const callback='bhlJsonp_'+Date.now()+'_'+Math.floor(Math.random()*100000);const script=document.createElement('script');let done=false;const timer=setTimeout(()=>finish(new Error('Délai de connexion dépassé')),timeoutMs);function finish(err,data){if(done)return;done=true;clearTimeout(timer);delete window[callback];script.remove();if(err)reject(err);else resolve(data)}window[callback]=data=>finish(null,data);script.onerror=()=>finish(new Error('Impossible de charger la réponse API'));script.src=url+(url.includes('?')?'&':'?')+'sheet=FORBES&callback='+callback;document.head.appendChild(script);});}
 function renderForbes(payload){if(!payload||payload.ok!==true||!payload.data||!Array.isArray(payload.data.rows))throw new Error('Réponse API inattendue');const rows=payload.data.rows;const data=rows.slice(2).filter(r=>r&&r[2]&&String(r[2]).trim()).map(r=>({displayRank:r[0],name:String(r[2]).trim(),rank:Number(String(r[3]).replace(',','.')),value:r[4],percent:r[5],wins:r[6],losses:r[7],cups:r[8],trophies:r[13]})).filter(r=>Number.isFinite(r.rank)).sort((a,b)=>a.rank-b.rank);if(data.length<1)throw new Error('Aucune équipe trouvée dans FORBES');const tbody=document.getElementById('teams');tbody.innerHTML='';const abbreviations={'MONTRÉAL CANADIENS':'MC','OTTAWA SENATORS':'OS','HARTFORD WHALERS':'HW','COLORADO AVALANCHE':'CA','DETROIT RED WINGS':'DRW','NASHVILLE PREDATORS':'NP','ATLANTA THRASHERS':'AT','ANAHEIM MIGHTY DUCKS':'AMD','MINNESOTA NORTH STARS':'MNS','FLORIDA PANTHERS':'FP','BOSTON BRUINS':'BB','QUÉBEC NORDIQUES':'QN','NEW YORK RANGERS':'NYR','CALIFORNIA GOLDEN SEALS':'CGS','TORONTO MAPLE LEAFS':'TML','CHICAGO BLACKHAWKS':'CB'};const fmtNum=v=>{const n=Number(String(v??'').replace(/[$,%\s]/g,'').replace(',','.'));return Number.isFinite(n)?n.toLocaleString('fr-CA'):String(v??'—')};const fmtPercent=v=>{const raw=String(v??'').trim();if(raw.includes('%'))return raw.replace('.',',');const n=Number(raw.replace(',','.'));return Number.isFinite(n)?(n<=1?n*100:n).toLocaleString('fr-CA',{maximumFractionDigits:1,minimumFractionDigits:1})+'%':raw||'—'};const fmtValue=v=>{const raw=String(v??'').trim();if(!raw)return '—';if(raw.includes('$'))return raw+(raw.toUpperCase().includes('M')?'':' M');const n=Number(raw.replace(/\s/g,'').replace(',','.'));return Number.isFinite(n)?'$'+n.toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2})+' M':raw};data.forEach((r,i)=>{const name=r.name.toLocaleUpperCase('fr');const tr=document.createElement('tr');tr.dataset.name=name.toLocaleLowerCase('fr');const td=(cls,text)=>{const e=document.createElement('td');e.className=cls;e.textContent=text??'—';return e};tr.append(td('rank',String(r.rank).padStart(2,'0')));const team=document.createElement('td');const wrap=document.createElement('div');wrap.className='team';const crest=document.createElement('span');crest.className='crest';crest.textContent=abbreviations[name]||name.split(/\s+/).map(x=>x[0]).join('').slice(0,3);const label=document.createElement('span');label.className='team-name';label.textContent=name;wrap.append(crest,label);team.append(wrap);tr.append(team);tr.append(td('num',fmtNum(r.wins)));tr.append(td('num',fmtNum(r.losses)));tr.append(td('num strong',fmtPercent(r.percent)));tr.append(td('num',fmtValue(r.value)));tr.append(td('num',fmtNum(r.cups)));tr.append(td('num',fmtNum(r.trophies)));tbody.append(tr)});filterTeams();setApiStatus(true,'Données chargées depuis Google Sheets · '+new Date().toLocaleString('fr-CA'));}
-jsonp(BHL_API_URL).then(renderForbes).catch(err=>{setApiStatus(false,'Impossible de confirmer la connexion en direct. Les données affichées sont un instantané. Détail : '+err.message);});</script></body></html>
+jsonp(BHL_API_URL).then(renderForbes).catch(err=>{setApiStatus(false,'Impossible de confirmer la connexion en direct. Les données affichées sont un instantané. Détail : '+err.message);});</script>
+<script>
+(function(){
+  const nav = document.querySelector('.nav');
+  const links = nav && nav.querySelector('nav.links, nav.navlinks');
+  if (!nav || !links || nav.querySelector('.menu-toggle')) return;
+  const button = document.createElement('button');
+  button.className = 'menu-toggle';
+  button.type = 'button';
+  button.setAttribute('aria-expanded','false');
+  button.setAttribute('aria-label','Ouvrir le menu');
+  button.innerHTML = '<span class="hamburger" aria-hidden="true">☰</span><span>MENU</span>';
+  links.id = links.id || 'bhl-mobile-navigation';
+  button.setAttribute('aria-controls', links.id);
+  const brand = nav.querySelector('.brand');
+  if (brand && brand.nextSibling) nav.insertBefore(button, brand.nextSibling);
+  else nav.insertBefore(button, links);
+  button.addEventListener('click', function(){
+    const open = links.classList.toggle('is-open');
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    button.querySelector('.hamburger').textContent = open ? '✕' : '☰';
+  });
+  links.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      links.classList.remove('is-open');
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label','Ouvrir le menu');
+      button.querySelector('.hamburger').textContent = '☰';
+    });
+  });
+})();
+</script>
+
+</body></html>
