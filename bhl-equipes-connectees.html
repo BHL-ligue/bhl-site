@@ -586,7 +586,7 @@ function renderOrgRecords(){
       const hasSeason=section.entries.some(r=>r.season);
       return '<section class="org-record-card"><h4>'+esc(section.title)+'</h4><div class="tablewrap"><table><thead><tr><th>Rang BHL</th><th>Équipe</th><th>Total</th>'+(hasSeason?'<th>Saison</th>':'')+'</tr></thead><tbody>'+rows.map(r=>'<tr><td>'+r.rank+'</td><td>'+teamLogo(r.team)+esc(r.team)+'</td><td><b>'+esc(r.value)+'</b></td>'+(hasSeason?'<td>'+esc(r.season||'—')+'</td>':'')+'</tr>').join('')+'</tbody></table></div></section>';
     }).filter(Boolean);
-    $('#panel').innerHTML='<div class="section-head"><div><h3>Records de l’organisation</h3><p>Pour être dans la liste des records, il faut être dans le top 100. '+found+' résultat(s) dans '+cards.length+' classement(s). Les anciennes identités de la franchise sont incluses.</p></div></div>'+(cards.length?'<div class="org-record-grid">'+cards.join('')+'</div>':'<div class="card">Aucun record répertorié pour cette organisation.</div>');
+    $('#panel').innerHTML='<div class="section-head"><div><h3>Records de l’organisation</h3><p>'+found+' résultat(s) dans '+cards.length+' classement(s). Les anciennes identités de la franchise sont incluses.</p></div></div>'+(cards.length?'<div class="org-record-grid">'+cards.join('')+'</div>':'<div class="card">Aucun record répertorié pour cette organisation.</div>');
   }).catch(e=>{
     if(selected===requested&&currentTab==='records')$('#panel').innerHTML='<div class="card">Impossible de charger les records : '+esc(e.message)+'</div>';
   });
@@ -666,4 +666,4 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{cur
 })();
 </script>
 
-<script src="bhl-trades.js"></script></body></html>
+<script src="bhl-trades.js?v=player-history-20261101"></script></body></html>
