@@ -100,7 +100,13 @@ function parseRows(rows){const records=[];for(const r of rows.slice(1)){if(!Arra
  let trophy=cells[4]||cells[2]||cells[3]||'';let season=cells[5]||cells[3]||cells[4]||'';let team=cells[8]||cells[6]||'';let person=cells[9]||cells[7]||'';let code=cells[12]||cells[10]||'';let stats=cells[10]||cells[8]||'';
  if(!/\d{4}\s*[-–]\s*\d{2,4}/.test(season)){const si=cells.findIndex(x=>/^\d{4}\s*[-–]\s*\d{2,4}$/.test(x));if(si>=0)season=cells[si]}
  const finalist=cells.some(x=>norm(x).startsWith('FINALISTE'))||norm(trophy).startsWith('FINALISTE');
- const medal=medalType(trophy)||medalType(cells.join(' '));const international=medalGroup(trophy)||medalGroup(cells.join(' '));
+ const medal = medalType(trophy) || medalType(cells.join(' '));
+
+let international = medalGroup(trophy);
+
+if (!international) {
+  international = medalGroup(cells.join(' '));
+}
  if(international)trophy=international;
  if(finalist){const mark=cells.find(x=>norm(x).startsWith('FINALISTE'));if(mark)trophy=mark.replace(/^FINALISTE\s*[:\-–]?\s*/i,'').trim()||trophy}
  if(!trophy||!season||!person||!team)continue;
