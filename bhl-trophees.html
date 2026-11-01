@@ -16,18 +16,82 @@ const TROPHY_IMAGES={
  'CAREY PRICE':'carey-price.png','DOUG HARVEY':'doug-harvey.png','EMILE BUTCH BOUCHARD':'emile-butch-bouchard.png','GEORGE VEZINA':'george-vezina.png','GUY CARBONNEAU':'guy-carbonneau.png','HENRI RICHARD':'henri-richard.png','JACQUES DEMERS':'jacques-demers.png','JACQUES PLANTE':'jacques-plante.png','JOHNNY GAUDREAU':'johnny-gaudreau.png','JOSE THEODORE':'jose-theodore.png','KEN DRYDEN':'ken-dryden.png','LARRY ROBINSON':'larry-robinson.png','MAURICE RICHARD':'maurice-richard.png','STEPHANE RICHER':'stephane-richer.png','YANIC PERREAULT':'yanic-perreault.png'
 };
 const MAJOR=['COUPE BELIVEAU','FINALE BHL','SCOTTY BOWMAN','SAM POLLOCK','YVAN COURNOYER','SERGE SAVARD','ANDREI MARKOV','SAKU KOIVU','CLAUDE LEMIEUX','HOWIE MORENZ','PATRICK ROY','GUY LAFLEUR'];
-function medalGroup(name){
- const n=norm(name);
- if(n.includes('J O')||n.includes('JEUX OLYMPIQUES'))return 'JEUX OLYMPIQUES';
- if(n.includes('COUPE DU MONDE'))return 'COUPE DU MONDE';
- if(n.includes('4 NATIONS')||n.includes('CONFRONTATION'))return 'CONFRONTATION 4 NATIONS';
- if(n.includes('WJC')||n.includes('CHAMPIONNAT MONDIAL JUNIOR'))return 'CHAMPIONNAT MONDIAL JUNIOR';
- if(n==='JOHNNY GAUDREAU'||n.includes('JOHNNY GAUDREAU'))return 'JOHNNY GAUDREAU';
- return '';
+function medalGroup(name) {
+  const n = norm(name);
+
+  if (
+    n.includes('J O') ||
+    n.includes('JEUX OLYMPIQUES')
+  ) {
+    if (
+      n.includes('FEMININ') ||
+      n.includes('FEMME') ||
+      n.includes('WOMEN')
+    ) {
+      return 'JEUX OLYMPIQUES - FEMININ';
+    }
+
+    if (
+      n.includes('MASCULIN') ||
+      n.includes('HOMME') ||
+      n.includes('MEN')
+    ) {
+      return 'JEUX OLYMPIQUES - MASCULIN';
+    }
+
+    return 'JEUX OLYMPIQUES';
+  }
+
+  if (n.includes('COUPE DU MONDE'))
+    return 'COUPE DU MONDE';
+
+  if (
+    n.includes('4 NATIONS') ||
+    n.includes('CONFRONTATION')
+  )
+    return 'CONFRONTATION 4 NATIONS';
+
+  if (
+    n.includes('WJC') ||
+    n.includes('CHAMPIONNAT MONDIAL JUNIOR')
+  )
+    return 'CHAMPIONNAT MONDIAL JUNIOR';
+
+  if (n.includes('JOHNNY GAUDREAU'))
+    return 'JOHNNY GAUDREAU';
+
+  return '';
 }
 function medalType(name){const n=norm(name);if(n.startsWith('OR ')||n.includes(' OR '))return 'OR';if(n.startsWith('ARGENT ')||n.includes(' ARGENT'))return 'ARGENT';if(n.startsWith('BRONZE ')||n.includes(' BRONZE'))return 'BRONZE';return ''}
 function categoryFor(name){const n=norm(name);if(medalGroup(name))return 'INTERNATIONAL';if(MAJOR.includes(n))return 'MAJOR';return 'SECONDARY'}
-function trophyImage(name){const n=norm(name);let file=TROPHY_IMAGES[n];if(!file){const m=medalGroup(name);if(m==='JEUX OLYMPIQUES')file='or-j-o-masculin.png';else if(m==='CHAMPIONNAT MONDIAL JUNIOR')file='or-wjc.png';else file='coupe-du-monde.png'}return file?`<img src="trophies/${file}" alt="${esc(name)}" onerror="this.style.display='none'">`:''}
+function trophyImage(name) {
+  const n = norm(name);
+  let file = TROPHY_IMAGES[n];
+
+  if (!file) {
+    const m = medalGroup(name);
+
+    if (m === 'JEUX OLYMPIQUES - MASCULIN') {
+      file = 'or-j-o-masculin.png';
+    }
+    else if (m === 'JEUX OLYMPIQUES - FEMININ') {
+      file = 'or-j-o-feminin.png';
+    }
+    else if (m === 'JEUX OLYMPIQUES') {
+      file = 'or-j-o-masculin.png';
+    }
+    else if (m === 'CHAMPIONNAT MONDIAL JUNIOR') {
+      file = 'or-wjc.png';
+    }
+    else {
+      file = 'coupe-du-monde.png';
+    }
+  }
+
+  return file
+    ? `<img src="trophies/${file}" alt="${esc(name)}" onerror="this.style.display='none'">`
+    : '';
+}
 const $=s=>document.querySelector(s), norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim(), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function setStatus(s,kind=''){const e=$('#status');e.textContent=s;e.className='status '+kind}
 function jsonp(sheet){return new Promise((resolve,reject)=>{const cb='bhlTrophy_'+Date.now();const sc=document.createElement('script');const timer=setTimeout(()=>{cleanup();reject(Error('Délai de connexion dépassé'))},20000);function cleanup(){clearTimeout(timer);delete window[cb];sc.remove()}window[cb]=d=>{cleanup();resolve(d)};sc.onerror=()=>{cleanup();reject(Error('Impossible de joindre Google Sheets'))};sc.src=API+'?sheet='+encodeURIComponent(sheet)+'&callback='+cb;document.body.appendChild(sc)})}
