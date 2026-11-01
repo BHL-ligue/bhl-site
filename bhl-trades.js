@@ -119,7 +119,53 @@ function card(t){
   return `<section class="tr-side" style="--tr-side-color:${colorFor(historicName,id)}"><div class="tr-side-title"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
  }).join('')}</div></article>`
 }
-function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;
+// Chaque numero de transaction compte une seule fois pour chaque paire
+// d'organisations participantes. Un echange a trois clubs compte pour les trois paires.
+function pairStats(trades){
+ const pairs=new Map();
+ for(const t of trades){
+  const ids=participants(t).filter(id=>teamById[id]);
+  for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++){
+   if(ids[i]===ids[j])continue;
+   const pair=[ids[i],ids[j]].sort();const key=pair.join('|');
+   pairs.set(key,(pairs.get(key)||0)+1);
+  }
+ }
+ return pairs;
+}
+function pairCount(pairs,a,b){return pairs.get([a,b].sort().join('|'))||0}
+function rankingRows(pairs,selected){
+ const rows=teams.filter(t=>t[0]!==selected).map(t=>({id:t[0],count:pairCount(pairs,selected,t[0])}));
+ return rows.filter(r=>r.count>0).sort((a,b)=>b.count-a.count||teamName(a.id).localeCompare(teamName(b.id),'fr'));
+}
+function renderRanking(rows,heading){
+ const max=rows[0]?.count||1;
+ return `<div class="tr-stats-ranking"><h4>${escape(heading)}</h4>${rows.length?rows.map((r,i)=>`<div class="tr-stats-row"><span class="tr-stats-rank">${i+1}.</span>${logo(r.id)}<span class="tr-stats-name">${escape(teamName(r.id))}<span class="tr-stats-bar" style="width:${Math.round(r.count/max*100)}%"></span></span><strong>${r.count}</strong></div>`).join(''):'<p>Aucune transaction commune trouvée.</p>'}</div>`;
+}
+function initStats(el,data,compact,org){
+ const target=el.querySelector('.tr-stats');if(!target)return;
+ const pairs=pairStats(data);
+ const total=data.length;
+ if(compact){
+  const rows=rankingRows(pairs,org);
+  target.innerHTML=`<div class="tr-stats-head"><h3>Partenaires de transactions</h3><p>Organisations avec lesquelles ${escape(teamName(org))} a échangé le plus, franchises historiques incluses.</p></div><div class="tr-stats-metrics"><strong>${data.filter(t=>participants(t).includes(org)).length}</strong><span>transactions de cette organisation</span></div>${renderRanking(rows,'Classement des partenaires')}`;
+ }else{
+  const ranked=[...pairs].map(([key,count])=>({ids:key.split('|'),count})).sort((a,b)=>b.count-a.count||a.ids.join('').localeCompare(b.ids.join('')));
+  target.innerHTML=`<div class="tr-stats-head"><h3>Statistiques des échanges entre organisations</h3><p>Chaque transaction est comptée une seule fois par paire, même si plusieurs joueurs sont échangés. Les anciennes franchises sont regroupées avec leur organisation actuelle.</p></div><div class="tr-stats-metrics"><strong>${total}</strong><span>transactions distinctes dans l'historique</span></div><div class="tr-stats-compare"><label>Première organisation<select class="tr-stats-a">${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select></label><label>Deuxième organisation<select class="tr-stats-b">${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select></label></div><div class="tr-stats-total" aria-live="polite"></div><div class="tr-stats-top"><h4>Duos ayant effectué le plus d'échanges</h4>${ranked.slice(0,12).map((r,i)=>`<div class="tr-stats-pair"><span>${i+1}. ${logo(r.ids[0])}${escape(teamName(r.ids[0]))} <span class="tr-stats-sep">×</span> ${logo(r.ids[1])}${escape(teamName(r.ids[1]))}</span><strong>${r.count}</strong></div>`).join('')}</div>`;
+  const a=target.querySelector('.tr-stats-a'),b=target.querySelector('.tr-stats-b');
+  if(ranked.length){a.value=ranked[0].ids[0];b.value=ranked[0].ids[1]}
+  else{a.value=teams[0][0];b.value=teams[1][0]}
+  const update=()=>{const count=a.value===b.value?0:pairCount(pairs,a.value,b.value);target.querySelector('.tr-stats-total').innerHTML=`<strong>${count}</strong> transaction${count>1?'s':''} entre ces deux organisations`;};
+  a.addEventListener('change',update);b.addEventListener('change',update);update();
+ }
+}
+function injectStatsStyles(){
+ if(document.getElementById('bhl-trade-statistics-style'))return;
+ const style=document.createElement('style');style.id='bhl-trade-statistics-style';
+ style.textContent=`.tr-stats{background:#fff;border:1px solid #e1e4e8;border-radius:13px;padding:20px;margin:0 0 22px;box-shadow:0 2px 6px #19283b08}.tr-stats-head h3{margin:0 0 5px;font-size:20px}.tr-stats-head p{color:#66717d;font-size:13px;margin:0 0 16px}.tr-stats-metrics{display:flex;gap:12px;align-items:center;padding:13px 15px;background:#f4f5f7;border-radius:9px;margin-bottom:18px}.tr-stats-metrics strong{font-size:26px;color:#cc0000}.tr-stats-metrics span{font-size:13px}.tr-stats-ranking h4,.tr-stats-top h4{margin:12px 0;font-size:15px}.tr-stats-row{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #eef0f2}.tr-stats-row .tr-team-logo,.tr-stats-pair .tr-team-logo{width:26px;height:26px;object-fit:contain;vertical-align:middle}.tr-stats-rank{width:24px;color:#687280;font-size:12px}.tr-stats-name{flex:1;min-width:0;font-size:13px}.tr-stats-bar{display:block;background:var(--team-color,#cc0000);height:4px;border-radius:3px;max-width:100%;margin-top:5px}.tr-stats-row strong,.tr-stats-pair strong{font-size:15px;min-width:30px;text-align:right}.tr-stats-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tr-stats-compare label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:700}.tr-stats-compare select{width:100%;min-width:0;border:1px solid #d6dce2;border-radius:8px;padding:10px;background:white;color:#222;font:inherit}.tr-stats-total{margin:13px 0 18px;background:#fff4f4;padding:13px;border-radius:9px;font-size:14px}.tr-stats-total strong{font-size:23px;color:#cc0000;margin-right:6px}.tr-stats-pair{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #eef0f2;padding:9px 0;font-size:13px}.tr-stats-pair>span{display:flex;flex-wrap:wrap;align-items:center;gap:5px}.tr-stats-sep{color:#87909c;padding:0 4px}@media(max-width:600px){.tr-stats{padding:14px}.tr-stats-compare{grid-template-columns:1fr}.tr-stats-head h3{font-size:17px}.tr-stats-pair{font-size:12px}}`;
+ document.head.appendChild(style);
+}
+function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();
  // Utiliser la couleur exacte de la fiche ÉQUIPES, et non celle de la page générale.
  if(compact){
    el.classList.add('tr-embedded');
@@ -131,9 +177,9 @@ function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query=
    }
  }else{el.classList.add('tr-standalone');}
 
- el.innerHTML=`<div class="tr-filters"><input class="tr-search" type="search" aria-label="Rechercher une transaction, un joueur ou une équipe" placeholder="Rechercher un joueur, une équipe ou un nº…"><select class="tr-season" aria-label="Saison"><option value="">Toutes les saisons</option></select>${compact?'':`<select class="tr-team" aria-label="Équipe"><option value="">Toutes les équipes</option>${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select>`}</div><div class="tr-count" aria-live="polite">Chargement des transactions…</div><div class="tr-results"></div><div class="tr-pages"></div>`;
+ el.innerHTML=`<section class="tr-stats" aria-label="Statistiques des transactions"><p>Chargement des statistiques…</p></section><div class="tr-filters"><input class="tr-search" type="search" aria-label="Rechercher une transaction, un joueur ou une équipe" placeholder="Rechercher un joueur, une équipe ou un nº…"><select class="tr-season" aria-label="Saison"><option value="">Toutes les saisons</option></select>${compact?'':`<select class="tr-team" aria-label="Équipe"><option value="">Toutes les équipes</option>${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select>`}</div><div class="tr-count" aria-live="polite">Chargement des transactions…</div><div class="tr-results"></div><div class="tr-pages"></div>`;
  const $=s=>el.querySelector(s);function draw(){let list=data.filter(t=>(!season||t.season===season)&&(!team||participants(t).includes(team))&&(!query||[t.id,t.season,...t.moves.flatMap(m=>[m.asset,m.from,m.to,m.position])].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));const max=Math.max(1,Math.ceil(list.length/perPage));page=Math.min(page,max);$('.tr-count').textContent=`${list.length} transaction${list.length>1?'s':''}${team?' pour cette organisation':''}`;$('.tr-results').innerHTML=list.slice((page-1)*perPage,page*perPage).map(card).join('')||'<div class="tr-noresults">Aucune transaction trouvée.</div>';$('.tr-pages').innerHTML=max>1?`<button type="button" data-dir="-1" ${page===1?'disabled':''}>Précédent</button><span>Page ${page} sur ${max}</span><button type="button" data-dir="1" ${page===max?'disabled':''}>Suivant</button>`:'';$('.tr-pages').querySelectorAll('button').forEach(b=>b.onclick=()=>{page+=Number(b.dataset.dir);draw();el.scrollIntoView({block:'start',behavior:'smooth'})})}
  $('.tr-search').oninput=e=>{query=e.target.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();page=1;draw()};$('.tr-season').onchange=e=>{season=e.target.value;page=1;draw()};if(!compact)$('.tr-team').onchange=e=>{team=e.target.value;page=1;draw()};
- load().then(t=>{if(!el.isConnected)return;data=t;const seasons=[...new Set(t.map(x=>x.season).filter(Boolean))].sort().reverse();$('.tr-season').insertAdjacentHTML('beforeend',seasons.map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join(''));draw()}).catch(e=>{$('.tr-count').textContent='Impossible de charger les transactions : '+e.message});}
+ load().then(t=>{if(!el.isConnected)return;data=t;initStats(el,data,compact,team);const seasons=[...new Set(t.map(x=>x.season).filter(Boolean))].sort().reverse();$('.tr-season').insertAdjacentHTML('beforeend',seasons.map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join(''));draw()}).catch(e=>{$('.tr-count').textContent='Impossible de charger les transactions : '+e.message});}
 window.BHLTrades={mount,load,teams};
 })();
