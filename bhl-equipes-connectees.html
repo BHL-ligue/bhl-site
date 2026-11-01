@@ -132,13 +132,34 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
   .crest{width:104px !important;height:104px !important}
 }
 </style>
+<style>
+/* BHL - Optimisation de la bannière sur mobile */
+@media(max-width:620px){
+
+  .banner{
+    display:grid !important;
+    grid-template-columns:104px minmax(0,1fr) !important;
+    align-items:center !important;
+    gap:12px !important;
+    padding:16px !important;
+  }
+
+  .banner > div:nth-child(2){
+    min-width:0 !important;
+  }
+
+  .banner h2{
+    font-size:23px !important;
+    line-height:1.15 !important;
+    overflow-wrap:anywhere !important;
+  }
 </head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label for="teamSelect">Choose a team</label><select id="teamSelect"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div><div class="ranktag">RANG FORBES<b id="forbesRank">—</b></div></div>
 <div class="stats" id="stats"></div><nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button></nav><div id="panel"></div></section>
-<p class="note">Données chargées depuis le classeur BHL. Les fiches utilisent les lignes de statistiques et d’historique des onglets d’équipe. Les saisons, statistiques FPTS et distinctions sont séparées selon les tableaux du classeur.</p><footer class="footer">BHL · Ligue virtuelle de hockey · Version de test connectée</footer></main>
+<p class="note">Données chargées depuis le classeur BHL. Les fiches utilisent les lignes de statistiques et d’historique des onglets d’équipe. Les saisons, statistiques FPTS et distinctions sont séparées selon les tableaux du classeur.</p><footer class="footer">BHL · Béliveau Hockey League · Version de test connectée</footer></main>
 <script>
 const API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
 const TEAMS=[['ANAHEIM','ANAHEIM MIGHTY DUCKS'],['ATLANTA','ATLANTA THRASHERS'],['CLEVELAND','BOSTON BRUINS'],['CALIFORNIE','CALIFORNIA GOLDEN SEALS'],['CHICAGO','CHICAGO BLACKHAWKS'],['COLORADO','COLORADO AVALANCHE'],['DETROIT','DETROIT RED WINGS'],['FLORIDA','FLORIDA PANTHERS'],['HARTFORD','HARTFORD WHALERS'],['MINNESOTA','MINNESOTA NORTH STARS'],['MONTREAL','MONTRÉAL CANADIENS'],['NASHVILLE','NASHVILLE PREDATORS'],['NEWYORK','NEW YORK RANGERS'],['OTTAWA','OTTAWA SENATORS'],['QUÉBEC','QUÉBEC NORDIQUES'],['TORONTO','TORONTO MAPLE LEAFS']].map(([sheet,name])=>({sheet,name}));
