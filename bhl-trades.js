@@ -120,7 +120,17 @@ function card(t){
  }).join('')}</div></article>`
 }
 function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;
- el.classList.add(compact?'tr-embedded':'tr-standalone');
+ // Utiliser la couleur exacte de la fiche ÉQUIPES, et non celle de la page générale.
+ if(compact){
+   el.classList.add('tr-embedded');
+   if(!document.getElementById('bhl-trades-team-head-style')){
+     const style=document.createElement('style');
+     style.id='bhl-trades-team-head-style';
+     style.textContent='.tr-embedded .tr-card-head{background:var(--team-color,#cc0000)!important;color:#fff!important;border-bottom:0!important}.tr-embedded .tr-card-head .tr-number,.tr-embedded .tr-card-head .tr-date{color:#fff!important}.tr-embedded .tr-card-head .tr-three{color:#fff!important;background:rgba(255,255,255,.18)!important}';
+     document.head.appendChild(style);
+   }
+ }else{el.classList.add('tr-standalone');}
+
  el.innerHTML=`<div class="tr-filters"><input class="tr-search" type="search" aria-label="Rechercher une transaction, un joueur ou une équipe" placeholder="Rechercher un joueur, une équipe ou un nº…"><select class="tr-season" aria-label="Saison"><option value="">Toutes les saisons</option></select>${compact?'':`<select class="tr-team" aria-label="Équipe"><option value="">Toutes les équipes</option>${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select>`}</div><div class="tr-count" aria-live="polite">Chargement des transactions…</div><div class="tr-results"></div><div class="tr-pages"></div>`;
  const $=s=>el.querySelector(s);function draw(){let list=data.filter(t=>(!season||t.season===season)&&(!team||participants(t).includes(team))&&(!query||[t.id,t.season,...t.moves.flatMap(m=>[m.asset,m.from,m.to,m.position])].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));const max=Math.max(1,Math.ceil(list.length/perPage));page=Math.min(page,max);$('.tr-count').textContent=`${list.length} transaction${list.length>1?'s':''}${team?' pour cette organisation':''}`;$('.tr-results').innerHTML=list.slice((page-1)*perPage,page*perPage).map(card).join('')||'<div class="tr-noresults">Aucune transaction trouvée.</div>';$('.tr-pages').innerHTML=max>1?`<button type="button" data-dir="-1" ${page===1?'disabled':''}>Précédent</button><span>Page ${page} sur ${max}</span><button type="button" data-dir="1" ${page===max?'disabled':''}>Suivant</button>`:'';$('.tr-pages').querySelectorAll('button').forEach(b=>b.onclick=()=>{page+=Number(b.dataset.dir);draw();el.scrollIntoView({block:'start',behavior:'smooth'})})}
  $('.tr-search').oninput=e=>{query=e.target.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();page=1;draw()};$('.tr-season').onchange=e=>{season=e.target.value;page=1;draw()};if(!compact)$('.tr-team').onchange=e=>{team=e.target.value;page=1;draw()};
