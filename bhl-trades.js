@@ -19,6 +19,7 @@ const historical={
  'detroit cougars':['DETROIT','detroit-cougars.png'],
  'detroit red wings':['DETROIT','detroit-redwings.png'],
  'florida panthers':['FLORIDA','florida-panthers.png'],
+ 'vegas golden knights':['FLORIDA','vegas-goldenknights.png'],
  'hartford whalers':['HARTFORD','hartford-whalers.png'],
  'minnesota north stars':['MINNESOTA','minnesota-northstars.png'],
  'montreal maroons':['MONTREAL','montreal-maroons.png'],
@@ -71,14 +72,55 @@ function liveTrades(){return new Promise((resolve,reject)=>{
  document.head.appendChild(script);
 })}
 function localTrades(){return fetch('bhl-trades-data.json').then(r=>{if(!r.ok)throw Error('Fichier local introuvable');return r.json()}).then(d=>d.trades||[])}
-function load(){if(cache)return Promise.resolve(cache);if(!loading)loading=liveTrades().catch(()=>localTrades()).then(d=>(cache=d,cache)).catch(e=>{loading=null;throw e});return loading;}
+function load(){if(cache)return Promise.resolve(cache);if(!loading)loading=liveTrades().catch(()=>localTrades()).then(d=>(cache=reconcileOrganizations(d),cache)).catch(e=>{loading=null;throw e});return loading;}
 
-function participants(t){return [...new Set(t.moves.flatMap(m=>[m.fromOrg,m.toOrg]).filter(Boolean))]}
-function date(t){if(!t.date)return t.dateText||'Date inconnue';const [y,m,d]=t.date.split('-');return `${d}/${m}/${y}`}
+// Reconstituer les organisations à partir des noms historiques, y compris pour
+// le fichier JSON de secours dont certains identifiants peuvent être périmés.
+// Cette normalisation est appliquée aussi bien aux données API qu'au JSON local.
+function reconcileOrganizations(trades){
+ return (Array.isArray(trades)?trades:[]).map(t=>({
+  ...t,
+  moves:(Array.isArray(t.moves)?t.moves:[]).map(m=>({
+   ...m,
+   fromOrg:identity(m.from)?.[0]||m.fromOrg||'',
+   toOrg:identity(m.to)?.[0]||m.toOrg||''
+  }))
+ }));
+}
+function participants(t){return [...new Set(t.moves.flatMap(m=>[identity(m.from)?.[0]||m.fromOrg,identity(m.to)?.[0]||m.toOrg]).filter(Boolean))]}
+const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+function date(t){
+ const raw=String(t.date||'').trim();
+ if(/^\d{4}-\d{2}-\d{2}$/.test(raw)){const [y,m,d]=raw.split('-').map(Number);if(m>=1&&m<=12)return `${d} ${MONTHS[m-1]} ${y}`;}
+ const s=String(t.dateText||'').trim();
+ const match=s.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})$/);
+ if(match){const [,d,m,y]=match;const month=Number(m);if(month>=1&&month<=12)return `${Number(d)} ${MONTHS[month-1]} ${y}`;}
+ return s||'Date inconnue';
+}
+// Couleurs historiques utilisées pour les bandeaux des équipes.
+const historicColors={
+ 'anaheim mighty ducks':'#532a65','atlanta thrashers':'#245b8e','cleveland barons':'#9a1d32',
+ 'boston bruins':'#222222','california golden seals':'#087b69','chicago blackhawks':'#b20e25',
+ 'winnipeg jets':'#17477e','colorado avalanche':'#6f263d','detroit cougars':'#b20d22',
+ 'detroit red wings':'#ce1126','florida panthers':'#9b1c32','vegas golden knights':'#b4975a','hartford whalers':'#087b61',
+ 'minnesota north stars':'#08783e','montreal maroons':'#692238','montreal canadiens':'#af1e2d',
+ 'nashville predators':'#8c6610','new york rangers':'#14539b','edmonton oilers':'#174d91',
+ 'ottawa senators':'#a31d27','quebec nordiques':'#155ca0','toronto maple leafs':'#174a83'
+};
+const orgColors={ANAHEIM:'#532a65',ATLANTA:'#245b8e',CLEVELAND:'#222222',CALIFORNIE:'#087b69',CHICAGO:'#b20e25',COLORADO:'#6f263d',DETROIT:'#ce1126',FLORIDA:'#9b1c32',HARTFORD:'#087b61',MINNESOTA:'#08783e',MONTREAL:'#af1e2d',NASHVILLE:'#8c6610',NEWYORK:'#14539b',OTTAWA:'#a31d27','QUÉBEC':'#155ca0',TORONTO:'#174a83'};
+function colorFor(name,id){return historicColors[normalize(name)]||orgColors[id]||'#cc0000'}
 function logo(id){const t=teamById[id];return t?`<img class="tr-team-logo" src="logos/${escape(t[2])}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}
 function teamName(id){return teamById[id]?.[1]||id}
-function card(t){let ids=participants(t);return `<article class="tr-card"><div class="tr-card-head"><div><span class="tr-number">TRANSACTION Nº ${escape(t.id)}</span> <span class="tr-date">${escape(date(t))} · ${escape(t.season||'')}</span></div>${ids.length>2?'<span class="tr-three">Échange à '+ids.length+' équipes</span>':''}</div><div class="tr-columns">${ids.map(id=>{let received=t.moves.filter(m=>m.toOrg===id);const historicName=received[0]?.to||t.moves.find(m=>m.fromOrg===id)?.from||teamName(id);return `<section class="tr-side"><h4>${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></h4><div class="tr-received">Reçoit</div>${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${historicalLogo(m.from,m.fromOrg)}${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</section>`}).join('')}</div></article>`}
+function card(t){
+ const ids=participants(t);
+ return `<article class="tr-card"><div class="tr-card-head"><div><span class="tr-number">TRANSACTION Nº ${escape(t.id)}</span> <span class="tr-date">${escape(date(t))} · ${escape(t.season||'')}</span></div>${ids.length>2?'<span class="tr-three">Échange à '+ids.length+' équipes</span>':''}</div><div class="tr-columns">${ids.map(id=>{
+  const received=t.moves.filter(m=>m.toOrg===id);
+  const historicName=received[0]?.to||t.moves.find(m=>m.fromOrg===id)?.from||teamName(id);
+  return `<section class="tr-side" style="--tr-side-color:${colorFor(historicName,id)}"><div class="tr-side-title"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${historicalLogo(m.from,m.fromOrg)}${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
+ }).join('')}</div></article>`
+}
 function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;
+ el.classList.add(compact?'tr-embedded':'tr-standalone');
  el.innerHTML=`<div class="tr-filters"><input class="tr-search" type="search" aria-label="Rechercher une transaction, un joueur ou une équipe" placeholder="Rechercher un joueur, une équipe ou un nº…"><select class="tr-season" aria-label="Saison"><option value="">Toutes les saisons</option></select>${compact?'':`<select class="tr-team" aria-label="Équipe"><option value="">Toutes les équipes</option>${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select>`}</div><div class="tr-count" aria-live="polite">Chargement des transactions…</div><div class="tr-results"></div><div class="tr-pages"></div>`;
  const $=s=>el.querySelector(s);function draw(){let list=data.filter(t=>(!season||t.season===season)&&(!team||participants(t).includes(team))&&(!query||[t.id,t.season,...t.moves.flatMap(m=>[m.asset,m.from,m.to,m.position])].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));const max=Math.max(1,Math.ceil(list.length/perPage));page=Math.min(page,max);$('.tr-count').textContent=`${list.length} transaction${list.length>1?'s':''}${team?' pour cette organisation':''}`;$('.tr-results').innerHTML=list.slice((page-1)*perPage,page*perPage).map(card).join('')||'<div class="tr-noresults">Aucune transaction trouvée.</div>';$('.tr-pages').innerHTML=max>1?`<button type="button" data-dir="-1" ${page===1?'disabled':''}>Précédent</button><span>Page ${page} sur ${max}</span><button type="button" data-dir="1" ${page===max?'disabled':''}>Suivant</button>`:'';$('.tr-pages').querySelectorAll('button').forEach(b=>b.onclick=()=>{page+=Number(b.dataset.dir);draw();el.scrollIntoView({block:'start',behavior:'smooth'})})}
  $('.tr-search').oninput=e=>{query=e.target.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();page=1;draw()};$('.tr-season').onchange=e=>{season=e.target.value;page=1;draw()};if(!compact)$('.tr-team').onchange=e=>{team=e.target.value;page=1;draw()};
