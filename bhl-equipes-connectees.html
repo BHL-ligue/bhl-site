@@ -402,9 +402,18 @@ function loadOrgRecords(){
         sections.push(...parseOrgRecordRows(r.value.data.rows));
       }
     });
-    if(!sections.length)throw Error('Aucun classement de records reçu depuis Google Sheets.');
-    orgRecordsCache=sections;
-    return sections;
+    if(sections.length){orgRecordsCache=sections;return sections;}
+    // Secours facultatif si Google Apps Script est temporairement indisponible.
+    return fetch('bhl-records-data.json',{cache:'no-store'}).then(response=>{
+      if(!response.ok)throw Error('Aucun classement de records reçu depuis Google Sheets.');
+      return response.json();
+    }).then(groups=>{
+      if(!Array.isArray(groups))throw Error('Format des records de secours invalide.');
+      const backup=groups.flatMap(g=>Array.isArray(g.sections)?g.sections:[]).filter(s=>Array.isArray(s.entries)&&s.entries.length);
+      if(!backup.length)throw Error('Aucun classement de records disponible.');
+      orgRecordsCache=backup;
+      return backup;
+    });
   }).finally(()=>{orgRecordsPending=null});
   return orgRecordsPending;
 }
