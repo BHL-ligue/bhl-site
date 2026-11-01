@@ -129,7 +129,7 @@ function card(t){
  return `<article class="tr-card"><div class="tr-card-head"><div><span class="tr-number">TRANSACTION Nº ${escape(t.id)}</span> <span class="tr-date">${escape(date(t))} · ${escape(t.season||'')}</span></div>${ids.length>2?'<span class="tr-three">Échange à '+ids.length+' équipes</span>':''}</div><div class="tr-columns">${ids.map(id=>{
   const received=t.moves.filter(m=>m.toOrg===id);
   const historicName=received[0]?.to||t.moves.find(m=>m.fromOrg===id)?.from||teamName(id);
-  return `<section class="tr-side" style="--tr-side-color:#bfc4ca"><div class="tr-side-title" style="background:#bfc4ca!important;color:#20252b!important"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
+  return `<section class="tr-side" style="--tr-side-color:#bfc4ca"><div class="tr-side-title" style="background:#bfc4ca!important;color:#20252b!important"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li>${m.position?`<button type="button" class="tr-player-link" data-player="${escape(m.asset)}" aria-label="Voir les transactions de ${escape(m.asset)}">${escape(m.asset)}</button>`:`<strong>${escape(m.asset)}</strong>`}${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
  }).join('')}</div></article>`
 }
 // Chaque numero de transaction compte une seule fois pour chaque paire
@@ -172,6 +172,41 @@ function initStats(el,data,compact,org){
   a.addEventListener('change',update);b.addEventListener('change',update);update();
  }
 }
+// Historique individuel construit à partir des transactions disponibles.
+function playerMoves(data,name){
+ const key=normalize(name),events=[];
+ for(const t of data){
+  const moves=t.moves.filter(m=>m.position&&normalize(m.asset)===key);
+  if(!moves.length)continue;
+  for(const m of moves)events.push({t,m});
+ }
+ return events.sort((a,b)=>(a.t.date||'').localeCompare(b.t.date||'')||Number(a.t.id)-Number(b.t.id));
+}
+function showPlayerHistory(el,data,name){
+ const events=playerMoves(data,name);
+ if(!events.length)return;
+ const old=el.querySelector('.tr-player-overlay');if(old)old.remove();
+ const overlay=document.createElement('div');overlay.className='tr-player-overlay';
+ const orgs=[];
+ for(const {m} of events){
+  for(const [org,label] of [[m.fromOrg,m.from],[m.toOrg,m.to]]){
+   if(org&&!orgs.some(x=>x.org===org))orgs.push({org,label});
+  }
+ }
+ const last=events[events.length-1]?.m;
+ overlay.innerHTML=`<section class="tr-player-dialog" role="dialog" aria-modal="true" aria-label="Historique des transactions de ${escape(name)}" tabindex="-1"><div class="tr-player-head"><div><span class="tr-player-eyebrow">HISTORIQUE DES TRANSACTIONS</span><h3>${escape(name)}</h3></div><button class="tr-player-close" type="button" aria-label="Fermer">×</button></div><div class="tr-player-content"><div class="tr-player-metric"><strong>${new Set(events.map(e=>String(e.t.id))).size}</strong><span>fois échangé${events.length>1?'':' '} dans la BHL</span></div><h4>Organisations dans son parcours d'échanges</h4><div class="tr-player-orgs">${orgs.map(o=>`<span class="tr-player-org">${logo(o.org)}${escape(teamName(o.org))}</span>`).join('')}</div><h4>Historique des échanges</h4><ol class="tr-player-events">${events.map(({t,m})=>`<li><div class="tr-player-event-date">${escape(date(t))} · Transaction nº ${escape(t.id)}</div><div class="tr-player-route">${historicalLogo(m.from,m.fromOrg)}<span>${escape(m.from)}</span><span aria-hidden="true">→</span>${historicalLogo(m.to,m.toOrg)}<strong>${escape(m.to)}</strong></div></li>`).join('')}</ol><p class="tr-player-note">Historique basé uniquement sur les transactions enregistrées dans la BHL. Il ne constitue pas nécessairement la liste complète des équipes du joueur.</p></div></section>`;
+ document.body.appendChild(overlay);
+ const dialog=overlay.querySelector('.tr-player-dialog'),close=()=>{overlay.remove();document.removeEventListener('keydown',onKey);};
+ const onKey=e=>{if(e.key==='Escape')close();};
+ overlay.addEventListener('click',e=>{if(e.target===overlay||e.target.closest('.tr-player-close'))close()});
+ document.addEventListener('keydown',onKey);dialog.focus();
+}
+function injectPlayerStyles(){
+ if(document.getElementById('bhl-player-history-style'))return;
+ const style=document.createElement('style');style.id='bhl-player-history-style';
+ style.textContent=`.tr-player-link{appearance:none;background:none;border:0;padding:0;color:#ad1728;font:inherit;font-weight:700;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:#d8a3aa;text-underline-offset:3px}.tr-player-link:hover,.tr-player-link:focus-visible{color:#74101b;text-decoration-color:currentColor}.tr-player-overlay{position:fixed;inset:0;z-index:99999;background:rgba(17,24,39,.65);display:flex;justify-content:center;align-items:center;padding:16px}.tr-player-dialog{width:min(640px,100%);max-height:min(85vh,800px);overflow:auto;background:white;border-radius:14px;box-shadow:0 15px 55px #0005;color:#20252b;outline:0}.tr-player-head{background:#cc0000;color:white;padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.tr-player-head h3{margin:5px 0 0;font-size:24px;color:white}.tr-player-eyebrow{font-size:11px;letter-spacing:.08em;font-weight:700}.tr-player-close{border:0;background:#ffffff2a;color:white;font-size:28px;line-height:1;cursor:pointer;border-radius:7px;width:36px;height:36px}.tr-player-content{padding:20px 22px}.tr-player-content h4{font-size:15px;margin:22px 0 12px}.tr-player-metric{display:flex;align-items:center;gap:12px;background:#f4f5f7;padding:13px 16px;border-radius:9px}.tr-player-metric strong{font-size:30px;color:#cc0000}.tr-player-orgs{display:flex;flex-wrap:wrap;gap:8px}.tr-player-org{display:inline-flex;align-items:center;gap:6px;background:#f4f5f7;padding:6px 10px;border-radius:7px;font-size:12px;font-weight:700}.tr-player-org .tr-team-logo,.tr-player-route .tr-team-logo{width:25px;height:25px;object-fit:contain}.tr-player-events{list-style:none;margin:0;padding:0}.tr-player-events li{border-bottom:1px solid #e5e7eb;padding:12px 0}.tr-player-event-date{font-size:12px;color:#687280;margin-bottom:7px}.tr-player-route{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px}.tr-player-route strong{font-weight:700}.tr-player-note{color:#687280;font-size:12px;line-height:1.5;margin-top:18px}@media(max-width:600px){.tr-player-content{padding:15px}.tr-player-head{padding:15px}.tr-player-head h3{font-size:20px}}`;
+ document.head.appendChild(style);
+}
 function injectStatsStyles(){
  if(document.getElementById('bhl-trade-statistics-style'))return;
  const style=document.createElement('style');style.id='bhl-trade-statistics-style';
@@ -185,7 +220,7 @@ function injectNeutralSideStyle(){
  style.textContent='.tr-card .tr-side .tr-side-title{background:#bfc4ca!important;color:#20252b!important}.tr-side .tr-side-title .tr-side-name,.tr-side .tr-side-title .tr-side-name span,.tr-side .tr-side-title .tr-received{color:#20252b!important;opacity:1!important}';
  document.head.appendChild(style);
 }
-function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();
+function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();injectPlayerStyles();
  // Utiliser la couleur exacte de la fiche ÉQUIPES, et non celle de la page générale.
  if(compact){
    el.classList.add('tr-embedded');
@@ -198,6 +233,7 @@ function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query=
  }else{el.classList.add('tr-standalone');}
 
  el.innerHTML=`<section class="tr-stats" aria-label="Statistiques des transactions"><p>Chargement des statistiques…</p></section><div class="tr-filters"><input class="tr-search" type="search" aria-label="Rechercher une transaction, un joueur ou une équipe" placeholder="Rechercher un joueur, une équipe ou un nº…"><select class="tr-season" aria-label="Saison"><option value="">Toutes les saisons</option></select>${compact?'':`<select class="tr-team" aria-label="Équipe"><option value="">Toutes les équipes</option>${teams.map(t=>`<option value="${escape(t[0])}">${escape(t[1])}</option>`).join('')}</select>`}</div><div class="tr-count" aria-live="polite">Chargement des transactions…</div><div class="tr-results"></div><div class="tr-pages"></div>`;
+ el.addEventListener('click',e=>{const btn=e.target.closest('.tr-player-link');if(btn&&el.contains(btn))showPlayerHistory(el,data,btn.dataset.player);});
  const $=s=>el.querySelector(s);function draw(){let list=data.filter(t=>(!season||t.season===season)&&(!team||participants(t).includes(team))&&(!query||[t.id,t.season,...t.moves.flatMap(m=>[m.asset,m.from,m.to,m.position])].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));const max=Math.max(1,Math.ceil(list.length/perPage));page=Math.min(page,max);$('.tr-count').textContent=`${list.length} transaction${list.length>1?'s':''}${team?' pour cette organisation':''}`;$('.tr-results').innerHTML=list.slice((page-1)*perPage,page*perPage).map(card).join('')||'<div class="tr-noresults">Aucune transaction trouvée.</div>';$('.tr-pages').innerHTML=max>1?`<button type="button" data-dir="-1" ${page===1?'disabled':''}>Précédent</button><span>Page ${page} sur ${max}</span><button type="button" data-dir="1" ${page===max?'disabled':''}>Suivant</button>`:'';$('.tr-pages').querySelectorAll('button').forEach(b=>b.onclick=()=>{page+=Number(b.dataset.dir);draw();el.scrollIntoView({block:'start',behavior:'smooth'})})}
  $('.tr-search').oninput=e=>{query=e.target.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();page=1;draw()};$('.tr-season').onchange=e=>{season=e.target.value;page=1;draw()};if(!compact)$('.tr-team').onchange=e=>{team=e.target.value;page=1;draw()};
  load().then(t=>{if(!el.isConnected)return;data=t;initStats(el,data,compact,team);const seasons=[...new Set(t.map(x=>x.season).filter(Boolean))].sort().reverse();$('.tr-season').insertAdjacentHTML('beforeend',seasons.map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join(''));draw()}).catch(e=>{$('.tr-count').textContent='Impossible de charger les transactions : '+e.message});}
