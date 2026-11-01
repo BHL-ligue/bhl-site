@@ -165,7 +165,14 @@ function injectStatsStyles(){
  style.textContent=`.tr-stats{background:#fff;border:1px solid #e1e4e8;border-radius:13px;padding:20px;margin:0 0 22px;box-shadow:0 2px 6px #19283b08}.tr-stats-head h3{margin:0 0 5px;font-size:20px}.tr-stats-head p{color:#66717d;font-size:13px;margin:0 0 16px}.tr-stats-metrics{display:flex;gap:12px;align-items:center;padding:13px 15px;background:#f4f5f7;border-radius:9px;margin-bottom:18px}.tr-stats-metrics strong{font-size:26px;color:#cc0000}.tr-stats-metrics span{font-size:13px}.tr-stats-ranking h4,.tr-stats-top h4{margin:12px 0;font-size:15px}.tr-stats-row{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid #eef0f2}.tr-stats-row .tr-team-logo,.tr-stats-pair .tr-team-logo{width:26px;height:26px;object-fit:contain;vertical-align:middle}.tr-stats-rank{width:24px;color:#687280;font-size:12px}.tr-stats-name{flex:1;min-width:0;font-size:13px}.tr-stats-bar{display:block;background:var(--team-color,#cc0000);height:4px;border-radius:3px;max-width:100%;margin-top:5px}.tr-stats-row strong,.tr-stats-pair strong{font-size:15px;min-width:30px;text-align:right}.tr-stats-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tr-stats-compare label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:700}.tr-stats-compare select{width:100%;min-width:0;border:1px solid #d6dce2;border-radius:8px;padding:10px;background:white;color:#222;font:inherit}.tr-stats-total{margin:13px 0 18px;background:#fff4f4;padding:13px;border-radius:9px;font-size:14px}.tr-stats-total strong{font-size:23px;color:#cc0000;margin-right:6px}.tr-stats-pair{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #eef0f2;padding:9px 0;font-size:13px}.tr-stats-pair>span{display:flex;flex-wrap:wrap;align-items:center;gap:5px}.tr-stats-sep{color:#87909c;padding:0 4px}@media(max-width:600px){.tr-stats{padding:14px}.tr-stats-compare{grid-template-columns:1fr}.tr-stats-head h3{font-size:17px}.tr-stats-pair{font-size:12px}}`;
  document.head.appendChild(style);
 }
-function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();
+function injectNeutralSideStyle(){
+ if(document.getElementById('bhl-trades-neutral-side-style'))return;
+ const style=document.createElement('style');
+ style.id='bhl-trades-neutral-side-style';
+ style.textContent='.tr-side .tr-side-title{background:#bfc4ca!important;color:#20252b!important}.tr-side .tr-side-title .tr-side-name,.tr-side .tr-side-title .tr-side-name span,.tr-side .tr-side-title .tr-received{color:#20252b!important;opacity:1!important}';
+ document.head.appendChild(style);
+}
+function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();
  // Utiliser la couleur exacte de la fiche ÉQUIPES, et non celle de la page générale.
  if(compact){
    el.classList.add('tr-embedded');
