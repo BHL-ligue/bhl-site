@@ -89,13 +89,26 @@ function reconcileOrganizations(trades){
 }
 function participants(t){return [...new Set(t.moves.flatMap(m=>[identity(m.from)?.[0]||m.fromOrg,identity(m.to)?.[0]||m.toOrg]).filter(Boolean))]}
 const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+const DAYS=['dim','lun','mar','mer','jeu','ven','sam'];
+const ENMONTH={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
 function date(t){
- const raw=String(t.date||'').trim();
- if(/^\d{4}-\d{2}-\d{2}$/.test(raw)){const [y,m,d]=raw.split('-').map(Number);if(m>=1&&m<=12)return `${d} ${MONTHS[m-1]} ${y}`;}
- const s=String(t.dateText||'').trim();
- const match=s.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})$/);
- if(match){const [,d,m,y]=match;const month=Number(m);if(month>=1&&month<=12)return `${Number(d)} ${MONTHS[month-1]} ${y}`;}
- return s||'Date inconnue';
+ const raw=String(t.date||'').trim(), src=String(t.dateText||'').trim();
+ let y,m,d;
+ if(/^\d{4}-\d{2}-\d{2}$/.test(raw)) [y,m,d]=raw.split('-').map(Number);
+ else {
+  const match=src.match(/^(?:[A-Za-z]{3}\s+)?([A-Za-z]{3})\s+(\d{1,2}),?\s+(\d{4})/);
+  if(match){m=ENMONTH[match[1].toLowerCase()]+1;d=Number(match[2]);y=Number(match[3]);}
+  else {const numeric=src.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})/);if(numeric){d=Number(numeric[1]);m=Number(numeric[2]);y=Number(numeric[3]);}}
+ }
+ if(y&&m>=1&&m<=12&&d>=1&&d<=31){
+  const utc=new Date(Date.UTC(y,m-1,d));
+  if(utc.getUTCFullYear()===y&&utc.getUTCMonth()===m-1&&utc.getUTCDate()===d){
+   const tm=src.match(/,?\s+(\d{1,2}):(\d{2})\s*(AM|PM)\s*$/i);
+   let time='';if(tm){let hour=Number(tm[1])%12+(tm[3].toUpperCase()==='PM'?12:0);time=` à ${String(hour).padStart(2,'0')} h ${tm[2]}`;}
+   return `${DAYS[utc.getUTCDay()]} ${d} ${MONTHS[m-1]} ${y}${time}`;
+  }
+ }
+ return src.replace(/\b(Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b/gi,v=>({sun:'dim',mon:'lun',tue:'mar',wed:'mer',thu:'jeu',fri:'ven',sat:'sam'})[v.toLowerCase()]);
 }
 // Couleurs historiques utilisées pour les bandeaux des équipes.
 const historicColors={
@@ -116,7 +129,7 @@ function card(t){
  return `<article class="tr-card"><div class="tr-card-head"><div><span class="tr-number">TRANSACTION Nº ${escape(t.id)}</span> <span class="tr-date">${escape(date(t))} · ${escape(t.season||'')}</span></div>${ids.length>2?'<span class="tr-three">Échange à '+ids.length+' équipes</span>':''}</div><div class="tr-columns">${ids.map(id=>{
   const received=t.moves.filter(m=>m.toOrg===id);
   const historicName=received[0]?.to||t.moves.find(m=>m.fromOrg===id)?.from||teamName(id);
-  return `<section class="tr-side" style="--tr-side-color:${colorFor(historicName,id)}"><div class="tr-side-title"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
+  return `<section class="tr-side" style="--tr-side-color:#bfc4ca"><div class="tr-side-title" style="background:#bfc4ca!important;color:#20252b!important"><div class="tr-side-name">${historicalLogo(historicName,id)}<span>${escape(historicName)}</span></div><span class="tr-received">REÇOIT</span></div><div class="tr-side-body">${received.length?`<ul>${received.map(m=>`<li><strong>${escape(m.asset)}</strong>${m.position?` <small>(${escape(m.position)})</small>`:''}<span class="tr-from">de ${escape(m.from)}</span></li>`).join('')}</ul>`:'<p class="tr-empty">Aucun élément reçu indiqué</p>'}</div></section>`
  }).join('')}</div></article>`
 }
 // Chaque numero de transaction compte une seule fois pour chaque paire
@@ -169,7 +182,7 @@ function injectNeutralSideStyle(){
  if(document.getElementById('bhl-trades-neutral-side-style'))return;
  const style=document.createElement('style');
  style.id='bhl-trades-neutral-side-style';
- style.textContent='.tr-side .tr-side-title{background:#bfc4ca!important;color:#20252b!important}.tr-side .tr-side-title .tr-side-name,.tr-side .tr-side-title .tr-side-name span,.tr-side .tr-side-title .tr-received{color:#20252b!important;opacity:1!important}';
+ style.textContent='.tr-card .tr-side .tr-side-title{background:#bfc4ca!important;color:#20252b!important}.tr-side .tr-side-title .tr-side-name,.tr-side .tr-side-title .tr-side-name span,.tr-side .tr-side-title .tr-received{color:#20252b!important;opacity:1!important}';
  document.head.appendChild(style);
 }
 function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();
