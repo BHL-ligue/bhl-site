@@ -199,9 +199,23 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .org-record-card th,.org-record-card td{padding:9px 10px;font-size:12px}
 @media(max-width:950px){.org-record-grid{grid-template-columns:1fr}}
 </style>
+<style>
+/* Sélecteur d'équipes avec logos */
+.selectbox{position:relative}.team-native-select{display:none!important}
+.team-dropdown{position:relative;width:100%}
+.team-dropdown-button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 13px;background:#fff;color:#191919;border:1px solid #d4d8dd;border-radius:10px;font:inherit;font-weight:700;cursor:pointer;text-align:left;min-height:55px}
+.team-dropdown-button:focus-visible,.team-dropdown-option:focus-visible{outline:3px solid #cc0000;outline-offset:2px}
+.team-dropdown-selected{display:flex;align-items:center;gap:10px;min-width:0}
+.team-dropdown-selected img,.team-dropdown-option img{width:34px;height:34px;object-fit:contain;flex-shrink:0}
+.team-dropdown-menu{position:absolute;top:calc(100% + 5px);left:0;right:0;z-index:20;background:#fff;border:1px solid #d4d8dd;border-radius:10px;box-shadow:0 12px 32px #0002;max-height:350px;overflow-y:auto;overscroll-behavior:contain;padding:5px}
+.team-dropdown-menu[hidden]{display:none!important}
+.team-dropdown-option{width:100%;display:flex;align-items:center;gap:10px;padding:8px 10px;border:0;border-radius:7px;background:#fff;color:#191919;font:inherit;font-size:13px;font-weight:700;text-align:left;cursor:pointer}
+.team-dropdown-option:hover,.team-dropdown-option[aria-selected="true"]{background:#f1f2f4}
+@media(max-width:620px){.team-dropdown-menu{max-height:300px}}
+</style>
 </head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a></nav></div></header>
-<main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label for="teamSelect">Choisir une équipe</label><select id="teamSelect"><option>Loading teams…</option></select></div></section>
+<main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div></div>
 <div class="stats" id="stats"></div><nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button><button class="tab" data-tab="protections">Protections</button><button class="tab" data-tab="matchups">Affrontements</button><button class="tab" data-tab="gamesplayed">Matchs joués</button><button class="tab" data-tab="records">Records</button></nav><div id="panel"></div></section>
@@ -321,8 +335,63 @@ function loadMatchups(sheet){const code=MATCHUP_CODES[sheet];if(matchupCache[cod
 function renderMatchups(){const requested=selected;$('#panel').innerHTML='<div class="card">Chargement des affrontements historiques…</div>';loadMatchups(requested).then(data=>{if(selected!==requested||currentTab!=='matchups')return;const sortData=[...data].sort((a,b)=>{const av=a[matchupSort],bv=b[matchupSort];let cmp=typeof av==='string'?av.localeCompare(bv,'fr'):(av??-Infinity)-(bv??-Infinity);return (matchupDescending?-1:1)*cmp||a.name.localeCompare(b.name,'fr')});const headers=[['name','Adversaire'],['pj','PJ'],['v','V'],['d','D'],['pct','%']];let html='<div class="section-head"><div><h3>Affrontements en carrière</h3><p>Bilans historiques contre les autres équipes · Cliquez sur un en-tête pour trier.</p></div></div><div class="tablewrap"><table class="matchups-table"><thead><tr>'+headers.map(([key,label])=>'<th scope="col"><button type="button" class="matchups-sort" data-matchup-sort="'+key+'" aria-label="Trier par '+label+'" aria-sort="'+(matchupSort===key?(matchupDescending?'descending':'ascending'):'none')+'">'+label+' <span aria-hidden="true">'+(matchupSort===key?(matchupDescending?'▼':'▲'):'↕')+'</span></button></th>').join('')+'</tr></thead><tbody>'+sortData.map(r=>'<tr><td class="matchups-opponent">'+teamLogo(r.name)+'<span>'+esc(r.name)+'</span></td><td>'+fmt(r.pj)+'</td><td>'+fmt(r.v)+'</td><td>'+fmt(r.d)+'</td><td>'+pct(r.pct)+'</td></tr>').join('')+'</tbody></table></div>';$('#panel').innerHTML=html;document.querySelectorAll('[data-matchup-sort]').forEach(b=>b.onclick=()=>{const key=b.dataset.matchupSort;if(matchupSort===key)matchupDescending=!matchupDescending;else{matchupSort=key;matchupDescending=key!=='name'}renderMatchups()})}).catch(e=>{if(selected===requested&&currentTab==='matchups')$('#panel').innerHTML='<div class="card">Impossible de charger les affrontements : '+esc(e.message)+'</div>'})}
 function rankFor(name){const r=forbesData.find(x=>String(x[2]||'').toUpperCase()===name.toUpperCase());return r?num(r[3]):null;}
 function initials(n){return n.split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0]).join('');}
-function drawTeams(){const sel=$('#teamSelect'),nav=$('#teamnav');sel.innerHTML='';nav.innerHTML='';TEAMS.forEach(t=>{const o=document.createElement('option');o.value=t.sheet;o.textContent=t.name;sel.append(o);const b=document.createElement('button');b.className='teamchip';b.dataset.sheet=t.sheet;b.textContent=t.name;b.onclick=()=>choose(t.sheet);nav.append(b)});sel.value=selected;sel.onchange=()=>choose(sel.value);}
-function choose(sheet){selected=sheet;const t=teamData[sheet];if(!t){status('Les données de cette équipe ne sont pas disponibles.','error');return;}document.documentElement.style.setProperty('--team-color',teamColor(t.name));$('#teamSelect').value=sheet;document.querySelectorAll('.teamchip').forEach(b=>b.classList.toggle('active',b.dataset.sheet===sheet));const TEAM_LABELS={
+
+// Menu personnalisé : le sélecteur natif reste synchronisé pour la compatibilité.
+function teamDropdownLogo(name){
+  const file=LOGOS[normalizeTeam(name)];
+  if(!file)return '';
+  return '<img src="logos/'+esc(file)+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">';
+}
+function syncTeamDropdown(){
+  const button=$('#teamDropdownButton'),menu=$('#teamDropdownMenu');
+  if(!button||!menu)return;
+  const t=TEAMS.find(x=>x.sheet===selected);
+  const text=$('#teamDropdownText');
+  if(t)text.innerHTML='<span class="team-dropdown-selected">'+teamDropdownLogo(t.name)+'<span>'+esc(t.name)+'</span></span>';
+  menu.querySelectorAll('[data-team-option]').forEach(opt=>opt.setAttribute('aria-selected',String(opt.dataset.teamOption===selected)));
+}
+function closeTeamDropdown(){
+  const menu=$('#teamDropdownMenu'),button=$('#teamDropdownButton');
+  if(!menu||!button)return;
+  menu.hidden=true;button.setAttribute('aria-expanded','false');
+}
+function initTeamDropdown(){
+  const button=$('#teamDropdownButton'),menu=$('#teamDropdownMenu');
+  if(!button||!menu)return;
+  menu.innerHTML=TEAMS.map(t=>'<button type="button" class="team-dropdown-option" role="option" data-team-option="'+esc(t.sheet)+'" aria-selected="false">'+teamDropdownLogo(t.name)+'<span>'+esc(t.name)+'</span></button>').join('');
+  menu.querySelectorAll('[data-team-option]').forEach(opt=>opt.addEventListener('click',()=>{
+    choose(opt.dataset.teamOption);closeTeamDropdown();button.focus();
+  }));
+  button.onclick=()=>{
+    menu.hidden=!menu.hidden;
+    button.setAttribute('aria-expanded',String(!menu.hidden));
+    if(!menu.hidden){const current=menu.querySelector('[aria-selected="true"]');if(current)current.scrollIntoView({block:'nearest'});}
+  };
+  button.onkeydown=e=>{
+    if(e.key==='ArrowDown'||e.key==='Enter'||e.key===' '){
+      if(menu.hidden){e.preventDefault();button.click();}
+      if(e.key==='ArrowDown'){e.preventDefault();(menu.querySelector('[aria-selected="true"]')||menu.querySelector('button'))?.focus();}
+    }
+    if(e.key==='Escape')closeTeamDropdown();
+  };
+  menu.onkeydown=e=>{
+    const opts=[...menu.querySelectorAll('button')],idx=opts.indexOf(document.activeElement);
+    if(e.key==='Escape'){closeTeamDropdown();button.focus();}
+    else if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+      e.preventDefault();opts[(idx+(e.key==='ArrowDown'?1:-1)+opts.length)%opts.length]?.focus();
+    }
+    else if(e.key==='Home'){e.preventDefault();opts[0]?.focus();}
+    else if(e.key==='End'){e.preventDefault();opts[opts.length-1]?.focus();}
+  };
+  if(!window.bhlTeamDropdownEvents){
+    window.bhlTeamDropdownEvents=true;
+    document.addEventListener('click',e=>{if(!e.target.closest('#teamDropdown'))closeTeamDropdown();});
+  }
+  syncTeamDropdown();
+}
+
+function drawTeams(){const sel=$('#teamSelect'),nav=$('#teamnav');sel.innerHTML='';nav.innerHTML='';TEAMS.forEach(t=>{const o=document.createElement('option');o.value=t.sheet;o.textContent=t.name;sel.append(o);const b=document.createElement('button');b.className='teamchip';b.dataset.sheet=t.sheet;b.textContent=t.name;b.onclick=()=>choose(t.sheet);nav.append(b)});sel.value=selected;sel.onchange=()=>choose(sel.value);initTeamDropdown();}
+function choose(sheet){selected=sheet;const t=teamData[sheet];if(!t){status('Les données de cette équipe ne sont pas disponibles.','error');return;}document.documentElement.style.setProperty('--team-color',teamColor(t.name));$('#teamSelect').value=sheet;syncTeamDropdown();document.querySelectorAll('.teamchip').forEach(b=>b.classList.toggle('active',b.dataset.sheet===sheet));const TEAM_LABELS={
   ANAHEIM:['ANAHEIM','MIGHTY DUCKS'],
   ATLANTA:['ATLANTA','THRASHERS'],
   CLEVELAND:['BOSTON','BRUINS'],
