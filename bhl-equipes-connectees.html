@@ -189,13 +189,22 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 }
 
 .gp-controls{display:flex;flex-wrap:wrap;gap:12px;margin:15px 0}.gp-controls label{flex:1 1 195px;font-size:12px;font-weight:800;color:#555}.gp-controls input,.gp-controls select{margin-top:5px}.gp-table{min-width:790px}.gp-table td:not(:first-child){text-align:center}.gp-sort{background:transparent;border:0;color:inherit;cursor:pointer;font:inherit;font-weight:800}.gp-count{font-size:12px;color:#626b75}.gp-table th:first-child{min-width:175px}
+
+/* Records de chaque organisation */
+.org-record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.org-record-card{background:#fff;border:1px solid #dfe2e6;border-radius:12px;overflow:hidden;min-width:0}
+.org-record-card h4{margin:0;padding:12px 15px;background:var(--team-color,#cc0000);color:#fff;font-size:14px}
+.org-record-card .tablewrap{border:0;border-radius:0;box-shadow:none}
+.org-record-card table{min-width:420px}
+.org-record-card th,.org-record-card td{padding:9px 10px;font-size:12px}
+@media(max-width:950px){.org-record-grid{grid-template-columns:1fr}}
 </style>
 </head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label for="teamSelect">Choisir une équipe</label><select id="teamSelect"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div></div>
-<div class="stats" id="stats"></div><nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button><button class="tab" data-tab="protections">Protections</button><button class="tab" data-tab="matchups">Affrontements</button><button class="tab" data-tab="gamesplayed">Matchs joués</button></nav><div id="panel"></div></section>
+<div class="stats" id="stats"></div><nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button><button class="tab" data-tab="protections">Protections</button><button class="tab" data-tab="matchups">Affrontements</button><button class="tab" data-tab="gamesplayed">Matchs joués</button><button class="tab" data-tab="records">Records</button></nav><div id="panel"></div></section>
 <p class="note">Données chargées depuis le classeur BHL. Les fiches utilisent les lignes de statistiques et d’historique des onglets d’équipe. Les saisons, statistiques FPTS et distinctions sont séparées selon les tableaux du classeur.</p><footer class="footer">BHL · Béliveau Hockey League · Version de test connectée</footer></main>
 <script>
 const API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
@@ -345,7 +354,86 @@ function gpControls(){return '<div class="gp-controls"><label>Rechercher un joue
 function gpWire(players){const draw=()=>{$('#gpResults').innerHTML=gpTable(players);document.querySelectorAll('[data-gpsort]').forEach(b=>b.onclick=()=>{const k=b.dataset.gpsort;if(gpSort===k)gpDescending=!gpDescending;else{gpSort=k;gpDescending=k!=='name'}draw()})};$('#gpSearch').oninput=e=>{gpQuery=e.target.value.toLocaleLowerCase('fr');draw()};$('#gpStatus').onchange=e=>{gpStatus=e.target.value;draw()};$('#gpPosition').onchange=e=>{gpPosition=e.target.value;draw()};draw()}
 function renderGamesPlayed(){const requested=selected;$('#panel').innerHTML='<div class="card">Chargement des matchs joués…</div>';gpLoad(LOCKS_CODES[requested]).then(players=>{if(selected!==requested||currentTab!=='gamesplayed')return;$('#panel').innerHTML='<div class="section-head"><div><h3>Matchs joués avec l’équipe</h3><p>Historique des joueurs de cette organisation. Positions détectées à partir des colonnes LW, C, RW, D et G.</p></div></div>'+gpControls()+'<div id="gpResults"></div><p class="note"><a href="bhl-matchs-joues.html">Voir les statistiques de toute la BHL →</a></p>';gpWire(players)}).catch(e=>{if(selected===requested&&currentTab==='gamesplayed')$('#panel').innerHTML='<div class="card">Erreur : '+esc(e.message)+'</div>'})}
 
-function renderPanel(){const t=teamData[selected];if(!t)return;if(currentTab==='gamesplayed'){renderGamesPlayed();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='matchups'){renderMatchups();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='protections'){renderProtections();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));if(currentTab==='overview'){const c=t.cumulative;$('#panel').innerHTML=`<div class="cards2"><div class="card"><div class="kicker">Bilan historique</div><h3>Performance cumulative</h3><table style="min-width:0"><tbody><tr><td>Rang Forbes</td><td style="text-align:right"><b>#${fmt(rankFor(t.name))}</b></td></tr><tr><td>Points</td><td style="text-align:right"><b>${fmt(c.points)}</b></td></tr><tr><td>PTSF</td><td style="text-align:right"><b>${fmt(c.pointsFor,1)}</b></td></tr><tr><td>PTSA</td><td style="text-align:right"><b>${fmt(c.pointsAgainst,1)}</b></td></tr><tr><td>Échanges</td><td style="text-align:right"><b>${fmt(c.trades)}</b></td></tr><tr><td>Claims</td><td style="text-align:right"><b>${fmt(c.claims)}</b></td></tr></tbody></table></div><div class="card"><div class="kicker">Saisons récentes</div><h3>Derniers résultats</h3>${t.seasons.slice(0,5).map(s=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)"><div><b>${esc(s.season)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.team)}</div></div><div style="text-align:right"><b>${fmt(s.wins)}–${fmt(s.losses)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.result||'Résultat non indiqué')}</div></div></div>`).join('')}</div></div>`;}
+
+// Records d'organisation : données des sept onglets de records du classeur principal.
+const ORG_RECORD_SHEETS=['RecordsV1','Recordsv2','Recordsv3','Recordsv31','Recordsv4','Recordsv5','Recordsv6'];
+const ORG_RECORD_ALIASES={
+  ANAHEIM:['ANAHEIM MIGHTY DUCKS','ANAHEIM DUCKS'],
+  ATLANTA:['ATLANTA THRASHERS'],
+  CLEVELAND:['BOSTON BRUINS','CLEVELAND BARONS'],
+  CALIFORNIE:['CALIFORNIA GOLDEN SEALS','CALIFORNIA SEALS'],
+  CHICAGO:['CHICAGO BLACKHAWKS'],
+  COLORADO:['COLORADO AVALANCHE'],
+  DETROIT:['DETROIT RED WINGS','DETROIT COUGARS','COUGARS DE DETROIT'],
+  FLORIDA:['FLORIDA PANTHERS'],
+  HARTFORD:['HARTFORD WHALERS'],
+  MINNESOTA:['MINNESOTA NORTH STARS'],
+  MONTREAL:['MONTREAL CANADIENS','MONTREAL MAROONS'],
+  NASHVILLE:['NASHVILLE PREDATORS'],
+  NEWYORK:['NEW YORK RANGERS'],
+  OTTAWA:['OTTAWA SENATORS','EDMONTON OILERS'],
+  'QUÉBEC':['QUEBEC NORDIQUES'],
+  TORONTO:['TORONTO MAPLE LEAFS']
+};
+let orgRecordsCache=null,orgRecordsPending=null;
+function parseOrgRecordRows(rows){
+  const sections=[],current=[null,null];
+  for(const row of rows){
+    for(const [side,titleCol,nameCol,valueCol,seasonCol] of [[0,1,3,4,5],[1,7,9,10,11]]){
+      const title=row[titleCol],name=row[nameCol],value=row[valueCol];
+      if(typeof title==='string'&&title.trim()&&!name){
+        current[side]={title:title.trim(),entries:[]};sections.push(current[side]);
+      }
+      if(name!==undefined&&name!==null&&String(name).trim()&&value!==undefined&&value!==null&&String(value).trim()&&current[side]){
+        const numeric=Number(String(value).replace(/\s/g,'').replace(',','.'));
+        if(Number.isFinite(numeric))current[side].entries.push({team:String(name).trim(),value,season:row[seasonCol]??''});
+      }
+    }
+  }
+  return sections.filter(x=>x.entries.length);
+}
+function loadOrgRecords(){
+  if(orgRecordsCache)return Promise.resolve(orgRecordsCache);
+  if(orgRecordsPending)return orgRecordsPending;
+  orgRecordsPending=Promise.allSettled(ORG_RECORD_SHEETS.map(jsonp)).then(results=>{
+    const sections=[];
+    results.forEach((r,i)=>{
+      if(r.status==='fulfilled'&&r.value?.ok&&Array.isArray(r.value.data?.rows)){
+        sections.push(...parseOrgRecordRows(r.value.data.rows));
+      }
+    });
+    if(!sections.length)throw Error('Aucun classement de records reçu depuis Google Sheets.');
+    orgRecordsCache=sections;
+    return sections;
+  }).finally(()=>{orgRecordsPending=null});
+  return orgRecordsPending;
+}
+function renderOrgRecords(){
+  const requested=selected;
+  $('#panel').innerHTML='<div class="card">Chargement des records de cette organisation…</div>';
+  loadOrgRecords().then(sections=>{
+    if(selected!==requested||currentTab!=='records')return;
+    const t=teamData[requested];
+    // Les noms historiques figurant dans la fiche sont aussi reconnus.
+    const identities=new Set([
+      ...(ORG_RECORD_ALIASES[requested]||[]),t.name,
+      ...t.seasons.map(x=>x.team),...t.honours.map(x=>x.team)
+    ].map(normalizeTeam));
+    let found=0;
+    const cards=sections.map(section=>{
+      const rows=section.entries.map((r,i)=>({...r,rank:i+1})).filter(r=>identities.has(normalizeTeam(r.team)));
+      if(!rows.length)return '';
+      found+=rows.length;
+      const hasSeason=section.entries.some(r=>r.season);
+      return '<section class="org-record-card"><h4>'+esc(section.title)+'</h4><div class="tablewrap"><table><thead><tr><th>Rang BHL</th><th>Équipe</th><th>Total</th>'+(hasSeason?'<th>Saison</th>':'')+'</tr></thead><tbody>'+rows.map(r=>'<tr><td>'+r.rank+'</td><td>'+teamLogo(r.team)+esc(r.team)+'</td><td><b>'+esc(r.value)+'</b></td>'+(hasSeason?'<td>'+esc(r.season||'—')+'</td>':'')+'</tr>').join('')+'</tbody></table></div></section>';
+    }).filter(Boolean);
+    $('#panel').innerHTML='<div class="section-head"><div><h3>Records de l’organisation</h3><p>'+found+' résultat(s) dans '+cards.length+' classement(s). Les anciennes identités de la franchise sont incluses.</p></div></div>'+(cards.length?'<div class="org-record-grid">'+cards.join('')+'</div>':'<div class="card">Aucun record répertorié pour cette organisation.</div>');
+  }).catch(e=>{
+    if(selected===requested&&currentTab==='records')$('#panel').innerHTML='<div class="card">Impossible de charger les records : '+esc(e.message)+'</div>';
+  });
+}
+
+function renderPanel(){const t=teamData[selected];if(!t)return;if(currentTab==='records'){renderOrgRecords();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='gamesplayed'){renderGamesPlayed();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='matchups'){renderMatchups();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='protections'){renderProtections();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));if(currentTab==='overview'){const c=t.cumulative;$('#panel').innerHTML=`<div class="cards2"><div class="card"><div class="kicker">Bilan historique</div><h3>Performance cumulative</h3><table style="min-width:0"><tbody><tr><td>Rang Forbes</td><td style="text-align:right"><b>#${fmt(rankFor(t.name))}</b></td></tr><tr><td>Points</td><td style="text-align:right"><b>${fmt(c.points)}</b></td></tr><tr><td>PTSF</td><td style="text-align:right"><b>${fmt(c.pointsFor,1)}</b></td></tr><tr><td>PTSA</td><td style="text-align:right"><b>${fmt(c.pointsAgainst,1)}</b></td></tr><tr><td>Échanges</td><td style="text-align:right"><b>${fmt(c.trades)}</b></td></tr><tr><td>Claims</td><td style="text-align:right"><b>${fmt(c.claims)}</b></td></tr></tbody></table></div><div class="card"><div class="kicker">Saisons récentes</div><h3>Derniers résultats</h3>${t.seasons.slice(0,5).map(s=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)"><div><b>${esc(s.season)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.team)}</div></div><div style="text-align:right"><b>${fmt(s.wins)}–${fmt(s.losses)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.result||'Résultat non indiqué')}</div></div></div>`).join('')}</div></div>`;}
 if(currentTab==='seasons'){$('#panel').innerHTML=`<div class="section-head"><div><h3>Historique des saisons</h3><p>Historique récupéré depuis l’onglet ${esc(t.sheet)}.</p></div><input id="seasonSearch" style="max-width:260px" placeholder="Filtrer les saisons…"></div><div class="tablewrap"><table><thead><tr><th>Saison</th><th>Nom d’équipe</th><th>Rang</th><th>V</th><th>D</th><th>PTS</th><th>% V</th><th>FPTS Pour</th><th>FPTS Contre</th><th>Résultat</th><th>Adversaire</th></tr></thead><tbody id="seasonRows"></tbody></table></div>`;const draw=()=>{const q=$('#seasonSearch').value.toLowerCase();$('#seasonRows').innerHTML=t.seasons.filter(s=>JSON.stringify(s).toLowerCase().includes(q)).map(s=>`<tr><td><b>${esc(s.season)}</b></td><td>${teamLogo(s.team)}${esc(s.team)}</td><td>${fmt(s.rank)}</td><td>${fmt(s.wins)}</td><td>${fmt(s.losses)}</td><td>${fmt(s.points)}</td><td>${pct(s.winPct)}</td><td>${fmt(s.pointsFor,2)}</td><td>${fmt(s.pointsAgainst,2)}</td><td><span class="pill">${esc(s.result||'—')}</span></td><td>${esc(s.opponent||'—')}</td></tr>`).join('')||'<tr><td colspan="11">Aucune saison correspondante.</td></tr>'};$('#seasonSearch').addEventListener('input',draw);draw();}
 if(currentTab==='honours'){$('#panel').innerHTML=`<div class="section-head"><div><h3>Palmarès et distinctions</h3><p>${t.honours.length} distinction(s) répertoriée(s) dans le classeur.</p></div></div><div class="tablewrap"><table><thead><tr><th>Saison</th><th>Équipe</th><th>Distinction</th><th>Gagnant</th><th>Détail</th></tr></thead><tbody>${t.honours.map(h=>`<tr><td><b>${esc(h.season)}</b></td><td>${teamLogo(h.team)}${esc(h.team)}</td><td><span class="pill">${esc(h.award)}</span></td><td>${esc(h.winner||'—')}</td><td>${esc(h.detail||'—')}</td></tr>`).join('')||'<tr><td colspan="5">Aucune distinction répertoriée.</td></tr>'}</tbody></table></div>`;}}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{currentTab=b.dataset.tab;renderPanel()}));
