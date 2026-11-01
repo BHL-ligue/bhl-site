@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BHL | Portail DG</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#1b2430;background:#f0f2f5}*{box-sizing:border-box}body{margin:0}header{background:#cc0000;color:white;padding:22px 20px}header .wrap{max-width:1000px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}h1{font-size:24px;margin:0}header small{display:block;opacity:.9;margin-top:5px}.wrap{max-width:1000px;margin:24px auto;padding:0 16px}.card{background:white;border:1px solid #e0e4e8;border-radius:14px;padding:24px;margin-bottom:18px;box-shadow:0 2px 10px #18202a0a}h2{margin:0 0 15px;font-size:21px}p{line-height:1.5}label{display:block;font-weight:700;margin:15px 0 7px}input,select{display:block;width:100%;border:1px solid #bac2cb;border-radius:8px;padding:12px;font:inherit;background:white}button{border:0;border-radius:8px;background:#cc0000;color:white;padding:12px 18px;font-weight:700;cursor:pointer;font:inherit}button.secondary{background:#333e49}button:disabled{opacity:.55;cursor:wait}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.muted{color:#637082}.status{padding:12px 14px;border-radius:8px;margin:12px 0;background:#eef2f5;white-space:pre-wrap}.status.error{background:#fff0f0;color:#9b1515}.status.ok{background:#e8f6ed;color:#175b31}.hidden{display:none!important}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.team{padding:15px;background:#f6f7f9;border-left:5px solid #cc0000;border-radius:7px;font-weight:700}.foot{text-align:center;color:#66717b;padding:15px 0 35px;font-size:13px}@media(max-width:640px){.grid{grid-template-columns:1fr}.card{padding:17px}header .wrap{align-items:flex-start;flex-direction:column}h1{font-size:21px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div><h1>BHL — Portail des directeurs généraux</h1><small>Gestion du capitaine et des assistants</small></div><button class="secondary hidden" id="logout">Déconnexion</button></div></header>
+<main class="wrap">
+<section class="card" id="loginPanel"><h2>Connexion DG</h2><p class="muted">Connecte-toi avec le compte Supabase autorisé pour ton organisation BHL.</p><form id="loginForm"><label for="email">Adresse courriel</label><input id="email" type="email" autocomplete="email" required><label for="password">Mot de passe</label><input id="password" type="password" autocomplete="current-password" required><div class="actions"><button type="submit" id="loginBtn">Se connecter</button></div></form><p class="muted">L'accès est réservé aux comptes DG déjà approuvés par l'administration.</p></section>
+<section class="card hidden" id="editorPanel"><h2>Leadership de ton organisation</h2><div class="team" id="teamLabel"></div><p class="muted">Choisis quatre joueurs différents. Tous les joueurs appartenant à ton organisation sont admissibles, quel que soit leur statut d'effectif.</p><form id="leadershipForm"><div class="grid"><div><label for="captain">Capitaine (C)</label><select id="captain" required></select></div><div><label for="assistant_1">Assistant 1 (A)</label><select id="assistant_1" required></select></div><div><label for="assistant_2">Assistant 2 (A)</label><select id="assistant_2" required></select></div><div><label for="assistant_3">Assistant 3 (A)</label><select id="assistant_3" required></select></div></div><div class="actions"><button id="saveBtn" type="submit">Enregistrer le leadership</button><button id="reloadBtn" type="button" class="secondary">Actualiser les joueurs</button></div></form><p class="muted" id="updatedLabel"></p></section>
+<div id="status" class="status" role="status" aria-live="polite">Prêt.</div>
+</main><div class="foot">BHL • Béliveau Hockey League</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+'use strict';
+const SUPABASE_URL='https://lpaiaywrjysxmomaalqs.supabase.co';
+// Clé publique seulement : ne jamais mettre une clé service_role ici.
+const SUPABASE_ANON_KEY='sb_publishable_4YaVO2_uEDfNJiDZIYthnQ_JNEvpefP';
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const $=id=>document.getElementById(id);
+const slots=['captain','assistant_1','assistant_2','assistant_3'];
+let currentTeam=null,currentUser=null,players=[];
+function status(message,type=''){const el=$('status');el.textContent=message;el.className='status '+type;}
+function showEditor(yes){$('loginPanel').classList.toggle('hidden',yes);$('editorPanel').classList.toggle('hidden',!yes);$('logout').classList.toggle('hidden',!yes);}
+function check(error){if(error)throw error;}
+function teamName(id){return ({CLEVELAND:'Boston Bruins',MONTREAL:'Canadiens de Montréal','QUÉBEC':'Nordiques de Québec'})[id]||id;}
+async function loadPortal(){
+ const {data:{user},error:ue}=await db.auth.getUser();check(ue);
+ if(!user){currentTeam=null;currentUser=null;showEditor(false);status('Connecte-toi pour accéder à ton organisation.');return;}
+ currentUser=user;
+ const {data:profile,error:pe}=await db.from('bhl_profiles').select('team_id,role').eq('user_id',user.id).maybeSingle();check(pe);
+ if(!profile||!profile.team_id||!['dg','admin'].includes(String(profile.role||'').toLowerCase())){
+  currentTeam=null;showEditor(false);status('Compte connecté, mais aucune organisation DG approuvée ne lui est attribuée. Contacte l’administrateur BHL.','error');return;
+ }
+ currentTeam=profile.team_id;
+ $('teamLabel').textContent=teamName(currentTeam);
+ showEditor(true);
+ await loadPlayersAndLeadership();
+}
+async function loadPlayersAndLeadership(){
+ if(!currentTeam)return;
+ status('Chargement des joueurs et du leadership…');
+ const [{data:rows,error:playersError},{data:lead,error:leadError}]=await Promise.all([
+  db.from('bhl_players').select('player_id,player_name,position,roster_status').eq('team_id',currentTeam).order('player_name').limit(1000),
+  db.from('bhl_team_leadership').select('captain,assistant_1,assistant_2,assistant_3,updated_at').eq('team_id',currentTeam).maybeSingle()
+ ]);
+ check(playersError);check(leadError);
+ players=rows||[];
+ if(!players.length){slots.forEach(s=>{$(s).replaceChildren(new Option('Aucun joueur disponible',''));});status('Aucun joueur accessible. Vérifie les politiques RLS de bhl_players et l’organisation du DG.','error');return;}
+ for(const slot of slots){
+  const sel=$(slot);sel.replaceChildren(new Option('— Choisir un joueur —',''));
+  for(const p of players)sel.add(new Option(p.player_name+(p.position?' · '+p.position:''),p.player_name));
+  const saved=lead&&lead[slot]?String(lead[slot]):'';
+  if(saved&&!Array.from(sel.options).some(o=>o.value===saved))sel.add(new Option(saved+' (hors effectif actuel)',saved));
+  sel.value=saved;
+ }
+ $('updatedLabel').textContent=lead&&lead.updated_at?'Dernière modification : '+new Date(lead.updated_at).toLocaleString('fr-CA'):'';
+ status(players.length+' joueurs disponibles pour '+teamName(currentTeam)+'.','ok');
+}
+$('loginForm').addEventListener('submit',async e=>{
+ e.preventDefault();const btn=$('loginBtn');btn.disabled=true;status('Connexion en cours…');
+ try{const {error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});check(error);$('password').value='';await loadPortal();}
+ catch(err){status('Connexion impossible : '+err.message,'error');}finally{btn.disabled=false;}
+});
+$('leadershipForm').addEventListener('submit',async e=>{
+ e.preventDefault();if(!currentTeam||!currentUser)return;
+ const values=Object.fromEntries(slots.map(s=>[s,$(s).value]));
+ if(slots.some(s=>!values[s])){status('Sélectionne un capitaine et trois assistants.','error');return;}
+ if(new Set(Object.values(values)).size!==4){status('Un joueur ne peut pas occuper deux postes.','error');return;}
+ if(Object.values(values).some(name=>!players.some(p=>p.player_name===name))){status('Un des joueurs sélectionnés ne fait plus partie de l’effectif. Actualise les joueurs.','error');return;}
+ const btn=$('saveBtn');btn.disabled=true;status('Enregistrement dans Supabase…');
+ try{
+  // Mise à jour uniquement : les 16 lignes de leadership existent déjà.
+  // L'autorisation doit être appliquée dans Supabase (RLS), jamais seulement ici.
+  const {data,error}=await db.from('bhl_team_leadership').update({...values,updated_at:new Date().toISOString(),updated_by:currentUser.id}).eq('team_id',currentTeam).select('team_id');check(error);
+  if(!data||data.length!==1)throw new Error('Aucune ligne modifiée. Vérifie les politiques RLS et les droits DG.');
+  status('Leadership enregistré! La synchronisation Google Sheets dépend des webhooks Supabase.','ok');
+  await loadPlayersAndLeadership();
+ }catch(err){status('Enregistrement refusé : '+err.message,'error');}finally{btn.disabled=false;}
+});
+$('reloadBtn').addEventListener('click',()=>loadPlayersAndLeadership().catch(e=>status(e.message,'error')));
+$('logout').addEventListener('click',async()=>{await db.auth.signOut();currentTeam=null;currentUser=null;showEditor(false);status('Déconnexion effectuée.','ok');});
+loadPortal().catch(err=>status('Erreur de chargement : '+err.message,'error'));
+</script>
+</body></html>
