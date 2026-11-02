@@ -21,6 +21,7 @@ function mount(){
   ['bhl-trophees.html','Trophées'],
   ['bhl-matchs-joues.html','Matchs joués'],
   ['bhl-fantrax.html','Saison'],
+  ['bhl-repechage.html','Repêchage'],
   ['bhl-records.html','Records'],
   ['bhl-transactions.html','Transactions'],
   ['bhl-espace-dg.html','Espace DG']
