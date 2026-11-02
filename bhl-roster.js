@@ -48,7 +48,16 @@ const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817,'ja
 window.BHLNhlPlayerIds=bhlKnownNhlIds;
 window.BHLNhlNameKey=bhlNhlPlayerName;
 function bhlNhlPlayerName(value){
-  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+ return String(value||'').normalize('NFKC')
+  .replace(/&#(?:0*39|x0*27);|&apos;/gi,"'")
+  .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .replace(/[^a-zA-Z0-9]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+}
+function bhlNhlIdentityKey(value){return bhlNhlPlayerName(value).replace(/[^a-z0-9]/g,'')}
+const bhlNhlIdIndex=Object.fromEntries(Object.entries(bhlKnownNhlIds).map(([name,id])=>[bhlNhlIdentityKey(name),id]));
+function bhlNhlResolvedId(name){
+ const key=bhlNhlIdentityKey(name);
+ return Number(bhlNhlIdIndex[key]||(key==='oreillyryan'?8475158:0)||(key==='millerkandre'?8480817:0));
 }
 function bhlNhlNamesMatch(name, candidate){
   const normalized=bhlNhlPlayerName(candidate);
@@ -77,7 +86,7 @@ async function bhlNhlPortrait(name){
  if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
  const request=(async()=>{
   // All BHL portraits use the NHL player ID, not an inferred image from a name.
-  let id=Number(bhlKnownNhlIds[key]||0);
+  let id=bhlNhlResolvedId(name);
   if(!id){
    const variants=[name,String(name).replace(/[’‘]/g,"'"),String(name).replace(/['’‘-]/g,' '),key];
    for(const variant of [...new Set(variants.map(v=>v.trim()).filter(Boolean))]){
