@@ -1,0 +1,27 @@
+/* Navigation officielle commune BHL — styles isolés */
+#bhl-global-nav{position:relative;z-index:5000;font-family:Arial,Helvetica,sans-serif}
+#bhl-global-nav *{box-sizing:border-box}
+#bhl-global-nav .bhl-nav-shell{background:#cc0000;color:#fff;border-bottom:3px solid #a50000;box-shadow:0 3px 12px rgba(0,0,0,.13)}
+#bhl-global-nav .bhl-nav-inner{width:min(1400px,calc(100% - 36px));margin:auto;min-height:76px;display:flex;align-items:center;gap:22px}
+#bhl-global-nav .bhl-nav-brand{display:flex;align-items:center;gap:11px;flex:none;color:#fff!important;text-decoration:none!important;font-size:19px;font-weight:900;letter-spacing:.045em}
+#bhl-global-nav .bhl-nav-logo{height:52px;width:52px;object-fit:contain;flex:none}
+#bhl-global-nav .bhl-nav-brand small{display:block;font-size:9px;letter-spacing:.16em;font-weight:700;opacity:.82;margin-top:2px}
+#bhl-global-nav .bhl-nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;min-width:0}
+#bhl-global-nav .bhl-nav-links a{display:block;white-space:nowrap;text-decoration:none!important;color:rgba(255,255,255,.92)!important;padding:11px 10px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:0;transition:background .18s ease}
+#bhl-global-nav .bhl-nav-links a:hover,#bhl-global-nav .bhl-nav-links a:focus-visible{background:rgba(255,255,255,.18)!important;color:#fff!important}
+#bhl-global-nav .bhl-nav-links a[aria-current="page"]{background:#fff!important;color:#a60000!important}
+#bhl-global-nav .bhl-nav-dg{margin-left:7px;border:1px solid rgba(255,255,255,.6)!important}
+#bhl-global-nav .bhl-nav-toggle{display:none;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:13px;font-weight:800;padding:11px 13px;cursor:pointer}
+#bhl-global-nav .bhl-nav-toggle svg{width:19px;height:19px;stroke:currentColor;stroke-width:2;fill:none}
+.bhl-header-retained{max-width:1400px;margin:8px auto;padding:0 18px;display:flex;justify-content:flex-end}
+.bhl-header-retained:empty{display:none}
+@media(max-width:1180px){
+ #bhl-global-nav .bhl-nav-inner{min-height:68px;flex-wrap:wrap;justify-content:space-between;gap:0}
+ #bhl-global-nav .bhl-nav-logo{width:46px;height:46px}
+ #bhl-global-nav .bhl-nav-toggle{display:inline-flex}
+ #bhl-global-nav .bhl-nav-links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:3px;padding:8px 0 16px}
+ #bhl-global-nav .bhl-nav-links.is-open{display:flex}
+ #bhl-global-nav .bhl-nav-links a{font-size:14px;padding:12px 14px}
+ #bhl-global-nav .bhl-nav-dg{margin:5px 0 0}
+}
+@media(max-width:440px){#bhl-global-nav .bhl-nav-inner{width:calc(100% - 24px)}#bhl-global-nav .bhl-nav-brand{font-size:17px}}
