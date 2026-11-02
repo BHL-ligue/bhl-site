@@ -97,3 +97,8 @@
 .bhl-player-size{font-size:12px;font-weight:650;color:#6b7280;margin-top:3px}
 .bhl-player-team-identity{margin-top:11px}
 @media(max-width:600px){.bhl-player-position{font-size:11px;margin-top:7px}.bhl-player-size{font-size:10px;margin-top:2px}.bhl-player-team-identity{margin-top:7px}}
+
+
+/* Two headline fantasy metrics; NHL club shown as an abbreviation */
+.bhl-player-dialog .bhl-player-totals{grid-template-columns:repeat(2,minmax(0,1fr));max-width:460px}
+.bhl-player-dialog .bhl-player-meta{font-size:12px;font-weight:750;letter-spacing:.025em;color:#536071;margin-bottom:12px}
