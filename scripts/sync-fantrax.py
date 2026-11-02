@@ -79,6 +79,16 @@ def build_snapshot(now=None):
     except (ValueError, KeyError, TypeError, OSError) as error:
         print(f"Historical opponent scores unavailable: {error}")
         against_by_team = {}
+    next_period = next((p for p in info["scoringPeriods"] if p["number"] == scoring_period + 1), None)
+    upcoming = None
+    if next_period:
+        try:
+            upcoming_scores = fetch("getMatchupScores", period=next_period["number"])
+            if upcoming_scores.get("matchups"):
+                upcoming = {"period": next_period["number"], "periodDates": next_period,
+                            "matchups": upcoming_scores["matchups"]}
+        except Exception as error:
+            print("Upcoming period unavailable:", error)
     player_info = fetch("getPlayerIds")
     if not isinstance(player_info, dict) or not player_info:
         raise ValueError("Missing player names")
@@ -102,6 +112,7 @@ def build_snapshot(now=None):
         "rosterPeriod": roster_period, "scoringPeriod": scoring_period,
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
+        "upcoming": upcoming,
         "standings": [{
             **{k: row[k] for k in (
                 "teamId", "teamName", "rank", "points", "totalPointsFor",
