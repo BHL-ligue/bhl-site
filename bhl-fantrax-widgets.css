@@ -38,3 +38,52 @@
 .bhl-pro-empty{display:flex;flex-direction:column;justify-content:center;align-items:center;border:1px dashed #c4cbd5;border-radius:12px;padding:12px;min-height:205px;background:#f4f6f9;color:#718096;text-align:center;font-size:12px}
 @media(max-width:1050px){.bhl-pro-layout{grid-template-columns:1fr}.bhl-pro-layout>section:last-child{max-width:100%}.bhl-pro-layout>section:last-child .bhl-pro-grid{max-width:600px}}
 @media(max-width:600px){.bhl-pro-layout{padding:10px;gap:14px}.bhl-pro-grid{gap:6px}.bhl-lineup-player.bhl-pro-card{min-height:218px;padding:8px;text-align:left}.bhl-pro-card .bhl-lineup-info{width:100%;padding-top:23px}.bhl-pro-card .bhl-lineup-info strong{font-size:12px;max-width:100%;min-height:28px;margin-bottom:8px}.bhl-pro-card .bhl-lineup-portrait{width:80%;height:48%;right:-12px;opacity:.85}.bhl-pro-metrics{display:block}.bhl-pro-metrics div{display:flex;flex-direction:row;gap:4px;align-items:baseline}.bhl-pro-metrics b{font-size:16px}.bhl-pro-metrics span{font-size:8px}.bhl-pro-pos{left:8px}.bhl-pro-card .bhl-lineup-info small{font-size:9px}.bhl-pro-card .bhl-nhl-link{font-size:8px}.bhl-pro-empty{min-height:218px;padding:6px;font-size:10px}}
+
+
+/* BHL 2026: refreshed team-colour roster presentation */
+#teamRosterPanel{--roster-accent:var(--team-color,#cc0000)}
+#teamRosterPanel .bhl-roster-block{border:1px solid #dce2e9;border-radius:15px;box-shadow:0 5px 18px #17253a0a;overflow:hidden}
+#teamRosterPanel .bhl-roster-title,
+#teamRosterPanel .bhl-roster-starting>.bhl-roster-title{background:var(--roster-accent)!important;color:#fff!important;border-left:0!important;padding:14px 18px;gap:12px}
+#teamRosterPanel .bhl-roster-title h4{color:#fff!important;font-size:16px;font-weight:850;letter-spacing:.015em}
+#teamRosterPanel .bhl-roster-title>span{color:#fff!important;background:#ffffff2b;border:1px solid #ffffff42;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:750}
+#teamRosterPanel .bhl-roster-block .bhl-ft-table thead th{background:var(--roster-accent)!important;color:#fff!important;border-color:var(--roster-accent)!important;font-size:12px;letter-spacing:.025em}
+#teamRosterPanel .bhl-roster-block .bhl-ft-table tbody tr:nth-child(even){background:#f6f8fa}
+#teamRosterPanel .bhl-roster-block .bhl-ft-table tbody tr:hover{background:#edf2f7}
+#teamRosterPanel .bhl-roster-block .bhl-ft-table td{font-size:13px;padding:12px 13px}
+#teamRosterPanel .bhl-lineup-badge{background:#edf0f5;border:1px solid #dce3eb;color:#334357}
+#teamRosterPanel .bhl-pro-layout{gap:20px;padding:17px}
+#teamRosterPanel .bhl-pro-layout h5{color:#2b3748;font-weight:850}
+#teamRosterPanel .bhl-pro-row h6{color:#657184;font-weight:800}
+#teamRosterPanel .bhl-pro-grid{gap:11px}
+#teamRosterPanel .bhl-lineup-player.bhl-pro-card{isolation:isolate;min-height:218px;border:1px solid #dfe4eb;border-top:4px solid var(--roster-accent);border-radius:13px;background:linear-gradient(145deg,#fff 5%,#f2f5f8 100%);color:#1f2b3c;box-shadow:0 4px 13px #1c29360c;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+#teamRosterPanel .bhl-lineup-player.bhl-pro-card:hover{transform:translateY(-2px);box-shadow:0 9px 23px #1c29361c;border-color:#c8d2df;border-top-color:var(--roster-accent)}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-portrait{width:65%;height:79%;right:-7px;bottom:0;z-index:0;opacity:1}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-portrait:before{content:"";position:absolute;right:0;bottom:0;width:100%;height:88%;background:linear-gradient(135deg,transparent 5%,#e8edf4 100%);border-radius:65% 0 0 0}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-portrait .bhl-nhl-photo{z-index:1;object-fit:contain;object-position:bottom right}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-initials{z-index:1;color:#b9c4d1}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-info{z-index:2;width:66%;padding-top:29px;text-shadow:none}
+#teamRosterPanel .bhl-pro-first{color:#64748b;font-size:11px;font-weight:650}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-info strong{color:#1c2939!important;font-size:15px;font-weight:850;margin:2px 0 15px}
+#teamRosterPanel .bhl-pro-card .bhl-player-open{color:inherit!important;text-align:left;font-weight:inherit}
+#teamRosterPanel .bhl-pro-card .bhl-player-open:hover{color:var(--roster-accent)!important}
+#teamRosterPanel .bhl-pro-pos{background:var(--roster-accent);color:#fff;border:0;font-size:10px;padding:4px 9px;border-radius:6px;letter-spacing:.04em}
+#teamRosterPanel .bhl-pro-metrics{gap:11px}
+#teamRosterPanel .bhl-pro-metrics b{color:#1e293b;font-size:21px;font-weight:900}
+#teamRosterPanel .bhl-pro-metrics span{color:#68778a;font-weight:800;font-size:9px}
+#teamRosterPanel .bhl-pro-card .bhl-lineup-info small{color:#718096;font-weight:650}
+#teamRosterPanel .bhl-pro-empty{background:#f7f9fb;border-color:#d8dfe8}
+@media(max-width:600px){
+ #teamRosterPanel .bhl-pro-layout{padding:10px;gap:13px}
+ #teamRosterPanel .bhl-pro-grid{gap:8px}
+ #teamRosterPanel .bhl-lineup-player.bhl-pro-card{min-height:205px;padding:9px}
+ #teamRosterPanel .bhl-pro-card .bhl-lineup-info{width:100%;padding-top:25px}
+ #teamRosterPanel .bhl-pro-card .bhl-lineup-info strong{font-size:12px;max-width:68%;min-height:28px;margin-bottom:9px}
+ #teamRosterPanel .bhl-pro-card .bhl-lineup-portrait{width:76%;height:52%;right:-8px}
+ #teamRosterPanel .bhl-pro-metrics{display:block}
+ #teamRosterPanel .bhl-pro-metrics b{font-size:16px}
+ #teamRosterPanel .bhl-pro-metrics span{font-size:8px}
+ #teamRosterPanel .bhl-roster-title{padding:12px}
+ #teamRosterPanel .bhl-roster-title h4{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){#teamRosterPanel .bhl-lineup-player.bhl-pro-card{transition:none}#teamRosterPanel .bhl-lineup-player.bhl-pro-card:hover{transform:none}}
