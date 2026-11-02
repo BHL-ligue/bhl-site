@@ -147,7 +147,7 @@ async function historicNhl(name,target){
   const body=document.createElement('tbody'),rows=[];
   for(const x of seasons){
    const season=String(x.season),row=document.createElement('tr');
-   const team=typeof x.teamName==='object'?(x.teamName.default||x.teamAbbrev):x.teamName||x.teamAbbrev||'—';
+   const team=nhlSeasonTeamCode(x)||'—';
    const basic=goalie?[x.wins,x.goalsAgainst,x.saves,x.shutouts,x.goals,x.assists]:[x.goals,x.assists,x.shots??x.shotsOnGoal,x.hits,x.blockedShots,x.takeaways,x.faceoffsWon];
    const values=[season.slice(0,4)+'-'+season.slice(6),team,'…','…',x.gamesPlayed,...basic.map(value=>value??'…')];
    values.splice(goalie?11:7,0,x.points??((x.goals!=null&&x.assists!=null)?Number(x.goals)+Number(x.assists):'…'));
