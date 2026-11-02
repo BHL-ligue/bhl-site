@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T22:57:52.949357+00:00",
+  "updatedAt": "2026-11-02T23:16:33.341878+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -4527,7 +4527,7 @@
         {
           "id": "03l0t",
           "name": "Pavel Zacha",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
@@ -4593,12 +4593,12 @@
         {
           "id": "03wpn",
           "name": "Brett Howden",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02yjw",
@@ -4692,7 +4692,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04mv2",
@@ -18199,7 +18199,7 @@
       "teamName": "Ottawa Senators",
       "rank": 4,
       "points": "10-5-0",
-      "totalPointsFor": 2570.85,
+      "totalPointsFor": 2570.25,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2243.45
@@ -18259,7 +18259,7 @@
       "teamName": "Nashville Predators",
       "rank": 10,
       "points": "7-8-0",
-      "totalPointsFor": 2230.5,
+      "totalPointsFor": 2229.6,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
       "totalPointsAgainst": 2278.5
@@ -18289,7 +18289,7 @@
       "teamName": "Atlanta Thrashers",
       "rank": 13,
       "points": "3-12-0",
-      "totalPointsFor": 1733.85,
+      "totalPointsFor": 1734.45,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
       "totalPointsAgainst": 2229.1
