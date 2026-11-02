@@ -275,6 +275,11 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .bhl-leadership-name{font-size:18px;font-weight:850;margin-top:14px;overflow-wrap:anywhere}
 @media(max-width:850px){.bhl-leadership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:440px){.bhl-leadership-grid{grid-template-columns:1fr}}
+</style><style>
+.bhl-nhl-photo-wrap{height:135px;display:flex;align-items:flex-end;justify-content:center;margin:-12px -12px 12px;background:linear-gradient(180deg,#f6f7f9,#e9edf1);border-radius:8px;overflow:hidden}
+.bhl-nhl-photo{max-height:135px;max-width:100%;width:auto;object-fit:contain}
+.bhl-nhl-link{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--team-color,#cc0000);text-decoration:underline}
+.bhl-nhl-photo-wrap:has(img[hidden]){display:none}
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
@@ -680,6 +685,53 @@ function leadershipDate(value){
   const date=new Date(value);
   return Number.isNaN(date.getTime())?String(value):date.toLocaleDateString('fr-CA',{year:'numeric',month:'long',day:'numeric'});
 }
+
+/* Portraits NHL : recherche par nom exact, puis photo de la fiche NHL. */
+const bhlNhlPortraitCache=new Map();
+function bhlNhlPlayerName(value){
+  return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+}
+async function bhlNhlPortrait(name){
+  const key=bhlNhlPlayerName(name);
+  if(!key)return null;
+  if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
+  const request=(async()=>{
+    const searchUrl='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=20&q='+encodeURIComponent(name);
+    const response=await fetch(searchUrl,{mode:'cors'});
+    if(!response.ok)throw Error('Recherche NHL indisponible');
+    const result=await response.json();
+    const matches=Array.isArray(result)?result:(result?.data||[]);
+    const match=matches.find(p=>bhlNhlPlayerName(p.name||p.fullName||p.playerName)===key);
+    const playerId=Number(match?.playerId||match?.id);
+    if(!Number.isInteger(playerId)||playerId<=0)return null;
+    const profileResponse=await fetch('https://api-web.nhle.com/v1/player/'+playerId+'/landing',{mode:'cors'});
+    if(!profileResponse.ok)return null;
+    const profile=await profileResponse.json();
+    const headshot=String(profile?.headshot||'');
+    if(!headshot.startsWith('https://assets.nhle.com/'))return null;
+    const slug=String(profile?.playerSlug||'').replace(/[^a-z0-9-]/gi,'');
+    return {url:headshot,profile:'https://www.nhl.com/player/'+(slug?slug+'-':'')+playerId};
+  })().catch(()=>null);
+  bhlNhlPortraitCache.set(key,request);
+  return request;
+}
+function bhlNhlApplyPortraits(panel){
+  panel.querySelectorAll('[data-bhl-nhl-name]').forEach(async card=>{
+    const name=card.getAttribute('data-bhl-nhl-name');
+    const result=await bhlNhlPortrait(name);
+    if(!result||!card.isConnected)return;
+    const photo=card.querySelector('.bhl-nhl-photo');
+    const link=card.querySelector('.bhl-nhl-link');
+    if(!photo||!link)return;
+    photo.src=result.url;
+    photo.alt='Photo officielle NHL de '+name;
+    photo.onload=()=>{photo.hidden=false;card.classList.add('bhl-has-portrait');};
+    photo.onerror=()=>{photo.hidden=true;card.classList.remove('bhl-has-portrait');};
+    link.href=result.profile;
+    link.hidden=false;
+  });
+}
+
 function renderLeadership(){
   const team=selected;
   $('#panel').innerHTML='<div class="card">Chargement du leadership depuis Google Sheets…</div>';
@@ -694,7 +746,7 @@ function renderLeadership(){
     ];
     const currentHtml='<div class="section-head"><div><h3>Leadership actuel</h3><p>Capitaine et assistants — données synchronisées depuis Supabase.</p></div></div>'+
       '<div class="bhl-leadership-grid">'+roles.map(([letter,label,name])=>
-        '<div class="card bhl-leadership-card"><div class="bhl-leadership-role"><span class="bhl-leadership-letter">'+letter+'</span>'+esc(label)+'</div><div class="bhl-leadership-name">'+esc(name||'Non désigné')+'</div></div>'
+        '<div class="card bhl-leadership-card" data-bhl-nhl-name="'+esc(name||'')+'"><div class="bhl-nhl-photo-wrap"><img class="bhl-nhl-photo" hidden loading="lazy" alt=""></div><div class="bhl-leadership-role"><span class="bhl-leadership-letter">'+letter+'</span>'+esc(label)+'</div><div class="bhl-leadership-name">'+esc(name||'Non désigné')+'</div><a class="bhl-nhl-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Voir la fiche NHL.com ↗</a></div>'
       ).join('')+'</div>';
     const official=TEAM_NAMES_LEADERSHIP[team]||team;
     const history=(leadershipCache.history||[]).filter(r=>leadershipKey(leadershipField(r,'organisation',1))===leadershipKey(official));
@@ -717,6 +769,7 @@ function renderLeadership(){
       changes.map(c=>'<tr><td>'+esc(leadershipDate(c.date))+'</td><td>'+esc(c.label)+'</td><td>'+esc(c.before||'—')+'</td><td><b>'+esc(c.after||'—')+'</b></td></tr>').join('')+
       '</tbody></table></div>':'<div class="card">Aucun changement de leadership enregistré pour cette organisation.</div>');
     $('#panel').innerHTML=currentHtml+historyHtml;
+    bhlNhlApplyPortraits($('#panel'));
   }).catch(error=>{
     if(selected===team&&currentTab==='leadership')$('#panel').innerHTML='<div class="card">Impossible de charger le leadership : '+esc(error.message)+'</div>';
   });
