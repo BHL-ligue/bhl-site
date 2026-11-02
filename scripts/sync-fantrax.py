@@ -246,6 +246,24 @@ def build_snapshot(now=None):
     player_info = fetch("getPlayerIds")
     if not isinstance(player_info, dict) or not player_info:
         raise ValueError("Missing player names")
+    # League-wide player eligibility is available from the public API.
+    # Keep the roster slot separate: a player may qualify at several positions.
+    league_player_info = info.get("playerInfo") or {}
+    def official_eligible(player_id):
+        import re
+        details = league_player_info.get(player_id, {}) if isinstance(league_player_info, dict) else {}
+        raw = details.get("eligiblePos", []) if isinstance(details, dict) else []
+        if isinstance(raw, str):
+            found = re.findall(r"(?<![A-Z])(LW|RW|C|D|G)(?![A-Z])", raw.upper())
+        elif isinstance(raw, (list, tuple)):
+            found = []
+            for entry in raw:
+                if isinstance(entry, str):
+                    found.extend(re.findall(r"(?<![A-Z])(LW|RW|C|D|G)(?![A-Z])", entry.upper()))
+        else:
+            found = []
+        return list(dict.fromkeys(found))
+
     teams = []
     for team_id, roster in rosters["rosters"].items():
         players = []
@@ -269,8 +287,11 @@ def build_snapshot(now=None):
                 eligible = [str(v).upper() for v in raw_eligible if isinstance(v, str) and str(v).upper() in ("C", "LW", "RW", "D", "G")]
             else:
                 eligible = []
+            official_positions = official_eligible(item["id"])
+            if official_positions:
+                eligible = official_positions
             slot = item.get("position", "")
-            if slot in ("C", "LW", "RW", "D", "G") and slot not in eligible:
+            if not official_positions and slot in ("C", "LW", "RW", "D", "G") and slot not in eligible:
                 eligible.insert(0, slot)
             players.append({"id": item["id"], "name": name, "position": slot,
                             "eligiblePositions": list(dict.fromkeys(eligible)),
