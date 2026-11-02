@@ -282,6 +282,42 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .bhl-nhl-photo[hidden]{display:none!important}
 .bhl-nhl-photo-wrap{min-height:135px}
 .bhl-nhl-photo-wrap:has(img[hidden]){display:none}
+</style><style>
+/* Présentation BHL : portraits de leadership et chronologie des nominations */
+.bhl-leadership-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:18px 0 38px;align-items:stretch}
+.bhl-leadership-card{position:relative;min-width:0;overflow:hidden;padding:0!important;border:1px solid #e1e5ec!important;border-radius:16px!important;background:#fff!important;box-shadow:0 7px 22px rgba(20,31,49,.07)!important;transition:transform .2s ease,box-shadow .2s ease}
+.bhl-leadership-card:hover{transform:translateY(-3px);box-shadow:0 13px 30px rgba(20,31,49,.13)!important}
+.bhl-leadership-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--team-color,#cc0000);z-index:2}
+.bhl-captain-card:before{height:7px}
+.bhl-nhl-photo-wrap{position:relative;height:215px!important;min-height:215px!important;margin:0!important;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;border-radius:0!important;background:linear-gradient(145deg,#f5f7fa 0%,#e4e9f0 100%)!important}
+.bhl-nhl-photo-wrap:after{content:"";position:absolute;inset:auto 0 0;height:48px;background:linear-gradient(transparent,rgba(255,255,255,.75));pointer-events:none}
+.bhl-photo-watermark{position:absolute;right:10px;top:8px;font-size:108px;line-height:1;font-weight:950;color:var(--team-color,#cc0000);opacity:.075;pointer-events:none}
+.bhl-nhl-photo{position:relative;z-index:1;max-height:210px!important;height:100%;max-width:100%;width:auto;object-fit:contain;object-position:bottom;filter:drop-shadow(0 5px 8px rgba(12,25,45,.13))}
+.bhl-nhl-photo[hidden]{display:none!important}
+.bhl-nhl-photo-wrap:has(img[hidden]){display:flex!important}
+.bhl-leadership-info{padding:17px 17px 19px;display:flex;flex-direction:column;min-height:147px}
+.bhl-leadership-role{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:800;color:#6b7280;letter-spacing:.07em;text-transform:uppercase}
+.bhl-leadership-letter{display:inline-flex;align-items:center;justify-content:center;background:var(--team-color,#cc0000);color:#fff;width:31px;height:31px;border-radius:9px;font-size:15px;font-weight:900;flex:none}
+.bhl-leadership-name{font-size:19px;font-weight:900;line-height:1.2;letter-spacing:-.025em;margin-top:13px;color:#182338;overflow-wrap:anywhere}
+.bhl-nhl-link{display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:15px;font-size:12px;font-weight:750;color:var(--team-color,#cc0000);text-decoration:none!important}
+.bhl-nhl-link:hover{text-decoration:underline!important}
+.bhl-history-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bhl-history-count{flex:none;padding:7px 12px;border-radius:999px;background:#f0f2f5;color:#526075;font-size:12px;font-weight:800}
+.bhl-history-timeline{position:relative;margin:17px 0 28px;padding-left:24px}
+.bhl-history-timeline:before{content:"";position:absolute;left:6px;top:19px;bottom:24px;width:2px;background:#e2e7ef}
+.bhl-history-entry{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;margin:0 0 12px;padding:17px 20px;border:1px solid #e4e8ee;border-radius:13px;background:#fff;box-shadow:0 3px 12px rgba(20,31,49,.035)}
+.bhl-history-entry:before{content:"";position:absolute;left:-24px;top:24px;width:12px;height:12px;border:3px solid var(--team-color,#cc0000);border-radius:50%;background:#fff;box-sizing:border-box}
+.bhl-history-date{font-size:12px;font-weight:800;color:#68758a;padding-top:4px}
+.bhl-history-role{display:inline-block;padding:5px 9px;background:#f1f3f7;border-radius:6px;color:#45536b;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.045em}
+.bhl-history-transition{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:11px}
+.bhl-history-player{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.bhl-history-old{color:#758094}
+.bhl-history-new{color:#17243b;font-weight:850}
+.bhl-history-arrow{font-size:20px;font-weight:800;color:var(--team-color,#cc0000)}
+.bhl-history-empty{padding:22px!important;border-radius:12px}
+@media(max-width:950px){.bhl-leadership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.bhl-history-entry{grid-template-columns:1fr;gap:7px;padding:14px}.bhl-history-timeline{padding-left:20px}.bhl-history-entry:before{left:-20px}.bhl-history-heading{align-items:flex-start;flex-wrap:wrap}.bhl-history-count{margin-top:5px}}
+@media(max-width:420px){.bhl-leadership-grid{gap:10px}.bhl-nhl-photo-wrap{height:155px!important;min-height:155px!important}.bhl-nhl-photo{max-height:150px!important}.bhl-leadership-info{padding:12px;min-height:148px}.bhl-leadership-name{font-size:16px}.bhl-leadership-role{font-size:10px}.bhl-leadership-letter{width:26px;height:26px}}
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
@@ -775,7 +811,7 @@ function renderLeadership(){
     ];
     const currentHtml='<div class="section-head"><div><h3>Leadership actuel</h3><p>Capitaine et assistants — données synchronisées depuis Supabase.</p></div></div>'+
       '<div class="bhl-leadership-grid">'+roles.map(([letter,label,name])=>
-        '<div class="card bhl-leadership-card" data-bhl-nhl-name="'+esc(name||'')+'"><div class="bhl-nhl-photo-wrap"><img class="bhl-nhl-photo" hidden loading="lazy" alt=""></div><div class="bhl-leadership-role"><span class="bhl-leadership-letter">'+letter+'</span>'+esc(label)+'</div><div class="bhl-leadership-name">'+esc(name||'Non désigné')+'</div><a class="bhl-nhl-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Voir la fiche NHL.com ↗</a></div>'
+        '<article class="card bhl-leadership-card '+(letter==='C'?'bhl-captain-card':'')+'" data-bhl-nhl-name="'+esc(name||'')+'"><div class="bhl-nhl-photo-wrap"><span class="bhl-photo-watermark">'+letter+'</span><img class="bhl-nhl-photo" hidden loading="lazy" alt=""></div><div class="bhl-leadership-info"><div class="bhl-leadership-role"><span class="bhl-leadership-letter">'+letter+'</span><span>'+esc(label)+'</span></div><div class="bhl-leadership-name">'+esc(name||'Non désigné')+'</div><a class="bhl-nhl-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Fiche officielle NHL.com <span aria-hidden="true">↗</span></a></div></article>'
       ).join('')+'</div>';
     const official=TEAM_NAMES_LEADERSHIP[team]||team;
     const history=(leadershipCache.history||[]).filter(r=>leadershipKey(leadershipField(r,'organisation',1))===leadershipKey(official));
@@ -793,10 +829,10 @@ function renderLeadership(){
       }
     }
     changes.sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-    const historyHtml='<div class="section-head"><div><h3>Historique du leadership</h3><p>'+changes.length+' changement(s) répertorié(s) pour cette organisation.</p></div></div>'+
-      (changes.length?'<div class="tablewrap"><table><thead><tr><th>Date</th><th>Fonction</th><th>Ancien joueur</th><th>Nouveau joueur</th></tr></thead><tbody>'+
-      changes.map(c=>'<tr><td>'+esc(leadershipDate(c.date))+'</td><td>'+esc(c.label)+'</td><td>'+esc(c.before||'—')+'</td><td><b>'+esc(c.after||'—')+'</b></td></tr>').join('')+
-      '</tbody></table></div>':'<div class="card">Aucun changement de leadership enregistré pour cette organisation.</div>');
+    const historyHtml='<div class="section-head bhl-history-heading"><div><h3>Historique du leadership</h3><p>Les nominations et changements au fil des saisons.</p></div><span class="bhl-history-count">'+changes.length+' changement'+(changes.length>1?'s':'')+'</span></div>'+
+      (changes.length?'<div class="bhl-history-timeline">'+changes.map(c=>
+        '<article class="bhl-history-entry"><div class="bhl-history-date">'+esc(leadershipDate(c.date))+'</div><div class="bhl-history-body"><span class="bhl-history-role">'+esc(c.label)+'</span><div class="bhl-history-transition"><span class="bhl-history-player bhl-history-old">'+esc(c.before||'Poste vacant')+'</span><span class="bhl-history-arrow" aria-label="remplacé par">→</span><strong class="bhl-history-player bhl-history-new">'+esc(c.after||'Poste vacant')+'</strong></div></div></article>'
+      ).join('')+'</div>':'<div class="card bhl-history-empty">Aucun changement de leadership enregistré pour cette organisation.</div>');
     $('#panel').innerHTML=currentHtml+historyHtml;
     bhlNhlApplyPortraits($('#panel'));
   }).catch(error=>{
