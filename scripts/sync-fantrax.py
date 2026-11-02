@@ -180,6 +180,12 @@ def build_snapshot(now=None):
         try:
             print("PUBLIC API AUDIT", audit_method,
                   json.dumps(describe_shape(fetch(audit_method)), ensure_ascii=False))
+            audit_data = fetch(audit_method)
+            for field in ("futureDraftPicks", "draftPicks", "draftOrder"):
+                entries = audit_data.get(field, []) if isinstance(audit_data, dict) else []
+                first = next((entry for entry in entries if isinstance(entry, dict)), {})
+                if first:
+                    print("PUBLIC API ITEM FIELDS", audit_method, field, sorted(first.keys()))
         except Exception as error:
             print("PUBLIC API AUDIT", audit_method, "unavailable:",
                   type(error).__name__)
