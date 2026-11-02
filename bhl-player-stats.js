@@ -130,19 +130,21 @@ async function historicalFantasy(id,season,goalie,center,team){
  return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
 }
 const BHL_NHL_IDS={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
+function bhlNhlIdentityKey(value){
+ let name=String(value||'').normalize('NFKC');
+ name=name.replace(/&#(?:0*39|x0*27);|&apos;/gi,"'").replace(/&(?:amp;)?#(?:0*39|x0*27);/gi,"'");
+ name=name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ return name.replace(/[^a-z0-9]/g,'');
+}
+const BHL_NHL_IDS_COMPACT=Object.fromEntries(Object.entries(BHL_NHL_IDS).map(([name,id])=>[bhlNhlIdentityKey(name),id]));
 function bhlResolvedNhlId(name){
- const key=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-  .replace(/&#(?:0*39|x0*27);|&apos;/gi,"'")
-  .replace(/[\u2018\u2019\u02bc\u0060]/g,"'")
-  .replace(/[^a-zA-Z0-9]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
- const known=BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[key];
+ const key=bhlNhlIdentityKey(name);
+ const shared=window.BHLNhlPlayerIds||{};
+ const known=BHL_NHL_IDS_COMPACT[key]||Object.entries(shared).find(([n])=>bhlNhlIdentityKey(n)===key)?.[1];
  if(known)return Number(known);
- // Fantrax can present last name first or omit the apostrophe.
- const tokens=key.split(' ');
- if(tokens.length>=3){
-  if(tokens.includes('miller')&&tokens.includes('andre')&&tokens.includes('k'))return 8480817;
-  if(tokens.includes('reilly')&&tokens.includes('ryan')&&tokens.includes('o'))return 8475158;
- }
+ // Common Fantrax display forms: surname, first name; punctuation/HTML entities are ignored.
+ if(key==='oreillyryan'||key==='ryanoreilly')return 8475158;
+ if(key==='millerkandre'||key==='kandremiller')return 8480817;
  return 0;
 }
 async function historicNhl(name,target){
