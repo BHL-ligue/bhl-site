@@ -246,6 +246,35 @@ async function populatePlayerBio(dialog,id,name){
   if(parts.length)size.textContent=parts.join(' · ');
  }catch(e){}
 }
+function bhlPortraitById(dialog,name){
+ const id=bhlResolvedNhlId(name);
+ if(!id)return false;
+ const img=dialog.querySelector('.bhl-player-hero .bhl-nhl-photo');
+ if(!img)return false;
+ const teamById={8476454:'EDM',8480817:'CAR',8481559:'NJD'};
+ const team=teamById[id]||'NHL';
+ const urls=[
+  'https://assets.nhle.com/mugs/nhl/20262027/'+team+'/'+id+'.png',
+  'https://assets.nhle.com/mugs/nhl/20252026/'+team+'/'+id+'.png',
+  'https://assets.nhle.com/mugs/nhl/20252026/NHL/'+id+'.png',
+  'https://assets.nhle.com/mugs/nhl/20242025/NHL/'+id+'.png'
+ ];
+ let index=0;
+ img.alt='Portrait LNH de '+name;
+ img.onload=()=>{if(dialog.isConnected){img.hidden=false;dialog.querySelector('.bhl-player-hero')?.classList.add('bhl-has-portrait')}};
+ img.onerror=()=>{index++;if(index<urls.length)img.src=urls[index];else img.hidden=true};
+ img.src=urls[0];
+ const link=dialog.querySelector('.bhl-nhl-link');
+ if(link){link.href='https://www.nhl.com/player/'+id;link.hidden=false}
+ // Use the landing profile headshot as another verified source.
+ nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing').then(profile=>{
+  if(!dialog.isConnected||!profile?.headshot||!/^https:\/\//.test(profile.headshot))return;
+  // Prefer the NHL's actual headshot, with the season URLs as fallbacks.
+  urls.unshift(profile.headshot);
+  index=0;img.src=urls[0];
+ }).catch(()=>{});
+ return true;
+}
 function open(id,name,source){
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
@@ -275,7 +304,7 @@ function open(id,name,source){
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
  fill(dialog.querySelector('.bhl-player-stats'),id,name);
  addSections(dialog,name);
- if(typeof window.bhlNhlApplyPortraits==='function')window.bhlNhlApplyPortraits(dialog);
+ if(!bhlPortraitById(dialog,name)&&typeof window.bhlNhlApplyPortraits==='function')window.bhlNhlApplyPortraits(dialog);
 }
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-bhl-player-id]');
