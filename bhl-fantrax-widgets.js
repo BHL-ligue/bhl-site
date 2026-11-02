@@ -32,8 +32,10 @@ function draw(){
  const roster=()=>{
  const rows=team.players.filter(p=>norm(p.name).includes(norm(search.value))&&(!status.value||p.status===status.value)).slice().sort((a,b)=>a.name.localeCompare(b.name,'fr'));
  root.querySelector('[data-ft-count]').textContent=rows.length+' joueur(s)';
- root.querySelector('[data-ft-roster]').innerHTML='<table><thead><tr><th>Joueur</th><th>Position</th><th>Statut</th></tr></thead><tbody>'+rows.map(p=>'<tr><td>'+esc(p.name)+'</td><td>'+esc(p.position)+'</td><td>'+esc(states[p.status]||p.status)+'</td></tr>').join('')+(rows.length?'':'<tr><td colspan="3">Aucun résultat.</td></tr>')+'</tbody></table>';
+ root.querySelector('[data-ft-roster]').innerHTML=BHLRoster.render(rows);
+ if(root.querySelector('.bhl-ft-details').open)BHLRoster.photos(root.querySelector('[data-ft-roster]'));
  };
+ root.querySelector('.bhl-ft-details').addEventListener('toggle',e=>{if(e.target.open)BHLRoster.photos(root.querySelector('[data-ft-roster]'))});
  search.addEventListener('input',roster);status.addEventListener('change',roster);roster();
 }
 window.addEventListener('bhl:team-change',e=>{sheet=e.detail;draw()});
