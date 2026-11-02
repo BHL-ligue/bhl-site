@@ -323,6 +323,31 @@ def build_snapshot(now=None):
                             "eligiblePositions": list(dict.fromkeys(eligible)),
                             "status": item.get("status", "")})
         teams.append({"id": team_id, "name": roster["teamName"], "players": players})
+    # Inspect the public matchup category shape without logging private data.
+    for side in ("home", "away"):
+        example = next((m.get(side) for m in scores.get("matchups", [])
+                        if isinstance(m.get(side), dict)), {})
+        if example:
+            print("MATCHUP SIDE FIELDS", side, sorted(example.keys()))
+            for field, val in example.items():
+                if isinstance(val, (dict, list)):
+                    first = next((x for x in val if isinstance(x, dict)), {}) if isinstance(val, list) else val
+                    print("MATCHUP NESTED FIELDS", field, sorted(first.keys())[:35])
+            break
+    # Determine whether public draft history records contain actual selections.
+    try:
+        history_probe = fetch("getDraftResults")
+        picks_probe = history_probe.get("draftPicks", [])
+        if isinstance(picks_probe, list):
+            print("DRAFT RESULT ITEM TYPES", sorted(set(type(p).__name__ for p in picks_probe)))
+            sample = next((p for p in picks_probe if isinstance(p, dict)), None)
+            if sample:
+                print("DRAFT RESULT ITEM FIELDS", sorted(sample.keys()))
+            elif picks_probe:
+                print("DRAFT RESULT SAMPLE TYPE", type(picks_probe[0]).__name__)
+    except Exception as error:
+        print("DRAFT RESULT PROBE ERROR", type(error).__name__, str(error)[:120])
+
     # Public draft picks: publish only documented league-level fields.
     draft_data = {"futurePicks": [], "currentPicks": [], "results": [], "status": "unavailable"}
     allowed_pick = ("year", "round", "currentOwnerTeamId", "originalOwnerTeamId")
