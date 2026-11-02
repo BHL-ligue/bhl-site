@@ -33,8 +33,34 @@ async function nhlJson(url){
  }
  throw Error('Le service de statistiques LNH ne répond pas');
 }
+
+const historicalWeights={G:3,A:2.5,SOG:.3,Hit:.1,Blk:.2,Tk:.1,FOW:.05,W:4,GA:-1,SV:.2,SHO:4};
+const historicalNumber=(obj,keys)=>{for(const key of keys){const n=obj?.[key];if(n!==null&&n!==undefined&&n!==''&&Number.isFinite(Number(n)))return Number(n)}return null};
+async function nhlSeasonReport(type,report,id,season){
+ const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
+ const data=await nhlJson(url),rows=data.data||[];
+ if(!rows.length)throw Error('Rapport '+report+' absent');
+ const total=rows.find(x=>/^(TOT|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||'')));
+ if(total)return total;
+ if(rows.length===1)return rows[0];
+ throw Error('Statistiques multiéquipes non agrégées');
+}
+async function historicalFantasy(id,season,goalie,center){
+ const reports=goalie?[['goalie','summary']]:[['skater','summary'],['skater','realtime'],...(center?[['skater','faceoffwins']]:[])];
+ const data=await Promise.all(reports.map(([kind,report])=>nhlSeasonReport(kind,report,id,season)));
+ const stat=(obj,keys)=>historicalNumber(obj,keys);
+ if(goalie){
+  const d=data[0],v={W:stat(d,['wins']),GA:stat(d,['goalsAgainst']),SV:stat(d,['saves']),SHO:stat(d,['shutouts']),G:stat(d,['goals']),A:stat(d,['assists'])};
+  if(Object.values(v).some(x=>x===null))return {v,fpts:null};
+  return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
+ }
+ const [summary,realtime,faceoffs]=data;
+ const v={G:stat(summary,['goals']),A:stat(summary,['assists']),SOG:stat(summary,['shots','shotsOnGoal']),Hit:stat(realtime,['hits']),Blk:stat(realtime,['blockedShotAttempts','blockedShots']),Tk:stat(realtime,['takeaways']),FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon']):0};
+ if(Object.values(v).some(x=>x===null))return {v,fpts:null};
+ return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
+}
 async function historicNhl(name,target){
- target.textContent='Chargement des saisons LNH depuis 2010-2011…';
+ target.textContent='Chargement des statistiques LNH depuis 2010-2011…';
  const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
  try{
   const result=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
@@ -44,21 +70,40 @@ async function historicNhl(name,target){
   if(!Number.isInteger(id)||id<=0)throw Error('Joueur non trouvé dans la base LNH');
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
   if(!target.isConnected)return;
+  const goalie=String(profile.position||profile.positionCode||'').toUpperCase()==='G';
+  const center=String(profile.position||profile.positionCode||'').toUpperCase()==='C';
   const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2&&Number(x.season)>=20102011).sort((a,b)=>Number(b.season)-Number(a.season));
   if(!seasons.length){target.textContent='Aucune saison régulière LNH depuis 2010-2011.';return}
+  const columns=goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','TIRS','HITS','BLOCS','TK','MÀJ'];
+  const keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
   const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
   const tableEl=document.createElement('table');tableEl.className='bhl-player-table';
-  const head=document.createElement('thead');head.innerHTML='<tr><th>Saison</th><th>Équipe</th><th>PJ</th><th>B</th><th>A</th><th>PTS</th><th>FPTS</th><th>FP/G</th></tr>';tableEl.append(head);
-  const body=document.createElement('tbody');
+  const head=document.createElement('thead'),headRow=document.createElement('tr');
+  for(const col of columns){const th=document.createElement('th');th.textContent=col;headRow.append(th)}head.append(headRow);tableEl.append(head);
+  const body=document.createElement('tbody'),rows=[];
   for(const x of seasons){
    const season=String(x.season),row=document.createElement('tr');
    const team=typeof x.teamName==='object'?(x.teamName.default||x.teamAbbrev):x.teamName||x.teamAbbrev||'—';
-   const vals=[season.slice(0,4)+'-'+season.slice(6),team,x.gamesPlayed,x.goals,x.assists,x.points,'—','—'];
-   for(const v of vals){const cell=document.createElement('td');cell.textContent=v??'—';row.append(cell)}
-   body.append(row);
+   const values=[season.slice(0,4)+'-'+season.slice(6),team,'…','…',x.gamesPlayed,...keys.map(()=> '…')];
+   for(const value of values){const td=document.createElement('td');td.textContent=value??'—';row.append(td)}
+   body.append(row);rows.push(row);
   }
   tableEl.append(body);wrap.append(tableEl);target.replaceChildren(wrap);
-  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. Les FPTS et FP/G historiques restent indisponibles tant que les catégories Fantrax requises ne sont pas toutes validées.';target.append(note);
+  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. FP/G et FPTS sont recalculés selon le barème BHL. N/D indique une statistique absente ou un calcul non vérifiable.';target.append(note);
+  let cursor=0;
+  async function worker(){
+   while(cursor<seasons.length){
+    const i=cursor++,row=rows[i],season=seasons[i],gp=Number(season.gamesPlayed);
+    try{
+     const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center);
+     if(!row.isConnected)continue;
+     row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
+     row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
+     keys.forEach((key,j)=>row.cells[5+j].textContent=v[key]===null?'N/D':fmt(v[key]));
+    }catch(e){if(row.isConnected){for(let j=2;j<row.cells.length;j++)if(j!==4)row.cells[j].textContent='N/D';row.title=e.message}}
+   }
+  }
+  await Promise.all(Array.from({length:Math.min(3,seasons.length)},worker));
  }catch(e){if(target.isConnected)target.textContent='Impossible de charger les statistiques historiques : '+e.message}
 }
 function tradeHistory(name,target){
