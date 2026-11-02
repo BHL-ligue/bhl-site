@@ -82,3 +82,18 @@
  .bhl-player-dialog .bhl-unified-panel .bhl-player-table{font-size:12px}
  .bhl-player-totals strong{font-size:clamp(18px,4.8vw,23px)}
 }
+
+
+/* Team-specific accents; default remains official BHL red */
+.bhl-player-dialog{--profile-accent:#cc0000}
+.bhl-player-dialog .bhl-player-hero{border-bottom-color:var(--profile-accent)}
+.bhl-player-dialog .bhl-player-photo{border-color:var(--profile-accent)}
+.bhl-player-dialog .bhl-player-close{background:var(--profile-accent)}
+.bhl-player-dialog .bhl-unified-tabs button[aria-selected=true]{background:var(--profile-accent);border-color:var(--profile-accent)}
+.bhl-player-dialog .bhl-player-table th{background:var(--profile-accent)!important}
+.bhl-player-dialog .bhl-player-totals>div{border-top-color:var(--profile-accent)}
+.bhl-player-dialog .bhl-player-hero .bhl-nhl-link{color:var(--profile-accent)}
+.bhl-player-position{font-size:13px;font-weight:800;color:#394252;margin-top:9px}
+.bhl-player-size{font-size:12px;font-weight:650;color:#6b7280;margin-top:3px}
+.bhl-player-team-identity{margin-top:11px}
+@media(max-width:600px){.bhl-player-position{font-size:11px;margin-top:7px}.bhl-player-size{font-size:10px;margin-top:2px}.bhl-player-team-identity{margin-top:7px}}
