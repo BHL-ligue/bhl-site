@@ -40,10 +40,21 @@ async function nhlSeasonReport(type,report,id,season){
  const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
  const data=await nhlJson(url),rows=data.data||[];
  if(!rows.length)throw Error('Rapport '+report+' absent');
- const total=rows.find(x=>/^(TOT|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||'')));
+ const total=rows.find(x=>/^(TOT|TOTAL|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()));
  if(total)return total;
  if(rows.length===1)return rows[0];
- throw Error('Statistiques multiéquipes non agrégées');
+ // Un joueur échangé peut avoir plusieurs lignes (une par équipe).
+ // Additionner uniquement les compteurs bruts, jamais les pourcentages ou moyennes.
+ const excluded=/pct|percentage|average|pergame|per60|rate|ratio|shootingpct|faceoffpct|timeonice|plusminus/i;
+ const merged={};
+ for(const row of rows){
+  for(const [key,value] of Object.entries(row)){
+   if(typeof value!=='number'||excluded.test(key)||/^(playerId|seasonId|gameTypeId|teamId|gamesPlayed)$/i.test(key))continue;
+   merged[key]=(merged[key]||0)+value;
+  }
+ }
+ merged.gamesPlayed=rows.reduce((n,row)=>n+(Number(row.gamesPlayed)||0),0);
+ return merged;
 }
 async function historicalFantasy(id,season,goalie,center){
  const reports=goalie?[['goalie','summary']]:[['skater','summary'],['skater','realtime'],...(center?[['skater','faceoffwins']]:[])];
@@ -55,7 +66,7 @@ async function historicalFantasy(id,season,goalie,center){
   return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
  }
  const [summary,realtime,faceoffs]=data;
- const v={G:stat(summary,['goals']),A:stat(summary,['assists']),SOG:stat(summary,['shots','shotsOnGoal']),Hit:stat(realtime,['hits']),Blk:stat(realtime,['blockedShotAttempts','blockedShots']),Tk:stat(realtime,['takeaways']),FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon']):0};
+ const v={G:stat(summary,['goals']),A:stat(summary,['assists']),SOG:stat(summary,['shots','shotsOnGoal']),Hit:stat(realtime,['hits']),Blk:stat(realtime,['blockedShotAttempts','blockedShots']),Tk:stat(realtime,['takeaways']),FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal']):0};
  if(Object.values(v).some(x=>x===null))return {v,fpts:null};
  return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
 }
