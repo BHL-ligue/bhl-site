@@ -56,41 +56,38 @@ function nhlSeasonTeamCode(season){
 }
 const historicalReportCache=new Map();
 async function nhlSeasonReport(type,report,id,season,team){
- const key=[type,report,id,season].join(':');
+ const key=[type,report,id,season,team||''].join(':');
  if(!historicalReportCache.has(key)){
   historicalReportCache.set(key,(async()=>{
    const base='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2');
-   // Season aggregate first; for a player with multiple teams the NHL may return
-   // one combined row. In that case retrieve game-level rows for team splits.
-   const aggregate=await nhlJson(base+'&isAggregate=true&isGame=false&limit=100');
-   const rows=Array.isArray(aggregate.data)?aggregate.data:[];
-   const distinct=new Set(rows.map(x=>String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()).filter(Boolean));
-   if(rows.length>1&&distinct.size>1)return {rows,perGame:false};
-   try{
-    const games=await nhlJson(base+'&isAggregate=false&isGame=true&limit=200');
-    if(Array.isArray(games.data)&&games.data.length&&(!games.total||games.data.length>=Number(games.total)))return {rows:games.data,perGame:true};
-   }catch(e){}
-   return {rows,perGame:false};
+   const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};
+   const accepted=team?(aliases[team]||[team]):null;
+   const code=row=>String(row.teamAbbrevs||row.teamAbbrev||row.team||row.teamCode||'').trim().toUpperCase();
+   let failures=[];
+   // Try team-level totals before aggregate season totals. Do not use a
+   // combined season row for a player traded during the season.
+   for(const mode of ['&isAggregate=false&isGame=false','&isAggregate=true&isGame=false','&isAggregate=false&isGame=true']){
+    try{
+     const response=await nhlJson(base+mode+'&limit=200');
+     const rows=Array.isArray(response.data)?response.data:[];
+     if(!rows.length){failures.push(mode+': aucune ligne');continue}
+     if(mode.includes('isGame=true')&&Number(response.total)>rows.length){failures.push('Rapport de matchs incomplet');continue}
+     const selected=accepted?rows.filter(row=>accepted.includes(code(row))):rows;
+     if(!selected.length){failures.push(mode+': équipes reçues '+[...new Set(rows.map(code))].join(','));continue}
+     if(selected.length===1)return selected[0];
+     const excluded=/pct|percentage|average|pergame|per60|rate|ratio|timeonice|plusminus|^(playerId|seasonId|gameTypeId|teamId|gameId|gameDate)$/i;
+     const merged={};
+     for(const row of selected)for(const [field,value] of Object.entries(row)){
+      if(typeof value!=='number'||excluded.test(field))continue;
+      merged[field]=(merged[field]||0)+value;
+     }
+     return merged;
+    }catch(e){failures.push(mode+': '+e.message)}
+   }
+   throw Error(report+' '+season+' '+(team||'')+' : '+failures.join(' | '));
   })());
  }
- const result=await historicalReportCache.get(key);
- const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};
- const accepted=team?(aliases[team]||[team]):null;
- const code=row=>String(row.teamAbbrevs||row.teamAbbrev||row.team||'').trim().toUpperCase();
- const selected=accepted?result.rows.filter(row=>accepted.includes(code(row))):result.rows;
- if(!selected.length)throw Error('Aucune donnée '+report+' pour '+(team||season));
- if(!result.perGame&&selected.length===1){
-  const only=selected[0];
-  if(team&&!accepted.includes(code(only)))throw Error('Rapport '+report+' contient uniquement le total de saison');
-  return only;
- }
- const excluded=/pct|percentage|average|pergame|per60|rate|ratio|timeonice|plusminus|^(playerId|seasonId|gameTypeId|teamId|gameId|gameDate)$/i;
- const merged={};
- for(const row of selected)for(const [key,value] of Object.entries(row)){
-  if(typeof value!=='number'||excluded.test(key))continue;
-  merged[key]=(merged[key]||0)+value;
- }
- return merged;
+ return historicalReportCache.get(key);
 }
 async function historicalFantasy(id,season,goalie,center,team){
  const stat=(obj,keys)=>historicalNumber(obj,keys);
@@ -162,7 +159,7 @@ async function historicNhl(name,target){
      row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
      keys.forEach((key,j)=>row.cells[5+j].textContent=v[key]===null?'N/D':fmt(v[key]));
-    }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail)}}
+    }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail);if(!target.querySelector('.bhl-historical-error')){const error=document.createElement('p');error.className='bhl-historical-error';error.style.fontSize='12px';error.style.color='#9b1c1c';error.textContent='Diagnostic LNH : '+e.message;target.append(error)}}}
    }
   }
   await Promise.all(Array.from({length:Math.min(3,seasons.length)},worker));
