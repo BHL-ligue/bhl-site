@@ -284,7 +284,36 @@ function injectNeutralSideStyle(){
  style.textContent='.tr-card .tr-side .tr-side-title{background:#bfc4ca!important;color:#20252b!important}.tr-side .tr-side-title .tr-side-name,.tr-side .tr-side-title .tr-side-name span,.tr-side .tr-side-title .tr-received{color:#20252b!important;opacity:1!important}';
  document.head.appendChild(style);
 }
-function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();injectPlayerStyles();
+function injectTransactionPolish(){
+ if(document.getElementById('bhl-transaction-polish'))return;
+ const style=document.createElement('style');
+ style.id='bhl-transaction-polish';
+ style.textContent=`
+ .tr-card{border:1px solid #dfe3e8!important;border-radius:15px!important;box-shadow:0 3px 12px rgba(25,40,59,.065)!important;overflow:hidden;transition:box-shadow .18s ease,transform .18s ease;margin-bottom:18px!important}
+ .tr-card:hover{box-shadow:0 7px 20px rgba(25,40,59,.11)!important}
+ .tr-card-head{padding:16px 20px!important;min-height:74px;gap:14px}
+ .tr-number{font-size:14px;letter-spacing:.045em;font-weight:900}
+ .tr-date{font-size:12px!important;line-height:1.5;opacity:.86;margin-top:4px!important}
+ .tr-three{font-size:11px!important;padding:6px 10px!important}
+ .tr-side{min-width:0;padding:0!important;border-color:#e7e9ed!important}
+ .tr-side-title{padding:12px 17px!important;min-height:61px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+ .tr-side-name{display:flex;align-items:center;gap:10px;min-width:0;font-weight:800;line-height:1.3}
+ .tr-side-name span{overflow-wrap:anywhere}
+ .tr-team-logo{width:34px!important;height:34px!important;flex-shrink:0}
+ .tr-received{flex-shrink:0;letter-spacing:.09em;font-size:10px!important}
+ .tr-side-body{padding:7px 17px 13px}
+ .tr-side-body ul{margin:0!important}
+ .tr-side-body li{padding:11px 0!important;border-bottom:1px solid #eceef1!important;line-height:1.5}
+ .tr-side-body li:last-child{border-bottom:0!important}
+ .tr-from{margin-top:3px;font-size:11px!important}
+ .tr-filters input:focus,.tr-filters select:focus{outline:2px solid #cc000055;outline-offset:1px;border-color:#cc0000}
+ .tr-pages button:not(:disabled):hover{border-color:#cc0000;color:#cc0000}
+ @media(max-width:600px){.tr-card-head{padding:13px 15px!important;min-height:65px}.tr-side-title{padding:10px 13px!important}.tr-side-body{padding:5px 13px 10px}.tr-number{font-size:13px}.tr-card{margin-bottom:14px!important}}
+ @media(prefers-reduced-motion:reduce){.tr-card{transition:none}}
+ `;
+ document.head.appendChild(style);
+}
+function mount(el,options={}){if(!el)return;let page=1,perPage=20,data=[],query='',season='',team=options.team||'',state={};const compact=!!options.team;injectStatsStyles();injectNeutralSideStyle();injectPlayerStyles();injectTransactionPolish();
  // Utiliser la couleur exacte de la fiche ÉQUIPES, et non celle de la page générale.
  if(compact){
    el.classList.add('tr-embedded');
