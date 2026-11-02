@@ -26,14 +26,6 @@ function draw(){
  const team=snapshot.teams.find(t=>t.name===names[sheet]);
  if(!team){root.innerHTML='<h3>Saison Fantrax</h3><p>Données indisponibles pour cette organisation.</p>';return}
  const standing=snapshot.standings.find(t=>t.teamId===team.id)||{};
- const games=snapshot.matchups.filter(m=>m.away.teamId===team.id||m.home.teamId===team.id);
- const recent=(snapshot.recentResults||[]).filter(m=>m.away.teamId===team.id||m.home.teamId===team.id).slice(0,3);
- const recentHtml=recent.map(m=>{
-  const own=m.away.teamId===team.id?m.away:m.home;
-  const opponent=m.away.teamId===team.id?m.home:m.away;
-  const result=Number(own.score)>Number(opponent.score)?'V':Number(own.score)<Number(opponent.score)?'D':'N';
-  return '<div class="bhl-ft-recent-item"><span class="bhl-ft-result bhl-ft-result-'+result+'">'+result+'</span><span class="bhl-ft-recent-opponent">'+(window.BHLScoreUI?BHLScoreUI.team(opponent.teamName):esc(opponent.teamName))+'</span><strong>'+fmt(own.score)+' – '+fmt(opponent.score)+'</strong><small>P'+esc(m.period)+'</small></div>';
- }).join('');
  root.innerHTML='<div class="bhl-ft-heading"><h3>Saison en cours · Fantrax</h3><a href="bhl-fantrax.html">Classement complet →</a></div>'+stamp()+
  '<div class="bhl-ft-team-id">'+(window.BHLScoreUI?BHLScoreUI.team(team.name):esc(team.name))+'</div><div class="bhl-ft-stats">'+[['Rang Fantrax',standing.rank==null?'—':'#'+standing.rank],['Fiche V-D-N',standing.points||'—'],['Points fantasy pour',fmt(standing.totalPointsFor)]].map(([label,value])=>'<div><span>'+label+'</span><strong>'+esc(value)+'</strong></div>').join('')+'</div>'+
  ''+
@@ -46,15 +38,7 @@ function drawCalendar(){
  if(!team){calendarRoot.innerHTML='<p>Calendrier indisponible.</p>';return;}
  const periods=(snapshot.schedule||[]).slice().sort((a,b)=>a.period-b.period);
  if(!periods.length){calendarRoot.innerHTML='<p class="bhl-ft-note">Le calendrier complet sera disponible après la prochaine synchronisation Fantrax.</p>';return;}
- const now=new Date();
- const local=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).formatToParts(now);
- const field=t=>local.find(p=>p.type===t)?.value;
- const monday=new Date(Date.UTC(Number(field('year')),Number(field('month'))-1,Number(field('day'))));
- const weekday=monday.getUTCDay();
- monday.setUTCDate(monday.getUTCDate()-((weekday+6)%7));
- const atLeastOne=Number(field('hour'))>=1;
- const selectedPeriod=periods.find(p=>p.period===snapshot.scoringPeriod);
- const defaultPeriod=(atLeastOne||weekday!==1)?selectedPeriod?.period:snapshot.scoringPeriod;
+ const defaultPeriod=snapshot.scoringPeriod;
  const oldValue=calendarRoot.querySelector('[data-calendar-period]')?.value;
  const previous=oldValue===undefined?NaN:Number(oldValue);
  const current=periods.some(p=>p.period===previous)?previous:(defaultPeriod||periods[0].period);
