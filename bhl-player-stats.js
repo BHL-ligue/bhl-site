@@ -61,23 +61,35 @@ function table(player,data){
  const values={...s,NHL:nhlAbbrev(player.nhlTeam),PTS:s.G==null||s.A==null?null:s.G+s.A};
  return '<div class="bhl-player-meta">'+'Équipe LNH : '+esc(nhlAbbrev(player.nhlTeam))+'</div><div class="bhl-player-totals"><div><span>FPTS</span><strong>'+fmt(s.FPts)+'</strong></div><div><span>FP/G</span><strong>'+fmt(s['FP/G'])+'</strong></div></div><h4>Statistiques — '+esc(data.period)+'</h4><div class="bhl-player-scroll"><table class="bhl-player-table"><thead><tr>'+cols.map(([key,label])=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody><tr>'+cols.map(([key])=>'<td>'+(key==='NHL'?esc(values[key]||'—'):fmt(values[key]))+'</td>').join('')+'</tr></tbody></table></div><p class="bhl-player-source">Source : export Fantrax du '+esc(data.exportDate)+'. Ces statistiques sont un instantané et ne sont pas actualisées automatiquement.</p><p class="bhl-player-legend">'+(player.goalie?'V : victoires · BA : buts accordés · ARR : arrêts · BL : blanchissages · B : buts · A : passes.':'B : buts · A : passes · PTS : buts + passes · TK : takeaways · MÀJ : mises au jeu gagnées.')+'</p>';
 }
+async function bhlPlayerForOfficial(id,name){
+ const key=String(id||'').replaceAll('*','');
+ const [details,directory]=await Promise.all([
+  load().catch(()=>({players:{}})),
+  bhlIdentityDirectory().catch(()=>({players:{}}))
+ ]);
+ const fromDetails=details.players?.[key]||Object.values(details.players||{}).find(p=>norm(p.name)===norm(name));
+ if(fromDetails)return {player:fromDetails,id:key};
+ const entry=directory.players?.[key]||Object.entries(directory.players||{}).find(([_,p])=>norm(p.fantraxName)===norm(name))?.[1];
+ if(!entry)return null;
+ const resolvedId=key||Object.keys(directory.players||{}).find(k=>directory.players[k]===entry);
+ return {player:{name:entry.fantraxName||name,nhlTeam:entry.nhlTeam||'',goalie:entry.position==='G',stats:{}},id:resolvedId};
+}
 async function fill(target,id,name){
  target.innerHTML='<p role="status">Chargement des statistiques officielles LNH…</p>';
  try{
-  const data=await load();
-  const matches=id?[data.players[id]].filter(Boolean):Object.values(data.players).filter(p=>norm(p.name)===norm(name));
+  const resolved=await bhlPlayerForOfficial(id,name);
   if(!target.isConnected)return;
-  if(matches.length!==1){
-   target.innerHTML='<p>Statistiques LNH indisponibles : joueur absent du répertoire.</p>';
+  if(!resolved){
+   target.innerHTML='<p>Statistiques LNH indisponibles : identité du joueur non trouvée dans les alignements BHL.</p>';
    return;
   }
-  const official=await bhlCurrentOfficialStats(matches[0],id);
+  const official=await bhlCurrentOfficialStats(resolved.player,resolved.id);
   if(!target.isConnected)return;
   if(!official){
    target.innerHTML='<p>FPTS et FP/G LNH en attente : identité LNH non confirmée, statistiques incomplètes ou saison sans match. Aucun ancien total Fantrax ne sera présenté comme un calcul BHL.</p>';
    return;
   }
-  target.innerHTML=table(official,{period:'Saison régulière 2026-27',exportDate:data.exportDate});
+  target.innerHTML=table(official,{period:'Saison régulière 2026-27'});
   const source=target.querySelector('.bhl-player-source');
   if(source)source.textContent='Source : statistiques officielles LNH, FPTS et FP/G calculés selon le barème BHL. Actualisation à chaque ouverture de la fiche.';
  }catch(error){
@@ -719,18 +731,16 @@ if(typeof window.bhlPortraitModal==='function'){
  window.bhlPortraitModal=function(name){open(null,name)};
 }
 window.BHLPlayerStats={open,table,officialStats:async(id,name)=>{
- const data=await load();
- const player=data.players?.[String(id||'').replaceAll('*','')]||Object.values(data.players||{}).find(p=>norm(p.name)===norm(name));
- if(!player)return null;
- const result=await bhlCurrentOfficialStats(player,String(id||'').replaceAll('*',''));
+ const resolved=await bhlPlayerForOfficial(id,name);
+ if(!resolved)return null;
+ const result=await bhlCurrentOfficialStats(resolved.player,resolved.id);
  return result?{fpts:result.stats.FPts,fpg:result.stats['FP/G'],gp:result.stats.GP,nhlTeam:result.nhlTeam}:null;
- },officialIdentity:async(id,name)=>{
- const data=await load();
- const player=data.players?.[String(id||'').replaceAll('*','')]||Object.values(data.players||{}).find(p=>norm(p.name)===norm(name));
- if(!player)return null;
- const nhlId=await bhlLookupOfficialId(player,String(id||'').replaceAll('*',''));
+},officialIdentity:async(id,name)=>{
+ const resolved=await bhlPlayerForOfficial(id,name);
+ if(!resolved)return null;
+ const nhlId=await bhlLookupOfficialId(resolved.player,resolved.id);
  if(!nhlId)return null;
  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
  return {nhlId,headshot:profile.headshot||'',nhlTeam:profile.currentTeamAbbrev||''};
- }};
+}};
 })();
