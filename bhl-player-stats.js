@@ -160,7 +160,8 @@ async function historicNhl(name,target){
    while(cursor<seasons.length){
     const i=cursor++,row=rows[i],season=seasons[i],gp=Number(season.gamesPlayed);
     try{
-     const teamCode=nhlSeasonTeamCode(season);
+     const displayTeam=typeof season.teamName==='object'?(season.teamName.default||''):String(season.teamName||'');
+     const teamCode=nhlSeasonTeamCode(season)||nhlTeamCodes[displayTeam.trim().toLowerCase()]||'';
      if(!teamCode){throw Error('Code équipe absent : '+JSON.stringify({teamAbbrev:season.teamAbbrev,teamName:season.teamName}))}
      const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center,teamCode);
      if(!row.isConnected)continue;
