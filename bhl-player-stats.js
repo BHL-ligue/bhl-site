@@ -3,6 +3,12 @@
 'use strict';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const nhlAbbrev=v=>{
+ const raw=String(v||'').trim(),up=raw.toUpperCase();
+ if(/^[A-Z]{2,3}$/.test(up))return up;
+ const codes={'MONTREAL CANADIENS':'MTL','MONTRÉAL CANADIENS':'MTL','BOSTON BRUINS':'BOS','COLUMBUS BLUE JACKETS':'CBJ','COLORADO AVALANCHE':'COL','PITTSBURGH PENGUINS':'PIT','WASHINGTON CAPITALS':'WSH','TORONTO MAPLE LEAFS':'TOR','OTTAWA SENATORS':'OTT','NEW YORK RANGERS':'NYR','NEW YORK ISLANDERS':'NYI','NEW JERSEY DEVILS':'NJD','LOS ANGELES KINGS':'LAK','SAN JOSE SHARKS':'SJS','TAMPA BAY LIGHTNING':'TBL','VEGAS GOLDEN KNIGHTS':'VGK','ST. LOUIS BLUES':'STL','ST LOUIS BLUES':'STL','WINNIPEG JETS':'WPG','CHICAGO BLACKHAWKS':'CHI','DETROIT RED WINGS':'DET','MINNESOTA WILD':'MIN','DALLAS STARS':'DAL','NASHVILLE PREDATORS':'NSH','EDMONTON OILERS':'EDM','CALGARY FLAMES':'CGY','VANCOUVER CANUCKS':'VAN','SEATTLE KRAKEN':'SEA','ANAHEIM DUCKS':'ANA','PHILADELPHIA FLYERS':'PHI','CAROLINA HURRICANES':'CAR','FLORIDA PANTHERS':'FLA','BUFFALO SABRES':'BUF','UTAH MAMMOTH':'UTA','ARIZONA COYOTES':'ARI'};
+ return codes[up]||raw;
+};
 const fmt=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
 let request;
 function load(){return request||(request=fetch('data/fantrax-player-details.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Statistiques indisponibles');return r.json()}).catch(e=>{request=null;throw e}))}
@@ -10,7 +16,7 @@ function table(player,data){
  const s=player.stats;
  const cols=player.goalie?[['GP','PJ'],['W','V'],['GA','BA'],['SV','ARR'],['SHO','BL'],['G','B'],['A','A']]:[['GP','PJ'],['G','B'],['A','A'],['PTS','PTS'],['SOG','TIRS'],['Hit','HITS'],['Blk','BLOCS'],['Tk','TK'],['FOW','MÀJ']];
  const values={...s,PTS:s.G==null||s.A==null?null:s.G+s.A};
- return '<div class="bhl-player-meta">'+esc(player.position)+' · '+esc(player.nhlTeam)+'</div><div class="bhl-player-totals"><div><span>FPTS</span><strong>'+fmt(s.FPts)+'</strong></div><div><span>FP/G</span><strong>'+fmt(s['FP/G'])+'</strong></div><div><span>Matchs joués</span><strong>'+fmt(s.GP)+'</strong></div></div><h4>Statistiques — '+esc(data.period)+'</h4><div class="bhl-player-scroll"><table class="bhl-player-table"><thead><tr>'+cols.map(([key,label])=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody><tr>'+cols.map(([key])=>'<td>'+fmt(values[key])+'</td>').join('')+'</tr></tbody></table></div><p class="bhl-player-source">Source : export Fantrax du '+esc(data.exportDate)+'. Ces statistiques sont un instantané et ne sont pas actualisées automatiquement.</p><p class="bhl-player-legend">'+(player.goalie?'V : victoires · BA : buts accordés · ARR : arrêts · BL : blanchissages · B : buts · A : passes.':'B : buts · A : passes · PTS : buts + passes · TK : takeaways · MÀJ : mises au jeu gagnées.')+'</p>';
+ return '<div class="bhl-player-meta">'+'Équipe LNH : '+esc(nhlAbbrev(player.nhlTeam))+'</div><div class="bhl-player-totals"><div><span>FPTS</span><strong>'+fmt(s.FPts)+'</strong></div><div><span>FP/G</span><strong>'+fmt(s['FP/G'])+'</strong></div></div><h4>Statistiques — '+esc(data.period)+'</h4><div class="bhl-player-scroll"><table class="bhl-player-table"><thead><tr>'+cols.map(([key,label])=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody><tr>'+cols.map(([key])=>'<td>'+fmt(values[key])+'</td>').join('')+'</tr></tbody></table></div><p class="bhl-player-source">Source : export Fantrax du '+esc(data.exportDate)+'. Ces statistiques sont un instantané et ne sont pas actualisées automatiquement.</p><p class="bhl-player-legend">'+(player.goalie?'V : victoires · BA : buts accordés · ARR : arrêts · BL : blanchissages · B : buts · A : passes.':'B : buts · A : passes · PTS : buts + passes · TK : takeaways · MÀJ : mises au jeu gagnées.')+'</p>';
 }
 async function fill(target,id,name){
  target.innerHTML='<p role="status">Chargement des statistiques…</p>';
@@ -245,11 +251,12 @@ function open(id,name,source){
  const activeChip=document.querySelector('.teamchip.active');
  const logo=origin?.querySelector?.('.teamlogo')||activeChip?.querySelector?.('.teamlogo');
  const identity=dialog.querySelector('.bhl-player-team-identity');
- const selectedTeam=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.textContent?.trim()||'';
- if(selectedTeam&&typeof window.teamColor==='function'){
-  const color=window.teamColor(selectedTeam);
-  if(/^#[0-9a-f]{6}$/i.test(color))dialog.style.setProperty('--profile-accent',color);
- }
+ const selectedTeam=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.title||activeChip?.getAttribute('aria-label')||'';
+ const rootColor=getComputedStyle(document.documentElement).getPropertyValue('--team-color').trim();
+ const localColor=origin?getComputedStyle(origin).getPropertyValue('--team-color').trim():'';
+ const mappedColor=selectedTeam&&typeof window.teamColor==='function'?window.teamColor(selectedTeam):'';
+ const color=localColor||mappedColor||rootColor;
+ if(/^#[0-9a-f]{3,8}$/i.test(color)||/^rgb\(/i.test(color))dialog.style.setProperty('--profile-accent',color);
  populatePlayerBio(dialog,id,name);
  if(logo?.getAttribute('src')){
   const image=identity.querySelector('img');image.src=logo.getAttribute('src');
