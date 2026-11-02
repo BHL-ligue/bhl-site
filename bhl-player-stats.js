@@ -239,17 +239,102 @@ function tradeHistory(name,target){
   }target.append(list);
  }).catch(()=>{if(target.isConnected)target.textContent='Transactions temporairement indisponibles.'});
 }
+
+const BHL_TROPHY_API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
+const BHL_TROPHY_LOGOS={'COUPE BELIVEAU':'coupe-beliveau.png','SCOTTY BOWMAN':'scotty-bowman.png','SAM POLLOCK':'sam-pollock.png','YVAN COURNOYER':'yvan-cournoyer.png','SERGE SAVARD':'serge-savard.png','ANDREI MARKOV':'andrei-markov.png','SAKU KOIVU':'saku-koivu.png','CLAUDE LEMIEUX':'claude-lemieux.png','HOWIE MORENZ':'howie-morenz.png','PATRICK ROY':'patrick-roy.png','GUY LAFLEUR':'guy-lafleur.png','CAREY PRICE':'carey-price.png','DOUG HARVEY':'doug-harvey.png','EMILE BUTCH BOUCHARD':'emile-butch-bouchard.png','GEORGE VEZINA':'george-vezina.png','GUY CARBONNEAU':'guy-carbonneau.png','HENRI RICHARD':'henri-richard.png','JACQUES DEMERS':'jacques-demers.png','JACQUES PLANTE':'jacques-plante.png','JOHNNY GAUDREAU':'johnny-gaudreau.png','JOSE THEODORE':'jose-theodore.png','KEN DRYDEN':'ken-dryden.png','LARRY ROBINSON':'larry-robinson.png','MAURICE RICHARD':'maurice-richard.png','STEPHANE RICHER':'stephane-richer.png','YANIC PERREAULT':'yanic-perreault.png'};
+let bhlHonoursPromise=null;
+function bhlTrophyNorm(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim()}
+function bhlTrophyNameKey(value){return bhlTrophyNorm(value).replace(/\s+/g,'')}
+function bhlTrophyRows(){
+ if(bhlHonoursPromise)return bhlHonoursPromise;
+ bhlHonoursPromise=new Promise((resolve,reject)=>{
+  const callback='bhlHonours_'+Math.random().toString(36).slice(2),script=document.createElement('script');
+  const timer=setTimeout(()=>finish(Error('Délai de connexion dépassé')),20000);
+  function finish(error,data){clearTimeout(timer);delete window[callback];script.remove();error?reject(error):resolve(data)}
+  window[callback]=data=>{
+   const rows=data?.data?.rows;
+   if(!data?.ok||!Array.isArray(rows))return finish(Error(data?.error||'Réponse TROPHYLIST invalide'));
+   finish(null,rows);
+  };
+  script.onerror=()=>finish(Error('Connexion aux trophées impossible'));
+  script.src=BHL_TROPHY_API+'?sheet=TROPHYLIST&callback='+callback;
+  document.head.appendChild(script);
+ }).catch(error=>{bhlHonoursPromise=null;throw error});
+ return bhlHonoursPromise;
+}
+function bhlTrophyRecords(rows){
+ const records=[];
+ for(const row of rows.slice(1)){
+  if(!Array.isArray(row))continue;
+  const cells=row.map(v=>String(v??'').trim());
+  let trophy=cells[4]||cells[2]||cells[3]||'';
+  let season=cells[5]||cells[3]||cells[4]||'';
+  const team=cells[8]||cells[6]||'';
+  const person=cells[9]||cells[7]||'';
+  if(!/^\d{4}\s*[-–]\s*\d{2,4}$/.test(season)){
+   const match=cells.find(v=>/^\d{4}\s*[-–]\s*\d{2,4}$/.test(v));
+   if(match)season=match;
+  }
+  const finalist=cells.some(v=>bhlTrophyNorm(v).startsWith('FINALISTE'));
+  if(finalist||!trophy||!person||!season||!team)continue;
+  // Only individual player honours. Team championships, medals and GM honours
+  // are not attributed automatically to every player on a roster.
+  const key=bhlTrophyNorm(trophy);
+  if(/^(FINALE BHL|COUPE BELIVEAU|COUPE BHL|COUPE DU MONDE|CONFRONTATION 4 NATIONS|JEUX OLYMPIQUES|CHAMPIONNAT MONDIAL JUNIOR|OR |ARGENT |BRONZE )/.test(key))continue;
+  records.push({trophy,season,team,person});
+ }
+ return records;
+}
+async function playerHonours(name,target){
+ target.textContent='Recherche des honneurs dans le palmarès BHL…';
+ try{
+  const rows=await bhlTrophyRows();
+  if(!target.isConnected)return;
+  const key=bhlTrophyNameKey(name);
+  const matches=bhlTrophyRecords(rows).filter(r=>bhlTrophyNameKey(r.person)===key);
+  const unique=[...new Map(matches.map(r=>[[bhlTrophyNameKey(r.trophy),r.season,r.team].join('|'),r])).values()]
+   .sort((a,b)=>String(b.season).localeCompare(String(a.season)));
+  target.replaceChildren();
+  const intro=document.createElement('div');intro.className='bhl-honours-intro';
+  const title=document.createElement('div');title.className='bhl-honours-heading';title.textContent='Palmarès individuel';
+  const summary=document.createElement('div');summary.className='bhl-honours-count';summary.textContent=unique.length+' honneur'+(unique.length>1?'s':'')+' BHL';
+  intro.append(title,summary);target.append(intro);
+  if(!unique.length){
+   const empty=document.createElement('p');empty.className='bhl-honours-empty';
+   empty.textContent='Aucun trophée individuel remporté trouvé dans TROPHYLIST pour ce joueur.';
+   target.append(empty);return;
+  }
+  const grid=document.createElement('div');grid.className='bhl-honours-grid';
+  for(const r of unique){
+   const card=document.createElement('article');card.className='bhl-honour-card';
+   const art=document.createElement('div');art.className='bhl-honour-art';
+   const file=BHL_TROPHY_LOGOS[bhlTrophyNorm(r.trophy)];
+   if(file){const img=document.createElement('img');img.src='trophies/'+file;img.alt='';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='🏆'};art.append(img)}
+   else art.textContent='🏆';
+   const info=document.createElement('div');info.className='bhl-honour-info';
+   const season=document.createElement('span');season.className='bhl-honour-season';season.textContent=r.season;
+   const trophy=document.createElement('strong');trophy.textContent=r.trophy;
+   const team=document.createElement('small');team.textContent=r.team;
+   info.append(season,trophy,team);card.append(art,info);grid.append(card);
+  }
+  target.append(grid);
+  const source=document.createElement('p');source.className='bhl-honours-source';
+  const link=document.createElement('a');link.href='bhl-trophees.html';link.textContent='Consulter le palmarès officiel BHL ↗';
+  source.append('Source : TROPHYLIST · Gagnants individuels seulement · ',link);target.append(source);
+ }catch(error){if(target.isConnected)target.textContent='Honneurs temporairement indisponibles : '+error.message}
+}
+
 function addSections(dialog,name){
  const stats=dialog.querySelector('.bhl-player-stats');if(!stats)return;
  const tabs=document.createElement('div');tabs.className='bhl-unified-tabs';
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
  stats.before(tabs);stats.after(panel);
- const items=[['stats','Statistiques'],['nhl','Historique LNH'],['trades','Transactions BHL']];
+ const items=[['stats','Statistiques'],['nhl','Historique LNH'],['trades','Transactions BHL'],['honours','Honneurs']];
  let active='stats'; const rendered=new Map();
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
