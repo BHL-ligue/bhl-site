@@ -342,7 +342,29 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .bhl-portrait-hero h3{font-size:25px;margin:10px 0}
 .bhl-portrait-profile{color:#ad1728;font-weight:750;font-size:13px}
 .bhl-portrait-details{padding:16px 24px 22px;color:#536174;font-size:13px}
-</style><link rel="stylesheet" href="bhl-navigation.css?v=1"><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=team-roster-design18"><link rel="stylesheet" href="bhl-player-stats.css?v=honours20"></head><body>
+</style><link rel="stylesheet" href="bhl-navigation.css?v=1"><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=team-roster-design18"><link rel="stylesheet" href="bhl-player-stats.css?v=honours20"><style id="bhl-team-champion-header">
+/* Override the later light-theme !important rules only for the team identity header. */
+#fiche > .banner{
+ background:linear-gradient(112deg,var(--bhl-club-secondary,#172c40),var(--bhl-club-primary,#cc0000)) !important;
+ color:#fff !important;
+ border:1px solid #ffffff30 !important;
+ border-left:0 !important;
+ border-radius:17px !important;
+ box-shadow:0 6px 22px #00000020 !important;
+ padding:22px 27px !important;
+ display:flex !important;
+ align-items:center !important;
+ gap:22px !important;
+ min-height:155px;
+}
+#fiche > .banner > div:nth-child(2){min-width:0 !important}
+#fiche > .banner .crest{width:104px !important;height:104px !important;flex:0 0 104px !important;border:0 !important;background:transparent !important;box-shadow:none !important}
+#fiche > .banner .crest img{width:100% !important;height:100% !important;object-fit:contain !important;padding:0 !important;filter:drop-shadow(0 4px 7px #0005)}
+#fiche > .banner .kicker{color:#ffffffdc !important;letter-spacing:.13em !important;font-size:11px !important}
+#fiche > .banner h2,#fiche > .banner h2 span,#fiche > .banner .team-city,#fiche > .banner .team-nickname{color:#fff !important;text-shadow:0 1px 2px #0002}
+#fiche > .banner .sub{color:#ffffffdc !important}
+@media(max-width:580px){#fiche > .banner{gap:12px !important;padding:15px !important;min-height:115px !important}#fiche > .banner .crest{width:69px !important;height:72px !important;flex-basis:69px !important}#fiche > .banner h2{font-size:clamp(19px,5vw,27px) !important}}
+</style></head><body>
 <div id="bhl-global-nav"></div>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
