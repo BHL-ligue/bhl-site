@@ -129,6 +129,11 @@ async function historicalFantasy(id,season,goalie,center,team){
  const complete=Object.values(v).every(x=>x!==null);
  return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
 }
+const BHL_NHL_IDS={'ryannugenthopkins':8476454,'kandremiller':8480817,'jackhughes':8481559};
+function bhlResolvedNhlId(name){
+ const key=norm(name);
+ return Number(BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[String(name||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\\s+/g,' ').trim().toLowerCase()]||0);
+}
 async function historicNhl(name,target){
  target.textContent='Chargement de toutes les saisons LNH en carrière…';
  const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
@@ -136,7 +141,7 @@ async function historicNhl(name,target){
   const result=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
   const players=Array.isArray(result)?result:(result.data||[]);
   const match=players.find(p=>normalized(p.name||p.fullName||p.playerName)===normalized(name)||normalized(String(p.name||'').split(',').reverse().join(' '))===normalized(name));
-  const id=Number(match?.playerId||match?.id);
+  const id=Number(bhlResolvedNhlId(name)||match?.playerId||match?.id);
   if(!Number.isInteger(id)||id<=0)throw Error('Joueur non trouvé dans la base LNH');
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
   if(!target.isConnected)return;
@@ -230,7 +235,7 @@ async function populatePlayerBio(dialog,id,name){
   const query=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
   const players=Array.isArray(query)?query:(query.data||[]);
   const found=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name)||norm(String(p.name||'').split(',').reverse().join(' '))===norm(name));
-  const nhlId=Number(found?.playerId||found?.id);if(!nhlId)return;
+  const nhlId=Number(bhlResolvedNhlId(name)||found?.playerId||found?.id);if(!nhlId)return;
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
   if(!dialog.isConnected)return;
   const position=profile.position||profile.positionCode;
