@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T18:37:59.836858+00:00",
+  "updatedAt": "2026-11-02T18:47:06.066644+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -19,192 +19,293 @@
           "id": "02un4",
           "name": "Connor McDavid",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03eb3",
           "name": "Christian Dvorak",
           "position": "C",
-          "status": "RESERVE"
+          "eligiblePositions": [
+            "C"
+          ],
+          "status": "ACTIVE"
         },
         {
           "id": "03rf2",
           "name": "Roope Hintz",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02azf",
           "name": "Dougie Hamilton",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "062h5",
           "name": "Gavin McKenna",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06lvc",
           "name": "Harrison Brunicke",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "060je",
           "name": "Noah Warren",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03e1n",
           "name": "Adrian Kempe",
           "position": "RW",
-          "status": "ACTIVE"
+          "eligiblePositions": [
+            "RW"
+          ],
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "05ylt",
           "name": "Zach Benson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04ye8",
           "name": "Jordan Spence",
           "position": "D",
-          "status": "ACTIVE"
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "05ww8",
           "name": "Ryan Greene",
-          "position": "C",
+          "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04lcs",
           "name": "Mattias Samuelsson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "074mg",
           "name": "Liam Ruck",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "060jl",
           "name": "Jiri Kulich",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03eb0",
           "name": "Ryan Donato",
-          "position": "RW",
+          "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03w5m",
           "name": "Gabriel Vilardi",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05kdw",
           "name": "Ridly Greig",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06axy",
           "name": "Artyom Levshunov",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05y7m",
           "name": "Denton Mateychuk",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03zul",
           "name": "Filip Gustavsson",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "05ltt",
           "name": "Alex Laferriere",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05kbn",
           "name": "Will Cuylle",
-          "position": "LW",
+          "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05ran",
           "name": "Matt Coronato",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05gd9",
           "name": "Zack Bolduc",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "031pl",
           "name": "Juuse Saros",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03yuf",
           "name": "Eeli Tolvanen",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "066q4",
           "name": "Konsta Helenius",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03pax",
           "name": "Ivan Provorov",
           "position": "D",
-          "status": "INJURED_RESERVE"
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "ACTIVE"
         },
         {
           "id": "059e1",
           "name": "Braden Schneider",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05rjg",
           "name": "Danila Yurov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04mtp",
           "name": "Dylan Cozens",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042yb",
           "name": "Brandon Hagel",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -217,180 +318,273 @@
           "id": "04bii",
           "name": "Spencer Knight",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05ril",
           "name": "Simon Nemec",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01587",
           "name": "Jordan Eberle",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05oxk",
           "name": "Mason Lohrei",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05yms",
           "name": "Sam Rinzel",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02wy3",
           "name": "Elias Lindholm",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0457i",
           "name": "Ukko-Pekka Luukkonen",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "004p4",
           "name": "Mikael Backlund",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04amg",
           "name": "Alexis Lafreniere",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "075ko",
           "name": "Wyatt Cullen",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04yn0",
           "name": "Connor McMichael",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03duf",
           "name": "Dylan Larkin",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04kyn",
           "name": "Sean Walker",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ecl",
           "name": "Gustav Forsling",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03yg3",
           "name": "Mikhail Sergachev",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "067xz",
           "name": "Axel Sandin Pellikka",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "048vf",
           "name": "Andrei Svechnikov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02noq",
           "name": "Mike Matheson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "0457b",
           "name": "Casey Mittelstadt",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05r1c",
           "name": "Juraj Slafkovsky",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06hcw",
           "name": "Beckett Sennecke",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05gtp",
           "name": "Dawson Mercer",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05gd8",
           "name": "Mason McTavish",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01zti",
           "name": "Tyler Toffoli",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06pyp",
           "name": "Radim Mrtka",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "06axe",
           "name": "Gabe Perreault",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06rus",
           "name": "Brady Martin",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05ui2",
           "name": "Logan Cooley",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05j3d",
           "name": "Bobby McMann",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05ui4",
           "name": "Dalibor Dvorsky",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         }
       ]
@@ -403,192 +597,290 @@
           "id": "05o01",
           "name": "Sebastian Cossa",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02azh",
           "name": "Jamie Oleksiak",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06fzv",
           "name": "Cole Hutson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04qy5",
           "name": "Kirill Marchenko",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04znw",
           "name": "Brandt Clarke",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04qzc",
           "name": "Joel Hofer",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02unz",
           "name": "Nick Schmaltz",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04mv3",
           "name": "Alex Newhook",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03kra",
           "name": "Kyle Connor",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "064om",
           "name": "Michael Hage",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04mto",
           "name": "Kaapo Kakko",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "048w3",
           "name": "Justin Brazeau",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "03rip",
           "name": "John Marino",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06snb",
           "name": "Benjamin Kindel",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02yjl",
           "name": "Leon Draisaitl",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04f24",
           "name": "Jeremy Swayman",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06mb0",
           "name": "Matvei Gridin",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05kua",
           "name": "Emil Heineman",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01z7v",
           "name": "Sean Couturier",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04z51",
           "name": "Charle-Edouard DAstous",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ra7",
           "name": "Zach Werenski",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04kyh",
           "name": "Brady Tkachuk",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0760d",
           "name": "Jaxon Cover",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "051yz",
           "name": "Dylan Holloway",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03169",
           "name": "Alexander Wennberg",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01zql",
           "name": "Brock Nelson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "075w6",
           "name": "Malte Gustafsson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03924",
           "name": "Jack Eichel",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01mz5",
           "name": "Dmitry Orlov",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0618g",
           "name": "Cole Knuble",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05ltj",
           "name": "Brock Faber",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "03wor",
           "name": "Mason Marchment",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -601,192 +893,292 @@
           "id": "05riz",
           "name": "David Jiricek",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06axr",
           "name": "Tom Willander",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "066sp",
           "name": "Aydar Suniev",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04lo0",
           "name": "Quinton Byfield",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05g42",
           "name": "Jack Quinn",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03dms",
           "name": "Kevin Fiala",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "038vb",
           "name": "Travis Konecny",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rab",
           "name": "Jake DeBrusk",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05xcm",
           "name": "Jonathan Lekkerimaki",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06snd",
           "name": "Lynden Lakovic",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "06jhd",
           "name": "Anton Frondell",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02nq2",
           "name": "Chandler Stephenson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05tas",
           "name": "Olen Zellweger",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "074v8",
           "name": "Alberts Smits",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "070fm",
           "name": "Ryan Lin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02yjp",
           "name": "Ivan Barbashev",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042ye",
           "name": "Jesper Bratt",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04yu6",
           "name": "Jamie Drysdale",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04xec",
           "name": "Matt Boldy",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06aew",
           "name": "Dmitri Simashev",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051m4",
           "name": "Jackson LaCombe",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06hcr",
           "name": "Igor Chernyshov",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "0529k",
           "name": "Yaroslav Askarov",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06ay2",
           "name": "Luca Cagnoni",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03wpm",
           "name": "Charlie McAvoy",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06pyw",
           "name": "Victor Eklund",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "070fr",
           "name": "Xavier Villeneuve",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04yqp",
           "name": "Anton Lundell",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04o0g",
           "name": "Marco Rossi",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05rf2",
           "name": "Logan Stankoven",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031pq",
           "name": "Andrew Copp",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "066on",
           "name": "Michael Brandsegg-Nygard",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -799,186 +1191,280 @@
           "id": "00qs7",
           "name": "Jamie Benn",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06fzw",
           "name": "Adam Jiricek",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "027i6",
           "name": "Mika Zibanejad",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01xfq",
           "name": "Vladimir Tarasenko",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05rjy",
           "name": "Cole Eiserman",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02nq3",
           "name": "Shayne Gostisbehere",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05tqt",
           "name": "Wyatt Johnston",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "049k7",
           "name": "Martin Necas",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0045u",
           "name": "Jordan Staal",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "060pq",
           "name": "Alex Bump",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03167",
           "name": "Bo Horvat",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "074v1",
           "name": "Tommy Bleyl",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "042w4",
           "name": "Adam Fox",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03e1m",
           "name": "Brayden Point",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06rqm",
           "name": "Carter Bear",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03yg4",
           "name": "Samuel Girard",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mn8",
           "name": "Clayton Keller",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03d12",
           "name": "David Pastrnak",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06pyk",
           "name": "Justin Carbonneau",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04ld3",
           "name": "Noah Dobson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04r0e",
           "name": "Pontus Holmberg",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04qyw",
           "name": "Linus Karlsson",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06imq",
           "name": "Maxim Shabanov",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01c32",
           "name": "Brayden Schenn",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05g2s",
           "name": "Adam Wilsby",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02oak",
           "name": "Connor Brown",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05x9t",
           "name": "Tye Kartye",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02fzm",
           "name": "Filip Forsberg",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03161",
           "name": "Darnell Nurse",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0322w",
           "name": "Ilya Sorokin",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05af9",
           "name": "William Wallinder",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -991,192 +1477,293 @@
           "id": "067yd",
           "name": "David Reinbacher",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05rjd",
           "name": "Cutter Gauthier",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02nqb",
           "name": "Colton Parayko",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01f3e",
           "name": "Nazem Kadri",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03yh8",
           "name": "Owen Tippett",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01sif",
           "name": "Tyler Seguin",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04f2d",
           "name": "Drake Batherson",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02440",
           "name": "Anders Lee",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05tur",
           "name": "Matthew Knies",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06gk0",
           "name": "Matthew Schaefer",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04mdc",
           "name": "Logan Thompson",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05r1l",
           "name": "William Eklund",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "0725x",
           "name": "Caleb Malhotra",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05gd7",
           "name": "Cole Sillinger",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06jhc",
           "name": "Tij Iginla",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04dwk",
           "name": "Josh Norris",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051xf",
           "name": "Egor Chinakhov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03jxy",
           "name": "Auston Matthews",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0644f",
           "name": "Ryan Leonard",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04ye7",
           "name": "Cam York",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "059e2",
           "name": "Justin Sourdif",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03rgk",
           "name": "Alex Carrier",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03bxl",
           "name": "Trevor Moore",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02o78",
           "name": "Brett Kulak",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04gek",
           "name": "Sean Durzi",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "04f75",
           "name": "Noah Cates",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "059e5",
           "name": "Jake Neighbours",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "067xd",
           "name": "T.J. Hughes",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rad",
           "name": "Thomas Chabot",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01zs1",
           "name": "Scott Wedgewood",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zb4",
           "name": "Moritz Seider",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06rut",
           "name": "Cameron Reid",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         }
       ]
@@ -1189,186 +1776,283 @@
           "id": "06loq",
           "name": "Caleb Desnoyers",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05ymq",
           "name": "Matthew Poitras",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031og",
           "name": "Tyler Bertuzzi",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04lc0",
           "name": "Evan Bouchard",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "068yz",
           "name": "Jacob Fowler",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02o7s",
           "name": "Connor Hellebuyck",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04l8w",
           "name": "Parker Kelly",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05ymn",
           "name": "Maveric Lamoureux",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "01ex7",
           "name": "Matt Duchene",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "070fp",
           "name": "Daxon Rudolph",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "004jl",
           "name": "Brad Marchand",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04o0h",
           "name": "Dylan Guenther",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05m17",
           "name": "Frank Nazar",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "003kg",
           "name": "Patrick Kane",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051lz",
           "name": "Shane Pinto",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rf7",
           "name": "Yakov Trenin",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05kuc",
           "name": "Tyler Kleven",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01n84",
           "name": "Alex Killorn",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ni5",
           "name": "Jonathan Marchessault",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ec6",
           "name": "Devon Toews",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mn9",
           "name": "Mikko Rantanen",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03dug",
           "name": "Tony DeAngelo",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02npl",
           "name": "Damon Severson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ybj",
           "name": "Anthony Mantha",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06loj",
           "name": "Ethan Belchetz",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04ldb",
           "name": "Bowen Byram",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ee4",
           "name": "Victor Olofsson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05w9b",
           "name": "Calum Ritchie",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02nol",
           "name": "Teuvo Teravainen",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zp9",
           "name": "Mavrik Bourque",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05lu8",
           "name": "Alexander Nikishin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         }
       ]
@@ -1381,192 +2065,291 @@
           "id": "04mq0",
           "name": "Matt Savoie",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "03d09",
           "name": "Alex Tuch",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03as6",
           "name": "Jared McCann",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "01fx3",
           "name": "Roman Josi",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01zto",
           "name": "Charlie Coyle",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02yjj",
           "name": "William Nylander",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03jvu",
           "name": "Mitch Marner",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06nkc",
           "name": "Jake OBrien",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05kbo",
           "name": "Marat Khusnutdinov",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04qyv",
           "name": "Lukas Dostal",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06spu",
           "name": "Alexander Zharovsky",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03ofm",
           "name": "Pius Suter",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "070fo",
           "name": "Chase Reid",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03ra8",
           "name": "Timo Meier",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "049ph",
           "name": "Neal Pionk",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03uzr",
           "name": "Matthew Tkachuk",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05uao",
           "name": "Collin Graf",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04qza",
           "name": "Martin Pospisil",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06axz",
           "name": "Bradly Nadeau",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "023wa",
           "name": "Jared Spurgeon",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "060v8",
           "name": "Elias Pettersson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rf8",
           "name": "Vince Dunn",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "039cg",
           "name": "Sam Bennett",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04xef",
           "name": "Philip Broberg",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05tv0",
           "name": "Jackson Blake",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031p8",
           "name": "Oliver Bjorkstrand",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06bap",
           "name": "Easton Cowan",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04lcf",
           "name": "Joel Farabee",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04yu5",
           "name": "Thomas Harley",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01skq",
           "name": "Cam Fowler",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01d6c",
           "name": "Jacob Markstrom",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06r63",
           "name": "Tynan Lawrence",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         }
       ]
@@ -1579,174 +2362,265 @@
           "id": "05nzz",
           "name": "Simon Edvinsson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "05w9c",
           "name": "Macklin Celebrini",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zj5",
           "name": "JJ Peterka",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05ymj",
           "name": "Jimmy Snuggerud",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05rj3",
           "name": "Tristan Luneau",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02wy5",
           "name": "Nikita Zadorov",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04lc8",
           "name": "Jesperi Kotkaniemi",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "059e0",
           "name": "Jake Sanderson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03as8",
           "name": "Nikolaj Ehlers",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04y80",
           "name": "Shane Wright",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02zpp",
           "name": "Viktor Arvidsson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0579x",
           "name": "Adam Fantilli",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "061im",
           "name": "Michael Misa",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zj8",
           "name": "Bobby Brink",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "0644b",
           "name": "Will Smith",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0457k",
           "name": "Jake Oettinger",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01xfp",
           "name": "Jaden Schwartz",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04ymu",
           "name": "Hendrix Lapierre",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03v70",
           "name": "Alex DeBrincat",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0045j",
           "name": "Kris Letang",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04a9v",
           "name": "Morgan Geekie",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03nfr",
           "name": "Evan Rodrigues",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mqg",
           "name": "Jakob Chychrun",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06maz",
           "name": "Ilya Protas",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02b3o",
           "name": "Rickard Rakell",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04xjf",
           "name": "Owen Power",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05mx8",
           "name": "Declan Carlile",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04qya",
           "name": "Filip Hallander",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06nke",
           "name": "Jackson Smith",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         }
       ]
@@ -1759,186 +2633,283 @@
           "id": "04ymt",
           "name": "Lucas Raymond",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04dwj",
           "name": "Jason Robertson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "075kn",
           "name": "Oscar Hemming",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "0243e",
           "name": "Gabriel Landeskog",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04abd",
           "name": "Artem Zub",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "0045k",
           "name": "Evgeni Malkin",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "071wj",
           "name": "Carson Carels",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "06bmb",
           "name": "Zeev Buium",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03mn5",
           "name": "Patrik Laine",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02f9l",
           "name": "Nathan MacKinnon",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02nom",
           "name": "Andrei Vasilevskiy",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051z1",
           "name": "Justin Barron",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05r50",
           "name": "Mackie Samoskevich",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031nx",
           "name": "Shea Theodore",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01zu5",
           "name": "Justin Faulk",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01skr",
           "name": "Mikael Granlund",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ytx",
           "name": "Ryan Hartman",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06hco",
           "name": "Zayne Parekh",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "064mz",
           "name": "Charlie Stramel",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "062dy",
           "name": "Andrew Cristall",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03j8l",
           "name": "Noah Hanifin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04lbz",
           "name": "Quinn Hughes",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "048x9",
           "name": "Elias Pettersson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06bdr",
           "name": "Roman Kantserov",
           "position": "RW",
-          "status": "RESERVE"
+          "eligiblePositions": [
+            "RW"
+          ],
+          "status": "ACTIVE"
         },
         {
           "id": "01sio",
           "name": "Mats Zuccarello",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "05y3a",
           "name": "Leo Carlsson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02dq6",
           "name": "Jean-Gabriel Pageau",
           "position": "RW",
-          "status": "ACTIVE"
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "06hj9",
           "name": "Porter Martone",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rfx",
           "name": "Tommy Novak",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "00qnu",
           "name": "Drew Doughty",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06rnr",
           "name": "Maddox Dagenais",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         }
       ]
@@ -1951,192 +2922,292 @@
           "id": "05yli",
           "name": "Pavel Mintyukov",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rgq",
           "name": "Ryan Shea",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06sqf",
           "name": "Braeden Cootes",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05mwh",
           "name": "Devon Levi",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05r1i",
           "name": "Matty Beniers",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01f5z",
           "name": "Chris Kreider",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02422",
           "name": "Ryan Nugent-Hopkins",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04ln4",
           "name": "Kiefer Sherwood",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05gvo",
           "name": "Matvei Michkov",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06bde",
           "name": "Oliver Bonk",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06h8h",
           "name": "Trevor Connelly",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05yn2",
           "name": "Fraser Minten",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02b76",
           "name": "Vincent Trocheck",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "065nx",
           "name": "Berkly Catton",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05ui5",
           "name": "Quentin Musty",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03ece",
           "name": "Igor Shesterkin",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "06r5z",
           "name": "Keaton Verhoeff",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04amd",
           "name": "Peyton Krebs",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06hk9",
           "name": "Vitali Pinchuk",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05gdo",
           "name": "Luke Evangelista",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01lkz",
           "name": "Taylor Hall",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "02nof",
           "name": "Hampus Lindholm",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051um",
           "name": "Arseny Gritsyuk",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ynu",
           "name": "Carter Hart",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06lok",
           "name": "Viggo Bjorck",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03e7p",
           "name": "Travis Sanheim",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04qve",
           "name": "KAndre Miller",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06axx",
           "name": "William Horcoff",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "0042t",
           "name": "Claude Giroux",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04mx6",
           "name": "Kaiden Guhle",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04y8g",
           "name": "Trevor Zegras",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05gda",
           "name": "Kent Johnson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -2149,192 +3220,293 @@
           "id": "01zvp",
           "name": "Bryan Rust",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "06axc",
           "name": "Samuel Honzek",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02azb",
           "name": "Mark Scheifele",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zb6",
           "name": "Alex Vlasic",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05ubx",
           "name": "Ryker Evans",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042t2",
           "name": "Logan Stanley",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051uw",
           "name": "Judd Caulfield",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02nok",
           "name": "Tomas Hertl",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02o7l",
           "name": "Jaccob Slavin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05r2z",
           "name": "Theo Lindstein",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "00454",
           "name": "Sidney Crosby",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zo0",
           "name": "Pavel Dorofeyev",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05962",
           "name": "J.J. Moser",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05tcz",
           "name": "Oliver Kapanen",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "065d1",
           "name": "Matthew Wood",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05xrx",
           "name": "Marco Kasper",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05tqu",
           "name": "Logan Mailloux",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "04bw4",
           "name": "Andrei Kuzmenko",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042vx",
           "name": "Filip Hronek",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06kr3",
           "name": "Sam OReilly",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "01ztp",
           "name": "Zach Hyman",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03w5s",
           "name": "Ryan McLeod",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05lud",
           "name": "Dylan Garand",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05oxs",
           "name": "Jakub Dobes",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02noe",
           "name": "Morgan Rielly",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mkm",
           "name": "Adin Hill",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06cl1",
           "name": "Emmitt Finnie",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ybn",
           "name": "Josh Morrissey",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03dde",
           "name": "Jake Walman",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031p0",
           "name": "Jake Guentzel",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "039ch",
           "name": "Kasperi Kapanen",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03as9",
           "name": "Dylan Strome",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         }
       ]
@@ -2347,192 +3519,293 @@
           "id": "04y4m",
           "name": "Connor Bedard",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031p3",
           "name": "Carter Verhaeghe",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05kub",
           "name": "Shakir Mukhamadullin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "05rb9",
           "name": "Conor Geekie",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051v4",
           "name": "Arturs Silovs",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ybo",
           "name": "Rasmus Ristolainen",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "02un6",
           "name": "Sean Monahan",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02o70",
           "name": "Josh Anderson",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02un7",
           "name": "Aleksander Barkov",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "04yeb",
           "name": "Simon Holmstrom",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05tpa",
           "name": "Ville Koivunen",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06axb",
           "name": "Nick Lardis",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "0243f",
           "name": "Seth Jones",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "024lv",
           "name": "Mattias Ekholm",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051tx",
           "name": "Aliaksei Protas",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04f1z",
           "name": "Mikey Anderson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05ym6",
           "name": "Liam Ohgren",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02un5",
           "name": "Sam Reinhart",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03raf",
           "name": "Brock Boeser",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042vl",
           "name": "Jordan Kyrou",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04ezy",
           "name": "Morgan Frost",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05r3d",
           "name": "Josh Doan",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "003tz",
           "name": "Brent Burns",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01ud1",
           "name": "Sergei Bobrovsky",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04qzk",
           "name": "Paul Cotter",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02g00",
           "name": "Aaron Ekblad",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02fro",
           "name": "Adam Lowry",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "004cq",
           "name": "Alex Ovechkin",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06age",
           "name": "Sam Malinski",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031v6",
           "name": "MacKenzie Weegar",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06psl",
           "name": "Ivar Stenberg",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06c72",
           "name": "Braeden Bowman",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         }
       ]
@@ -2545,186 +3818,284 @@
           "id": "06loc",
           "name": "Yegor Surin",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04r0j",
           "name": "Michael Kesselring",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04yi4",
           "name": "Pyotr Kochetkov",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mbn",
           "name": "Mackenzie Blackwood",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03de2",
           "name": "Brandon Montour",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06hcy",
           "name": "Liam Greentree",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "031pn",
           "name": "Nick Paul",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05wwg",
           "name": "Lane Hutson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02fzj",
           "name": "Blake Coleman",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02b3w",
           "name": "Boone Jenner",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01c13",
           "name": "Victor Hedman",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0644c",
           "name": "Daniil But",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03yuc",
           "name": "Kailer Yamamoto",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "050rc",
           "name": "Dmitry Voronkov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "01zt0",
           "name": "Jason Zucker",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "042t5",
           "name": "Tage Thompson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04osu",
           "name": "Barrett Hayton",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "05k8c",
           "name": "Tyson Foerster",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02b70",
           "name": "Nikita Kucherov",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01zvf",
           "name": "Mark Stone",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06sqp",
           "name": "Vaclav Nestrasil",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04bdb",
           "name": "Jack Hughes",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02noo",
           "name": "Mark Jankowski",
           "position": "C",
+          "eligiblePositions": [
+            "C",
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04apb",
           "name": "Robert Thomas",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0457f",
           "name": "Nico Hischier",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04an5",
           "name": "Miro Heiskanen",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02dq3",
           "name": "Jacob Trouba",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02nou",
           "name": "Brady Skjei",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05gvq",
           "name": "Seth Jarvis",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01f6d",
           "name": "Ryan OReilly",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051u2",
           "name": "Matias Maccelli",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         }
       ]
@@ -2737,192 +4108,290 @@
           "id": "03wpi",
           "name": "Pierre-Luc Dubois",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04ad7",
           "name": "Rasmus Dahlin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01f66",
           "name": "Kyle Palmieri",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03rag",
           "name": "Jack Roslovic",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06ig3",
           "name": "Cayden Lindstrom",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "06sds",
           "name": "Tim Washe",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03ekl",
           "name": "Vladislav Gavrikov",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "00qru",
           "name": "Steven Stamkos",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "064r2",
           "name": "Ivan Demidov",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "03rmx",
           "name": "Sebastian Aho",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "015pv",
           "name": "John Carlson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02wy7",
           "name": "Pavel Buchnevich",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05td4",
           "name": "Ryan Ufko",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03klz",
           "name": "Darren Raddysh",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04alw",
           "name": "Cale Makar",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rae",
           "name": "Joel Eriksson Ek",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01c12",
           "name": "John Tavares",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02noj",
           "name": "Tom Wilson",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rih",
           "name": "Karel Vejmelka",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "02aez",
           "name": "J.T. Miller",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04zox",
           "name": "Kaedan Korczak",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03bfj",
           "name": "Artemi Panarin",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ybk",
           "name": "Artturi Lehkonen",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "01gjn",
           "name": "Erik Haula",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03kng",
           "name": "Frederick Gaudreau",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "026p4",
           "name": "Jonathan Huberdeau",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "075u7",
           "name": "Alexander Command",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03rh3",
           "name": "Kirill Kaprizov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02azg",
           "name": "Jonas Brodin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "071wk",
           "name": "Elton Hermansson",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04yg5",
           "name": "Jesper Wallstedt",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06jhe",
           "name": "Cole Reschny",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         }
       ]
@@ -2935,192 +4404,293 @@
           "id": "01mzc",
           "name": "Brayden McNabb",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "031of",
           "name": "William Carrier",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02oar",
           "name": "Linus Ullmark",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "03l0t",
           "name": "Pavel Zacha",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rfl",
           "name": "Anthony Cirelli",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02b6w",
           "name": "William Karlsson",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04uqa",
           "name": "Vasily Podkolzin",
           "position": "RW",
+          "eligiblePositions": [
+            "RW",
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03c0c",
           "name": "Josh Manson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04zo3",
           "name": "Nick Robertson",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06sn9",
           "name": "Kashawn Aitcheson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "MINORS"
         },
         {
           "id": "03wpn",
           "name": "Brett Howden",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02yjw",
           "name": "Tristan Jarry",
           "position": "G",
+          "eligiblePositions": [
+            "G"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "04f17",
           "name": "Fabian Zetterlund",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06amv",
           "name": "Sam Dickinson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06ag2",
           "name": "James Hagens",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "02ybl",
           "name": "Valeri Nichushkin",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03rik",
           "name": "Troy Terry",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "016g3",
           "name": "Erik Karlsson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0744a",
           "name": "Nikita Klepov",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04uql",
           "name": "Cole Perfetti",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "048xc",
           "name": "Nick Suzuki",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04mv2",
           "name": "Cole Caufield",
           "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "06imm",
           "name": "Roger McQueen",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "MINORS"
         },
         {
           "id": "04n4n",
           "name": "Rasmus Sandin",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "INJURED_RESERVE"
         },
         {
           "id": "03rf5",
           "name": "Rasmus Andersson",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "03mm6",
           "name": "Lawson Crouse",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "06hcq",
           "name": "Carter Yakemchuk",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "05rjh",
           "name": "Noah Ostlund",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "051z0",
           "name": "Tim Stutzle",
           "position": "LW",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
           "status": "ACTIVE"
         },
         {
           "id": "0644e",
           "name": "Oliver Moore",
           "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
           "status": "MINORS"
         },
         {
           "id": "02uws",
           "name": "Mathew Barzal",
           "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
           "status": "RESERVE"
         },
         {
           "id": "04ymn",
           "name": "Luke Hughes",
           "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
           "status": "ACTIVE"
         }
       ]
