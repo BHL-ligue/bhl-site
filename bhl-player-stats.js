@@ -54,25 +54,42 @@ function nhlSeasonTeamCode(season){
  if(/^[A-Z]{2,3}$/.test(upper))return upper;
  return nhlTeamCodes[value.toLowerCase()]||'';
 }
+const historicalReportCache=new Map();
 async function nhlSeasonReport(type,report,id,season,team){
- const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
- const data=await nhlJson(url),rows=data.data||[];
- if(!rows.length)throw Error('Rapport '+report+' absent');
- if(team){const requested=String(team).toUpperCase();const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};const accepted=aliases[requested]||[requested];const selected=rows.find(x=>accepted.includes(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim().toUpperCase()));if(!selected)throw Error('Statistiques '+report+' indisponibles pour '+requested);return selected;}
- const total=rows.find(x=>/^(TOT|TOTAL|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()));
- if(total)return total;
- if(rows.length===1)return rows[0];
- // Un joueur échangé peut avoir plusieurs lignes (une par équipe).
- // Additionner uniquement les compteurs bruts, jamais les pourcentages ou moyennes.
- const excluded=/pct|percentage|average|pergame|per60|rate|ratio|shootingpct|faceoffpct|timeonice|plusminus/i;
- const merged={};
- for(const row of rows){
-  for(const [key,value] of Object.entries(row)){
-   if(typeof value!=='number'||excluded.test(key)||/^(playerId|seasonId|gameTypeId|teamId|gamesPlayed)$/i.test(key))continue;
-   merged[key]=(merged[key]||0)+value;
-  }
+ const key=[type,report,id,season].join(':');
+ if(!historicalReportCache.has(key)){
+  historicalReportCache.set(key,(async()=>{
+   const base='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2');
+   // Season aggregate first; for a player with multiple teams the NHL may return
+   // one combined row. In that case retrieve game-level rows for team splits.
+   const aggregate=await nhlJson(base+'&isAggregate=true&isGame=false&limit=100');
+   const rows=Array.isArray(aggregate.data)?aggregate.data:[];
+   const distinct=new Set(rows.map(x=>String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()).filter(Boolean));
+   if(rows.length>1&&distinct.size>1)return {rows,perGame:false};
+   try{
+    const games=await nhlJson(base+'&isAggregate=false&isGame=true&limit=200');
+    if(Array.isArray(games.data)&&games.data.length&&(!games.total||games.data.length>=Number(games.total)))return {rows:games.data,perGame:true};
+   }catch(e){}
+   return {rows,perGame:false};
+  })());
  }
- merged.gamesPlayed=rows.reduce((n,row)=>n+(Number(row.gamesPlayed)||0),0);
+ const result=await historicalReportCache.get(key);
+ const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};
+ const accepted=team?(aliases[team]||[team]):null;
+ const code=row=>String(row.teamAbbrevs||row.teamAbbrev||row.team||'').trim().toUpperCase();
+ const selected=accepted?result.rows.filter(row=>accepted.includes(code(row))):result.rows;
+ if(!selected.length)throw Error('Aucune donnée '+report+' pour '+(team||season));
+ if(!result.perGame&&selected.length===1){
+  const only=selected[0];
+  if(team&&!accepted.includes(code(only)))throw Error('Rapport '+report+' contient uniquement le total de saison');
+  return only;
+ }
+ const excluded=/pct|percentage|average|pergame|per60|rate|ratio|timeonice|plusminus|^(playerId|seasonId|gameTypeId|teamId|gameId|gameDate)$/i;
+ const merged={};
+ for(const row of selected)for(const [key,value] of Object.entries(row)){
+  if(typeof value!=='number'||excluded.test(key))continue;
+  merged[key]=(merged[key]||0)+value;
+ }
  return merged;
 }
 async function historicalFantasy(id,season,goalie,center,team){
@@ -126,7 +143,8 @@ async function historicNhl(name,target){
   for(const x of seasons){
    const season=String(x.season),row=document.createElement('tr');
    const team=typeof x.teamName==='object'?(x.teamName.default||x.teamAbbrev):x.teamName||x.teamAbbrev||'—';
-   const values=[season.slice(0,4)+'-'+season.slice(6),team,'…','…',x.gamesPlayed,...keys.map(()=> '…')];
+   const basic=goalie?[x.wins,x.goalsAgainst,x.saves,x.shutouts,x.goals,x.assists]:[x.goals,x.assists,x.shots??x.shotsOnGoal,x.hits,x.blockedShots,x.takeaways,x.faceoffsWon];
+   const values=[season.slice(0,4)+'-'+season.slice(6),team,'…','…',x.gamesPlayed,...basic.map(value=>value??'…')];
    for(const value of values){const td=document.createElement('td');td.textContent=value??'—';row.append(td)}
    body.append(row);rows.push(row);
   }
@@ -144,7 +162,7 @@ async function historicNhl(name,target){
      row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
      keys.forEach((key,j)=>row.cells[5+j].textContent=v[key]===null?'N/D':fmt(v[key]));
-    }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';const base=[season.goals,season.assists,season.shots];for(let j=0;j<base.length;j++)if(base[j]!==undefined&&base[j]!==null)row.cells[5+j].textContent=fmt(base[j]);for(let j=8;j<row.cells.length;j++)row.cells[j].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail)}}
+    }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail)}}
    }
   }
   await Promise.all(Array.from({length:Math.min(3,seasons.length)},worker));
