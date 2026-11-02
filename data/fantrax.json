@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T22:14:20.025682+00:00",
+  "updatedAt": "2026-11-02T22:42:13.319020+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -1829,12 +1829,12 @@
         {
           "id": "031og",
           "name": "Tyler Bertuzzi",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04lc0",
@@ -1951,12 +1951,12 @@
         {
           "id": "03rf7",
           "name": "Yakov Trenin",
-          "position": "LW",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05kuc",
@@ -1975,7 +1975,7 @@
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02ni5",
@@ -2001,6 +2001,15 @@
           "position": "RW",
           "eligiblePositions": [
             "RW"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051v9",
+          "name": "Adam Edstrom",
+          "position": "LW",
+          "eligiblePositions": [
+            "LW"
           ],
           "status": "ACTIVE"
         },
@@ -3907,7 +3916,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04yi4",
@@ -3982,7 +3991,7 @@
             "LW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "01c13",
@@ -4009,7 +4018,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "050rc",
@@ -4024,7 +4033,7 @@
         {
           "id": "01zt0",
           "name": "Jason Zucker",
-          "position": "LW",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW"
@@ -4057,7 +4066,7 @@
           "eligiblePositions": [
             "LW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02b70",
@@ -4099,12 +4108,12 @@
         {
           "id": "02noo",
           "name": "Mark Jankowski",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04apb",
@@ -4149,7 +4158,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05gvq",
@@ -9937,7 +9946,7 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 116.95
+        "score": 117.15
       },
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
@@ -9963,7 +9972,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 159.3
+        "score": 159.1
       },
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
@@ -10015,7 +10024,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 158.8
+        "score": 158.5
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
@@ -10046,7 +10055,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 116.95
+        "score": 117.15
       }
     },
     {
@@ -10054,7 +10063,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 159.3
+        "score": 159.1
       },
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
@@ -10106,7 +10115,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 158.8
+        "score": 158.5
       },
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
@@ -10145,7 +10154,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 159.3
+        "score": 159.1
       },
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
@@ -10163,7 +10172,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 116.95
+        "score": 117.15
       }
     },
     {
@@ -10197,7 +10206,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 158.8
+        "score": 158.5
       },
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
@@ -11669,7 +11678,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 158.8,
+            "score": 158.5,
             "gamesPlayed": 59
           },
           "home": {
@@ -11717,7 +11726,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 116.95,
+            "score": 117.15,
             "gamesPlayed": 48
           }
         },
@@ -11725,7 +11734,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 159.3,
+            "score": 159.1,
             "gamesPlayed": 54
           },
           "home": {
@@ -11767,7 +11776,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 158.8,
+            "score": 158.5,
             "gamesPlayed": 59
           },
           "home": {
@@ -11823,7 +11832,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 159.3,
+            "score": 159.1,
             "gamesPlayed": 54
           },
           "home": {
@@ -11843,7 +11852,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 116.95,
+            "score": 117.15,
             "gamesPlayed": 48
           }
         },
@@ -11865,7 +11874,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 158.8,
+            "score": 158.5,
             "gamesPlayed": 59
           },
           "home": {
@@ -11921,7 +11930,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 159.3,
+            "score": 159.1,
             "gamesPlayed": 54
           },
           "home": {
@@ -11949,7 +11958,7 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 116.95,
+            "score": 117.15,
             "gamesPlayed": 48
           },
           "home": {
@@ -18223,7 +18232,7 @@
       "totalPointsFor": 2309.55,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2202.3
+      "totalPointsAgainst": 2202.0
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18243,7 +18252,7 @@
       "totalPointsFor": 1949.55,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2199.65
+      "totalPointsAgainst": 2199.15
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18263,7 +18272,7 @@
       "totalPointsFor": 2223.45,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2096.25
+      "totalPointsAgainst": 2096.45
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18313,7 +18322,7 @@
       "totalPointsFor": 1739.4,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2216.25
+      "totalPointsAgainst": 2215.95
     }
   ],
   "matchups": [
