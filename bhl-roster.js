@@ -72,10 +72,19 @@ async function bhlNhlPortrait(name){
   if(!key)return null;
   if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
   const request=(async()=>{
-    const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=50&q='+encodeURIComponent(name);
-    const result=await bhlNhlJson(url);
-    const matches=Array.isArray(result)?result:(Array.isArray(result?.data)?result.data:[]);
-    const match=matches.find(p=>bhlNhlNamesMatch(name,p.name||p.fullName||p.playerName));
+    // Search variants account for NHL's inconsistent apostrophes, hyphens and initials.
+    const variants=[name,name.replace(/[’‘\u2019]/g,"'"),name.replace(/['’‘-]/g,' '),bhlNhlPlayerName(name)];
+    const unique=[...new Set(variants.map(v=>v.trim()).filter(Boolean))];
+    let match=null;
+    for(const variant of unique){
+      try{
+        const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(variant);
+        const result=await bhlNhlJson(url);
+        const matches=Array.isArray(result)?result:(Array.isArray(result?.data)?result.data:[]);
+        match=matches.find(p=>bhlNhlNamesMatch(name,p.name||p.fullName||p.playerName||[p.firstName,p.lastName].join(' ')));
+        if(match)break;
+      }catch(e){console.warn('NHL search variant failed',variant,e)}
+    }
     const id=Number(match?.playerId||match?.id);
     if(!Number.isInteger(id)||id<=0)return null;
     const profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
