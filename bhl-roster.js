@@ -42,7 +42,7 @@ function render(rows,showTeam=false){
 function photos(container){if(typeof window.bhlNhlApplyPortraits==='function')window.bhlNhlApplyPortraits(container)}
 return {render,photos,sort,compose};
 })();
-(()=>{if(typeof window.bhlNhlApplyPortraits==="function")return;
+(()=>{ // Always register the canonical NHL-ID portrait loader; never retain a legacy global.
 const bhlNhlPortraitCache=new Map();
 const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
 window.BHLNhlPlayerIds=bhlKnownNhlIds;
