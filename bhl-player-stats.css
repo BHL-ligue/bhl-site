@@ -110,3 +110,7 @@
 .bhl-player-dialog .bhl-bio-label{font-size:9px;font-weight:850;letter-spacing:.08em;color:#6b7280}
 .bhl-player-dialog .bhl-bio-pill strong{font-size:12px;font-weight:800;color:#253041}
 @media(max-width:600px){.bhl-player-dialog .bhl-player-birth{gap:5px;margin-top:7px}.bhl-player-dialog .bhl-bio-pill{padding:6px 7px}.bhl-player-dialog .bhl-bio-pill strong{font-size:10px}.bhl-player-dialog .bhl-bio-label{font-size:8px}}
+
+/* Bio concise: same treatment as height and weight */
+.bhl-player-dialog .bhl-player-birth{display:block;margin-top:3px;font-size:12px;font-weight:650;color:#6b7280;line-height:1.4}
+@media(max-width:600px){.bhl-player-dialog .bhl-player-birth{font-size:10px;margin-top:2px}}
