@@ -50,8 +50,18 @@ function drawRoster(){
  render();
 }
 window.addEventListener('bhl:team-change',e=>{sheet=e.detail;draw()});
-fetch('data/fantrax.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Chargement indisponible');return r.json()}).then(data=>{
- if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups)||!Number.isFinite(Date.parse(data.updatedAt)))throw Error('Données invalides');
- snapshot=data;draw();
-}).catch(()=>{if(root)root.innerHTML='<p class="bhl-ft-note">Les données Fantrax sont temporairement indisponibles. <a href="bhl-fantrax.html">Consulter la saison →</a></p>';if(rosterRoot)rosterRoot.innerHTML='<p class="bhl-ft-note">Alignement temporairement indisponible.</p>'});
+async function refresh(){
+ try{
+  const response=await fetch('data/fantrax.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Chargement indisponible');
+  const data=await response.json();
+  if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups)||!Number.isFinite(Date.parse(data.updatedAt)))throw Error('Données invalides');
+  if(!snapshot||snapshot.updatedAt!==data.updatedAt){snapshot=data;draw();}
+ }catch(error){
+  if(!snapshot){if(root)root.innerHTML='<p class="bhl-ft-note">Les données Fantrax sont temporairement indisponibles. <a href="bhl-fantrax.html">Consulter la saison →</a></p>';if(rosterRoot)rosterRoot.innerHTML='<p class="bhl-ft-note">Alignement temporairement indisponible.</p>';}
+ }
+}
+refresh();
+setInterval(()=>{if(!document.hidden)refresh()},300000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh()});
 })();
