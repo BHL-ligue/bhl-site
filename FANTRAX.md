@@ -2,7 +2,7 @@
 
 La page bhl-fantrax.html lit exclusivement data/fantrax.json. Aucun appel Fantrax ni secret n'est envoyé au navigateur.
 
-Le workflow « Synchronisation Fantrax et publication » récupère les données toutes les 15 minutes (minutes 7, 22, 37 et 52 de chaque heure UTC), ainsi que sur lancement manuel depuis Actions > Run workflow. Les horaires GitHub peuvent être retardés. Il conserve un instantané dans Git et publie GitHub Pages.
+Le workflow « Synchronisation Fantrax et publication » récupère les données toutes les 15 minutes (minutes 00, 15, 30 et 45 de chaque heure UTC), ainsi que sur lancement manuel depuis Actions > Run workflow. Les horaires GitHub peuvent être retardés. Il conserve un instantané dans Git et publie GitHub Pages.
 
 Le script fixe User-Agent: BHL-Sync/1.0 et utilise les appels officiels getLeagueInfo, getPlayerIds, getTeamRosters, getStandings et getMatchupScores pour la ligue 32q8rjpomo2tig1z.
 
