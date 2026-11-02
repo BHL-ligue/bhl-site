@@ -43,14 +43,24 @@ jobs:
             # Discard only the generated snapshot commit, rebase on the newest
             # main and commit the latest snapshot again without a merge conflict.
             cp data/fantrax.json /tmp/bhl-fantrax-latest.json
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/bhl-fantrax-latest.json data/fantrax.json
-            git add data/fantrax.json
-            if ! git diff --cached --quiet; then
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git reset --hard origin/main
+              cp /tmp/bhl-fantrax-latest.json data/fantrax.json
+              git add data/fantrax.json
+              if git diff --cached --quiet; then
+                break
+              fi
               git commit -m "Actualiser les données Fantrax"
-              git push origin HEAD:main
-            fi
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                echo "Failed to publish Fantrax data after 5 attempts" >&2
+                exit 1
+              fi
+              sleep 2
+            done
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
