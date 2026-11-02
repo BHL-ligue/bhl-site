@@ -18,13 +18,13 @@ async function bhlCurrentOfficialStats(player,id){
  if(entry?.status!=='confirmed'||!Number(entry.nhlId))return null;
  const nhlId=Number(entry.nhlId),goalie=!!player.goalie;
  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
- const team=String(profile.currentTeamAbbrev||player.nhlTeam||'').toUpperCase();
+ const team=''; // Aggregate NHL season totals across trades.
  const season='20262027';
  const result=await historicalFantasy(nhlId,season,goalie,true,team);
  const totals=(profile.seasonTotals||[]).filter(x=>String(x.season)===season&&String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2);
- const gp=Math.max(0,...totals.map(x=>Number(x.gamesPlayed||0)));
+ const gp=totals.reduce((sum,x)=>sum+Number(x.gamesPlayed||0),0);
  if(result.fpts===null||!gp)return null;
- return {stats:{...player.stats,...result.v,GP:gp,FPts:Math.round(result.fpts*100)/100,'FP/G':Math.round(result.fpts/gp*100)/100},nhlTeam:team,goalie};
+ return {stats:{...result.v,GP:gp,FPts:Math.round(result.fpts*100)/100,'FP/G':Math.round(result.fpts/gp*100)/100},nhlTeam:String(profile.currentTeamAbbrev||player.nhlTeam||''),goalie};
 }
 function table(player,data){
  const s=player.stats;
