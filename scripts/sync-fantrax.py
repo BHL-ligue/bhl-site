@@ -30,7 +30,7 @@ def fetch_roster_stats(team_id, period):
         "uiv": 3, "refUrl": (
             f"https://www.fantrax.com/fantasy/league/{LEAGUE}/team/roster;"
             f"reload=1;period={period};teamId={team_id}"
-        ), "dt": 0, "at": 0, "av": "0.0", "tz": "UTC"
+        ), "dt": 0, "at": 0, "av": "0.0", "tz": "UTC", "v": "186.1.9"
     }
     request = urllib.request.Request(
         f"https://www.fantrax.com/fxpa/req?leagueId={LEAGUE}",
@@ -42,7 +42,13 @@ def fetch_roster_stats(team_id, period):
     )
     with urllib.request.urlopen(request, timeout=18) as response:
         data = json.load(response)
-    return ((data.get("responses") or [{}])[0].get("data") or {}).get("tables") or []
+    error = data.get("pageError") or {}
+    if error.get("code"):
+        raise ValueError("Fantrax " + str(error.get("code")) + ": " + str(error.get("text", ""))[:160])
+    responses = data.get("responses") or []
+    if not responses:
+        raise ValueError("Fantrax returned no roster responses")
+    return (responses[0].get("data") or {}).get("tables") or []
 
 
 def parse_roster_stats(tables):
