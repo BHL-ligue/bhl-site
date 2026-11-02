@@ -474,11 +474,18 @@ const bhlTeamKey=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,''
 let bhlRosterLookupRequest;
 function bhlRosterLookup(){
  return bhlRosterLookupRequest||(bhlRosterLookupRequest=fetch('data/fantrax.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Alignements BHL indisponibles');return r.json()}).then(data=>{
-  const map=new Map();
+  const byId=new Map(),byName=new Map(),ambiguous=new Set();
   for(const team of data.teams||[])for(const player of team.players||[]){
-   const key=norm(player.name);if(key)map.set(key,team.name);
+   const id=String(player.id||'');
+   if(id)byId.set(id,team.name);
+   const key=norm(player.name);
+   if(key){
+    if(byName.has(key))ambiguous.add(key);
+    else byName.set(key,team.name);
+   }
   }
-  return map;
+  for(const key of ambiguous)byName.delete(key);
+  return {byId,byName};
  }).catch(error=>{bhlRosterLookupRequest=null;throw error}));
 }
 function bhlApplyTeamIdentity(dialog,team){
@@ -556,7 +563,7 @@ function open(id,name,source){
  }).catch(error=>console.warn('Répertoire joueurs indisponible',error));
  bhlRosterLookup().then(rosters=>{
   if(!dialog.isConnected)return;
-  const current=String(id)==='048x9'?'Québec Nordiques':String(id)==='060v8'?'Montréal Canadiens':rosters.get(norm(name));
+  const current=(id&&rosters.byId.get(String(id)))||(!id&&rosters.byName.get(norm(name)));
   if(current)bhlApplyTeamIdentity(dialog,current);
   else if(selectedTeam)bhlApplyTeamIdentity(dialog,selectedTeam);
  }).catch(error=>console.warn('Identité BHL indisponible',error));
