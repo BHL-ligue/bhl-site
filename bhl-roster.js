@@ -44,6 +44,7 @@ return {render,photos,sort,compose};
 })();
 (()=>{if(typeof window.bhlNhlApplyPortraits==="function")return;
 const bhlNhlPortraitCache=new Map();
+const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817};
 function bhlNhlPlayerName(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
 }
@@ -58,6 +59,7 @@ function bhlNhlNamesMatch(name, candidate){
 async function bhlNhlJson(url){
   // Les deux passerelles sont des services publics; aucun secret ni donnée privée n'est envoyé.
   const proxies=['https://proxy.cors.dev/','https://corsproxy.io/?'];
+  try{const direct=await fetch(url,{signal:AbortSignal.timeout(9000)});if(direct.ok)return await direct.json()}catch(error){}
   for(const proxy of proxies){
     try{
       const target=proxy.includes('corsproxy.io')?proxy+encodeURIComponent(url):proxy+url;
@@ -85,7 +87,7 @@ async function bhlNhlPortrait(name){
         if(match)break;
       }catch(e){console.warn('NHL search variant failed',variant,e)}
     }
-    const id=Number(match?.playerId||match?.id);
+    const id=Number(bhlKnownNhlIds[key]||match?.playerId||match?.id);
     if(!Number.isInteger(id)||id<=0)return null;
     const profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
     const headshot=String(profile?.headshot||'');
@@ -105,9 +107,8 @@ function bhlNhlApplyPortraits(panel){
     if(!result||!card.isConnected)return;
     const photo=card.querySelector('.bhl-nhl-photo');
     const link=card.querySelector('.bhl-nhl-link');
-    if(!photo||!link)return;
-    link.href=result.profile;
-    link.hidden=false;
+    if(!photo)return;
+    if(link){link.href=result.profile;link.hidden=false;}
     const urls=[result.url,...(result.alternates||[])].filter(Boolean);
     if(urls.length){
       let index=0;
