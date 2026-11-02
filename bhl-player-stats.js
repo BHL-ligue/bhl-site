@@ -718,5 +718,19 @@ document.addEventListener('click',e=>{
 if(typeof window.bhlPortraitModal==='function'){
  window.bhlPortraitModal=function(name){open(null,name)};
 }
-window.BHLPlayerStats={open,table};
+window.BHLPlayerStats={open,table,officialStats:async(id,name)=>{
+ const data=await load();
+ const player=data.players?.[String(id||'').replaceAll('*','')]||Object.values(data.players||{}).find(p=>norm(p.name)===norm(name));
+ if(!player)return null;
+ const result=await bhlCurrentOfficialStats(player,String(id||'').replaceAll('*',''));
+ return result?{fpts:result.stats.FPts,fpg:result.stats['FP/G'],gp:result.stats.GP,nhlTeam:result.nhlTeam}:null;
+ },officialIdentity:async(id,name)=>{
+ const data=await load();
+ const player=data.players?.[String(id||'').replaceAll('*','')]||Object.values(data.players||{}).find(p=>norm(p.name)===norm(name));
+ if(!player)return null;
+ const nhlId=await bhlLookupOfficialId(player,String(id||'').replaceAll('*',''));
+ if(!nhlId)return null;
+ const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
+ return {nhlId,headshot:profile.headshot||'',nhlTeam:profile.currentTeamAbbrev||''};
+ }};
 })();
