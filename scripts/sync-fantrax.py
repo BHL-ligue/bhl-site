@@ -64,6 +64,14 @@ def build_snapshot(now=None):
             roster_period = following["number"]
     rosters = fetch("getTeamRosters", period=roster_period)
     standings = fetch("getStandings")
+    # On Mondays, Fantrax's API can still consider the previous scoring
+    # period active until 19:00. Show the new week's scores immediately.
+    from zoneinfo import ZoneInfo
+    today_montreal = now.astimezone(ZoneInfo("America/Toronto")).date()
+    if today_montreal.weekday() == 0:
+        following = next((p for p in info["scoringPeriods"] if p["number"] == scoring_period + 1), None)
+        if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == today_montreal:
+            scoring_period = following["number"]
     scores = fetch("getMatchupScores", period=scoring_period)
     print("Fantrax getStandings fields:", sorted(standings[0].keys()) if standings else [])
     if len(rosters.get("rosters", {})) != 16 or len(standings) != 16:
@@ -98,6 +106,34 @@ def build_snapshot(now=None):
                             "matchups": upcoming_scores["matchups"]}
         except Exception as error:
             print("Upcoming period unavailable:", error)
+    # Retain the three latest completed head-to-head results for each club.
+    # A period can contain several games for the same club.
+    previous_results = []
+    for previous in sorted((p for p in info["scoringPeriods"] if p["number"] < scoring_period), key=lambda p: p["number"], reverse=True):
+        if len(previous_results) >= 48:
+            break
+        try:
+            old_scores = fetch("getMatchupScores", period=previous["number"])
+            for m in reversed(old_scores.get("matchups", [])):
+                away, home = m.get("away", {}), m.get("home", {})
+                if away.get("score") is None or home.get("score") is None:
+                    continue
+                previous_results.append({"period": previous["number"],
+                    "away": {k: away[k] for k in ("teamId", "teamName", "score") if k in away},
+                    "home": {k: home[k] for k in ("teamId", "teamName", "score") if k in home}})
+        except Exception as error:
+            print("Previous results unavailable:", previous["number"], error)
+    # Cap the size while keeping up to three results per team.
+    results_by_team = {}
+    selected_results = []
+    for m in previous_results:
+        ids = (m["away"].get("teamId"), m["home"].get("teamId"))
+        if any(team_id and results_by_team.get(team_id, 0) < 3 for team_id in ids):
+            selected_results.append(m)
+            for team_id in ids:
+                if team_id:
+                    results_by_team[team_id] = results_by_team.get(team_id, 0) + 1
+    previous_results = selected_results
     player_info = fetch("getPlayerIds")
     if not isinstance(player_info, dict) or not player_info:
         raise ValueError("Missing player names")
@@ -122,6 +158,7 @@ def build_snapshot(now=None):
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
         "upcoming": upcoming,
+        "recentResults": previous_results,
         "standings": [{
             **{k: row[k] for k in (
                 "teamId", "teamName", "rank", "points", "totalPointsFor",
