@@ -3,7 +3,8 @@
 'use strict';
 const root=document.querySelector('[data-fantrax-team], [data-fantrax-home]');
 const rosterRoot=document.querySelector('[data-fantrax-roster]');
-if(!root&&!rosterRoot)return;
+const calendarRoot=document.querySelector('[data-fantrax-calendar]');
+if(!root&&!rosterRoot&&!calendarRoot)return;
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>v==null?'—':Number(v).toLocaleString('fr-CA',{maximumFractionDigits:2});
 const names={ANAHEIM:'Anaheim Mighty Ducks',ATLANTA:'Atlanta Thrashers',CALIFORNIE:'California Golden Seals',CHICAGO:'Chicago Blackhawks',CLEVELAND:'Boston Bruins',COLORADO:'Colorado Avalanche',DETROIT:'Detroit Red Wings',FLORIDA:'Florida Panthers',HARTFORD:'Hartford Whalers',MINNESOTA:'Minnesota North Stars',MONTREAL:'Montréal Canadiens',NASHVILLE:'Nashville Predators',NEWYORK:'New York Rangers',OTTAWA:'Ottawa Senators','QUÉBEC':'Québec Nordiques',TORONTO:'Toronto Maple Leafs'};
@@ -17,7 +18,7 @@ function stamp(){
 function game(m){return window.BHLScoreUI?BHLScoreUI.card(m):'<article class="bhl-ft-game">'+[m.away,m.home].map(t=>'<div><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</article>'}
 function draw(){
  if(!snapshot)return;
- if(!root){drawRoster();return}
+ if(!root){drawRoster();drawCalendar();return}
  if(root?.hasAttribute('data-fantrax-home')){
  root.innerHTML='<div class="bhl-ft-heading"><h2>Les scores de la semaine <small>· période '+esc(snapshot.scoringPeriod)+'</small></h2><a href="bhl-fantrax.html">Toute la saison →</a></div>'+stamp()+'<div class="bhl-ft-strip" tabindex="0" aria-label="Scores des affrontements; défilement horizontal">'+snapshot.matchups.map(game).join('')+'</div>';
  return;
@@ -35,10 +36,37 @@ function draw(){
  }).join('');
  root.innerHTML='<div class="bhl-ft-heading"><h3>Saison en cours · Fantrax</h3><a href="bhl-fantrax.html">Classement complet →</a></div>'+stamp()+
  '<div class="bhl-ft-team-id">'+(window.BHLScoreUI?BHLScoreUI.team(team.name):esc(team.name))+'</div><div class="bhl-ft-stats">'+[['Rang Fantrax',standing.rank==null?'—':'#'+standing.rank],['Fiche V-D-N',standing.points||'—'],['Points fantasy pour',fmt(standing.totalPointsFor)]].map(([label,value])=>'<div><span>'+label+'</span><strong>'+esc(value)+'</strong></div>').join('')+'</div>'+
- '<h4>Affrontements · période '+esc(snapshot.scoringPeriod)+'</h4><div class="bhl-ft-games">'+(games.map(game).join('')||'<p>Aucun affrontement pour cette période.</p>')+'</div>'+ 
- (recentHtml?'<div class="bhl-ft-recent"><h4>3 derniers résultats</h4>'+recentHtml+'</div>':'')+
+ ''+
  '';
- drawRoster();
+ drawRoster();drawCalendar();
+}
+function drawCalendar(){
+ if(!calendarRoot||!snapshot)return;
+ const team=snapshot.teams.find(t=>t.name===names[sheet]);
+ if(!team){calendarRoot.innerHTML='<p>Calendrier indisponible.</p>';return;}
+ const periods=(snapshot.schedule||[]).slice().sort((a,b)=>a.period-b.period);
+ if(!periods.length){calendarRoot.innerHTML='<p class="bhl-ft-note">Le calendrier complet sera disponible après la prochaine synchronisation Fantrax.</p>';return;}
+ const now=new Date();
+ const local=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).formatToParts(now);
+ const field=t=>local.find(p=>p.type===t)?.value;
+ const monday=new Date(Date.UTC(Number(field('year')),Number(field('month'))-1,Number(field('day'))));
+ const weekday=monday.getUTCDay();
+ monday.setUTCDate(monday.getUTCDate()-((weekday+6)%7));
+ const atLeastOne=Number(field('hour'))>=1;
+ const selectedPeriod=periods.find(p=>p.period===snapshot.scoringPeriod);
+ const defaultPeriod=(atLeastOne||weekday!==1)?selectedPeriod?.period:snapshot.scoringPeriod;
+ const oldValue=calendarRoot.querySelector('[data-calendar-period]')?.value;
+ const previous=oldValue===undefined?NaN:Number(oldValue);
+ const current=periods.some(p=>p.period===previous)?previous:(defaultPeriod||periods[0].period);
+ const date=v=>new Date(v).toLocaleDateString('fr-CA',{timeZone:'America/Toronto',month:'short',day:'numeric'});
+ calendarRoot.innerHTML='<div class="bhl-ft-heading"><h3>Calendrier · saison '+esc(snapshot.season||'')+'</h3><label class="bhl-ft-calendar-picker">Période <select data-calendar-period>'+periods.map(p=>'<option value="'+p.period+'"'+(p.period===current?' selected':'')+'>Période '+p.period+' · '+date(p.startDate)+' au '+date(p.endDate)+'</option>').join('')+'</select></label></div><div data-calendar-games></div>';
+ const show=()=>{
+  const p=periods.find(x=>x.period===Number(calendarRoot.querySelector('[data-calendar-period]').value));
+  const games=(p?.matchups||[]).filter(m=>m.away.teamId===team.id||m.home.teamId===team.id);
+  calendarRoot.querySelector('[data-calendar-games]').innerHTML='<p class="bhl-ft-note">'+(p?date(p.startDate)+' au '+date(p.endDate):'')+'</p><div class="bhl-ft-games">'+(games.map(game).join('')||'<p>Aucun affrontement disponible pour cette période.</p>')+'</div>';
+ };
+ calendarRoot.querySelector('[data-calendar-period]').addEventListener('change',show);
+ show();
 }
 function drawRoster(){
  if(!rosterRoot||!snapshot)return;
