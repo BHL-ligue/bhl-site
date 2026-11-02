@@ -14,7 +14,8 @@
   ['FLA','FLORIDA','florida-panthers.png','#c8102e','#041e42'],
   ['HAR','HARTFORD','hartford-whalers.png','#007a52','#12418d'],
   ['MIN','MINNESOTA','minnesota-northstars.png','#087d4a','#e1b747'],
-  ['MTL','MONTREAL','montreal-canadiens.png','#af1e2d','#192f6b'],
+  ['MTL','MONTREAL CANADIENS','montreal-canadiens.png','#af1e2d','#192f6b'],
+  ['MAR','MONTREAL MAROONS','montreal-maroons.png','#6d1f2a','#341119'],
   ['NSH','NASHVILLE','nashville-predators.png','#ffb81c','#041e42'],
   ['NYR','NEW YORK','newyork-rangers.png','#0038a8','#ce1126'],
   ['OTT','OTTAWA','ottawa-senators.png','#c52032','#181818'],
@@ -36,8 +37,34 @@
  })}
  function teamInfo(team){
   const n=norm(team);
-  const entry=TEAMS.find(t=>n===t[0]||n===t[1]||n.startsWith(t[1]+' ')||n.includes(' '+t[1]+' '));
-  return entry||[null,null,null,'#cc0000','#292d37'];
+  const aliases={
+   'MONTREAL':'MONTREAL CANADIENS','CANADIENS':'MONTREAL CANADIENS','CANADIENS DE MONTREAL':'MONTREAL CANADIENS',
+   'MAROONS':'MONTREAL MAROONS','MAROONS DE MONTREAL':'MONTREAL MAROONS',
+   'DETROIT RED WINGS':'DETROIT','RED WINGS DE DETROIT':'DETROIT',
+   'NORTH STARS DU MINNESOTA':'MINNESOTA','MINNESOTA NORTH STARS':'MINNESOTA',
+   'HARTFORD WHALERS':'HARTFORD','WHALERS DE HARTFORD':'HARTFORD',
+   'NASHVILLE PREDATORS':'NASHVILLE','PREDATORS DE NASHVILLE':'NASHVILLE',
+   'OTTAWA SENATORS':'OTTAWA','SENATEURS D OTTAWA':'OTTAWA',
+   'ANAHEIM MIGHTY DUCKS':'ANAHEIM','MIGHTY DUCKS D ANAHEIM':'ANAHEIM',
+   'NEW YORK RANGERS':'NEW YORK','RANGERS DE NEW YORK':'NEW YORK'
+  };
+  const canonical=aliases[n]||n;
+  return TEAMS.find(t=>canonical===t[0]||canonical===t[1])||[null,null,null,'#cc0000','#292d37'];
+ }
+ function cupCategory(role){
+  const r=norm(role);
+  if(/\\b(DG|DIRECTEUR GENERAL|DIRECTRICE GENERALE|GENERAL MANAGER|GERANT)\\b/.test(r))return 0;
+  if(/ESPOIR|PROSPECT|RELEVE|JUNIOR/.test(r))return 4;
+  if(/GARDIEN|GOALIE|GOALTENDER|\\b(G|GK)\\b/.test(r))return 3;
+  if(/DEFENSE|DEFENSEUR|DEFENC|\\b(D|LD|RD)\\b/.test(r))return 2;
+  if(/ATTAQU|AVANT|FORWARD|CENTRE|AILIER|\\b(C|LW|RW|F|AG|AD)\\b/.test(r))return 1;
+  return 5;
+ }
+ const CATEGORY_NAMES=['Direction générale','Attaquants','Défenseurs','Gardiens','Espoirs','Autres membres'];
+ function seasonEndYear(season){
+  const m=String(season).match(/(20\\d{2})\\s*[-–/]\\s*(\\d{2,4})/);
+  if(m){const y=Number(m[2]);return String(y<100?Math.floor(Number(m[1])/100)*100+y:y)}
+  const years=String(season).match(/20\\d{2}/g);return years?years.at(-1):'';
  }
  function render(rows){
   const grouped=new Map();
@@ -54,12 +81,18 @@
   const count=groups.reduce((n,g)=>n+g.people.length,0);
   $('cup-count').textContent=groups.length+' équipes championnes · '+count+' noms gravés sur la coupe';
   $('cup-blocks').innerHTML=groups.map(g=>{
-   const t=teamInfo(g.team),year=(g.season.match(/\d{4}/g)||[]).at(-1)||'';
-   const banner=BANNERS[year]&&BANNERS[year].toUpperCase().includes('BANNER'+(t[0]||'')+year)?BANNERS[year]:null;
-   const logo=t[2]?'<img class="cup-team-logo" src="logos/'+esc(t[2])+'" alt="" onerror="this.style.display=\'none\'">':'';
-   const art=banner?'<img class="cup-banner" src="banners/'+esc(banner)+'" alt="Bannière des champions '+esc(g.season)+'" onerror="this.style.display=\'none\'">':'<img class="cup-banner cup-banner-fallback" src="trophies/coupe-beliveau.png" alt="Coupe Béliveau" onerror="this.style.display=\'none\'">';
-   const people=g.people.map((p,i)=>'<tr><td class="cup-index">'+(i+1)+'</td><td>'+esc(p.player)+'</td><td class="cup-role">'+esc(p.role||'Joueur')+'</td></tr>').join('');
-   return '<article class="cup-block" style="--cup-primary:'+t[3]+';--cup-secondary:'+t[4]+'"><div class="cup-block-head">'+logo+'<div class="cup-team-title"><span>CHAMPIONS · '+esc(g.season)+'</span><h2>'+esc(g.team)+'</h2><small>'+g.people.length+' noms inscrits</small></div>'+art+'</div><div class="cup-table-wrap"><table class="cup-table"><thead><tr><th>#</th><th>Nom sur la coupe</th><th>Rôle</th></tr></thead><tbody>'+people+'</tbody></table></div></article>';
+   const t=teamInfo(g.team),year=seasonEndYear(g.season);
+   // Banners use the same championship assets as the team overview.
+   const banner=BANNERS[year]||null;
+   const logo=t[2]?'<img class="cup-team-logo" src="logos/'+esc(t[2])+'" alt="" onerror="this.style.display=\\'none\\'">':'';
+   const art=banner?'<img class="cup-banner" src="banners/'+esc(banner)+'" alt="Bannière des champions '+esc(g.season)+'" onerror="this.style.display=\\'none\\'">':'';
+   const byCategory=new Map();
+   for(const person of g.people){const category=cupCategory(person.role);if(!byCategory.has(category))byCategory.set(category,[]);byCategory.get(category).push(person)}
+   const people=[...byCategory.keys()].sort((a,b)=>a-b).map(category=>{
+    const entries=byCategory.get(category).sort((a,b)=>a.player.localeCompare(b.player,'fr'));
+    return '<section class="cup-roster-section"><div class="cup-roster-title"><span>'+esc(CATEGORY_NAMES[category])+'</span><small>'+entries.length+'</small></div><div class="cup-name-grid">'+entries.map(p=>'<div class="cup-name-item"><span class="cup-name-mark"></span><strong>'+esc(p.player)+'</strong></div>').join('')+'</div></section>';
+   }).join('');
+   return '<article class="cup-block" style="--cup-primary:'+t[3]+';--cup-secondary:'+t[4]+'"><div class="cup-block-head">'+logo+'<div class="cup-team-title"><span>CHAMPIONS · '+esc(g.season)+'</span><h2>'+esc(g.team)+'</h2><small>'+g.people.length+' noms inscrits</small></div>'+art+'</div><div class="cup-roster">'+people+'</div></article>';
   }).join('')||'<p class="empty">Aucun nom trouvé dans BELIVEAUCUPNAMES.</p>';
  }
  async function activate(){
