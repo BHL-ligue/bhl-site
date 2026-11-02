@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T19:14:18.345520+00:00",
+  "updatedAt": "2026-11-02T19:17:03.843094+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -4700,10 +4700,10 @@
   "playerStatsSync": {
     "status": "unavailable",
     "playerCount": 0,
-    "teamsAttempted": 16,
+    "teamsAttempted": 0,
     "teamsWithData": 0,
     "errors": {
-      "ValueError: Fantrax WARNING_NOT_LOGGED_IN: ": 16
+      "FANTRAX_COOKIE secret not configured": 1
     }
   },
   "upcoming": {
