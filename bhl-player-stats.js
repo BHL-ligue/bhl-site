@@ -55,7 +55,7 @@ function nhlSeasonTeamCode(season){
  return nhlTeamCodes[value.toLowerCase()]||'';
 }
 async function nhlSeasonReport(type,report,id,season,team){
- const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=false&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
+ const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
  const data=await nhlJson(url),rows=data.data||[];
  if(!rows.length)throw Error('Rapport '+report+' absent');
  if(team){const requested=String(team).toUpperCase();const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};const accepted=aliases[requested]||[requested];const selected=rows.find(x=>accepted.includes(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim().toUpperCase()));if(!selected)throw Error('Statistiques '+report+' indisponibles pour '+requested);return selected;}
@@ -138,13 +138,13 @@ async function historicNhl(name,target){
     const i=cursor++,row=rows[i],season=seasons[i],gp=Number(season.gamesPlayed);
     try{
      const teamCode=nhlSeasonTeamCode(season);
-     if(!teamCode){throw Error('Code équipe absent : calcul par équipe impossible')}
+     if(!teamCode){throw Error('Code équipe absent : '+JSON.stringify({teamAbbrev:season.teamAbbrev,teamName:season.teamName}))}
      const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center,teamCode);
      if(!row.isConnected)continue;
      row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
      keys.forEach((key,j)=>row.cells[5+j].textContent=v[key]===null?'N/D':fmt(v[key]));
-    }catch(e){if(row.isConnected){for(let j=2;j<row.cells.length;j++)if(j!==4)row.cells[j].textContent='N/D';row.title=e.message}}
+    }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';const base=[season.goals,season.assists,season.shots];for(let j=0;j<base.length;j++)if(base[j]!==undefined&&base[j]!==null)row.cells[5+j].textContent=fmt(base[j]);for(let j=8;j<row.cells.length;j++)row.cells[j].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail)}}
    }
   }
   await Promise.all(Array.from({length:Math.min(3,seasons.length)},worker));
