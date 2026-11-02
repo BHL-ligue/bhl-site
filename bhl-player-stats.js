@@ -538,13 +538,26 @@ async function bhlResolveUniqueDirectoryId(name,source){
  }
  return null;
 }
+function openUnresolvedPlayer(name,source){
+ // Preserve access to historical players, but do not guess a Fantrax ID.
+ const previous=document.querySelector('.bhl-player-dialog');
+ if(previous)previous.close();
+ const dialog=document.createElement('dialog');
+ dialog.className='bhl-player-dialog';
+ dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer">×</button><div class="bhl-player-hero"><div class="bhl-player-hero-copy"><p>IDENTITÉ À CONFIRMER</p><h3></h3><p>Plusieurs joueurs peuvent porter ce nom, ou ce joueur ne figure pas encore dans le répertoire. Aucune identité LNH ou BHL n’a été attribuée automatiquement.</p></div></div>';
+ dialog.querySelector('h3').textContent=name;
+ dialog.querySelector('button').onclick=()=>dialog.close();
+ dialog.addEventListener('close',()=>dialog.remove(),{once:true});
+ document.body.append(dialog);dialog.showModal();
+}
 function open(id,name,source){
  id=bhlResolvePlayerId(id,name,source);
  if(!id){
   bhlResolveUniqueDirectoryId(name,source).then(resolved=>{
    if(resolved)open(resolved,name,source);
-   else console.warn('Identité Fantrax ambiguë ou introuvable :',name);
-  }).catch(error=>console.warn('Répertoire d’identités indisponible',error));
+   else openUnresolvedPlayer(name,source);
+  }).catch(()=>openUnresolvedPlayer(name,source));
+  return;
  }
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
