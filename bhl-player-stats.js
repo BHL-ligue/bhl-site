@@ -138,7 +138,7 @@ async function historicNhl(name,target){
  target.textContent='Chargement de toutes les saisons LNH en carrière…';
  const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
  try{
-  const result=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
+  const result=bhlResolvedNhlId(name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
   const players=Array.isArray(result)?result:(result.data||[]);
   const match=players.find(p=>normalized(p.name||p.fullName||p.playerName)===normalized(name)||normalized(String(p.name||'').split(',').reverse().join(' '))===normalized(name));
   const id=Number(bhlResolvedNhlId(name)||match?.playerId||match?.id);
@@ -232,7 +232,7 @@ async function populatePlayerBio(dialog,id,name){
   if(player?.position&&pos?.isConnected)pos.textContent='Position : '+player.position;
  }catch(e){}
  try{
-  const query=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
+  const query=bhlResolvedNhlId(name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
   const players=Array.isArray(query)?query:(query.data||[]);
   const found=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name)||norm(String(p.name||'').split(',').reverse().join(' '))===norm(name));
   const nhlId=Number(bhlResolvedNhlId(name)||found?.playerId||found?.id);if(!nhlId)return;
