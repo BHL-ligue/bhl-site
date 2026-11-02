@@ -209,16 +209,48 @@ function addSections(dialog,name){
  select(active);
 }
 
+function formatNhlHeight(inches){
+ const n=Number(inches);if(!Number.isFinite(n)||n<40||n>90)return '';
+ return Math.floor(n/12)+"'"+String(n%12).padStart(2,'0')+'″';
+}
+async function populatePlayerBio(dialog,id,name){
+ const pos=dialog.querySelector('.bhl-player-position'),size=dialog.querySelector('.bhl-player-size');
+ try{
+  const data=await load();
+  const player=(id&&data.players[id])||Object.values(data.players).find(p=>norm(p.name)===norm(name));
+  if(player?.position&&pos?.isConnected)pos.textContent='Position : '+player.position;
+ }catch(e){}
+ try{
+  const query=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
+  const players=Array.isArray(query)?query:(query.data||[]);
+  const found=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name)||norm(String(p.name||'').split(',').reverse().join(' '))===norm(name));
+  const nhlId=Number(found?.playerId||found?.id);if(!nhlId)return;
+  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
+  if(!dialog.isConnected)return;
+  const position=profile.position||profile.positionCode;
+  if(position&&!pos.textContent.trim())pos.textContent='Position : '+position;
+  const height=formatNhlHeight(profile.heightInInches);
+  const weight=Number(profile.weightInPounds);
+  const parts=[height,Number.isFinite(weight)&&weight>0?weight+' lb':''].filter(Boolean);
+  if(parts.length)size.textContent=parts.join(' · ');
+ }catch(e){}
+}
 function open(id,name,source){
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
- dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
+ dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-position"></div><div class="bhl-player-size"></div><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
  document.body.append(dialog);dialog.showModal();
  // Show the BHL team's identity only when the originating roster/team is known.
  const origin=source?.closest?.('[data-team-name],[data-bhl-team],.bhl-lineup-card,.bhl-roster-card');
  const activeChip=document.querySelector('.teamchip.active');
  const logo=origin?.querySelector?.('.teamlogo')||activeChip?.querySelector?.('.teamlogo');
  const identity=dialog.querySelector('.bhl-player-team-identity');
+ const selectedTeam=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.textContent?.trim()||'';
+ if(selectedTeam&&typeof window.teamColor==='function'){
+  const color=window.teamColor(selectedTeam);
+  if(/^#[0-9a-f]{6}$/i.test(color))dialog.style.setProperty('--profile-accent',color);
+ }
+ populatePlayerBio(dialog,id,name);
  if(logo?.getAttribute('src')){
   const image=identity.querySelector('img');image.src=logo.getAttribute('src');
   image.onerror=()=>{identity.hidden=true};
