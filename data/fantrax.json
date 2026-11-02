@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T17:57:12.698605+00:00",
+  "updatedAt": "2026-11-02T18:09:54.349706+00:00",
   "rosterPeriod": 5,
   "scoringPeriod": 5,
   "periodDates": {
@@ -3138,6 +3138,2248 @@
       ]
     }
   ],
+  "upcoming": {
+    "period": 6,
+    "periodDates": {
+      "number": 6,
+      "endDate": "2026-11-09T19:59:59.0-0500",
+      "startDate": "2026-11-02T19:00:00.0-0500"
+    },
+    "matchups": [
+      {
+        "away": {
+          "teamName": "Chicago Blackhawks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "mmvzhj4amo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Nashville Predators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "adfljh3wmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Québec Nordiques",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "69yb2d10mo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Detroit Red Wings",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "fdy3gp6lmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "New York Rangers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "l9ssazuemo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Montréal Canadiens",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "jbmeb32tmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Florida Panthers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "3fyp69fcmo2tig2f"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Anaheim Mighty Ducks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "bvm8qt4omo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "California Golden Seals",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "gqpb7szpmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Ottawa Senators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "pelw39b7mo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Boston Bruins",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "uzhvniysmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Toronto Maple Leafs",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "4fmu58uhmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Minnesota North Stars",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "1bn2dvarmo2tig2f"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Atlanta Thrashers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "p7f42l5emo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Colorado Avalanche",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "b2lquor7mo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Hartford Whalers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "kplo9zwcmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Chicago Blackhawks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "mmvzhj4amo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Detroit Red Wings",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "fdy3gp6lmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Nashville Predators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "adfljh3wmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Montréal Canadiens",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "jbmeb32tmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Québec Nordiques",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "69yb2d10mo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Anaheim Mighty Ducks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "bvm8qt4omo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "New York Rangers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "l9ssazuemo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Ottawa Senators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "pelw39b7mo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Florida Panthers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "3fyp69fcmo2tig2f"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Toronto Maple Leafs",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "4fmu58uhmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "California Golden Seals",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "gqpb7szpmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Atlanta Thrashers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "p7f42l5emo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Boston Bruins",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "uzhvniysmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Hartford Whalers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "kplo9zwcmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Minnesota North Stars",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "1bn2dvarmo2tig2f"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Colorado Avalanche",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "b2lquor7mo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Chicago Blackhawks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "mmvzhj4amo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Montréal Canadiens",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "jbmeb32tmo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Detroit Red Wings",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "fdy3gp6lmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Anaheim Mighty Ducks",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "bvm8qt4omo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Nashville Predators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "adfljh3wmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Ottawa Senators",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "pelw39b7mo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Québec Nordiques",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "69yb2d10mo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Toronto Maple Leafs",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "4fmu58uhmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "New York Rangers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "l9ssazuemo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Atlanta Thrashers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "p7f42l5emo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Florida Panthers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "3fyp69fcmo2tig2f"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Hartford Whalers",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "kplo9zwcmo2tig2f"
+        }
+      },
+      {
+        "away": {
+          "teamName": "California Golden Seals",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "gqpb7szpmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Colorado Avalanche",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "b2lquor7mo2tig2e"
+        }
+      },
+      {
+        "away": {
+          "teamName": "Boston Bruins",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "uzhvniysmo2tig2e"
+        },
+        "categories": [
+          {
+            "away": {},
+            "name": "Goals",
+            "shortName": "G",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Assists",
+            "shortName": "A",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shots on Goal",
+            "shortName": "SOG",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Hits",
+            "shortName": "Hit",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Takeaways",
+            "shortName": "Tk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Blocks",
+            "shortName": "Blk",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Faceoffs Won",
+            "shortName": "FOW",
+            "group": "Skaters",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Wins (Goalies only)",
+            "shortName": "W",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Shutouts",
+            "shortName": "SHO",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Goals Against",
+            "shortName": "GA",
+            "group": "Goalies",
+            "home": {}
+          },
+          {
+            "away": {},
+            "name": "Saves",
+            "shortName": "SV",
+            "group": "Goalies",
+            "home": {}
+          }
+        ],
+        "home": {
+          "teamName": "Minnesota North Stars",
+          "score": 0.0,
+          "gamesPlayed": 0,
+          "teamId": "1bn2dvarmo2tig2f"
+        }
+      }
+    ]
+  },
   "standings": [
     {
       "teamId": "b2lquor7mo2tig2e",
