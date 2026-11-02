@@ -332,8 +332,8 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .bhl-portrait-hero h3{font-size:25px;margin:10px 0}
 .bhl-portrait-profile{color:#ad1728;font-weight:750;font-size:13px}
 .bhl-portrait-details{padding:16px 24px 22px;color:#536174;font-size:13px}
-</style></head><body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
+</style><link rel="stylesheet" href="bhl-navigation.css?v=1"></head><body>
+<div id="bhl-global-nav"></div>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div></div>
@@ -952,4 +952,4 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{cur
 })();
 </script>
 
-<script src="bhl-trades.js?v=player-history-20261101"></script></body></html>
+<script src="bhl-trades.js?v=player-history-20261101"></script><script src="bhl-navigation.js?v=1" defer></script></body></html>
