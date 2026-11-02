@@ -31,8 +31,8 @@ function draw(){
  const recentHtml=recent.map(m=>{const own=m.away.teamId===team.id?m.away:m.home;const opponent=m.away.teamId===team.id?m.home:m.away;const result=Number(own.score)>Number(opponent.score)?'V':Number(own.score)<Number(opponent.score)?'D':'N';return '<div class="bhl-ft-recent-item"><span class="bhl-ft-result bhl-ft-result-'+result+'">'+result+'</span><span class="bhl-ft-recent-opponent">'+(window.BHLScoreUI?BHLScoreUI.team(opponent.teamName):esc(opponent.teamName))+'</span><strong>'+fmt(own.score)+' – '+fmt(opponent.score)+'</strong><small>P'+esc(m.period)+'</small></div>';}).join('');
  root.innerHTML='<div class="bhl-ft-heading"><h3>Saison en cours · Fantrax</h3><a href="bhl-fantrax.html">Classement complet →</a></div>'+stamp()+
  '<div class="bhl-ft-team-id">'+(window.BHLScoreUI?BHLScoreUI.team(team.name):esc(team.name))+'</div><div class="bhl-ft-stats">'+[['Rang Fantrax',standing.rank==null?'—':'#'+standing.rank],['Fiche V-D-N',standing.points||'—'],['Points fantasy pour',fmt(standing.totalPointsFor)]].map(([label,value])=>'<div><span>'+label+'</span><strong>'+esc(value)+'</strong></div>').join('')+'</div>'+
- ''+
- '';
+ '<h4>Affrontements · période '+esc(snapshot.scoringPeriod)+'</h4><div class="bhl-ft-games">'+(games.map(game).join('')||'<p>Aucun affrontement pour cette période.</p>')+'</div>'+
+ (recentHtml?'<div class="bhl-ft-recent"><h4>3 derniers résultats</h4>'+recentHtml+'</div>':'');
  drawRoster();drawCalendar();
 }
 function drawCalendar(){
