@@ -686,49 +686,67 @@ function leadershipDate(value){
   return Number.isNaN(date.getTime())?String(value):date.toLocaleDateString('fr-CA',{year:'numeric',month:'long',day:'numeric'});
 }
 
-/* Portraits NHL : recherche par nom exact, puis photo de la fiche NHL. */
+/* Photos officielles NHL : les API NHL bloquent souvent les requêtes CORS directes. */
 const bhlNhlPortraitCache=new Map();
 function bhlNhlPlayerName(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+}
+function bhlNhlNamesMatch(name, candidate){
+  const normalized=bhlNhlPlayerName(candidate);
+  const target=bhlNhlPlayerName(name);
+  if(normalized===target)return true;
+  const pieces=String(candidate||'').split(',');
+  if(pieces.length===2&&bhlNhlPlayerName(pieces[1]+' '+pieces[0])===target)return true;
+  return false;
+}
+async function bhlNhlJson(url){
+  // Les deux passerelles sont des services publics; aucun secret ni donnée privée n'est envoyé.
+  const proxies=['https://proxy.cors.dev/','https://corsproxy.io/?'];
+  for(const proxy of proxies){
+    try{
+      const target=proxy.includes('corsproxy.io')?proxy+encodeURIComponent(url):proxy+url;
+      const response=await fetch(target,{signal:AbortSignal.timeout(11000)});
+      if(response.ok)return await response.json();
+    }catch(error){console.warn('NHL photo source temporarily unavailable',error);}
+  }
+  throw Error('Service de recherche NHL temporairement indisponible');
 }
 async function bhlNhlPortrait(name){
   const key=bhlNhlPlayerName(name);
   if(!key)return null;
   if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
   const request=(async()=>{
-    const searchUrl='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=20&q='+encodeURIComponent(name);
-    const response=await fetch(searchUrl,{mode:'cors'});
-    if(!response.ok)throw Error('Recherche NHL indisponible');
-    const result=await response.json();
-    const matches=Array.isArray(result)?result:(result?.data||[]);
-    const match=matches.find(p=>bhlNhlPlayerName(p.name||p.fullName||p.playerName)===key);
-    const playerId=Number(match?.playerId||match?.id);
-    if(!Number.isInteger(playerId)||playerId<=0)return null;
-    const profileResponse=await fetch('https://api-web.nhle.com/v1/player/'+playerId+'/landing',{mode:'cors'});
-    if(!profileResponse.ok)return null;
-    const profile=await profileResponse.json();
+    const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=50&q='+encodeURIComponent(name);
+    const result=await bhlNhlJson(url);
+    const matches=Array.isArray(result)?result:(Array.isArray(result?.data)?result.data:[]);
+    const match=matches.find(p=>bhlNhlNamesMatch(name,p.name||p.fullName||p.playerName));
+    const id=Number(match?.playerId||match?.id);
+    if(!Number.isInteger(id)||id<=0)return null;
+    const profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
     const headshot=String(profile?.headshot||'');
-    if(!headshot.startsWith('https://assets.nhle.com/'))return null;
-    const slug=String(profile?.playerSlug||'').replace(/[^a-z0-9-]/gi,'');
-    return {url:headshot,profile:'https://www.nhl.com/player/'+(slug?slug+'-':'')+playerId};
-  })().catch(()=>null);
+    const photo=headshot.startsWith('https://assets.nhle.com/')?headshot:null;
+    return {url:photo,profile:'https://www.nhl.com/player/'+id};
+  })().catch(error=>{console.warn('Photo NHL non trouvée pour '+name,error);return null;});
   bhlNhlPortraitCache.set(key,request);
   return request;
 }
 function bhlNhlApplyPortraits(panel){
   panel.querySelectorAll('[data-bhl-nhl-name]').forEach(async card=>{
     const name=card.getAttribute('data-bhl-nhl-name');
+    if(!name)return;
     const result=await bhlNhlPortrait(name);
     if(!result||!card.isConnected)return;
     const photo=card.querySelector('.bhl-nhl-photo');
     const link=card.querySelector('.bhl-nhl-link');
     if(!photo||!link)return;
-    photo.src=result.url;
-    photo.alt='Photo officielle NHL de '+name;
-    photo.onload=()=>{photo.hidden=false;card.classList.add('bhl-has-portrait');};
-    photo.onerror=()=>{photo.hidden=true;card.classList.remove('bhl-has-portrait');};
     link.href=result.profile;
     link.hidden=false;
+    if(result.url){
+      photo.alt='Photo officielle NHL de '+name;
+      photo.onload=()=>{photo.hidden=false;card.classList.add('bhl-has-portrait');};
+      photo.onerror=()=>{photo.hidden=true;card.classList.remove('bhl-has-portrait');};
+      photo.src=result.url;
+    }
   });
 }
 
