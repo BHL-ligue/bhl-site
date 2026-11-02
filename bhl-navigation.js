@@ -1,7 +1,18 @@
 /* Navigation unique sur toutes les pages BHL */
 (function(){
 'use strict';
+function ensurePlayerProfile(){
+ const needsProfile=!document.querySelector('script[src^="bhl-player-stats.js"]');
+ if(!document.querySelector('link[href^="bhl-player-stats.css"]')){
+  const css=document.createElement('link');css.rel='stylesheet';css.href='bhl-player-stats.css?v=global3';document.head.append(css);
+ }
+ if(!document.querySelector('script[src^="bhl-trades.js"]')){
+  const trades=document.createElement('script');trades.src='bhl-trades.js?v=global3';document.head.append(trades);
+ }
+ if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=global3';document.head.append(script)}
+}
 function mount(){
+ ensurePlayerProfile();
  const root=document.getElementById('bhl-global-nav');if(!root)return;
  const links=[
   ['index.html','Actualités'],
