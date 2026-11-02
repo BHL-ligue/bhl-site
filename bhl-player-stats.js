@@ -285,16 +285,69 @@ function bhlTrophyRecords(rows){
  }
  return records;
 }
+let bhlCupPromise=null;
+function bhlCupRows(){
+ if(bhlCupPromise)return bhlCupPromise;
+ bhlCupPromise=new Promise((resolve,reject)=>{
+  const callback='bhlCup_'+Math.random().toString(36).slice(2);
+  const script=document.createElement('script');let finished=false;
+  const timer=setTimeout(()=>done(new Error('Délai dépassé')),16000);
+  function done(err,rows){if(finished)return;finished=true;clearTimeout(timer);delete window[callback];script.remove();err?reject(err):resolve(rows)}
+  window[callback]=result=>{
+   if(!result?.ok||!Array.isArray(result?.data?.rows))return done(new Error(result?.error||'Source BELIVEAUCUPNAMES non autorisée'));
+   done(null,result.data.rows);
+  };
+  script.onerror=()=>done(new Error('Source BELIVEAUCUPNAMES inaccessible'));
+  script.src=BHL_TROPHY_API+'?sheet=BELIVEAUCUPNAMES&callback='+callback;
+  document.head.append(script);
+ }).catch(error=>{bhlCupPromise=null;throw error});
+ return bhlCupPromise;
+}
+function bhlCupWinners(rows,name){
+ const key=bhlTrophyNameKey(name),seen=new Set(),result=[];
+ for(const row of rows.slice(1)){
+  if(!Array.isArray(row))continue;
+  const [season,team,player,role]=row.map(value=>String(value??'').trim());
+  if(!season||!team||bhlTrophyNameKey(player)!==key||/^(DG|DIRECTEUR GENERAL)$/.test(bhlTrophyNorm(role)))continue;
+  const id=bhlTrophyNameKey(season)+'|'+bhlTrophyNameKey(team);
+  if(seen.has(id))continue;seen.add(id);result.push({season,team});
+ }
+ return result.sort((a,b)=>b.season.localeCompare(a.season));
+}
+function bhlShowCupWinners(target,winners){
+ const heading=document.createElement('div');heading.className='bhl-honours-intro';
+ const title=document.createElement('div');title.className='bhl-honours-heading';title.textContent='Championnats · Coupe Béliveau';
+ const count=document.createElement('div');count.className='bhl-honours-count';count.textContent=winners.length+' titre'+(winners.length!==1?'s':'');
+ heading.append(title,count);target.append(heading);
+ if(!winners.length){const empty=document.createElement('p');empty.className='bhl-honours-empty';empty.textContent='Aucune Coupe Béliveau répertoriée pour ce joueur.';target.append(empty);return}
+ const grid=document.createElement('div');grid.className='bhl-honours-grid';
+ for(const win of winners){
+  const card=document.createElement('article');card.className='bhl-honour-card';
+  const art=document.createElement('div');art.className='bhl-honour-art';
+  const img=document.createElement('img');img.src='trophies/coupe-beliveau.png';img.alt='Coupe Béliveau';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='🏆'};art.append(img);
+  const info=document.createElement('div');info.className='bhl-honour-info';
+  const year=document.createElement('span');year.className='bhl-honour-season';year.textContent=win.season;
+  const trophy=document.createElement('strong');trophy.textContent='Champion de la Coupe Béliveau';
+  const team=document.createElement('small');team.textContent=win.team;
+  info.append(year,trophy,team);card.append(art,info);grid.append(card);
+ }
+ target.append(grid);
+}
+
 async function playerHonours(name,target){
  target.textContent='Recherche des honneurs dans le palmarès BHL…';
  try{
-  const rows=await bhlTrophyRows();
+  const [trophyData,cupData]=await Promise.allSettled([bhlTrophyRows(),bhlCupRows()]);
   if(!target.isConnected)return;
+  if(trophyData.status==='rejected'&&cupData.status==='rejected')throw Error('Les sources TROPHYLIST et BELIVEAUCUPNAMES sont indisponibles');
+  const rows=trophyData.status==='fulfilled'?trophyData.value:[];
+  target.replaceChildren();
+  if(cupData.status==='fulfilled')bhlShowCupWinners(target,bhlCupWinners(cupData.value,name));
+  else {const note=document.createElement('p');note.className='bhl-honours-empty';note.textContent='Championnats non disponibles : BELIVEAUCUPNAMES doit être autorisé dans Apps Script.';target.append(note)}
   const key=bhlTrophyNameKey(name);
   const matches=bhlTrophyRecords(rows).filter(r=>bhlTrophyNameKey(r.person)===key);
   const unique=[...new Map(matches.map(r=>[[bhlTrophyNameKey(r.trophy),r.season,r.team].join('|'),r])).values()]
    .sort((a,b)=>String(b.season).localeCompare(String(a.season)));
-  target.replaceChildren();
   const intro=document.createElement('div');intro.className='bhl-honours-intro';
   const title=document.createElement('div');title.className='bhl-honours-heading';title.textContent='Palmarès individuel';
   const summary=document.createElement('div');summary.className='bhl-honours-count';summary.textContent=unique.length+' honneur'+(unique.length>1?'s':'')+' BHL';
