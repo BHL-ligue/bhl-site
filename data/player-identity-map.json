@@ -1797,7 +1797,8 @@
       "aliases": [
         "Alex Carrier"
       ],
-      "status": "manually_mapped_pending_verification"
+      "status": "confirmed",
+      "verificationSource": "NHL.com official player profile"
     },
     "03bxl": {
       "fantraxName": "Trevor Moore",
@@ -2414,10 +2415,11 @@
       "bhlTeam": "Montréal Canadiens",
       "position": "D",
       "nhlTeam": "VAN",
-      "nhlId": null,
-      "nhlName": null,
+      "nhlId": 8483678,
+      "nhlName": "Elias Pettersson",
       "aliases": [],
-      "status": "unresolved"
+      "status": "confirmed",
+      "verificationSource": "NHL.com official player profile"
     },
     "03rf8": {
       "fantraxName": "Vince Dunn",
@@ -3047,7 +3049,8 @@
       "nhlId": 8480012,
       "nhlName": "Elias Pettersson",
       "aliases": [],
-      "status": "manually_mapped_pending_verification"
+      "status": "confirmed",
+      "verificationSource": "NHL.com official player profile"
     },
     "06bdr": {
       "fantraxName": "Roman Kantserov",
@@ -5047,9 +5050,11 @@
         "048x9"
       ]
     ],
-    "manuallyMappedPendingVerification": [
+    "manuallyMappedPendingVerification": [],
+    "confirmedNhlIds": [
       "03rgk",
-      "048x9"
+      "048x9",
+      "060v8"
     ]
   }
 }
