@@ -592,8 +592,14 @@ function open(id,name,source){
   if(entry?.bhlTeam)bhlApplyTeamIdentity(dialog,entry.bhlTeam);
   // Only manually reviewed mappings may override the NHL identity.
   if(entry?.nhlId&&entry.status==='confirmed'){
+   const nhlId=Number(entry.nhlId);
    const link=dialog.querySelector('.bhl-nhl-link');
-   if(link){link.href='https://www.nhl.com/player/'+entry.nhlId;link.hidden=false}
+   if(link){link.href='https://www.nhl.com/player/'+nhlId;link.hidden=false}
+   nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing').then(profile=>{
+    if(!dialog.isConnected)return;
+    const img=dialog.querySelector('.bhl-nhl-photo');
+    if(img&&profile.headshot){img.src=profile.headshot;img.hidden=false}
+   }).catch(()=>{});
   }
  }).catch(error=>console.warn('Répertoire joueurs indisponible',error));
  bhlRosterLookup().then(rosters=>{
