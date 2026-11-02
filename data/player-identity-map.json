@@ -912,10 +912,12 @@
       "bhlTeam": "Ottawa Senators",
       "position": "RW",
       "nhlTeam": "PIT",
-      "nhlId": null,
-      "nhlName": null,
-      "aliases": [],
-      "status": "unresolved",
+      "nhlId": 8485414,
+      "nhlName": "Ben Kindel",
+      "aliases": [
+        "Benjamin Kindel"
+      ],
+      "status": "confirmed",
       "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
@@ -2273,7 +2275,9 @@
       "nhlTeam": "NSH",
       "nhlId": null,
       "nhlName": null,
-      "aliases": [],
+      "aliases": [
+        "Cam Reid"
+      ],
       "status": "unresolved",
       "rosterStatus": "MINORS",
       "onCurrentRoster": true
@@ -4648,11 +4652,14 @@
       "fantraxName": "Phillip Tomasino",
       "bhlTeam": "Florida Panthers",
       "position": "RW",
-      "nhlTeam": null,
-      "nhlId": null,
-      "nhlName": null,
-      "aliases": [],
-      "status": "unresolved",
+      "nhlTeam": "OTT",
+      "nhlId": 8481577,
+      "nhlName": "Philip Tomasino",
+      "aliases": [
+        "Phillip Tomasino",
+        "Phil Tomasino"
+      ],
+      "status": "confirmed",
       "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
@@ -4913,10 +4920,12 @@
       "bhlTeam": "Hartford Whalers",
       "position": "RW",
       "nhlTeam": "NSH",
-      "nhlId": null,
-      "nhlName": null,
-      "aliases": [],
-      "status": "unresolved",
+      "nhlId": 8484993,
+      "nhlName": "Egor Surin",
+      "aliases": [
+        "Yegor Surin"
+      ],
+      "status": "confirmed",
       "rosterStatus": "MINORS",
       "onCurrentRoster": true
     },
