@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BHL — Saison Fantrax</title><link rel="stylesheet" href="bhl-navigation.css?v=1">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f3f5;color:#20252d;font:16px/1.5 Arial,sans-serif}main{max-width:1200px;margin:30px auto;padding:0 18px}h1{font-size:36px;margin-bottom:5px}h2{font-size:21px}.eyebrow{color:#c00;font-weight:bold;letter-spacing:.1em}.muted{color:#606975}.panel{background:white;border:1px solid #dfe3e8;border-radius:12px;padding:20px;margin:18px 0}.bar{display:flex;gap:14px;flex-wrap:wrap;align-items:end}label{display:block;font-weight:bold;font-size:14px}input,select{display:block;padding:11px;margin-top:6px;border:1px solid #bec5cd;border-radius:7px;font:inherit;max-width:100%}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{padding:12px;text-align:left;border-bottom:1px solid #e5e7eb}th{background:#f2f3f5}td.num{text-align:right;font-variant-numeric:tabular-nums}.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.game{padding:16px;border:1px solid #e0e3e7;border-radius:9px}.score{display:flex;justify-content:space-between;gap:12px;margin:7px 0}.score strong{color:#c00}.notice{padding:12px;background:#fff4d8;border-radius:8px}.error{color:#a00}.hidden{display:none}@media(max-width:600px){h1{font-size:29px}.panel{padding:13px}main{padding:0 10px}.bar>label{width:100%}.bar input,.bar select{width:100%}}
+</style></head><body><div id="bhl-global-nav"></div><main><div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE</div><h1>Saison Fantrax</h1><p class="muted">Classement, affrontements et effectifs de la saison en cours.</p><p id="sync" role="status">Chargement des données…</p><div id="content" class="hidden">
+<section class="panel"><h2>Classement de la saison</h2><p class="muted">Classement officiel Fantrax. Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
+<section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>
+<section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></div></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=v=>v==null?'—':Number(v).toLocaleString('fr-CA',{maximumFractionDigits:2});
+const date=v=>new Date(v).toLocaleDateString('fr-CA',{timeZone:'America/Toronto'});
+const statuses={ACTIVE:'Actif',RESERVE:'Banc',INJURED_RESERVE:'Blessés',MINORS:'Mineures'};
+const norm=v=>String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let teams=[];
+function drawRoster(){
+ const q=norm($('search').value),team=$('team').value,status=$('status').value;
+ const rows=teams.filter(t=>!team||t.id===team).flatMap(t=>t.players.map(p=>({...p,teamName:t.name}))).filter(p=>(!status||p.status===status)&&norm(p.name).includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+ $('count').textContent=rows.length+' joueur(s)';
+ $('rosters').innerHTML='<table><thead><tr><th>Joueur</th><th>Organisation BHL</th><th>Position</th><th>Statut</th></tr></thead><tbody>'+rows.map(p=>'<tr><td>'+esc(p.name)+'</td><td>'+esc(p.teamName)+'</td><td>'+esc(p.position)+'</td><td>'+esc(statuses[p.status]||p.status)+'</td></tr>').join('')+(rows.length?'':'<tr><td colspan="4">Aucun joueur correspondant aux filtres.</td></tr>')+'</tbody></table>';
+}
+async function start(){
+ try{
+  const response=await fetch('data/fantrax.json',{cache:'no-store'});if(!response.ok)throw Error('Données temporairement indisponibles');
+  const data=await response.json();if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups))throw Error('Format des données invalide');
+  teams=data.teams;
+  const age=Date.now()-Date.parse(data.updatedAt);
+  $('sync').textContent='Dernière synchronisation : '+new Date(data.updatedAt).toLocaleString('fr-CA',{timeZone:'America/Toronto'})+' (heure de Montréal).'+(age>12*3600000?' Les données datent de plus de 12 heures; la dernière version disponible reste affichée.':'');
+  if(age>12*3600000)$('sync').className='notice';
+  $('standings').innerHTML='<table><thead><tr><th>Rang</th><th>Organisation</th><th>Fiche V-D-N</th><th>Points fantasy pour</th><th>% victoires</th></tr></thead><tbody>'+data.standings.slice().sort((a,b)=>a.rank-b.rank).map(t=>'<tr><td>'+fmt(t.rank)+'</td><td><strong>'+esc(t.teamName)+'</strong></td><td>'+esc(t.points)+'</td><td class="num">'+fmt(t.totalPointsFor)+'</td><td class="num">'+(t.winPercentage==null?'—':fmt(t.winPercentage*100)+' %')+'</td></tr>').join('')+'</tbody></table>';
+  $('period').textContent='Affrontements — période '+data.scoringPeriod;
+  $('dates').textContent=date(data.periodDates.startDate)+' au '+date(data.periodDates.endDate);
+  $('games').innerHTML=data.matchups.map(m=>'<div class="game">'+[m.away,m.home].map(t=>'<div class="score"><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</div>').join('')||'<p>Aucun affrontement pour cette période.</p>';
+  $('rosterPeriod').textContent='— période '+data.rosterPeriod;
+  $('team').replaceChildren(new Option('Toutes les organisations',''),...teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(t=>new Option(t.name,t.id)));
+  drawRoster();$('content').classList.remove('hidden');
+ }catch(error){$('sync').textContent='Impossible de charger les données Fantrax : '+error.message+'. Réessaie plus tard.';$('sync').className='error'}
+}
+['team','status'].forEach(id=>$(id).addEventListener('change',drawRoster));$('search').addEventListener('input',drawRoster);start();
+</script><script src="bhl-navigation.js?v=1" defer></script></body></html>

@@ -1,0 +1,48 @@
+name: Synchronisation Fantrax et publication
+on:
+  schedule:
+    - cron: '37 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync-fantrax.py'
+      - 'bhl-fantrax.html'
+      - '.github/workflows/fantrax.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: fantrax-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Récupérer les données Fantrax
+        run: python scripts/sync-fantrax.py
+      - name: Conserver le dernier instantané
+        run: |
+          git config user.name "BHL Fantrax Sync"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/fantrax.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiser les données Fantrax"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deployment
