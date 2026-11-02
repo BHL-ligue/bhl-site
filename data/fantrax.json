@@ -2,8 +2,8 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T18:13:18.354522+00:00",
-  "rosterPeriod": 5,
+  "updatedAt": "2026-11-02T18:20:57.096623+00:00",
+  "rosterPeriod": 6,
   "scoringPeriod": 5,
   "periodDates": {
     "number": 5,
@@ -241,7 +241,7 @@
           "id": "05yms",
           "name": "Sam Rinzel",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02wy3",
@@ -259,7 +259,7 @@
           "id": "004p4",
           "name": "Mikael Backlund",
           "position": "C",
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04amg",
@@ -283,7 +283,7 @@
           "id": "03duf",
           "name": "Dylan Larkin",
           "position": "C",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04kyn",
@@ -319,7 +319,7 @@
           "id": "02noq",
           "name": "Mike Matheson",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "0457b",
@@ -343,7 +343,7 @@
           "id": "05gtp",
           "name": "Dawson Mercer",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05gd8",
@@ -366,8 +366,8 @@
         {
           "id": "06axe",
           "name": "Gabe Perreault",
-          "position": "LW",
-          "status": "RESERVE"
+          "position": "RW",
+          "status": "ACTIVE"
         },
         {
           "id": "06rus",
@@ -421,7 +421,7 @@
           "id": "04qy5",
           "name": "Kirill Marchenko",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04znw",
@@ -433,7 +433,7 @@
           "id": "04qzc",
           "name": "Joel Hofer",
           "position": "G",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02unz",
@@ -445,7 +445,7 @@
           "id": "04mv3",
           "name": "Alex Newhook",
           "position": "RW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03kra",
@@ -481,7 +481,7 @@
           "id": "06snb",
           "name": "Benjamin Kindel",
           "position": "RW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02yjl",
@@ -493,7 +493,7 @@
           "id": "04f24",
           "name": "Jeremy Swayman",
           "position": "G",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "06mb0",
@@ -505,7 +505,7 @@
           "id": "05kua",
           "name": "Emil Heineman",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "01z7v",
@@ -619,7 +619,7 @@
           "id": "04lo0",
           "name": "Quinton Byfield",
           "position": "C",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05g42",
@@ -637,7 +637,7 @@
           "id": "038vb",
           "name": "Travis Konecny",
           "position": "RW",
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rab",
@@ -650,6 +650,12 @@
           "name": "Jonathan Lekkerimaki",
           "position": "RW",
           "status": "ACTIVE"
+        },
+        {
+          "id": "06snd",
+          "name": "Lynden Lakovic",
+          "position": "LW",
+          "status": "MINORS"
         },
         {
           "id": "06jhd",
@@ -673,7 +679,7 @@
           "id": "074v8",
           "name": "Alberts Smits",
           "position": "D",
-          "status": "MINORS"
+          "status": "RESERVE"
         },
         {
           "id": "070fm",
@@ -721,7 +727,7 @@
           "id": "06hcr",
           "name": "Igor Chernyshov",
           "position": "RW",
-          "status": "RESERVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "0529k",
@@ -757,29 +763,23 @@
           "id": "04yqp",
           "name": "Anton Lundell",
           "position": "C",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04o0g",
           "name": "Marco Rossi",
           "position": "C",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05rf2",
           "name": "Logan Stankoven",
-          "position": "RW",
+          "position": "C",
           "status": "ACTIVE"
         },
         {
           "id": "031pq",
           "name": "Andrew Copp",
-          "position": "C",
-          "status": "RESERVE"
-        },
-        {
-          "id": "04f0o",
-          "name": "Filip Chytil",
           "position": "C",
           "status": "RESERVE"
         },
@@ -800,12 +800,6 @@
           "name": "Jamie Benn",
           "position": "LW",
           "status": "RESERVE"
-        },
-        {
-          "id": "05m18",
-          "name": "Isak Rosen",
-          "position": "LW",
-          "status": "ACTIVE"
         },
         {
           "id": "06fzw",
@@ -895,7 +889,7 @@
           "id": "03yg4",
           "name": "Samuel Girard",
           "position": "D",
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03mn8",
@@ -922,6 +916,12 @@
           "status": "ACTIVE"
         },
         {
+          "id": "04r0e",
+          "name": "Pontus Holmberg",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
           "id": "04qyw",
           "name": "Linus Karlsson",
           "position": "RW",
@@ -937,13 +937,13 @@
           "id": "01c32",
           "name": "Brayden Schenn",
           "position": "LW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05g2s",
           "name": "Adam Wilsby",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02oak",
@@ -955,18 +955,12 @@
           "id": "05x9t",
           "name": "Tye Kartye",
           "position": "LW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02fzm",
           "name": "Filip Forsberg",
           "position": "LW",
-          "status": "ACTIVE"
-        },
-        {
-          "id": "02np6",
-          "name": "Jake McCabe",
-          "position": "D",
           "status": "ACTIVE"
         },
         {
@@ -985,7 +979,7 @@
           "id": "05af9",
           "name": "William Wallinder",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         }
       ]
     },
@@ -1009,7 +1003,7 @@
           "id": "02nqb",
           "name": "Colton Parayko",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "01f3e",
@@ -1020,14 +1014,14 @@
         {
           "id": "03yh8",
           "name": "Owen Tippett",
-          "position": "LW",
-          "status": "RESERVE"
+          "position": "RW",
+          "status": "ACTIVE"
         },
         {
           "id": "01sif",
           "name": "Tyler Seguin",
           "position": "C",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04f2d",
@@ -1039,7 +1033,7 @@
           "id": "02440",
           "name": "Anders Lee",
           "position": "LW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05tur",
@@ -1092,8 +1086,8 @@
         {
           "id": "051xf",
           "name": "Egor Chinakhov",
-          "position": "RW",
-          "status": "RESERVE"
+          "position": "LW",
+          "status": "ACTIVE"
         },
         {
           "id": "03jxy",
@@ -1105,13 +1099,13 @@
           "id": "0644f",
           "name": "Ryan Leonard",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04ye7",
           "name": "Cam York",
           "position": "D",
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "059e2",
@@ -1129,7 +1123,7 @@
           "id": "03bxl",
           "name": "Trevor Moore",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02o78",
@@ -1141,13 +1135,13 @@
           "id": "04gek",
           "name": "Sean Durzi",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "04f75",
           "name": "Noah Cates",
           "position": "C",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "059e5",
@@ -1159,13 +1153,13 @@
           "id": "067xd",
           "name": "T.J. Hughes",
           "position": "RW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rad",
           "name": "Thomas Chabot",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01zs1",
@@ -1426,12 +1420,6 @@
           "status": "ACTIVE"
         },
         {
-          "id": "05ogy",
-          "name": "Stephen Halliday",
-          "position": "C",
-          "status": "ACTIVE"
-        },
-        {
           "id": "06nkc",
           "name": "Jake OBrien",
           "position": "C",
@@ -1440,8 +1428,8 @@
         {
           "id": "05kbo",
           "name": "Marat Khusnutdinov",
-          "position": "LW",
-          "status": "ACTIVE"
+          "position": "C",
+          "status": "RESERVE"
         },
         {
           "id": "04qyv",
@@ -1489,7 +1477,13 @@
           "id": "05uao",
           "name": "Collin Graf",
           "position": "LW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qza",
+          "name": "Martin Pospisil",
+          "position": "C",
+          "status": "ACTIVE"
         },
         {
           "id": "06axz",
@@ -1501,13 +1495,13 @@
           "id": "023wa",
           "name": "Jared Spurgeon",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "060v8",
           "name": "Elias Pettersson",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rf8",
@@ -1657,13 +1651,13 @@
           "id": "061im",
           "name": "Michael Misa",
           "position": "C",
-          "status": "MINORS"
+          "status": "ACTIVE"
         },
         {
           "id": "04zj8",
           "name": "Bobby Brink",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "0644b",
@@ -1704,7 +1698,7 @@
         {
           "id": "04a9v",
           "name": "Morgan Geekie",
-          "position": "C",
+          "position": "RW",
           "status": "ACTIVE"
         },
         {
@@ -1718,12 +1712,6 @@
           "name": "Jakob Chychrun",
           "position": "D",
           "status": "ACTIVE"
-        },
-        {
-          "id": "04mq1",
-          "name": "Ilya Mikheyev",
-          "position": "RW",
-          "status": "RESERVE"
         },
         {
           "id": "06maz",
@@ -1813,7 +1801,7 @@
           "id": "06bmb",
           "name": "Zeev Buium",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03mn5",
@@ -1945,7 +1933,7 @@
           "id": "00qnu",
           "name": "Drew Doughty",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06rnr",
@@ -2005,7 +1993,7 @@
           "id": "04ln4",
           "name": "Kiefer Sherwood",
           "position": "RW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05gvo",
@@ -2131,7 +2119,7 @@
           "id": "0042t",
           "name": "Claude Giroux",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04mx6",
@@ -2194,6 +2182,12 @@
           "status": "ACTIVE"
         },
         {
+          "id": "051uw",
+          "name": "Judd Caulfield",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
           "id": "02nok",
           "name": "Tomas Hertl",
           "position": "LW",
@@ -2204,12 +2198,6 @@
           "name": "Jaccob Slavin",
           "position": "D",
           "status": "ACTIVE"
-        },
-        {
-          "id": "059mt",
-          "name": "Nicolas Daws",
-          "position": "G",
-          "status": "MINORS"
         },
         {
           "id": "05r2z",
@@ -2281,7 +2269,7 @@
           "id": "01ztp",
           "name": "Zach Hyman",
           "position": "RW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03w5s",
@@ -2293,24 +2281,24 @@
           "id": "05lud",
           "name": "Dylan Garand",
           "position": "G",
-          "status": "ACTIVE"
-        },
-        {
-          "id": "02wy6",
-          "name": "Andre Burakovsky",
-          "position": "RW",
           "status": "RESERVE"
         },
         {
           "id": "05oxs",
           "name": "Jakub Dobes",
           "position": "G",
-          "status": "RESERVE"
+          "status": "MINORS"
         },
         {
           "id": "02noe",
           "name": "Morgan Rielly",
           "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mkm",
+          "name": "Adin Hill",
+          "position": "G",
           "status": "ACTIVE"
         },
         {
@@ -2365,31 +2353,31 @@
           "id": "031p3",
           "name": "Carter Verhaeghe",
           "position": "LW",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05kub",
           "name": "Shakir Mukhamadullin",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "MINORS"
         },
         {
           "id": "05rb9",
           "name": "Conor Geekie",
           "position": "RW",
-          "status": "MINORS"
+          "status": "ACTIVE"
         },
         {
           "id": "051v4",
           "name": "Arturs Silovs",
           "position": "G",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02ybo",
           "name": "Rasmus Ristolainen",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "02un6",
@@ -2413,13 +2401,13 @@
           "id": "04yeb",
           "name": "Simon Holmstrom",
           "position": "LW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05tpa",
           "name": "Ville Koivunen",
           "position": "LW",
-          "status": "MINORS"
+          "status": "ACTIVE"
         },
         {
           "id": "06axb",
@@ -2437,7 +2425,7 @@
           "id": "024lv",
           "name": "Mattias Ekholm",
           "position": "D",
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "051tx",
@@ -2449,13 +2437,13 @@
           "id": "04f1z",
           "name": "Mikey Anderson",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05ym6",
           "name": "Liam Ohgren",
           "position": "LW",
-          "status": "RESERVE"
+          "status": "MINORS"
         },
         {
           "id": "02un5",
@@ -2485,19 +2473,19 @@
           "id": "05r3d",
           "name": "Josh Doan",
           "position": "LW",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "003tz",
           "name": "Brent Burns",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01ud1",
           "name": "Sergei Bobrovsky",
           "position": "G",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04qzk",
@@ -2520,14 +2508,14 @@
         {
           "id": "004cq",
           "name": "Alex Ovechkin",
-          "position": "RW",
-          "status": "ACTIVE"
+          "position": "LW",
+          "status": "RESERVE"
         },
         {
           "id": "06age",
           "name": "Sam Malinski",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "031v6",
@@ -2617,7 +2605,7 @@
           "id": "01c13",
           "name": "Victor Hedman",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "0644c",
@@ -2668,12 +2656,6 @@
           "status": "ACTIVE"
         },
         {
-          "id": "061jm",
-          "name": "Frederic Brunet",
-          "position": "D",
-          "status": "ACTIVE"
-        },
-        {
           "id": "01zvf",
           "name": "Mark Stone",
           "position": "RW",
@@ -2690,6 +2672,12 @@
           "name": "Jack Hughes",
           "position": "LW",
           "status": "ACTIVE"
+        },
+        {
+          "id": "02noo",
+          "name": "Mark Jankowski",
+          "position": "C",
+          "status": "RESERVE"
         },
         {
           "id": "04apb",
@@ -2776,6 +2764,12 @@
           "status": "MINORS"
         },
         {
+          "id": "06sds",
+          "name": "Tim Washe",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
           "id": "03ekl",
           "name": "Vladislav Gavrikov",
           "position": "D",
@@ -2792,12 +2786,6 @@
           "name": "Ivan Demidov",
           "position": "RW",
           "status": "INJURED_RESERVE"
-        },
-        {
-          "id": "01f3d",
-          "name": "Oliver Ekman-Larsson",
-          "position": "D",
-          "status": "RESERVE"
         },
         {
           "id": "03rmx",
@@ -2869,7 +2857,7 @@
           "id": "04zox",
           "name": "Kaedan Korczak",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03bfj",
@@ -2887,7 +2875,7 @@
           "id": "01gjn",
           "name": "Erik Haula",
           "position": "C",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03kng",
@@ -2914,6 +2902,12 @@
           "status": "ACTIVE"
         },
         {
+          "id": "02azg",
+          "name": "Jonas Brodin",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
           "id": "071wk",
           "name": "Elton Hermansson",
           "position": "RW",
@@ -2924,12 +2918,6 @@
           "name": "Jesper Wallstedt",
           "position": "G",
           "status": "ACTIVE"
-        },
-        {
-          "id": "04zp2",
-          "name": "Drew Helleson",
-          "position": "D",
-          "status": "RESERVE"
         },
         {
           "id": "06jhe",
@@ -2989,7 +2977,7 @@
           "id": "03c0c",
           "name": "Josh Manson",
           "position": "D",
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04zo3",
@@ -3025,7 +3013,7 @@
           "id": "06amv",
           "name": "Sam Dickinson",
           "position": "D",
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06ag2",
