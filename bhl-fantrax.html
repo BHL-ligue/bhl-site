@@ -6,7 +6,7 @@
 </style><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=score1"><link rel="stylesheet" href="bhl-player-stats.css?v=1"></head><body><div id="bhl-global-nav"></div><main><div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE</div><h1>Saison</h1><p class="muted">Classement, affrontements et effectifs de la saison en cours.</p><p id="sync" role="status">Chargement des données…</p><div id="content" class="hidden">
 <section class="panel"><h2>Classement · Standings Fantrax</h2><p class="muted">Classement synchronisé depuis Fantrax (Standings). Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
 <section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>
-<section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></div></main>
+<section class="panel" id="upcoming-panel" hidden><h2 id="upcoming-title">Prochains affrontements</h2><p id="upcoming-dates" class="muted"></p><div id="upcoming-games" class="games"></div></section><section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></div></main>
 <script src="bhl-score-ui.js?v=1"></script><script src="data/fantrax-player-stats.js?v=20261102"></script><script src="bhl-roster.js?v=playerstats1"></script>
 <script>
 'use strict';
@@ -47,6 +47,12 @@ async function start(){
   $('period').textContent='Affrontements — période '+data.scoringPeriod;
   $('dates').textContent=date(data.periodDates.startDate)+' au '+date(data.periodDates.endDate);
   $('games').innerHTML=data.matchups.map(m=>window.BHLScoreUI?BHLScoreUI.card(m):'<div class="game">'+[m.away,m.home].map(t=>'<div class="score"><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</div>').join('')||'<p>Aucun affrontement pour cette période.</p>';
+  if(data.upcoming&&Array.isArray(data.upcoming.matchups)&&data.upcoming.matchups.length){
+    $('upcoming-panel').hidden=false;
+    $('upcoming-title').textContent='Prochains affrontements — période '+data.upcoming.period;
+    $('upcoming-dates').textContent=date(data.upcoming.periodDates.startDate)+' au '+date(data.upcoming.periodDates.endDate);
+    $('upcoming-games').innerHTML=data.upcoming.matchups.map(m=>window.BHLScoreUI?BHLScoreUI.card(m):'<div class="game">'+[m.away,m.home].map(t=>'<div class="score"><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</div>').join('');
+  }
   $('rosterPeriod').textContent='— période '+data.rosterPeriod;
   $('team').replaceChildren(new Option('Toutes les organisations',''),...teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(t=>new Option(t.name,t.id)));
   drawRoster();$('content').classList.remove('hidden');
