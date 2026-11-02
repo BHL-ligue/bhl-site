@@ -9,7 +9,7 @@ function ensurePlayerProfile(){
  if(!document.querySelector('script[src^="bhl-trades.js"]')){
   const trades=document.createElement('script');trades.src='bhl-trades.js?v=global3';document.head.append(trades);
  }
- if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=global3';document.head.append(script)}
+ if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=coyle-fix1';document.head.append(script)}
 }
 function mount(){
  ensurePlayerProfile();
