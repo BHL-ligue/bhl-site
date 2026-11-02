@@ -114,3 +114,21 @@
 /* Bio concise: same treatment as height and weight */
 .bhl-player-dialog .bhl-player-birth{display:block;margin-top:3px;font-size:12px;font-weight:650;color:#6b7280;line-height:1.4}
 @media(max-width:600px){.bhl-player-dialog .bhl-player-birth{font-size:10px;margin-top:2px}}
+
+
+/* Individual honours, sourced from the BHL trophy register */
+.bhl-player-dialog .bhl-honours-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 18px}
+.bhl-player-dialog .bhl-honours-heading{font-size:19px;font-weight:900;letter-spacing:-.025em;color:#1d2939}
+.bhl-player-dialog .bhl-honours-count{font-size:12px;font-weight:850;color:var(--team-color,#cc0000);background:#f4f6f8;border:1px solid #e0e4ea;border-radius:999px;padding:7px 12px}
+.bhl-player-dialog .bhl-honours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.bhl-player-dialog .bhl-honour-card{display:flex;gap:14px;align-items:center;min-width:0;padding:16px;background:linear-gradient(140deg,#fff,#f4f6f9);border:1px solid #dfe4eb;border-top:3px solid var(--team-color,#cc0000);border-radius:14px;box-shadow:0 4px 16px #1b29360c}
+.bhl-player-dialog .bhl-honour-art{display:grid;place-items:center;flex:0 0 76px;width:76px;height:86px;border-radius:11px;background:#fff;border:1px solid #e7e9ee;font-size:34px}
+.bhl-player-dialog .bhl-honour-art img{width:100%;height:100%;object-fit:contain;padding:7px}
+.bhl-player-dialog .bhl-honour-info{display:flex;flex-direction:column;gap:5px;min-width:0}
+.bhl-player-dialog .bhl-honour-season{font-size:11px;color:var(--team-color,#cc0000);font-weight:900;letter-spacing:.05em}
+.bhl-player-dialog .bhl-honour-info strong{font-size:15px;color:#1c293a;line-height:1.25}
+.bhl-player-dialog .bhl-honour-info small{font-size:12px;color:#66758a}
+.bhl-player-dialog .bhl-honours-empty{padding:26px 18px;text-align:center;color:#66758a;background:#f6f8fa;border:1px dashed #cdd6e0;border-radius:12px}
+.bhl-player-dialog .bhl-honours-source{font-size:11px;color:#758196;margin:17px 0 0}
+.bhl-player-dialog .bhl-honours-source a{color:var(--team-color,#cc0000);font-weight:800}
+@media(max-width:600px){.bhl-player-dialog .bhl-honours-grid{grid-template-columns:1fr;gap:10px}.bhl-player-dialog .bhl-honour-card{padding:11px}.bhl-player-dialog .bhl-honour-art{flex-basis:66px;width:66px;height:72px}.bhl-player-dialog .bhl-honour-info strong{font-size:14px}}
