@@ -91,6 +91,16 @@ async function bhlNhlPortrait(name){
     }
     const id=Number(bhlKnownNhlIds[key]||match?.playerId||match?.id);
     if(!Number.isInteger(id)||id<=0)return null;
+    if(bhlKnownNhlIds[key]){
+      const team={8476454:'EDM',8480817:'CAR',8481559:'NJD'}[id]||'NHL';
+      const urls=[
+       'https://assets.nhle.com/mugs/nhl/20262027/'+team+'/'+id+'.png',
+       'https://assets.nhle.com/mugs/nhl/20252026/'+team+'/'+id+'.png',
+       'https://assets.nhle.com/mugs/nhl/20252026/NHL/'+id+'.png',
+       'https://assets.nhle.com/mugs/nhl/20242025/NHL/'+id+'.png'
+      ];
+      return {url:urls[0],alternates:urls.slice(1),profile:'https://www.nhl.com/player/'+id};
+    }
     // A portrait must never depend on the availability of the player landing API.
     // For confirmed IDs, the NHL headshot endpoint is immediately usable.
     const knownTeam={8476454:'EDM',8480817:'CAR',8481559:'NJD'}[id];
