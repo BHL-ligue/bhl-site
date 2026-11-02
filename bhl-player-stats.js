@@ -12,15 +12,44 @@ const nhlAbbrev=v=>{
 const fmt=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
 let request;
 function load(){return request||(request=fetch('data/fantrax-player-details.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Statistiques indisponibles');return r.json()}).catch(e=>{request=null;throw e}))}
-async function bhlCurrentOfficialStats(player,id){
- const directory=await bhlIdentityDirectory();
+const bhlNhlLookupCache=new Map();
+async function bhlLookupOfficialId(player,id){
+ const directory=await bhlIdentityDirectory().catch(()=>({players:{}}));
  const entry=directory.players?.[String(id||'')];
- if(entry?.status!=='confirmed'||!Number(entry.nhlId))return null;
- const nhlId=Number(entry.nhlId),goalie=!!player.goalie;
+ if(entry?.status==='confirmed'&&Number(entry.nhlId))return Number(entry.nhlId);
+ const name=String(player.name||entry?.fantraxName||'').trim();
+ if(!name)return null;
+ const cacheKey=String(id||name);
+ if(!bhlNhlLookupCache.has(cacheKey)){
+  bhlNhlLookupCache.set(cacheKey,(async()=>{
+   const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name);
+   const results=await nhlJson(url);
+   const rows=Array.isArray(results)?results:(results?.data||[]);
+   const candidates=rows.filter(row=>{
+    const label=row.name||row.fullName||row.playerName||[row.firstName,row.lastName].filter(Boolean).join(' ');
+    return norm(label)===norm(name)&&Number(row.playerId||row.id)>0;
+   });
+   const unique=[...new Map(candidates.map(row=>[Number(row.playerId||row.id),row])).values()];
+   if(unique.length!==1)return null;
+   const nhlId=Number(unique[0].playerId||unique[0].id);
+   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
+   const full=[profile.firstName?.default,profile.lastName?.default].filter(Boolean).join(' ');
+   if(norm(full)!==norm(name))return null;
+   const expected=nhlAbbrev(entry?.nhlTeam||player.nhlTeam).toUpperCase();
+   const actual=String(profile.currentTeamAbbrev||'').toUpperCase();
+   if(expected&&actual&&expected!==actual)return null;
+   return nhlId;
+  })().catch(error=>{bhlNhlLookupCache.delete(cacheKey);throw error}));
+ }
+ return bhlNhlLookupCache.get(cacheKey);
+}
+async function bhlCurrentOfficialStats(player,id){
+ const nhlId=await bhlLookupOfficialId(player,id);
+ if(!nhlId)return null;
+ const goalie=!!player.goalie;
  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
- const team=''; // Aggregate NHL season totals across trades.
  const season='20262027';
- const result=await historicalFantasy(nhlId,season,goalie,true,team);
+ const result=await historicalFantasy(nhlId,season,goalie,true,'');
  const totals=(profile.seasonTotals||[]).filter(x=>String(x.season)===season&&String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2);
  const gp=totals.reduce((sum,x)=>sum+Number(x.gamesPlayed||0),0);
  if(result.fpts===null||!gp)return null;
