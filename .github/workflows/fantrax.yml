@@ -39,8 +39,18 @@ jobs:
           git add data/fantrax.json
           if ! git diff --cached --quiet; then
             git commit -m "Actualiser les données Fantrax"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # The scheduled run may overlap with another successful snapshot.
+            # Discard only the generated snapshot commit, rebase on the newest
+            # main and commit the latest snapshot again without a merge conflict.
+            cp data/fantrax.json /tmp/bhl-fantrax-latest.json
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/bhl-fantrax-latest.json data/fantrax.json
+            git add data/fantrax.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Actualiser les données Fantrax"
+              git push origin HEAD:main
+            fi
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
