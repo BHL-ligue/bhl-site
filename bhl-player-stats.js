@@ -402,7 +402,20 @@ async function populatePlayerBio(dialog,id,name){
  try{
   const data=await load();
   const player=(id&&data.players[id])||Object.values(data.players).find(p=>norm(p.name)===norm(name));
-  if(player?.position&&pos?.isConnected)pos.textContent='Position : '+player.position;
+  if(player?.position&&pos?.isConnected)pos.textContent='Position LNH : '+player.position;
+   try{
+    const response=await fetch('data/fantrax.json',{cache:'no-store'});
+    if(response.ok){
+     const live=await response.json();
+     const rosterPlayer=(live.teams||[]).flatMap(team=>team.players||[])
+      .find(p=>(id&&String(p.id)===String(id))||norm(p.name)===norm(name));
+     if(rosterPlayer&&pos?.isConnected&&dialog.isConnected){
+      const eligible=Array.isArray(rosterPlayer.eligiblePositions)&&rosterPlayer.eligiblePositions.length
+       ?rosterPlayer.eligiblePositions.join(', '):rosterPlayer.position;
+      if(eligible)pos.textContent='Position Fantrax : '+eligible;
+     }
+    }
+   }catch(error){console.warn('Position Fantrax indisponible',error)}
  }catch(e){}
  try{
   const query=bhlResolvedNhlId(name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
@@ -412,7 +425,7 @@ async function populatePlayerBio(dialog,id,name){
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
   if(!dialog.isConnected)return;
   const position=profile.position||profile.positionCode;
-  if(position&&!pos.textContent.trim())pos.textContent='Position : '+position;
+  if(position&&!pos.textContent.trim())pos.textContent='Position LNH : '+position;
   const height=formatNhlHeight(profile.heightInInches);
   const weight=Number(profile.weightInPounds);
   const parts=[height,Number.isFinite(weight)&&weight>0?weight+' lb':''].filter(Boolean);
