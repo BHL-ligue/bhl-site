@@ -41,6 +41,7 @@ function drawDirectory(){
  const rows=directory.filter(x=>norm([x.team_name,x.full_name,x.email,x.role].join(' ')).includes(q));
  $('#dgs').innerHTML='<table><thead><tr><th>Organisation</th><th>Responsable</th><th>Courriel</th><th>Rôle</th><th>Statut</th><th>Gestion</th></tr></thead><tbody>'+
  (rows.length?rows.map(x=>'<tr><td><strong>'+esc(x.team_name)+'</strong></td><td>'+esc(x.full_name||'—')+'</td><td>'+esc(x.email||'—')+'</td><td><span class="role-badge">'+esc(x.role==='admin'?'Administrateur':x.role==='dg'?'DG':x.role||'—')+'</span></td><td><span class="state-badge '+(x.assigned?'assigned':'')+'">'+(x.assigned?'Attribuée':'Disponible')+'</span></td><td>'+(x.user_id?'<button type="button" class="btn secondary" data-edit-user="'+esc(x.user_id)+'">Modifier</button>':'—')+'</td></tr>').join(''):'<tr><td colspan="6">Aucun résultat.</td></tr>')+'</tbody></table>';
+ document.querySelectorAll('[data-edit-user]').forEach(b=>b.onclick=()=>openDirectoryEditor(b.dataset.editUser));
 }
 async function dgs(){
  const [teamsResponse,profilesResponse]=await Promise.all([
