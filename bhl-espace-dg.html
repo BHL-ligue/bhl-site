@@ -21,19 +21,24 @@ import{SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY}from'./bhl-supabase.js';
 const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=s=>document.querySelector(s);
 const msg=(s,c='')=>{$('#status').textContent=s;$('#status').className='status '+c};
 let profile=null,teams=[];
+const pendingRequestInFlight=new Set();
 async function submitPendingRequest(user){
+ if(pendingRequestInFlight.has(user.id))return true;
+ pendingRequestInFlight.add(user.id);
+ try{
  const raw=localStorage.getItem('bhl_pending_dg_request');
  let req=null;
  if(raw){try{req=JSON.parse(raw)}catch(e){localStorage.removeItem('bhl_pending_dg_request')}}
  if(!req){const meta=user.user_metadata||{};if(meta.bhl_requested_team_id&&meta.full_name)req={full_name:meta.full_name,team_id:meta.bhl_requested_team_id}}
- const {data:existing,error:lookupError}=await db.from('bhl_account_requests').select('request_id,status').eq('user_id',user.id).maybeSingle();
+ const {data:existing,error:lookupError}=await db.from('bhl_account_requests').select('request_id,status').eq('user_id',user.id).limit(1);
  if(lookupError){msg('Impossible de vérifier la demande DG : '+lookupError.message,'error');return false}
- if(existing){localStorage.removeItem('bhl_pending_dg_request');msg('Demande DG enregistrée (statut : '+existing.status+').','ok');return true}
+ if(existing?.length){localStorage.removeItem('bhl_pending_dg_request');msg('Demande DG déjà enregistrée (statut : '+existing[0].status+').','ok');return true}
  if(!req||!req.team_id){msg('Aucune équipe demandée trouvée. Contacte l’administrateur BHL pour vérifier ton inscription.','error');return false}
  const {error}=await db.from('bhl_account_requests').insert({user_id:user.id,email:user.email.toLowerCase(),full_name:req.full_name,requested_team_id:req.team_id,status:'pending'});
- if(error){msg('La demande DG n’a PAS été transmise : '+error.message,'error');return false}
+ if(error){if(error.code==='23505'){localStorage.removeItem('bhl_pending_dg_request');msg('Une demande existe déjà pour ce compte.','ok');return true}msg('La demande DG n’a PAS été transmise : '+error.message,'error');return false}
  localStorage.removeItem('bhl_pending_dg_request');
  msg('Demande DG transmise à l’administrateur.','ok');return true
+ }finally{pendingRequestInFlight.delete(user.id)}
 }
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function show(id){['auth','pending','dashboard','adminWorkspace','resetRequest','resetPassword'].forEach(x=>$('#'+x).classList.toggle('hidden',x!==id))}
