@@ -20,7 +20,7 @@ function mount(){
   ['bhl-equipes-connectees.html','Équipes'],
   ['bhl-trophees.html','Trophées'],
   ['bhl-matchs-joues.html','Matchs joués'],
-  ['bhl-fantrax.html','Saison Fantrax'],
+  ['bhl-fantrax.html','Saison'],
   ['bhl-records.html','Records'],
   ['bhl-transactions.html','Transactions'],
   ['bhl-espace-dg.html','Espace DG']
