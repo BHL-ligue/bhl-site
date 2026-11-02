@@ -129,7 +129,7 @@ def period_at(periods, now):
 
 def build_snapshot(now=None):
     now = now or dt.datetime.now(dt.timezone.utc)
-    info = fetch("getLeagueInfo", excludePlayerInfo="true")
+    info = fetch("getLeagueInfo")
     roster_period = period_at(info["rosterPeriods"], now)
     scoring_period = period_at(info["scoringPeriods"], now)
     # Fantrax's period timestamps can switch at 19:00 Montreal time.
