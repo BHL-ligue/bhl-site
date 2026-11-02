@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T17:49:35.612702+00:00",
+  "updatedAt": "2026-11-02T17:52:21.961248+00:00",
   "rosterPeriod": 5,
   "scoringPeriod": 5,
   "periodDates": {
@@ -3146,7 +3146,8 @@
       "points": "14-1-0",
       "totalPointsFor": 2700.45,
       "winPercentage": 0.933,
-      "gamesBack": 0.0
+      "gamesBack": 0.0,
+      "totalPointsAgainst": 2134.05
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -3155,7 +3156,8 @@
       "points": "13-2-0",
       "totalPointsFor": 2427.9,
       "winPercentage": 0.867,
-      "gamesBack": 1.0
+      "gamesBack": 1.0,
+      "totalPointsAgainst": 2065.25
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -3164,7 +3166,8 @@
       "points": "11-4-0",
       "totalPointsFor": 2433.0,
       "winPercentage": 0.733,
-      "gamesBack": 3.0
+      "gamesBack": 3.0,
+      "totalPointsAgainst": 2120.5
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -3173,7 +3176,8 @@
       "points": "10-5-0",
       "totalPointsFor": 2569.65,
       "winPercentage": 0.667,
-      "gamesBack": 4.0
+      "gamesBack": 4.0,
+      "totalPointsAgainst": 2243.45
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -3182,7 +3186,8 @@
       "points": "10-5-0",
       "totalPointsFor": 2423.25,
       "winPercentage": 0.667,
-      "gamesBack": 4.0
+      "gamesBack": 4.0,
+      "totalPointsAgainst": 2252.35
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -3191,7 +3196,8 @@
       "points": "10-5-0",
       "totalPointsFor": 2375.7,
       "winPercentage": 0.667,
-      "gamesBack": 4.0
+      "gamesBack": 4.0,
+      "totalPointsAgainst": 2179.15
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -3200,7 +3206,8 @@
       "points": "9-6-0",
       "totalPointsFor": 2309.55,
       "winPercentage": 0.6,
-      "gamesBack": 5.0
+      "gamesBack": 5.0,
+      "totalPointsAgainst": 2202.3
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -3209,7 +3216,8 @@
       "points": "9-6-0",
       "totalPointsFor": 2259.3,
       "winPercentage": 0.6,
-      "gamesBack": 5.0
+      "gamesBack": 5.0,
+      "totalPointsAgainst": 2119.85
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -3218,7 +3226,8 @@
       "points": "8-7-0",
       "totalPointsFor": 1949.55,
       "winPercentage": 0.533,
-      "gamesBack": 6.0
+      "gamesBack": 6.0,
+      "totalPointsAgainst": 2198.95
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -3227,7 +3236,8 @@
       "points": "7-8-0",
       "totalPointsFor": 2229.6,
       "winPercentage": 0.467,
-      "gamesBack": 7.0
+      "gamesBack": 7.0,
+      "totalPointsAgainst": 2278.8
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -3236,7 +3246,8 @@
       "points": "7-8-0",
       "totalPointsFor": 2223.45,
       "winPercentage": 0.467,
-      "gamesBack": 7.0
+      "gamesBack": 7.0,
+      "totalPointsAgainst": 2096.65
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -3245,7 +3256,8 @@
       "points": "3-12-0",
       "totalPointsFor": 2007.9,
       "winPercentage": 0.2,
-      "gamesBack": 11.0
+      "gamesBack": 11.0,
+      "totalPointsAgainst": 2305.5
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -3254,7 +3266,8 @@
       "points": "3-12-0",
       "totalPointsFor": 1735.05,
       "winPercentage": 0.2,
-      "gamesBack": 11.0
+      "gamesBack": 11.0,
+      "totalPointsAgainst": 2229.1
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -3263,7 +3276,8 @@
       "points": "2-13-0",
       "totalPointsFor": 1893.0,
       "winPercentage": 0.133,
-      "gamesBack": 12.0
+      "gamesBack": 12.0,
+      "totalPointsAgainst": 2213.95
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -3272,7 +3286,8 @@
       "points": "2-13-0",
       "totalPointsFor": 1801.5,
       "winPercentage": 0.133,
-      "gamesBack": 12.0
+      "gamesBack": 12.0,
+      "totalPointsAgainst": 2223.35
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -3281,7 +3296,8 @@
       "points": "2-13-0",
       "totalPointsFor": 1740.3,
       "winPercentage": 0.133,
-      "gamesBack": 12.0
+      "gamesBack": 12.0,
+      "totalPointsAgainst": 2215.95
     }
   ],
   "matchups": [
