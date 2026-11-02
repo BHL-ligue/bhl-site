@@ -470,7 +470,7 @@ function bhlPortraitById(dialog,name){
 }
 const BHL_PROFILE_TEAMS={
  'anaheim mighty ducks':['#532A44','anaheim-mightyducks.png'],'atlanta thrashers':['#5c88da','atlanta-thrashers.png'],'boston bruins':['#ffb81c','boston-bruins.png'],'cleveland barons':['#b5a36a','cleveland-barons.png'],'california golden seals':['#007f00','california-goldenseals.png'],'chicago blackhawks':['#cf0a2c','chicago-blackhawks.png'],'colorado avalanche':['#6f263d','colorado-avalanche.png'],'detroit red wings':['#ce1126','detroit-redwings.png'],'florida panthers':['#c8102e','florida-panthers.png'],'hartford whalers':['#046A38','hartford-whalers.png'],'minnesota north stars':['#009639','minnesota-northstars.png'],'montreal canadiens':['#af1e2d','montreal-canadiens.png'],'nashville predators':['#ffb81c','nashville-predators.png'],'new york rangers':['#0038a8','newyork-rangers.png'],'ottawa senators':['#DA1A32','ottawa-senators.png'],'edmonton oilers':['#ff4c00','edmonton-oilers.png'],'quebec nordiques':['#005eb8','quebec-nordiques.png'],'toronto maple leafs':['#00205b','toronto-mapleleafs.png'],'vegas golden knights':['#B4975A','vegas-golden-knights.png'],'winnipeg jets':['#041e42','winnipeg-jets.png']};
-const bhlTeamKey=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const bhlTeamKey=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 let bhlRosterLookupRequest;
 function bhlRosterLookup(){
  return bhlRosterLookupRequest||(bhlRosterLookupRequest=fetch('data/fantrax.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Alignements BHL indisponibles');return r.json()}).then(data=>{
