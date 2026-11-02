@@ -5,7 +5,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const positions=['C','LW','RW','D','G'];
 const groups=[['ACTIVE','Alignement de départ'],['RESERVE','Banc'],['INJURED_RESERVE','Liste des blessés'],['MINORS','Mineures']];
 const dataset=window.BHLFantasyStats;
-const stats=p=>{const id=String(p.id||'').replace(/\\*/g,'');const old=dataset?.players[id]||{};const live=window.BHLLivePlayerStats?.[id]||{};return {...old,...live};};
+const stats=p=>{const id=String(p.id||'').replaceAll('*','');const old=dataset?.players[id]||{};const live=window.BHLLivePlayerStats?.[id]||{};return {...old,...live};};
 const metric=(p,key)=>{const s=stats(p);return s.gp>0&&Number.isFinite(s[key])?s[key]:-Infinity};
 const fmt=v=>Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
 const eligibility=p=>Array.isArray(p.eligiblePositions)&&p.eligiblePositions.length?p.eligiblePositions.join(', '):p.position||'—';
