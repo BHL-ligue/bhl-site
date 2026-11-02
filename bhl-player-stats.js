@@ -129,7 +129,7 @@ async function historicalFantasy(id,season,goalie,center,team){
  const complete=Object.values(v).every(x=>x!==null);
  return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
 }
-const BHL_NHL_IDS={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559};
+const BHL_NHL_IDS={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
 function bhlResolvedNhlId(name){
  const key=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
  return Number(BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[key]||0);
