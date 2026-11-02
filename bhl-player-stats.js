@@ -23,28 +23,43 @@ async function fill(target,id,name){
 }
 
 
-function historicNhl(name,target){
- target.textContent='Recherche des saisons LNH depuis 2010-2011…';
- const normName=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
- fetch('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=50&q='+encodeURIComponent(name))
- .then(r=>{if(!r.ok)throw Error('Recherche LNH indisponible');return r.json()})
- .then(list=>{const a=Array.isArray(list)?list:(list.data||[]);const p=a.find(x=>normName(x.name||x.fullName||x.playerName)===normName(name)||normName(String(x.name||'').split(',').reverse().join(' '))===normName(name));if(!p)throw Error('Joueur introuvable dans la base LNH');return fetch('https://api-web.nhle.com/v1/player/'+(p.playerId||p.id)+'/landing')})
- .then(r=>{if(!r.ok)throw Error('Historique LNH indisponible');return r.json()})
- .then(profile=>{
+async function nhlJson(url){
+ const attempts=[url,'https://corsproxy.io/?'+encodeURIComponent(url),'https://proxy.cors.dev/'+url];
+ for(const endpoint of attempts){
+  try{const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),9000);
+   try{const response=await fetch(endpoint,{signal:controller.signal});if(response.ok)return await response.json()}
+   finally{clearTimeout(timer)}
+  }catch(e){}
+ }
+ throw Error('Le service de statistiques LNH ne répond pas');
+}
+async function historicNhl(name,target){
+ target.textContent='Chargement des saisons LNH depuis 2010-2011…';
+ const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+ try{
+  const result=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
+  const players=Array.isArray(result)?result:(result.data||[]);
+  const match=players.find(p=>normalized(p.name||p.fullName||p.playerName)===normalized(name)||normalized(String(p.name||'').split(',').reverse().join(' '))===normalized(name));
+  const id=Number(match?.playerId||match?.id);
+  if(!Number.isInteger(id)||id<=0)throw Error('Joueur non trouvé dans la base LNH');
+  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
   if(!target.isConnected)return;
-  const seasons=(profile.seasonTotals||[]).filter(x=>x.leagueAbbrev==='NHL'&&x.gameTypeId===2&&Number(x.season)>=20102011).sort((a,b)=>Number(b.season)-Number(a.season));
-  if(!seasons.length){target.textContent='Aucune saison régulière LNH disponible depuis 2010-2011.';return}
+  const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2&&Number(x.season)>=20102011).sort((a,b)=>Number(b.season)-Number(a.season));
+  if(!seasons.length){target.textContent='Aucune saison régulière LNH depuis 2010-2011.';return}
+  const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
   const tableEl=document.createElement('table');tableEl.className='bhl-player-table';
-  const thead=document.createElement('thead');thead.innerHTML='<tr><th>Saison</th><th>Équipe</th><th>PJ</th><th>B</th><th>A</th><th>PTS</th><th>FPTS</th><th>FP/G</th></tr>';tableEl.append(thead);
+  const head=document.createElement('thead');head.innerHTML='<tr><th>Saison</th><th>Équipe</th><th>PJ</th><th>B</th><th>A</th><th>PTS</th><th>FPTS</th><th>FP/G</th></tr>';tableEl.append(head);
   const body=document.createElement('tbody');
   for(const x of seasons){
-   const season=String(x.season);const row=document.createElement('tr');
-   const vals=[season.slice(0,4)+'-'+season.slice(6),x.teamName?.default||x.teamAbbrev||'—',x.gamesPlayed,x.goals,x.assists,x.points,'—','—'];
-   for(const v of vals){const cell=document.createElement('td');cell.textContent=v??'—';row.append(cell)}body.append(row);
+   const season=String(x.season),row=document.createElement('tr');
+   const team=typeof x.teamName==='object'?(x.teamName.default||x.teamAbbrev):x.teamName||x.teamAbbrev||'—';
+   const vals=[season.slice(0,4)+'-'+season.slice(6),team,x.gamesPlayed,x.goals,x.assists,x.points,'—','—'];
+   for(const v of vals){const cell=document.createElement('td');cell.textContent=v??'—';row.append(cell)}
+   body.append(row);
   }
-  tableEl.append(body);target.replaceChildren(tableEl);
-  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : statistiques de saison régulière LNH. FPTS et FP/G historiques à calculer après validation des catégories et disponibilités statistiques; aucune estimation n’est affichée.';target.append(note);
- }).catch(e=>{if(target.isConnected)target.textContent='Historique LNH temporairement indisponible : '+e.message});
+  tableEl.append(body);wrap.append(tableEl);target.replaceChildren(wrap);
+  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. Les FPTS et FP/G historiques restent indisponibles tant que les catégories Fantrax requises ne sont pas toutes validées.';target.append(note);
+ }catch(e){if(target.isConnected)target.textContent='Impossible de charger les statistiques historiques : '+e.message}
 }
 function tradeHistory(name,target){
  target.textContent='Chargement des transactions BHL…';
