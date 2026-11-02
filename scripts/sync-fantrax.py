@@ -396,6 +396,36 @@ def build_snapshot(now=None):
                      for m in scores["matchups"]],
     }
 
+
+def refresh_player_identities(snapshot, root):
+    """Refresh mutable BHL roster data without guessing or replacing NHL identities."""
+    identity_path = root / "data" / "player-identity-map.json"
+    directory = json.loads(identity_path.read_text(encoding="utf-8"))
+    entries = directory["players"]
+    seen = set()
+    for team in snapshot["teams"]:
+        for player in team.get("players", []):
+            pid = str(player["id"])
+            if pid in seen:
+                raise ValueError("Duplicate Fantrax player ID: " + pid)
+            seen.add(pid)
+            entry = entries.setdefault(pid, {
+                "nhlId": None, "nhlName": None, "nhlTeam": None,
+                "aliases": [], "status": "unresolved"
+            })
+            entry["fantraxName"] = player["name"]
+            entry["bhlTeam"] = team["name"]
+            entry["position"] = player.get("position")
+            entry["rosterStatus"] = player.get("status")
+            entry["onCurrentRoster"] = True
+    for pid, entry in entries.items():
+        if pid not in seen:
+            entry["bhlTeam"] = None
+            entry["rosterStatus"] = None
+            entry["onCurrentRoster"] = False
+    directory["source"]["rosterUpdatedAt"] = snapshot["updatedAt"]
+    identity_path.write_text(json.dumps(directory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
 if __name__ == "__main__":
     snapshot = build_snapshot()
     path = Path(__file__).resolve().parents[1] / "data" / "fantrax.json"
@@ -403,4 +433,5 @@ if __name__ == "__main__":
     temporary = path.with_suffix(".tmp")
     temporary.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     os.replace(temporary, path)
+    refresh_player_identities(snapshot, path.parent.parent)
     print(f"Updated {len(snapshot['teams'])} teams; roster period {snapshot['rosterPeriod']}, scoring period {snapshot['scoringPeriod']}")
