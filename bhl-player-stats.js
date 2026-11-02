@@ -14,8 +14,8 @@ let request;
 function load(){return request||(request=fetch('data/fantrax-player-details.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Statistiques indisponibles');return r.json()}).catch(e=>{request=null;throw e}))}
 function table(player,data){
  const s=player.stats;
- const cols=player.goalie?[['GP','PJ'],['W','V'],['GA','BA'],['SV','ARR'],['SHO','BL'],['G','B'],['A','A']]:[['GP','PJ'],['G','B'],['A','A'],['PTS','PTS'],['SOG','TIRS'],['Hit','HITS'],['Blk','BLOCS'],['Tk','TK'],['FOW','MÀJ']];
- const values={...s,PTS:s.G==null||s.A==null?null:s.G+s.A};
+ const cols=player.goalie?[['NHL','Équipe LNH'],['GP','PJ'],['W','V'],['GA','BA'],['SV','ARR'],['SHO','BL'],['G','B'],['A','A']]:[['NHL','Équipe LNH'],['GP','PJ'],['G','B'],['A','A'],['PTS','PTS'],['SOG','TIRS'],['Hit','HITS'],['Blk','BLOCS'],['Tk','TK'],['FOW','MÀJ']];
+ const values={...s,NHL:nhlAbbrev(player.nhlTeam),PTS:s.G==null||s.A==null?null:s.G+s.A};
  return '<div class="bhl-player-meta">'+'Équipe LNH : '+esc(nhlAbbrev(player.nhlTeam))+'</div><div class="bhl-player-totals"><div><span>FPTS</span><strong>'+fmt(s.FPts)+'</strong></div><div><span>FP/G</span><strong>'+fmt(s['FP/G'])+'</strong></div></div><h4>Statistiques — '+esc(data.period)+'</h4><div class="bhl-player-scroll"><table class="bhl-player-table"><thead><tr>'+cols.map(([key,label])=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody><tr>'+cols.map(([key])=>'<td>'+fmt(values[key])+'</td>').join('')+'</tr></tbody></table></div><p class="bhl-player-source">Source : export Fantrax du '+esc(data.exportDate)+'. Ces statistiques sont un instantané et ne sont pas actualisées automatiquement.</p><p class="bhl-player-legend">'+(player.goalie?'V : victoires · BA : buts accordés · ARR : arrêts · BL : blanchissages · B : buts · A : passes.':'B : buts · A : passes · PTS : buts + passes · TK : takeaways · MÀJ : mises au jeu gagnées.')+'</p>';
 }
 async function fill(target,id,name){
@@ -225,7 +225,7 @@ function formatNhlHeight(inches){
  return Math.floor(n/12)+"'"+String(n%12).padStart(2,'0')+'″';
 }
 async function populatePlayerBio(dialog,id,name){
- const pos=dialog.querySelector('.bhl-player-position'),size=dialog.querySelector('.bhl-player-size');
+ const pos=dialog.querySelector('.bhl-player-position'),size=dialog.querySelector('.bhl-player-size'),birth=dialog.querySelector('.bhl-player-birth');
  try{
   const data=await load();
   const player=(id&&data.players[id])||Object.values(data.players).find(p=>norm(p.name)===norm(name));
@@ -244,6 +244,13 @@ async function populatePlayerBio(dialog,id,name){
   const weight=Number(profile.weightInPounds);
   const parts=[height,Number.isFinite(weight)&&weight>0?weight+' lb':''].filter(Boolean);
   if(parts.length)size.textContent=parts.join(' · ');
+  const raw=String(profile.birthDate||'');
+  if(birth&&/^\d{4}-\d{2}-\d{2}$/.test(raw)){
+   const [y,m,d]=raw.split('-').map(Number),today=new Date();
+   const age=today.getFullYear()-y-((today.getMonth()+1<m||(today.getMonth()+1===m&&today.getDate()<d))?1:0);
+   const date=new Date(Date.UTC(y,m-1,d));
+   birth.textContent='Âge : '+age+' ans · Né le '+new Intl.DateTimeFormat('fr-CA',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(date);
+  }
  }catch(e){}
 }
 function bhlPortraitById(dialog,name){
@@ -278,7 +285,7 @@ function bhlPortraitById(dialog,name){
 function open(id,name,source){
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
- dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-position"></div><div class="bhl-player-size"></div><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
+ dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-position"></div><div class="bhl-player-size"></div><div class="bhl-player-birth"></div><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
  document.body.append(dialog);dialog.showModal();
  // Show the BHL team's identity only when the originating roster/team is known.
  const origin=source?.closest?.('[data-team-name],[data-bhl-team],.bhl-lineup-card,.bhl-roster-card');
