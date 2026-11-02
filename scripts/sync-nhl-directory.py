@@ -39,9 +39,38 @@ def main():
         raise RuntimeError(f"Only {len(succeeded)}/{len(TEAMS)} NHL team rosters fetched; previous directory preserved")
     if len(players)<400:
         raise RuntimeError(f"Only {len(players)} players; previous directory preserved")
-    output={"source":"NHL official team rosters","updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"teamCount":len(succeeded),"playerCount":len(players),"players":players}
+    active_count=len(players)
+    # Preserve verified players outside active rosters, including prospects.
+    previous={}
+    if DEST.exists():
+        try:
+            previous=json.loads(DEST.read_text(encoding="utf-8")).get("players",{})
+        except (ValueError,OSError):
+            previous={}
+    for pid,entry in previous.items():
+        if str(pid).isdigit() and pid not in players and isinstance(entry,dict):
+            players[pid]={**entry,"source":entry.get("source","previous-directory")}
+    bhl_added=0
+    if (ROOT/"data/player-identity-map.json").exists():
+        identity=json.loads((ROOT/"data/player-identity-map.json").read_text(encoding="utf-8"))
+        for entry in identity.get("players",{}).values():
+            if entry.get("status")!="confirmed": continue
+            nhl_id=entry.get("nhlId")
+            if not str(nhl_id).isdigit() or int(nhl_id)<=0: continue
+            key=str(nhl_id)
+            if key in players: continue
+            players[key]={"name":entry.get("nhlName") or entry.get("fantraxName") or "",
+                          "team":entry.get("nhlTeam") or "",
+                          "position":entry.get("position") or "",
+                          "source":"bhl-confirmed"}
+            bhl_added+=1
+    output={"source":"NHL active rosters and confirmed BHL identities",
+            "updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),
+            "teamCount":len(succeeded),"activeRosterCount":active_count,
+            "verifiedBhlAdditions":bhl_added,
+            "playerCount":len(players),"players":players}
     DEST.write_text(json.dumps(output,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
-    print(f"Published {len(players)} official NHL players from {len(succeeded)} teams")
+    print(f"Published {len(players)} unique NHL IDs from {len(succeeded)} teams and confirmed BHL identities")
 
 if __name__=="__main__":
     main()
