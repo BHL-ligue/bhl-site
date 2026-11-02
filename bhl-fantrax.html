@@ -59,4 +59,6 @@ async function start(){
  }catch(error){$('sync').textContent='Impossible de charger les données Fantrax : '+error.message+'. Réessaie plus tard.';$('sync').className='error'}
 }
 ['team','status'].forEach(id=>$(id).addEventListener('change',drawRoster));$('search').addEventListener('input',drawRoster);start();
+setInterval(()=>{if(!document.hidden)start()},300000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)start()});
 </script><script src="bhl-navigation.js?v=global3" defer></script><script src="bhl-player-stats.js?v=global3" defer></script></body></html>
