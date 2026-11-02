@@ -95,7 +95,8 @@
    const t=teamInfo(g.team),year=seasonEndYear(g.season);
    // Banners use the same championship assets as the team overview.
    const banner=BANNERS[(t[0]||'')+':'+year]||null;
-   const logo=t[2]?'<img class="cup-team-logo" src="logos/'+esc(t[2])+'" alt="Logo de '+esc(g.team)+'" onerror="this.hidden=true">':'';
+   const logoFile=t[0]==='MAR'?'montreal-maroons-white.png':t[2];
+   const logo=logoFile?'<img class="cup-team-logo" src="logos/'+esc(logoFile)+'" alt="Logo de '+esc(g.team)+'" onerror="this.hidden=true">':'';
    const art=banner?'<img class="cup-banner" src="banners/'+esc(banner)+'" alt="Bannière des champions '+esc(g.season)+'" onerror="this.hidden=true">':'';
    const byCategory=new Map();
    for(const person of g.people){const category=cupCategory(person.role);if(!byCategory.has(category))byCategory.set(category,[]);byCategory.get(category).push(person)}
