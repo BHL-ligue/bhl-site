@@ -40,11 +40,49 @@ function render(rows,showTeam=false){
  return '<section class="bhl-roster-block'+(status==='ACTIVE'?' bhl-roster-starting':'')+'" data-roster-status="'+status+'"><div class="bhl-roster-title"><h4>'+title+'</h4><span>'+list.length+' joueur(s)</span></div>'+(list.length?body:'<p class="bhl-roster-empty">Aucun joueur dans cette section pour les filtres choisis.</p>')+'</section>';
  }).join('');
 }
+// Reorder existing card nodes only after all NHL requests for the visible lineup settle.
+// Moving nodes preserves headshots, click handlers and loaded metric values.
+const sortTimers=new WeakMap();
+function reorderCards(container){
+ if(!container?.isConnected)return;
+ const blocks=container.querySelectorAll('.bhl-roster-starting');
+ for(const block of blocks){
+  const scopes=[...block.querySelectorAll('.bhl-pro-layout')];
+  for(const scope of scopes){
+   for(const position of ['LW','C','RW','D','G']){
+    const slots=[...scope.querySelectorAll('.bhl-lineup-player')].filter(card=>card.querySelector('.bhl-pro-pos')?.textContent?.trim()===position);
+    if(slots.length<2)continue;
+    const ordered=slots.slice().sort((a,b)=>{
+     const score=card=>{
+      const id=String(card.querySelector('[data-bhl-player-id]')?.dataset.bhlPlayerId||'').replaceAll('*','');
+      const value=window.BHLOfficialRosterStats?.[id];
+      return {fpg:value?.gp>0&&Number.isFinite(value.fpg)?value.fpg:-Infinity,
+              fpts:value?.gp>0&&Number.isFinite(value.fpts)?value.fpts:-Infinity};
+     };
+     const x=score(a),y=score(b);
+     return y.fpg-x.fpg||y.fpts-x.fpts;
+    });
+    // Use placeholders so swaps never destroy a node or its event listeners.
+    const markers=slots.map(card=>{const marker=document.createComment('BHL player slot');card.replaceWith(marker);return marker;});
+    markers.forEach((marker,i)=>marker.replaceWith(ordered[i]));
+   }
+  }
+ }
+}
+function scheduleReorder(container,requests){
+ if(sortTimers.has(container))clearTimeout(sortTimers.get(container));
+ const timer=setTimeout(()=>{
+  if(!container.isConnected)return;
+  Promise.allSettled(requests).then(()=>{if(container.isConnected)reorderCards(container)});
+ },350);
+ sortTimers.set(container,timer);
+}
 const pending=new Map();
 window.BHLOfficialRosterStats=window.BHLOfficialRosterStats||{};
 function photos(container){
  if(typeof window.bhlNhlApplyPortraits==='function')window.bhlNhlApplyPortraits(container);
  const cards=[...container.querySelectorAll('.bhl-lineup-player[data-bhl-nhl-name]')];
+ const requests=[];
  for(const card of cards){
   const button=card.querySelector('[data-bhl-player-id]');
   if(!button)continue;
@@ -85,10 +123,13 @@ function photos(container){
     return values;
    })().catch(error=>{console.warn('Données LNH de la carte indisponibles',name,error);return null}).finally(()=>pending.delete(id)));
   }
-  pending.get(id).then(paint);
+  const request=pending.get(id);
+  requests.push(request);
+  request.then(paint);
  }
+ scheduleReorder(container,requests);
 }
-return {render,photos,sort,compose};
+return {render,photos,sort,compose,reorderCards};
 })();
 (()=>{ // Always register the canonical NHL-ID portrait loader; never retain a legacy global.
 const bhlNhlPortraitCache=new Map();
