@@ -2271,10 +2271,12 @@
       "bhlTeam": "Chicago Blackhawks",
       "position": "D",
       "nhlTeam": "NSH",
-      "nhlId": null,
-      "nhlName": null,
-      "aliases": [],
-      "status": "unresolved",
+      "nhlId": 8485372,
+      "nhlName": "Cameron Reid",
+      "aliases": [
+        "Cam Reid"
+      ],
+      "status": "confirmed",
       "rosterStatus": "MINORS",
       "onCurrentRoster": true
     },
