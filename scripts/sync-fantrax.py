@@ -129,7 +129,18 @@ def period_at(periods, now):
 
 def build_snapshot(now=None):
     now = now or dt.datetime.now(dt.timezone.utc)
-    info = fetch("getLeagueInfo")
+    
+player_info = info.get("playerInfo", {})
+print("PLAYER INFO TYPE:", type(player_info).__name__)
+print("PLAYER INFO COUNT:", len(player_info) if isinstance(player_info, (dict, list)) else 0)
+if isinstance(player_info, dict):
+    sample = next((v for v in player_info.values() if isinstance(v, dict)), {})
+elif isinstance(player_info, list):
+    sample = next((v for v in player_info if isinstance(v, dict)), {})
+else:
+    sample = {}
+print("PLAYER INFO FIELDS:", sorted(sample.keys()))
+
     roster_period = period_at(info["rosterPeriods"], now)
     scoring_period = period_at(info["scoringPeriods"], now)
     # Fantrax's period timestamps can switch at 19:00 Montreal time.
