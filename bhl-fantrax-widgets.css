@@ -106,3 +106,14 @@
 .bhl-ft-stats>div{background:linear-gradient(145deg,#f4f6f9,#fff);border:1px solid #e2e7ed;border-radius:11px;padding:15px}
 .bhl-ft-stats strong{color:#182235;font-variant-numeric:tabular-nums}
 @media(max-width:600px){.bhl-ft-games{grid-template-columns:1fr}.bhl-score-card{min-width:0}.bhl-ft-strip .bhl-score-card{flex-basis:255px}.bhl-score-team{font-size:11px}.bhl-score-logo{width:30px;height:30px;flex-basis:30px}}
+
+/* Compact recent-results strip beneath current matchups */
+.bhl-ft-recent{margin-top:16px;border-top:1px solid #e1e5eb;padding-top:12px}
+.bhl-ft-recent h4{margin:0 0 8px;font-size:14px;color:#4a5565}
+.bhl-ft-recent-item{display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:7px;font-size:12px;background:#f5f6f8;margin:5px 0}
+.bhl-ft-recent-opponent{flex:1;min-width:0;overflow:hidden}
+.bhl-ft-recent-opponent img{width:22px!important;height:22px!important;object-fit:contain}
+.bhl-ft-recent-item strong{font-size:12px;white-space:nowrap}
+.bhl-ft-recent-item small{color:#697484;white-space:nowrap}
+.bhl-ft-result{font-size:11px;font-weight:800;border-radius:5px;min-width:22px;text-align:center;padding:3px}
+.bhl-ft-result-V{background:#dff5e6;color:#16743b}.bhl-ft-result-D{background:#fde4e4;color:#ad2929}.bhl-ft-result-N{background:#e7eaf0;color:#485467}
