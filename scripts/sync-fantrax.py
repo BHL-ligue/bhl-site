@@ -63,7 +63,15 @@ def build_snapshot(now=None):
         "rosterPeriod": roster_period, "scoringPeriod": scoring_period,
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
-        "standings": [{k: row[k] for k in ("teamId", "teamName", "rank", "points", "totalPointsFor", "winPercentage", "gamesBack") if k in row} for row in standings],
+        "standings": [{
+            **{k: row[k] for k in (
+                "teamId", "teamName", "rank", "points", "totalPointsFor",
+                "winPercentage", "gamesBack", "wins", "losses", "ties",
+                "totalPointsAgainst", "fantasyPointsAgainst", "pointsAgainst",
+                "playoffProbability", "playoffPercentage", "playoffOdds",
+                "playoffChance", "playoffPercent", "totalPoints",
+            ) if k in row and isinstance(row[k], (int, float, str, type(None)))},
+        } for row in standings],
         "matchups": [{"away": {k: m["away"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["away"]},
                       "home": {k: m["home"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["home"]}}
                      for m in scores["matchups"]],
