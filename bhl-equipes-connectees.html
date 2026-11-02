@@ -279,6 +279,8 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 .bhl-nhl-photo-wrap{height:135px;display:flex;align-items:flex-end;justify-content:center;margin:-12px -12px 12px;background:linear-gradient(180deg,#f6f7f9,#e9edf1);border-radius:8px;overflow:hidden}
 .bhl-nhl-photo{max-height:135px;max-width:100%;width:auto;object-fit:contain}
 .bhl-nhl-link{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--team-color,#cc0000);text-decoration:underline}
+.bhl-nhl-photo[hidden]{display:none!important}
+.bhl-nhl-photo-wrap{min-height:135px}
 .bhl-nhl-photo-wrap:has(img[hidden]){display:none}
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
@@ -724,8 +726,10 @@ async function bhlNhlPortrait(name){
     if(!Number.isInteger(id)||id<=0)return null;
     const profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
     const headshot=String(profile?.headshot||'');
-    const photo=headshot.startsWith('https://assets.nhle.com/')?headshot:null;
-    return {url:photo,profile:'https://www.nhl.com/player/'+id};
+    const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
+    const photo=/^https:\/\/(?:assets\.nhle\.com|media\.d3\.nhl\.com)\//.test(headshot)?headshot:null;
+    const fallbacks=team?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png'):[];
+    return {url:photo,alternates:fallbacks.filter(url=>url!==photo),profile:'https://www.nhl.com/player/'+id};
   })().catch(error=>{console.warn('Photo NHL non trouvée pour '+name,error);return null;});
   bhlNhlPortraitCache.set(key,request);
   return request;
@@ -741,11 +745,18 @@ function bhlNhlApplyPortraits(panel){
     if(!photo||!link)return;
     link.href=result.profile;
     link.hidden=false;
-    if(result.url){
+    const urls=[result.url,...(result.alternates||[])].filter(Boolean);
+    if(urls.length){
+      let index=0;
       photo.alt='Photo officielle NHL de '+name;
       photo.onload=()=>{photo.hidden=false;card.classList.add('bhl-has-portrait');};
-      photo.onerror=()=>{photo.hidden=true;card.classList.remove('bhl-has-portrait');};
-      photo.src=result.url;
+      photo.onerror=()=>{
+        index++;
+        if(index<urls.length)photo.src=urls[index];
+        else{photo.hidden=true;card.classList.remove('bhl-has-portrait');}
+      };
+      photo.hidden=false;
+      photo.src=urls[index];
     }
   });
 }
