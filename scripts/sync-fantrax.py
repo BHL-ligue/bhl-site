@@ -20,6 +20,74 @@ def fetch(method, **params):
         raise ValueError("Invalid Fantrax response: " + method)
     return result
 
+def fetch_roster_stats(team_id, period):
+    """Read-only Fantrax site endpoint; failures leave the public roster intact."""
+    payload = {
+        "msgs": [{"method": "getTeamRosterInfo", "data": {
+            "leagueId": LEAGUE, "reload": "1", "period": str(period),
+            "teamId": team_id, "statsType": "2"
+        }}],
+        "uiv": 3, "refUrl": (
+            f"https://www.fantrax.com/fantasy/league/{LEAGUE}/team/roster;"
+            f"reload=1;period={period};teamId={team_id}"
+        ), "dt": 0, "at": 0, "av": "0.0", "tz": "UTC"
+    }
+    request = urllib.request.Request(
+        f"https://www.fantrax.com/fxpa/req?leagueId={LEAGUE}",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json",
+                 "Content-Type": "application/json",
+                 "Origin": "https://www.fantrax.com"},
+        method="POST"
+    )
+    with urllib.request.urlopen(request, timeout=18) as response:
+        data = json.load(response)
+    return ((data.get("responses") or [{}])[0].get("data") or {}).get("tables") or []
+
+
+def parse_roster_stats(tables):
+    """Only trust identifiable Fantrax player IDs and explicitly labeled columns."""
+    import re
+    result = {}
+    for table in tables:
+        columns = ((table.get("header") or {}).get("cells") or [])
+        def label(col):
+            return re.sub(r"<[^>]*>", "", str(
+                col.get("name") or col.get("shortName") or col.get("label") or
+                col.get("displayName") or col.get("key") or "")).strip().upper()
+        labels = [label(c) for c in columns]
+        for row in table.get("rows") or []:
+            scorer = row.get("scorer") or {}
+            player_id = scorer.get("scorerId")
+            if not player_id:
+                continue
+            cells = row.get("cells") or []
+            values = {}
+            for i, cell in enumerate(cells):
+                if i >= len(labels):
+                    break
+                key = labels[i]
+                raw = cell.get("content") if isinstance(cell, dict) else None
+                try:
+                    value = float(str(raw).replace(",", "").strip())
+                except (TypeError, ValueError):
+                    continue
+                if key in ("FPTS", "FP", "FANTASY POINTS", "FANTASY POINTS TOTAL"):
+                    values["fpts"] = value
+                elif key in ("FP/G", "FPTS/G", "FPTS PER GAME", "FANTASY POINTS PER GAME", "FPTSPERGAME"):
+                    values["fpg"] = value
+                elif key in ("GP", "PJ", "GAMES PLAYED"):
+                    values["gp"] = int(value)
+            # Eligibility comes from the actual scorer, not the roster slot.
+            pos = re.findall(r"(?<![A-Z])(LW|RW|C|D|G)(?![A-Z])",
+                             re.sub(r"<[^>]*>", " ", str(scorer.get("posShortNames") or "")).upper())
+            if pos:
+                values["eligiblePositions"] = list(dict.fromkeys(pos))
+            if values:
+                result[str(player_id)] = values
+    return result
+
+
 def playoff_percent(row):
     """Extract a Fantrax playoff probability if its API exposes one."""
     aliases = {"playoffprobability", "playoffpercentage", "playoffodds",
@@ -185,6 +253,22 @@ def build_snapshot(now=None):
                             "eligiblePositions": list(dict.fromkeys(eligible)),
                             "status": item.get("status", "")})
         teams.append({"id": team_id, "name": roster["teamName"], "players": players})
+    # Experimental automatic stats from the same roster screen the DG sees.
+    # Never publish raw Fantrax responses or private profile/owner information.
+    live_stats = {}
+    for team in teams:
+        try:
+            extracted = parse_roster_stats(fetch_roster_stats(team["id"], roster_period))
+            live_stats.update(extracted)
+            for player in team["players"]:
+                values = extracted.get(player["id"], {})
+                if values.get("eligiblePositions"):
+                    player["eligiblePositions"] = values["eligiblePositions"]
+            print(f"Roster stats {team['name']}: {len(extracted)} players parsed")
+        except Exception as error:
+            print(f"Roster stats unavailable for {team['name']}: {type(error).__name__}: {error}")
+    live_stats = {pid: row for pid, row in live_stats.items()
+                  if any(k in row for k in ("gp", "fpg", "fpts"))}
     # Whitelist published fields: never publish owner/contact/profile data.
     return {
         "leagueId": LEAGUE, "leagueName": info["leagueName"],
@@ -192,6 +276,7 @@ def build_snapshot(now=None):
         "rosterPeriod": roster_period, "scoringPeriod": scoring_period,
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
+        "playerStats": live_stats,
         "upcoming": upcoming,
         "recentResults": previous_results,
         "schedule": season_schedule,
