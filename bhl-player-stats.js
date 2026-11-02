@@ -25,6 +25,22 @@ async function fill(target,id,name){
  const matches=id?[data.players[id]].filter(Boolean):Object.values(data.players).filter(p=>norm(p.name)===norm(name));
  if(!target.isConnected)return;
  target.innerHTML=matches.length===1?table(matches[0],data):'<p>Statistiques non disponibles pour ce joueur dans l’export actuel.</p>';
+ if(matches.length===1){
+  // The Fantrax export does not always contain the current NHL team.
+  // Resolve it from the same NHL ID used for the player's biography and portrait.
+  const firstCell=target.querySelector('.bhl-player-table tbody tr td:first-child');
+  const knownTeam=nhlAbbrev(matches[0].nhlTeam);
+  if(firstCell&&(!knownTeam||knownTeam==='—'||knownTeam==='undefined')){
+   const nhlId=bhlResolvedNhlId(name);
+   if(nhlId){
+    try{
+     const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
+     const abbrev=String(profile.currentTeamAbbrev||'').trim().toUpperCase();
+     if(firstCell.isConnected&&/^[A-Z]{2,3}$/.test(abbrev))firstCell.textContent=abbrev;
+    }catch(error){console.warn('Équipe NHL actuelle indisponible pour '+name,error)}
+   }
+  }
+ }
  }catch(e){if(target.isConnected)target.innerHTML='<p>Statistiques temporairement indisponibles. Réessaie plus tard.</p>'}
 }
 
