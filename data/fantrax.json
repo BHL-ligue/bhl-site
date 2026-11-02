@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T20:19:18.180026+00:00",
+  "updatedAt": "2026-11-02T20:22:18.449515+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -6144,373 +6144,435 @@
         "round": 1,
         "pick": 1,
         "playerId": "062h5",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Gavin McKenna"
       },
       {
         "round": 1,
         "pick": 2,
         "playerId": "06psl",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Ivar Stenberg"
       },
       {
         "round": 1,
         "pick": 3,
         "playerId": "0725x",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Caleb Malhotra"
       },
       {
         "round": 1,
         "pick": 4,
         "playerId": "06lok",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Viggo Bjorck"
       },
       {
         "round": 1,
         "pick": 5,
         "playerId": "074v8",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Alberts Smits"
       },
       {
         "round": 1,
         "pick": 6,
         "playerId": "070fp",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Daxon Rudolph"
       },
       {
         "round": 1,
         "pick": 7,
         "playerId": "075ko",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Wyatt Cullen"
       },
       {
         "round": 1,
         "pick": 8,
         "playerId": "070fo",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Chase Reid"
       },
       {
         "round": 1,
         "pick": 9,
         "playerId": "0744a",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Nikita Klepov"
       },
       {
         "round": 1,
         "pick": 10,
         "playerId": "06r5z",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Keaton Verhoeff"
       },
       {
         "round": 1,
         "pick": 11,
         "playerId": "05rj3",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Tristan Luneau"
       },
       {
         "round": 1,
         "pick": 12,
         "playerId": "071wj",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Carson Carels"
       },
       {
         "round": 1,
         "pick": 13,
         "playerId": "06sn9",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Kashawn Aitcheson"
       },
       {
         "round": 1,
         "pick": 14,
         "playerId": "06loj",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Ethan Belchetz"
       },
       {
         "round": 1,
         "pick": 15,
         "playerId": "06r63",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Tynan Lawrence"
       },
       {
         "round": 1,
         "pick": 16,
         "playerId": "075w6",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Malte Gustafsson"
       },
       {
         "round": 2,
         "pick": 17,
         "playerId": "01f5z",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Chris Kreider"
       },
       {
         "round": 2,
         "pick": 18,
         "playerId": "004cq",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Alex Ovechkin"
       },
       {
         "round": 2,
         "pick": 19,
         "playerId": "01f3e",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Nazem Kadri"
       },
       {
         "round": 2,
         "pick": 20,
         "playerId": "05ltt",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Alex Laferriere"
       },
       {
         "round": 2,
         "pick": 21,
         "playerId": "02yjp",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Ivan Barbashev"
       },
       {
         "round": 2,
         "pick": 22,
         "playerId": "031og",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Tyler Bertuzzi"
       },
       {
         "round": 2,
         "pick": 23,
         "playerId": "02wy3",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Elias Lindholm"
       },
       {
         "round": 2,
         "pick": 24,
         "playerId": "01zto",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Charlie Coyle"
       },
       {
         "round": 2,
         "pick": 25,
         "playerId": "02ybk",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Artturi Lehkonen"
       },
       {
         "round": 2,
         "pick": 26,
         "playerId": "051tx",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Aliaksei Protas"
       },
       {
         "round": 2,
         "pick": 27,
         "playerId": "02zpp",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Viktor Arvidsson"
       },
       {
         "round": 2,
         "pick": 28,
         "playerId": "03j8l",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Noah Hanifin"
       },
       {
         "round": 2,
         "pick": 29,
         "playerId": "04yn0",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Connor McMichael"
       },
       {
         "round": 2,
         "pick": 30,
         "playerId": "05k8c",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Tyson Foerster"
       },
       {
         "round": 2,
         "pick": 31,
         "playerId": "02wy7",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Pavel Buchnevich"
       },
       {
         "round": 2,
         "pick": 32,
         "playerId": "04ezy",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Morgan Frost"
       },
       {
         "round": 3,
         "pick": 33,
         "playerId": "02dq3",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Jacob Trouba"
       },
       {
         "round": 3,
         "pick": 34,
         "playerId": "024lv",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Mattias Ekholm"
       },
       {
         "round": 3,
         "pick": 35,
         "playerId": "01sif",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Tyler Seguin"
       },
       {
         "round": 3,
         "pick": 36,
         "playerId": "03pax",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Ivan Provorov"
       },
       {
         "round": 3,
         "pick": 37,
         "playerId": "05g42",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Jack Quinn"
       },
       {
         "round": 3,
         "pick": 38,
         "playerId": "01sio",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Mats Zuccarello"
       },
       {
         "round": 3,
         "pick": 39,
         "playerId": "05j3d",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Bobby McMann"
       },
       {
         "round": 3,
         "pick": 40,
         "playerId": "049ph",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Neal Pionk"
       },
       {
         "round": 3,
         "pick": 41,
         "playerId": "04uql",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Cole Perfetti"
       },
       {
         "round": 3,
         "pick": 42,
         "playerId": "01zti",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Tyler Toffoli"
       },
       {
         "round": 3,
         "pick": 43,
         "playerId": "0045j",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Kris Letang"
       },
       {
         "round": 3,
         "pick": 44,
         "playerId": "03ecl",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Gustav Forsling"
       },
       {
         "round": 3,
         "pick": 45,
         "playerId": "04kyn",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Sean Walker"
       },
       {
         "round": 3,
         "pick": 46,
         "playerId": "02nqb",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Colton Parayko"
       },
       {
         "round": 3,
         "pick": 47,
         "playerId": "04zp9",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Mavrik Bourque"
       },
       {
         "round": 3,
         "pick": 48,
         "playerId": "03wor",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Mason Marchment"
       },
       {
         "round": 4,
         "pick": 49,
         "playerId": "05gtp",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Dawson Mercer"
       },
       {
         "round": 4,
         "pick": 50,
         "playerId": "003tz",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Brent Burns"
       },
       {
         "round": 4,
         "pick": 51,
         "playerId": "04f75",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Noah Cates"
       },
       {
         "round": 4,
         "pick": 52,
         "playerId": "05kbn",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Will Cuylle"
       },
       {
         "round": 4,
         "pick": 53,
         "playerId": "03rab",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Jake DeBrusk"
       },
       {
         "round": 4,
         "pick": 54,
         "playerId": "04ln4",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Kiefer Sherwood"
       },
       {
         "round": 4,
         "pick": 55,
         "playerId": "004p4",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Mikael Backlund"
       },
       {
         "round": 4,
         "pick": 56,
         "playerId": "05uao",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Collin Graf"
       },
       {
         "round": 4,
         "pick": 57,
         "playerId": "03rag",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Jack Roslovic"
       },
       {
         "round": 4,
         "pick": 58,
         "playerId": "05tcz",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Oliver Kapanen"
       },
       {
         "round": 4,
         "pick": 59,
         "playerId": "06ay2",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Luca Cagnoni"
       },
       {
         "round": 4,
         "pick": 60,
         "playerId": "02ytx",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Ryan Hartman"
       },
       {
         "round": 4,
         "pick": 61,
         "playerId": "04uqa",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Vasily Podkolzin"
       },
       {
         "round": 4,
         "pick": 62,
         "playerId": "050rc",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Dmitry Voronkov"
       },
       {
         "round": 4,
@@ -6522,193 +6584,225 @@
         "round": 4,
         "pick": 64,
         "playerId": "03169",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Alexander Wennberg"
       },
       {
         "round": 5,
         "pick": 65,
         "playerId": "06bde",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Oliver Bonk"
       },
       {
         "round": 5,
         "pick": 66,
         "playerId": "04yeb",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Simon Holmstrom"
       },
       {
         "round": 5,
         "pick": 67,
         "playerId": "02440",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Anders Lee"
       },
       {
         "round": 5,
         "pick": 68,
         "playerId": "05kdw",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Ridly Greig"
       },
       {
         "round": 5,
         "pick": 69,
         "playerId": "02nq2",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Chandler Stephenson"
       },
       {
         "round": 5,
         "pick": 70,
         "playerId": "02ni5",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Jonathan Marchessault"
       },
       {
         "round": 5,
         "pick": 71,
         "playerId": "0457b",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Casey Mittelstadt"
       },
       {
         "round": 5,
         "pick": 72,
         "playerId": "01d6c",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Jacob Markstrom"
       },
       {
         "round": 5,
         "pick": 73,
         "playerId": "01c32",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Brayden Schenn"
       },
       {
         "round": 5,
         "pick": 74,
         "playerId": "05962",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "J.J. Moser"
       },
       {
         "round": 5,
         "pick": 75,
         "playerId": "0457i",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Ukko-Pekka Luukkonen"
       },
       {
         "round": 5,
         "pick": 76,
         "playerId": "05r50",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Mackie Samoskevich"
       },
       {
         "round": 5,
         "pick": 77,
         "playerId": "05oxk",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Mason Lohrei"
       },
       {
         "round": 5,
         "pick": 78,
         "playerId": "02fzj",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Blake Coleman"
       },
       {
         "round": 5,
         "pick": 79,
         "playerId": "01f66",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Kyle Palmieri"
       },
       {
         "round": 5,
         "pick": 80,
         "playerId": "04mv3",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Alex Newhook"
       },
       {
         "round": 6,
         "pick": 81,
         "playerId": "03ekl",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Vladislav Gavrikov"
       },
       {
         "round": 6,
         "pick": 82,
         "playerId": "01mz5",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Dmitry Orlov"
       },
       {
         "round": 6,
         "pick": 83,
         "playerId": "04ye7",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Cam York"
       },
       {
         "round": 6,
         "pick": 84,
         "playerId": "03eb3",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Christian Dvorak"
       },
       {
         "round": 6,
         "pick": 85,
         "playerId": "01587",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Jordan Eberle"
       },
       {
         "round": 6,
         "pick": 86,
         "playerId": "02b3w",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Boone Jenner"
       },
       {
         "round": 6,
         "pick": 87,
         "playerId": "00qs7",
-        "teamId": "4fmu58uhmo2tig2f"
+        "teamId": "4fmu58uhmo2tig2f",
+        "playerName": "Jamie Benn"
       },
       {
         "round": 6,
         "pick": 88,
         "playerId": "04lcf",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Joel Farabee"
       },
       {
         "round": 6,
         "pick": 89,
         "playerId": "02b6w",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "William Karlsson"
       },
       {
         "round": 6,
         "pick": 90,
         "playerId": "05xrx",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Marco Kasper"
       },
       {
         "round": 6,
         "pick": 91,
         "playerId": "06imq",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Maxim Shabanov"
       },
       {
         "round": 6,
         "pick": 92,
         "playerId": "02nof",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Hampus Lindholm"
       },
       {
         "round": 6,
         "pick": 93,
         "playerId": "03c0c",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Josh Manson"
       },
       {
         "round": 6,
         "pick": 94,
         "playerId": "059e5",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Jake Neighbours"
       },
       {
         "round": 6,
         "pick": 95,
         "playerId": "04y80",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Shane Wright"
       },
       {
         "round": 6,
@@ -6720,55 +6814,64 @@
         "round": 7,
         "pick": 97,
         "playerId": "0042t",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Claude Giroux"
       },
       {
         "round": 7,
         "pick": 98,
         "playerId": "03w5s",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Ryan McLeod"
       },
       {
         "round": 7,
         "pick": 99,
         "playerId": "051u2",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Matias Maccelli"
       },
       {
         "round": 7,
         "pick": 100,
         "playerId": "03yuf",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Eeli Tolvanen"
       },
       {
         "round": 7,
         "pick": 101,
         "playerId": "06axr",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Tom Willander"
       },
       {
         "round": 7,
         "pick": 102,
         "playerId": "01zt0",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Jason Zucker"
       },
       {
         "round": 7,
         "pick": 103,
         "playerId": "01gjn",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Erik Haula"
       },
       {
         "round": 7,
         "pick": 104,
         "playerId": "01skq",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Cam Fowler"
       },
       {
         "round": 7,
         "pick": 105,
         "playerId": "01lkz",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Taylor Hall"
       },
       {
         "round": 7,
@@ -6786,37 +6889,43 @@
         "round": 7,
         "pick": 108,
         "playerId": "05yn2",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Fraser Minten"
       },
       {
         "round": 7,
         "pick": 109,
         "playerId": "03ynu",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Carter Hart"
       },
       {
         "round": 7,
         "pick": 110,
         "playerId": "02nou",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Brady Skjei"
       },
       {
         "round": 7,
         "pick": 111,
         "playerId": "031p8",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Oliver Bjorkstrand"
       },
       {
         "round": 7,
         "pick": 112,
         "playerId": "051um",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Arseny Gritsyuk"
       },
       {
         "round": 8,
         "pick": 113,
         "playerId": "06hk9",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Vitali Pinchuk"
       },
       {
         "round": 8,
@@ -6828,31 +6937,36 @@
         "round": 8,
         "pick": 115,
         "playerId": "01zs1",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Scott Wedgewood"
       },
       {
         "round": 8,
         "pick": 116,
         "playerId": "03rfx",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Tommy Novak"
       },
       {
         "round": 8,
         "pick": 117,
         "playerId": "031pq",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Andrew Copp"
       },
       {
         "round": 8,
         "pick": 118,
         "playerId": "04zo3",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Nick Robertson"
       },
       {
         "round": 8,
         "pick": 119,
         "playerId": "05xcm",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Jonathan Lekkerimaki"
       },
       {
         "round": 8,
@@ -6864,25 +6978,29 @@
         "round": 8,
         "pick": 121,
         "playerId": "04amd",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Peyton Krebs"
       },
       {
         "round": 8,
         "pick": 122,
         "playerId": "03mm6",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Lawson Crouse"
       },
       {
         "round": 8,
         "pick": 123,
         "playerId": "01xfp",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Jaden Schwartz"
       },
       {
         "round": 8,
         "pick": 124,
         "playerId": "05kua",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Emil Heineman"
       },
       {
         "round": 8,
@@ -6894,7 +7012,8 @@
         "round": 8,
         "pick": 126,
         "playerId": "05gd9",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Zack Bolduc"
       },
       {
         "round": 8,
@@ -6906,19 +7025,22 @@
         "round": 8,
         "pick": 128,
         "playerId": "04qzc",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Joel Hofer"
       },
       {
         "round": 9,
         "pick": 129,
         "playerId": "06ig3",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Cayden Lindstrom"
       },
       {
         "round": 9,
         "pick": 130,
         "playerId": "04z51",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Charle-Edouard DAstous"
       },
       {
         "round": 9,
@@ -6930,7 +7052,8 @@
         "round": 9,
         "pick": 132,
         "playerId": "059e1",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Braden Schneider"
       },
       {
         "round": 9,
@@ -6942,25 +7065,29 @@
         "round": 9,
         "pick": 134,
         "playerId": "02npl",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Damon Severson"
       },
       {
         "round": 9,
         "pick": 135,
         "playerId": "02o7l",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Jaccob Slavin"
       },
       {
         "round": 9,
         "pick": 136,
         "playerId": "066on",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Michael Brandsegg-Nygard"
       },
       {
         "round": 9,
         "pick": 137,
         "playerId": "03wpn",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Brett Howden"
       },
       {
         "round": 9,
@@ -6972,55 +7099,64 @@
         "round": 9,
         "pick": 139,
         "playerId": "04zj8",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Bobby Brink"
       },
       {
         "round": 9,
         "pick": 140,
         "playerId": "075u7",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Alexander Command"
       },
       {
         "round": 9,
         "pick": 141,
         "playerId": "04f17",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Fabian Zetterlund"
       },
       {
         "round": 9,
         "pick": 142,
         "playerId": "01n84",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Alex Killorn"
       },
       {
         "round": 9,
         "pick": 143,
         "playerId": "0644e",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Oliver Moore"
       },
       {
         "round": 9,
         "pick": 144,
         "playerId": "04mto",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Kaapo Kakko"
       },
       {
         "round": 10,
         "pick": 145,
         "playerId": "04n4n",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Rasmus Sandin"
       },
       {
         "round": 10,
         "pick": 146,
         "playerId": "04bw4",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Andrei Kuzmenko"
       },
       {
         "round": 10,
         "pick": 147,
         "playerId": "03bxl",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Trevor Moore"
       },
       {
         "round": 10,
@@ -7032,13 +7168,15 @@
         "round": 10,
         "pick": 149,
         "playerId": "02ybo",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Rasmus Ristolainen"
       },
       {
         "round": 10,
         "pick": 150,
         "playerId": "02nol",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Teuvo Teravainen"
       },
       {
         "round": 10,
@@ -7050,7 +7188,8 @@
         "round": 10,
         "pick": 152,
         "playerId": "026p4",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Jonathan Huberdeau"
       },
       {
         "round": 10,
@@ -7062,19 +7201,22 @@
         "round": 10,
         "pick": 154,
         "playerId": "06axc",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Samuel Honzek"
       },
       {
         "round": 10,
         "pick": 155,
         "playerId": "03nfr",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Evan Rodrigues"
       },
       {
         "round": 10,
         "pick": 156,
         "playerId": "04abd",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Artem Zub"
       },
       {
         "round": 10,
@@ -7092,7 +7234,8 @@
         "round": 10,
         "pick": 159,
         "playerId": "070fm",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Ryan Lin"
       },
       {
         "round": 10,
@@ -7104,55 +7247,64 @@
         "round": 11,
         "pick": 161,
         "playerId": "05ubx",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Ryker Evans"
       },
       {
         "round": 11,
         "pick": 162,
         "playerId": "05r2z",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Theo Lindstein"
       },
       {
         "round": 11,
         "pick": 163,
         "playerId": "05gd7",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Cole Sillinger"
       },
       {
         "round": 11,
         "pick": 164,
         "playerId": "06lvc",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Harrison Brunicke"
       },
       {
         "round": 11,
         "pick": 165,
         "playerId": "070fr",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "Xavier Villeneuve"
       },
       {
         "round": 11,
         "pick": 166,
         "playerId": "03rf7",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Yakov Trenin"
       },
       {
         "round": 11,
         "pick": 167,
         "playerId": "064mz",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Charlie Stramel"
       },
       {
         "round": 11,
         "pick": 168,
         "playerId": "05kbo",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Marat Khusnutdinov"
       },
       {
         "round": 11,
         "pick": 169,
         "playerId": "06kr3",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Sam OReilly"
       },
       {
         "round": 11,
@@ -7170,43 +7322,50 @@
         "round": 11,
         "pick": 172,
         "playerId": "075kn",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Oscar Hemming"
       },
       {
         "round": 11,
         "pick": 173,
         "playerId": "02wy5",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Nikita Zadorov"
       },
       {
         "round": 11,
         "pick": 174,
         "playerId": "05ymn",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Maveric Lamoureux"
       },
       {
         "round": 11,
         "pick": 175,
         "playerId": "06jhe",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Cole Reschny"
       },
       {
         "round": 11,
         "pick": 176,
         "playerId": "05ym6",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Liam Ohgren"
       },
       {
         "round": 12,
         "pick": 177,
         "playerId": "02dq6",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Jean-Gabriel Pageau"
       },
       {
         "round": 12,
         "pick": 178,
         "playerId": "05riz",
-        "teamId": "1bn2dvarmo2tig2f"
+        "teamId": "1bn2dvarmo2tig2f",
+        "playerName": "David Jiricek"
       },
       {
         "round": 12,
@@ -7218,7 +7377,8 @@
         "round": 12,
         "pick": 180,
         "playerId": "03eb0",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Ryan Donato"
       },
       {
         "round": 12,
@@ -7230,19 +7390,22 @@
         "round": 12,
         "pick": 182,
         "playerId": "03ee4",
-        "teamId": "gqpb7szpmo2tig2e"
+        "teamId": "gqpb7szpmo2tig2e",
+        "playerName": "Victor Olofsson"
       },
       {
         "round": 12,
         "pick": 183,
         "playerId": "060pq",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Alex Bump"
       },
       {
         "round": 12,
         "pick": 184,
         "playerId": "06axz",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Bradly Nadeau"
       },
       {
         "round": 12,
@@ -7254,7 +7417,8 @@
         "round": 12,
         "pick": 186,
         "playerId": "05kub",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Shakir Mukhamadullin"
       },
       {
         "round": 12,
@@ -7272,13 +7436,15 @@
         "round": 12,
         "pick": 189,
         "playerId": "0045u",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Jordan Staal"
       },
       {
         "round": 12,
         "pick": 190,
         "playerId": "04osu",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Barrett Hayton"
       },
       {
         "round": 12,
@@ -7290,7 +7456,8 @@
         "round": 12,
         "pick": 192,
         "playerId": "04f1z",
-        "teamId": "3fyp69fcmo2tig2f"
+        "teamId": "3fyp69fcmo2tig2f",
+        "playerName": "Mikey Anderson"
       },
       {
         "round": 13,
@@ -7302,7 +7469,8 @@
         "round": 13,
         "pick": 194,
         "playerId": "01z7v",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Sean Couturier"
       },
       {
         "round": 13,
@@ -7314,13 +7482,15 @@
         "round": 13,
         "pick": 196,
         "playerId": "05ww8",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Ryan Greene"
       },
       {
         "round": 13,
         "pick": 197,
         "playerId": "04qyw",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Linus Karlsson"
       },
       {
         "round": 13,
@@ -7338,61 +7508,71 @@
         "round": 13,
         "pick": 200,
         "playerId": "023wa",
-        "teamId": "jbmeb32tmo2tig2e"
+        "teamId": "jbmeb32tmo2tig2e",
+        "playerName": "Jared Spurgeon"
       },
       {
         "round": 13,
         "pick": 201,
         "playerId": "06rnr",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Maddox Dagenais"
       },
       {
         "round": 13,
         "pick": 202,
         "playerId": "04zb6",
-        "teamId": "p7f42l5emo2tig2e"
+        "teamId": "p7f42l5emo2tig2e",
+        "playerName": "Alex Vlasic"
       },
       {
         "round": 13,
         "pick": 203,
         "playerId": "074v1",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Tommy Bleyl"
       },
       {
         "round": 13,
         "pick": 204,
         "playerId": "03mn5",
-        "teamId": "69yb2d10mo2tig2e"
+        "teamId": "69yb2d10mo2tig2e",
+        "playerName": "Patrik Laine"
       },
       {
         "round": 13,
         "pick": 205,
         "playerId": "01xfq",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Vladimir Tarasenko"
       },
       {
         "round": 13,
         "pick": 206,
         "playerId": "031pn",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Nick Paul"
       },
       {
         "round": 13,
         "pick": 207,
         "playerId": "074mg",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Liam Ruck"
       },
       {
         "round": 13,
         "pick": 208,
         "playerId": "03rip",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "John Marino"
       },
       {
         "round": 14,
         "pick": 209,
         "playerId": "0760d",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Jaxon Cover"
       },
       {
         "round": 14,
@@ -7404,25 +7584,29 @@
         "round": 14,
         "pick": 211,
         "playerId": "059e2",
-        "teamId": "mmvzhj4amo2tig2e"
+        "teamId": "mmvzhj4amo2tig2e",
+        "playerName": "Justin Sourdif"
       },
       {
         "round": 14,
         "pick": 212,
         "playerId": "03zul",
-        "teamId": "adfljh3wmo2tig2e"
+        "teamId": "adfljh3wmo2tig2e",
+        "playerName": "Filip Gustavsson"
       },
       {
         "round": 14,
         "pick": 213,
         "playerId": "04ymu",
-        "teamId": "l9ssazuemo2tig2e"
+        "teamId": "l9ssazuemo2tig2e",
+        "playerName": "Hendrix Lapierre"
       },
       {
         "round": 14,
         "pick": 214,
         "playerId": "04yi4",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Pyotr Kochetkov"
       },
       {
         "round": 14,
@@ -7434,13 +7618,15 @@
         "round": 14,
         "pick": 216,
         "playerId": "071wk",
-        "teamId": "b2lquor7mo2tig2e"
+        "teamId": "b2lquor7mo2tig2e",
+        "playerName": "Elton Hermansson"
       },
       {
         "round": 14,
         "pick": 217,
         "playerId": "02oar",
-        "teamId": "bvm8qt4omo2tig2f"
+        "teamId": "bvm8qt4omo2tig2f",
+        "playerName": "Linus Ullmark"
       },
       {
         "round": 14,
@@ -7458,19 +7644,22 @@
         "round": 14,
         "pick": 220,
         "playerId": "02oak",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Connor Brown"
       },
       {
         "round": 14,
         "pick": 221,
         "playerId": "03yg4",
-        "teamId": "fdy3gp6lmo2tig2e"
+        "teamId": "fdy3gp6lmo2tig2e",
+        "playerName": "Samuel Girard"
       },
       {
         "round": 14,
         "pick": 222,
         "playerId": "04r0j",
-        "teamId": "kplo9zwcmo2tig2f"
+        "teamId": "kplo9zwcmo2tig2f",
+        "playerName": "Michael Kesselring"
       },
       {
         "round": 14,
@@ -7482,11 +7671,13 @@
         "round": 14,
         "pick": 224,
         "playerId": "048w3",
-        "teamId": "pelw39b7mo2tig2f"
+        "teamId": "pelw39b7mo2tig2f",
+        "playerName": "Justin Brazeau"
       }
     ],
     "status": "ok",
-    "draftState": "completed"
+    "draftState": "completed",
+    "draftYear": 2026
   },
   "playerStats": {},
   "playerStatsSync": {
