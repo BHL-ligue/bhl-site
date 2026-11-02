@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T19:38:49.496641+00:00",
+  "updatedAt": "2026-11-02T19:43:35.030502+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -147,8 +147,9 @@
           "name": "Ryan Donato",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "RW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -157,7 +158,8 @@
           "name": "Gabriel Vilardi",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -166,6 +168,8 @@
           "name": "Ridly Greig",
           "position": "C",
           "eligiblePositions": [
+            "LW",
+            "RW",
             "C"
           ],
           "status": "RESERVE"
@@ -202,7 +206,9 @@
           "name": "Alex Laferriere",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "LW",
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -211,8 +217,8 @@
           "name": "Will Cuylle",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -249,8 +255,8 @@
           "name": "Eeli Tolvanen",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -259,6 +265,7 @@
           "name": "Konsta Helenius",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "MINORS"
@@ -286,7 +293,8 @@
           "name": "Danila Yurov",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -410,7 +418,8 @@
           "name": "Connor McMichael",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -464,7 +473,8 @@
           "name": "Andrei Svechnikov",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -511,7 +521,8 @@
           "name": "Dawson Mercer",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -529,6 +540,7 @@
           "name": "Tyler Toffoli",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -547,6 +559,7 @@
           "name": "Gabe Perreault",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -565,6 +578,7 @@
           "name": "Logan Cooley",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "ACTIVE"
@@ -625,6 +639,7 @@
           "name": "Kirill Marchenko",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -652,7 +667,8 @@
           "name": "Nick Schmaltz",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -661,8 +677,9 @@
           "name": "Alex Newhook",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW",
-            "LW"
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -716,7 +733,8 @@
           "name": "Benjamin Kindel",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -725,6 +743,8 @@
           "name": "Leon Draisaitl",
           "position": "C",
           "eligiblePositions": [
+            "LW",
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -743,6 +763,7 @@
           "name": "Matvei Gridin",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -752,8 +773,8 @@
           "name": "Emil Heineman",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -807,7 +828,8 @@
           "name": "Dylan Holloway",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -921,6 +943,7 @@
           "name": "Quinton Byfield",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -939,8 +962,8 @@
           "name": "Kevin Fiala",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "INJURED_RESERVE"
         },
@@ -958,7 +981,8 @@
           "name": "Jake DeBrusk",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1039,7 +1063,8 @@
           "name": "Jesper Bratt",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1085,8 +1110,8 @@
           "name": "Igor Chernyshov",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "INJURED_RESERVE"
         },
@@ -1158,8 +1183,8 @@
           "name": "Logan Stankoven",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -1168,6 +1193,7 @@
           "name": "Andrew Copp",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -1210,6 +1236,7 @@
           "name": "Mika Zibanejad",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -1219,6 +1246,7 @@
           "name": "Vladimir Tarasenko",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -1246,6 +1274,7 @@
           "name": "Wyatt Johnston",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -1372,7 +1401,8 @@
           "name": "Pontus Holmberg",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -1487,8 +1517,8 @@
           "name": "Cutter Gauthier",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1506,6 +1536,7 @@
           "name": "Nazem Kadri",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -1515,8 +1546,8 @@
           "name": "Owen Tippett",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1525,8 +1556,8 @@
           "name": "Tyler Seguin",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -1535,6 +1566,7 @@
           "name": "Drake Batherson",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -1580,7 +1612,8 @@
           "name": "William Eklund",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "INJURED_RESERVE"
         },
@@ -1608,8 +1641,8 @@
           "name": "Tij Iginla",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "MINORS"
         },
@@ -1627,7 +1660,8 @@
           "name": "Egor Chinakhov",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1681,6 +1715,7 @@
           "name": "Trevor Moore",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -1717,7 +1752,8 @@
           "name": "Jake Neighbours",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -1795,6 +1831,7 @@
           "name": "Tyler Bertuzzi",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -1831,7 +1868,8 @@
           "name": "Parker Kelly",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -1849,6 +1887,7 @@
           "name": "Matt Duchene",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "INJURED_RESERVE"
@@ -1867,7 +1906,8 @@
           "name": "Brad Marchand",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -1885,6 +1925,7 @@
           "name": "Frank Nazar",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -2014,7 +2055,8 @@
           "name": "Victor Olofsson",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -2032,7 +2074,8 @@
           "name": "Teuvo Teravainen",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -2041,8 +2084,8 @@
           "name": "Mavrik Bourque",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2066,6 +2109,7 @@
           "name": "Matt Savoie",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "INJURED_RESERVE"
@@ -2075,6 +2119,7 @@
           "name": "Alex Tuch",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -2084,7 +2129,8 @@
           "name": "Jared McCann",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "INJURED_RESERVE"
         },
@@ -2102,6 +2148,7 @@
           "name": "Charlie Coyle",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -2121,7 +2168,8 @@
           "position": "LW",
           "eligiblePositions": [
             "LW",
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2139,6 +2187,7 @@
           "name": "Marat Khusnutdinov",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -2166,6 +2215,7 @@
           "name": "Pius Suter",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -2184,7 +2234,8 @@
           "name": "Timo Meier",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -2221,8 +2272,8 @@
           "name": "Martin Pospisil",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2294,6 +2345,7 @@
           "name": "Oliver Bjorkstrand",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -2303,6 +2355,8 @@
           "name": "Easton Cowan",
           "position": "C",
           "eligiblePositions": [
+            "LW",
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -2381,8 +2435,8 @@
           "name": "JJ Peterka",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -2436,7 +2490,8 @@
           "name": "Nikolaj Ehlers",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -2445,6 +2500,7 @@
           "name": "Shane Wright",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "RESERVE"
@@ -2491,7 +2547,8 @@
           "name": "Will Smith",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2545,8 +2602,9 @@
           "name": "Morgan Geekie",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW",
-            "LW"
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2555,8 +2613,9 @@
           "name": "Evan Rodrigues",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2574,7 +2633,8 @@
           "name": "Ilya Protas",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "MINORS"
         },
@@ -2583,7 +2643,9 @@
           "name": "Rickard Rakell",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2743,6 +2805,7 @@
           "name": "Mackie Samoskevich",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -2770,6 +2833,7 @@
           "name": "Mikael Granlund",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -2977,8 +3041,8 @@
           "name": "Ryan Nugent-Hopkins",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -2987,6 +3051,7 @@
           "name": "Kiefer Sherwood",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -2996,6 +3061,7 @@
           "name": "Matvei Michkov",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -3023,8 +3089,8 @@
           "name": "Fraser Minten",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -3033,6 +3099,7 @@
           "name": "Vincent Trocheck",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -3079,6 +3146,7 @@
           "name": "Peyton Krebs",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -3124,6 +3192,7 @@
           "name": "Arseny Gritsyuk",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -3178,6 +3247,7 @@
           "name": "Claude Giroux",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "RESERVE"
@@ -3196,7 +3266,8 @@
           "name": "Trevor Zegras",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -3359,6 +3430,7 @@
           "name": "Marco Kasper",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -3377,8 +3449,8 @@
           "name": "Andrei Kuzmenko",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -3460,7 +3532,8 @@
           "name": "Emmitt Finnie",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -3487,7 +3560,8 @@
           "name": "Jake Guentzel",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -3547,7 +3621,8 @@
           "name": "Conor Geekie",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -3583,8 +3658,8 @@
           "name": "Josh Anderson",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -3648,8 +3723,8 @@
           "name": "Aliaksei Protas",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -3676,7 +3751,8 @@
           "name": "Sam Reinhart",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -3768,7 +3844,8 @@
           "name": "Alex Ovechkin",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -3939,7 +4016,8 @@
           "name": "Dmitry Voronkov",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -3948,7 +4026,8 @@
           "name": "Jason Zucker",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -3957,6 +4036,7 @@
           "name": "Tage Thompson",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -4021,8 +4101,8 @@
           "name": "Mark Jankowski",
           "position": "C",
           "eligiblePositions": [
-            "C",
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "RESERVE"
         },
@@ -4136,7 +4216,8 @@
           "name": "Jack Roslovic",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -4173,6 +4254,7 @@
           "position": "LW",
           "eligiblePositions": [
             "LW",
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -4209,7 +4291,9 @@
           "name": "Pavel Buchnevich",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "LW",
+            "RW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -4281,6 +4365,7 @@
           "name": "J.T. Miller",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW",
             "C"
           ],
@@ -4318,6 +4403,7 @@
           "name": "Erik Haula",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "RESERVE"
@@ -4327,6 +4413,7 @@
           "name": "Frederick Gaudreau",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "RESERVE"
@@ -4414,8 +4501,8 @@
           "name": "William Carrier",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -4433,6 +4520,7 @@
           "name": "Pavel Zacha",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "ACTIVE"
@@ -4460,8 +4548,8 @@
           "name": "Vasily Podkolzin",
           "position": "RW",
           "eligiblePositions": [
-            "RW",
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "ACTIVE"
         },
@@ -4479,7 +4567,8 @@
           "name": "Nick Robertson",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -4497,7 +4586,8 @@
           "name": "Brett Howden",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "C"
           ],
           "status": "ACTIVE"
         },
@@ -4534,6 +4624,7 @@
           "position": "LW",
           "eligiblePositions": [
             "LW",
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -4543,6 +4634,7 @@
           "name": "Valeri Nichushkin",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -4579,6 +4671,7 @@
           "name": "Cole Perfetti",
           "position": "RW",
           "eligiblePositions": [
+            "LW",
             "RW"
           ],
           "status": "ACTIVE"
@@ -4671,6 +4764,7 @@
           "name": "Oliver Moore",
           "position": "C",
           "eligiblePositions": [
+            "LW",
             "C"
           ],
           "status": "MINORS"
@@ -4680,7 +4774,8 @@
           "name": "Mathew Barzal",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "RESERVE"
         },
