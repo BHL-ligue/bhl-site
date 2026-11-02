@@ -14,7 +14,7 @@ function stamp(){
  const age=Date.now()-Date.parse(snapshot.updatedAt);
  return '<p class="bhl-ft-note'+(age>12*3600000?' bhl-ft-stale':'')+'">Mise à jour : '+esc(new Date(snapshot.updatedAt).toLocaleString('fr-CA',{timeZone:'America/Toronto'}))+' · heure de Montréal'+(age>12*3600000?' · Données anciennes, dernière version disponible.':'')+'</p>';
 }
-function game(m){return '<article class="bhl-ft-game">'+[m.away,m.home].map(t=>'<div><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</article>'}
+function game(m){return window.BHLScoreUI?BHLScoreUI.card(m):'<article class="bhl-ft-game">'+[m.away,m.home].map(t=>'<div><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</article>'}
 function draw(){
  if(!snapshot)return;
  if(!root){drawRoster();return}
@@ -27,7 +27,7 @@ function draw(){
  const standing=snapshot.standings.find(t=>t.teamId===team.id)||{};
  const games=snapshot.matchups.filter(m=>m.away.teamId===team.id||m.home.teamId===team.id);
  root.innerHTML='<div class="bhl-ft-heading"><h3>Saison en cours · Fantrax</h3><a href="bhl-fantrax.html">Classement complet →</a></div>'+stamp()+
- '<div class="bhl-ft-stats">'+[['Rang Fantrax',standing.rank==null?'—':'#'+standing.rank],['Fiche V-D-N',standing.points||'—'],['Points fantasy pour',fmt(standing.totalPointsFor)]].map(([label,value])=>'<div><span>'+label+'</span><strong>'+esc(value)+'</strong></div>').join('')+'</div>'+
+ '<div class="bhl-ft-team-id">'+(window.BHLScoreUI?BHLScoreUI.team(team.name):esc(team.name))+'</div><div class="bhl-ft-stats">'+[['Rang Fantrax',standing.rank==null?'—':'#'+standing.rank],['Fiche V-D-N',standing.points||'—'],['Points fantasy pour',fmt(standing.totalPointsFor)]].map(([label,value])=>'<div><span>'+label+'</span><strong>'+esc(value)+'</strong></div>').join('')+'</div>'+
  '<h4>Affrontements · période '+esc(snapshot.scoringPeriod)+'</h4><div class="bhl-ft-games">'+(games.map(game).join('')||'<p>Aucun affrontement pour cette période.</p>')+'</div>'+
  '';
  drawRoster();
