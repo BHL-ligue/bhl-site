@@ -530,6 +530,41 @@ function bhlOfficialNhlId(id,name){
  return 0;
 }
 function bhlOfficialNhlName(name){return BHL_NHL_NAME_ALIASES[norm(name)]||name}
+function bhlTimeString(value){
+ if(value===null||value===undefined||value==='')return 'N/D';
+ if(typeof value==='string'&&/^\\d+:\\d\\d$/.test(value))return value;
+ const seconds=Number(value);
+ if(!Number.isFinite(seconds)||seconds<0)return 'N/D';
+ return Math.floor(seconds/60)+':'+String(Math.round(seconds%60)).padStart(2,'0');
+}
+async function bhlCurrentNhlUsage(dialog,fantraxId){
+ try{
+  const directory=await bhlIdentityDirectory();
+  const entry=directory.players?.[String(fantraxId||'')];
+  if(entry?.status!=='confirmed'||!entry.nhlId)return;
+  const season='20262027',nhlId=Number(entry.nhlId);
+  const [toi,pp,pk]=await Promise.all([
+   nhlSeasonReport('skater','timeonice',nhlId,season,'').catch(()=>null),
+   nhlSeasonReport('skater','powerplay',nhlId,season,'').catch(()=>null),
+   nhlSeasonReport('skater','penaltykill',nhlId,season,'').catch(()=>null)
+  ]);
+  if(!dialog.isConnected)return;
+  const stats=dialog.querySelector('.bhl-player-stats');
+  if(!stats)return;
+  const box=document.createElement('div');
+  box.className='bhl-player-totals';
+  const fields=[
+   ['TOI',historicalNumber(toi,['timeOnIce','totalTimeOnIce'])],
+   ['TOIPP',historicalNumber(pp,['ppTimeOnIce','timeOnIce'])],
+   ['TOIPK',historicalNumber(pk,['shTimeOnIce','timeOnIce'])]
+  ];
+  // NHL REST reports express these season totals in seconds.
+  box.innerHTML=fields.map(([label,value])=>'<div><span>'+label+'</span><strong>'+bhlTimeString(value)+'</strong></div>').join('');
+  const title=document.createElement('h4');title.textContent='Temps de jeu — saison 2026-2027';
+  stats.append(title,box);
+ }catch(error){console.warn('Temps de jeu LNH indisponible',error)}
+}
+
 async function bhlResolveUniqueDirectoryId(name,source){
  const directory=await bhlIdentityDirectory();
  const matches=Object.entries(directory.players||{}).filter(([,entry])=>norm(entry.fantraxName)===norm(name)||Array.isArray(entry.aliases)&&entry.aliases.some(alias=>norm(alias)===norm(name)));
@@ -621,6 +656,7 @@ function open(id,name,source){
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
  fill(dialog.querySelector('.bhl-player-stats'),id,name);
  addSections(dialog,name,id);
+ bhlCurrentNhlUsage(dialog,id);
  if(bhlOfficialNhlId(id,name)){
   const nhlId=bhlOfficialNhlId(id,name);
   nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing').then(profile=>{
