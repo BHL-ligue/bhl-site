@@ -44,7 +44,9 @@ return {render,photos,sort,compose};
 })();
 (()=>{if(typeof window.bhlNhlApplyPortraits==="function")return;
 const bhlNhlPortraitCache=new Map();
-const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817};
+const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559};
+window.BHLNhlPlayerIds=bhlKnownNhlIds;
+window.BHLNhlNameKey=bhlNhlPlayerName;
 function bhlNhlPlayerName(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
 }
@@ -93,7 +95,7 @@ async function bhlNhlPortrait(name){
     const headshot=String(profile?.headshot||'');
     const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
     const photo=/^https:\/\/(?:assets\.nhle\.com|media\.d3\.nhl\.com)\//.test(headshot)?headshot:null;
-    const fallbacks=team?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png'):[];
+    const fallbacks=['20262027','20252026','20242025'].flatMap(season=>team?['https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png','https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']:['https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']);
     return {url:photo,alternates:fallbacks.filter(url=>url!==photo),profile:'https://www.nhl.com/player/'+id};
   })().catch(error=>{console.warn('Photo NHL non trouvée pour '+name,error);return null;});
   bhlNhlPortraitCache.set(key,request);
