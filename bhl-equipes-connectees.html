@@ -421,17 +421,21 @@ async function bhlPortraitJson(url){
  }
  throw Error('Service NHL indisponible');
 }
+let bhlPortraitDirectoryPromise;
+function bhlPortraitDirectory(){
+ return bhlPortraitDirectoryPromise||(bhlPortraitDirectoryPromise=fetch('data/player-identity-map.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Répertoire indisponible');return r.json()}).catch(e=>{bhlPortraitDirectoryPromise=null;throw e}));
+}
 function bhlPortrait(name){
  const key=bhlPortraitNorm(name);if(!key)return Promise.resolve(null);
  if(bhlPortraitCache.has(key))return bhlPortraitCache.get(key);
  const promise=(async()=>{
-  const alias={'alex carrier':'Alexandre Carrier'};const officialName=alias[key]||name;
-  const known={'alex carrier':8478851};
-  const directId=known[key];
-  const results=directId?[]:await bhlPortraitJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=50&q='+encodeURIComponent(officialName));
-  const list=Array.isArray(results)?results:(results?.data||[]);
-  const match=list.find(p=>{const n=p.name||p.fullName||p.playerName;return bhlPortraitNorm(n)===key||bhlPortraitNorm(String(n).split(',').reverse().join(' '))===key});
-  const id=Number(directId||match?.playerId||match?.id);if(!Number.isInteger(id)||id<=0)return null;
+  const directory=await bhlPortraitDirectory();
+  const matches=Object.entries(directory.players||{}).filter(([,p])=>bhlPortraitNorm(p.fantraxName)===key||Array.isArray(p.aliases)&&p.aliases.some(alias=>bhlPortraitNorm(alias)===key));
+  // Historical protections have names but no Fantrax ID. Never guess between homonyms.
+  if(matches.length!==1)return null;
+  const entry=matches[0][1];
+  if(entry.status!=='confirmed'||!entry.nhlId)return null;
+  const id=Number(entry.nhlId);
   const profile=await bhlPortraitJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
   const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
   const urls=[profile?.headshot,...(team?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png'):[])].filter(x=>typeof x==='string'&&x.startsWith('https://'));
