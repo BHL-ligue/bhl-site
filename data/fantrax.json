@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T23:16:33.341878+00:00",
+  "updatedAt": "2026-11-02T23:37:03.029668+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -642,7 +642,7 @@
             "LW",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "04znw",
@@ -675,7 +675,7 @@
         {
           "id": "04mv3",
           "name": "Alex Newhook",
-          "position": "RW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -717,7 +717,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rip",
@@ -785,7 +785,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04z51",

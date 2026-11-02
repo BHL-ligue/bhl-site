@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-02T23:16:33.341878+00:00"
+    "rosterUpdatedAt": "2026-11-02T23:37:03.029668+00:00"
   },
   "players": {
     "02un4": {
@@ -796,7 +796,7 @@
       "nhlName": "Kirill Marchenko",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "INJURED_RESERVE",
       "onCurrentRoster": true
     },
     "04znw": {
@@ -838,7 +838,7 @@
     "04mv3": {
       "fantraxName": "Alex Newhook",
       "bhlTeam": "Ottawa Senators",
-      "position": "RW",
+      "position": "C",
       "nhlTeam": "MTL",
       "nhlId": 8481618,
       "nhlName": "Alex Newhook",
@@ -892,7 +892,7 @@
       "nhlName": "Justin Brazeau",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "INJURED_RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "03rip": {
@@ -912,12 +912,10 @@
       "bhlTeam": "Ottawa Senators",
       "position": "RW",
       "nhlTeam": "PIT",
-      "nhlId": 8485414,
-      "nhlName": "Ben Kindel",
-      "aliases": [
-        "Benjamin Kindel"
-      ],
-      "status": "confirmed",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved",
       "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
@@ -978,7 +976,7 @@
       "nhlName": "Sean Couturier",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04z51": {
@@ -2275,9 +2273,7 @@
       "nhlTeam": "NSH",
       "nhlId": null,
       "nhlName": null,
-      "aliases": [
-        "Cam Reid"
-      ],
+      "aliases": [],
       "status": "unresolved",
       "rosterStatus": "MINORS",
       "onCurrentRoster": true
@@ -4652,14 +4648,11 @@
       "fantraxName": "Phillip Tomasino",
       "bhlTeam": "Florida Panthers",
       "position": "RW",
-      "nhlTeam": "OTT",
-      "nhlId": 8481577,
-      "nhlName": "Philip Tomasino",
-      "aliases": [
-        "Phillip Tomasino",
-        "Phil Tomasino"
-      ],
-      "status": "confirmed",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved",
       "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
@@ -4920,12 +4913,10 @@
       "bhlTeam": "Hartford Whalers",
       "position": "RW",
       "nhlTeam": "NSH",
-      "nhlId": 8484993,
-      "nhlName": "Egor Surin",
-      "aliases": [
-        "Yegor Surin"
-      ],
-      "status": "confirmed",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved",
       "rosterStatus": "MINORS",
       "onCurrentRoster": true
     },
