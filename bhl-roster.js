@@ -36,7 +36,7 @@ function render(rows,showTeam=false){
  if(status==='ACTIVE'){
   if(showTeam){const teams=[...new Set(list.map(p=>p.teamName))];body=teams.map(name=>'<h5 class="bhl-pro-team">'+esc(name)+'</h5>'+lineup(list.filter(p=>p.teamName===name))).join('')}
   else body=lineup(list);
- }else body='<div class="bhl-ft-table"><table><thead><tr><th>Position</th><th>Joueur</th>'+(showTeam?'<th>Organisation BHL</th>':'')+'<th>FP/G</th><th>FPTS</th></tr></thead><tbody>'+list.map(p=>'<tr><td><span class="bhl-lineup-badge">'+esc(eligibility(p))+'</span></td><td>'+'<button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(p.name)+'</button></td>'+(showTeam?'<td>'+esc(p.teamName)+'</td>':'')+'<td>'+fmt(stats(p).gp>0?stats(p).fpg:null)+'</td><td>'+fmt(stats(p).fpts)+'</td></tr>').join('')+'</tbody></table></div>';
+ }else body='<div class="bhl-ft-table"><table><thead><tr><th>Position</th><th>Joueur</th>'+(showTeam?'<th>Organisation BHL</th>':'')+'<th>FP/G</th><th>FPTS</th></tr></thead><tbody>'+list.map(p=>'<tr data-bhl-roster-player="'+esc(String(p.id||'').replaceAll('*',''))+'"><td><span class="bhl-lineup-badge">'+esc(eligibility(p))+'</span></td><td>'+'<button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(p.name)+'</button></td>'+(showTeam?'<td>'+esc(p.teamName)+'</td>':'')+'<td class="bhl-row-fpg">'+fmt(stats(p).gp>0?stats(p).fpg:null)+'</td><td class="bhl-row-fpts">'+fmt(stats(p).fpts)+'</td></tr>').join('')+'</tbody></table></div>';
  return '<section class="bhl-roster-block'+(status==='ACTIVE'?' bhl-roster-starting':'')+'" data-roster-status="'+status+'"><div class="bhl-roster-title"><h4>'+title+'</h4><span>'+list.length+' joueur(s)</span></div>'+(list.length?body:'<p class="bhl-roster-empty">Aucun joueur dans cette section pour les filtres choisis.</p>')+'</section>';
  }).join('');
 }
@@ -69,11 +69,30 @@ function reorderCards(container){
   }
  }
 }
+function reorderTables(container){
+ for(const table of container.querySelectorAll('.bhl-roster-block:not(.bhl-roster-starting) table')){
+  const body=table.tBodies[0];if(!body)continue;
+  const rows=[...body.rows];
+  rows.sort((a,b)=>{
+   const score=row=>{
+    const id=row.dataset.bhlRosterPlayer;
+    const v=window.BHLOfficialRosterStats?.[id];
+    const position=row.querySelector('.bhl-lineup-badge')?.textContent?.split(',')[0]?.trim()||'';
+    return {rank:positions.indexOf(position)<0?99:positions.indexOf(position),
+      fpg:v?.gp>0&&Number.isFinite(v.fpg)?v.fpg:-Infinity,
+      fpts:v?.gp>0&&Number.isFinite(v.fpts)?v.fpts:-Infinity};
+   };
+   const x=score(a),y=score(b);
+   return x.rank-y.rank||y.fpg-x.fpg||y.fpts-x.fpts;
+  });
+  rows.forEach(row=>body.appendChild(row));
+ }
+}
 function scheduleReorder(container,requests){
  if(sortTimers.has(container))clearTimeout(sortTimers.get(container));
  const timer=setTimeout(()=>{
   if(!container.isConnected)return;
-  Promise.allSettled(requests).then(()=>{if(container.isConnected)reorderCards(container)});
+  Promise.allSettled(requests).then(()=>{if(container.isConnected){reorderCards(container);reorderTables(container)}});
  },350);
  sortTimers.set(container,timer);
 }
@@ -83,14 +102,24 @@ function photos(container){
  if(typeof window.bhlNhlApplyPortraits==='function')window.bhlNhlApplyPortraits(container);
  const cards=[...container.querySelectorAll('.bhl-lineup-player[data-bhl-nhl-name]')];
  const requests=[];
- for(const card of cards){
-  const button=card.querySelector('[data-bhl-player-id]');
+ const rows=[...container.querySelectorAll('tr[data-bhl-roster-player]')];
+ const jobs=[...cards.map(node=>({node,button:node.querySelector('[data-bhl-player-id]'),kind:'card'})),
+  ...rows.map(node=>({node,button:node.querySelector('[data-bhl-player-id]'),kind:'row'}))];
+ for(const job of jobs){
+  const card=job.node;
+  const button=job.button;
   if(!button)continue;
   const id=String(button.dataset.bhlPlayerId||'').replaceAll('*','');
   const name=button.dataset.bhlPlayerName||card.dataset.bhlNhlName;
   if(!id)continue;
   const paint=stats=>{
    if(!card.isConnected)return;
+   if(job.kind==='row'){
+    const fpg=card.querySelector('.bhl-row-fpg'),fpts=card.querySelector('.bhl-row-fpts');
+    if(fpg)fpg.textContent=fmt(stats?.gp>0?stats.fpg:null);
+    if(fpts)fpts.textContent=fmt(stats?.fpts);
+    return;
+   }
    const metrics=card.querySelectorAll('.bhl-pro-metrics b');
    if(metrics[0])metrics[0].textContent=fmt(stats?.gp>0?stats.fpg:null);
    if(metrics[1])metrics[1].textContent=fmt(stats?.fpts);
@@ -98,7 +127,7 @@ function photos(container){
    if(gp)gp.textContent=fmt(stats?.gp)+' PJ';
   };
   if(window.BHLOfficialRosterStats[id])paint(window.BHLOfficialRosterStats[id]);
-  if(!pending.has(id)){
+  if(!pending.has(id)&&!window.BHLOfficialRosterStats[id]){
    pending.set(id,(async()=>{
     // The profile script is deferred; wait for it rather than using stale Fantrax totals.
     for(let i=0;i<60&&!window.BHLPlayerStats?.officialStats;i++)await new Promise(resolve=>setTimeout(resolve,100));
@@ -124,8 +153,8 @@ function photos(container){
    })().catch(error=>{console.warn('Données LNH de la carte indisponibles',name,error);return null}).finally(()=>pending.delete(id)));
   }
   const request=pending.get(id);
-  requests.push(request);
-  request.then(paint);
+  if(request){requests.push(request);request.then(paint);}
+  else paint(window.BHLOfficialRosterStats[id]);
  }
  scheduleReorder(container,requests);
 }
