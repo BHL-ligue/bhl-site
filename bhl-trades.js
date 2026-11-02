@@ -236,7 +236,7 @@ function trPortraitModal(name,details=''){
 }
 function trPortraitFill(root){
  if(!root)return;
- root.querySelectorAll('img[data-bhl-portrait]').forEach(img=>trPortraitImg(img,img.dataset.trPortrait));
+ root.querySelectorAll('img[data-trade-portrait]').forEach(img=>trPortraitImg(img,img.dataset.tradePortrait));
 }
 
 function showPlayerHistory(el,data,name){
