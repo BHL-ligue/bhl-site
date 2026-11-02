@@ -249,7 +249,7 @@ async function populatePlayerBio(dialog,id,name){
    const [y,m,d]=raw.split('-').map(Number),today=new Date();
    const age=today.getFullYear()-y-((today.getMonth()+1<m||(today.getMonth()+1===m&&today.getDate()<d))?1:0);
    const date=new Date(Date.UTC(y,m-1,d));
-   birth.textContent='Âge : '+age+' ans · Né le '+new Intl.DateTimeFormat('fr-CA',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(date);
+   birth.innerHTML='<span class="bhl-bio-pill"><span class="bhl-bio-label">ÂGE</span><strong>'+age+' ans</strong></span><span class="bhl-bio-pill"><span class="bhl-bio-label">NAISSANCE</span><strong>'+new Intl.DateTimeFormat('fr-CA',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(date)+'</strong></span>';
   }
  }catch(e){}
 }
