@@ -44,7 +44,7 @@ return {render,photos,sort,compose};
 })();
 (()=>{if(typeof window.bhlNhlApplyPortraits==="function")return;
 const bhlNhlPortraitCache=new Map();
-const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559};
+const bhlKnownNhlIds={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
 window.BHLNhlPlayerIds=bhlKnownNhlIds;
 window.BHLNhlNameKey=bhlNhlPlayerName;
 function bhlNhlPlayerName(value){
@@ -72,54 +72,41 @@ async function bhlNhlJson(url){
   throw Error('Service de recherche NHL temporairement indisponible');
 }
 async function bhlNhlPortrait(name){
-  const key=bhlNhlPlayerName(name);
-  if(!key)return null;
-  if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
-  const request=(async()=>{
-    // Search variants account for NHL's inconsistent apostrophes, hyphens and initials.
-    const variants=[name,name.replace(/[’‘\u2019]/g,"'"),name.replace(/['’‘-]/g,' '),bhlNhlPlayerName(name)];
-    const unique=[...new Set(variants.map(v=>v.trim()).filter(Boolean))];
-    let match=null;
-    for(const variant of (bhlKnownNhlIds[key]?[]:unique)){
-      try{
-        const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(variant);
-        const result=await bhlNhlJson(url);
-        const matches=Array.isArray(result)?result:(Array.isArray(result?.data)?result.data:[]);
-        match=matches.find(p=>bhlNhlNamesMatch(name,p.name||p.fullName||p.playerName||[p.firstName,p.lastName].join(' ')));
-        if(match)break;
-      }catch(e){console.warn('NHL search variant failed',variant,e)}
-    }
-    const id=Number(bhlKnownNhlIds[key]||match?.playerId||match?.id);
-    if(!Number.isInteger(id)||id<=0)return null;
-    if(bhlKnownNhlIds[key]){
-      const team={8476454:'EDM',8480817:'CAR',8481559:'NJD'}[id]||'NHL';
-      const urls=[
-       'https://assets.nhle.com/mugs/nhl/20262027/'+team+'/'+id+'.png',
-       'https://assets.nhle.com/mugs/nhl/20252026/'+team+'/'+id+'.png',
-       'https://assets.nhle.com/mugs/nhl/20252026/NHL/'+id+'.png',
-       'https://assets.nhle.com/mugs/nhl/20242025/NHL/'+id+'.png'
-      ];
-      return {url:urls[0],alternates:urls.slice(1),profile:'https://www.nhl.com/player/'+id};
-    }
-    // A portrait must never depend on the availability of the player landing API.
-    // For confirmed IDs, the NHL headshot endpoint is immediately usable.
-    const knownTeam={8476454:'EDM',8480817:'CAR',8481559:'NJD'}[id];
-    const directHeadshot='https://assets.nhle.com/mugs/nhl/20262027/'+(knownTeam||'NHL')+'/'+id+'.png';
-    let profile=null;
-    try{profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing')}catch(e){
-      console.warn('NHL landing indisponible; utilisation des portraits directs pour '+name,e);
-    }
-    const headshot=String(profile?.headshot||'');
-    const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
-    const photo=/^https:\/\//.test(headshot)?headshot:directHeadshot;
-    const fallbacks=['20262027','20252026','20242025','20232024'].flatMap(season=>
-      team?['https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png','https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']:
-      ['https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']);
-    const preferred=knownTeam?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+knownTeam+'/'+id+'.png'):[];
-    return {url:photo,alternates:[...preferred,...fallbacks].filter(url=>url!==photo),profile:'https://www.nhl.com/player/'+id};
-  })().catch(error=>{console.warn('Photo NHL non trouvée pour '+name,error);return null;});
-  bhlNhlPortraitCache.set(key,request);
-  return request;
+ const key=bhlNhlPlayerName(name);
+ if(!key)return null;
+ if(bhlNhlPortraitCache.has(key))return bhlNhlPortraitCache.get(key);
+ const request=(async()=>{
+  // All BHL portraits use the NHL player ID, not an inferred image from a name.
+  let id=Number(bhlKnownNhlIds[key]||0);
+  if(!id){
+   const variants=[name,String(name).replace(/[’‘]/g,"'"),String(name).replace(/['’‘-]/g,' '),key];
+   for(const variant of [...new Set(variants.map(v=>v.trim()).filter(Boolean))]){
+    try{
+     const result=await bhlNhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(variant));
+     const matches=Array.isArray(result)?result:(Array.isArray(result?.data)?result.data:[]);
+     const match=matches.find(p=>bhlNhlNamesMatch(name,p.name||p.fullName||p.playerName||[p.firstName,p.lastName].filter(Boolean).join(' ')));
+     if(match){id=Number(match.playerId||match.id);break}
+    }catch(error){console.warn('Recherche NHL indisponible pour '+name,error)}
+   }
+  }
+  if(!Number.isInteger(id)||id<=0)return null;
+  let profile=null;
+  try{profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing')}catch(error){
+   console.warn('Profil NHL indisponible, utilisation des portraits directs : '+name,error);
+  }
+  const team=String(profile?.currentTeamAbbrev||({8476454:'EDM',8480817:'CAR',8481559:'NJD',8475158:'NSH'}[id])||'').replace(/[^A-Z]/g,'');
+  const urls=[];
+  const headshot=String(profile?.headshot||'');
+  if(/^https:\/\//i.test(headshot))urls.push(headshot);
+  for(const season of ['20262027','20252026','20242025','20232024','20222023']){
+   if(team)urls.push('https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png');
+   urls.push('https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png');
+  }
+  const unique=[...new Set(urls)];
+  return {url:unique[0],alternates:unique.slice(1),profile:'https://www.nhl.com/player/'+id,nhlId:id};
+ })().catch(error=>{console.warn('Portrait NHL non trouvé : '+name,error);return null});
+ bhlNhlPortraitCache.set(key,request);
+ return request;
 }
 function bhlNhlApplyPortraits(panel){
   panel.querySelectorAll('[data-bhl-nhl-name]').forEach(async card=>{
