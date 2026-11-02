@@ -68,7 +68,7 @@ async function historicalFantasy(id,season,goalie,center){
  const [summary,realtime,faceoffs]=await Promise.all([
   nhlSeasonReport('skater','summary',id,season),
   nhlSeasonReport('skater','realtime',id,season).catch(()=>null),
-  center?nhlSeasonReport('skater','faceoffpercentages',id,season).catch(()=>null):Promise.resolve(null)
+  center?nhlSeasonReport('skater','faceoffwins',id,season).catch(()=>null):Promise.resolve(null)
  ]);
  const v={
   G:stat(summary,['goals']),
@@ -77,7 +77,7 @@ async function historicalFantasy(id,season,goalie,center){
   Hit:stat(realtime,['hits']),
   Blk:stat(realtime,['blockedShotAttempts','blockedShots']),
   Tk:stat(realtime,['takeaways']),
-  FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','faceoffsWon'])??stat(summary,['faceoffWins','faceoffsWon']):0
+  FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'])??stat(summary,['faceoffWins','faceoffsWon']):0
  };
  const complete=Object.values(v).every(x=>x!==null);
  return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
