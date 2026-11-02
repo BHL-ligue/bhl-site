@@ -56,7 +56,14 @@ async function refresh(){
   if(!response.ok)throw Error('Chargement indisponible');
   const data=await response.json();
   if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups)||!Number.isFinite(Date.parse(data.updatedAt)))throw Error('Données invalides');
-  if(!snapshot||snapshot.updatedAt!==data.updatedAt){snapshot=data;draw();}
+  if(!snapshot||snapshot.updatedAt!==data.updatedAt){
+   const previousStatus=rosterRoot?.querySelector('[data-ft-status]')?.value||'';
+   snapshot=data;draw();
+   if(previousStatus&&rosterRoot){
+    const select=rosterRoot.querySelector('[data-ft-status]');
+    if(select){select.value=previousStatus;select.dispatchEvent(new Event('change'));}
+   }
+  }
  }catch(error){
   if(!snapshot){if(root)root.innerHTML='<p class="bhl-ft-note">Les données Fantrax sont temporairement indisponibles. <a href="bhl-fantrax.html">Consulter la saison →</a></p>';if(rosterRoot)rosterRoot.innerHTML='<p class="bhl-ft-note">Alignement temporairement indisponible.</p>';}
  }
