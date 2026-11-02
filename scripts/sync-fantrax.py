@@ -20,6 +20,26 @@ def fetch(method, **params):
         raise ValueError("Invalid Fantrax response: " + method)
     return result
 
+def playoff_percent(row):
+    """Extract a Fantrax playoff probability if its API exposes one."""
+    aliases = {"playoffprobability", "playoffpercentage", "playoffodds",
+               "playoffchance", "playoffpercent", "playoffpct",
+               "playoffspercentage", "playoffqualificationpercentage",
+               "playoffqualificationpct", "pctplayoffs", "playoffprob"}
+    for key, value in row.items():
+        if key.lower().replace("_", "").replace("-", "") not in aliases:
+            continue
+        if value is None:
+            continue
+        try:
+            number = float(str(value).strip().replace("%", ""))
+        except ValueError:
+            continue
+        if 0 <= number <= 100:
+            return number if number > 1 or "%" in str(value) else number * 100
+    return None
+
+
 def period_at(periods, now):
     for period in periods:
         start = dt.datetime.fromisoformat(period["startDate"])
@@ -36,6 +56,7 @@ def build_snapshot(now=None):
     rosters = fetch("getTeamRosters", period=roster_period)
     standings = fetch("getStandings")
     scores = fetch("getMatchupScores", period=scoring_period)
+    print("Fantrax getStandings fields:", sorted(standings[0].keys()) if standings else [])
     if len(rosters.get("rosters", {})) != 16 or len(standings) != 16:
         raise ValueError("Expected 16 teams")
     if rosters.get("period") != roster_period or scores.get("period") != scoring_period:
@@ -90,6 +111,7 @@ def build_snapshot(now=None):
                 "playoffChance", "playoffPercent", "totalPoints",
             ) if k in row and isinstance(row[k], (int, float, str, type(None)))},
             **({"totalPointsAgainst": round(against_by_team[row["teamId"]], 2)} if row.get("teamId") in against_by_team and not any(k in row for k in ("totalPointsAgainst", "fantasyPointsAgainst", "pointsAgainst")) else {}),
+            **({"playoffPercentage": playoff_percent(row)} if playoff_percent(row) is not None else {}),
         } for row in standings],
         "matchups": [{"away": {k: m["away"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["away"]},
                       "home": {k: m["home"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["home"]}}
