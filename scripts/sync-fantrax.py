@@ -262,9 +262,13 @@ def build_snapshot(now=None):
     # Experimental automatic stats from the same roster screen the DG sees.
     # Never publish raw Fantrax responses or private profile/owner information.
     live_stats = {}
+    stats_diagnostics = {"teamsAttempted": 0, "teamsWithData": 0, "errors": {}}
     for team in teams:
+        stats_diagnostics["teamsAttempted"] += 1
         try:
             extracted = parse_roster_stats(fetch_roster_stats(team["id"], roster_period))
+            if extracted:
+                stats_diagnostics["teamsWithData"] += 1
             live_stats.update(extracted)
             for player in team["players"]:
                 values = extracted.get(player["id"], {})
@@ -272,7 +276,9 @@ def build_snapshot(now=None):
                     player["eligiblePositions"] = values["eligiblePositions"]
             print(f"Roster stats {team['name']}: {len(extracted)} players parsed")
         except Exception as error:
-            print(f"Roster stats unavailable for {team['name']}: {type(error).__name__}: {error}")
+            category = type(error).__name__ + ": " + str(error)[:160]
+            stats_diagnostics["errors"][category] = stats_diagnostics["errors"].get(category, 0) + 1
+            print(f"Roster stats unavailable for {team['name']}: {category}")
     live_stats = {pid: row for pid, row in live_stats.items()
                   if any(k in row for k in ("gp", "fpg", "fpts"))}
     # Whitelist published fields: never publish owner/contact/profile data.
@@ -283,6 +289,8 @@ def build_snapshot(now=None):
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
         "playerStats": live_stats,
+        "playerStatsSync": {"status": "ok" if live_stats else "unavailable",
+                            "playerCount": len(live_stats), **stats_diagnostics},
         "upcoming": upcoming,
         "recentResults": previous_results,
         "schedule": season_schedule,
