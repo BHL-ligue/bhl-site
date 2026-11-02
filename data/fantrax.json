@@ -1,1 +1,3625 @@
-{"leagueId":"32q8rjpomo2tig1z","leagueName":"BHL Béliveau Hockey League","season":2026,"updatedAt":"2026-11-02T12:23:39.879474+00:00","rosterPeriod":5,"scoringPeriod":5,"periodDates":{"number":5,"endDate":"2026-11-02T18:59:59.0-0500","startDate":"2026-10-26T19:00:00.0-0400"},"teams":[{"id":"adfljh3wmo2tig2e","name":"Nashville Predators","players":[{"id":"02un4","name":"Connor McDavid","position":"C","status":"ACTIVE"},{"id":"03eb3","name":"Christian Dvorak","position":"C","status":"RESERVE"},{"id":"03rf2","name":"Roope Hintz","position":"C","status":"ACTIVE"},{"id":"02azf","name":"Dougie Hamilton","position":"D","status":"ACTIVE"},{"id":"062h5","name":"Gavin McKenna","position":"LW","status":"ACTIVE"},{"id":"06lvc","name":"Harrison Brunicke","position":"D","status":"MINORS"},{"id":"060je","name":"Noah Warren","position":"D","status":"MINORS"},{"id":"03e1n","name":"Adrian Kempe","position":"RW","status":"ACTIVE"},{"id":"05ylt","name":"Zach Benson","position":"LW","status":"ACTIVE"},{"id":"04ye8","name":"Jordan Spence","position":"D","status":"ACTIVE"},{"id":"05ww8","name":"Ryan Greene","position":"C","status":"ACTIVE"},{"id":"04lcs","name":"Mattias Samuelsson","position":"D","status":"ACTIVE"},{"id":"074mg","name":"Liam Ruck","position":"RW","status":"MINORS"},{"id":"060jl","name":"Jiri Kulich","position":"C","status":"RESERVE"},{"id":"03eb0","name":"Ryan Donato","position":"RW","status":"RESERVE"},{"id":"03w5m","name":"Gabriel Vilardi","position":"RW","status":"ACTIVE"},{"id":"05kdw","name":"Ridly Greig","position":"C","status":"RESERVE"},{"id":"06axy","name":"Artyom Levshunov","position":"D","status":"ACTIVE"},{"id":"05y7m","name":"Denton Mateychuk","position":"D","status":"ACTIVE"},{"id":"03zul","name":"Filip Gustavsson","position":"G","status":"INJURED_RESERVE"},{"id":"05ltt","name":"Alex Laferriere","position":"RW","status":"ACTIVE"},{"id":"05kbn","name":"Will Cuylle","position":"LW","status":"ACTIVE"},{"id":"05ran","name":"Matt Coronato","position":"RW","status":"ACTIVE"},{"id":"05gd9","name":"Zack Bolduc","position":"LW","status":"RESERVE"},{"id":"031pl","name":"Juuse Saros","position":"G","status":"ACTIVE"},{"id":"03yuf","name":"Eeli Tolvanen","position":"RW","status":"RESERVE"},{"id":"066q4","name":"Konsta Helenius","position":"C","status":"MINORS"},{"id":"03pax","name":"Ivan Provorov","position":"D","status":"INJURED_RESERVE"},{"id":"059e1","name":"Braden Schneider","position":"D","status":"ACTIVE"},{"id":"05rjg","name":"Danila Yurov","position":"LW","status":"RESERVE"},{"id":"04mtp","name":"Dylan Cozens","position":"C","status":"ACTIVE"},{"id":"042yb","name":"Brandon Hagel","position":"LW","status":"ACTIVE"}]},{"id":"4fmu58uhmo2tig2f","name":"Toronto Maple Leafs","players":[{"id":"04bii","name":"Spencer Knight","position":"G","status":"ACTIVE"},{"id":"05ril","name":"Simon Nemec","position":"D","status":"ACTIVE"},{"id":"01587","name":"Jordan Eberle","position":"RW","status":"ACTIVE"},{"id":"05oxk","name":"Mason Lohrei","position":"D","status":"ACTIVE"},{"id":"05yms","name":"Sam Rinzel","position":"D","status":"RESERVE"},{"id":"02wy3","name":"Elias Lindholm","position":"C","status":"ACTIVE"},{"id":"0457i","name":"Ukko-Pekka Luukkonen","position":"G","status":"RESERVE"},{"id":"004p4","name":"Mikael Backlund","position":"C","status":"INJURED_RESERVE"},{"id":"04amg","name":"Alexis Lafreniere","position":"LW","status":"ACTIVE"},{"id":"075ko","name":"Wyatt Cullen","position":"LW","status":"MINORS"},{"id":"04yn0","name":"Connor McMichael","position":"LW","status":"ACTIVE"},{"id":"03duf","name":"Dylan Larkin","position":"C","status":"ACTIVE"},{"id":"04kyn","name":"Sean Walker","position":"D","status":"ACTIVE"},{"id":"03ecl","name":"Gustav Forsling","position":"D","status":"ACTIVE"},{"id":"03yg3","name":"Mikhail Sergachev","position":"D","status":"ACTIVE"},{"id":"067xz","name":"Axel Sandin Pellikka","position":"D","status":"MINORS"},{"id":"048vf","name":"Andrei Svechnikov","position":"LW","status":"ACTIVE"},{"id":"02noq","name":"Mike Matheson","position":"D","status":"ACTIVE"},{"id":"0457b","name":"Casey Mittelstadt","position":"LW","status":"RESERVE"},{"id":"05r1c","name":"Juraj Slafkovsky","position":"LW","status":"ACTIVE"},{"id":"06hcw","name":"Beckett Sennecke","position":"RW","status":"ACTIVE"},{"id":"05gtp","name":"Dawson Mercer","position":"RW","status":"ACTIVE"},{"id":"05gd8","name":"Mason McTavish","position":"C","status":"ACTIVE"},{"id":"01zti","name":"Tyler Toffoli","position":"RW","status":"ACTIVE"},{"id":"06pyp","name":"Radim Mrtka","position":"D","status":"MINORS"},{"id":"06axe","name":"Gabe Perreault","position":"LW","status":"RESERVE"},{"id":"06rus","name":"Brady Martin","position":"C","status":"MINORS"},{"id":"05ui2","name":"Logan Cooley","position":"C","status":"ACTIVE"},{"id":"05j3d","name":"Bobby McMann","position":"LW","status":"RESERVE"},{"id":"05ui4","name":"Dalibor Dvorsky","position":"C","status":"RESERVE"}]},{"id":"pelw39b7mo2tig2f","name":"Ottawa Senators","players":[{"id":"05o01","name":"Sebastian Cossa","position":"G","status":"MINORS"},{"id":"02azh","name":"Jamie Oleksiak","position":"D","status":"ACTIVE"},{"id":"06fzv","name":"Cole Hutson","position":"D","status":"ACTIVE"},{"id":"04qy5","name":"Kirill Marchenko","position":"RW","status":"ACTIVE"},{"id":"04znw","name":"Brandt Clarke","position":"D","status":"ACTIVE"},{"id":"04qzc","name":"Joel Hofer","position":"G","status":"RESERVE"},{"id":"02unz","name":"Nick Schmaltz","position":"RW","status":"ACTIVE"},{"id":"04mv3","name":"Alex Newhook","position":"RW","status":"RESERVE"},{"id":"03kra","name":"Kyle Connor","position":"LW","status":"ACTIVE"},{"id":"064om","name":"Michael Hage","position":"C","status":"MINORS"},{"id":"04mto","name":"Kaapo Kakko","position":"RW","status":"RESERVE"},{"id":"048w3","name":"Justin Brazeau","position":"RW","status":"INJURED_RESERVE"},{"id":"03rip","name":"John Marino","position":"D","status":"RESERVE"},{"id":"06snb","name":"Benjamin Kindel","position":"RW","status":"RESERVE"},{"id":"02yjl","name":"Leon Draisaitl","position":"C","status":"ACTIVE"},{"id":"04f24","name":"Jeremy Swayman","position":"G","status":"ACTIVE"},{"id":"06mb0","name":"Matvei Gridin","position":"RW","status":"ACTIVE"},{"id":"05kua","name":"Emil Heineman","position":"RW","status":"ACTIVE"},{"id":"01z7v","name":"Sean Couturier","position":"C","status":"ACTIVE"},{"id":"04z51","name":"Charle-Edouard DAstous","position":"D","status":"ACTIVE"},{"id":"03ra7","name":"Zach Werenski","position":"D","status":"ACTIVE"},{"id":"04kyh","name":"Brady Tkachuk","position":"LW","status":"ACTIVE"},{"id":"0760d","name":"Jaxon Cover","position":"LW","status":"MINORS"},{"id":"051yz","name":"Dylan Holloway","position":"LW","status":"ACTIVE"},{"id":"03169","name":"Alexander Wennberg","position":"C","status":"RESERVE"},{"id":"01zql","name":"Brock Nelson","position":"C","status":"ACTIVE"},{"id":"075w6","name":"Malte Gustafsson","position":"D","status":"MINORS"},{"id":"03924","name":"Jack Eichel","position":"C","status":"ACTIVE"},{"id":"01mz5","name":"Dmitry Orlov","position":"D","status":"ACTIVE"},{"id":"0618g","name":"Cole Knuble","position":"RW","status":"RESERVE"},{"id":"05ltj","name":"Brock Faber","position":"D","status":"INJURED_RESERVE"},{"id":"03wor","name":"Mason Marchment","position":"LW","status":"ACTIVE"}]},{"id":"1bn2dvarmo2tig2f","name":"Minnesota North Stars","players":[{"id":"05riz","name":"David Jiricek","position":"D","status":"RESERVE"},{"id":"06axr","name":"Tom Willander","position":"D","status":"ACTIVE"},{"id":"066sp","name":"Aydar Suniev","position":"LW","status":"RESERVE"},{"id":"04lo0","name":"Quinton Byfield","position":"C","status":"ACTIVE"},{"id":"05g42","name":"Jack Quinn","position":"RW","status":"ACTIVE"},{"id":"03dms","name":"Kevin Fiala","position":"RW","status":"INJURED_RESERVE"},{"id":"038vb","name":"Travis Konecny","position":"RW","status":"INJURED_RESERVE"},{"id":"03rab","name":"Jake DeBrusk","position":"LW","status":"ACTIVE"},{"id":"05xcm","name":"Jonathan Lekkerimaki","position":"RW","status":"ACTIVE"},{"id":"06jhd","name":"Anton Frondell","position":"C","status":"ACTIVE"},{"id":"02nq2","name":"Chandler Stephenson","position":"C","status":"ACTIVE"},{"id":"05tas","name":"Olen Zellweger","position":"D","status":"ACTIVE"},{"id":"074v8","name":"Alberts Smits","position":"D","status":"MINORS"},{"id":"070fm","name":"Ryan Lin","position":"D","status":"MINORS"},{"id":"02yjp","name":"Ivan Barbashev","position":"LW","status":"ACTIVE"},{"id":"042ye","name":"Jesper Bratt","position":"LW","status":"ACTIVE"},{"id":"04yu6","name":"Jamie Drysdale","position":"D","status":"ACTIVE"},{"id":"04xec","name":"Matt Boldy","position":"LW","status":"ACTIVE"},{"id":"06aew","name":"Dmitri Simashev","position":"D","status":"ACTIVE"},{"id":"051m4","name":"Jackson LaCombe","position":"D","status":"ACTIVE"},{"id":"06hcr","name":"Igor Chernyshov","position":"RW","status":"RESERVE"},{"id":"0529k","name":"Yaroslav Askarov","position":"G","status":"ACTIVE"},{"id":"06ay2","name":"Luca Cagnoni","position":"D","status":"MINORS"},{"id":"03wpm","name":"Charlie McAvoy","position":"D","status":"ACTIVE"},{"id":"06pyw","name":"Victor Eklund","position":"LW","status":"RESERVE"},{"id":"070fr","name":"Xavier Villeneuve","position":"D","status":"MINORS"},{"id":"04yqp","name":"Anton Lundell","position":"C","status":"RESERVE"},{"id":"04o0g","name":"Marco Rossi","position":"C","status":"ACTIVE"},{"id":"05rf2","name":"Logan Stankoven","position":"RW","status":"ACTIVE"},{"id":"031pq","name":"Andrew Copp","position":"C","status":"RESERVE"},{"id":"04f0o","name":"Filip Chytil","position":"C","status":"RESERVE"},{"id":"066on","name":"Michael Brandsegg-Nygard","position":"RW","status":"ACTIVE"}]},{"id":"fdy3gp6lmo2tig2e","name":"Detroit Red Wings","players":[{"id":"00qs7","name":"Jamie Benn","position":"LW","status":"RESERVE"},{"id":"05m18","name":"Isak Rosen","position":"LW","status":"ACTIVE"},{"id":"06fzw","name":"Adam Jiricek","position":"D","status":"RESERVE"},{"id":"027i6","name":"Mika Zibanejad","position":"C","status":"ACTIVE"},{"id":"01xfq","name":"Vladimir Tarasenko","position":"RW","status":"RESERVE"},{"id":"05rjy","name":"Cole Eiserman","position":"LW","status":"MINORS"},{"id":"02nq3","name":"Shayne Gostisbehere","position":"D","status":"ACTIVE"},{"id":"05tqt","name":"Wyatt Johnston","position":"C","status":"ACTIVE"},{"id":"049k7","name":"Martin Necas","position":"RW","status":"ACTIVE"},{"id":"0045u","name":"Jordan Staal","position":"C","status":"INJURED_RESERVE"},{"id":"060pq","name":"Alex Bump","position":"LW","status":"RESERVE"},{"id":"03167","name":"Bo Horvat","position":"C","status":"ACTIVE"},{"id":"074v1","name":"Tommy Bleyl","position":"D","status":"MINORS"},{"id":"042w4","name":"Adam Fox","position":"D","status":"ACTIVE"},{"id":"03e1m","name":"Brayden Point","position":"C","status":"ACTIVE"},{"id":"06rqm","name":"Carter Bear","position":"C","status":"MINORS"},{"id":"03yg4","name":"Samuel Girard","position":"D","status":"INJURED_RESERVE"},{"id":"03mn8","name":"Clayton Keller","position":"LW","status":"ACTIVE"},{"id":"03d12","name":"David Pastrnak","position":"RW","status":"ACTIVE"},{"id":"06pyk","name":"Justin Carbonneau","position":"RW","status":"MINORS"},{"id":"04ld3","name":"Noah Dobson","position":"D","status":"ACTIVE"},{"id":"04qyw","name":"Linus Karlsson","position":"RW","status":"ACTIVE"},{"id":"06imq","name":"Maxim Shabanov","position":"RW","status":"ACTIVE"},{"id":"01c32","name":"Brayden Schenn","position":"LW","status":"ACTIVE"},{"id":"05g2s","name":"Adam Wilsby","position":"D","status":"ACTIVE"},{"id":"02oak","name":"Connor Brown","position":"RW","status":"RESERVE"},{"id":"05x9t","name":"Tye Kartye","position":"LW","status":"RESERVE"},{"id":"02fzm","name":"Filip Forsberg","position":"LW","status":"ACTIVE"},{"id":"02np6","name":"Jake McCabe","position":"D","status":"ACTIVE"},{"id":"03161","name":"Darnell Nurse","position":"D","status":"ACTIVE"},{"id":"0322w","name":"Ilya Sorokin","position":"G","status":"ACTIVE"},{"id":"05af9","name":"William Wallinder","position":"D","status":"RESERVE"}]},{"id":"mmvzhj4amo2tig2e","name":"Chicago Blackhawks","players":[{"id":"067yd","name":"David Reinbacher","position":"D","status":"MINORS"},{"id":"05rjd","name":"Cutter Gauthier","position":"RW","status":"ACTIVE"},{"id":"02nqb","name":"Colton Parayko","position":"D","status":"ACTIVE"},{"id":"01f3e","name":"Nazem Kadri","position":"C","status":"ACTIVE"},{"id":"03yh8","name":"Owen Tippett","position":"LW","status":"RESERVE"},{"id":"01sif","name":"Tyler Seguin","position":"C","status":"ACTIVE"},{"id":"04f2d","name":"Drake Batherson","position":"RW","status":"ACTIVE"},{"id":"02440","name":"Anders Lee","position":"LW","status":"ACTIVE"},{"id":"05tur","name":"Matthew Knies","position":"LW","status":"ACTIVE"},{"id":"06gk0","name":"Matthew Schaefer","position":"D","status":"ACTIVE"},{"id":"04mdc","name":"Logan Thompson","position":"G","status":"RESERVE"},{"id":"05r1l","name":"William Eklund","position":"LW","status":"INJURED_RESERVE"},{"id":"0725x","name":"Caleb Malhotra","position":"C","status":"MINORS"},{"id":"05gd7","name":"Cole Sillinger","position":"LW","status":"ACTIVE"},{"id":"06jhc","name":"Tij Iginla","position":"C","status":"MINORS"},{"id":"04dwk","name":"Josh Norris","position":"C","status":"ACTIVE"},{"id":"051xf","name":"Egor Chinakhov","position":"RW","status":"RESERVE"},{"id":"03jxy","name":"Auston Matthews","position":"C","status":"ACTIVE"},{"id":"0644f","name":"Ryan Leonard","position":"RW","status":"ACTIVE"},{"id":"04ye7","name":"Cam York","position":"D","status":"INJURED_RESERVE"},{"id":"059e2","name":"Justin Sourdif","position":"C","status":"RESERVE"},{"id":"03rgk","name":"Alex Carrier","position":"D","status":"ACTIVE"},{"id":"03bxl","name":"Trevor Moore","position":"RW","status":"ACTIVE"},{"id":"02o78","name":"Brett Kulak","position":"D","status":"ACTIVE"},{"id":"04gek","name":"Sean Durzi","position":"D","status":"ACTIVE"},{"id":"04f75","name":"Noah Cates","position":"C","status":"RESERVE"},{"id":"059e5","name":"Jake Neighbours","position":"LW","status":"ACTIVE"},{"id":"067xd","name":"T.J. Hughes","position":"RW","status":"RESERVE"},{"id":"03rad","name":"Thomas Chabot","position":"D","status":"RESERVE"},{"id":"01zs1","name":"Scott Wedgewood","position":"G","status":"ACTIVE"},{"id":"04zb4","name":"Moritz Seider","position":"D","status":"ACTIVE"},{"id":"06rut","name":"Cameron Reid","position":"D","status":"MINORS"}]},{"id":"gqpb7szpmo2tig2e","name":"California Golden Seals","players":[{"id":"06loq","name":"Caleb Desnoyers","position":"C","status":"MINORS"},{"id":"05ymq","name":"Matthew Poitras","position":"C","status":"ACTIVE"},{"id":"031og","name":"Tyler Bertuzzi","position":"RW","status":"RESERVE"},{"id":"04lc0","name":"Evan Bouchard","position":"D","status":"ACTIVE"},{"id":"068yz","name":"Jacob Fowler","position":"G","status":"ACTIVE"},{"id":"02o7s","name":"Connor Hellebuyck","position":"G","status":"RESERVE"},{"id":"04l8w","name":"Parker Kelly","position":"LW","status":"ACTIVE"},{"id":"05ymn","name":"Maveric Lamoureux","position":"D","status":"INJURED_RESERVE"},{"id":"01ex7","name":"Matt Duchene","position":"C","status":"INJURED_RESERVE"},{"id":"070fp","name":"Daxon Rudolph","position":"D","status":"MINORS"},{"id":"004jl","name":"Brad Marchand","position":"LW","status":"RESERVE"},{"id":"04o0h","name":"Dylan Guenther","position":"RW","status":"ACTIVE"},{"id":"05m17","name":"Frank Nazar","position":"C","status":"ACTIVE"},{"id":"003kg","name":"Patrick Kane","position":"RW","status":"ACTIVE"},{"id":"051lz","name":"Shane Pinto","position":"C","status":"ACTIVE"},{"id":"03rf7","name":"Yakov Trenin","position":"LW","status":"ACTIVE"},{"id":"05kuc","name":"Tyler Kleven","position":"D","status":"ACTIVE"},{"id":"01n84","name":"Alex Killorn","position":"LW","status":"ACTIVE"},{"id":"02ni5","name":"Jonathan Marchessault","position":"RW","status":"ACTIVE"},{"id":"03ec6","name":"Devon Toews","position":"D","status":"ACTIVE"},{"id":"03mn9","name":"Mikko Rantanen","position":"RW","status":"ACTIVE"},{"id":"03dug","name":"Tony DeAngelo","position":"D","status":"ACTIVE"},{"id":"02npl","name":"Damon Severson","position":"D","status":"ACTIVE"},{"id":"02ybj","name":"Anthony Mantha","position":"LW","status":"RESERVE"},{"id":"06loj","name":"Ethan Belchetz","position":"LW","status":"MINORS"},{"id":"04ldb","name":"Bowen Byram","position":"D","status":"ACTIVE"},{"id":"03ee4","name":"Victor Olofsson","position":"LW","status":"RESERVE"},{"id":"05w9b","name":"Calum Ritchie","position":"C","status":"MINORS"},{"id":"02nol","name":"Teuvo Teravainen","position":"LW","status":"ACTIVE"},{"id":"04zp9","name":"Mavrik Bourque","position":"C","status":"ACTIVE"},{"id":"05lu8","name":"Alexander Nikishin","position":"D","status":"RESERVE"}]},{"id":"jbmeb32tmo2tig2e","name":"Montréal Canadiens","players":[{"id":"04mq0","name":"Matt Savoie","position":"C","status":"INJURED_RESERVE"},{"id":"03d09","name":"Alex Tuch","position":"RW","status":"ACTIVE"},{"id":"03as6","name":"Jared McCann","position":"LW","status":"INJURED_RESERVE"},{"id":"01fx3","name":"Roman Josi","position":"D","status":"ACTIVE"},{"id":"01zto","name":"Charlie Coyle","position":"C","status":"ACTIVE"},{"id":"02yjj","name":"William Nylander","position":"RW","status":"ACTIVE"},{"id":"03jvu","name":"Mitch Marner","position":"LW","status":"ACTIVE"},{"id":"05ogy","name":"Stephen Halliday","position":"C","status":"ACTIVE"},{"id":"06nkc","name":"Jake OBrien","position":"C","status":"MINORS"},{"id":"05kbo","name":"Marat Khusnutdinov","position":"LW","status":"ACTIVE"},{"id":"04qyv","name":"Lukas Dostal","position":"G","status":"ACTIVE"},{"id":"06spu","name":"Alexander Zharovsky","position":"RW","status":"MINORS"},{"id":"03ofm","name":"Pius Suter","position":"C","status":"RESERVE"},{"id":"070fo","name":"Chase Reid","position":"D","status":"MINORS"},{"id":"03ra8","name":"Timo Meier","position":"LW","status":"ACTIVE"},{"id":"049ph","name":"Neal Pionk","position":"D","status":"ACTIVE"},{"id":"03uzr","name":"Matthew Tkachuk","position":"RW","status":"ACTIVE"},{"id":"05uao","name":"Collin Graf","position":"LW","status":"RESERVE"},{"id":"06axz","name":"Bradly Nadeau","position":"C","status":"RESERVE"},{"id":"023wa","name":"Jared Spurgeon","position":"D","status":"ACTIVE"},{"id":"060v8","name":"Elias Pettersson","position":"D","status":"RESERVE"},{"id":"03rf8","name":"Vince Dunn","position":"D","status":"ACTIVE"},{"id":"039cg","name":"Sam Bennett","position":"C","status":"ACTIVE"},{"id":"04xef","name":"Philip Broberg","position":"D","status":"ACTIVE"},{"id":"05tv0","name":"Jackson Blake","position":"RW","status":"ACTIVE"},{"id":"031p8","name":"Oliver Bjorkstrand","position":"RW","status":"RESERVE"},{"id":"06bap","name":"Easton Cowan","position":"C","status":"ACTIVE"},{"id":"04lcf","name":"Joel Farabee","position":"LW","status":"ACTIVE"},{"id":"04yu5","name":"Thomas Harley","position":"D","status":"ACTIVE"},{"id":"01skq","name":"Cam Fowler","position":"D","status":"RESERVE"},{"id":"01d6c","name":"Jacob Markstrom","position":"G","status":"RESERVE"},{"id":"06r63","name":"Tynan Lawrence","position":"C","status":"MINORS"}]},{"id":"l9ssazuemo2tig2e","name":"New York Rangers","players":[{"id":"05nzz","name":"Simon Edvinsson","position":"D","status":"INJURED_RESERVE"},{"id":"05w9c","name":"Macklin Celebrini","position":"C","status":"ACTIVE"},{"id":"04zj5","name":"JJ Peterka","position":"RW","status":"ACTIVE"},{"id":"05ymj","name":"Jimmy Snuggerud","position":"RW","status":"ACTIVE"},{"id":"05rj3","name":"Tristan Luneau","position":"D","status":"ACTIVE"},{"id":"02wy5","name":"Nikita Zadorov","position":"D","status":"ACTIVE"},{"id":"04lc8","name":"Jesperi Kotkaniemi","position":"C","status":"RESERVE"},{"id":"059e0","name":"Jake Sanderson","position":"D","status":"ACTIVE"},{"id":"03as8","name":"Nikolaj Ehlers","position":"LW","status":"ACTIVE"},{"id":"04y80","name":"Shane Wright","position":"C","status":"RESERVE"},{"id":"02zpp","name":"Viktor Arvidsson","position":"LW","status":"ACTIVE"},{"id":"0579x","name":"Adam Fantilli","position":"C","status":"ACTIVE"},{"id":"061im","name":"Michael Misa","position":"C","status":"MINORS"},{"id":"04zj8","name":"Bobby Brink","position":"RW","status":"ACTIVE"},{"id":"0644b","name":"Will Smith","position":"RW","status":"ACTIVE"},{"id":"0457k","name":"Jake Oettinger","position":"G","status":"ACTIVE"},{"id":"01xfp","name":"Jaden Schwartz","position":"LW","status":"RESERVE"},{"id":"04ymu","name":"Hendrix Lapierre","position":"C","status":"RESERVE"},{"id":"03v70","name":"Alex DeBrincat","position":"LW","status":"ACTIVE"},{"id":"0045j","name":"Kris Letang","position":"D","status":"ACTIVE"},{"id":"04a9v","name":"Morgan Geekie","position":"C","status":"ACTIVE"},{"id":"03nfr","name":"Evan Rodrigues","position":"C","status":"ACTIVE"},{"id":"03mqg","name":"Jakob Chychrun","position":"D","status":"ACTIVE"},{"id":"04mq1","name":"Ilya Mikheyev","position":"RW","status":"RESERVE"},{"id":"06maz","name":"Ilya Protas","position":"LW","status":"MINORS"},{"id":"02b3o","name":"Rickard Rakell","position":"LW","status":"ACTIVE"},{"id":"04xjf","name":"Owen Power","position":"D","status":"ACTIVE"},{"id":"05mx8","name":"Declan Carlile","position":"D","status":"RESERVE"},{"id":"04qya","name":"Filip Hallander","position":"C","status":"RESERVE"},{"id":"06nke","name":"Jackson Smith","position":"D","status":"MINORS"}]},{"id":"69yb2d10mo2tig2e","name":"Québec Nordiques","players":[{"id":"04ymt","name":"Lucas Raymond","position":"RW","status":"ACTIVE"},{"id":"04dwj","name":"Jason Robertson","position":"LW","status":"ACTIVE"},{"id":"075kn","name":"Oscar Hemming","position":"LW","status":"MINORS"},{"id":"0243e","name":"Gabriel Landeskog","position":"LW","status":"ACTIVE"},{"id":"04abd","name":"Artem Zub","position":"D","status":"RESERVE"},{"id":"0045k","name":"Evgeni Malkin","position":"LW","status":"ACTIVE"},{"id":"071wj","name":"Carson Carels","position":"D","status":"MINORS"},{"id":"06bmb","name":"Zeev Buium","position":"D","status":"ACTIVE"},{"id":"03mn5","name":"Patrik Laine","position":"LW","status":"RESERVE"},{"id":"02f9l","name":"Nathan MacKinnon","position":"C","status":"ACTIVE"},{"id":"02nom","name":"Andrei Vasilevskiy","position":"G","status":"ACTIVE"},{"id":"051z1","name":"Justin Barron","position":"D","status":"RESERVE"},{"id":"05r50","name":"Mackie Samoskevich","position":"RW","status":"ACTIVE"},{"id":"031nx","name":"Shea Theodore","position":"D","status":"ACTIVE"},{"id":"01zu5","name":"Justin Faulk","position":"D","status":"ACTIVE"},{"id":"01skr","name":"Mikael Granlund","position":"C","status":"ACTIVE"},{"id":"02ytx","name":"Ryan Hartman","position":"RW","status":"RESERVE"},{"id":"06hco","name":"Zayne Parekh","position":"D","status":"ACTIVE"},{"id":"064mz","name":"Charlie Stramel","position":"RW","status":"MINORS"},{"id":"062dy","name":"Andrew Cristall","position":"LW","status":"RESERVE"},{"id":"03j8l","name":"Noah Hanifin","position":"D","status":"ACTIVE"},{"id":"04lbz","name":"Quinn Hughes","position":"D","status":"ACTIVE"},{"id":"048x9","name":"Elias Pettersson","position":"C","status":"ACTIVE"},{"id":"06bdr","name":"Roman Kantserov","position":"RW","status":"ACTIVE"},{"id":"01sio","name":"Mats Zuccarello","position":"RW","status":"INJURED_RESERVE"},{"id":"05y3a","name":"Leo Carlsson","position":"C","status":"ACTIVE"},{"id":"02dq6","name":"Jean-Gabriel Pageau","position":"C","status":"RESERVE"},{"id":"06hj9","name":"Porter Martone","position":"RW","status":"ACTIVE"},{"id":"03rfx","name":"Tommy Novak","position":"LW","status":"ACTIVE"},{"id":"00qnu","name":"Drew Doughty","position":"D","status":"RESERVE"},{"id":"06rnr","name":"Maddox Dagenais","position":"C","status":"MINORS"}]},{"id":"uzhvniysmo2tig2e","name":"Boston Bruins","players":[{"id":"05yli","name":"Pavel Mintyukov","position":"D","status":"INJURED_RESERVE"},{"id":"03rgq","name":"Ryan Shea","position":"D","status":"ACTIVE"},{"id":"06sqf","name":"Braeden Cootes","position":"C","status":"MINORS"},{"id":"05mwh","name":"Devon Levi","position":"G","status":"RESERVE"},{"id":"05r1i","name":"Matty Beniers","position":"C","status":"ACTIVE"},{"id":"01f5z","name":"Chris Kreider","position":"LW","status":"RESERVE"},{"id":"02422","name":"Ryan Nugent-Hopkins","position":"C","status":"ACTIVE"},{"id":"04ln4","name":"Kiefer Sherwood","position":"RW","status":"RESERVE"},{"id":"05gvo","name":"Matvei Michkov","position":"RW","status":"ACTIVE"},{"id":"06bde","name":"Oliver Bonk","position":"D","status":"ACTIVE"},{"id":"06h8h","name":"Trevor Connelly","position":"LW","status":"ACTIVE"},{"id":"05yn2","name":"Fraser Minten","position":"C","status":"ACTIVE"},{"id":"02b76","name":"Vincent Trocheck","position":"C","status":"ACTIVE"},{"id":"065nx","name":"Berkly Catton","position":"LW","status":"ACTIVE"},{"id":"05ui5","name":"Quentin Musty","position":"LW","status":"MINORS"},{"id":"03ece","name":"Igor Shesterkin","position":"G","status":"INJURED_RESERVE"},{"id":"06r5z","name":"Keaton Verhoeff","position":"D","status":"MINORS"},{"id":"04amd","name":"Peyton Krebs","position":"C","status":"RESERVE"},{"id":"06hk9","name":"Vitali Pinchuk","position":"C","status":"RESERVE"},{"id":"05gdo","name":"Luke Evangelista","position":"RW","status":"ACTIVE"},{"id":"01lkz","name":"Taylor Hall","position":"LW","status":"RESERVE"},{"id":"02nof","name":"Hampus Lindholm","position":"D","status":"ACTIVE"},{"id":"051um","name":"Arseny Gritsyuk","position":"RW","status":"ACTIVE"},{"id":"03ynu","name":"Carter Hart","position":"G","status":"ACTIVE"},{"id":"06lok","name":"Viggo Bjorck","position":"C","status":"RESERVE"},{"id":"03e7p","name":"Travis Sanheim","position":"D","status":"ACTIVE"},{"id":"04qve","name":"KAndre Miller","position":"D","status":"ACTIVE"},{"id":"06axx","name":"William Horcoff","position":"C","status":"MINORS"},{"id":"0042t","name":"Claude Giroux","position":"RW","status":"ACTIVE"},{"id":"04mx6","name":"Kaiden Guhle","position":"D","status":"ACTIVE"},{"id":"04y8g","name":"Trevor Zegras","position":"LW","status":"ACTIVE"},{"id":"05gda","name":"Kent Johnson","position":"LW","status":"ACTIVE"}]},{"id":"p7f42l5emo2tig2e","name":"Atlanta Thrashers","players":[{"id":"01zvp","name":"Bryan Rust","position":"RW","status":"INJURED_RESERVE"},{"id":"06axc","name":"Samuel Honzek","position":"LW","status":"MINORS"},{"id":"02azb","name":"Mark Scheifele","position":"C","status":"ACTIVE"},{"id":"04zb6","name":"Alex Vlasic","position":"D","status":"RESERVE"},{"id":"05ubx","name":"Ryker Evans","position":"D","status":"ACTIVE"},{"id":"042t2","name":"Logan Stanley","position":"D","status":"ACTIVE"},{"id":"02nok","name":"Tomas Hertl","position":"LW","status":"ACTIVE"},{"id":"02o7l","name":"Jaccob Slavin","position":"D","status":"ACTIVE"},{"id":"059mt","name":"Nicolas Daws","position":"G","status":"MINORS"},{"id":"05r2z","name":"Theo Lindstein","position":"D","status":"MINORS"},{"id":"00454","name":"Sidney Crosby","position":"C","status":"ACTIVE"},{"id":"04zo0","name":"Pavel Dorofeyev","position":"LW","status":"ACTIVE"},{"id":"05962","name":"J.J. Moser","position":"D","status":"RESERVE"},{"id":"05tcz","name":"Oliver Kapanen","position":"C","status":"ACTIVE"},{"id":"065d1","name":"Matthew Wood","position":"RW","status":"ACTIVE"},{"id":"05xrx","name":"Marco Kasper","position":"C","status":"RESERVE"},{"id":"05tqu","name":"Logan Mailloux","position":"D","status":"INJURED_RESERVE"},{"id":"04bw4","name":"Andrei Kuzmenko","position":"RW","status":"ACTIVE"},{"id":"042vx","name":"Filip Hronek","position":"D","status":"ACTIVE"},{"id":"06kr3","name":"Sam OReilly","position":"RW","status":"MINORS"},{"id":"01ztp","name":"Zach Hyman","position":"RW","status":"ACTIVE"},{"id":"03w5s","name":"Ryan McLeod","position":"C","status":"RESERVE"},{"id":"05lud","name":"Dylan Garand","position":"G","status":"ACTIVE"},{"id":"02wy6","name":"Andre Burakovsky","position":"RW","status":"RESERVE"},{"id":"05oxs","name":"Jakub Dobes","position":"G","status":"RESERVE"},{"id":"02noe","name":"Morgan Rielly","position":"D","status":"ACTIVE"},{"id":"06cl1","name":"Emmitt Finnie","position":"LW","status":"ACTIVE"},{"id":"02ybn","name":"Josh Morrissey","position":"D","status":"RESERVE"},{"id":"03dde","name":"Jake Walman","position":"D","status":"ACTIVE"},{"id":"031p0","name":"Jake Guentzel","position":"LW","status":"ACTIVE"},{"id":"039ch","name":"Kasperi Kapanen","position":"RW","status":"ACTIVE"},{"id":"03as9","name":"Dylan Strome","position":"C","status":"ACTIVE"}]},{"id":"3fyp69fcmo2tig2f","name":"Florida Panthers","players":[{"id":"04y4m","name":"Connor Bedard","position":"C","status":"ACTIVE"},{"id":"031p3","name":"Carter Verhaeghe","position":"LW","status":"RESERVE"},{"id":"05kub","name":"Shakir Mukhamadullin","position":"D","status":"ACTIVE"},{"id":"05rb9","name":"Conor Geekie","position":"RW","status":"MINORS"},{"id":"051v4","name":"Arturs Silovs","position":"G","status":"RESERVE"},{"id":"02ybo","name":"Rasmus Ristolainen","position":"D","status":"ACTIVE"},{"id":"02un6","name":"Sean Monahan","position":"C","status":"ACTIVE"},{"id":"02o70","name":"Josh Anderson","position":"RW","status":"ACTIVE"},{"id":"02un7","name":"Aleksander Barkov","position":"C","status":"INJURED_RESERVE"},{"id":"04yeb","name":"Simon Holmstrom","position":"LW","status":"ACTIVE"},{"id":"05tpa","name":"Ville Koivunen","position":"LW","status":"MINORS"},{"id":"06axb","name":"Nick Lardis","position":"RW","status":"MINORS"},{"id":"0243f","name":"Seth Jones","position":"D","status":"ACTIVE"},{"id":"024lv","name":"Mattias Ekholm","position":"D","status":"INJURED_RESERVE"},{"id":"051tx","name":"Aliaksei Protas","position":"RW","status":"RESERVE"},{"id":"04f1z","name":"Mikey Anderson","position":"D","status":"ACTIVE"},{"id":"05ym6","name":"Liam Ohgren","position":"LW","status":"RESERVE"},{"id":"02un5","name":"Sam Reinhart","position":"RW","status":"ACTIVE"},{"id":"03raf","name":"Brock Boeser","position":"LW","status":"ACTIVE"},{"id":"042vl","name":"Jordan Kyrou","position":"RW","status":"ACTIVE"},{"id":"04ezy","name":"Morgan Frost","position":"C","status":"ACTIVE"},{"id":"05r3d","name":"Josh Doan","position":"LW","status":"ACTIVE"},{"id":"003tz","name":"Brent Burns","position":"D","status":"RESERVE"},{"id":"01ud1","name":"Sergei Bobrovsky","position":"G","status":"ACTIVE"},{"id":"04qzk","name":"Paul Cotter","position":"LW","status":"RESERVE"},{"id":"02g00","name":"Aaron Ekblad","position":"D","status":"ACTIVE"},{"id":"02fro","name":"Adam Lowry","position":"C","status":"ACTIVE"},{"id":"004cq","name":"Alex Ovechkin","position":"RW","status":"ACTIVE"},{"id":"06age","name":"Sam Malinski","position":"D","status":"RESERVE"},{"id":"031v6","name":"MacKenzie Weegar","position":"D","status":"ACTIVE"},{"id":"06psl","name":"Ivar Stenberg","position":"LW","status":"ACTIVE"},{"id":"06c72","name":"Braeden Bowman","position":"RW","status":"MINORS"}]},{"id":"kplo9zwcmo2tig2f","name":"Hartford Whalers","players":[{"id":"06loc","name":"Yegor Surin","position":"RW","status":"MINORS"},{"id":"04r0j","name":"Michael Kesselring","position":"D","status":"RESERVE"},{"id":"04yi4","name":"Pyotr Kochetkov","position":"G","status":"ACTIVE"},{"id":"03mbn","name":"Mackenzie Blackwood","position":"G","status":"RESERVE"},{"id":"03de2","name":"Brandon Montour","position":"D","status":"ACTIVE"},{"id":"06hcy","name":"Liam Greentree","position":"RW","status":"MINORS"},{"id":"031pn","name":"Nick Paul","position":"RW","status":"RESERVE"},{"id":"05wwg","name":"Lane Hutson","position":"D","status":"ACTIVE"},{"id":"02fzj","name":"Blake Coleman","position":"LW","status":"ACTIVE"},{"id":"02b3w","name":"Boone Jenner","position":"LW","status":"ACTIVE"},{"id":"01c13","name":"Victor Hedman","position":"D","status":"RESERVE"},{"id":"0644c","name":"Daniil But","position":"LW","status":"MINORS"},{"id":"03yuc","name":"Kailer Yamamoto","position":"RW","status":"ACTIVE"},{"id":"050rc","name":"Dmitry Voronkov","position":"LW","status":"RESERVE"},{"id":"01zt0","name":"Jason Zucker","position":"LW","status":"ACTIVE"},{"id":"042t5","name":"Tage Thompson","position":"C","status":"ACTIVE"},{"id":"04osu","name":"Barrett Hayton","position":"C","status":"RESERVE"},{"id":"05k8c","name":"Tyson Foerster","position":"LW","status":"RESERVE"},{"id":"02b70","name":"Nikita Kucherov","position":"RW","status":"ACTIVE"},{"id":"061jm","name":"Frederic Brunet","position":"D","status":"ACTIVE"},{"id":"01zvf","name":"Mark Stone","position":"RW","status":"ACTIVE"},{"id":"06sqp","name":"Vaclav Nestrasil","position":"RW","status":"MINORS"},{"id":"04bdb","name":"Jack Hughes","position":"LW","status":"ACTIVE"},{"id":"04apb","name":"Robert Thomas","position":"C","status":"ACTIVE"},{"id":"0457f","name":"Nico Hischier","position":"C","status":"ACTIVE"},{"id":"04an5","name":"Miro Heiskanen","position":"D","status":"ACTIVE"},{"id":"02dq3","name":"Jacob Trouba","position":"D","status":"ACTIVE"},{"id":"02nou","name":"Brady Skjei","position":"D","status":"ACTIVE"},{"id":"05gvq","name":"Seth Jarvis","position":"RW","status":"ACTIVE"},{"id":"01f6d","name":"Ryan OReilly","position":"C","status":"ACTIVE"},{"id":"051u2","name":"Matias Maccelli","position":"LW","status":"INJURED_RESERVE"}]},{"id":"b2lquor7mo2tig2e","name":"Colorado Avalanche","players":[{"id":"03wpi","name":"Pierre-Luc Dubois","position":"C","status":"ACTIVE"},{"id":"04ad7","name":"Rasmus Dahlin","position":"D","status":"ACTIVE"},{"id":"01f66","name":"Kyle Palmieri","position":"RW","status":"RESERVE"},{"id":"03rag","name":"Jack Roslovic","position":"RW","status":"ACTIVE"},{"id":"06ig3","name":"Cayden Lindstrom","position":"LW","status":"MINORS"},{"id":"03ekl","name":"Vladislav Gavrikov","position":"D","status":"ACTIVE"},{"id":"00qru","name":"Steven Stamkos","position":"LW","status":"ACTIVE"},{"id":"064r2","name":"Ivan Demidov","position":"RW","status":"INJURED_RESERVE"},{"id":"01f3d","name":"Oliver Ekman-Larsson","position":"D","status":"RESERVE"},{"id":"03rmx","name":"Sebastian Aho","position":"C","status":"ACTIVE"},{"id":"015pv","name":"John Carlson","position":"D","status":"ACTIVE"},{"id":"02wy7","name":"Pavel Buchnevich","position":"RW","status":"ACTIVE"},{"id":"05td4","name":"Ryan Ufko","position":"D","status":"RESERVE"},{"id":"03klz","name":"Darren Raddysh","position":"D","status":"ACTIVE"},{"id":"04alw","name":"Cale Makar","position":"D","status":"ACTIVE"},{"id":"03rae","name":"Joel Eriksson Ek","position":"C","status":"ACTIVE"},{"id":"01c12","name":"John Tavares","position":"C","status":"RESERVE"},{"id":"02noj","name":"Tom Wilson","position":"RW","status":"ACTIVE"},{"id":"03rih","name":"Karel Vejmelka","position":"G","status":"RESERVE"},{"id":"02aez","name":"J.T. Miller","position":"RW","status":"ACTIVE"},{"id":"04zox","name":"Kaedan Korczak","position":"D","status":"ACTIVE"},{"id":"03bfj","name":"Artemi Panarin","position":"LW","status":"ACTIVE"},{"id":"02ybk","name":"Artturi Lehkonen","position":"LW","status":"ACTIVE"},{"id":"01gjn","name":"Erik Haula","position":"C","status":"ACTIVE"},{"id":"03kng","name":"Frederick Gaudreau","position":"C","status":"RESERVE"},{"id":"026p4","name":"Jonathan Huberdeau","position":"LW","status":"INJURED_RESERVE"},{"id":"075u7","name":"Alexander Command","position":"C","status":"MINORS"},{"id":"03rh3","name":"Kirill Kaprizov","position":"LW","status":"ACTIVE"},{"id":"071wk","name":"Elton Hermansson","position":"RW","status":"MINORS"},{"id":"04yg5","name":"Jesper Wallstedt","position":"G","status":"ACTIVE"},{"id":"04zp2","name":"Drew Helleson","position":"D","status":"RESERVE"},{"id":"06jhe","name":"Cole Reschny","position":"C","status":"MINORS"}]},{"id":"bvm8qt4omo2tig2f","name":"Anaheim Mighty Ducks","players":[{"id":"01mzc","name":"Brayden McNabb","position":"D","status":"ACTIVE"},{"id":"031of","name":"William Carrier","position":"RW","status":"ACTIVE"},{"id":"02oar","name":"Linus Ullmark","position":"G","status":"RESERVE"},{"id":"03l0t","name":"Pavel Zacha","position":"C","status":"ACTIVE"},{"id":"03rfl","name":"Anthony Cirelli","position":"C","status":"ACTIVE"},{"id":"02b6w","name":"William Karlsson","position":"C","status":"ACTIVE"},{"id":"04uqa","name":"Vasily Podkolzin","position":"RW","status":"ACTIVE"},{"id":"03c0c","name":"Josh Manson","position":"D","status":"ACTIVE"},{"id":"04zo3","name":"Nick Robertson","position":"LW","status":"RESERVE"},{"id":"06sn9","name":"Kashawn Aitcheson","position":"D","status":"MINORS"},{"id":"03wpn","name":"Brett Howden","position":"LW","status":"ACTIVE"},{"id":"02yjw","name":"Tristan Jarry","position":"G","status":"ACTIVE"},{"id":"04f17","name":"Fabian Zetterlund","position":"LW","status":"RESERVE"},{"id":"06amv","name":"Sam Dickinson","position":"D","status":"RESERVE"},{"id":"06ag2","name":"James Hagens","position":"LW","status":"ACTIVE"},{"id":"02ybl","name":"Valeri Nichushkin","position":"RW","status":"ACTIVE"},{"id":"03rik","name":"Troy Terry","position":"RW","status":"INJURED_RESERVE"},{"id":"016g3","name":"Erik Karlsson","position":"D","status":"ACTIVE"},{"id":"0744a","name":"Nikita Klepov","position":"LW","status":"MINORS"},{"id":"04uql","name":"Cole Perfetti","position":"RW","status":"ACTIVE"},{"id":"048xc","name":"Nick Suzuki","position":"C","status":"RESERVE"},{"id":"04mv2","name":"Cole Caufield","position":"LW","status":"ACTIVE"},{"id":"06imm","name":"Roger McQueen","position":"RW","status":"MINORS"},{"id":"04n4n","name":"Rasmus Sandin","position":"D","status":"INJURED_RESERVE"},{"id":"03rf5","name":"Rasmus Andersson","position":"D","status":"ACTIVE"},{"id":"03mm6","name":"Lawson Crouse","position":"LW","status":"RESERVE"},{"id":"06hcq","name":"Carter Yakemchuk","position":"D","status":"ACTIVE"},{"id":"05rjh","name":"Noah Ostlund","position":"C","status":"ACTIVE"},{"id":"051z0","name":"Tim Stutzle","position":"LW","status":"ACTIVE"},{"id":"0644e","name":"Oliver Moore","position":"C","status":"MINORS"},{"id":"02uws","name":"Mathew Barzal","position":"RW","status":"RESERVE"},{"id":"04ymn","name":"Luke Hughes","position":"D","status":"ACTIVE"}]}],"standings":[{"teamId":"b2lquor7mo2tig2e","teamName":"Colorado Avalanche","rank":1,"points":"14-1-0","totalPointsFor":2700.45,"winPercentage":0.933,"gamesBack":0.0},{"teamId":"kplo9zwcmo2tig2f","teamName":"Hartford Whalers","rank":2,"points":"13-2-0","totalPointsFor":2427.9,"winPercentage":0.867,"gamesBack":1.0},{"teamId":"fdy3gp6lmo2tig2e","teamName":"Detroit Red Wings","rank":3,"points":"11-4-0","totalPointsFor":2433.0,"winPercentage":0.733,"gamesBack":3.0},{"teamId":"pelw39b7mo2tig2f","teamName":"Ottawa Senators","rank":4,"points":"10-5-0","totalPointsFor":2569.65,"winPercentage":0.667,"gamesBack":4.0},{"teamId":"jbmeb32tmo2tig2e","teamName":"Montréal Canadiens","rank":5,"points":"10-5-0","totalPointsFor":2423.25,"winPercentage":0.667,"gamesBack":4.0},{"teamId":"69yb2d10mo2tig2e","teamName":"Québec Nordiques","rank":6,"points":"10-5-0","totalPointsFor":2375.55,"winPercentage":0.667,"gamesBack":4.0},{"teamId":"l9ssazuemo2tig2e","teamName":"New York Rangers","rank":7,"points":"9-6-0","totalPointsFor":2309.55,"winPercentage":0.6,"gamesBack":5.0},{"teamId":"4fmu58uhmo2tig2f","teamName":"Toronto Maple Leafs","rank":8,"points":"9-6-0","totalPointsFor":2259.3,"winPercentage":0.6,"gamesBack":5.0},{"teamId":"1bn2dvarmo2tig2f","teamName":"Minnesota North Stars","rank":9,"points":"8-7-0","totalPointsFor":1949.55,"winPercentage":0.533,"gamesBack":6.0},{"teamId":"adfljh3wmo2tig2e","teamName":"Nashville Predators","rank":10,"points":"7-8-0","totalPointsFor":2229.6,"winPercentage":0.467,"gamesBack":7.0},{"teamId":"bvm8qt4omo2tig2f","teamName":"Anaheim Mighty Ducks","rank":11,"points":"7-8-0","totalPointsFor":2223.45,"winPercentage":0.467,"gamesBack":7.0},{"teamId":"mmvzhj4amo2tig2e","teamName":"Chicago Blackhawks","rank":12,"points":"3-12-0","totalPointsFor":2007.9,"winPercentage":0.2,"gamesBack":11.0},{"teamId":"p7f42l5emo2tig2e","teamName":"Atlanta Thrashers","rank":13,"points":"3-12-0","totalPointsFor":1735.05,"winPercentage":0.2,"gamesBack":11.0},{"teamId":"uzhvniysmo2tig2e","teamName":"Boston Bruins","rank":14,"points":"2-13-0","totalPointsFor":1893.0,"winPercentage":0.133,"gamesBack":12.0},{"teamId":"3fyp69fcmo2tig2f","teamName":"Florida Panthers","rank":15,"points":"2-13-0","totalPointsFor":1801.5,"winPercentage":0.133,"gamesBack":12.0},{"teamId":"gqpb7szpmo2tig2e","teamName":"California Golden Seals","rank":16,"points":"2-13-0","totalPointsFor":1740.45,"winPercentage":0.133,"gamesBack":12.0}],"matchups":[{"away":{"teamId":"3fyp69fcmo2tig2f","teamName":"Florida Panthers","score":130.9,"gamesPlayed":54},"home":{"teamId":"mmvzhj4amo2tig2e","teamName":"Chicago Blackhawks","score":144.05,"gamesPlayed":51}},{"away":{"teamId":"l9ssazuemo2tig2e","teamName":"New York Rangers","score":177.45,"gamesPlayed":55},"home":{"teamId":"gqpb7szpmo2tig2e","teamName":"California Golden Seals","score":125.55,"gamesPlayed":52}},{"away":{"teamId":"69yb2d10mo2tig2e","teamName":"Québec Nordiques","score":173.75,"gamesPlayed":50},"home":{"teamId":"uzhvniysmo2tig2e","teamName":"Boston Bruins","score":138.7,"gamesPlayed":54}},{"away":{"teamId":"adfljh3wmo2tig2e","teamName":"Nashville Predators","score":158.5,"gamesPlayed":59},"home":{"teamId":"1bn2dvarmo2tig2f","teamName":"Minnesota North Stars","score":171.45,"gamesPlayed":55}},{"away":{"teamId":"fdy3gp6lmo2tig2e","teamName":"Detroit Red Wings","score":145.95,"gamesPlayed":53},"home":{"teamId":"b2lquor7mo2tig2e","teamName":"Colorado Avalanche","score":190.0,"gamesPlayed":53}},{"away":{"teamId":"jbmeb32tmo2tig2e","teamName":"Montréal Canadiens","score":150.45,"gamesPlayed":52},"home":{"teamId":"kplo9zwcmo2tig2f","teamName":"Hartford Whalers","score":188.4,"gamesPlayed":51}},{"away":{"teamId":"bvm8qt4omo2tig2f","teamName":"Anaheim Mighty Ducks","score":149.5,"gamesPlayed":50},"home":{"teamId":"p7f42l5emo2tig2e","teamName":"Atlanta Thrashers","score":117.35,"gamesPlayed":48}},{"away":{"teamId":"pelw39b7mo2tig2f","teamName":"Ottawa Senators","score":158.9,"gamesPlayed":54},"home":{"teamId":"4fmu58uhmo2tig2f","teamName":"Toronto Maple Leafs","score":138.65,"gamesPlayed":51}},{"away":{"teamId":"l9ssazuemo2tig2e","teamName":"New York Rangers","score":177.45,"gamesPlayed":55},"home":{"teamId":"mmvzhj4amo2tig2e","teamName":"Chicago Blackhawks","score":144.05,"gamesPlayed":51}},{"away":{"teamId":"69yb2d10mo2tig2e","teamName":"Québec Nordiques","score":173.75,"gamesPlayed":50},"home":{"teamId":"3fyp69fcmo2tig2f","teamName":"Florida Panthers","score":130.9,"gamesPlayed":54}},{"away":{"teamId":"adfljh3wmo2tig2e","teamName":"Nashville Predators","score":158.5,"gamesPlayed":59},"home":{"teamId":"gqpb7szpmo2tig2e","teamName":"California Golden Seals","score":125.55,"gamesPlayed":52}},{"away":{"teamId":"fdy3gp6lmo2tig2e","teamName":"Detroit Red Wings","score":145.95,"gamesPlayed":53},"home":{"teamId":"uzhvniysmo2tig2e","teamName":"Boston Bruins","score":138.7,"gamesPlayed":54}},{"away":{"teamId":"jbmeb32tmo2tig2e","teamName":"Montréal Canadiens","score":150.45,"gamesPlayed":52},"home":{"teamId":"1bn2dvarmo2tig2f","teamName":"Minnesota North Stars","score":171.45,"gamesPlayed":55}},{"away":{"teamId":"bvm8qt4omo2tig2f","teamName":"Anaheim Mighty Ducks","score":149.5,"gamesPlayed":50},"home":{"teamId":"b2lquor7mo2tig2e","teamName":"Colorado Avalanche","score":190.0,"gamesPlayed":53}},{"away":{"teamId":"pelw39b7mo2tig2f","teamName":"Ottawa Senators","score":158.9,"gamesPlayed":54},"home":{"teamId":"kplo9zwcmo2tig2f","teamName":"Hartford Whalers","score":188.4,"gamesPlayed":51}},{"away":{"teamId":"4fmu58uhmo2tig2f","teamName":"Toronto Maple Leafs","score":138.65,"gamesPlayed":51},"home":{"teamId":"p7f42l5emo2tig2e","teamName":"Atlanta Thrashers","score":117.35,"gamesPlayed":48}},{"away":{"teamId":"69yb2d10mo2tig2e","teamName":"Québec Nordiques","score":173.75,"gamesPlayed":50},"home":{"teamId":"mmvzhj4amo2tig2e","teamName":"Chicago Blackhawks","score":144.05,"gamesPlayed":51}},{"away":{"teamId":"adfljh3wmo2tig2e","teamName":"Nashville Predators","score":158.5,"gamesPlayed":59},"home":{"teamId":"l9ssazuemo2tig2e","teamName":"New York Rangers","score":177.45,"gamesPlayed":55}},{"away":{"teamId":"fdy3gp6lmo2tig2e","teamName":"Detroit Red Wings","score":145.95,"gamesPlayed":53},"home":{"teamId":"3fyp69fcmo2tig2f","teamName":"Florida Panthers","score":130.9,"gamesPlayed":54}},{"away":{"teamId":"jbmeb32tmo2tig2e","teamName":"Montréal Canadiens","score":150.45,"gamesPlayed":52},"home":{"teamId":"gqpb7szpmo2tig2e","teamName":"California Golden Seals","score":125.55,"gamesPlayed":52}},{"away":{"teamId":"bvm8qt4omo2tig2f","teamName":"Anaheim Mighty Ducks","score":149.5,"gamesPlayed":50},"home":{"teamId":"uzhvniysmo2tig2e","teamName":"Boston Bruins","score":138.7,"gamesPlayed":54}},{"away":{"teamId":"pelw39b7mo2tig2f","teamName":"Ottawa Senators","score":158.9,"gamesPlayed":54},"home":{"teamId":"1bn2dvarmo2tig2f","teamName":"Minnesota North Stars","score":171.45,"gamesPlayed":55}},{"away":{"teamId":"4fmu58uhmo2tig2f","teamName":"Toronto Maple Leafs","score":138.65,"gamesPlayed":51},"home":{"teamId":"b2lquor7mo2tig2e","teamName":"Colorado Avalanche","score":190.0,"gamesPlayed":53}},{"away":{"teamId":"p7f42l5emo2tig2e","teamName":"Atlanta Thrashers","score":117.35,"gamesPlayed":48},"home":{"teamId":"kplo9zwcmo2tig2f","teamName":"Hartford Whalers","score":188.4,"gamesPlayed":51}}]}
+{
+  "leagueId": "32q8rjpomo2tig1z",
+  "leagueName": "BHL Béliveau Hockey League",
+  "season": 2026,
+  "updatedAt": "2026-11-02T12:25:01.241520+00:00",
+  "rosterPeriod": 5,
+  "scoringPeriod": 5,
+  "periodDates": {
+    "number": 5,
+    "endDate": "2026-11-02T18:59:59.0-0500",
+    "startDate": "2026-10-26T19:00:00.0-0400"
+  },
+  "teams": [
+    {
+      "id": "adfljh3wmo2tig2e",
+      "name": "Nashville Predators",
+      "players": [
+        {
+          "id": "02un4",
+          "name": "Connor McDavid",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03eb3",
+          "name": "Christian Dvorak",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rf2",
+          "name": "Roope Hintz",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02azf",
+          "name": "Dougie Hamilton",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "062h5",
+          "name": "Gavin McKenna",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06lvc",
+          "name": "Harrison Brunicke",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "060je",
+          "name": "Noah Warren",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "03e1n",
+          "name": "Adrian Kempe",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ylt",
+          "name": "Zach Benson",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04ye8",
+          "name": "Jordan Spence",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ww8",
+          "name": "Ryan Greene",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04lcs",
+          "name": "Mattias Samuelsson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "074mg",
+          "name": "Liam Ruck",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "060jl",
+          "name": "Jiri Kulich",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03eb0",
+          "name": "Ryan Donato",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03w5m",
+          "name": "Gabriel Vilardi",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05kdw",
+          "name": "Ridly Greig",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06axy",
+          "name": "Artyom Levshunov",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05y7m",
+          "name": "Denton Mateychuk",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03zul",
+          "name": "Filip Gustavsson",
+          "position": "G",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "05ltt",
+          "name": "Alex Laferriere",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05kbn",
+          "name": "Will Cuylle",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ran",
+          "name": "Matt Coronato",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05gd9",
+          "name": "Zack Bolduc",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "031pl",
+          "name": "Juuse Saros",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03yuf",
+          "name": "Eeli Tolvanen",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "066q4",
+          "name": "Konsta Helenius",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "03pax",
+          "name": "Ivan Provorov",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "059e1",
+          "name": "Braden Schneider",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05rjg",
+          "name": "Danila Yurov",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04mtp",
+          "name": "Dylan Cozens",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042yb",
+          "name": "Brandon Hagel",
+          "position": "LW",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "4fmu58uhmo2tig2f",
+      "name": "Toronto Maple Leafs",
+      "players": [
+        {
+          "id": "04bii",
+          "name": "Spencer Knight",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ril",
+          "name": "Simon Nemec",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01587",
+          "name": "Jordan Eberle",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05oxk",
+          "name": "Mason Lohrei",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05yms",
+          "name": "Sam Rinzel",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02wy3",
+          "name": "Elias Lindholm",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0457i",
+          "name": "Ukko-Pekka Luukkonen",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "004p4",
+          "name": "Mikael Backlund",
+          "position": "C",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "04amg",
+          "name": "Alexis Lafreniere",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "075ko",
+          "name": "Wyatt Cullen",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04yn0",
+          "name": "Connor McMichael",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03duf",
+          "name": "Dylan Larkin",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04kyn",
+          "name": "Sean Walker",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03ecl",
+          "name": "Gustav Forsling",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03yg3",
+          "name": "Mikhail Sergachev",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "067xz",
+          "name": "Axel Sandin Pellikka",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "048vf",
+          "name": "Andrei Svechnikov",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02noq",
+          "name": "Mike Matheson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0457b",
+          "name": "Casey Mittelstadt",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05r1c",
+          "name": "Juraj Slafkovsky",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06hcw",
+          "name": "Beckett Sennecke",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05gtp",
+          "name": "Dawson Mercer",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05gd8",
+          "name": "Mason McTavish",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01zti",
+          "name": "Tyler Toffoli",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06pyp",
+          "name": "Radim Mrtka",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "06axe",
+          "name": "Gabe Perreault",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06rus",
+          "name": "Brady Martin",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "05ui2",
+          "name": "Logan Cooley",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05j3d",
+          "name": "Bobby McMann",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05ui4",
+          "name": "Dalibor Dvorsky",
+          "position": "C",
+          "status": "RESERVE"
+        }
+      ]
+    },
+    {
+      "id": "pelw39b7mo2tig2f",
+      "name": "Ottawa Senators",
+      "players": [
+        {
+          "id": "05o01",
+          "name": "Sebastian Cossa",
+          "position": "G",
+          "status": "MINORS"
+        },
+        {
+          "id": "02azh",
+          "name": "Jamie Oleksiak",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06fzv",
+          "name": "Cole Hutson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qy5",
+          "name": "Kirill Marchenko",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04znw",
+          "name": "Brandt Clarke",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qzc",
+          "name": "Joel Hofer",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02unz",
+          "name": "Nick Schmaltz",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04mv3",
+          "name": "Alex Newhook",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03kra",
+          "name": "Kyle Connor",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "064om",
+          "name": "Michael Hage",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "04mto",
+          "name": "Kaapo Kakko",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "048w3",
+          "name": "Justin Brazeau",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03rip",
+          "name": "John Marino",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06snb",
+          "name": "Benjamin Kindel",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02yjl",
+          "name": "Leon Draisaitl",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04f24",
+          "name": "Jeremy Swayman",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06mb0",
+          "name": "Matvei Gridin",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05kua",
+          "name": "Emil Heineman",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01z7v",
+          "name": "Sean Couturier",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04z51",
+          "name": "Charle-Edouard DAstous",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03ra7",
+          "name": "Zach Werenski",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04kyh",
+          "name": "Brady Tkachuk",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0760d",
+          "name": "Jaxon Cover",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "051yz",
+          "name": "Dylan Holloway",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03169",
+          "name": "Alexander Wennberg",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01zql",
+          "name": "Brock Nelson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "075w6",
+          "name": "Malte Gustafsson",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "03924",
+          "name": "Jack Eichel",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01mz5",
+          "name": "Dmitry Orlov",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0618g",
+          "name": "Cole Knuble",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05ltj",
+          "name": "Brock Faber",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03wor",
+          "name": "Mason Marchment",
+          "position": "LW",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "1bn2dvarmo2tig2f",
+      "name": "Minnesota North Stars",
+      "players": [
+        {
+          "id": "05riz",
+          "name": "David Jiricek",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06axr",
+          "name": "Tom Willander",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "066sp",
+          "name": "Aydar Suniev",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04lo0",
+          "name": "Quinton Byfield",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05g42",
+          "name": "Jack Quinn",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03dms",
+          "name": "Kevin Fiala",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "038vb",
+          "name": "Travis Konecny",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03rab",
+          "name": "Jake DeBrusk",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05xcm",
+          "name": "Jonathan Lekkerimaki",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06jhd",
+          "name": "Anton Frondell",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02nq2",
+          "name": "Chandler Stephenson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05tas",
+          "name": "Olen Zellweger",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "074v8",
+          "name": "Alberts Smits",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "070fm",
+          "name": "Ryan Lin",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "02yjp",
+          "name": "Ivan Barbashev",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042ye",
+          "name": "Jesper Bratt",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04yu6",
+          "name": "Jamie Drysdale",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04xec",
+          "name": "Matt Boldy",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06aew",
+          "name": "Dmitri Simashev",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051m4",
+          "name": "Jackson LaCombe",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06hcr",
+          "name": "Igor Chernyshov",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "0529k",
+          "name": "Yaroslav Askarov",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06ay2",
+          "name": "Luca Cagnoni",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "03wpm",
+          "name": "Charlie McAvoy",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06pyw",
+          "name": "Victor Eklund",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "070fr",
+          "name": "Xavier Villeneuve",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "04yqp",
+          "name": "Anton Lundell",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04o0g",
+          "name": "Marco Rossi",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05rf2",
+          "name": "Logan Stankoven",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031pq",
+          "name": "Andrew Copp",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04f0o",
+          "name": "Filip Chytil",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "066on",
+          "name": "Michael Brandsegg-Nygard",
+          "position": "RW",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "fdy3gp6lmo2tig2e",
+      "name": "Detroit Red Wings",
+      "players": [
+        {
+          "id": "00qs7",
+          "name": "Jamie Benn",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05m18",
+          "name": "Isak Rosen",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06fzw",
+          "name": "Adam Jiricek",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "027i6",
+          "name": "Mika Zibanejad",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01xfq",
+          "name": "Vladimir Tarasenko",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05rjy",
+          "name": "Cole Eiserman",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "02nq3",
+          "name": "Shayne Gostisbehere",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05tqt",
+          "name": "Wyatt Johnston",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "049k7",
+          "name": "Martin Necas",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0045u",
+          "name": "Jordan Staal",
+          "position": "C",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "060pq",
+          "name": "Alex Bump",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03167",
+          "name": "Bo Horvat",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "074v1",
+          "name": "Tommy Bleyl",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "042w4",
+          "name": "Adam Fox",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03e1m",
+          "name": "Brayden Point",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06rqm",
+          "name": "Carter Bear",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "03yg4",
+          "name": "Samuel Girard",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03mn8",
+          "name": "Clayton Keller",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03d12",
+          "name": "David Pastrnak",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06pyk",
+          "name": "Justin Carbonneau",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04ld3",
+          "name": "Noah Dobson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qyw",
+          "name": "Linus Karlsson",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06imq",
+          "name": "Maxim Shabanov",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01c32",
+          "name": "Brayden Schenn",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05g2s",
+          "name": "Adam Wilsby",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02oak",
+          "name": "Connor Brown",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05x9t",
+          "name": "Tye Kartye",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02fzm",
+          "name": "Filip Forsberg",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02np6",
+          "name": "Jake McCabe",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03161",
+          "name": "Darnell Nurse",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0322w",
+          "name": "Ilya Sorokin",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05af9",
+          "name": "William Wallinder",
+          "position": "D",
+          "status": "RESERVE"
+        }
+      ]
+    },
+    {
+      "id": "mmvzhj4amo2tig2e",
+      "name": "Chicago Blackhawks",
+      "players": [
+        {
+          "id": "067yd",
+          "name": "David Reinbacher",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "05rjd",
+          "name": "Cutter Gauthier",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02nqb",
+          "name": "Colton Parayko",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01f3e",
+          "name": "Nazem Kadri",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03yh8",
+          "name": "Owen Tippett",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01sif",
+          "name": "Tyler Seguin",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04f2d",
+          "name": "Drake Batherson",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02440",
+          "name": "Anders Lee",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05tur",
+          "name": "Matthew Knies",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06gk0",
+          "name": "Matthew Schaefer",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04mdc",
+          "name": "Logan Thompson",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05r1l",
+          "name": "William Eklund",
+          "position": "LW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "0725x",
+          "name": "Caleb Malhotra",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "05gd7",
+          "name": "Cole Sillinger",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06jhc",
+          "name": "Tij Iginla",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "04dwk",
+          "name": "Josh Norris",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051xf",
+          "name": "Egor Chinakhov",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03jxy",
+          "name": "Auston Matthews",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0644f",
+          "name": "Ryan Leonard",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04ye7",
+          "name": "Cam York",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "059e2",
+          "name": "Justin Sourdif",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rgk",
+          "name": "Alex Carrier",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03bxl",
+          "name": "Trevor Moore",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02o78",
+          "name": "Brett Kulak",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04gek",
+          "name": "Sean Durzi",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04f75",
+          "name": "Noah Cates",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "059e5",
+          "name": "Jake Neighbours",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "067xd",
+          "name": "T.J. Hughes",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rad",
+          "name": "Thomas Chabot",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01zs1",
+          "name": "Scott Wedgewood",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zb4",
+          "name": "Moritz Seider",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06rut",
+          "name": "Cameron Reid",
+          "position": "D",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "gqpb7szpmo2tig2e",
+      "name": "California Golden Seals",
+      "players": [
+        {
+          "id": "06loq",
+          "name": "Caleb Desnoyers",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "05ymq",
+          "name": "Matthew Poitras",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031og",
+          "name": "Tyler Bertuzzi",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04lc0",
+          "name": "Evan Bouchard",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "068yz",
+          "name": "Jacob Fowler",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02o7s",
+          "name": "Connor Hellebuyck",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04l8w",
+          "name": "Parker Kelly",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ymn",
+          "name": "Maveric Lamoureux",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "01ex7",
+          "name": "Matt Duchene",
+          "position": "C",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "070fp",
+          "name": "Daxon Rudolph",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "004jl",
+          "name": "Brad Marchand",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04o0h",
+          "name": "Dylan Guenther",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05m17",
+          "name": "Frank Nazar",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "003kg",
+          "name": "Patrick Kane",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051lz",
+          "name": "Shane Pinto",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rf7",
+          "name": "Yakov Trenin",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05kuc",
+          "name": "Tyler Kleven",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01n84",
+          "name": "Alex Killorn",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ni5",
+          "name": "Jonathan Marchessault",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03ec6",
+          "name": "Devon Toews",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mn9",
+          "name": "Mikko Rantanen",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03dug",
+          "name": "Tony DeAngelo",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02npl",
+          "name": "Damon Severson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ybj",
+          "name": "Anthony Mantha",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06loj",
+          "name": "Ethan Belchetz",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04ldb",
+          "name": "Bowen Byram",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03ee4",
+          "name": "Victor Olofsson",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05w9b",
+          "name": "Calum Ritchie",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "02nol",
+          "name": "Teuvo Teravainen",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zp9",
+          "name": "Mavrik Bourque",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05lu8",
+          "name": "Alexander Nikishin",
+          "position": "D",
+          "status": "RESERVE"
+        }
+      ]
+    },
+    {
+      "id": "jbmeb32tmo2tig2e",
+      "name": "Montréal Canadiens",
+      "players": [
+        {
+          "id": "04mq0",
+          "name": "Matt Savoie",
+          "position": "C",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03d09",
+          "name": "Alex Tuch",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03as6",
+          "name": "Jared McCann",
+          "position": "LW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "01fx3",
+          "name": "Roman Josi",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01zto",
+          "name": "Charlie Coyle",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02yjj",
+          "name": "William Nylander",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03jvu",
+          "name": "Mitch Marner",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ogy",
+          "name": "Stephen Halliday",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06nkc",
+          "name": "Jake OBrien",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "05kbo",
+          "name": "Marat Khusnutdinov",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qyv",
+          "name": "Lukas Dostal",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06spu",
+          "name": "Alexander Zharovsky",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "03ofm",
+          "name": "Pius Suter",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "070fo",
+          "name": "Chase Reid",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "03ra8",
+          "name": "Timo Meier",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "049ph",
+          "name": "Neal Pionk",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03uzr",
+          "name": "Matthew Tkachuk",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05uao",
+          "name": "Collin Graf",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06axz",
+          "name": "Bradly Nadeau",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "023wa",
+          "name": "Jared Spurgeon",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "060v8",
+          "name": "Elias Pettersson",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rf8",
+          "name": "Vince Dunn",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "039cg",
+          "name": "Sam Bennett",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04xef",
+          "name": "Philip Broberg",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05tv0",
+          "name": "Jackson Blake",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031p8",
+          "name": "Oliver Bjorkstrand",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06bap",
+          "name": "Easton Cowan",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04lcf",
+          "name": "Joel Farabee",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04yu5",
+          "name": "Thomas Harley",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01skq",
+          "name": "Cam Fowler",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01d6c",
+          "name": "Jacob Markstrom",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06r63",
+          "name": "Tynan Lawrence",
+          "position": "C",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "l9ssazuemo2tig2e",
+      "name": "New York Rangers",
+      "players": [
+        {
+          "id": "05nzz",
+          "name": "Simon Edvinsson",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "05w9c",
+          "name": "Macklin Celebrini",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zj5",
+          "name": "JJ Peterka",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ymj",
+          "name": "Jimmy Snuggerud",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05rj3",
+          "name": "Tristan Luneau",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02wy5",
+          "name": "Nikita Zadorov",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04lc8",
+          "name": "Jesperi Kotkaniemi",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "059e0",
+          "name": "Jake Sanderson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03as8",
+          "name": "Nikolaj Ehlers",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04y80",
+          "name": "Shane Wright",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02zpp",
+          "name": "Viktor Arvidsson",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0579x",
+          "name": "Adam Fantilli",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "061im",
+          "name": "Michael Misa",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "04zj8",
+          "name": "Bobby Brink",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0644b",
+          "name": "Will Smith",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0457k",
+          "name": "Jake Oettinger",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01xfp",
+          "name": "Jaden Schwartz",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04ymu",
+          "name": "Hendrix Lapierre",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03v70",
+          "name": "Alex DeBrincat",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0045j",
+          "name": "Kris Letang",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04a9v",
+          "name": "Morgan Geekie",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03nfr",
+          "name": "Evan Rodrigues",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mqg",
+          "name": "Jakob Chychrun",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04mq1",
+          "name": "Ilya Mikheyev",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06maz",
+          "name": "Ilya Protas",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "02b3o",
+          "name": "Rickard Rakell",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04xjf",
+          "name": "Owen Power",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05mx8",
+          "name": "Declan Carlile",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04qya",
+          "name": "Filip Hallander",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06nke",
+          "name": "Jackson Smith",
+          "position": "D",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "69yb2d10mo2tig2e",
+      "name": "Québec Nordiques",
+      "players": [
+        {
+          "id": "04ymt",
+          "name": "Lucas Raymond",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04dwj",
+          "name": "Jason Robertson",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "075kn",
+          "name": "Oscar Hemming",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "0243e",
+          "name": "Gabriel Landeskog",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04abd",
+          "name": "Artem Zub",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "0045k",
+          "name": "Evgeni Malkin",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "071wj",
+          "name": "Carson Carels",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "06bmb",
+          "name": "Zeev Buium",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mn5",
+          "name": "Patrik Laine",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02f9l",
+          "name": "Nathan MacKinnon",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02nom",
+          "name": "Andrei Vasilevskiy",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051z1",
+          "name": "Justin Barron",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05r50",
+          "name": "Mackie Samoskevich",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031nx",
+          "name": "Shea Theodore",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01zu5",
+          "name": "Justin Faulk",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01skr",
+          "name": "Mikael Granlund",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ytx",
+          "name": "Ryan Hartman",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06hco",
+          "name": "Zayne Parekh",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "064mz",
+          "name": "Charlie Stramel",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "062dy",
+          "name": "Andrew Cristall",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03j8l",
+          "name": "Noah Hanifin",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04lbz",
+          "name": "Quinn Hughes",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "048x9",
+          "name": "Elias Pettersson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06bdr",
+          "name": "Roman Kantserov",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01sio",
+          "name": "Mats Zuccarello",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "05y3a",
+          "name": "Leo Carlsson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02dq6",
+          "name": "Jean-Gabriel Pageau",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06hj9",
+          "name": "Porter Martone",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rfx",
+          "name": "Tommy Novak",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "00qnu",
+          "name": "Drew Doughty",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06rnr",
+          "name": "Maddox Dagenais",
+          "position": "C",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "uzhvniysmo2tig2e",
+      "name": "Boston Bruins",
+      "players": [
+        {
+          "id": "05yli",
+          "name": "Pavel Mintyukov",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03rgq",
+          "name": "Ryan Shea",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06sqf",
+          "name": "Braeden Cootes",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "05mwh",
+          "name": "Devon Levi",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05r1i",
+          "name": "Matty Beniers",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01f5z",
+          "name": "Chris Kreider",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02422",
+          "name": "Ryan Nugent-Hopkins",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04ln4",
+          "name": "Kiefer Sherwood",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05gvo",
+          "name": "Matvei Michkov",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06bde",
+          "name": "Oliver Bonk",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06h8h",
+          "name": "Trevor Connelly",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05yn2",
+          "name": "Fraser Minten",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02b76",
+          "name": "Vincent Trocheck",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "065nx",
+          "name": "Berkly Catton",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ui5",
+          "name": "Quentin Musty",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "03ece",
+          "name": "Igor Shesterkin",
+          "position": "G",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "06r5z",
+          "name": "Keaton Verhoeff",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "04amd",
+          "name": "Peyton Krebs",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06hk9",
+          "name": "Vitali Pinchuk",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05gdo",
+          "name": "Luke Evangelista",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01lkz",
+          "name": "Taylor Hall",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02nof",
+          "name": "Hampus Lindholm",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051um",
+          "name": "Arseny Gritsyuk",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03ynu",
+          "name": "Carter Hart",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06lok",
+          "name": "Viggo Bjorck",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03e7p",
+          "name": "Travis Sanheim",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qve",
+          "name": "KAndre Miller",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06axx",
+          "name": "William Horcoff",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "0042t",
+          "name": "Claude Giroux",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04mx6",
+          "name": "Kaiden Guhle",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04y8g",
+          "name": "Trevor Zegras",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05gda",
+          "name": "Kent Johnson",
+          "position": "LW",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "p7f42l5emo2tig2e",
+      "name": "Atlanta Thrashers",
+      "players": [
+        {
+          "id": "01zvp",
+          "name": "Bryan Rust",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "06axc",
+          "name": "Samuel Honzek",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "02azb",
+          "name": "Mark Scheifele",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zb6",
+          "name": "Alex Vlasic",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05ubx",
+          "name": "Ryker Evans",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042t2",
+          "name": "Logan Stanley",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02nok",
+          "name": "Tomas Hertl",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02o7l",
+          "name": "Jaccob Slavin",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "059mt",
+          "name": "Nicolas Daws",
+          "position": "G",
+          "status": "MINORS"
+        },
+        {
+          "id": "05r2z",
+          "name": "Theo Lindstein",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "00454",
+          "name": "Sidney Crosby",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zo0",
+          "name": "Pavel Dorofeyev",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05962",
+          "name": "J.J. Moser",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05tcz",
+          "name": "Oliver Kapanen",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "065d1",
+          "name": "Matthew Wood",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05xrx",
+          "name": "Marco Kasper",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05tqu",
+          "name": "Logan Mailloux",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "04bw4",
+          "name": "Andrei Kuzmenko",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042vx",
+          "name": "Filip Hronek",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06kr3",
+          "name": "Sam OReilly",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "01ztp",
+          "name": "Zach Hyman",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03w5s",
+          "name": "Ryan McLeod",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05lud",
+          "name": "Dylan Garand",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02wy6",
+          "name": "Andre Burakovsky",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05oxs",
+          "name": "Jakub Dobes",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02noe",
+          "name": "Morgan Rielly",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06cl1",
+          "name": "Emmitt Finnie",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ybn",
+          "name": "Josh Morrissey",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03dde",
+          "name": "Jake Walman",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031p0",
+          "name": "Jake Guentzel",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "039ch",
+          "name": "Kasperi Kapanen",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03as9",
+          "name": "Dylan Strome",
+          "position": "C",
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "id": "3fyp69fcmo2tig2f",
+      "name": "Florida Panthers",
+      "players": [
+        {
+          "id": "04y4m",
+          "name": "Connor Bedard",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031p3",
+          "name": "Carter Verhaeghe",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05kub",
+          "name": "Shakir Mukhamadullin",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05rb9",
+          "name": "Conor Geekie",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "051v4",
+          "name": "Arturs Silovs",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02ybo",
+          "name": "Rasmus Ristolainen",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02un6",
+          "name": "Sean Monahan",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02o70",
+          "name": "Josh Anderson",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02un7",
+          "name": "Aleksander Barkov",
+          "position": "C",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "04yeb",
+          "name": "Simon Holmstrom",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05tpa",
+          "name": "Ville Koivunen",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "06axb",
+          "name": "Nick Lardis",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "0243f",
+          "name": "Seth Jones",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "024lv",
+          "name": "Mattias Ekholm",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "051tx",
+          "name": "Aliaksei Protas",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04f1z",
+          "name": "Mikey Anderson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05ym6",
+          "name": "Liam Ohgren",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02un5",
+          "name": "Sam Reinhart",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03raf",
+          "name": "Brock Boeser",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042vl",
+          "name": "Jordan Kyrou",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04ezy",
+          "name": "Morgan Frost",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05r3d",
+          "name": "Josh Doan",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "003tz",
+          "name": "Brent Burns",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01ud1",
+          "name": "Sergei Bobrovsky",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04qzk",
+          "name": "Paul Cotter",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02g00",
+          "name": "Aaron Ekblad",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02fro",
+          "name": "Adam Lowry",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "004cq",
+          "name": "Alex Ovechkin",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06age",
+          "name": "Sam Malinski",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "031v6",
+          "name": "MacKenzie Weegar",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06psl",
+          "name": "Ivar Stenberg",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06c72",
+          "name": "Braeden Bowman",
+          "position": "RW",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "kplo9zwcmo2tig2f",
+      "name": "Hartford Whalers",
+      "players": [
+        {
+          "id": "06loc",
+          "name": "Yegor Surin",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04r0j",
+          "name": "Michael Kesselring",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04yi4",
+          "name": "Pyotr Kochetkov",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mbn",
+          "name": "Mackenzie Blackwood",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03de2",
+          "name": "Brandon Montour",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06hcy",
+          "name": "Liam Greentree",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "031pn",
+          "name": "Nick Paul",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05wwg",
+          "name": "Lane Hutson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02fzj",
+          "name": "Blake Coleman",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02b3w",
+          "name": "Boone Jenner",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01c13",
+          "name": "Victor Hedman",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "0644c",
+          "name": "Daniil But",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "03yuc",
+          "name": "Kailer Yamamoto",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "050rc",
+          "name": "Dmitry Voronkov",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "01zt0",
+          "name": "Jason Zucker",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "042t5",
+          "name": "Tage Thompson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04osu",
+          "name": "Barrett Hayton",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "05k8c",
+          "name": "Tyson Foerster",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02b70",
+          "name": "Nikita Kucherov",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "061jm",
+          "name": "Frederic Brunet",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01zvf",
+          "name": "Mark Stone",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06sqp",
+          "name": "Vaclav Nestrasil",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04bdb",
+          "name": "Jack Hughes",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04apb",
+          "name": "Robert Thomas",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0457f",
+          "name": "Nico Hischier",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04an5",
+          "name": "Miro Heiskanen",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02dq3",
+          "name": "Jacob Trouba",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02nou",
+          "name": "Brady Skjei",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05gvq",
+          "name": "Seth Jarvis",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01f6d",
+          "name": "Ryan OReilly",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051u2",
+          "name": "Matias Maccelli",
+          "position": "LW",
+          "status": "INJURED_RESERVE"
+        }
+      ]
+    },
+    {
+      "id": "b2lquor7mo2tig2e",
+      "name": "Colorado Avalanche",
+      "players": [
+        {
+          "id": "03wpi",
+          "name": "Pierre-Luc Dubois",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04ad7",
+          "name": "Rasmus Dahlin",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01f66",
+          "name": "Kyle Palmieri",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rag",
+          "name": "Jack Roslovic",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06ig3",
+          "name": "Cayden Lindstrom",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "03ekl",
+          "name": "Vladislav Gavrikov",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "00qru",
+          "name": "Steven Stamkos",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "064r2",
+          "name": "Ivan Demidov",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "01f3d",
+          "name": "Oliver Ekman-Larsson",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03rmx",
+          "name": "Sebastian Aho",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "015pv",
+          "name": "John Carlson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02wy7",
+          "name": "Pavel Buchnevich",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05td4",
+          "name": "Ryan Ufko",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03klz",
+          "name": "Darren Raddysh",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04alw",
+          "name": "Cale Makar",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rae",
+          "name": "Joel Eriksson Ek",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01c12",
+          "name": "John Tavares",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02noj",
+          "name": "Tom Wilson",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rih",
+          "name": "Karel Vejmelka",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "02aez",
+          "name": "J.T. Miller",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zox",
+          "name": "Kaedan Korczak",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03bfj",
+          "name": "Artemi Panarin",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ybk",
+          "name": "Artturi Lehkonen",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "01gjn",
+          "name": "Erik Haula",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03kng",
+          "name": "Frederick Gaudreau",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "026p4",
+          "name": "Jonathan Huberdeau",
+          "position": "LW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "075u7",
+          "name": "Alexander Command",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "03rh3",
+          "name": "Kirill Kaprizov",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "071wk",
+          "name": "Elton Hermansson",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04yg5",
+          "name": "Jesper Wallstedt",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zp2",
+          "name": "Drew Helleson",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06jhe",
+          "name": "Cole Reschny",
+          "position": "C",
+          "status": "MINORS"
+        }
+      ]
+    },
+    {
+      "id": "bvm8qt4omo2tig2f",
+      "name": "Anaheim Mighty Ducks",
+      "players": [
+        {
+          "id": "01mzc",
+          "name": "Brayden McNabb",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031of",
+          "name": "William Carrier",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02oar",
+          "name": "Linus Ullmark",
+          "position": "G",
+          "status": "RESERVE"
+        },
+        {
+          "id": "03l0t",
+          "name": "Pavel Zacha",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rfl",
+          "name": "Anthony Cirelli",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02b6w",
+          "name": "William Karlsson",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04uqa",
+          "name": "Vasily Podkolzin",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03c0c",
+          "name": "Josh Manson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04zo3",
+          "name": "Nick Robertson",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06sn9",
+          "name": "Kashawn Aitcheson",
+          "position": "D",
+          "status": "MINORS"
+        },
+        {
+          "id": "03wpn",
+          "name": "Brett Howden",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02yjw",
+          "name": "Tristan Jarry",
+          "position": "G",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "04f17",
+          "name": "Fabian Zetterlund",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06amv",
+          "name": "Sam Dickinson",
+          "position": "D",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06ag2",
+          "name": "James Hagens",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "02ybl",
+          "name": "Valeri Nichushkin",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03rik",
+          "name": "Troy Terry",
+          "position": "RW",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "016g3",
+          "name": "Erik Karlsson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0744a",
+          "name": "Nikita Klepov",
+          "position": "LW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04uql",
+          "name": "Cole Perfetti",
+          "position": "RW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "048xc",
+          "name": "Nick Suzuki",
+          "position": "C",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04mv2",
+          "name": "Cole Caufield",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "06imm",
+          "name": "Roger McQueen",
+          "position": "RW",
+          "status": "MINORS"
+        },
+        {
+          "id": "04n4n",
+          "name": "Rasmus Sandin",
+          "position": "D",
+          "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "03rf5",
+          "name": "Rasmus Andersson",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "03mm6",
+          "name": "Lawson Crouse",
+          "position": "LW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "06hcq",
+          "name": "Carter Yakemchuk",
+          "position": "D",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "05rjh",
+          "name": "Noah Ostlund",
+          "position": "C",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "051z0",
+          "name": "Tim Stutzle",
+          "position": "LW",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "0644e",
+          "name": "Oliver Moore",
+          "position": "C",
+          "status": "MINORS"
+        },
+        {
+          "id": "02uws",
+          "name": "Mathew Barzal",
+          "position": "RW",
+          "status": "RESERVE"
+        },
+        {
+          "id": "04ymn",
+          "name": "Luke Hughes",
+          "position": "D",
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  ],
+  "standings": [
+    {
+      "teamId": "b2lquor7mo2tig2e",
+      "teamName": "Colorado Avalanche",
+      "rank": 1,
+      "points": "14-1-0",
+      "totalPointsFor": 2700.45,
+      "winPercentage": 0.933,
+      "gamesBack": 0.0
+    },
+    {
+      "teamId": "kplo9zwcmo2tig2f",
+      "teamName": "Hartford Whalers",
+      "rank": 2,
+      "points": "13-2-0",
+      "totalPointsFor": 2427.9,
+      "winPercentage": 0.867,
+      "gamesBack": 1.0
+    },
+    {
+      "teamId": "fdy3gp6lmo2tig2e",
+      "teamName": "Detroit Red Wings",
+      "rank": 3,
+      "points": "11-4-0",
+      "totalPointsFor": 2433.0,
+      "winPercentage": 0.733,
+      "gamesBack": 3.0
+    },
+    {
+      "teamId": "pelw39b7mo2tig2f",
+      "teamName": "Ottawa Senators",
+      "rank": 4,
+      "points": "10-5-0",
+      "totalPointsFor": 2569.65,
+      "winPercentage": 0.667,
+      "gamesBack": 4.0
+    },
+    {
+      "teamId": "jbmeb32tmo2tig2e",
+      "teamName": "Montréal Canadiens",
+      "rank": 5,
+      "points": "10-5-0",
+      "totalPointsFor": 2423.25,
+      "winPercentage": 0.667,
+      "gamesBack": 4.0
+    },
+    {
+      "teamId": "69yb2d10mo2tig2e",
+      "teamName": "Québec Nordiques",
+      "rank": 6,
+      "points": "10-5-0",
+      "totalPointsFor": 2375.55,
+      "winPercentage": 0.667,
+      "gamesBack": 4.0
+    },
+    {
+      "teamId": "l9ssazuemo2tig2e",
+      "teamName": "New York Rangers",
+      "rank": 7,
+      "points": "9-6-0",
+      "totalPointsFor": 2309.55,
+      "winPercentage": 0.6,
+      "gamesBack": 5.0
+    },
+    {
+      "teamId": "4fmu58uhmo2tig2f",
+      "teamName": "Toronto Maple Leafs",
+      "rank": 8,
+      "points": "9-6-0",
+      "totalPointsFor": 2259.3,
+      "winPercentage": 0.6,
+      "gamesBack": 5.0
+    },
+    {
+      "teamId": "1bn2dvarmo2tig2f",
+      "teamName": "Minnesota North Stars",
+      "rank": 9,
+      "points": "8-7-0",
+      "totalPointsFor": 1949.55,
+      "winPercentage": 0.533,
+      "gamesBack": 6.0
+    },
+    {
+      "teamId": "adfljh3wmo2tig2e",
+      "teamName": "Nashville Predators",
+      "rank": 10,
+      "points": "7-8-0",
+      "totalPointsFor": 2229.6,
+      "winPercentage": 0.467,
+      "gamesBack": 7.0
+    },
+    {
+      "teamId": "bvm8qt4omo2tig2f",
+      "teamName": "Anaheim Mighty Ducks",
+      "rank": 11,
+      "points": "7-8-0",
+      "totalPointsFor": 2223.45,
+      "winPercentage": 0.467,
+      "gamesBack": 7.0
+    },
+    {
+      "teamId": "mmvzhj4amo2tig2e",
+      "teamName": "Chicago Blackhawks",
+      "rank": 12,
+      "points": "3-12-0",
+      "totalPointsFor": 2007.9,
+      "winPercentage": 0.2,
+      "gamesBack": 11.0
+    },
+    {
+      "teamId": "p7f42l5emo2tig2e",
+      "teamName": "Atlanta Thrashers",
+      "rank": 13,
+      "points": "3-12-0",
+      "totalPointsFor": 1735.05,
+      "winPercentage": 0.2,
+      "gamesBack": 11.0
+    },
+    {
+      "teamId": "uzhvniysmo2tig2e",
+      "teamName": "Boston Bruins",
+      "rank": 14,
+      "points": "2-13-0",
+      "totalPointsFor": 1893.0,
+      "winPercentage": 0.133,
+      "gamesBack": 12.0
+    },
+    {
+      "teamId": "3fyp69fcmo2tig2f",
+      "teamName": "Florida Panthers",
+      "rank": 15,
+      "points": "2-13-0",
+      "totalPointsFor": 1801.5,
+      "winPercentage": 0.133,
+      "gamesBack": 12.0
+    },
+    {
+      "teamId": "gqpb7szpmo2tig2e",
+      "teamName": "California Golden Seals",
+      "rank": 16,
+      "points": "2-13-0",
+      "totalPointsFor": 1740.45,
+      "winPercentage": 0.133,
+      "gamesBack": 12.0
+    }
+  ],
+  "matchups": [
+    {
+      "away": {
+        "teamId": "3fyp69fcmo2tig2f",
+        "teamName": "Florida Panthers",
+        "score": 130.9,
+        "gamesPlayed": 54
+      },
+      "home": {
+        "teamId": "mmvzhj4amo2tig2e",
+        "teamName": "Chicago Blackhawks",
+        "score": 144.05,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "l9ssazuemo2tig2e",
+        "teamName": "New York Rangers",
+        "score": 177.45,
+        "gamesPlayed": 55
+      },
+      "home": {
+        "teamId": "gqpb7szpmo2tig2e",
+        "teamName": "California Golden Seals",
+        "score": 125.55,
+        "gamesPlayed": 52
+      }
+    },
+    {
+      "away": {
+        "teamId": "69yb2d10mo2tig2e",
+        "teamName": "Québec Nordiques",
+        "score": 173.75,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "uzhvniysmo2tig2e",
+        "teamName": "Boston Bruins",
+        "score": 138.7,
+        "gamesPlayed": 54
+      }
+    },
+    {
+      "away": {
+        "teamId": "adfljh3wmo2tig2e",
+        "teamName": "Nashville Predators",
+        "score": 158.5,
+        "gamesPlayed": 59
+      },
+      "home": {
+        "teamId": "1bn2dvarmo2tig2f",
+        "teamName": "Minnesota North Stars",
+        "score": 171.45,
+        "gamesPlayed": 55
+      }
+    },
+    {
+      "away": {
+        "teamId": "fdy3gp6lmo2tig2e",
+        "teamName": "Detroit Red Wings",
+        "score": 145.95,
+        "gamesPlayed": 53
+      },
+      "home": {
+        "teamId": "b2lquor7mo2tig2e",
+        "teamName": "Colorado Avalanche",
+        "score": 190.0,
+        "gamesPlayed": 53
+      }
+    },
+    {
+      "away": {
+        "teamId": "jbmeb32tmo2tig2e",
+        "teamName": "Montréal Canadiens",
+        "score": 150.45,
+        "gamesPlayed": 52
+      },
+      "home": {
+        "teamId": "kplo9zwcmo2tig2f",
+        "teamName": "Hartford Whalers",
+        "score": 188.4,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "bvm8qt4omo2tig2f",
+        "teamName": "Anaheim Mighty Ducks",
+        "score": 149.5,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "p7f42l5emo2tig2e",
+        "teamName": "Atlanta Thrashers",
+        "score": 117.35,
+        "gamesPlayed": 48
+      }
+    },
+    {
+      "away": {
+        "teamId": "pelw39b7mo2tig2f",
+        "teamName": "Ottawa Senators",
+        "score": 158.9,
+        "gamesPlayed": 54
+      },
+      "home": {
+        "teamId": "4fmu58uhmo2tig2f",
+        "teamName": "Toronto Maple Leafs",
+        "score": 138.65,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "l9ssazuemo2tig2e",
+        "teamName": "New York Rangers",
+        "score": 177.45,
+        "gamesPlayed": 55
+      },
+      "home": {
+        "teamId": "mmvzhj4amo2tig2e",
+        "teamName": "Chicago Blackhawks",
+        "score": 144.05,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "69yb2d10mo2tig2e",
+        "teamName": "Québec Nordiques",
+        "score": 173.75,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "3fyp69fcmo2tig2f",
+        "teamName": "Florida Panthers",
+        "score": 130.9,
+        "gamesPlayed": 54
+      }
+    },
+    {
+      "away": {
+        "teamId": "adfljh3wmo2tig2e",
+        "teamName": "Nashville Predators",
+        "score": 158.5,
+        "gamesPlayed": 59
+      },
+      "home": {
+        "teamId": "gqpb7szpmo2tig2e",
+        "teamName": "California Golden Seals",
+        "score": 125.55,
+        "gamesPlayed": 52
+      }
+    },
+    {
+      "away": {
+        "teamId": "fdy3gp6lmo2tig2e",
+        "teamName": "Detroit Red Wings",
+        "score": 145.95,
+        "gamesPlayed": 53
+      },
+      "home": {
+        "teamId": "uzhvniysmo2tig2e",
+        "teamName": "Boston Bruins",
+        "score": 138.7,
+        "gamesPlayed": 54
+      }
+    },
+    {
+      "away": {
+        "teamId": "jbmeb32tmo2tig2e",
+        "teamName": "Montréal Canadiens",
+        "score": 150.45,
+        "gamesPlayed": 52
+      },
+      "home": {
+        "teamId": "1bn2dvarmo2tig2f",
+        "teamName": "Minnesota North Stars",
+        "score": 171.45,
+        "gamesPlayed": 55
+      }
+    },
+    {
+      "away": {
+        "teamId": "bvm8qt4omo2tig2f",
+        "teamName": "Anaheim Mighty Ducks",
+        "score": 149.5,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "b2lquor7mo2tig2e",
+        "teamName": "Colorado Avalanche",
+        "score": 190.0,
+        "gamesPlayed": 53
+      }
+    },
+    {
+      "away": {
+        "teamId": "pelw39b7mo2tig2f",
+        "teamName": "Ottawa Senators",
+        "score": 158.9,
+        "gamesPlayed": 54
+      },
+      "home": {
+        "teamId": "kplo9zwcmo2tig2f",
+        "teamName": "Hartford Whalers",
+        "score": 188.4,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "4fmu58uhmo2tig2f",
+        "teamName": "Toronto Maple Leafs",
+        "score": 138.65,
+        "gamesPlayed": 51
+      },
+      "home": {
+        "teamId": "p7f42l5emo2tig2e",
+        "teamName": "Atlanta Thrashers",
+        "score": 117.35,
+        "gamesPlayed": 48
+      }
+    },
+    {
+      "away": {
+        "teamId": "69yb2d10mo2tig2e",
+        "teamName": "Québec Nordiques",
+        "score": 173.75,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "mmvzhj4amo2tig2e",
+        "teamName": "Chicago Blackhawks",
+        "score": 144.05,
+        "gamesPlayed": 51
+      }
+    },
+    {
+      "away": {
+        "teamId": "adfljh3wmo2tig2e",
+        "teamName": "Nashville Predators",
+        "score": 158.5,
+        "gamesPlayed": 59
+      },
+      "home": {
+        "teamId": "l9ssazuemo2tig2e",
+        "teamName": "New York Rangers",
+        "score": 177.45,
+        "gamesPlayed": 55
+      }
+    },
+    {
+      "away": {
+        "teamId": "fdy3gp6lmo2tig2e",
+        "teamName": "Detroit Red Wings",
+        "score": 145.95,
+        "gamesPlayed": 53
+      },
+      "home": {
+        "teamId": "3fyp69fcmo2tig2f",
+        "teamName": "Florida Panthers",
+        "score": 130.9,
+        "gamesPlayed": 54
+      }
+    },
+    {
+      "away": {
+        "teamId": "jbmeb32tmo2tig2e",
+        "teamName": "Montréal Canadiens",
+        "score": 150.45,
+        "gamesPlayed": 52
+      },
+      "home": {
+        "teamId": "gqpb7szpmo2tig2e",
+        "teamName": "California Golden Seals",
+        "score": 125.55,
+        "gamesPlayed": 52
+      }
+    },
+    {
+      "away": {
+        "teamId": "bvm8qt4omo2tig2f",
+        "teamName": "Anaheim Mighty Ducks",
+        "score": 149.5,
+        "gamesPlayed": 50
+      },
+      "home": {
+        "teamId": "uzhvniysmo2tig2e",
+        "teamName": "Boston Bruins",
+        "score": 138.7,
+        "gamesPlayed": 54
+      }
+    },
+    {
+      "away": {
+        "teamId": "pelw39b7mo2tig2f",
+        "teamName": "Ottawa Senators",
+        "score": 158.9,
+        "gamesPlayed": 54
+      },
+      "home": {
+        "teamId": "1bn2dvarmo2tig2f",
+        "teamName": "Minnesota North Stars",
+        "score": 171.45,
+        "gamesPlayed": 55
+      }
+    },
+    {
+      "away": {
+        "teamId": "4fmu58uhmo2tig2f",
+        "teamName": "Toronto Maple Leafs",
+        "score": 138.65,
+        "gamesPlayed": 51
+      },
+      "home": {
+        "teamId": "b2lquor7mo2tig2e",
+        "teamName": "Colorado Avalanche",
+        "score": 190.0,
+        "gamesPlayed": 53
+      }
+    },
+    {
+      "away": {
+        "teamId": "p7f42l5emo2tig2e",
+        "teamName": "Atlanta Thrashers",
+        "score": 117.35,
+        "gamesPlayed": 48
+      },
+      "home": {
+        "teamId": "kplo9zwcmo2tig2f",
+        "teamName": "Hartford Whalers",
+        "score": 188.4,
+        "gamesPlayed": 51
+      }
+    }
+  ]
+}
