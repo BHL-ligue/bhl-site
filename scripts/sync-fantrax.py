@@ -33,8 +33,6 @@ def fetch_roster_stats(team_id, period):
         ), "dt": 0, "at": 0, "av": "0.0", "tz": "UTC", "v": "186.1.9"
     }
     cookie = os.environ.get("FANTRAX_COOKIE", "").strip()
-    if not cookie:
-        raise ValueError("FANTRAX_COOKIE secret not configured")
     request = urllib.request.Request(
         f"https://www.fantrax.com/fxpa/req?leagueId={LEAGUE}",
         data=json.dumps(payload).encode("utf-8"),
@@ -42,7 +40,7 @@ def fetch_roster_stats(team_id, period):
                  "Content-Type": "application/json",
                  "Origin": "https://www.fantrax.com",
                  "Referer": f"https://www.fantrax.com/fantasy/league/{LEAGUE}/team/roster",
-                 "Cookie": cookie},
+                 **({"Cookie": cookie} if cookie else {})},
         method="POST"
     )
     with urllib.request.urlopen(request, timeout=18) as response:
@@ -348,8 +346,8 @@ def build_snapshot(now=None):
     live_stats = {}
     stats_diagnostics = {"teamsAttempted": 0, "teamsWithData": 0, "errors": {}}
     for team in teams:
-        if not os.environ.get("FANTRAX_COOKIE", "").strip():
-            stats_diagnostics["errors"]["FANTRAX_COOKIE secret not configured"] = 1
+        # Without a session, probe one team first to avoid 16 rejected requests.
+        if not os.environ.get("FANTRAX_COOKIE", "").strip() and stats_diagnostics["teamsAttempted"] >= 1 and not stats_diagnostics["teamsWithData"]:
             break
         stats_diagnostics["teamsAttempted"] += 1
         try:
