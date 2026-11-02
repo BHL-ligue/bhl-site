@@ -12,6 +12,18 @@ const nhlAbbrev=v=>{
 const fmt=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
 let request;
 function load(){return request||(request=fetch('data/fantrax-player-details.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Statistiques indisponibles');return r.json()}).catch(e=>{request=null;throw e}))}
+let bhlExtendedDirectoryRequest;
+function bhlExtendedDirectory(){
+ return bhlExtendedDirectoryRequest||(bhlExtendedDirectoryRequest=fetch('data/nhl-player-directory.json',{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw Error('Répertoire LNH élargi non publié');return r.json()})
+  .catch(()=>({players:{}})));
+}
+async function bhlExtendedDirectoryId(name,expectedTeam){
+ const data=await bhlExtendedDirectory();
+ const candidates=Object.entries(data.players||{}).filter(([id,p])=>
+  norm(p.name)===norm(name)&&(!expectedTeam||String(p.team||'').toUpperCase()===expectedTeam));
+ return candidates.length===1?Number(candidates[0][0]):null;
+}
 const bhlNhlLookupCache=new Map();
 async function bhlLookupOfficialId(player,id){
  const directory=await bhlIdentityDirectory().catch(()=>({players:{}}));
@@ -22,6 +34,9 @@ async function bhlLookupOfficialId(player,id){
  const cacheKey=String(id||name);
  if(!bhlNhlLookupCache.has(cacheKey)){
   bhlNhlLookupCache.set(cacheKey,(async()=>{
+   const expected=nhlAbbrev(entry?.nhlTeam||player.nhlTeam).toUpperCase();
+   const indexed=await bhlExtendedDirectoryId(name,expected);
+   if(indexed)return indexed;
    const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name);
    const results=await nhlJson(url);
    const rows=Array.isArray(results)?results:(results?.data||[]);
@@ -35,7 +50,6 @@ async function bhlLookupOfficialId(player,id){
    const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
    const full=[profile.firstName?.default,profile.lastName?.default].filter(Boolean).join(' ');
    if(norm(full)!==norm(name))return null;
-   const expected=nhlAbbrev(entry?.nhlTeam||player.nhlTeam).toUpperCase();
    const actual=String(profile.currentTeamAbbrev||'').toUpperCase();
    if(expected&&actual&&expected!==actual)return null;
    return nhlId;
