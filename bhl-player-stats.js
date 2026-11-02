@@ -209,11 +209,23 @@ function addSections(dialog,name){
  select(active);
 }
 
-function open(id,name){
+function open(id,name,source){
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
- dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
+ dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
  document.body.append(dialog);dialog.showModal();
+ // Show the BHL team's identity only when the originating roster/team is known.
+ const origin=source?.closest?.('[data-team-name],[data-bhl-team],.bhl-lineup-card,.bhl-roster-card');
+ const activeChip=document.querySelector('.teamchip.active');
+ const logo=origin?.querySelector?.('.teamlogo')||activeChip?.querySelector?.('.teamlogo');
+ const identity=dialog.querySelector('.bhl-player-team-identity');
+ if(logo?.getAttribute('src')){
+  const image=identity.querySelector('img');image.src=logo.getAttribute('src');
+  image.onerror=()=>{identity.hidden=true};
+  const teamName=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.textContent?.trim()||'Équipe BHL';
+  identity.querySelector('span').textContent=teamName;
+  identity.hidden=false;
+ }
  dialog.querySelector('button').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
@@ -224,7 +236,7 @@ function open(id,name){
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-bhl-player-id]');
  if(!button)return;
- e.preventDefault();open(button.dataset.bhlPlayerId,button.dataset.bhlPlayerName||button.textContent.trim());
+ e.preventDefault();open(button.dataset.bhlPlayerId,button.dataset.bhlPlayerName||button.textContent.trim(),button);
 });
 // Compatibilité avec les anciennes fiches portrait utilisées dans les pages historiques.
 if(typeof window.bhlPortraitModal==='function'){
