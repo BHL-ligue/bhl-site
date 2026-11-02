@@ -267,12 +267,20 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 #seasonRows td{height:44px;box-sizing:border-box;vertical-align:middle;padding-top:7px;padding-bottom:7px}
 @media(max-width:600px){.best-season-row{min-height:64px}.season-result img{width:17px;height:17px;flex-basis:17px}}
 </style>
-</head><body>
+<style>
+.bhl-leadership-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:14px 0 26px}
+.bhl-leadership-card{min-width:0;padding:20px!important}
+.bhl-leadership-role{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:#555}
+.bhl-leadership-letter{display:inline-flex;align-items:center;justify-content:center;background:var(--team-color,#cc0000);color:#fff;width:28px;height:28px;border-radius:7px;font-weight:900}
+.bhl-leadership-name{font-size:18px;font-weight:850;margin-top:14px;overflow-wrap:anywhere}
+@media(max-width:850px){.bhl-leadership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.bhl-leadership-grid{grid-template-columns:1fr}}
+</style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
 <div id="teamnav" class="teamnav"></div><div id="status" class="status">Connecting to Google Sheets…</div>
 <section id="fiche"><div class="banner"><div class="crest" id="crest">BHL</div><div><div class="kicker" id="teamKicker">Official team profile</div><h2 id="teamName">Équipe BHL</h2><div class="sub" id="teamSub">Historique et statistiques</div></div></div>
-<nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button><button class="tab" data-tab="protections">Protections</button><button class="tab" data-tab="matchups">Affrontements</button><button class="tab" data-tab="gamesplayed">Matchs joués</button><button class="tab" data-tab="records">Records</button><button class="tab" data-tab="trades">Transactions</button></nav><div id="panel"></div></section>
+<nav class="tabs" role="tablist"><button class="tab active" data-tab="overview">Vue d’ensemble</button><button class="tab" data-tab="seasons">Historique des saisons</button><button class="tab" data-tab="honours">Palmarès et distinctions</button><button class="tab" data-tab="leadership">Leadership</button><button class="tab" data-tab="protections">Protections</button><button class="tab" data-tab="matchups">Affrontements</button><button class="tab" data-tab="gamesplayed">Matchs joués</button><button class="tab" data-tab="records">Records</button><button class="tab" data-tab="trades">Transactions</button></nav><div id="panel"></div></section>
 <p class="note">Données chargées depuis le classeur BHL. Les fiches utilisent les lignes de statistiques et d’historique des onglets d’équipe. Les saisons, statistiques FPTS et distinctions sont séparées selon les tableaux du classeur.</p><footer class="footer">BHL · Béliveau Hockey League · Version de test connectée</footer></main>
 <script>
 const API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
@@ -627,7 +635,94 @@ function formatMedalText(value){
   return `<span class="honour-medal ${cls}">${match}</span>`;
  });
 }
-function renderPanel(){const t=teamData[selected];if(!t)return;if(currentTab==='trades'){$('#panel').innerHTML='<div class="section-head"><div><h3>Historique des transactions</h3><p>Échanges de cette organisation, y compris les anciennes franchises.</p></div></div><div id="team-trades"></div><p class="note"><a href="bhl-transactions.html">Voir toutes les transactions de la BHL →</a></p>';BHLTrades.mount($('#team-trades'),{team:selected});document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='records'){renderOrgRecords();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='gamesplayed'){renderGamesPlayed();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='matchups'){renderMatchups();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='protections'){renderProtections();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));if(currentTab==='overview'){const c=t.cumulative;const a=organisationAchievements(t);$('#panel').innerHTML=`${renderChampionshipBanners(t)}<div class="section-head"><div><h3>Performances cumulatives</h3><p>Bilan historique de l’organisation</p></div></div><div class="stats">${window.bhlOverviewStatsHTML||""}</div><div class="cards2"><div class="card"><div class="kicker">Bilan historique</div><h3>Performance cumulative</h3><table style="min-width:0"><tbody><tr><td>Rang Forbes</td><td style="text-align:right"><b>#${fmt(rankFor(t.name))}</b></td></tr><tr><td>PTSF</td><td style="text-align:right"><b>${fmt(c.pointsFor,1)}</b></td></tr><tr><td>PTSA</td><td style="text-align:right"><b>${fmt(c.pointsAgainst,1)}</b></td></tr><tr><td>Échanges</td><td style="text-align:right"><b>${fmt(c.trades)}</b></td></tr><tr><td>Claims</td><td style="text-align:right"><b>${fmt(c.claims)}</b></td></tr><tr><td>Trophées Scotty Bowman</td><td style="text-align:right"><b>${fmt(a.bowman)}</b></td></tr><tr><td>Participations aux séries</td><td style="text-align:right"><b>${fmt(a.playoffSeasons)}</b></td></tr><tr><td>Rondes gagnées (estimées)</td><td style="text-align:right"><b>${fmt(a.rounds)}</b></td></tr><tr><td>Coupes Béliveau</td><td style="text-align:right"><b>${fmt(a.beliveau)}</b></td></tr><tr><td>Trophées et distinctions gagnés</td><td style="text-align:right"><b>${fmt(a.trophies)}</b></td></tr><tr><td>Finalistes</td><td style="text-align:right"><b>${fmt(a.finalists)}</b></td></tr></tbody></table></div><div class="card"><div class="kicker">Meilleures saisons</div><h3>Top 5 des saisons (points)</h3>${bestSeasons(t).map(s=>`<div class="best-season-row"><div class="best-season-left"><b>${esc(s.season)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.team)}</div></div><div class="best-season-right"><b>${fmt(s.wins)}–${fmt(s.losses)}</b>${renderSeasonResult(s.result||'Résultat non indiqué')}</div></div>`).join('')}</div></div>`;}
+
+/* BHL — Leadership (lecture publique des deux onglets synchronisés) */
+const leadershipCache={captains:null,history:null};
+let leadershipPending=null;
+function leadershipKey(value){
+  return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+}
+function leadershipRows(response){
+  const data=response?.data;
+  return Array.isArray(data?.rows)?data.rows:Array.isArray(data)?data:[];
+}
+function leadershipLoad(){
+  if(leadershipCache.captains&&leadershipCache.history)return Promise.resolve(leadershipCache);
+  if(leadershipPending)return leadershipPending;
+  leadershipPending=Promise.all([jsonp('CAPITAINES'),jsonp('HISTORIQUE_LEADERSHIP')]).then(([c,h])=>{
+    if(!c?.ok||!h?.ok)throw Error('Réponse invalide des sources de leadership');
+    leadershipCache.captains=leadershipRows(c);
+    leadershipCache.history=leadershipRows(h);
+    return leadershipCache;
+  }).finally(()=>{leadershipPending=null});
+  return leadershipPending;
+}
+function leadershipCurrentFor(sheet){
+  const official=TEAM_NAMES_LEADERSHIP[sheet]||sheet;
+  return (leadershipCache.captains||[]).find(r=>{
+    const id=Array.isArray(r)?r[0]:r.team_id;
+    const org=Array.isArray(r)?r[1]:r.organisation;
+    return leadershipKey(id)===leadershipKey(sheet)||leadershipKey(org)===leadershipKey(official);
+  });
+}
+const TEAM_NAMES_LEADERSHIP={
+  ANAHEIM:'Anaheim Mighty Ducks',ATLANTA:'Atlanta Thrashers',CALIFORNIE:'California Golden Seals',
+  CHICAGO:'Chicago Blackhawks',CLEVELAND:'Boston Bruins',COLORADO:'Colorado Avalanche',
+  DETROIT:'Detroit Red Wings',FLORIDA:'Florida Panthers',HARTFORD:'Hartford Whalers',
+  MINNESOTA:'Minnesota North Stars',MONTREAL:'Montréal Canadiens',NASHVILLE:'Nashville Predators',
+  NEWYORK:'New York Rangers',OTTAWA:'Ottawa Senators','QUÉBEC':'Québec Nordiques',TORONTO:'Toronto Maple Leafs'
+};
+function leadershipField(record,field,index){
+  return Array.isArray(record)?(record[index]??''):(record?.[field]??'');
+}
+function leadershipDate(value){
+  if(!value)return '—';
+  const date=new Date(value);
+  return Number.isNaN(date.getTime())?String(value):date.toLocaleDateString('fr-CA',{year:'numeric',month:'long',day:'numeric'});
+}
+function renderLeadership(){
+  const team=selected;
+  $('#panel').innerHTML='<div class="card">Chargement du leadership depuis Google Sheets…</div>';
+  leadershipLoad().then(()=>{
+    if(selected!==team||currentTab!=='leadership')return;
+    const current=leadershipCurrentFor(team);
+    const roles=[
+      ['C','Capitaine',leadershipField(current,'captain',2)],
+      ['A','Assistant 1',leadershipField(current,'assistant_1',3)],
+      ['A','Assistant 2',leadershipField(current,'assistant_2',4)],
+      ['A','Assistant 3',leadershipField(current,'assistant_3',5)]
+    ];
+    const currentHtml='<div class="section-head"><div><h3>Leadership actuel</h3><p>Capitaine et assistants — données synchronisées depuis Supabase.</p></div></div>'+
+      '<div class="bhl-leadership-grid">'+roles.map(([letter,label,name])=>
+        '<div class="card bhl-leadership-card"><div class="bhl-leadership-role"><span class="bhl-leadership-letter">'+letter+'</span>'+esc(label)+'</div><div class="bhl-leadership-name">'+esc(name||'Non désigné')+'</div></div>'
+      ).join('')+'</div>';
+    const official=TEAM_NAMES_LEADERSHIP[team]||team;
+    const history=(leadershipCache.history||[]).filter(r=>leadershipKey(leadershipField(r,'organisation',1))===leadershipKey(official));
+    const changes=[];
+    for(const r of history){
+      const date=leadershipField(r,'date',2);
+      for(const [label,oldField,newField,oldIdx,newIdx] of [
+        ['Capitaine','old_captain','new_captain',4,5],
+        ['Assistant 1','old_assistant_1','new_assistant_1',6,7],
+        ['Assistant 2','old_assistant_2','new_assistant_2',8,9],
+        ['Assistant 3','old_assistant_3','new_assistant_3',10,11]
+      ]){
+        const before=leadershipField(r,oldField,oldIdx),after=leadershipField(r,newField,newIdx);
+        if(String(before||'')!==String(after||''))changes.push({date,label,before,after});
+      }
+    }
+    changes.sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+    const historyHtml='<div class="section-head"><div><h3>Historique du leadership</h3><p>'+changes.length+' changement(s) répertorié(s) pour cette organisation.</p></div></div>'+
+      (changes.length?'<div class="tablewrap"><table><thead><tr><th>Date</th><th>Fonction</th><th>Ancien joueur</th><th>Nouveau joueur</th></tr></thead><tbody>'+
+      changes.map(c=>'<tr><td>'+esc(leadershipDate(c.date))+'</td><td>'+esc(c.label)+'</td><td>'+esc(c.before||'—')+'</td><td><b>'+esc(c.after||'—')+'</b></td></tr>').join('')+
+      '</tbody></table></div>':'<div class="card">Aucun changement de leadership enregistré pour cette organisation.</div>');
+    $('#panel').innerHTML=currentHtml+historyHtml;
+  }).catch(error=>{
+    if(selected===team&&currentTab==='leadership')$('#panel').innerHTML='<div class="card">Impossible de charger le leadership : '+esc(error.message)+'</div>';
+  });
+}
+
+function renderPanel(){if(currentTab==='leadership'){renderLeadership();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}const t=teamData[selected];if(!t)return;if(currentTab==='trades'){$('#panel').innerHTML='<div class="section-head"><div><h3>Historique des transactions</h3><p>Échanges de cette organisation, y compris les anciennes franchises.</p></div></div><div id="team-trades"></div><p class="note"><a href="bhl-transactions.html">Voir toutes les transactions de la BHL →</a></p>';BHLTrades.mount($('#team-trades'),{team:selected});document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='records'){renderOrgRecords();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='gamesplayed'){renderGamesPlayed();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='matchups'){renderMatchups();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}if(currentTab==='protections'){renderProtections();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));return;}document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));if(currentTab==='overview'){const c=t.cumulative;const a=organisationAchievements(t);$('#panel').innerHTML=`${renderChampionshipBanners(t)}<div class="section-head"><div><h3>Performances cumulatives</h3><p>Bilan historique de l’organisation</p></div></div><div class="stats">${window.bhlOverviewStatsHTML||""}</div><div class="cards2"><div class="card"><div class="kicker">Bilan historique</div><h3>Performance cumulative</h3><table style="min-width:0"><tbody><tr><td>Rang Forbes</td><td style="text-align:right"><b>#${fmt(rankFor(t.name))}</b></td></tr><tr><td>PTSF</td><td style="text-align:right"><b>${fmt(c.pointsFor,1)}</b></td></tr><tr><td>PTSA</td><td style="text-align:right"><b>${fmt(c.pointsAgainst,1)}</b></td></tr><tr><td>Échanges</td><td style="text-align:right"><b>${fmt(c.trades)}</b></td></tr><tr><td>Claims</td><td style="text-align:right"><b>${fmt(c.claims)}</b></td></tr><tr><td>Trophées Scotty Bowman</td><td style="text-align:right"><b>${fmt(a.bowman)}</b></td></tr><tr><td>Participations aux séries</td><td style="text-align:right"><b>${fmt(a.playoffSeasons)}</b></td></tr><tr><td>Rondes gagnées (estimées)</td><td style="text-align:right"><b>${fmt(a.rounds)}</b></td></tr><tr><td>Coupes Béliveau</td><td style="text-align:right"><b>${fmt(a.beliveau)}</b></td></tr><tr><td>Trophées et distinctions gagnés</td><td style="text-align:right"><b>${fmt(a.trophies)}</b></td></tr><tr><td>Finalistes</td><td style="text-align:right"><b>${fmt(a.finalists)}</b></td></tr></tbody></table></div><div class="card"><div class="kicker">Meilleures saisons</div><h3>Top 5 des saisons (points)</h3>${bestSeasons(t).map(s=>`<div class="best-season-row"><div class="best-season-left"><b>${esc(s.season)}</b><div style="font-size:11px;color:var(--muted)">${esc(s.team)}</div></div><div class="best-season-right"><b>${fmt(s.wins)}–${fmt(s.losses)}</b>${renderSeasonResult(s.result||'Résultat non indiqué')}</div></div>`).join('')}</div></div>`;}
 if(currentTab==='seasons'){$('#panel').innerHTML=`<div class="section-head"><div><h3>Historique des saisons</h3><p>Historique récupéré depuis l’onglet ${esc(t.sheet)}.</p></div><input id="seasonSearch" style="max-width:260px" placeholder="Filtrer les saisons…"></div><div class="tablewrap"><table><thead><tr><th>Saison</th><th>Nom d’équipe</th><th>Rang</th><th>V</th><th>D</th><th>PTS</th><th>% V</th><th>FPTS Pour</th><th>FPTS Contre</th><th>Résultat</th><th>Adversaire</th></tr></thead><tbody id="seasonRows"></tbody></table></div>`;const draw=()=>{const q=$('#seasonSearch').value.toLowerCase();$('#seasonRows').innerHTML=t.seasons.filter(s=>JSON.stringify(s).toLowerCase().includes(q)).map(s=>`<tr><td><b>${esc(s.season)}</b></td><td>${teamLogo(s.team)}${esc(s.team)}</td><td>${fmt(s.rank)}</td><td>${fmt(s.wins)}</td><td>${fmt(s.losses)}</td><td>${fmt(s.points)}</td><td>${pct(s.winPct)}</td><td>${fmt(s.pointsFor,2)}</td><td>${fmt(s.pointsAgainst,2)}</td><td>${renderSeasonResult(s.result||'—')}</td><td>${esc(s.opponent||'—')}</td></tr>`).join('')||'<tr><td colspan="11">Aucune saison correspondante.</td></tr>'};$('#seasonSearch').addEventListener('input',draw);draw();}
 if(currentTab==='honours'){$('#panel').innerHTML=`<div class="section-head"><div><h3>Palmarès et distinctions</h3><p>${t.honours.length} distinction(s) répertoriée(s) dans le classeur.</p></div></div><div class="tablewrap"><table><thead><tr><th>Saison</th><th>Équipe</th><th>Distinction</th><th>Gagnant</th><th>Détail</th></tr></thead><tbody>${t.honours.map(h=>`<tr><td><b>${esc(h.season)}</b></td><td>${teamLogo(h.team)}${esc(h.team)}</td><td><span class="pill honour-award ${/FINALISTE/.test(normalizeTeam(h.award))?'honour-finalist':''}">${formatMedalText(h.award)}</span></td><td>${formatMedalText(h.winner||'—')}</td><td>${formatMedalText(h.detail||'—')}</td></tr>`).join('')||'<tr><td colspan="5">Aucune distinction répertoriée.</td></tr>'}</tbody></table></div>`;}}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{currentTab=b.dataset.tab;renderPanel()}));
