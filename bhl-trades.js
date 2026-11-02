@@ -186,8 +186,9 @@ function playerMoves(data,name){
 const trPortraitCache=new Map();
 function trPortraitNorm(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim()}
 async function trPortraitJson(url){
- for(const proxy of ['https://proxy.cors.dev/','https://corsproxy.io/?']){
-  try{const response=await fetch(proxy.includes('corsproxy.io')?proxy+encodeURIComponent(url):proxy+url,{signal:AbortSignal.timeout(11000)});if(response.ok)return response.json()}catch(e){}
+ const candidates=[url,'https://corsproxy.io/?'+encodeURIComponent(url),'https://proxy.cors.dev/'+url];
+ for(const candidate of candidates){
+  try{const response=await fetch(candidate,{signal:AbortSignal.timeout(8000)});if(response.ok){const data=await response.json();if(data!==null)return data}}catch(e){}
  }
  throw Error('Service NHL indisponible');
 }
@@ -204,7 +205,7 @@ function trPortrait(name){
   const urls=[profile?.headshot,...(team?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png'):[])].filter(x=>typeof x==='string'&&x.startsWith('https://'));
   return {urls,profile:'https://www.nhl.com/player/'+id};
  })().catch(()=>null);
- trPortraitCache.set(key,promise);return promise;
+ trPortraitCache.set(key,promise);promise.then(result=>{if(!result)trPortraitCache.delete(key)});return promise;
 }
 function trPortraitImg(img,name){
  trPortrait(name).then(data=>{
