@@ -12,6 +12,19 @@ const nhlAbbrev=v=>{
 const fmt=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
 let request;
 function load(){return request||(request=fetch('data/fantrax-player-details.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Statistiques indisponibles');return r.json()}).catch(e=>{request=null;throw e}))}
+async function bhlCurrentOfficialStats(player,id){
+ const directory=await bhlIdentityDirectory();
+ const entry=directory.players?.[String(id||'')];
+ if(entry?.status!=='confirmed'||!Number(entry.nhlId))return null;
+ const nhlId=Number(entry.nhlId),goalie=!!player.goalie;
+ const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
+ const team=String(profile.currentTeamAbbrev||player.nhlTeam||'').toUpperCase();
+ const season='20262027';
+ const result=await historicalFantasy(nhlId,season,goalie,true,team);
+ const gp=Number((profile.seasonTotals||[]).filter(x=>String(x.season)===season&&String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).reduce((n,x)=>n+Number(x.gamesPlayed||0),0));
+ if(result.fpts===null||!gp)return null;
+ return {stats:{...player.stats,...result.v,GP:gp,FPts:Math.round(result.fpts*100)/100,'FP/G':Math.round(result.fpts/gp*100)/100},nhlTeam:team,goalie};
+}
 function table(player,data){
  const s=player.stats;
  const cols=player.goalie?[['NHL','Équipe LNH'],['GP','PJ'],['W','V'],['GA','BA'],['SV','ARR'],['SHO','BL'],['G','B'],['A','A']]:[['NHL','Équipe LNH'],['GP','PJ'],['G','B'],['A','A'],['PTS','PTS'],['SOG','TIRS'],['Hit','HITS'],['Blk','BLOCS'],['Tk','TK'],['FOW','MÀJ']];
@@ -25,6 +38,17 @@ async function fill(target,id,name){
  const matches=id?[data.players[id]].filter(Boolean):Object.values(data.players).filter(p=>norm(p.name)===norm(name));
  if(!target.isConnected)return;
  target.innerHTML=matches.length===1?table(matches[0],data):'<p>Statistiques non disponibles pour ce joueur dans l’export actuel.</p>';
+ if(matches.length===1){
+  try{
+   const official=await bhlCurrentOfficialStats(matches[0],id);
+   if(!target.isConnected)return;
+   if(official){
+    target.innerHTML=table(official,{period:'Saison régulière 2026-27',exportDate:data.exportDate});
+    const source=target.querySelector('.bhl-player-source');
+    if(source)source.textContent='Source : statistiques officielles LNH, FPTS et FP/G calculés selon le barème BHL. Les données sont chargées à l’ouverture de la fiche.';
+   }
+  }catch(error){console.warn('Calcul officiel LNH temporairement indisponible',error)}
+ }
  if(matches.length===1){
   // The Fantrax export does not always contain the current NHL team.
   // Resolve it from the same NHL ID used for the player's biography and portrait.
