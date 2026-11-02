@@ -323,6 +323,33 @@ def build_snapshot(now=None):
                             "eligiblePositions": list(dict.fromkeys(eligible)),
                             "status": item.get("status", "")})
         teams.append({"id": team_id, "name": roster["teamName"], "players": players})
+    # Public draft picks: publish only documented league-level fields.
+    draft_data = {"futurePicks": [], "currentPicks": [], "results": [], "status": "unavailable"}
+    allowed_pick = ("year", "round", "currentOwnerTeamId", "originalOwnerTeamId")
+    try:
+        draft_picks = fetch("getDraftPicks")
+        for source, target in (("futureDraftPicks", "futurePicks"), ("currentDraftPicks", "currentPicks")):
+            rows = draft_picks.get(source, [])
+            if isinstance(rows, list):
+                draft_data[target] = [
+                    {key: row[key] for key in allowed_pick if key in row and isinstance(row[key], (str, int, float))}
+                    for row in rows if isinstance(row, dict)]
+        draft_data["status"] = "ok"
+    except Exception as error:
+        print("Draft picks unavailable:", type(error).__name__)
+    try:
+        draft_results = fetch("getDraftResults")
+        rows = draft_results.get("draftPicks", [])
+        if isinstance(rows, list):
+            # Do not assume every pick has a player; drafts can be incomplete.
+            allowed_result = ("year", "round", "pick", "pickNumber", "overallPick", "playerId", "playerName", "teamId", "teamName", "originalOwnerTeamId", "currentOwnerTeamId")
+            draft_data["results"] = [
+                {key: row[key] for key in allowed_result if key in row and isinstance(row[key], (str, int, float))}
+                for row in rows if isinstance(row, dict)]
+            draft_data["draftState"] = str(draft_results.get("draftState", ""))
+    except Exception as error:
+        print("Draft results unavailable:", type(error).__name__)
+
     # Experimental automatic stats from the same roster screen the DG sees.
     # Never publish raw Fantrax responses or private profile/owner information.
     live_stats = {}
@@ -355,6 +382,7 @@ def build_snapshot(now=None):
         "rosterPeriod": roster_period, "scoringPeriod": scoring_period,
         "periodDates": next(p for p in info["scoringPeriods"] if p["number"] == scoring_period),
         "teams": teams,
+        "draft": draft_data,
         "playerStats": live_stats,
         "playerStatsSync": {"status": "ok" if live_stats else "unavailable",
                             "playerCount": len(live_stats), **stats_diagnostics},
