@@ -22,7 +22,7 @@ async function fill(target,id,name){
  }catch(e){if(target.isConnected)target.innerHTML='<p>Statistiques temporairement indisponibles. Réessaie plus tard.</p>'}
 }
 
-const historyState=new WeakMap();
+
 function historicNhl(name,target){
  target.textContent='Recherche des saisons LNH depuis 2010-2011…';
  const normName=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
@@ -69,14 +69,11 @@ function addSections(dialog,name){
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
  stats.before(tabs);stats.after(panel);
  const items=[['stats','Statistiques'],['nhl','Historique LNH'],['trades','Transactions BHL']];
- let active='stats';
+ let active='stats'; const rendered=new Map();
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id==='nhl'&&!historyState.has(panel)){historyState.set(panel,true);historicNhl(name,panel)}
-  if(id==='trades'&&!panel.dataset.tradesLoaded){panel.dataset.tradesLoaded='1';tradeHistory(name,panel)}
-  if(id==='nhl'&&panel.dataset.tradesLoaded&&historyState.has(panel)){historicNhl(name,panel)}
-  if(id==='trades'&&historyState.has(panel)){tradeHistory(name,panel)}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
