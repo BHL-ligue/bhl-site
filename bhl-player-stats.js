@@ -57,18 +57,30 @@ async function nhlSeasonReport(type,report,id,season){
  return merged;
 }
 async function historicalFantasy(id,season,goalie,center){
- const reports=goalie?[['goalie','summary']]:[['skater','summary'],['skater','realtime'],...(center?[['skater','faceoffwins']]:[])];
- const data=await Promise.all(reports.map(([kind,report])=>nhlSeasonReport(kind,report,id,season)));
  const stat=(obj,keys)=>historicalNumber(obj,keys);
  if(goalie){
-  const d=data[0],v={W:stat(d,['wins']),GA:stat(d,['goalsAgainst']),SV:stat(d,['saves']),SHO:stat(d,['shutouts']),G:stat(d,['goals']),A:stat(d,['assists'])};
-  if(Object.values(v).some(x=>x===null))return {v,fpts:null};
-  return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
+  const d=await nhlSeasonReport('goalie','summary',id,season);
+  const v={W:stat(d,['wins']),GA:stat(d,['goalsAgainst']),SV:stat(d,['saves']),SHO:stat(d,['shutouts']),G:stat(d,['goals']),A:stat(d,['assists'])};
+  return {v,fpts:Object.values(v).some(x=>x===null)?null:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
  }
- const [summary,realtime,faceoffs]=data;
- const v={G:stat(summary,['goals']),A:stat(summary,['assists']),SOG:stat(summary,['shots','shotsOnGoal']),Hit:stat(realtime,['hits']),Blk:stat(realtime,['blockedShotAttempts','blockedShots']),Tk:stat(realtime,['takeaways']),FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal']):0};
- if(Object.values(v).some(x=>x===null))return {v,fpts:null};
- return {v,fpts:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
+ // Each report is optional independently: a missing faceoff report must not
+ // erase goals, shots, hits and other successfully retrieved categories.
+ const [summary,realtime,faceoffs]=await Promise.all([
+  nhlSeasonReport('skater','summary',id,season),
+  nhlSeasonReport('skater','realtime',id,season).catch(()=>null),
+  center?nhlSeasonReport('skater','faceoffpercentages',id,season).catch(()=>null):Promise.resolve(null)
+ ]);
+ const v={
+  G:stat(summary,['goals']),
+  A:stat(summary,['assists']),
+  SOG:stat(summary,['shots','shotsOnGoal']),
+  Hit:stat(realtime,['hits']),
+  Blk:stat(realtime,['blockedShotAttempts','blockedShots']),
+  Tk:stat(realtime,['takeaways']),
+  FOW:center?stat(faceoffs,['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','faceoffsWon'])??stat(summary,['faceoffWins','faceoffsWon']):0
+ };
+ const complete=Object.values(v).every(x=>x!==null);
+ return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
 }
 async function historicNhl(name,target){
  target.textContent='Chargement des statistiques LNH depuis 2010-2011…';
