@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-02T15:40:11.797063+00:00",
+  "updatedAt": "2026-11-02T16:43:35.160416+00:00",
   "rosterPeriod": 5,
   "scoringPeriod": 5,
   "periodDates": {
@@ -3189,7 +3189,7 @@
       "teamName": "Québec Nordiques",
       "rank": 6,
       "points": "10-5-0",
-      "totalPointsFor": 2375.55,
+      "totalPointsFor": 2375.7,
       "winPercentage": 0.667,
       "gamesBack": 4.0
     },
@@ -3279,7 +3279,7 @@
       "teamName": "California Golden Seals",
       "rank": 16,
       "points": "2-13-0",
-      "totalPointsFor": 1740.45,
+      "totalPointsFor": 1740.3,
       "winPercentage": 0.133,
       "gamesBack": 12.0
     }
@@ -3309,7 +3309,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 125.55,
+        "score": 125.5,
         "gamesPlayed": 52
       }
     },
@@ -3317,7 +3317,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.75,
+        "score": 173.8,
         "gamesPlayed": 50
       },
       "home": {
@@ -3415,7 +3415,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.75,
+        "score": 173.8,
         "gamesPlayed": 50
       },
       "home": {
@@ -3435,7 +3435,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 125.55,
+        "score": 125.5,
         "gamesPlayed": 52
       }
     },
@@ -3513,7 +3513,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.75,
+        "score": 173.8,
         "gamesPlayed": 50
       },
       "home": {
@@ -3561,7 +3561,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 125.55,
+        "score": 125.5,
         "gamesPlayed": 52
       }
     },
