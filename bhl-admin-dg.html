@@ -4,7 +4,34 @@
 <script type="module">import{createClient}from'https://esm.sh/@supabase/supabase-js@2';import{SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY}from'./bhl-supabase.js';const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function msg(t,c=''){$('#status').textContent=t;$('#status').className='status '+c}
 async function boot(){const{data:{session}}=await db.auth.getSession();if(!session){$('#login').classList.remove('hidden');$('#app').classList.add('hidden');msg('Connecte-toi avec ton compte administrateur.');return}const{data:p,error}=await db.from('bhl_profiles').select('role').eq('user_id',session.user.id).maybeSingle();if(error||p?.role!=='admin'){msg('Accès réservé à l’administrateur BHL.','error');await db.auth.signOut();$('#login').classList.remove('hidden');return}$('#login').classList.add('hidden');$('#app').classList.remove('hidden');msg('Session administrateur vérifiée.','ok');await refresh()}
 async function refresh(){await Promise.all([requests(),dgs(),leaders()])}
-async function requests(){const{data,error}=await db.from('bhl_account_requests').select('request_id,user_id,email,full_name,requested_team_id,created_at').eq('status','pending').order('created_at');if(error){$('#requests').textContent=error.message;return}const{data:ts}=await db.from('bhl_teams').select('team_id,team_name');const names=Object.fromEntries((ts||[]).map(t=>[t.team_id,t.team_name]));if(!data?.length){$('#requests').textContent='Aucune demande en attente. Après la confirmation de son courriel, le participant doit se connecter à Espace DG pour transmettre sa demande.';return}$('#requests').innerHTML='<table><thead><tr><th>Nom</th><th>Courriel</th><th>Organisation</th><th>Date</th><th>Action</th></tr></thead><tbody>'+data.map(r=>'<tr><td>'+esc(r.full_name)+'</td><td>'+esc(r.email)+'</td><td>'+esc(names[r.requested_team_id]||r.requested_team_id)+'</td><td>'+new Date(r.created_at).toLocaleDateString('fr-CA')+'</td><td><div class="actions"><button class="btn" data-yes="'+esc(r.request_id)+'" data-user="'+esc(r.user_id)+'" data-team="'+esc(r.requested_team_id)+'">Approuver</button><button class="btn reject" data-no="'+esc(r.request_id)+'">Refuser</button></div></td></tr>').join('')+'</tbody></table>';document.querySelectorAll('[data-yes]').forEach(b=>b.onclick=()=>approve(b.dataset.yes,b.dataset.user,b.dataset.team));document.querySelectorAll('[data-no]').forEach(b=>b.onclick=()=>reject(b.dataset.no))}
+async function requests(){
+ const [a,p,t]=await Promise.all([
+  db.from('bhl_account_requests').select('request_id,user_id,email,full_name,requested_team_id,created_at').eq('status','pending'),
+  db.from('bhl_profiles').select('user_id,email,full_name,role').eq('role','pending'),
+  db.from('bhl_teams').select('team_id,team_name').order('team_name')
+ ]);
+ const error=a.error||p.error||t.error;
+ if(error){$('#requests').textContent='Erreur : '+error.message;return}
+ const teams=t.data||[];
+ const records=(a.data||[]).map(x=>({...x,source:'request'}));
+ const known=new Set(records.map(x=>x.user_id));
+ for(const x of p.data||[])if(!known.has(x.user_id))records.push({...x,source:'profile',request_id:null,requested_team_id:''});
+ if(!records.length){$('#requests').textContent='Aucune demande en attente.';return}
+ $('#requests').innerHTML='<p><strong>'+records.length+' inscription(s) en attente</strong></p><table><thead><tr><th>Nom</th><th>Courriel</th><th>Équipe</th><th>Origine</th><th>Action</th></tr></thead><tbody>'+
+ records.map((x,i)=>'<tr><td>'+esc(x.full_name)+'</td><td>'+esc(x.email)+'</td><td><select id="pending-team-'+i+'" style="padding:8px;max-width:220px"><option value="">Choisir une équipe</option>'+teams.map(y=>'<option value="'+esc(y.team_id)+'" '+(y.team_id===x.requested_team_id?'selected':'')+'>'+esc(y.team_name)+'</option>').join('')+'</select></td><td>'+esc(x.source==='profile'?'Compte en attente':'Demande reçue')+'</td><td><button class="btn" data-pending-approve="'+i+'">Approuver</button></td></tr>').join('')+'</tbody></table>';
+ document.querySelectorAll('[data-pending-approve]').forEach(btn=>btn.onclick=async()=>{
+  const i=Number(btn.dataset.pendingApprove),x=records[i],team=document.getElementById('pending-team-'+i).value;
+  if(!team){msg('Choisis une équipe avant de valider.','error');return}
+  const {data:occupied,error:oe}=await db.from('bhl_profiles').select('user_id').eq('team_id',team).in('role',['dg','admin']);
+  if(oe){msg(oe.message,'error');return}
+  if((occupied||[]).some(z=>z.user_id!==x.user_id)){msg('Équipe déjà attribuée.','error');return}
+  if(!confirm('Approuver ce DG pour '+(teams.find(y=>y.team_id===team)?.team_name||team)+' ?'))return;
+  const {data:updated,error:ue}=await db.from('bhl_profiles').update({role:'dg',team_id:team}).eq('user_id',x.user_id).eq('role','pending').select('user_id');
+  if(ue||!updated?.length){msg(ue?.message||'Profil non modifié.','error');return}
+  if(x.request_id){const {data:{user:me}}=await db.auth.getUser();const {error:re}=await db.from('bhl_account_requests').update({status:'approved',reviewed_at:new Date().toISOString(),reviewed_by:me?.email||null}).eq('request_id',x.request_id);if(re)msg('DG approuvé, mais demande non actualisée : '+re.message,'error')}
+  msg('DG approuvé.','ok');await refresh();
+ });
+}
 async function approve(id,user,team){if(!confirm('Approuver ce DG pour cette organisation?'))return;const{error}=await db.from('bhl_profiles').update({role:'dg',team_id:team}).eq('user_id',user);if(error){msg(error.message,'error');return}const{data:{user:me}}=await db.auth.getUser();const{error:e}=await db.from('bhl_account_requests').update({status:'approved',reviewed_at:new Date().toISOString(),reviewed_by:me.email}).eq('request_id',id);if(e){msg('Profil attribué, demande non mise à jour : '+e.message,'error');return}msg('Compte DG approuvé.','ok');await refresh()}
 async function reject(id){const note=prompt('Motif du refus (facultatif) :')||null;const{data:{user:me}}=await db.auth.getUser();const{error}=await db.from('bhl_account_requests').update({status:'rejected',admin_note:note,reviewed_at:new Date().toISOString(),reviewed_by:me.email}).eq('request_id',id);if(error){msg(error.message,'error');return}msg('Demande refusée.','ok');await requests()}
 let directory=[];
