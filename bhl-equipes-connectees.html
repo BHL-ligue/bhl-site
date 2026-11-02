@@ -29,6 +29,16 @@
 .tr-side-body .tr-from{display:flex;align-items:center;gap:5px;margin-top:4px}
 .tr-side-body .tr-from .tr-team-logo{width:18px;height:18px;object-fit:contain}
 @media(max-width:600px){.tr-card-head{padding:12px 14px!important}.tr-side-title{padding:10px 12px}.tr-side-body{padding:9px 12px 12px}.tr-side-title .tr-team-logo{width:30px;height:30px}}
+
+/* Identité des clubs : en-tête inspiré des champions de la Coupe */
+#fiche>.banner{background:linear-gradient(115deg,var(--bhl-club-secondary,#172c40),var(--bhl-club-primary,#cc0000));border:1px solid #ffffff28;border-radius:17px;box-shadow:0 6px 22px #00000022;min-height:154px;padding:23px 28px;color:#fff}
+#fiche>.banner .crest{width:104px;height:104px;background:transparent;border:0;border-radius:0}
+#fiche>.banner .crest img{padding:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 5px 7px #0005)}
+#fiche>.banner .kicker{color:#ffffffcf;font-size:11px;letter-spacing:.15em;font-weight:900;text-transform:uppercase}
+#fiche>.banner .sub{color:#ffffffe0;font-size:12px}
+#fiche>.banner .team-city{color:#ffffffd6}
+#fiche>.banner .team-nickname{color:#fff}
+@media(max-width:580px){#fiche>.banner{padding:15px;gap:12px;min-height:120px}#fiche>.banner .crest{width:70px;height:78px}#fiche>.banner h2{font-size:clamp(20px,5vw,29px)}}
 </style><style>
 /* BHL LIGHT THEME */
 :root{
@@ -598,7 +608,7 @@ function renderChampionshipBanners(t){
   return years.length?'<section class="championship-banners"><h3>🏆 Bannières de la Coupe Béliveau</h3><div class="championship-banner-list">'+years.map(y=>'<img src="banners/'+available[y]+'" alt="Bannière Coupe Béliveau '+y+'" loading="lazy">').join('')+'</div></section>':'';
 }
 
-function choose(sheet){selected=sheet;window.bhlFantraxSheet=sheet;window.dispatchEvent(new CustomEvent('bhl:team-change',{detail:sheet}));const t=teamData[sheet];if(!t){status('Les données de cette équipe ne sont pas disponibles.','error');return;}document.documentElement.style.setProperty('--team-color',teamColor(t.name));$('#teamSelect').value=sheet;syncTeamDropdown();document.querySelectorAll('.teamchip').forEach(b=>b.classList.toggle('active',b.dataset.sheet===sheet));const TEAM_LABELS={
+function choose(sheet){selected=sheet;window.bhlFantraxSheet=sheet;window.dispatchEvent(new CustomEvent('bhl:team-change',{detail:sheet}));const t=teamData[sheet];if(!t){status('Les données de cette équipe ne sont pas disponibles.','error');return;}document.documentElement.style.setProperty('--team-color',teamColor(t.name));document.documentElement.style.setProperty('--bhl-club-primary',teamColor(t.name));document.documentElement.style.setProperty('--bhl-club-secondary',({'ANAHEIM MIGHTY DUCKS':'#173c4b','ATLANTA THRASHERS':'#172c4b','BOSTON BRUINS':'#171717','CALIFORNIA GOLDEN SEALS':'#e5ad33','CHICAGO BLACKHAWKS':'#171717','COLORADO AVALANCHE':'#236192','DETROIT RED WINGS':'#881426','FLORIDA PANTHERS':'#041e42','HARTFORD WHALERS':'#12418d','MINNESOTA NORTH STARS':'#e1b747','MONTREAL CANADIENS':'#192f6b','NASHVILLE PREDATORS':'#041e42','NEW YORK RANGERS':'#ce1126','OTTAWA SENATORS':'#181818','QUEBEC NORDIQUES':'#cf142b','TORONTO MAPLE LEAFS':'#092347'})[normalizeTeam(t.name)]||'#172c40');$('#teamSelect').value=sheet;syncTeamDropdown();document.querySelectorAll('.teamchip').forEach(b=>b.classList.toggle('active',b.dataset.sheet===sheet));const TEAM_LABELS={
   ANAHEIM:['ANAHEIM','MIGHTY DUCKS'],
   ATLANTA:['ATLANTA','THRASHERS'],
   CLEVELAND:['BOSTON','BRUINS'],
