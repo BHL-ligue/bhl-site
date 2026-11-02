@@ -53,5 +53,5 @@ window.addEventListener('bhl:team-change',e=>{sheet=e.detail;draw()});
 fetch('data/fantrax.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Chargement indisponible');return r.json()}).then(data=>{
  if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups)||!Number.isFinite(Date.parse(data.updatedAt)))throw Error('Données invalides');
  snapshot=data;draw();
-}).catch(()=>{root.innerHTML='<p class="bhl-ft-note">Les données Fantrax sont temporairement indisponibles. <a href="bhl-fantrax.html">Consulter la saison →</a></p>'});
+}).catch(()=>{if(root)root.innerHTML='<p class="bhl-ft-note">Les données Fantrax sont temporairement indisponibles. <a href="bhl-fantrax.html">Consulter la saison →</a></p>';if(rosterRoot)rosterRoot.innerHTML='<p class="bhl-ft-note">Alignement temporairement indisponible.</p>'});
 })();
