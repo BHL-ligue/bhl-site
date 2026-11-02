@@ -507,6 +507,10 @@ function bhlSpecificNhlId(id,name){
  if(norm(name)==='eliaspettersson'&&String(id)==='048x9')return 8480012;
  return 0;
 }
+let bhlIdentityDirectoryRequest;
+function bhlIdentityDirectory(){
+ return bhlIdentityDirectoryRequest||(bhlIdentityDirectoryRequest=fetch('data/player-identity-map.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Répertoire indisponible');return r.json()}).catch(e=>{bhlIdentityDirectoryRequest=null;throw e}));
+}
 const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012};
 const BHL_NHL_NAME_ALIASES={'alexcarrier':'Alexandre Carrier'};
 function bhlOfficialNhlId(id,name){
@@ -540,6 +544,16 @@ function open(id,name,source){
  populatePlayerBio(dialog,id,name);
  // Current Fantrax roster is authoritative across Teams, Draft and Transactions.
  // Historical/source identity is a fallback only for unrostered players.
+ bhlIdentityDirectory().then(directory=>{
+  if(!dialog.isConnected)return;
+  const entry=directory.players?.[String(id||'')];
+  if(entry?.bhlTeam)bhlApplyTeamIdentity(dialog,entry.bhlTeam);
+  // Only manually reviewed mappings may override the NHL identity.
+  if(entry?.nhlId&&entry.status==='confirmed'){
+   const link=dialog.querySelector('.bhl-nhl-link');
+   if(link){link.href='https://www.nhl.com/player/'+entry.nhlId;link.hidden=false}
+  }
+ }).catch(error=>console.warn('Répertoire joueurs indisponible',error));
  bhlRosterLookup().then(rosters=>{
   if(!dialog.isConnected)return;
   const current=String(id)==='048x9'?'Québec Nordiques':String(id)==='060v8'?'Montréal Canadiens':rosters.get(norm(name));
