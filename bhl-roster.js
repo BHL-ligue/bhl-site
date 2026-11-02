@@ -8,13 +8,14 @@ const dataset=window.BHLFantasyStats;
 const stats=p=>dataset?.players[String(p.id||'').replace(/\*/g,'')]||{};
 const metric=(p,key)=>{const s=stats(p);return s.gp>0&&Number.isFinite(s[key])?s[key]:-Infinity};
 const fmt=v=>Number.isFinite(v)?v.toLocaleString('fr-CA',{maximumFractionDigits:2}):'—';
+const eligibility=p=>Array.isArray(p.eligiblePositions)&&p.eligiblePositions.length?p.eligiblePositions.join(', '):p.position||'—';
 function productive(a,b){return (metric(b,'fpg')>metric(a,'fpg')?1:metric(b,'fpg')<metric(a,'fpg')?-1:0)||(metric(b,'fpts')>metric(a,'fpts')?1:metric(b,'fpts')<metric(a,'fpts')?-1:0)||a.name.localeCompare(b.name,'fr')}
 function rank(p){const i=positions.indexOf(String(p.position).toUpperCase());return i<0?positions.length:i}
 function sort(rows){return rows.slice().sort((a,b)=>rank(a)-rank(b)||productive(a,b))}
 function card(p,pos){
  if(!p)return '<div class="bhl-pro-card bhl-pro-empty"><span>'+esc(pos)+'</span><p>Aucun joueur actif à cette place</p></div>';
  const s=stats(p),words=p.name.split(/\s+/),first=words.shift()||'',last=words.join(' ')||first;
- return '<article class="bhl-lineup-player bhl-pro-card" data-bhl-nhl-name="'+esc(p.name)+'"><span class="bhl-pro-pos">'+esc(pos)+'</span><div class="bhl-lineup-portrait"><span class="bhl-lineup-initials" aria-hidden="true">'+esc(first[0]||'')+esc(last[0]||'')+'</span><img class="bhl-nhl-photo" hidden loading="lazy" alt=""></div><div class="bhl-lineup-info"><span class="bhl-pro-first">'+esc(first)+'</span><strong><button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(last)+'</button></strong><div class="bhl-pro-metrics"><div><b>'+fmt(s.gp>0?s.fpg:null)+'</b><span>FP/G</span></div><div><b>'+fmt(s.fpts)+'</b><span>FPTS</span></div></div><small>'+fmt(s.gp)+' PJ</small></div></article>';
+ return '<article class="bhl-lineup-player bhl-pro-card" data-bhl-nhl-name="'+esc(p.name)+'"><span class="bhl-pro-pos" title="Positions admissibles : '+esc(eligibility(p))+'">'+esc(pos)+'</span><div class="bhl-lineup-portrait"><span class="bhl-lineup-initials" aria-hidden="true">'+esc(first[0]||'')+esc(last[0]||'')+'</span><img class="bhl-nhl-photo" hidden loading="lazy" alt=""></div><div class="bhl-lineup-info"><span class="bhl-pro-first">'+esc(first)+'</span><strong><button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(last)+'</button></strong><div class="bhl-pro-metrics"><div><b>'+fmt(s.gp>0?s.fpg:null)+'</b><span>FP/G</span></div><div><b>'+fmt(s.fpts)+'</b><span>FPTS</span></div></div><small>'+fmt(s.gp)+' PJ</small></div></article>';
 }
 function compose(rows){
  const pool=pos=>rows.filter(p=>p.position===pos).slice().sort(productive);
@@ -35,7 +36,7 @@ function render(rows,showTeam=false){
  if(status==='ACTIVE'){
   if(showTeam){const teams=[...new Set(list.map(p=>p.teamName))];body=teams.map(name=>'<h5 class="bhl-pro-team">'+esc(name)+'</h5>'+lineup(list.filter(p=>p.teamName===name))).join('')}
   else body=lineup(list);
- }else body='<div class="bhl-ft-table"><table><thead><tr><th>Position</th><th>Joueur</th>'+(showTeam?'<th>Organisation BHL</th>':'')+'<th>FP/G</th><th>FPTS</th></tr></thead><tbody>'+list.map(p=>'<tr><td><span class="bhl-lineup-badge">'+esc(p.position)+'</span></td><td>'+'<button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(p.name)+'</button></td>'+(showTeam?'<td>'+esc(p.teamName)+'</td>':'')+'<td>'+fmt(stats(p).gp>0?stats(p).fpg:null)+'</td><td>'+fmt(stats(p).fpts)+'</td></tr>').join('')+'</tbody></table></div>';
+ }else body='<div class="bhl-ft-table"><table><thead><tr><th>Position</th><th>Joueur</th>'+(showTeam?'<th>Organisation BHL</th>':'')+'<th>FP/G</th><th>FPTS</th></tr></thead><tbody>'+list.map(p=>'<tr><td><span class="bhl-lineup-badge">'+esc(eligibility(p))+'</span></td><td>'+'<button class="bhl-player-open" data-bhl-player-id="'+esc(p.id)+'" data-bhl-player-name="'+esc(p.name)+'">'+esc(p.name)+'</button></td>'+(showTeam?'<td>'+esc(p.teamName)+'</td>':'')+'<td>'+fmt(stats(p).gp>0?stats(p).fpg:null)+'</td><td>'+fmt(stats(p).fpts)+'</td></tr>').join('')+'</tbody></table></div>';
  return '<section class="bhl-roster-block'+(status==='ACTIVE'?' bhl-roster-starting':'')+'" data-roster-status="'+status+'"><div class="bhl-roster-title"><h4>'+title+'</h4><span>'+list.length+' joueur(s)</span></div>'+(list.length?body:'<p class="bhl-roster-empty">Aucun joueur dans cette section pour les filtres choisis.</p>')+'</section>';
  }).join('');
 }
