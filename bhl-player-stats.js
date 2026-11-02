@@ -527,8 +527,25 @@ function bhlOfficialNhlId(id,name){
  return BHL_NHL_ID_BY_FANTRAX[String(id||'')]||bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
 }
 function bhlOfficialNhlName(name){return BHL_NHL_NAME_ALIASES[norm(name)]||name}
+async function bhlResolveUniqueDirectoryId(name,source){
+ const directory=await bhlIdentityDirectory();
+ const matches=Object.entries(directory.players||{}).filter(([,entry])=>norm(entry.fantraxName)===norm(name)||Array.isArray(entry.aliases)&&entry.aliases.some(alias=>norm(alias)===norm(name)));
+ if(matches.length===1)return matches[0][0];
+ const team=bhlTeamKey(source?.dataset?.bhlTeam||source?.closest?.('[data-bhl-team],[data-team-name]')?.dataset?.bhlTeam||source?.closest?.('[data-team-name]')?.dataset?.teamName||'');
+ if(team){
+  const matching=matches.filter(([,entry])=>bhlTeamKey(entry.bhlTeam)===team);
+  if(matching.length===1)return matching[0][0];
+ }
+ return null;
+}
 function open(id,name,source){
  id=bhlResolvePlayerId(id,name,source);
+ if(!id){
+  bhlResolveUniqueDirectoryId(name,source).then(resolved=>{
+   if(resolved)open(resolved,name,source);
+   else console.warn('Identité Fantrax ambiguë ou introuvable :',name);
+  }).catch(error=>console.warn('Répertoire d’identités indisponible',error));
+ }
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
  dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-position"></div><div class="bhl-player-size"></div><div class="bhl-player-birth"></div><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
