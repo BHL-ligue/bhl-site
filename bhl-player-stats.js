@@ -421,10 +421,10 @@ async function populatePlayerBio(dialog,id,name){
    }catch(error){console.warn('Position Fantrax indisponible',error)}
  }catch(e){}
  try{
-  const query=bhlOfficialNhlId(id,name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(bhlOfficialNhlName(name)));
-  const players=Array.isArray(query)?query:(query.data||[]);
-  const found=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name)||norm(String(p.name||'').split(',').reverse().join(' '))===norm(name));
-  const nhlId=Number(bhlOfficialNhlId(id,name)||found?.playerId||found?.id);if(!nhlId)return;
+  const directory=await bhlIdentityDirectory();
+  const entry=directory.players?.[String(id||'')];
+  const nhlId=Number(entry?.status==='confirmed'?entry.nhlId:0);
+  if(!nhlId)return;
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
   if(!dialog.isConnected)return;
   const position=profile.position||profile.positionCode;
