@@ -90,7 +90,7 @@ async function bhlSeasonUsage(nhlId,season,team,goalie=false){
 function table(player,data){
  const s=player.stats;
  const cols=player.goalie?[['NHL','Équipe LNH'],['GP','PJ'],['W','V'],['GA','BA'],['SV','ARR'],['SHO','BL'],['G','B'],['A','A']]:[['NHL','Équipe LNH'],['GP','PJ'],['G','B'],['A','A'],['PTS','PTS'],['SOG','TIRS'],['Hit','HITS'],['Blk','BLOCS'],['Tk','TK'],['FOW','MÀJ']];
- cols.push(['TOI','TOI'],['TOIPP','PPTOI'],['TOIPK','PKTOI']);
+ cols.push(['TOIPP','PPTOI'],['TOIPK','PKTOI'],['TOI','TOI']);
  const values={...s,NHL:nhlAbbrev(player.nhlTeam),PTS:s.G==null||s.A==null?null:s.G+s.A};
  return '<div class="bhl-player-meta">'+'Équipe LNH : '+esc(nhlAbbrev(player.nhlTeam))+'</div><div class="bhl-player-totals"><div><span>FPTS</span><strong>'+fmt(s.FPts)+'</strong></div><div><span>FP/G</span><strong>'+fmt(s['FP/G'])+'</strong></div></div><h4>Statistiques — '+esc(data.period)+'</h4><div class="bhl-player-scroll"><table class="bhl-player-table"><thead><tr>'+cols.map(([key,label])=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody><tr>'+cols.map(([key])=>'<td>'+(key==='NHL'?esc(values[key]||'—'):key==='TOI'||key==='TOIPP'||key==='TOIPK'?esc(values[key]||'N/D'):fmt(values[key]))+'</td>').join('')+'</tr></tbody></table></div><p class="bhl-player-source">Source : export Fantrax du '+esc(data.exportDate)+'. Ces statistiques sont un instantané et ne sont pas actualisées automatiquement.</p><p class="bhl-player-legend">'+(player.goalie?'V : victoires · BA : buts accordés · ARR : arrêts · BL : blanchissages · B : buts · A : passes.':'B : buts · A : passes · PTS : buts + passes · TK : takeaways · MÀJ : mises au jeu gagnées.')+'</p>';
 }
@@ -127,7 +127,7 @@ async function fill(target,id,name){
    const nhlId=await bhlLookupOfficialId(resolved.player,resolved.id);
    const usage=await bhlSeasonUsage(nhlId,'20262027','');
    if(target.isConnected){const cells=target.querySelectorAll('.bhl-player-table tbody tr td');
-    ['TOI','TOIPP','TOIPK'].forEach((key,i)=>{if(cells[cells.length-3+i])cells[cells.length-3+i].textContent=usage[key]});}
+    ['TOIPP','TOIPK','TOI'].forEach((key,i)=>{if(cells[cells.length-3+i])cells[cells.length-3+i].textContent=usage[key]});}
   }
   const source=target.querySelector('.bhl-player-source');
   if(source)source.textContent='Source : statistiques officielles LNH, FPTS et FP/G calculés selon le barème BHL. Actualisation à chaque ouverture de la fiche.';
@@ -277,7 +277,7 @@ async function historicNhl(name,target,fantraxId){
   const center=String(profile.position||profile.positionCode||'').toUpperCase()==='C';
   const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).sort((a,b)=>Number(b.season)-Number(a.season));
   if(!seasons.length){target.textContent='Aucune saison régulière LNH trouvée pour ce joueur.';return}
-  const columns=(goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A','PTS']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','PTS','TIRS','HITS','BLOCS','TK','MÀJ']).concat(['TOI','PPTOI','PKTOI']);
+  const columns=(goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A','PTS']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','PTS','TIRS','HITS','BLOCS','TK','MÀJ']).concat(['PPTOI','PKTOI','TOI']);
   const keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
   const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
   const tableEl=document.createElement('table');tableEl.className='bhl-player-table';
@@ -311,7 +311,7 @@ async function historicNhl(name,target,fantraxId){
      keys.forEach((key,j)=>row.cells[5+j+(goalie?(j>=6?1:0):(j>=2?1:0))].textContent=v[key]===null?'N/D':fmt(v[key]));
      if(v.G!==null&&v.A!==null)row.cells[goalie?11:7].textContent=fmt(v.G+v.A);
      const usage=await bhlSeasonUsage(id,String(season.season),teamCode,goalie);
-     if(row.isConnected)['TOI','TOIPP','TOIPK'].forEach((key,j)=>{row.cells[row.cells.length-3+j].textContent=usage[key]});
+     if(row.isConnected)['TOIPP','TOIPK','TOI'].forEach((key,j)=>{row.cells[row.cells.length-3+j].textContent=usage[key]});
     }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail);if(!target.querySelector('.bhl-historical-error')){const error=document.createElement('p');error.className='bhl-historical-error';error.style.fontSize='12px';error.style.color='#9b1c1c';error.textContent='Diagnostic LNH : '+e.message;target.append(error)}}}
    }
   }
