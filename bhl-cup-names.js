@@ -3,7 +3,7 @@
  const API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
  const BANNERS={'2019':'BannerMIN2019.png','2021':'BannerNSH2021.png','2022':'BannerMTL2022.png','2023':'BannerHAR2023.png','2024':'BannerANA2024.png','2025':'BannerDET2025.png','2026':'BannerOTT2026.png'};
  const TEAMS=[
-  ['ANA','ANAHEIM','anaheim-mightyducks.png','#c65a19','#173c4b'],
+  ['ANA','ANAHEIM','anaheim-mightyducks.png','#532a44','#173c4b'],
   ['ATL','ATLANTA','atlanta-thrashers.png','#0078a5','#172c4b'],
   ['CAL','CALIFORNIE','california-goldenseals.png','#08745d','#e5ad33'],
   ['CHI','CHICAGO','chicago-blackhawks.png','#c8102e','#141414'],
