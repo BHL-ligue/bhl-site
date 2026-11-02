@@ -468,6 +468,9 @@ function bhlPortraitById(dialog,name){
  }).catch(()=>{});
  return true;
 }
+const BHL_PROFILE_TEAMS={
+ 'anaheim mighty ducks':['#532A44','anaheim-mightyducks.png'],'atlanta thrashers':['#5c88da','atlanta-thrashers.png'],'boston bruins':['#ffb81c','boston-bruins.png'],'cleveland barons':['#b5a36a','cleveland-barons.png'],'california golden seals':['#007f00','california-goldenseals.png'],'chicago blackhawks':['#cf0a2c','chicago-blackhawks.png'],'colorado avalanche':['#6f263d','colorado-avalanche.png'],'detroit red wings':['#ce1126','detroit-redwings.png'],'florida panthers':['#c8102e','florida-panthers.png'],'hartford whalers':['#046A38','hartford-whalers.png'],'minnesota north stars':['#009639','minnesota-northstars.png'],'montreal canadiens':['#af1e2d','montreal-canadiens.png'],'nashville predators':['#ffb81c','nashville-predators.png'],'new york rangers':['#0038a8','newyork-rangers.png'],'ottawa senators':['#DA1A32','ottawa-senators.png'],'edmonton oilers':['#ff4c00','edmonton-oilers.png'],'quebec nordiques':['#005eb8','quebec-nordiques.png'],'toronto maple leafs':['#00205b','toronto-mapleleafs.png'],'vegas golden knights':['#B4975A','vegas-golden-knights.png'],'winnipeg jets':['#041e42','winnipeg-jets.png']};
+const bhlTeamKey=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 function open(id,name,source){
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
@@ -478,11 +481,12 @@ function open(id,name,source){
  const activeChip=document.querySelector('.teamchip.active');
  const logo=origin?.querySelector?.('.teamlogo')||activeChip?.querySelector?.('.teamlogo');
  const identity=dialog.querySelector('.bhl-player-team-identity');
- const selectedTeam=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.title||activeChip?.getAttribute('aria-label')||'';
+ const selectedTeam=source?.dataset?.bhlTeam||origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.title||activeChip?.getAttribute('aria-label')||'';
  const rootColor=getComputedStyle(document.documentElement).getPropertyValue('--team-color').trim();
  const localColor=origin?getComputedStyle(origin).getPropertyValue('--team-color').trim():'';
  const mappedColor=selectedTeam&&typeof window.teamColor==='function'?window.teamColor(selectedTeam):'';
- const color=localColor||mappedColor||rootColor;
+ const teamProfile=BHL_PROFILE_TEAMS[bhlTeamKey(selectedTeam)];
+ const color=teamProfile?.[0]||localColor||mappedColor||rootColor;
  if(/^#[0-9a-f]{3,8}$/i.test(color)||/^rgb\(/i.test(color))dialog.style.setProperty('--profile-accent',color);
  const knownNhlId=bhlResolvedNhlId(name);
  if(knownNhlId){
@@ -491,10 +495,10 @@ function open(id,name,source){
   official.hidden=false;
  }
  populatePlayerBio(dialog,id,name);
- if(logo?.getAttribute('src')){
-  const image=identity.querySelector('img');image.src=logo.getAttribute('src');
+ if(logo?.getAttribute('src')||teamProfile?.[1]){
+  const image=identity.querySelector('img');image.src=teamProfile?.[1]?'logos/'+teamProfile[1]:logo.getAttribute('src');
   image.onerror=()=>{identity.hidden=true};
-  const teamName=origin?.dataset?.teamName||origin?.dataset?.bhlTeam||activeChip?.textContent?.trim()||'Équipe BHL';
+  const teamName=selectedTeam||activeChip?.textContent?.trim()||'Équipe BHL';
   identity.querySelector('span').textContent=teamName;
   identity.hidden=false;
  }
