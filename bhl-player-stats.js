@@ -495,7 +495,20 @@ function bhlApplyTeamIdentity(dialog,team){
  dialog.style.setProperty('--profile-accent',profile[0]);
  return true;
 }
+function bhlResolvePlayerId(id,name,source){
+ if(id)return String(id);
+ if(norm(name)!=='eliaspettersson')return id;
+ const team=bhlTeamKey(source?.dataset?.bhlTeam||source?.closest?.('[data-bhl-team],[data-team-name]')?.dataset?.bhlTeam||source?.closest?.('[data-team-name]')?.dataset?.teamName||document.querySelector('.teamchip.active')?.title||'');
+ if(team==='quebec nordiques')return '048x9';
+ if(team==='montreal canadiens')return '060v8';
+ return id;
+}
+function bhlSpecificNhlId(id,name){
+ if(norm(name)==='eliaspettersson'&&String(id)==='048x9')return 8480012;
+ return 0;
+}
 function open(id,name,source){
+ id=bhlResolvePlayerId(id,name,source);
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
  const trigger=document.activeElement,dialog=document.createElement('dialog');dialog.className='bhl-player-dialog';dialog.setAttribute('aria-label','Fiche de '+name);
  dialog.innerHTML='<button class="bhl-player-close" type="button" aria-label="Fermer la fiche">×</button><div class="bhl-player-hero" data-bhl-nhl-name="'+esc(name)+'"><div class="bhl-player-photo"><img class="bhl-nhl-photo" hidden alt=""></div><div class="bhl-player-hero-copy"><p>FICHE DU JOUEUR</p><h3>'+esc(name)+'</h3><div class="bhl-player-position"></div><div class="bhl-player-size"></div><div class="bhl-player-birth"></div><div class="bhl-player-team-identity" hidden><img class="bhl-player-bhl-logo" alt="Logo de l’équipe BHL"><span class="bhl-player-team-label"></span></div><a class="bhl-nhl-link" hidden target="_blank" rel="noopener noreferrer">Profil NHL ↗</a></div></div><section class="bhl-player-stats"></section>';
@@ -512,7 +525,7 @@ function open(id,name,source){
  const teamProfile=BHL_PROFILE_TEAMS[bhlTeamKey(selectedTeam)];
  const color=teamProfile?.[0]||localColor||mappedColor||rootColor;
  if(/^#[0-9a-f]{3,8}$/i.test(color)||/^rgb\(/i.test(color))dialog.style.setProperty('--profile-accent',color);
- const knownNhlId=bhlResolvedNhlId(name);
+ const knownNhlId=bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
  if(knownNhlId){
   const official=dialog.querySelector('.bhl-nhl-link');
   official.href='https://www.nhl.com/player/'+knownNhlId;
@@ -523,7 +536,7 @@ function open(id,name,source){
  // Historical/source identity is a fallback only for unrostered players.
  bhlRosterLookup().then(rosters=>{
   if(!dialog.isConnected)return;
-  const current=rosters.get(norm(name));
+  const current=String(id)==='048x9'?'Québec Nordiques':String(id)==='060v8'?'Montréal Canadiens':rosters.get(norm(name));
   if(current)bhlApplyTeamIdentity(dialog,current);
   else if(selectedTeam)bhlApplyTeamIdentity(dialog,selectedTeam);
  }).catch(error=>console.warn('Identité BHL indisponible',error));
@@ -539,7 +552,15 @@ function open(id,name,source){
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
  fill(dialog.querySelector('.bhl-player-stats'),id,name);
  addSections(dialog,name);
- if(!bhlPortraitById(dialog,name)){
+ if(bhlSpecificNhlId(id,name)){
+  const nhlId=bhlSpecificNhlId(id,name);
+  nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing').then(profile=>{
+   if(!dialog.isConnected)return;
+   const img=dialog.querySelector('.bhl-nhl-photo');
+   if(img&&profile.headshot){img.src=profile.headshot;img.hidden=false}
+   const link=dialog.querySelector('.bhl-nhl-link');if(link){link.href='https://www.nhl.com/player/'+nhlId;link.hidden=false}
+  }).catch(()=>{});
+ }else if(!bhlPortraitById(dialog,name)){
   (async()=>{
    try{
     const found=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
