@@ -1,0 +1,5055 @@
+{
+  "schemaVersion": 1,
+  "description": "Central Fantrax-to-NHL identity registry. NHL IDs must be verified before status is marked confirmed.",
+  "source": {
+    "roster": "data/fantrax.json",
+    "details": "data/fantrax-player-details.json",
+    "rosterUpdatedAt": "2026-11-02T22:14:20.025682+00:00"
+  },
+  "players": {
+    "02un4": {
+      "fantraxName": "Connor McDavid",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03eb3": {
+      "fantraxName": "Christian Dvorak",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rf2": {
+      "fantraxName": "Roope Hintz",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02azf": {
+      "fantraxName": "Dougie Hamilton",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "062h5": {
+      "fantraxName": "Gavin McKenna",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06lvc": {
+      "fantraxName": "Harrison Brunicke",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "060je": {
+      "fantraxName": "Noah Warren",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03e1n": {
+      "fantraxName": "Adrian Kempe",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ylt": {
+      "fantraxName": "Zach Benson",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ye8": {
+      "fantraxName": "Jordan Spence",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ww8": {
+      "fantraxName": "Ryan Greene",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lcs": {
+      "fantraxName": "Mattias Samuelsson",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "074mg": {
+      "fantraxName": "Liam Ruck",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "060jl": {
+      "fantraxName": "Jiri Kulich",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03eb0": {
+      "fantraxName": "Ryan Donato",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03w5m": {
+      "fantraxName": "Gabriel Vilardi",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kdw": {
+      "fantraxName": "Ridly Greig",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axy": {
+      "fantraxName": "Artyom Levshunov",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05y7m": {
+      "fantraxName": "Denton Mateychuk",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03zul": {
+      "fantraxName": "Filip Gustavsson",
+      "bhlTeam": "Nashville Predators",
+      "position": "G",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ltt": {
+      "fantraxName": "Alex Laferriere",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kbn": {
+      "fantraxName": "Will Cuylle",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ran": {
+      "fantraxName": "Matt Coronato",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gd9": {
+      "fantraxName": "Zack Bolduc",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031pl": {
+      "fantraxName": "Juuse Saros",
+      "bhlTeam": "Nashville Predators",
+      "position": "G",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03yuf": {
+      "fantraxName": "Eeli Tolvanen",
+      "bhlTeam": "Nashville Predators",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "066q4": {
+      "fantraxName": "Konsta Helenius",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03pax": {
+      "fantraxName": "Ivan Provorov",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "059e1": {
+      "fantraxName": "Braden Schneider",
+      "bhlTeam": "Nashville Predators",
+      "position": "D",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rjg": {
+      "fantraxName": "Danila Yurov",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mtp": {
+      "fantraxName": "Dylan Cozens",
+      "bhlTeam": "Nashville Predators",
+      "position": "C",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042yb": {
+      "fantraxName": "Brandon Hagel",
+      "bhlTeam": "Nashville Predators",
+      "position": "LW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04bii": {
+      "fantraxName": "Spencer Knight",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "G",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ril": {
+      "fantraxName": "Simon Nemec",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01587": {
+      "fantraxName": "Jordan Eberle",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "RW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05oxk": {
+      "fantraxName": "Mason Lohrei",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05yms": {
+      "fantraxName": "Sam Rinzel",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02wy3": {
+      "fantraxName": "Elias Lindholm",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0457i": {
+      "fantraxName": "Ukko-Pekka Luukkonen",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "G",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "004p4": {
+      "fantraxName": "Mikael Backlund",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04amg": {
+      "fantraxName": "Alexis Lafreniere",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "075ko": {
+      "fantraxName": "Wyatt Cullen",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yn0": {
+      "fantraxName": "Connor McMichael",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03duf": {
+      "fantraxName": "Dylan Larkin",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04kyn": {
+      "fantraxName": "Sean Walker",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ecl": {
+      "fantraxName": "Gustav Forsling",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03yg3": {
+      "fantraxName": "Mikhail Sergachev",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "067xz": {
+      "fantraxName": "Axel Sandin Pellikka",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "048vf": {
+      "fantraxName": "Andrei Svechnikov",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02noq": {
+      "fantraxName": "Mike Matheson",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0457b": {
+      "fantraxName": "Casey Mittelstadt",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r1c": {
+      "fantraxName": "Juraj Slafkovsky",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hcw": {
+      "fantraxName": "Beckett Sennecke",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "RW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gtp": {
+      "fantraxName": "Dawson Mercer",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "RW",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gd8": {
+      "fantraxName": "Mason McTavish",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zti": {
+      "fantraxName": "Tyler Toffoli",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "RW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06pyp": {
+      "fantraxName": "Radim Mrtka",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axe": {
+      "fantraxName": "Gabe Perreault",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06rus": {
+      "fantraxName": "Brady Martin",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ui2": {
+      "fantraxName": "Logan Cooley",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05j3d": {
+      "fantraxName": "Bobby McMann",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "LW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ui4": {
+      "fantraxName": "Dalibor Dvorsky",
+      "bhlTeam": "Toronto Maple Leafs",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05o01": {
+      "fantraxName": "Sebastian Cossa",
+      "bhlTeam": "Ottawa Senators",
+      "position": "G",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02azh": {
+      "fantraxName": "Jamie Oleksiak",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06fzv": {
+      "fantraxName": "Cole Hutson",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qy5": {
+      "fantraxName": "Kirill Marchenko",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04znw": {
+      "fantraxName": "Brandt Clarke",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qzc": {
+      "fantraxName": "Joel Hofer",
+      "bhlTeam": "Ottawa Senators",
+      "position": "G",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02unz": {
+      "fantraxName": "Nick Schmaltz",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mv3": {
+      "fantraxName": "Alex Newhook",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03kra": {
+      "fantraxName": "Kyle Connor",
+      "bhlTeam": "Ottawa Senators",
+      "position": "LW",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "064om": {
+      "fantraxName": "Michael Hage",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mto": {
+      "fantraxName": "Kaapo Kakko",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "048w3": {
+      "fantraxName": "Justin Brazeau",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rip": {
+      "fantraxName": "John Marino",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06snb": {
+      "fantraxName": "Benjamin Kindel",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02yjl": {
+      "fantraxName": "Leon Draisaitl",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04f24": {
+      "fantraxName": "Jeremy Swayman",
+      "bhlTeam": "Ottawa Senators",
+      "position": "G",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06mb0": {
+      "fantraxName": "Matvei Gridin",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kua": {
+      "fantraxName": "Emil Heineman",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01z7v": {
+      "fantraxName": "Sean Couturier",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04z51": {
+      "fantraxName": "Charle-Edouard DAstous",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ra7": {
+      "fantraxName": "Zach Werenski",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04kyh": {
+      "fantraxName": "Brady Tkachuk",
+      "bhlTeam": "Ottawa Senators",
+      "position": "LW",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0760d": {
+      "fantraxName": "Jaxon Cover",
+      "bhlTeam": "Ottawa Senators",
+      "position": "LW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051yz": {
+      "fantraxName": "Dylan Holloway",
+      "bhlTeam": "Ottawa Senators",
+      "position": "LW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03169": {
+      "fantraxName": "Alexander Wennberg",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zql": {
+      "fantraxName": "Brock Nelson",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "075w6": {
+      "fantraxName": "Malte Gustafsson",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03924": {
+      "fantraxName": "Jack Eichel",
+      "bhlTeam": "Ottawa Senators",
+      "position": "C",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01mz5": {
+      "fantraxName": "Dmitry Orlov",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0618g": {
+      "fantraxName": "Cole Knuble",
+      "bhlTeam": "Ottawa Senators",
+      "position": "RW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ltj": {
+      "fantraxName": "Brock Faber",
+      "bhlTeam": "Ottawa Senators",
+      "position": "D",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03wor": {
+      "fantraxName": "Mason Marchment",
+      "bhlTeam": "Ottawa Senators",
+      "position": "LW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05riz": {
+      "fantraxName": "David Jiricek",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axr": {
+      "fantraxName": "Tom Willander",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "066sp": {
+      "fantraxName": "Aydar Suniev",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lo0": {
+      "fantraxName": "Quinton Byfield",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05g42": {
+      "fantraxName": "Jack Quinn",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03dms": {
+      "fantraxName": "Kevin Fiala",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "038vb": {
+      "fantraxName": "Travis Konecny",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rab": {
+      "fantraxName": "Jake DeBrusk",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05xcm": {
+      "fantraxName": "Jonathan Lekkerimaki",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06snd": {
+      "fantraxName": "Lynden Lakovic",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06jhd": {
+      "fantraxName": "Anton Frondell",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nq2": {
+      "fantraxName": "Chandler Stephenson",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tas": {
+      "fantraxName": "Olen Zellweger",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "074v8": {
+      "fantraxName": "Alberts Smits",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "070fm": {
+      "fantraxName": "Ryan Lin",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02yjp": {
+      "fantraxName": "Ivan Barbashev",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042ye": {
+      "fantraxName": "Jesper Bratt",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yu6": {
+      "fantraxName": "Jamie Drysdale",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04xec": {
+      "fantraxName": "Matt Boldy",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06aew": {
+      "fantraxName": "Dmitri Simashev",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051m4": {
+      "fantraxName": "Jackson LaCombe",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hcr": {
+      "fantraxName": "Igor Chernyshov",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0529k": {
+      "fantraxName": "Yaroslav Askarov",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "G",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06ay2": {
+      "fantraxName": "Luca Cagnoni",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03wpm": {
+      "fantraxName": "Charlie McAvoy",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06pyw": {
+      "fantraxName": "Victor Eklund",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "LW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "070fr": {
+      "fantraxName": "Xavier Villeneuve",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "D",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yqp": {
+      "fantraxName": "Anton Lundell",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04o0g": {
+      "fantraxName": "Marco Rossi",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rf2": {
+      "fantraxName": "Logan Stankoven",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031pq": {
+      "fantraxName": "Andrew Copp",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "C",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "066on": {
+      "fantraxName": "Michael Brandsegg-Nygard",
+      "bhlTeam": "Minnesota North Stars",
+      "position": "RW",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "00qs7": {
+      "fantraxName": "Jamie Benn",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06fzw": {
+      "fantraxName": "Adam Jiricek",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "027i6": {
+      "fantraxName": "Mika Zibanejad",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01xfq": {
+      "fantraxName": "Vladimir Tarasenko",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "(N/A)",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rjy": {
+      "fantraxName": "Cole Eiserman",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nq3": {
+      "fantraxName": "Shayne Gostisbehere",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tqt": {
+      "fantraxName": "Wyatt Johnston",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "049k7": {
+      "fantraxName": "Martin Necas",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0045u": {
+      "fantraxName": "Jordan Staal",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "060pq": {
+      "fantraxName": "Alex Bump",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03167": {
+      "fantraxName": "Bo Horvat",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "074v1": {
+      "fantraxName": "Tommy Bleyl",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042w4": {
+      "fantraxName": "Adam Fox",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03e1m": {
+      "fantraxName": "Brayden Point",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06rqm": {
+      "fantraxName": "Carter Bear",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "C",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03yg4": {
+      "fantraxName": "Samuel Girard",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mn8": {
+      "fantraxName": "Clayton Keller",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03d12": {
+      "fantraxName": "David Pastrnak",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06pyk": {
+      "fantraxName": "Justin Carbonneau",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ld3": {
+      "fantraxName": "Noah Dobson",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04r0e": {
+      "fantraxName": "Pontus Holmberg",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qyw": {
+      "fantraxName": "Linus Karlsson",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06imq": {
+      "fantraxName": "Maxim Shabanov",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01c32": {
+      "fantraxName": "Brayden Schenn",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05g2s": {
+      "fantraxName": "Adam Wilsby",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02oak": {
+      "fantraxName": "Connor Brown",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "RW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05x9t": {
+      "fantraxName": "Tye Kartye",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02fzm": {
+      "fantraxName": "Filip Forsberg",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "LW",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03161": {
+      "fantraxName": "Darnell Nurse",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0322w": {
+      "fantraxName": "Ilya Sorokin",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "G",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05af9": {
+      "fantraxName": "William Wallinder",
+      "bhlTeam": "Detroit Red Wings",
+      "position": "D",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "067yd": {
+      "fantraxName": "David Reinbacher",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rjd": {
+      "fantraxName": "Cutter Gauthier",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nqb": {
+      "fantraxName": "Colton Parayko",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01f3e": {
+      "fantraxName": "Nazem Kadri",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03yh8": {
+      "fantraxName": "Owen Tippett",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01sif": {
+      "fantraxName": "Tyler Seguin",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04f2d": {
+      "fantraxName": "Drake Batherson",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02440": {
+      "fantraxName": "Anders Lee",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tur": {
+      "fantraxName": "Matthew Knies",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06gk0": {
+      "fantraxName": "Matthew Schaefer",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mdc": {
+      "fantraxName": "Logan Thompson",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "G",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r1l": {
+      "fantraxName": "William Eklund",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0725x": {
+      "fantraxName": "Caleb Malhotra",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gd7": {
+      "fantraxName": "Cole Sillinger",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06jhc": {
+      "fantraxName": "Tij Iginla",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04dwk": {
+      "fantraxName": "Josh Norris",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051xf": {
+      "fantraxName": "Egor Chinakhov",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03jxy": {
+      "fantraxName": "Auston Matthews",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0644f": {
+      "fantraxName": "Ryan Leonard",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ye7": {
+      "fantraxName": "Cam York",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "059e2": {
+      "fantraxName": "Justin Sourdif",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rgk": {
+      "fantraxName": "Alex Carrier",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": 8478851,
+      "nhlName": "Alexandre Carrier",
+      "aliases": [
+        "Alex Carrier"
+      ],
+      "status": "manually_mapped_pending_verification"
+    },
+    "03bxl": {
+      "fantraxName": "Trevor Moore",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02o78": {
+      "fantraxName": "Brett Kulak",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04gek": {
+      "fantraxName": "Sean Durzi",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04f75": {
+      "fantraxName": "Noah Cates",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "C",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "059e5": {
+      "fantraxName": "Jake Neighbours",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "LW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "067xd": {
+      "fantraxName": "T.J. Hughes",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "RW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rad": {
+      "fantraxName": "Thomas Chabot",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zs1": {
+      "fantraxName": "Scott Wedgewood",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "G",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zb4": {
+      "fantraxName": "Moritz Seider",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06rut": {
+      "fantraxName": "Cameron Reid",
+      "bhlTeam": "Chicago Blackhawks",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06loq": {
+      "fantraxName": "Caleb Desnoyers",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ymq": {
+      "fantraxName": "Matthew Poitras",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031og": {
+      "fantraxName": "Tyler Bertuzzi",
+      "bhlTeam": "California Golden Seals",
+      "position": "RW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lc0": {
+      "fantraxName": "Evan Bouchard",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "068yz": {
+      "fantraxName": "Jacob Fowler",
+      "bhlTeam": "California Golden Seals",
+      "position": "G",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02o7s": {
+      "fantraxName": "Connor Hellebuyck",
+      "bhlTeam": "California Golden Seals",
+      "position": "G",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04l8w": {
+      "fantraxName": "Parker Kelly",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ymn": {
+      "fantraxName": "Maveric Lamoureux",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01ex7": {
+      "fantraxName": "Matt Duchene",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "070fp": {
+      "fantraxName": "Daxon Rudolph",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "004jl": {
+      "fantraxName": "Brad Marchand",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04o0h": {
+      "fantraxName": "Dylan Guenther",
+      "bhlTeam": "California Golden Seals",
+      "position": "RW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05m17": {
+      "fantraxName": "Frank Nazar",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "003kg": {
+      "fantraxName": "Patrick Kane",
+      "bhlTeam": "California Golden Seals",
+      "position": "RW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051lz": {
+      "fantraxName": "Shane Pinto",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rf7": {
+      "fantraxName": "Yakov Trenin",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kuc": {
+      "fantraxName": "Tyler Kleven",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01n84": {
+      "fantraxName": "Alex Killorn",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ni5": {
+      "fantraxName": "Jonathan Marchessault",
+      "bhlTeam": "California Golden Seals",
+      "position": "RW",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ec6": {
+      "fantraxName": "Devon Toews",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mn9": {
+      "fantraxName": "Mikko Rantanen",
+      "bhlTeam": "California Golden Seals",
+      "position": "RW",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03dug": {
+      "fantraxName": "Tony DeAngelo",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02npl": {
+      "fantraxName": "Damon Severson",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ybj": {
+      "fantraxName": "Anthony Mantha",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06loj": {
+      "fantraxName": "Ethan Belchetz",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ldb": {
+      "fantraxName": "Bowen Byram",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ee4": {
+      "fantraxName": "Victor Olofsson",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05w9b": {
+      "fantraxName": "Calum Ritchie",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nol": {
+      "fantraxName": "Teuvo Teravainen",
+      "bhlTeam": "California Golden Seals",
+      "position": "LW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zp9": {
+      "fantraxName": "Mavrik Bourque",
+      "bhlTeam": "California Golden Seals",
+      "position": "C",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05lu8": {
+      "fantraxName": "Alexander Nikishin",
+      "bhlTeam": "California Golden Seals",
+      "position": "D",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mq0": {
+      "fantraxName": "Matt Savoie",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03d09": {
+      "fantraxName": "Alex Tuch",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03as6": {
+      "fantraxName": "Jared McCann",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "LW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01fx3": {
+      "fantraxName": "Roman Josi",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zto": {
+      "fantraxName": "Charlie Coyle",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02yjj": {
+      "fantraxName": "William Nylander",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03jvu": {
+      "fantraxName": "Mitch Marner",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06nkc": {
+      "fantraxName": "Jake OBrien",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kbo": {
+      "fantraxName": "Marat Khusnutdinov",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qyv": {
+      "fantraxName": "Lukas Dostal",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "G",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06spu": {
+      "fantraxName": "Alexander Zharovsky",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ofm": {
+      "fantraxName": "Pius Suter",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "070fo": {
+      "fantraxName": "Chase Reid",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ra8": {
+      "fantraxName": "Timo Meier",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "LW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "049ph": {
+      "fantraxName": "Neal Pionk",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03uzr": {
+      "fantraxName": "Matthew Tkachuk",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05uao": {
+      "fantraxName": "Collin Graf",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "LW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qza": {
+      "fantraxName": "Martin Pospisil",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axz": {
+      "fantraxName": "Bradly Nadeau",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "023wa": {
+      "fantraxName": "Jared Spurgeon",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "060v8": {
+      "fantraxName": "Elias Pettersson",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rf8": {
+      "fantraxName": "Vince Dunn",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "039cg": {
+      "fantraxName": "Sam Bennett",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04xef": {
+      "fantraxName": "Philip Broberg",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tv0": {
+      "fantraxName": "Jackson Blake",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031p8": {
+      "fantraxName": "Oliver Bjorkstrand",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06bap": {
+      "fantraxName": "Easton Cowan",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lcf": {
+      "fantraxName": "Joel Farabee",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "LW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yu5": {
+      "fantraxName": "Thomas Harley",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01skq": {
+      "fantraxName": "Cam Fowler",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01d6c": {
+      "fantraxName": "Jacob Markstrom",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "G",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06r63": {
+      "fantraxName": "Tynan Lawrence",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05nzz": {
+      "fantraxName": "Simon Edvinsson",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05w9c": {
+      "fantraxName": "Macklin Celebrini",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zj5": {
+      "fantraxName": "JJ Peterka",
+      "bhlTeam": "New York Rangers",
+      "position": "RW",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ymj": {
+      "fantraxName": "Jimmy Snuggerud",
+      "bhlTeam": "New York Rangers",
+      "position": "RW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rj3": {
+      "fantraxName": "Tristan Luneau",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02wy5": {
+      "fantraxName": "Nikita Zadorov",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lc8": {
+      "fantraxName": "Jesperi Kotkaniemi",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "059e0": {
+      "fantraxName": "Jake Sanderson",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03as8": {
+      "fantraxName": "Nikolaj Ehlers",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04y80": {
+      "fantraxName": "Shane Wright",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02zpp": {
+      "fantraxName": "Viktor Arvidsson",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0579x": {
+      "fantraxName": "Adam Fantilli",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "061im": {
+      "fantraxName": "Michael Misa",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zj8": {
+      "fantraxName": "Bobby Brink",
+      "bhlTeam": "New York Rangers",
+      "position": "RW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0644b": {
+      "fantraxName": "Will Smith",
+      "bhlTeam": "New York Rangers",
+      "position": "RW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0457k": {
+      "fantraxName": "Jake Oettinger",
+      "bhlTeam": "New York Rangers",
+      "position": "G",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01xfp": {
+      "fantraxName": "Jaden Schwartz",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ymu": {
+      "fantraxName": "Hendrix Lapierre",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03v70": {
+      "fantraxName": "Alex DeBrincat",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0045j": {
+      "fantraxName": "Kris Letang",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04a9v": {
+      "fantraxName": "Morgan Geekie",
+      "bhlTeam": "New York Rangers",
+      "position": "RW",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03nfr": {
+      "fantraxName": "Evan Rodrigues",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mqg": {
+      "fantraxName": "Jakob Chychrun",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06maz": {
+      "fantraxName": "Ilya Protas",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02b3o": {
+      "fantraxName": "Rickard Rakell",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04xjf": {
+      "fantraxName": "Owen Power",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05mx8": {
+      "fantraxName": "Declan Carlile",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qya": {
+      "fantraxName": "Filip Hallander",
+      "bhlTeam": "New York Rangers",
+      "position": "C",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06nke": {
+      "fantraxName": "Jackson Smith",
+      "bhlTeam": "New York Rangers",
+      "position": "D",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ymt": {
+      "fantraxName": "Lucas Raymond",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04dwj": {
+      "fantraxName": "Jason Robertson",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "075kn": {
+      "fantraxName": "Oscar Hemming",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0243e": {
+      "fantraxName": "Gabriel Landeskog",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04abd": {
+      "fantraxName": "Artem Zub",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0045k": {
+      "fantraxName": "Evgeni Malkin",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "071wj": {
+      "fantraxName": "Carson Carels",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06bmb": {
+      "fantraxName": "Zeev Buium",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mn5": {
+      "fantraxName": "Patrik Laine",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "(N/A)",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02f9l": {
+      "fantraxName": "Nathan MacKinnon",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nom": {
+      "fantraxName": "Andrei Vasilevskiy",
+      "bhlTeam": "Québec Nordiques",
+      "position": "G",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051z1": {
+      "fantraxName": "Justin Barron",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r50": {
+      "fantraxName": "Mackie Samoskevich",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031nx": {
+      "fantraxName": "Shea Theodore",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zu5": {
+      "fantraxName": "Justin Faulk",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01skr": {
+      "fantraxName": "Mikael Granlund",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ytx": {
+      "fantraxName": "Ryan Hartman",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hco": {
+      "fantraxName": "Zayne Parekh",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "064mz": {
+      "fantraxName": "Charlie Stramel",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "062dy": {
+      "fantraxName": "Andrew Cristall",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03j8l": {
+      "fantraxName": "Noah Hanifin",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04lbz": {
+      "fantraxName": "Quinn Hughes",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "048x9": {
+      "fantraxName": "Elias Pettersson",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
+      "nhlTeam": "VAN",
+      "nhlId": 8480012,
+      "nhlName": "Elias Pettersson",
+      "aliases": [],
+      "status": "manually_mapped_pending_verification"
+    },
+    "06bdr": {
+      "fantraxName": "Roman Kantserov",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01sio": {
+      "fantraxName": "Mats Zuccarello",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05y3a": {
+      "fantraxName": "Leo Carlsson",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02dq6": {
+      "fantraxName": "Jean-Gabriel Pageau",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hj9": {
+      "fantraxName": "Porter Martone",
+      "bhlTeam": "Québec Nordiques",
+      "position": "RW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rfx": {
+      "fantraxName": "Tommy Novak",
+      "bhlTeam": "Québec Nordiques",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "00qnu": {
+      "fantraxName": "Drew Doughty",
+      "bhlTeam": "Québec Nordiques",
+      "position": "D",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06rnr": {
+      "fantraxName": "Maddox Dagenais",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05yli": {
+      "fantraxName": "Pavel Mintyukov",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rgq": {
+      "fantraxName": "Ryan Shea",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06sqf": {
+      "fantraxName": "Braeden Cootes",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05mwh": {
+      "fantraxName": "Devon Levi",
+      "bhlTeam": "Boston Bruins",
+      "position": "G",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r1i": {
+      "fantraxName": "Matty Beniers",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01f5z": {
+      "fantraxName": "Chris Kreider",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02422": {
+      "fantraxName": "Ryan Nugent-Hopkins",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ln4": {
+      "fantraxName": "Kiefer Sherwood",
+      "bhlTeam": "Boston Bruins",
+      "position": "RW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gvo": {
+      "fantraxName": "Matvei Michkov",
+      "bhlTeam": "Boston Bruins",
+      "position": "RW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06bde": {
+      "fantraxName": "Oliver Bonk",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06h8h": {
+      "fantraxName": "Trevor Connelly",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05yn2": {
+      "fantraxName": "Fraser Minten",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02b76": {
+      "fantraxName": "Vincent Trocheck",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "065nx": {
+      "fantraxName": "Berkly Catton",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ui5": {
+      "fantraxName": "Quentin Musty",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ece": {
+      "fantraxName": "Igor Shesterkin",
+      "bhlTeam": "Boston Bruins",
+      "position": "G",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06r5z": {
+      "fantraxName": "Keaton Verhoeff",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04amd": {
+      "fantraxName": "Peyton Krebs",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hk9": {
+      "fantraxName": "Vitali Pinchuk",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gdo": {
+      "fantraxName": "Luke Evangelista",
+      "bhlTeam": "Boston Bruins",
+      "position": "RW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01lkz": {
+      "fantraxName": "Taylor Hall",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nof": {
+      "fantraxName": "Hampus Lindholm",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051um": {
+      "fantraxName": "Arseny Gritsyuk",
+      "bhlTeam": "Boston Bruins",
+      "position": "RW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ynu": {
+      "fantraxName": "Carter Hart",
+      "bhlTeam": "Boston Bruins",
+      "position": "G",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06lok": {
+      "fantraxName": "Viggo Bjorck",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03e7p": {
+      "fantraxName": "Travis Sanheim",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04qve": {
+      "fantraxName": "KAndre Miller",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axx": {
+      "fantraxName": "William Horcoff",
+      "bhlTeam": "Boston Bruins",
+      "position": "C",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0042t": {
+      "fantraxName": "Claude Giroux",
+      "bhlTeam": "Boston Bruins",
+      "position": "RW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mx6": {
+      "fantraxName": "Kaiden Guhle",
+      "bhlTeam": "Boston Bruins",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04y8g": {
+      "fantraxName": "Trevor Zegras",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gda": {
+      "fantraxName": "Kent Johnson",
+      "bhlTeam": "Boston Bruins",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zvp": {
+      "fantraxName": "Bryan Rust",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axc": {
+      "fantraxName": "Samuel Honzek",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "LW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02azb": {
+      "fantraxName": "Mark Scheifele",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zb6": {
+      "fantraxName": "Alex Vlasic",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ubx": {
+      "fantraxName": "Ryker Evans",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042t2": {
+      "fantraxName": "Logan Stanley",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051uw": {
+      "fantraxName": "Judd Caulfield",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nok": {
+      "fantraxName": "Tomas Hertl",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02o7l": {
+      "fantraxName": "Jaccob Slavin",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r2z": {
+      "fantraxName": "Theo Lindstein",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "00454": {
+      "fantraxName": "Sidney Crosby",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zo0": {
+      "fantraxName": "Pavel Dorofeyev",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "LW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05962": {
+      "fantraxName": "J.J. Moser",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tcz": {
+      "fantraxName": "Oliver Kapanen",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "065d1": {
+      "fantraxName": "Matthew Wood",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05xrx": {
+      "fantraxName": "Marco Kasper",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tqu": {
+      "fantraxName": "Logan Mailloux",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04bw4": {
+      "fantraxName": "Andrei Kuzmenko",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042vx": {
+      "fantraxName": "Filip Hronek",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06kr3": {
+      "fantraxName": "Sam OReilly",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01ztp": {
+      "fantraxName": "Zach Hyman",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03w5s": {
+      "fantraxName": "Ryan McLeod",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05lud": {
+      "fantraxName": "Dylan Garand",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "G",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05oxs": {
+      "fantraxName": "Jakub Dobes",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "G",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02noe": {
+      "fantraxName": "Morgan Rielly",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mkm": {
+      "fantraxName": "Adin Hill",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "G",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06cl1": {
+      "fantraxName": "Emmitt Finnie",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "LW",
+      "nhlTeam": "DET",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ybn": {
+      "fantraxName": "Josh Morrissey",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03dde": {
+      "fantraxName": "Jake Walman",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "D",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031p0": {
+      "fantraxName": "Jake Guentzel",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "LW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "039ch": {
+      "fantraxName": "Kasperi Kapanen",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "RW",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03as9": {
+      "fantraxName": "Dylan Strome",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04y4m": {
+      "fantraxName": "Connor Bedard",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031p3": {
+      "fantraxName": "Carter Verhaeghe",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05kub": {
+      "fantraxName": "Shakir Mukhamadullin",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rb9": {
+      "fantraxName": "Conor Geekie",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051v4": {
+      "fantraxName": "Arturs Silovs",
+      "bhlTeam": "Florida Panthers",
+      "position": "G",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ybo": {
+      "fantraxName": "Rasmus Ristolainen",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02un6": {
+      "fantraxName": "Sean Monahan",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02o70": {
+      "fantraxName": "Josh Anderson",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02un7": {
+      "fantraxName": "Aleksander Barkov",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yeb": {
+      "fantraxName": "Simon Holmstrom",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zb8": {
+      "fantraxName": "Phillip Tomasino",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05tpa": {
+      "fantraxName": "Ville Koivunen",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06axb": {
+      "fantraxName": "Nick Lardis",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0243f": {
+      "fantraxName": "Seth Jones",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "024lv": {
+      "fantraxName": "Mattias Ekholm",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051tx": {
+      "fantraxName": "Aliaksei Protas",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04f1z": {
+      "fantraxName": "Mikey Anderson",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05ym6": {
+      "fantraxName": "Liam Ohgren",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02un5": {
+      "fantraxName": "Sam Reinhart",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03raf": {
+      "fantraxName": "Brock Boeser",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "VAN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042vl": {
+      "fantraxName": "Jordan Kyrou",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ezy": {
+      "fantraxName": "Morgan Frost",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05r3d": {
+      "fantraxName": "Josh Doan",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "003tz": {
+      "fantraxName": "Brent Burns",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01ud1": {
+      "fantraxName": "Sergei Bobrovsky",
+      "bhlTeam": "Florida Panthers",
+      "position": "G",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02g00": {
+      "fantraxName": "Aaron Ekblad",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "FLA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02fro": {
+      "fantraxName": "Adam Lowry",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "004cq": {
+      "fantraxName": "Alex Ovechkin",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06age": {
+      "fantraxName": "Sam Malinski",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031v6": {
+      "fantraxName": "MacKenzie Weegar",
+      "bhlTeam": "Florida Panthers",
+      "position": "D",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06psl": {
+      "fantraxName": "Ivar Stenberg",
+      "bhlTeam": "Florida Panthers",
+      "position": "LW",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06c72": {
+      "fantraxName": "Braeden Bowman",
+      "bhlTeam": "Florida Panthers",
+      "position": "RW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06loc": {
+      "fantraxName": "Yegor Surin",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04r0j": {
+      "fantraxName": "Michael Kesselring",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yi4": {
+      "fantraxName": "Pyotr Kochetkov",
+      "bhlTeam": "Hartford Whalers",
+      "position": "G",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mbn": {
+      "fantraxName": "Mackenzie Blackwood",
+      "bhlTeam": "Hartford Whalers",
+      "position": "G",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03de2": {
+      "fantraxName": "Brandon Montour",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hcy": {
+      "fantraxName": "Liam Greentree",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031pn": {
+      "fantraxName": "Nick Paul",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05wwg": {
+      "fantraxName": "Lane Hutson",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02fzj": {
+      "fantraxName": "Blake Coleman",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02b3w": {
+      "fantraxName": "Boone Jenner",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01c13": {
+      "fantraxName": "Victor Hedman",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0644c": {
+      "fantraxName": "Daniil But",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03yuc": {
+      "fantraxName": "Kailer Yamamoto",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "050rc": {
+      "fantraxName": "Dmitry Voronkov",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zt0": {
+      "fantraxName": "Jason Zucker",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "042t5": {
+      "fantraxName": "Tage Thompson",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04osu": {
+      "fantraxName": "Barrett Hayton",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05k8c": {
+      "fantraxName": "Tyson Foerster",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "PHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02b70": {
+      "fantraxName": "Nikita Kucherov",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01zvf": {
+      "fantraxName": "Mark Stone",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06sqp": {
+      "fantraxName": "Vaclav Nestrasil",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04bdb": {
+      "fantraxName": "Jack Hughes",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02noo": {
+      "fantraxName": "Mark Jankowski",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04apb": {
+      "fantraxName": "Robert Thomas",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0457f": {
+      "fantraxName": "Nico Hischier",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04an5": {
+      "fantraxName": "Miro Heiskanen",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "DAL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02dq3": {
+      "fantraxName": "Jacob Trouba",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02nou": {
+      "fantraxName": "Brady Skjei",
+      "bhlTeam": "Hartford Whalers",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05gvq": {
+      "fantraxName": "Seth Jarvis",
+      "bhlTeam": "Hartford Whalers",
+      "position": "RW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01f6d": {
+      "fantraxName": "Ryan OReilly",
+      "bhlTeam": "Hartford Whalers",
+      "position": "C",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051u2": {
+      "fantraxName": "Matias Maccelli",
+      "bhlTeam": "Hartford Whalers",
+      "position": "LW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03wpi": {
+      "fantraxName": "Pierre-Luc Dubois",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ad7": {
+      "fantraxName": "Rasmus Dahlin",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01f66": {
+      "fantraxName": "Kyle Palmieri",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rag": {
+      "fantraxName": "Jack Roslovic",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06ig3": {
+      "fantraxName": "Cayden Lindstrom",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06sds": {
+      "fantraxName": "Tim Washe",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03ekl": {
+      "fantraxName": "Vladislav Gavrikov",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "00qru": {
+      "fantraxName": "Steven Stamkos",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "064r2": {
+      "fantraxName": "Ivan Demidov",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rmx": {
+      "fantraxName": "Sebastian Aho",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "015pv": {
+      "fantraxName": "John Carlson",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02wy7": {
+      "fantraxName": "Pavel Buchnevich",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "STL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05td4": {
+      "fantraxName": "Ryan Ufko",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "NSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03klz": {
+      "fantraxName": "Darren Raddysh",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04alw": {
+      "fantraxName": "Cale Makar",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rae": {
+      "fantraxName": "Joel Eriksson Ek",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01c12": {
+      "fantraxName": "John Tavares",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "TOR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02noj": {
+      "fantraxName": "Tom Wilson",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rih": {
+      "fantraxName": "Karel Vejmelka",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "G",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02aez": {
+      "fantraxName": "J.T. Miller",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "NYR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zox": {
+      "fantraxName": "Kaedan Korczak",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03bfj": {
+      "fantraxName": "Artemi Panarin",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ybk": {
+      "fantraxName": "Artturi Lehkonen",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01gjn": {
+      "fantraxName": "Erik Haula",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03kng": {
+      "fantraxName": "Frederick Gaudreau",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "SEA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "026p4": {
+      "fantraxName": "Jonathan Huberdeau",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "075u7": {
+      "fantraxName": "Alexander Command",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rh3": {
+      "fantraxName": "Kirill Kaprizov",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "LW",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02azg": {
+      "fantraxName": "Jonas Brodin",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "nhlTeam": null,
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "071wk": {
+      "fantraxName": "Elton Hermansson",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "RW",
+      "nhlTeam": "LAK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04yg5": {
+      "fantraxName": "Jesper Wallstedt",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "G",
+      "nhlTeam": "MIN",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06jhe": {
+      "fantraxName": "Cole Reschny",
+      "bhlTeam": "Colorado Avalanche",
+      "position": "C",
+      "nhlTeam": "CGY",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "01mzc": {
+      "fantraxName": "Brayden McNabb",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "031of": {
+      "fantraxName": "William Carrier",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "CAR",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02oar": {
+      "fantraxName": "Linus Ullmark",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "G",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03l0t": {
+      "fantraxName": "Pavel Zacha",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rfl": {
+      "fantraxName": "Anthony Cirelli",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "TBL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02b6w": {
+      "fantraxName": "William Karlsson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04uqa": {
+      "fantraxName": "Vasily Podkolzin",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03c0c": {
+      "fantraxName": "Josh Manson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "COL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04zo3": {
+      "fantraxName": "Nick Robertson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06sn9": {
+      "fantraxName": "Kashawn Aitcheson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03wpn": {
+      "fantraxName": "Brett Howden",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02yjw": {
+      "fantraxName": "Tristan Jarry",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "G",
+      "nhlTeam": "EDM",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04f17": {
+      "fantraxName": "Fabian Zetterlund",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06amv": {
+      "fantraxName": "Sam Dickinson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "SJS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06ag2": {
+      "fantraxName": "James Hagens",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "BOS",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02ybl": {
+      "fantraxName": "Valeri Nichushkin",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "CBJ",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rik": {
+      "fantraxName": "Troy Terry",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "016g3": {
+      "fantraxName": "Erik Karlsson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "PIT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0744a": {
+      "fantraxName": "Nikita Klepov",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04uql": {
+      "fantraxName": "Cole Perfetti",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "WPG",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "048xc": {
+      "fantraxName": "Nick Suzuki",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04mv2": {
+      "fantraxName": "Cole Caufield",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "MTL",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06imm": {
+      "fantraxName": "Roger McQueen",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "ANA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04n4n": {
+      "fantraxName": "Rasmus Sandin",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "WSH",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03rf5": {
+      "fantraxName": "Rasmus Andersson",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "VGK",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "03mm6": {
+      "fantraxName": "Lawson Crouse",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "UTA",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "06hcq": {
+      "fantraxName": "Carter Yakemchuk",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "05rjh": {
+      "fantraxName": "Noah Ostlund",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "BUF",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "051z0": {
+      "fantraxName": "Tim Stutzle",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "LW",
+      "nhlTeam": "OTT",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "0644e": {
+      "fantraxName": "Oliver Moore",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "C",
+      "nhlTeam": "CHI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "02uws": {
+      "fantraxName": "Mathew Barzal",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "RW",
+      "nhlTeam": "NYI",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    },
+    "04ymn": {
+      "fantraxName": "Luke Hughes",
+      "bhlTeam": "Anaheim Mighty Ducks",
+      "position": "D",
+      "nhlTeam": "NJD",
+      "nhlId": null,
+      "nhlName": null,
+      "aliases": [],
+      "status": "unresolved"
+    }
+  },
+  "review": {
+    "duplicateNames": [
+      [
+        "060v8",
+        "048x9"
+      ]
+    ],
+    "manuallyMappedPendingVerification": [
+      "03rgk",
+      "048x9"
+    ]
+  }
+}
