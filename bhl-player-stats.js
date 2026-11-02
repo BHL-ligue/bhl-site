@@ -169,15 +169,16 @@ function bhlResolvedNhlId(name){
  if(key==='millerkandre'||key==='kandremiller')return 8480817;
  return 0;
 }
-async function historicNhl(name,target){
+async function historicNhl(name,target,fantraxId){
  target.textContent='Chargement de toutes les saisons LNH en carrière…';
- const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
  try{
-  const result=bhlResolvedNhlId(name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
-  const players=Array.isArray(result)?result:(result.data||[]);
-  const match=players.find(p=>normalized(p.name||p.fullName||p.playerName)===normalized(name)||normalized(String(p.name||'').split(',').reverse().join(' '))===normalized(name));
-  const id=Number(bhlResolvedNhlId(name)||match?.playerId||match?.id);
-  if(!Number.isInteger(id)||id<=0)throw Error('Joueur non trouvé dans la base LNH');
+  const directory=await bhlIdentityDirectory();
+  const entry=directory.players?.[String(fantraxId||'')];
+  const id=Number(entry?.status==='confirmed'?entry.nhlId:0);
+  if(!Number.isInteger(id)||id<=0){
+   target.textContent='Identité LNH non confirmée pour ce joueur. Historique indisponible pour éviter une confusion entre homonymes.';
+   return;
+  }
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
   if(!target.isConnected)return;
   const goalie=String(profile.position||profile.positionCode||'').toUpperCase()==='G';
@@ -377,7 +378,7 @@ async function playerHonours(name,target){
  }catch(error){if(target.isConnected)target.textContent='Honneurs temporairement indisponibles : '+error.message}
 }
 
-function addSections(dialog,name){
+function addSections(dialog,name,fantraxId){
  const stats=dialog.querySelector('.bhl-player-stats');if(!stats)return;
  const tabs=document.createElement('div');tabs.className='bhl-unified-tabs';
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
@@ -387,7 +388,7 @@ function addSections(dialog,name){
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
@@ -619,7 +620,7 @@ function open(id,name,source){
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
  fill(dialog.querySelector('.bhl-player-stats'),id,name);
- addSections(dialog,name);
+ addSections(dialog,name,id);
  if(bhlOfficialNhlId(id,name)){
   const nhlId=bhlOfficialNhlId(id,name);
   nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing').then(profile=>{
