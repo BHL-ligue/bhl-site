@@ -511,7 +511,7 @@ let bhlIdentityDirectoryRequest;
 function bhlIdentityDirectory(){
  return bhlIdentityDirectoryRequest||(bhlIdentityDirectoryRequest=fetch('data/player-identity-map.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Répertoire indisponible');return r.json()}).catch(e=>{bhlIdentityDirectoryRequest=null;throw e}));
 }
-const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012};
+const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012,'060v8':8483678};
 const BHL_NHL_NAME_ALIASES={'alexcarrier':'Alexandre Carrier'};
 function bhlOfficialNhlId(id,name){
  return BHL_NHL_ID_BY_FANTRAX[String(id||'')]||bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
