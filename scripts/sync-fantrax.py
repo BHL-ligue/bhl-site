@@ -58,7 +58,7 @@ def build_snapshot(now=None):
     # as soon as Monday begins locally, if the next period starts that day.
     from zoneinfo import ZoneInfo
     local_today = now.astimezone(ZoneInfo("America/Toronto")).date()
-    if local_today.weekday() == 0:
+    if local_today.weekday() == 0 and now.astimezone(ZoneInfo("America/Toronto")).hour >= 1:
         following = next((p for p in info["rosterPeriods"] if p["number"] == roster_period + 1), None)
         if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == local_today:
             roster_period = following["number"]
@@ -68,7 +68,7 @@ def build_snapshot(now=None):
     # period active until 19:00. Show the new week's scores immediately.
     from zoneinfo import ZoneInfo
     today_montreal = now.astimezone(ZoneInfo("America/Toronto")).date()
-    if today_montreal.weekday() == 0:
+    if today_montreal.weekday() == 0 and now.astimezone(ZoneInfo("America/Toronto")).hour >= 1:
         following = next((p for p in info["scoringPeriods"] if p["number"] == scoring_period + 1), None)
         if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == today_montreal:
             scoring_period = following["number"]
@@ -134,6 +134,24 @@ def build_snapshot(now=None):
                 if team_id:
                     results_by_team[team_id] = results_by_team.get(team_id, 0) + 1
     previous_results = selected_results
+    # Season-long schedule, including future fixtures when Fantrax exposes them.
+    # Each period is independent; a failed future request must not block updates.
+    season_schedule = []
+    for period in info["scoringPeriods"]:
+        number = period["number"]
+        try:
+            period_scores = scores if number == scoring_period else fetch("getMatchupScores", period=number)
+            season_schedule.append({
+                "period": number,
+                "startDate": period["startDate"],
+                "endDate": period["endDate"],
+                "matchups": [{
+                    "away": {k: m["away"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["away"]},
+                    "home": {k: m["home"][k] for k in ("teamId", "teamName", "score", "gamesPlayed") if k in m["home"]}
+                } for m in period_scores.get("matchups", [])]
+            })
+        except Exception as error:
+            print("Schedule period unavailable:", number, error)
     player_info = fetch("getPlayerIds")
     if not isinstance(player_info, dict) or not player_info:
         raise ValueError("Missing player names")
@@ -159,6 +177,7 @@ def build_snapshot(now=None):
         "teams": teams,
         "upcoming": upcoming,
         "recentResults": previous_results,
+        "schedule": season_schedule,
         "standings": [{
             **{k: row[k] for k in (
                 "teamId", "teamName", "rank", "points", "totalPointsFor",
