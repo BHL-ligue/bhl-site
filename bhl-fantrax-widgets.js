@@ -78,6 +78,7 @@ async function refresh(){
   if(!Array.isArray(data.teams)||!Array.isArray(data.standings)||!Array.isArray(data.matchups)||!Number.isFinite(Date.parse(data.updatedAt)))throw Error('Données invalides');
   if(!snapshot||snapshot.updatedAt!==data.updatedAt){
    const previousStatus=rosterRoot?.querySelector('[data-ft-status]')?.value||'';
+   window.BHLLivePlayerStats=data.playerStats||{};
    snapshot=data;draw();
    if(previousStatus&&rosterRoot){
     const select=rosterRoot.querySelector('[data-ft-status]');
