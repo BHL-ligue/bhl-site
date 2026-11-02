@@ -418,10 +418,10 @@ async function populatePlayerBio(dialog,id,name){
    }catch(error){console.warn('Position Fantrax indisponible',error)}
  }catch(e){}
  try{
-  const query=bhlResolvedNhlId(name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
+  const query=bhlOfficialNhlId(id,name)?[]:await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(bhlOfficialNhlName(name)));
   const players=Array.isArray(query)?query:(query.data||[]);
   const found=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name)||norm(String(p.name||'').split(',').reverse().join(' '))===norm(name));
-  const nhlId=Number(bhlResolvedNhlId(name)||found?.playerId||found?.id);if(!nhlId)return;
+  const nhlId=Number(bhlOfficialNhlId(id,name)||found?.playerId||found?.id);if(!nhlId)return;
   const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
   if(!dialog.isConnected)return;
   const position=profile.position||profile.positionCode;
@@ -507,6 +507,12 @@ function bhlSpecificNhlId(id,name){
  if(norm(name)==='eliaspettersson'&&String(id)==='048x9')return 8480012;
  return 0;
 }
+const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012};
+const BHL_NHL_NAME_ALIASES={'alexcarrier':'Alexandre Carrier'};
+function bhlOfficialNhlId(id,name){
+ return BHL_NHL_ID_BY_FANTRAX[String(id||'')]||bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
+}
+function bhlOfficialNhlName(name){return BHL_NHL_NAME_ALIASES[norm(name)]||name}
 function open(id,name,source){
  id=bhlResolvePlayerId(id,name,source);
  const previous=document.querySelector('.bhl-player-dialog');if(previous)previous.close();
@@ -525,7 +531,7 @@ function open(id,name,source){
  const teamProfile=BHL_PROFILE_TEAMS[bhlTeamKey(selectedTeam)];
  const color=teamProfile?.[0]||localColor||mappedColor||rootColor;
  if(/^#[0-9a-f]{3,8}$/i.test(color)||/^rgb\(/i.test(color))dialog.style.setProperty('--profile-accent',color);
- const knownNhlId=bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
+ const knownNhlId=bhlOfficialNhlId(id,name);
  if(knownNhlId){
   const official=dialog.querySelector('.bhl-nhl-link');
   official.href='https://www.nhl.com/player/'+knownNhlId;
@@ -552,8 +558,8 @@ function open(id,name,source){
  dialog.addEventListener('close',()=>{dialog.remove();if(trigger?.isConnected)trigger.focus()},{once:true});
  fill(dialog.querySelector('.bhl-player-stats'),id,name);
  addSections(dialog,name);
- if(bhlSpecificNhlId(id,name)){
-  const nhlId=bhlSpecificNhlId(id,name);
+ if(bhlOfficialNhlId(id,name)){
+  const nhlId=bhlOfficialNhlId(id,name);
   nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing').then(profile=>{
    if(!dialog.isConnected)return;
    const img=dialog.querySelector('.bhl-nhl-photo');
