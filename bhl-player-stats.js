@@ -628,26 +628,7 @@ function open(id,name,source){
    if(img&&profile.headshot){img.src=profile.headshot;img.hidden=false}
    const link=dialog.querySelector('.bhl-nhl-link');if(link){link.href='https://www.nhl.com/player/'+nhlId;link.hidden=false}
   }).catch(()=>{});
- }else if(!bhlPortraitById(dialog,name)){
-  (async()=>{
-   try{
-    const found=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
-    const players=Array.isArray(found)?found:(found.data||[]);
-    const match=players.find(p=>norm(p.name||p.fullName||p.playerName)===norm(name));
-    const id=Number(match?.playerId||match?.id);
-    if(!id||!dialog.isConnected)return;
-    const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
-    if(!dialog.isConnected)return;
-    const photo=dialog.querySelector('.bhl-player-hero .bhl-nhl-photo');
-    if(photo&&profile.headshot){
-      photo.onload=()=>{photo.hidden=false;dialog.querySelector('.bhl-player-hero')?.classList.add('bhl-has-portrait')};
-      photo.src=profile.headshot;photo.alt='Portrait LNH de '+name;
-    }
-    const link=dialog.querySelector('.bhl-nhl-link');
-    if(link){link.href='https://www.nhl.com/player/'+id;link.hidden=false}
-   }catch(error){console.warn('Portrait indisponible',error)}
-  })();
- }
+
 }
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-bhl-player-id]');
