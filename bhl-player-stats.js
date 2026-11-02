@@ -97,10 +97,11 @@ document.addEventListener('click',e=>{
  e.preventDefault();open(button.dataset.bhlPlayerId,button.dataset.bhlPlayerName||button.textContent.trim());
 });
 // Enrich the existing portrait modal used by leadership and historical views.
-if(typeof window.bhlPortraitModal==='function'){
+if(typeof window.bhlPortraitModal==='function' && !window.bhlPortraitModal.__bhlUnified){
  const original=window.bhlPortraitModal;
  window.bhlPortraitModal=function(name,details=''){
-  original(name,details);
+  open(null,name);
+  return;
   const box=document.querySelector('.bhl-portrait-overlay .bhl-portrait-details');
   if(box){const stats=document.createElement('section');stats.className='bhl-player-stats';box.append(stats);fill(stats,null,name)}
  };
