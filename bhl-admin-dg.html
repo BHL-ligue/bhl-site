@@ -1,6 +1,6 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administration DG | BHL</title><style>
 *{box-sizing:border-box}body{margin:0;background:#eef0f2;color:#191919;font:15px Arial,sans-serif}.top{background:#cc0000;color:white;padding:18px 22px}.top a{color:white;text-decoration:none;font-weight:bold}.wrap{max-width:1100px;margin:28px auto;padding:0 14px}h1{font-size:36px}.card{background:white;border:1px solid #dfe2e6;border-radius:13px;padding:20px;margin:16px 0}.btn{background:#cc0000;color:white;border:0;border-radius:7px;padding:9px 13px;font-weight:bold;cursor:pointer}.secondary{background:#50565d}.reject{background:#666}.status{padding:12px;background:#f1f2f4;border-radius:8px;white-space:pre-wrap}.error{background:#fff0f0;color:#a00}.ok{background:#eef8f0;color:#176b32}.hidden{display:none!important}.field{display:block;font-weight:bold;font-size:13px;margin:12px 0}.field input{display:block;width:100%;padding:11px;border:1px solid #ccd0d5;border-radius:8px;margin-top:5px}table{border-collapse:collapse;width:100%;min-width:680px}th,td{text-align:left;padding:10px;border-bottom:1px solid #dfe2e6}th{background:#f1f2f4;font-size:12px}.scroll{overflow:auto}.actions{display:flex;gap:7px;flex-wrap:wrap}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.directory-summary{background:#f2f4f7;border-radius:9px;padding:13px;margin:12px 0;font-weight:700}.role-badge,.state-badge{display:inline-block;border-radius:20px;padding:5px 9px;background:#eef0f3;font-size:12px;font-weight:700}.state-badge.assigned{background:#e2f3e8;color:#176438}#directorySearch{max-width:480px}@media(max-width:700px){.wrap{padding:0 10px}.card{padding:15px}h1{font-size:28px}}</style><link rel="stylesheet" href="bhl-navigation.css?v=1"></head><body><div id="bhl-global-nav"></div><main class="wrap"><div style="color:#cc0000;font-weight:bold;letter-spacing:.12em">BÉLIVEAU HOCKEY LEAGUE</div><h1>Administration de l’Espace DG</h1><p>Approuve les demandes et attribue une organisation à chaque directeur général.</p><div id="status" class="status">Vérification de la session…</div><section id="login" class="card hidden"><h2>Connexion administrateur</h2><form id="loginForm"><label class="field">Courriel<input name="email" type="email" required></label><label class="field">Mot de passe<input name="password" type="password" required></label><button class="btn">Se connecter</button></form></section><section id="app" class="hidden"><div class="row"><h2>Demandes d'accès</h2><button id="logout" class="btn secondary">Déconnexion</button></div><div class="card"><div class="row"><p>Demandes en attente de validation</p><button id="refreshRequests" class="btn secondary" type="button">Actualiser</button></div><div id="requests" class="scroll">Chargement…</div></div><div class="card"><div class="row"><h2>Répertoire des 16 organisations</h2><button type="button" id="reloadDirectory" class="btn secondary">Actualiser</button></div><p>Responsables, courriels, rôles et disponibilité des équipes.</p><div id="directorySummary" class="directory-summary"></div><label class="field">Rechercher<input id="directorySearch" type="search" placeholder="Équipe, nom, courriel, rôle…"></label><div id="dgs" class="scroll">Chargement…</div></div><div class="card"><h2>Leadership des organisations</h2><div id="leadership" class="scroll">Chargement…</div></div></section></main>
+.directory-summary{background:#f2f4f7;border-radius:9px;padding:13px;margin:12px 0;font-weight:700}.role-badge,.state-badge{display:inline-block;border-radius:20px;padding:5px 9px;background:#eef0f3;font-size:12px;font-weight:700}.state-badge.assigned{background:#e2f3e8;color:#176438}#directorySearch{max-width:480px}@media(max-width:700px){.wrap{padding:0 10px}.card{padding:15px}h1{font-size:28px}}</style><link rel="stylesheet" href="bhl-navigation.css?v=1"></head><body><div id="bhl-global-nav"></div><main class="wrap"><div style="color:#cc0000;font-weight:bold;letter-spacing:.12em">BÉLIVEAU HOCKEY LEAGUE</div><h1>Administration de l’Espace DG</h1><p>Approuve les demandes et attribue une organisation à chaque directeur général.</p><div id="status" class="status">Vérification de la session…</div><section id="login" class="card hidden"><h2>Connexion administrateur</h2><form id="loginForm"><label class="field">Courriel<input name="email" type="email" required></label><label class="field">Mot de passe<input name="password" type="password" required></label><button class="btn">Se connecter</button></form></section><section id="app" class="hidden"><div class="row"><h2>Demandes d'accès</h2><button id="logout" class="btn secondary">Déconnexion</button></div><div class="card"><div class="row"><p>Demandes en attente de validation</p><button id="refreshRequests" class="btn secondary" type="button">Actualiser</button></div><div id="requests" class="scroll">Chargement…</div></div><div class="card"><div class="row"><h2>Répertoire des 16 organisations</h2><button type="button" id="reloadDirectory" class="btn secondary">Actualiser</button></div><p>Responsables, courriels, rôles et disponibilité des équipes.</p><div id="directorySummary" class="directory-summary"></div><label class="field">Rechercher<input id="directorySearch" type="search" placeholder="Équipe, nom, courriel, rôle…"></label><div id="dgs" class="scroll">Chargement…</div><div id="directoryEditor" class="card hidden"><h3>Modifier un responsable</h3><p id="directoryEditorInfo" class="muted"></p><form id="directoryEditForm"><label class="field">Nom du responsable<input name="full_name" maxlength="120" required></label><label class="field">Organisation<select name="team_id" required style="width:100%;padding:11px;border:1px solid #ccd0d5;border-radius:8px"></select></label><div class="actions"><button class="btn" type="submit">Enregistrer</button><button id="cancelDirectoryEdit" class="btn secondary" type="button">Annuler</button></div></form><p class="muted">L'adresse courriel et le rôle ne sont pas modifiables ici pour protéger l'accès au compte.</p></div></div><div class="card"><h2>Leadership des organisations</h2><div id="leadership" class="scroll">Chargement…</div></div></section></main>
 <script type="module">import{createClient}from'https://esm.sh/@supabase/supabase-js@2';import{SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY}from'./bhl-supabase.js';const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function msg(t,c=''){$('#status').textContent=t;$('#status').className='status '+c}
 async function boot(){const{data:{session}}=await db.auth.getSession();if(!session){$('#login').classList.remove('hidden');$('#app').classList.add('hidden');msg('Connecte-toi avec ton compte administrateur.');return}const{data:p,error}=await db.from('bhl_profiles').select('role').eq('user_id',session.user.id).maybeSingle();if(error||p?.role!=='admin'){msg('Accès réservé à l’administrateur BHL.','error');await db.auth.signOut();$('#login').classList.remove('hidden');return}$('#login').classList.add('hidden');$('#app').classList.remove('hidden');msg('Session administrateur vérifiée.','ok');await refresh()}
 async function refresh(){await Promise.all([requests(),dgs(),leaders()])}
@@ -39,13 +39,13 @@ function norm(v){return String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/
 function drawDirectory(){
  const q=norm($('#directorySearch').value);
  const rows=directory.filter(x=>norm([x.team_name,x.full_name,x.email,x.role].join(' ')).includes(q));
- $('#dgs').innerHTML='<table><thead><tr><th>Organisation</th><th>Responsable</th><th>Courriel</th><th>Rôle</th><th>Statut</th></tr></thead><tbody>'+
- (rows.length?rows.map(x=>'<tr><td><strong>'+esc(x.team_name)+'</strong></td><td>'+esc(x.full_name||'—')+'</td><td>'+esc(x.email||'—')+'</td><td><span class="role-badge">'+esc(x.role==='admin'?'Administrateur':x.role==='dg'?'DG':x.role||'—')+'</span></td><td><span class="state-badge '+(x.assigned?'assigned':'')+'">'+(x.assigned?'Attribuée':'Disponible')+'</span></td></tr>').join(''):'<tr><td colspan="5">Aucun résultat.</td></tr>')+'</tbody></table>';
+ $('#dgs').innerHTML='<table><thead><tr><th>Organisation</th><th>Responsable</th><th>Courriel</th><th>Rôle</th><th>Statut</th><th>Gestion</th></tr></thead><tbody>'+
+ (rows.length?rows.map(x=>'<tr><td><strong>'+esc(x.team_name)+'</strong></td><td>'+esc(x.full_name||'—')+'</td><td>'+esc(x.email||'—')+'</td><td><span class="role-badge">'+esc(x.role==='admin'?'Administrateur':x.role==='dg'?'DG':x.role||'—')+'</span></td><td><span class="state-badge '+(x.assigned?'assigned':'')+'">'+(x.assigned?'Attribuée':'Disponible')+'</span></td><td>'+(x.user_id?'<button type="button" class="btn secondary" data-edit-user="'+esc(x.user_id)+'">Modifier</button>':'—')+'</td></tr>').join(''):'<tr><td colspan="6">Aucun résultat.</td></tr>')+'</tbody></table>';
 }
 async function dgs(){
  const [teamsResponse,profilesResponse]=await Promise.all([
   db.from('bhl_teams').select('team_id,team_name').order('team_name'),
-  db.from('bhl_profiles').select('email,full_name,team_id,role')
+  db.from('bhl_profiles').select('user_id,email,full_name,team_id,role')
  ]);
  if(teamsResponse.error){$('#dgs').textContent=teamsResponse.error.message;return}
  if(profilesResponse.error){$('#dgs').textContent=profilesResponse.error.message;return}
@@ -59,6 +59,39 @@ async function dgs(){
  $('#directorySummary').textContent=teams.length+' organisations · '+assigned+' attribuées · '+(teams.length-assigned)+' disponibles';
  drawDirectory();
 }
+let editingDirectoryUser=null;
+function openDirectoryEditor(id){
+ const row=directory.find(x=>x.user_id===id);
+ if(!row)return;
+ editingDirectoryUser=id;
+ const form=$('#directoryEditForm');
+ form.elements.full_name.value=row.full_name||'';
+ form.elements.team_id.innerHTML='<option value="">Choisir une organisation</option>'+[...new Map(directory.map(x=>[x.team_id,x.team_name])).entries()].map(([id,name])=>'<option value="'+esc(id)+'">'+esc(name)+'</option>').join('');
+ form.elements.team_id.value=row.team_id;
+ $('#directoryEditorInfo').textContent='Compte : '+row.email+' · '+(row.role==='admin'?'Administrateur':'DG');
+ $('#directoryEditor').classList.remove('hidden');
+ $('#directoryEditor').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+$('#cancelDirectoryEdit').onclick=()=>{$('#directoryEditor').classList.add('hidden');editingDirectoryUser=null};
+$('#directoryEditForm').onsubmit=async e=>{
+ e.preventDefault();
+ if(!editingDirectoryUser)return;
+ const form=e.currentTarget,full_name=form.elements.full_name.value.trim(),team_id=form.elements.team_id.value;
+ if(!full_name||!team_id){msg('Le nom et l’organisation sont obligatoires.','error');return}
+ const current=directory.find(x=>x.user_id===editingDirectoryUser);
+ if(current?.team_id!==team_id){
+  const {data:owners,error:checkError}=await db.from('bhl_profiles').select('user_id').eq('team_id',team_id).in('role',['admin','dg']);
+  if(checkError){msg(checkError.message,'error');return}
+  if((owners||[]).some(x=>x.user_id!==editingDirectoryUser)){msg('Cette organisation a déjà un responsable.','error');return}
+ }
+ if(!confirm('Enregistrer les modifications de ce responsable?'))return;
+ const btn=form.querySelector('[type=submit]');btn.disabled=true;
+ const {data,error}=await db.from('bhl_profiles').update({full_name,team_id}).eq('user_id',editingDirectoryUser).select('user_id');
+ btn.disabled=false;
+ if(error||!data?.length){msg('Modification non enregistrée : '+(error?.message||'aucun compte modifié'),'error');return}
+ $('#directoryEditor').classList.add('hidden');editingDirectoryUser=null;
+ msg('Informations du responsable mises à jour.','ok');await refresh();
+};
 $('#directorySearch').addEventListener('input',drawDirectory);
 $('#reloadDirectory').addEventListener('click',refresh);
 
