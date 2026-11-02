@@ -691,7 +691,7 @@ function open(id,name,source){
    if(img&&profile.headshot){img.src=profile.headshot;img.hidden=false}
    const link=dialog.querySelector('.bhl-nhl-link');if(link){link.href='https://www.nhl.com/player/'+nhlId;link.hidden=false}
   }).catch(()=>{});
-
+ }
 }
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-bhl-player-id]');
