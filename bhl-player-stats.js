@@ -36,10 +36,11 @@ async function nhlJson(url){
 
 const historicalWeights={G:3,A:2.5,SOG:.3,Hit:.1,Blk:.2,Tk:.1,FOW:.05,W:4,GA:-1,SV:.2,SHO:4};
 const historicalNumber=(obj,keys)=>{for(const key of keys){const n=obj?.[key];if(n!==null&&n!==undefined&&n!==''&&Number.isFinite(Number(n)))return Number(n)}return null};
-async function nhlSeasonReport(type,report,id,season){
+async function nhlSeasonReport(type,report,id,season,team){
  const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
  const data=await nhlJson(url),rows=data.data||[];
  if(!rows.length)throw Error('Rapport '+report+' absent');
+ if(team){const requested=String(team).toUpperCase();const selected=rows.find(x=>String(x.teamAbbrevs||x.teamAbbrev||x.team||'').toUpperCase()===requested);if(!selected)throw Error('Statistiques '+report+' indisponibles pour '+requested);return selected;}
  const total=rows.find(x=>/^(TOT|TOTAL|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()));
  if(total)return total;
  if(rows.length===1)return rows[0];
@@ -56,19 +57,19 @@ async function nhlSeasonReport(type,report,id,season){
  merged.gamesPlayed=rows.reduce((n,row)=>n+(Number(row.gamesPlayed)||0),0);
  return merged;
 }
-async function historicalFantasy(id,season,goalie,center){
+async function historicalFantasy(id,season,goalie,center,team){
  const stat=(obj,keys)=>historicalNumber(obj,keys);
  if(goalie){
-  const d=await nhlSeasonReport('goalie','summary',id,season);
+  const d=await nhlSeasonReport('goalie','summary',id,season,team);
   const v={W:stat(d,['wins']),GA:stat(d,['goalsAgainst']),SV:stat(d,['saves']),SHO:stat(d,['shutouts']),G:stat(d,['goals']),A:stat(d,['assists'])};
   return {v,fpts:Object.values(v).some(x=>x===null)?null:Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0)};
  }
  // Each report is optional independently: a missing faceoff report must not
  // erase goals, shots, hits and other successfully retrieved categories.
  const [summary,realtime,faceoffs]=await Promise.all([
-  nhlSeasonReport('skater','summary',id,season),
-  nhlSeasonReport('skater','realtime',id,season).catch(()=>null),
-  center?nhlSeasonReport('skater','faceoffwins',id,season).catch(()=>null):Promise.resolve(null)
+  nhlSeasonReport('skater','summary',id,season,team),
+  nhlSeasonReport('skater','realtime',id,season,team).catch(()=>null),
+  center?nhlSeasonReport('skater','faceoffwins',id,season,team).catch(()=>null):Promise.resolve(null)
  ]);
  const v={
   G:stat(summary,['goals']),
@@ -112,13 +113,15 @@ async function historicNhl(name,target){
    body.append(row);rows.push(row);
   }
   tableEl.append(body);wrap.append(tableEl);target.replaceChildren(wrap);
-  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. FP/G et FPTS sont recalculés selon le barème BHL. N/D indique une statistique absente ou un calcul non vérifiable.';target.append(note);
+  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. FP/G et FPTS sont recalculés par équipe selon le barème BHL (sans répéter les totaux de saison). N/D indique une statistique absente ou un calcul non vérifiable.';target.append(note);
   let cursor=0;
   async function worker(){
    while(cursor<seasons.length){
     const i=cursor++,row=rows[i],season=seasons[i],gp=Number(season.gamesPlayed);
     try{
-     const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center);
+     const teamCode=String(season.teamAbbrev||'').toUpperCase();
+     if(!teamCode){throw Error('Code équipe absent : calcul par équipe impossible')}
+     const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center,teamCode);
      if(!row.isConnected)continue;
      row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
