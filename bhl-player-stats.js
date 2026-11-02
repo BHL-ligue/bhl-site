@@ -138,7 +138,7 @@ async function historicNhl(name,target){
   const center=String(profile.position||profile.positionCode||'').toUpperCase()==='C';
   const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).sort((a,b)=>Number(b.season)-Number(a.season));
   if(!seasons.length){target.textContent='Aucune saison régulière LNH trouvée pour ce joueur.';return}
-  const columns=goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','TIRS','HITS','BLOCS','TK','MÀJ'];
+  const columns=goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A','PTS']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','PTS','TIRS','HITS','BLOCS','TK','MÀJ'];
   const keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
   const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
   const tableEl=document.createElement('table');tableEl.className='bhl-player-table';
@@ -150,6 +150,7 @@ async function historicNhl(name,target){
    const team=typeof x.teamName==='object'?(x.teamName.default||x.teamAbbrev):x.teamName||x.teamAbbrev||'—';
    const basic=goalie?[x.wins,x.goalsAgainst,x.saves,x.shutouts,x.goals,x.assists]:[x.goals,x.assists,x.shots??x.shotsOnGoal,x.hits,x.blockedShots,x.takeaways,x.faceoffsWon];
    const values=[season.slice(0,4)+'-'+season.slice(6),team,'…','…',x.gamesPlayed,...basic.map(value=>value??'…')];
+   values.splice(goalie?11:7,0,x.points??((x.goals!=null&&x.assists!=null)?Number(x.goals)+Number(x.assists):'…'));
    for(const value of values){const td=document.createElement('td');td.textContent=value??'—';row.append(td)}
    body.append(row);rows.push(row);
   }
@@ -167,7 +168,8 @@ async function historicNhl(name,target){
      if(!row.isConnected)continue;
      row.cells[2].textContent=fpts!==null&&gp>0?fmt(Math.round(fpts/gp*100)/100):'N/D';
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
-     keys.forEach((key,j)=>row.cells[5+j].textContent=v[key]===null?'N/D':fmt(v[key]));
+     keys.forEach((key,j)=>row.cells[5+j+(goalie?(j>=6?1:0):(j>=2?1:0))].textContent=v[key]===null?'N/D':fmt(v[key]));
+     if(v.G!==null&&v.A!==null)row.cells[goalie?11:7].textContent=fmt(v.G+v.A);
     }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail);if(!target.querySelector('.bhl-historical-error')){const error=document.createElement('p');error.className='bhl-historical-error';error.style.fontSize='12px';error.style.color='#9b1c1c';error.textContent='Diagnostic LNH : '+e.message;target.append(error)}}}
    }
   }
