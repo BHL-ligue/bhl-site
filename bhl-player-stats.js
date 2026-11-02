@@ -131,8 +131,15 @@ async function historicalFantasy(id,season,goalie,center,team){
 }
 const BHL_NHL_IDS={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
 function bhlResolvedNhlId(name){
- const key=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
- return Number(BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[key]||0);
+ const key=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .replace(/&(?:#39|apos);/gi,"'").replace(/[\u2018\u2019\u02bc\u0060]/g,"'")
+  .replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+ const known=BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[key];
+ if(known)return Number(known);
+ // Restrict aliases to exact given-name/surname combinations; never match Hughes by surname alone.
+ if(/^(?:ryan )?o reilly(?: ryan)?$/.test(key)||/^ryan o reilly(?: \d+)?$/.test(key))return 8475158;
+ if(/^k andre miller(?: \d+)?$/.test(key))return 8480817;
+ return 0;
 }
 async function historicNhl(name,target){
  target.textContent='Chargement de toutes les saisons LNH en carrière…';
@@ -298,6 +305,12 @@ function open(id,name,source){
  const mappedColor=selectedTeam&&typeof window.teamColor==='function'?window.teamColor(selectedTeam):'';
  const color=localColor||mappedColor||rootColor;
  if(/^#[0-9a-f]{3,8}$/i.test(color)||/^rgb\(/i.test(color))dialog.style.setProperty('--profile-accent',color);
+ const knownNhlId=bhlResolvedNhlId(name);
+ if(knownNhlId){
+  const official=dialog.querySelector('.bhl-nhl-link');
+  official.href='https://www.nhl.com/player/'+knownNhlId;
+  official.hidden=false;
+ }
  populatePlayerBio(dialog,id,name);
  if(logo?.getAttribute('src')){
   const image=identity.querySelector('img');image.src=logo.getAttribute('src');
