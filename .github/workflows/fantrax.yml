@@ -32,6 +32,8 @@ jobs:
         env:
           FANTRAX_COOKIE: ${{ secrets.FANTRAX_COOKIE }}
         run: python scripts/sync-fantrax.py
+      - name: Vérifier les identités LNH
+        run: python scripts/resolve-nhl-identities.py
       - name: Conserver le dernier instantané
         run: |
           git config user.name "BHL Fantrax Sync"
@@ -49,7 +51,7 @@ jobs:
               git reset --hard origin/main
               cp /tmp/bhl-fantrax-latest.json data/fantrax.json
               cp /tmp/bhl-identities-latest.json data/player-identity-map.json
-              git add data/fantrax.json
+              git add data/fantrax.json data/player-identity-map.json
               if git diff --cached --quiet; then
                 break
               fi
