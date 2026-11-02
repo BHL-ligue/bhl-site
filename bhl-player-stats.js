@@ -71,16 +71,22 @@ const nhlTeamCodes={
  'atlanta thrashers':'ATL'
 };
 function nhlSeasonTeamCode(season){
- // The landing API often provides teamCommonName ("Bruins") alongside
- // teamName ("Boston Bruins"). Never prefer the short name over the full name.
- const candidates=[season.teamAbbrev,season.teamName?.default,season.teamName,
-  season.teamCommonName?.default,season.teamCommonName,season.teamPlaceName?.default];
+ // NHL landing team names can be localized (e.g. "Montréal Canadiens").
+ // Resolve explicit abbreviations first, then accent-insensitive full names.
+ const candidates=[season.teamAbbrev,season.teamAbbrev?.default,season.teamName?.default,
+  season.teamName?.fr,season.teamName,season.teamCommonName?.default,
+  season.teamCommonName?.fr,season.teamCommonName,season.teamPlaceName?.default,
+  season.teamPlaceName?.fr];
  for(const candidate of candidates){
   if(typeof candidate!=='string')continue;
   const value=candidate.trim(),upper=value.toUpperCase();
   if(/^[A-Z]{2,3}$/.test(upper))return upper;
-  const mapped=nhlTeamCodes[value.toLowerCase()];
+  const canonical=value.normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+   .toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  const mapped=nhlTeamCodes[value.toLowerCase()]||nhlTeamCodes[canonical];
   if(mapped)return mapped;
+  // Match the official Montreal franchise regardless of accent or locale.
+  if(canonical==='montreal canadiens'||canonical==='canadiens de montreal')return 'MTL';
  }
  return '';
 }
