@@ -36,11 +36,29 @@ async function nhlJson(url){
 
 const historicalWeights={G:3,A:2.5,SOG:.3,Hit:.1,Blk:.2,Tk:.1,FOW:.05,W:4,GA:-1,SV:.2,SHO:4};
 const historicalNumber=(obj,keys)=>{for(const key of keys){const n=obj?.[key];if(n!==null&&n!==undefined&&n!==''&&Number.isFinite(Number(n)))return Number(n)}return null};
+const nhlTeamCodes={
+ 'boston bruins':'BOS','colorado avalanche':'COL','columbus blue jackets':'CBJ','minnesota wild':'MIN',
+ 'san jose sharks':'SJS','new york rangers':'NYR','new york islanders':'NYI','new jersey devils':'NJD',
+ 'montreal canadiens':'MTL','toronto maple leafs':'TOR','ottawa senators':'OTT','buffalo sabres':'BUF',
+ 'detroit red wings':'DET','tampa bay lightning':'TBL','florida panthers':'FLA','carolina hurricanes':'CAR',
+ 'washington capitals':'WSH','pittsburgh penguins':'PIT','philadelphia flyers':'PHI','chicago blackhawks':'CHI',
+ 'st louis blues':'STL','st. louis blues':'STL','nashville predators':'NSH','dallas stars':'DAL',
+ 'winnipeg jets':'WPG','utah mammoth':'UTA','utah hockey club':'UTA','arizona coyotes':'ARI',
+ 'phoenix coyotes':'PHX','edmonton oilers':'EDM','calgary flames':'CGY','vancouver canucks':'VAN',
+ 'seattle kraken':'SEA','vegas golden knights':'VGK','los angeles kings':'LAK','anaheim ducks':'ANA',
+ 'atlanta thrashers':'ATL'
+};
+function nhlSeasonTeamCode(season){
+ const raw=season.teamAbbrev||season.teamCommonName?.default||season.teamName?.default||season.teamName||'';
+ const value=String(raw).trim(),upper=value.toUpperCase();
+ if(/^[A-Z]{2,3}$/.test(upper))return upper;
+ return nhlTeamCodes[value.toLowerCase()]||'';
+}
 async function nhlSeasonReport(type,report,id,season,team){
- const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=true&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
+ const url='https://api.nhle.com/stats/rest/en/'+type+'/'+report+'?isAggregate=false&isGame=false&cayenneExp='+encodeURIComponent('playerId='+id+' and seasonId='+season+' and gameTypeId=2')+'&limit=100';
  const data=await nhlJson(url),rows=data.data||[];
  if(!rows.length)throw Error('Rapport '+report+' absent');
- if(team){const requested=String(team).toUpperCase();const selected=rows.find(x=>String(x.teamAbbrevs||x.teamAbbrev||x.team||'').toUpperCase()===requested);if(!selected)throw Error('Statistiques '+report+' indisponibles pour '+requested);return selected;}
+ if(team){const requested=String(team).toUpperCase();const aliases={UTA:['UTA','ARI'],ARI:['ARI','PHX'],PHX:['PHX','ARI'],SJS:['SJS','SJ'],NJD:['NJD','NJ'],TBL:['TBL','TB'],LAK:['LAK','LA'],CBJ:['CBJ','CLB']};const accepted=aliases[requested]||[requested];const selected=rows.find(x=>accepted.includes(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim().toUpperCase()));if(!selected)throw Error('Statistiques '+report+' indisponibles pour '+requested);return selected;}
  const total=rows.find(x=>/^(TOT|TOTAL|ALL)$/i.test(String(x.teamAbbrevs||x.teamAbbrev||x.team||'').trim()));
  if(total)return total;
  if(rows.length===1)return rows[0];
@@ -119,7 +137,7 @@ async function historicNhl(name,target){
    while(cursor<seasons.length){
     const i=cursor++,row=rows[i],season=seasons[i],gp=Number(season.gamesPlayed);
     try{
-     const teamCode=String(season.teamAbbrev||'').toUpperCase();
+     const teamCode=nhlSeasonTeamCode(season);
      if(!teamCode){throw Error('Code équipe absent : calcul par équipe impossible')}
      const {v,fpts}=await historicalFantasy(id,String(season.season),goalie,center,teamCode);
      if(!row.isConnected)continue;
