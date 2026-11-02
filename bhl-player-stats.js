@@ -524,7 +524,9 @@ function bhlIdentityDirectory(){
 const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012,'060v8':8483678};
 const BHL_NHL_NAME_ALIASES={'alexcarrier':'Alexandre Carrier'};
 function bhlOfficialNhlId(id,name){
- return BHL_NHL_ID_BY_FANTRAX[String(id||'')]||bhlSpecificNhlId(id,name)||bhlResolvedNhlId(name);
+ // An explicit Fantrax ID must never inherit an unrelated same-name NHL ID.
+ if(id)return BHL_NHL_ID_BY_FANTRAX[String(id)]||0;
+ return 0;
 }
 function bhlOfficialNhlName(name){return BHL_NHL_NAME_ALIASES[norm(name)]||name}
 async function bhlResolveUniqueDirectoryId(name,source){
