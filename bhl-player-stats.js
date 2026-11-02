@@ -407,8 +407,11 @@ async function populatePlayerBio(dialog,id,name){
     const response=await fetch('data/fantrax.json',{cache:'no-store'});
     if(response.ok){
      const live=await response.json();
-     const rosterPlayer=(live.teams||[]).flatMap(team=>team.players||[])
-      .find(p=>(id&&String(p.id)===String(id))||norm(p.name)===norm(name));
+     const rosterPlayers=(live.teams||[]).flatMap(team=>team.players||[]);
+     const rosterPlayer=id
+      ?rosterPlayers.find(p=>String(p.id)===String(id))
+      :rosterPlayers.filter(p=>norm(p.name)===norm(name)).length===1
+       ?rosterPlayers.find(p=>norm(p.name)===norm(name)):null;
      if(rosterPlayer&&pos?.isConnected&&dialog.isConnected){
       const eligible=Array.isArray(rosterPlayer.eligiblePositions)&&rosterPlayer.eligiblePositions.length
        ?rosterPlayer.eligiblePositions.join(', '):rosterPlayer.position;
