@@ -21,7 +21,8 @@ async function bhlCurrentOfficialStats(player,id){
  const team=String(profile.currentTeamAbbrev||player.nhlTeam||'').toUpperCase();
  const season='20262027';
  const result=await historicalFantasy(nhlId,season,goalie,true,team);
- const gp=Number((profile.seasonTotals||[]).filter(x=>String(x.season)===season&&String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).reduce((n,x)=>n+Number(x.gamesPlayed||0),0));
+ const totals=(profile.seasonTotals||[]).filter(x=>String(x.season)===season&&String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2);
+ const gp=Math.max(0,...totals.map(x=>Number(x.gamesPlayed||0)));
  if(result.fpts===null||!gp)return null;
  return {stats:{...player.stats,...result.v,GP:gp,FPts:Math.round(result.fpts*100)/100,'FP/G':Math.round(result.fpts/gp*100)/100},nhlTeam:team,goalie};
 }
