@@ -166,7 +166,24 @@ def build_snapshot(now=None):
             if ", " in name:
                 last, first = name.split(", ", 1)
                 name = first + " " + last
-            players.append({"id": item["id"], "name": name, "position": item.get("position", ""), "status": item.get("status", "")})
+            # Roster slot and eligible positions are distinct Fantrax concepts.
+            # Publish only positions explicitly supplied by Fantrax; never infer them.
+            raw_eligible = (item.get("eligiblePositions") or item.get("positions") or
+                            player.get("eligiblePositions") or player.get("positions") or
+                            player.get("position") or [])
+            if isinstance(raw_eligible, str):
+                import re
+                eligible = re.findall(r"(?<![A-Z])(LW|RW|C|D|G)(?![A-Z])", raw_eligible.upper())
+            elif isinstance(raw_eligible, list):
+                eligible = [str(v).upper() for v in raw_eligible if isinstance(v, str) and str(v).upper() in ("C", "LW", "RW", "D", "G")]
+            else:
+                eligible = []
+            slot = item.get("position", "")
+            if slot in ("C", "LW", "RW", "D", "G") and slot not in eligible:
+                eligible.insert(0, slot)
+            players.append({"id": item["id"], "name": name, "position": slot,
+                            "eligiblePositions": list(dict.fromkeys(eligible)),
+                            "status": item.get("status", "")})
         teams.append({"id": team_id, "name": roster["teamName"], "players": players})
     # Whitelist published fields: never publish owner/contact/profile data.
     return {
