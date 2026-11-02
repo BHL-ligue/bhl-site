@@ -132,13 +132,17 @@ async function historicalFantasy(id,season,goalie,center,team){
 const BHL_NHL_IDS={'ryan nugent hopkins':8476454,'k andre miller':8480817,'jack hughes':8481559,'ryan o reilly':8475158};
 function bhlResolvedNhlId(name){
  const key=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-  .replace(/&(?:#39|apos);/gi,"'").replace(/[\u2018\u2019\u02bc\u0060]/g,"'")
-  .replace(/[^a-zA-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+  .replace(/&#(?:0*39|x0*27);|&apos;/gi,"'")
+  .replace(/[\u2018\u2019\u02bc\u0060]/g,"'")
+  .replace(/[^a-zA-Z0-9]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
  const known=BHL_NHL_IDS[key]||window.BHLNhlPlayerIds?.[key];
  if(known)return Number(known);
- // Restrict aliases to exact given-name/surname combinations; never match Hughes by surname alone.
- if(/^(?:ryan )?o reilly(?: ryan)?$/.test(key)||/^ryan o reilly(?: \d+)?$/.test(key))return 8475158;
- if(/^k andre miller(?: \d+)?$/.test(key))return 8480817;
+ // Fantrax can present last name first or omit the apostrophe.
+ const tokens=key.split(' ');
+ if(tokens.length>=3){
+  if(tokens.includes('miller')&&tokens.includes('andre')&&tokens.includes('k'))return 8480817;
+  if(tokens.includes('reilly')&&tokens.includes('ryan')&&tokens.includes('o'))return 8475158;
+ }
  return 0;
 }
 async function historicNhl(name,target){
