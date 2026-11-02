@@ -1,0 +1,16 @@
+
+.bhl-player-open{border:0;background:none;color:inherit;font:inherit;font-weight:inherit;text-align:inherit;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}.bhl-player-open:hover,.bhl-player-open:focus-visible{text-decoration-color:currentColor}
+.bhl-player-dialog{width:min(760px,calc(100vw - 24px));max-height:90vh;overflow:auto;border:0;border-radius:16px;padding:0;color:#1c293a;background:white;box-shadow:0 24px 80px #0006}.bhl-player-dialog::backdrop{background:#101b2bc9}
+.bhl-player-close{position:absolute;top:10px;right:12px;border:1px solid #ffffff70;background:#ffffff20;color:white;border-radius:50%;width:34px;height:34px;font-size:25px;cursor:pointer;z-index:2}
+.bhl-player-hero{display:flex;align-items:center;gap:20px;padding:24px;background:linear-gradient(120deg,#17273e,var(--team-color,#b00));color:white;min-height:145px}
+.bhl-player-hero p{font-size:10px;letter-spacing:.15em;color:#ffffffb3;margin:0 0 7px}.bhl-player-hero h3{font-size:27px;color:white;margin:0;line-height:1.2}
+.bhl-player-hero a{color:white;font-size:12px}.bhl-player-photo{width:100px;height:115px;flex-shrink:0}.bhl-player-photo img{width:100%;height:100%;object-fit:contain;object-position:bottom}
+.bhl-player-dialog [hidden]{display:none!important}.bhl-player-dialog:has(.bhl-player-photo img[hidden]) .bhl-player-photo{display:none}
+.bhl-player-stats{padding:20px;color:#202b3c;white-space:normal}.bhl-player-stats h4{font-size:15px;margin:22px 0 10px}.bhl-player-meta{font-size:13px;color:#657184}
+.bhl-player-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:15px}.bhl-player-totals>div{border:1px solid #dde3eb;border-top:3px solid var(--team-color,#c00);background:#f5f7fa;padding:12px;border-radius:8px}
+.bhl-player-totals span{display:block;color:#647184;font-size:11px}.bhl-player-totals strong{display:block;font-size:27px;color:#192b43;margin-top:4px}
+.bhl-player-scroll{overflow:auto;border:1px solid #dde3eb;border-radius:8px}.bhl-player-table{width:100%;min-width:510px;border-collapse:collapse}.bhl-player-table th,.bhl-player-table td{padding:12px 9px;text-align:center!important;border:0;border-right:1px solid #e1e6ee;white-space:nowrap}
+.bhl-player-table th{background:#eaf0f6;color:#526176;font-size:11px}.bhl-player-table td{font-size:17px;font-weight:bold;background:white;color:#202b3c}
+.bhl-player-source,.bhl-player-legend{font-size:12px;line-height:1.6;color:#647184;margin:14px 0 0}
+.bhl-portrait-details>.bhl-player-stats{padding:15px 0 0}
+@media(max-width:600px){.bhl-player-stats{padding:14px}.bhl-player-hero{padding:20px 45px 20px 16px;gap:12px}.bhl-player-hero h3{font-size:22px}.bhl-player-photo{width:75px;height:90px}.bhl-player-totals strong{font-size:23px}.bhl-player-totals>div{padding:10px}}
