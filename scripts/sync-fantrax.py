@@ -164,6 +164,26 @@ def build_snapshot(now=None):
         if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == today_montreal:
             scoring_period = following["number"]
     scores = fetch("getMatchupScores", period=scoring_period)
+    # Public API capability audit: only field names/counts, never raw private data.
+    # Optional requests must never interrupt the primary roster/schedule sync.
+    def describe_shape(value):
+        if isinstance(value, dict):
+            return {"type": "object", "fields": sorted(value.keys())[:60],
+                    "collectionSizes": {str(k): len(v) for k, v in value.items()
+                                        if isinstance(v, (dict, list))}}
+        if isinstance(value, list):
+            example = next((x for x in value if isinstance(x, dict)), {})
+            return {"type": "array", "count": len(value),
+                    "itemFields": sorted(example.keys())[:60]}
+        return {"type": type(value).__name__}
+    for audit_method in ("getDraftPicks", "getDraftResults"):
+        try:
+            print("PUBLIC API AUDIT", audit_method,
+                  json.dumps(describe_shape(fetch(audit_method)), ensure_ascii=False))
+        except Exception as error:
+            print("PUBLIC API AUDIT", audit_method, "unavailable:",
+                  type(error).__name__)
+
     print("Fantrax getStandings fields:", sorted(standings[0].keys()) if standings else [])
     if len(rosters.get("rosters", {})) != 16 or len(standings) != 16:
         raise ValueError("Expected 16 teams")
