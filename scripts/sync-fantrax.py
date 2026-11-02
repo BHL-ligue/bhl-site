@@ -164,32 +164,6 @@ def build_snapshot(now=None):
         if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == today_montreal:
             scoring_period = following["number"]
     scores = fetch("getMatchupScores", period=scoring_period)
-    # Public API capability audit: only field names/counts, never raw private data.
-    # Optional requests must never interrupt the primary roster/schedule sync.
-    def describe_shape(value):
-        if isinstance(value, dict):
-            return {"type": "object", "fields": sorted(value.keys())[:60],
-                    "collectionSizes": {str(k): len(v) for k, v in value.items()
-                                        if isinstance(v, (dict, list))}}
-        if isinstance(value, list):
-            example = next((x for x in value if isinstance(x, dict)), {})
-            return {"type": "array", "count": len(value),
-                    "itemFields": sorted(example.keys())[:60]}
-        return {"type": type(value).__name__}
-    for audit_method in ("getDraftPicks", "getDraftResults"):
-        try:
-            print("PUBLIC API AUDIT", audit_method,
-                  json.dumps(describe_shape(fetch(audit_method)), ensure_ascii=False))
-            audit_data = fetch(audit_method)
-            for field in ("futureDraftPicks", "draftPicks", "draftOrder"):
-                entries = audit_data.get(field, []) if isinstance(audit_data, dict) else []
-                first = next((entry for entry in entries if isinstance(entry, dict)), {})
-                if first:
-                    print("PUBLIC API ITEM FIELDS", audit_method, field, sorted(first.keys()))
-        except Exception as error:
-            print("PUBLIC API AUDIT", audit_method, "unavailable:",
-                  type(error).__name__)
-
     print("Fantrax getStandings fields:", sorted(standings[0].keys()) if standings else [])
     if len(rosters.get("rosters", {})) != 16 or len(standings) != 16:
         raise ValueError("Expected 16 teams")
@@ -323,31 +297,6 @@ def build_snapshot(now=None):
                             "eligiblePositions": list(dict.fromkeys(eligible)),
                             "status": item.get("status", "")})
         teams.append({"id": team_id, "name": roster["teamName"], "players": players})
-    # Inspect the public matchup category shape without logging private data.
-    for side in ("home", "away"):
-        example = next((m.get(side) for m in scores.get("matchups", [])
-                        if isinstance(m.get(side), dict)), {})
-        if example:
-            print("MATCHUP SIDE FIELDS", side, sorted(example.keys()))
-            for field, val in example.items():
-                if isinstance(val, (dict, list)):
-                    first = next((x for x in val if isinstance(x, dict)), {}) if isinstance(val, list) else val
-                    print("MATCHUP NESTED FIELDS", field, sorted(first.keys())[:35])
-            break
-    # Determine whether public draft history records contain actual selections.
-    try:
-        history_probe = fetch("getDraftResults")
-        picks_probe = history_probe.get("draftPicks", [])
-        if isinstance(picks_probe, list):
-            print("DRAFT RESULT ITEM TYPES", sorted(set(type(p).__name__ for p in picks_probe)))
-            sample = next((p for p in picks_probe if isinstance(p, dict)), None)
-            if sample:
-                print("DRAFT RESULT ITEM FIELDS", sorted(sample.keys()))
-            elif picks_probe:
-                print("DRAFT RESULT SAMPLE TYPE", type(picks_probe[0]).__name__)
-    except Exception as error:
-        print("DRAFT RESULT PROBE ERROR", type(error).__name__, str(error)[:120])
-
     # Public draft picks: publish only documented league-level fields.
     draft_data = {"futurePicks": [], "currentPicks": [], "results": [], "status": "unavailable"}
     allowed_pick = ("year", "round", "currentOwnerTeamId", "originalOwnerTeamId")
@@ -365,7 +314,16 @@ def build_snapshot(now=None):
     try:
         draft_results = fetch("getDraftResults")
         rows = draft_results.get("draftPicks", [])
+        print("DRAFT RESULT RESPONSE", {"draftState": str(draft_results.get("draftState", "")),
+              "pickCount": len(rows) if isinstance(rows, list) else "not-list",
+              "itemTypes": sorted({type(x).__name__ for x in rows}) if isinstance(rows, list) else []})
         if isinstance(rows, list):
+            sample = next((x for x in rows if isinstance(x, dict)), None)
+            if sample is not None:
+                print("DRAFT RESULT ITEM FIELDS", sorted(sample.keys()))
+                for key, val in sample.items():
+                    if isinstance(val, dict):
+                        print("DRAFT RESULT NESTED FIELDS", key, sorted(val.keys())[:30])
             # Do not assume every pick has a player; drafts can be incomplete.
             allowed_result = ("year", "round", "pick", "pickNumber", "overallPick", "playerId", "playerName", "teamId", "teamName", "originalOwnerTeamId", "currentOwnerTeamId")
             draft_data["results"] = [
