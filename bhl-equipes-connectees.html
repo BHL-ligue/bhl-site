@@ -845,7 +845,7 @@ async function bhlNhlPortrait(name){
   bhlNhlPortraitCache.set(key,request);
   return request;
 }
-function bhlNhlApplyPortraits(panel){
+function bhlNhlApplyPortraitsLegacy(panel){
   panel.querySelectorAll('[data-bhl-nhl-name]').forEach(async card=>{
     const name=card.getAttribute('data-bhl-nhl-name');
     if(!name)return;
