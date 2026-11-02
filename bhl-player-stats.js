@@ -49,10 +49,18 @@ const nhlTeamCodes={
  'atlanta thrashers':'ATL'
 };
 function nhlSeasonTeamCode(season){
- const raw=season.teamAbbrev||season.teamCommonName?.default||season.teamName?.default||season.teamName||'';
- const value=String(raw).trim(),upper=value.toUpperCase();
- if(/^[A-Z]{2,3}$/.test(upper))return upper;
- return nhlTeamCodes[value.toLowerCase()]||'';
+ // The landing API often provides teamCommonName ("Bruins") alongside
+ // teamName ("Boston Bruins"). Never prefer the short name over the full name.
+ const candidates=[season.teamAbbrev,season.teamName?.default,season.teamName,
+  season.teamCommonName?.default,season.teamCommonName,season.teamPlaceName?.default];
+ for(const candidate of candidates){
+  if(typeof candidate!=='string')continue;
+  const value=candidate.trim(),upper=value.toUpperCase();
+  if(/^[A-Z]{2,3}$/.test(upper))return upper;
+  const mapped=nhlTeamCodes[value.toLowerCase()];
+  if(mapped)return mapped;
+ }
+ return '';
 }
 const historicalReportCache=new Map();
 async function nhlSeasonReport(type,report,id,season,team){
