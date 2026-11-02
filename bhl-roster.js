@@ -80,7 +80,7 @@ async function bhlNhlPortrait(name){
     const variants=[name,name.replace(/[’‘\u2019]/g,"'"),name.replace(/['’‘-]/g,' '),bhlNhlPlayerName(name)];
     const unique=[...new Set(variants.map(v=>v.trim()).filter(Boolean))];
     let match=null;
-    for(const variant of unique){
+    for(const variant of (bhlKnownNhlIds[key]?[]:unique)){
       try{
         const url='https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(variant);
         const result=await bhlNhlJson(url);
