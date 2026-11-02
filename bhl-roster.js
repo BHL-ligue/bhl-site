@@ -91,11 +91,19 @@ async function bhlNhlPortrait(name){
     }
     const id=Number(bhlKnownNhlIds[key]||match?.playerId||match?.id);
     if(!Number.isInteger(id)||id<=0)return null;
-    const profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
+    // A portrait must never depend on the availability of the player landing API.
+    // For confirmed IDs, the NHL headshot endpoint is immediately usable.
+    const directHeadshot='https://assets.nhle.com/mugs/nhl/20252026/NHL/'+id+'.png';
+    let profile=null;
+    try{profile=await bhlNhlJson('https://api-web.nhle.com/v1/player/'+id+'/landing')}catch(e){
+      console.warn('NHL landing indisponible; utilisation des portraits directs pour '+name,e);
+    }
     const headshot=String(profile?.headshot||'');
     const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
-    const photo=/^https:\/\/(?:assets\.nhle\.com|media\.d3\.nhl\.com)\//.test(headshot)?headshot:null;
-    const fallbacks=['20262027','20252026','20242025'].flatMap(season=>team?['https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png','https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']:['https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']);
+    const photo=/^https:\/\//.test(headshot)?headshot:directHeadshot;
+    const fallbacks=['20262027','20252026','20242025','20232024'].flatMap(season=>
+      team?['https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png','https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']:
+      ['https://assets.nhle.com/mugs/nhl/'+season+'/NHL/'+id+'.png']);
     return {url:photo,alternates:fallbacks.filter(url=>url!==photo),profile:'https://www.nhl.com/player/'+id};
   })().catch(error=>{console.warn('Photo NHL non trouvée pour '+name,error);return null;});
   bhlNhlPortraitCache.set(key,request);
