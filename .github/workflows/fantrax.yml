@@ -29,6 +29,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Récupérer les données Fantrax
+        env:
+          FANTRAX_COOKIE: ${{ secrets.FANTRAX_COOKIE }}
         run: python scripts/sync-fantrax.py
       - name: Conserver le dernier instantané
         run: |
