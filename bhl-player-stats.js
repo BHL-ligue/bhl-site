@@ -124,7 +124,7 @@ async function historicalFantasy(id,season,goalie,center,team){
  return {v,fpts:complete?Object.entries(v).reduce((sum,[k,n])=>sum+n*historicalWeights[k],0):null};
 }
 async function historicNhl(name,target){
- target.textContent='Chargement des statistiques LNH depuis 2010-2011…';
+ target.textContent='Chargement des statistiques LNH depuis 2005-2006…';
  const normalized=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
  try{
   const result=await nhlJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=100&q='+encodeURIComponent(name));
@@ -136,8 +136,8 @@ async function historicNhl(name,target){
   if(!target.isConnected)return;
   const goalie=String(profile.position||profile.positionCode||'').toUpperCase()==='G';
   const center=String(profile.position||profile.positionCode||'').toUpperCase()==='C';
-  const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2&&Number(x.season)>=20102011).sort((a,b)=>Number(b.season)-Number(a.season));
-  if(!seasons.length){target.textContent='Aucune saison régulière LNH depuis 2010-2011.';return}
+  const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2&&Number(x.season)>=20052006).sort((a,b)=>Number(b.season)-Number(a.season));
+  if(!seasons.length){target.textContent='Aucune saison régulière LNH depuis 2005-2006.';return}
   const columns=goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','TIRS','HITS','BLOCS','TK','MÀJ'];
   const keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
   const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
@@ -154,7 +154,7 @@ async function historicNhl(name,target){
    body.append(row);rows.push(row);
   }
   tableEl.append(body);wrap.append(tableEl);target.replaceChildren(wrap);
-  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2010-2011. FP/G et FPTS sont recalculés par équipe selon le barème BHL (sans répéter les totaux de saison). N/D indique une statistique absente ou un calcul non vérifiable.';target.append(note);
+  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Source : LNH, saisons régulières depuis 2005-2006. FP/G et FPTS sont recalculés par équipe selon le barème BHL (sans répéter les totaux de saison). N/D indique une statistique absente ou un calcul non vérifiable.';target.append(note);
   let cursor=0;
   async function worker(){
    while(cursor<seasons.length){
