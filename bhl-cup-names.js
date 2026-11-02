@@ -1,7 +1,7 @@
 /* Noms sur la Coupe Béliveau — lecture en direct de BELIVEAUCUPNAMES */
 (()=>{
  const API='https://script.google.com/macros/s/AKfycbyhz6nFb1gR_JiNF6VLl_8q-nUjo7OkbB9hNqSzZVdc4n_hZhUKQ3aTu3YqGTJCrjARiQ/exec';
- const BANNERS={'2019':'BannerMIN2019.png','2021':'BannerNSH2021.png','2022':'BannerMTL2022.png','2023':'BannerHAR2023.png','2024':'BannerANA2024.png','2025':'BannerDET2025.png','2026':'BannerOTT2026.png'};
+ const BANNERS={'MIN:2019':'BannerMIN2019.png','NSH:2021':'BannerNSH2021.png','MAR:2022':'BannerMTL2022.png','HAR:2023':'BannerHAR2023.png','ANA:2024':'BannerANA2024.png','DET:2025':'BannerDET2025.png','OTT:2026':'BannerOTT2026.png'};
  const TEAMS=[
   ['ANA','ANAHEIM','anaheim-mightyducks.png','#532a44','#173c4b'],
   ['ATL','ATLANTA','atlanta-thrashers.png','#0078a5','#172c4b'],
@@ -94,8 +94,8 @@
   $('cup-blocks').innerHTML=groups.map(g=>{
    const t=teamInfo(g.team),year=seasonEndYear(g.season);
    // Banners use the same championship assets as the team overview.
-   const banner=BANNERS[year]||null;
-   const logo=t[2]?'<img class="cup-team-logo" src="logos/'+esc(t[2])+'" alt="" onerror="this.hidden=true">':'';
+   const banner=BANNERS[(t[0]||'')+':'+year]||null;
+   const logo=t[2]?'<img class="cup-team-logo" src="logos/'+esc(t[2])+'" alt="Logo de '+esc(g.team)+'" onerror="this.hidden=true">':'';
    const art=banner?'<img class="cup-banner" src="banners/'+esc(banner)+'" alt="Bannière des champions '+esc(g.season)+'" onerror="this.hidden=true">':'';
    const byCategory=new Map();
    for(const person of g.people){const category=cupCategory(person.role);if(!byCategory.has(category))byCategory.set(category,[]);byCategory.get(category).push(person)}
