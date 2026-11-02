@@ -330,6 +330,16 @@ def build_snapshot(now=None):
                 {key: row[key] for key in allowed_result if key in row and isinstance(row[key], (str, int, float))}
                 for row in rows if isinstance(row, dict)]
             draft_data["draftState"] = str(draft_results.get("draftState", ""))
+            # getLeagueInfo.playerInfo contains eligibility/status, not names.
+            # getTeamRosters names cover currently rostered players only.
+            # The public getPlayerIds endpoint may expose the broader player directory.
+            names_by_id = {p["id"]: p["name"] for t in teams for p in t["players"]}
+            print("DRAFT PLAYER NAME COVERAGE", sum(p.get("playerId") in names_by_id for p in draft_data["results"]),
+                  "of", len(draft_data["results"]))
+            for result in draft_data["results"]:
+                if result.get("playerId") in names_by_id:
+                    result["playerName"] = names_by_id[result["playerId"]]
+            draft_data["draftYear"] = info.get("seasonYear")
     except Exception as error:
         print("Draft results unavailable:", type(error).__name__)
 
