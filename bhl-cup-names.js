@@ -53,11 +53,11 @@
  }
  function cupCategory(role){
   const r=norm(role);
-  if(/\\b(DG|DIRECTEUR GENERAL|DIRECTRICE GENERALE|GENERAL MANAGER|GERANT)\\b/.test(r))return 0;
+  if(/\b(DG|DIRECTEUR GENERAL|DIRECTRICE GENERALE|GENERAL MANAGER|GERANT)\b/.test(r))return 0;
   if(/ESPOIR|PROSPECT|RELEVE|JUNIOR/.test(r))return 4;
-  if(/GARDIEN|GOALIE|GOALTENDER|\\b(G|GK)\\b/.test(r))return 3;
-  if(/DEFENSE|DEFENSEUR|DEFENC|\\b(D|LD|RD)\\b/.test(r))return 2;
-  if(/ATTAQU|AVANT|FORWARD|CENTRE|AILIER|\\b(C|LW|RW|F|AG|AD)\\b/.test(r))return 1;
+  if(/GARDIEN|GOALIE|GOALTENDER|\\b(G|GK)\b/.test(r))return 3;
+  if(/DEFENSE|DEFENSEUR|DEFENC|\\b(D|LD|RD)\b/.test(r))return 2;
+  if(/ATTAQU|AVANT|FORWARD|CENTRE|AILIER|\\b(C|LW|RW|F|AG|AD)\b/.test(r))return 1;
   return 5;
  }
  const CATEGORY_NAMES=['Direction générale','Attaquants','Défenseurs','Gardiens','Espoirs','Autres membres'];
@@ -102,8 +102,13 @@
   $('cup-count').textContent='Chargement des noms sur la Coupe Béliveau…';
   try{render(await jsonp());loaded=true}catch(e){$('cup-count').textContent='Impossible de charger BELIVEAUCUPNAMES : '+e.message}
  }
- document.addEventListener('DOMContentLoaded',()=>{
-  $('cup-tab')?.addEventListener('click',activate);
+ function initCupTabs(){
+  if(!$('cup-tab')||$('cup-tab').dataset.cupReady)return;
+  $('cup-tab').dataset.cupReady='1';
+  window.bhlOpenCupNames=activate;
+  $('cup-tab').addEventListener('click',activate);
   $('trophy-tab')?.addEventListener('click',()=>{$('cup-view').hidden=true;$('trophy-view').hidden=false;$('cup-tab').setAttribute('aria-selected','false');$('trophy-tab').setAttribute('aria-selected','true')});
- });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initCupTabs,{once:true});
+ else initCupTabs();
 })();
