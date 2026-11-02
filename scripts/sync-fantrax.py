@@ -53,6 +53,15 @@ def build_snapshot(now=None):
     info = fetch("getLeagueInfo", excludePlayerInfo="true")
     roster_period = period_at(info["rosterPeriods"], now)
     scoring_period = period_at(info["scoringPeriods"], now)
+    # Fantrax's period timestamps can switch at 19:00 Montreal time.
+    # For the BHL Monday-Sunday roster view, use the new week's roster
+    # as soon as Monday begins locally, if the next period starts that day.
+    from zoneinfo import ZoneInfo
+    local_today = now.astimezone(ZoneInfo("America/Toronto")).date()
+    if local_today.weekday() == 0:
+        following = next((p for p in info["rosterPeriods"] if p["number"] == roster_period + 1), None)
+        if following and dt.datetime.fromisoformat(following["startDate"]).astimezone(ZoneInfo("America/Toronto")).date() == local_today:
+            roster_period = following["number"]
     rosters = fetch("getTeamRosters", period=roster_period)
     standings = fetch("getStandings")
     scores = fetch("getMatchupScores", period=scoring_period)
