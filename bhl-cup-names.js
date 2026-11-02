@@ -80,6 +80,16 @@
   const groups=[...grouped.values()].sort((a,b)=>b.season.localeCompare(a.season)||a.team.localeCompare(b.team,'fr'));
   const count=groups.reduce((n,g)=>n+g.people.length,0);
   $('cup-count').textContent=groups.length+' équipes championnes · '+count+' noms gravés sur la coupe';
+  const totals=new Map();
+  for(const g of groups)for(const p of g.people){
+   const id=norm(p.player);
+   if(!totals.has(id))totals.set(id,{name:p.player,years:new Set(),teams:new Set(),roles:new Set()});
+   const item=totals.get(id);item.years.add(g.season);item.teams.add(g.team);item.roles.add(p.role);
+  }
+  const ranking=[...totals.values()].map(p=>({...p,total:p.years.size})).sort((a,b)=>b.total-a.total||a.name.localeCompare(b.name,'fr'));
+  const leaders=ranking.filter(p=>p.total>1);
+  $('cup-records').innerHTML='<div class="cup-records-heading"><div><span class="cup-eyebrow">LÉGENDES DE LA COUPE</span><h2>Les noms les plus gravés</h2><p>Classement cumulatif par nombre de saisons championnes, toutes équipes confondues.</p></div><div class="cup-record-total">'+ranking.length+' noms distincts</div></div>'+
+   (leaders.length?'<div class="cup-leader-grid">'+leaders.map((p,i)=>'<div class="cup-leader-card"><div class="cup-leader-rank">'+(i+1)+'</div><div class="cup-leader-main"><strong>'+esc(p.name)+'</strong><small>'+esc([...p.years].sort().reverse().join(' · '))+'</small></div><div class="cup-leader-count"><b>'+p.total+'</b><span>COUPES</span></div></div>').join('')+'</div>':'<p class="cup-record-empty">Aucun nom n’apparaît sur plusieurs saisons pour le moment.</p>');
   $('cup-blocks').innerHTML=groups.map(g=>{
    const t=teamInfo(g.team),year=seasonEndYear(g.season);
    // Banners use the same championship assets as the team overview.
@@ -90,7 +100,7 @@
    for(const person of g.people){const category=cupCategory(person.role);if(!byCategory.has(category))byCategory.set(category,[]);byCategory.get(category).push(person)}
    const people=[...byCategory.keys()].sort((a,b)=>a-b).map(category=>{
     const entries=byCategory.get(category).sort((a,b)=>a.player.localeCompare(b.player,'fr'));
-    return '<section class="cup-roster-section"><div class="cup-roster-title"><span>'+esc(CATEGORY_NAMES[category])+'</span><small>'+entries.length+'</small></div><div class="cup-name-grid">'+entries.map(p=>'<div class="cup-name-item"><span class="cup-name-mark"></span><strong>'+esc(p.player)+'</strong></div>').join('')+'</div></section>';
+    return '<section class="cup-roster-section"><div class="cup-roster-title"><span>'+esc(CATEGORY_NAMES[category])+'</span><small>'+entries.length+'</small></div><div class="cup-name-grid">'+entries.map(p=>'<div class="cup-name-item"><span class="cup-name-mark"></span><strong>'+esc(p.player)+'</strong>'+(totals.get(norm(p.player))?.years.size>1?'<span class="cup-name-tally" title="Nombre de saisons championnes">🏆 '+totals.get(norm(p.player)).years.size+'</span>':'')+'</div>').join('')+'</div></section>';
    }).join('');
    return '<article class="cup-block" style="--cup-primary:'+t[3]+';--cup-secondary:'+t[4]+'"><div class="cup-block-head">'+logo+'<div class="cup-team-title"><span>CHAMPIONS · '+esc(g.season)+'</span><h2>'+esc(g.team)+'</h2><small>'+g.people.length+' noms inscrits</small></div>'+art+'</div><div class="cup-roster">'+people+'</div></article>';
   }).join('')||'<p class="empty">Aucun nom trouvé dans BELIVEAUCUPNAMES.</p>';
