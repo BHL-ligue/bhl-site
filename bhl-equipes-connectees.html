@@ -318,6 +318,20 @@ select,input,.search{background:#fff!important;color:#191919!important;border-co
 @media(max-width:950px){.bhl-leadership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.bhl-history-entry{grid-template-columns:1fr;gap:7px;padding:14px}.bhl-history-timeline{padding-left:20px}.bhl-history-entry:before{left:-20px}.bhl-history-heading{align-items:flex-start;flex-wrap:wrap}.bhl-history-count{margin-top:5px}}
 @media(max-width:420px){.bhl-leadership-grid{gap:10px}.bhl-nhl-photo-wrap{height:155px!important;min-height:155px!important}.bhl-nhl-photo{max-height:150px!important}.bhl-leadership-info{padding:12px;min-height:148px}.bhl-leadership-name{font-size:16px}.bhl-leadership-role{font-size:10px}.bhl-leadership-letter{width:26px;height:26px}}
+</style><style>
+.bhl-player-click{display:inline-flex;align-items:center;gap:9px;border:0;background:transparent;padding:4px 2px;cursor:pointer;font:inherit;font-weight:750;color:inherit;text-align:left}
+.bhl-player-click:hover{color:var(--team-color,#cc0000)}
+.bhl-player-thumb{width:38px;height:38px;object-fit:contain;border-radius:8px;background:#edf1f6;flex:none}
+.bhl-player-thumb[hidden]{display:none!important}
+.bhl-portrait-overlay{position:fixed;inset:0;z-index:100010;background:rgba(12,21,36,.73);display:flex;align-items:center;justify-content:center;padding:16px}
+.bhl-portrait-dialog{position:relative;width:min(430px,100%);max-height:90vh;overflow:auto;border-radius:18px;background:#fff;box-shadow:0 20px 80px #0005}
+.bhl-portrait-close{position:absolute;right:12px;top:10px;z-index:2;border:0;background:#fff;border-radius:9px;font-size:29px;cursor:pointer;padding:0 9px}
+.bhl-portrait-hero{text-align:center;background:linear-gradient(135deg,#f4f6f9,#dfe6ee);padding:22px 24px 25px}
+.bhl-portrait-large{height:230px;max-width:100%;object-fit:contain;display:block;margin:auto}
+.bhl-portrait-large[hidden]{display:none!important}
+.bhl-portrait-hero h3{font-size:25px;margin:10px 0}
+.bhl-portrait-profile{color:#ad1728;font-weight:750;font-size:13px}
+.bhl-portrait-details{padding:16px 24px 22px;color:#536174;font-size:13px}
 </style></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#"><img class="league-logo" src="logos/BHLlogo.png" alt="Logo officiel de la BHL"><span>BHL <span style="color:#8292a9">/ ÉQUIPES</span></span></a><nav class="navlinks"><a href="index.html">Actualités</a><a href="bhl-accueil-forbes-connecte.html">FORBES</a><a href="#fiche">Équipes</a><a href="bhl-trophees.html">Trophées</a><a href="bhl-matchs-joues.html">Matchs joués</a><a href="bhl-records.html">Records</a><a href="bhl-transactions.html">Transactions</a></nav></div></header>
 <main class="wrap"><section class="hero"><div><div class="kicker">La ligue · Les organisations</div><h1>Les fiches <span style="color:var(--red)">d’équipe.</span></h1><p>L’historique et les statistiques</p></div><div class="selectbox"><label id="teamDropdownLabel">Choisir une équipe</label><div class="team-dropdown" id="teamDropdown"><button type="button" id="teamDropdownButton" class="team-dropdown-button" aria-labelledby="teamDropdownLabel teamDropdownText" aria-expanded="false" aria-controls="teamDropdownMenu"><span id="teamDropdownText">Chargement des équipes…</span><span aria-hidden="true">▾</span></button><div id="teamDropdownMenu" class="team-dropdown-menu" role="listbox" aria-label="Choisir une équipe" hidden></div></div><select id="teamSelect" class="team-native-select" tabindex="-1" aria-hidden="true"><option>Loading teams…</option></select></div></section>
@@ -365,6 +379,63 @@ function loadProtections(sheet){
  locksPending[code]=locksJsonp(code).then(d=>{if(!d?.ok||!Array.isArray(d.data?.rows))throw Error(d?.error||'Réponse LOCKS invalide');return locksCache[code]=parseProtections(d.data.rows)}).finally(()=>delete locksPending[code]);return locksPending[code];
 }
 function historicalIdentity(t,season){const h=t.seasons.find(x=>normalizeTeam(x.season)===normalizeTeam(season));return h?.team||t.name}
+
+const bhlPortraitCache=new Map();
+function bhlPortraitNorm(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim()}
+async function bhlPortraitJson(url){
+ for(const proxy of ['https://proxy.cors.dev/','https://corsproxy.io/?']){
+  try{const response=await fetch(proxy.includes('corsproxy.io')?proxy+encodeURIComponent(url):proxy+url,{signal:AbortSignal.timeout(11000)});if(response.ok)return response.json()}catch(e){}
+ }
+ throw Error('Service NHL indisponible');
+}
+function bhlPortrait(name){
+ const key=bhlPortraitNorm(name);if(!key)return Promise.resolve(null);
+ if(bhlPortraitCache.has(key))return bhlPortraitCache.get(key);
+ const promise=(async()=>{
+  const results=await bhlPortraitJson('https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=50&q='+encodeURIComponent(name));
+  const list=Array.isArray(results)?results:(results?.data||[]);
+  const match=list.find(p=>{const n=p.name||p.fullName||p.playerName;return bhlPortraitNorm(n)===key||bhlPortraitNorm(String(n).split(',').reverse().join(' '))===key});
+  const id=Number(match?.playerId||match?.id);if(!Number.isInteger(id)||id<=0)return null;
+  const profile=await bhlPortraitJson('https://api-web.nhle.com/v1/player/'+id+'/landing');
+  const team=String(profile?.currentTeamAbbrev||'').replace(/[^A-Z]/g,'');
+  const urls=[profile?.headshot,...(team?['20262027','20252026','20242025'].map(season=>'https://assets.nhle.com/mugs/nhl/'+season+'/'+team+'/'+id+'.png'):[])].filter(x=>typeof x==='string'&&x.startsWith('https://'));
+  return {urls,profile:'https://www.nhl.com/player/'+id};
+ })().catch(()=>null);
+ bhlPortraitCache.set(key,promise);return promise;
+}
+function bhlPortraitImg(img,name){
+ bhlPortrait(name).then(data=>{
+  if(!data||!img.isConnected)return;
+  let index=0;
+  img.onload=()=>{img.hidden=false};
+  img.onerror=()=>{index++;if(index<data.urls.length)img.src=data.urls[index];else img.hidden=true};
+  if(data.urls.length)img.src=data.urls[0];
+ });
+}
+function bhlPortraitModal(name,details=''){
+ const old=document.querySelector('.bhl-portrait-overlay');if(old)old.remove();
+ const overlay=document.createElement('div');overlay.className='bhl-portrait-overlay';
+ overlay.innerHTML='<div class="bhl-portrait-dialog" role="dialog" aria-modal="true" tabindex="-1"><button type="button" class="bhl-portrait-close" aria-label="Fermer">×</button><div class="bhl-portrait-hero"><img class="bhl-portrait-large" hidden alt=""><h3></h3><a class="bhl-portrait-profile" hidden target="_blank" rel="noopener noreferrer">Fiche officielle NHL.com ↗</a></div><div class="bhl-portrait-details"></div></div>';
+ overlay.querySelector('h3').textContent=name;
+ overlay.querySelector('.bhl-portrait-details').textContent=details;
+ document.body.appendChild(overlay);
+ const close=()=>{overlay.remove();document.removeEventListener('keydown',key)};
+ const key=e=>{if(e.key==='Escape')close()};
+ overlay.addEventListener('click',e=>{if(e.target===overlay||e.target.closest('.bhl-portrait-close'))close()});
+ document.addEventListener('keydown',key);
+ overlay.querySelector('.bhl-portrait-dialog').focus();
+ bhlPortrait(name).then(data=>{if(!data||!overlay.isConnected)return;
+  const img=overlay.querySelector('.bhl-portrait-large');let i=0;
+  img.onload=()=>{img.hidden=false};img.onerror=()=>{i++;if(i<data.urls.length)img.src=data.urls[i];else img.hidden=true};
+  if(data.urls.length)img.src=data.urls[0];
+  const link=overlay.querySelector('.bhl-portrait-profile');link.href=data.profile;link.hidden=false;
+ });
+}
+function bhlPortraitFill(root){
+ if(!root)return;
+ root.querySelectorAll('img[data-bhl-portrait]').forEach(img=>bhlPortraitImg(img,img.dataset.bhlPortrait));
+}
+
 function renderProtections(){
  const t=teamData[selected];if(!t)return;
  $('#panel').innerHTML='<div class="card">Chargement des protections depuis BHL LOCKS…</div>';
@@ -383,15 +454,17 @@ function renderProtections(){
    content+='<div class="card locks-identity">'+teamLogo(historic)+'<b>'+esc(historic)+'</b> · '+esc(entry.season)+'</div>';
    for(const pos of ['Attaquants','Défenseurs','Gardiens','Espoirs','Autres']){
     const players=entry.players.filter(x=>x.position===pos);if(!players.length)continue;
-    content+='<div class="card locks-group"><h3>'+esc(pos)+' <span class="pill">'+players.length+'</span></h3><div class="locks-players">'+players.map(x=>'<div>'+esc(x.name)+'</div>').join('')+'</div></div>';
+    content+='<div class="card locks-group"><h3>'+esc(pos)+' <span class="pill">'+players.length+'</span></h3><div class="locks-players">'+players.map(x=>'<div><button type="button" class="bhl-player-click" data-bhl-player="'+esc(x.name)+'"><img class="bhl-player-thumb" hidden data-bhl-portrait="'+esc(x.name)+'" alt="">'+esc(x.name)+'</button></div>').join('')+'</div></div>';
    }
   }else{
    const totals=new Map();for(const entry of seasons)for(const player of entry.players){let item=totals.get(player.key);if(!item){item={name:player.name,seasons:new Set()};totals.set(player.key,item)}item.seasons.add(entry.season)}
    const ranks=[...totals.values()].sort((a,b)=>b.seasons.size-a.seasons.size||a.name.localeCompare(b.name,'fr'));
    content+='<div class="tablewrap"><table class="locks-table"><thead><tr><th>Rang</th><th>Joueur</th><th>Protections</th><th>Saisons</th></tr></thead><tbody>';
-   let lastCount=-1,lastRank=0;ranks.forEach((x,i)=>{if(x.seasons.size!==lastCount){lastRank=i+1;lastCount=x.seasons.size}content+='<tr><td><b>#'+lastRank+'</b></td><td>'+esc(x.name)+'</td><td><b>'+x.seasons.size+'</b></td><td>'+esc([...x.seasons].sort().join(', '))+'</td></tr>'});content+='</tbody></table></div>';
+   let lastCount=-1,lastRank=0;ranks.forEach((x,i)=>{if(x.seasons.size!==lastCount){lastRank=i+1;lastCount=x.seasons.size}content+='<tr><td><b>#'+lastRank+'</b></td><td><button type="button" class="bhl-player-click" data-bhl-player="'+esc(x.name)+'"><img class="bhl-player-thumb" hidden data-bhl-portrait="'+esc(x.name)+'" alt="">'+esc(x.name)+'</button></td><td><b>'+x.seasons.size+'</b></td><td>'+esc([...x.seasons].sort().join(', '))+'</td></tr>'});content+='</tbody></table></div>';
   }
   $('#panel').innerHTML=content;
+  bhlPortraitFill($('#panel'));
+  $('#panel').querySelectorAll('[data-bhl-player]').forEach(btn=>btn.addEventListener('click',()=>bhlPortraitModal(btn.dataset.bhlPlayer,'Joueur répertorié dans les protections BHL.')));
   document.querySelectorAll('[data-lock-mode]').forEach(b=>b.onclick=()=>{protectionsMode=b.dataset.lockMode;renderProtections()});
   const sel=$('#locksSeason');if(sel)sel.onchange=()=>{protectionsSeason=sel.value;renderProtections()};
  }).catch(err=>{if(selected===requested&&currentTab==='protections')$('#panel').innerHTML='<div class="card">Impossible de charger les protections : '+esc(err.message)+'</div>'});
