@@ -532,10 +532,11 @@ function bhlOfficialNhlId(id,name){
 function bhlOfficialNhlName(name){return BHL_NHL_NAME_ALIASES[norm(name)]||name}
 function bhlTimeString(value){
  if(value===null||value===undefined||value==='')return 'N/D';
- if(typeof value==='string'&&/^\\d+:\\d\\d$/.test(value))return value;
+ if(typeof value==='string'&&/^\d+:\d\d$/.test(value))return value;
  const seconds=Number(value);
  if(!Number.isFinite(seconds)||seconds<0)return 'N/D';
- return Math.floor(seconds/60)+':'+String(Math.round(seconds%60)).padStart(2,'0');
+ const whole=Math.round(seconds);
+ return Math.floor(whole/60)+':'+String(whole%60).padStart(2,'0');
 }
 async function bhlCurrentNhlUsage(dialog,fantraxId){
  try{
