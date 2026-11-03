@@ -505,6 +505,7 @@ async function bhlAdvancedPlayer(name,target,fantraxId){
     '<div class="bhl-advanced-track"><div style="width:'+bar+'%"></div></div></div>';
   }).join('');
   target.innerHTML='<div class="bhl-advanced-intro"><h4>Production par 60 minutes · 2026-2027</h4><p>Comparaison avec '+esc(directory.population)+' patineurs LNH ayant disputé au moins 1 match cette saison. Un percentile élevé indique une meilleure production /60.</p></div>'+
+   (directory.fpts60Provisional?'<p class="bhl-player-source" style="color:#9b1c1c"><strong>FPTS/60 provisoires :</strong> certaines mises au jeu gagnées sont absentes de la source LNH et comptées à zéro. Les percentiles FPTS/60 peuvent donc changer après correction des données.</p>':'')+
    '<div class="bhl-advanced-grid">'+html+'</div>'+
    '<p class="bhl-player-source">Temps de glace réel utilisé comme dénominateur · Statistiques officielles LNH · Percentiles calculés sur les joueurs disposant de chaque statistique. Les valeurs indisponibles ne sont pas remplacées par zéro.</p>';
  }catch(error){
