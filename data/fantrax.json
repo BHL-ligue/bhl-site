@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T02:31:28.096881+00:00",
+  "updatedAt": "2026-11-03T02:32:29.940492+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -11999,7 +11999,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 5.7,
+            "score": 6.0,
             "gamesPlayed": 4
           }
         },
@@ -12007,7 +12007,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 16.5,
+            "score": 16.2,
             "gamesPlayed": 8
           },
           "home": {
@@ -12035,7 +12035,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 3.6,
+            "score": 3.65,
             "gamesPlayed": 7
           },
           "home": {
@@ -12097,7 +12097,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 5.7,
+            "score": 6.0,
             "gamesPlayed": 4
           }
         },
@@ -12133,7 +12133,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 16.5,
+            "score": 16.2,
             "gamesPlayed": 8
           },
           "home": {
@@ -12161,7 +12161,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 3.6,
+            "score": 3.65,
             "gamesPlayed": 7
           },
           "home": {
@@ -12217,7 +12217,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 5.7,
+            "score": 6.0,
             "gamesPlayed": 4
           },
           "home": {
@@ -12259,7 +12259,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 16.5,
+            "score": 16.2,
             "gamesPlayed": 8
           },
           "home": {
@@ -12287,7 +12287,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 3.6,
+            "score": 3.65,
             "gamesPlayed": 7
           },
           "home": {
@@ -18172,7 +18172,7 @@
       "totalPointsFor": 2702.55,
       "winPercentage": 0.933,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2153.35
+      "totalPointsAgainst": 2153.4
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18202,7 +18202,7 @@
       "totalPointsFor": 2575.35,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2263.85
+      "totalPointsAgainst": 2263.6
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18212,7 +18212,7 @@
       "totalPointsFor": 2436.9,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2282.35
+      "totalPointsAgainst": 2282.05
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18222,7 +18222,7 @@
       "totalPointsFor": 2406.45,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2200.65
+      "totalPointsAgainst": 2200.95
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18262,7 +18262,7 @@
       "totalPointsFor": 2248.35,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2142.2
+      "totalPointsAgainst": 2142.5
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18282,7 +18282,7 @@
       "totalPointsFor": 2037.9,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2325.75
+      "totalPointsAgainst": 2326.05
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18292,7 +18292,7 @@
       "totalPointsFor": 1748.25,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2260.8
+      "totalPointsAgainst": 2260.55
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18350,7 +18350,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 5.7,
+        "score": 6.0,
         "gamesPlayed": 4
       }
     },
@@ -18358,7 +18358,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 16.5,
+        "score": 16.2,
         "gamesPlayed": 8
       },
       "home": {
@@ -18386,7 +18386,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 3.6,
+        "score": 3.65,
         "gamesPlayed": 7
       },
       "home": {
@@ -18448,7 +18448,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 5.7,
+        "score": 6.0,
         "gamesPlayed": 4
       }
     },
@@ -18484,7 +18484,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 16.5,
+        "score": 16.2,
         "gamesPlayed": 8
       },
       "home": {
@@ -18512,7 +18512,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 3.6,
+        "score": 3.65,
         "gamesPlayed": 7
       },
       "home": {
@@ -18568,7 +18568,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 5.7,
+        "score": 6.0,
         "gamesPlayed": 4
       },
       "home": {
@@ -18610,7 +18610,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 16.5,
+        "score": 16.2,
         "gamesPlayed": 8
       },
       "home": {
@@ -18638,7 +18638,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 3.6,
+        "score": 3.65,
         "gamesPlayed": 7
       },
       "home": {
