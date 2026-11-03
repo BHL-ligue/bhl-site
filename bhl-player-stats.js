@@ -350,6 +350,7 @@ function tradeHistory(name,target){
   for(const t of trades){for(const m of t.moves||[]){if(m.position&&norm(m.asset)===key)events.push({t,m})}}
   events.sort((a,b)=>String(b.t.date||'').localeCompare(String(a.t.date||''))||Number(b.t.id)-Number(a.t.id));
   const unique=new Set(events.map(e=>String(e.t.id)));
+  const displayed=new Set();
   target.replaceChildren();
   const container=el('div','bhl-trade-history');
   const heading=el('div','bhl-trade-summary');
@@ -359,6 +360,8 @@ function tradeHistory(name,target){
   if(!events.length){container.append(el('p','bhl-trade-empty','Aucun échange enregistré pour ce joueur.'));target.append(container);return}
   const list=el('div','bhl-trade-timeline');
   for(const {t,m} of events){
+   if(displayed.has(String(t.id)))continue;
+   displayed.add(String(t.id));
    const card=el('article','bhl-trade-entry');
    const head=el('div','bhl-trade-entry-head');
    const date=el('span','bhl-trade-date',t.dateText||t.date||'Date inconnue');
@@ -370,7 +373,27 @@ function tradeHistory(name,target){
    const arrow=el('span','bhl-trade-arrow','→');arrow.setAttribute('aria-label','vers');
    const to=el('div','bhl-trade-end');to.append(el('small','','VERS'),org(m.to));
    route.append(from,arrow,to);
-   card.append(head,route);list.append(card);
+   card.append(head,route);
+   const allMoves=t.moves||[];
+   if(allMoves.length){
+    const detail=el('div','bhl-trade-full');
+    detail.append(el('div','bhl-trade-full-title','TRANSACTION COMPLÈTE'));
+    const groups=new Map();
+    for(const move of allMoves){
+     const direction=(move.from||'Équipe inconnue')+' → '+(move.to||'Équipe inconnue');
+     if(!groups.has(direction))groups.set(direction,{from:move.from,to:move.to,assets:[]});
+     if(move.asset&&!groups.get(direction).assets.includes(move.asset))groups.get(direction).assets.push(move.asset);
+    }
+    for(const group of groups.values()){
+     const line=el('div','bhl-trade-full-group');
+     const teamLine=el('div','bhl-trade-full-teams');
+     teamLine.append(el('strong','',group.from||'Équipe inconnue'),el('span','',' → '),el('strong','',group.to||'Équipe inconnue'));
+     line.append(teamLine,el('div','bhl-trade-full-assets',group.assets.join(' · ')||'Détails non disponibles'));
+     detail.append(line);
+    }
+    card.append(detail);
+   }
+   list.append(card);
   }
   container.append(list);target.append(container);
  }).catch(()=>{if(target.isConnected)target.textContent='Transactions temporairement indisponibles.'});
