@@ -42,3 +42,5 @@
 #actualites .side.side-compact>h3{grid-column:2;grid-row:1;margin:0;line-height:1.35;font-size:18px;-webkit-line-clamp:4}
 @media(max-width:900px){#actualites .side.side-compact{padding:14px;gap:12px}#actualites .side.side-compact>h3{font-size:16px}}
 @media(max-width:800px){#actualites .side-stories{grid-template-columns:minmax(0,1fr)}#actualites .side.side-compact{grid-template-columns:minmax(100px,.65fr) minmax(0,1.35fr)}}
+
+.home-all-news{text-align:right;margin:16px 0 30px}.home-all-news a{display:inline-block;color:#cc0000;font-weight:800;font-size:14px;padding:10px 0}.home-all-news a:hover{text-decoration:underline}.home-all-news a:focus-visible{outline:2px solid #cc0000;outline-offset:4px}

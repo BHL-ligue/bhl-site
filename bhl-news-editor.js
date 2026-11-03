@@ -1,4 +1,4 @@
-import {cleanHTML,richFragment,ARTICLE_COLORS} from './bhl-news-format.js?v=cover1';
+import {cleanHTML,richFragment,ARTICLE_COLORS} from './bhl-news-format.js?v=spaces1';
 export async function attachEditor(textarea,onChange){
  const fallback={set(body,format='plain'){if(format==='html'){const holder=document.createElement('div');holder.append(richFragment(body));textarea.value=[...holder.children].map(el=>el.textContent).join('\n\n');}else textarea.value=body||'';},value(){return {body:textarea.value.trim(),body_format:'plain'};},enable(v){textarea.disabled=!v;},valid(){return textarea.reportValidity();}};
  let Quill;try{({default:Quill}=await import('https://esm.sh/quill@2.0.3'));}catch{const note=document.createElement('p');note.className='muted';note.textContent='La barre d’édition ne s’est pas chargée. Actualise la page pour conserver toute la mise en forme. Si tu enregistres maintenant, le contenu sera enregistré en texte simple.';textarea.after(note);return fallback;}

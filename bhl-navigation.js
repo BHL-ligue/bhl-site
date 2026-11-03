@@ -16,6 +16,7 @@ function mount(){
  const root=document.getElementById('bhl-global-nav');if(!root)return;
  const links=[
   ['index.html','Accueil'],
+  ['bhl-nouvelles.html','Nouvelles'],
   ['bhl-accueil-forbes-connecte.html','FORBES'],
   ['bhl-equipes-connectees.html','Équipes'],
   ['bhl-trophees.html','Trophées'],

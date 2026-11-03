@@ -1,4 +1,4 @@
-import {renderBody} from './bhl-news-format.js?v=cover1';
+import {renderBody} from './bhl-news-format.js?v=spaces1';
 import {createClient} from 'https://esm.sh/@supabase/supabase-js@2.57.4';
 import {SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY} from './bhl-supabase.js';
 export const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
