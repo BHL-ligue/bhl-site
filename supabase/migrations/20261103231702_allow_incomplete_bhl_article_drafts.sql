@@ -1,0 +1,2 @@
+alter table public.bhl_news drop constraint bhl_news_body_check, drop constraint bhl_news_summary_check;
+alter table public.bhl_news add constraint bhl_news_body_check check (char_length(trim(body)) <= 20000 and (status = 'draft' or char_length(trim(body)) >= 1)), add constraint bhl_news_summary_check check (char_length(trim(summary)) <= 350 and (status = 'draft' or char_length(trim(summary)) >= 1));
