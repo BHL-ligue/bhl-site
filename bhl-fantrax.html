@@ -71,7 +71,7 @@
   'quebec nordiques':['#1755a1','#122b59','#e34148','quebec-nordiques.png'],
   'toronto maple leafs':['#1b4883','#10284d','#9fc8e8','toronto-mapleleafs.png']
  };
- const normalizeTeam=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+ const normalizeTeam=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const number=n=>Number(n).toLocaleString('fr-CA',{maximumFractionDigits:2});
  let periods=[];
  function render(){
@@ -82,7 +82,7 @@
   body.innerHTML=period.players.map(p=>{
    const theme=teamStyles[normalizeTeam(p.team)]||['#263b57','#18263c','#cc0000',null];
    const portrait='https://assets.nhle.com/mugs/nhl/20262027/'+encodeURIComponent(p.nhlId)+'.png';
-   const initials=String(p.name||'').split(/\\s+/).map(x=>x[0]||'').slice(0,2).join('').toUpperCase();
+   const initials=String(p.name||'').split(/\s+/).map(x=>x[0]||'').slice(0,2).join('').toUpperCase();
    const logo=theme[3]?'<img class="bhl-star-team-logo" loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
    return '<article class="bhl-star-card" style="--star-primary:'+theme[0]+';--star-secondary:'+theme[1]+';--star-accent:'+theme[2]+'"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
     '<div class="bhl-star-photo-wrap"><span class="bhl-star-photo-fallback">'+esc(initials)+'</span><img class="bhl-star-portrait" loading="lazy" alt="Photo de '+esc(p.name)+'" data-star-photo="'+esc(p.id)+'" data-star-nhl="'+esc(p.nhlId)+'" src="'+portrait+'"></div>'+
@@ -109,7 +109,7 @@
      img.hidden=false;img.src=profile.headshot;
     }).catch(()=>{});
    };
-  });;
+  });
  }
  body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
  selector.addEventListener('change',render);
