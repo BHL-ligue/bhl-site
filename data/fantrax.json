@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T02:40:41.687485+00:00",
+  "updatedAt": "2026-11-03T02:41:09.221437+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12013,7 +12013,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 14.5,
+            "score": 14.45,
             "gamesPlayed": 6
           }
         },
@@ -12027,7 +12027,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 8.7,
+            "score": 8.8,
             "gamesPlayed": 6
           }
         },
@@ -12041,7 +12041,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 6.1,
+            "score": 6.15,
             "gamesPlayed": 6
           }
         },
@@ -12111,7 +12111,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 14.5,
+            "score": 14.45,
             "gamesPlayed": 6
           }
         },
@@ -12125,7 +12125,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 8.7,
+            "score": 8.8,
             "gamesPlayed": 6
           }
         },
@@ -12139,7 +12139,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 6.1,
+            "score": 6.15,
             "gamesPlayed": 6
           }
         },
@@ -12209,7 +12209,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 14.5,
+            "score": 14.45,
             "gamesPlayed": 6
           }
         },
@@ -12223,7 +12223,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 8.7,
+            "score": 8.8,
             "gamesPlayed": 6
           }
         },
@@ -12237,7 +12237,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 6.1,
+            "score": 6.15,
             "gamesPlayed": 6
           }
         },
@@ -18192,7 +18192,7 @@
       "totalPointsFor": 2445.0,
       "winPercentage": 0.733,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2169.65
+      "totalPointsAgainst": 2169.75
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18222,7 +18222,7 @@
       "totalPointsFor": 2406.45,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2200.95
+      "totalPointsAgainst": 2201.05
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18282,7 +18282,7 @@
       "totalPointsFor": 2037.9,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2327.1
+      "totalPointsAgainst": 2327.05
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18312,7 +18312,7 @@
       "totalPointsFor": 1853.25,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2242.95
+      "totalPointsAgainst": 2243.05
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18322,7 +18322,7 @@
       "totalPointsFor": 1748.25,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2233.65
+      "totalPointsAgainst": 2233.7
     }
   ],
   "matchups": [
@@ -18364,7 +18364,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 14.5,
+        "score": 14.45,
         "gamesPlayed": 6
       }
     },
@@ -18378,7 +18378,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 8.7,
+        "score": 8.8,
         "gamesPlayed": 6
       }
     },
@@ -18392,7 +18392,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 6.1,
+        "score": 6.15,
         "gamesPlayed": 6
       }
     },
@@ -18462,7 +18462,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 14.5,
+        "score": 14.45,
         "gamesPlayed": 6
       }
     },
@@ -18476,7 +18476,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 8.7,
+        "score": 8.8,
         "gamesPlayed": 6
       }
     },
@@ -18490,7 +18490,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 6.1,
+        "score": 6.15,
         "gamesPlayed": 6
       }
     },
@@ -18560,7 +18560,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 14.5,
+        "score": 14.45,
         "gamesPlayed": 6
       }
     },
@@ -18574,7 +18574,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 8.7,
+        "score": 8.8,
         "gamesPlayed": 6
       }
     },
@@ -18588,7 +18588,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 6.1,
+        "score": 6.15,
         "gamesPlayed": 6
       }
     },
