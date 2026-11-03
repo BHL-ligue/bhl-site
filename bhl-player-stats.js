@@ -478,17 +478,50 @@ async function playerHonours(name,target){
  }catch(error){if(target.isConnected)target.textContent='Honneurs temporairement indisponibles : '+error.message}
 }
 
+let bhlAdvancedRequest;
+function bhlAdvancedDirectory(){
+ return bhlAdvancedRequest||(bhlAdvancedRequest=fetch('data/nhl-advanced-stats.json',{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw Error('Statistiques avancées non publiées');return r.json()})
+  .catch(error=>{bhlAdvancedRequest=null;throw error}));
+}
+async function bhlAdvancedPlayer(name,target,fantraxId){
+ target.innerHTML='<p>Chargement des statistiques avancées LNH…</p>';
+ try{
+  const [resolved,directory]=await Promise.all([bhlPlayerForOfficial(fantraxId,name),bhlAdvancedDirectory()]);
+  if(!target.isConnected)return;
+  if(!resolved){target.textContent='Identité LNH indisponible.';return}
+  const id=await bhlLookupOfficialId(resolved.player,resolved.id);
+  const player=directory.players?.[String(id)];
+  if(!target.isConnected)return;
+  if(!player){target.textContent='Aucune statistique /60 disponible pour ce joueur cette saison (minimum 1 match LNH et temps de jeu connu).';return}
+  const labels=directory.metrics||{FPTS60:'FPTS/60',PTS60:'PTS/60',G60:'B/60',A60:'A/60',SOG60:'TIRS/60',HIT60:'HITS/60',BLK60:'BLOCS/60',TK60:'TK/60'};
+  const metrics=Object.entries(labels);
+  const html=metrics.map(([key,label])=>{
+   const rate=player.rates?.[key],pct=player.percentiles?.[key];
+   const value=rate==null?'N/D':Number(rate).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+   const percentile=pct==null?'N/D':Math.round(pct)+'e';
+   const bar=pct==null?0:Math.max(0,Math.min(100,Number(pct)));
+   return '<div class="bhl-advanced-stat"><div class="bhl-advanced-stat-head"><strong>'+esc(label)+'</strong><b>'+esc(value)+'</b><span>'+esc(percentile)+' percentile</span></div>'+
+    '<div class="bhl-advanced-track"><div style="width:'+bar+'%"></div></div></div>';
+  }).join('');
+  target.innerHTML='<div class="bhl-advanced-intro"><h4>Production par 60 minutes · 2026-2027</h4><p>Comparaison avec '+esc(directory.population)+' patineurs LNH ayant disputé au moins 1 match cette saison. Un percentile élevé indique une meilleure production /60.</p></div>'+
+   '<div class="bhl-advanced-grid">'+html+'</div>'+
+   '<p class="bhl-player-source">Temps de glace réel utilisé comme dénominateur · Statistiques officielles LNH · Percentiles calculés sur les joueurs disposant de chaque statistique. Les valeurs indisponibles ne sont pas remplacées par zéro.</p>';
+ }catch(error){
+  if(target.isConnected)target.textContent='Statistiques avancées temporairement indisponibles. La première synchronisation doit être exécutée sur GitHub.';
+ }
+}
 function addSections(dialog,name,fantraxId){
  const stats=dialog.querySelector('.bhl-player-stats');if(!stats)return;
  const tabs=document.createElement('div');tabs.className='bhl-unified-tabs';
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
  stats.before(tabs);stats.after(panel);
- const items=[['stats','Statistiques'],['nhl','Historique LNH'],['trades','Transactions BHL'],['honours','Honneurs']];
+ const items=[['stats','Statistiques'],['advanced','Stats avancées'],['nhl','Historique LNH'],['trades','Transactions BHL'],['honours','Honneurs']];
  let active='stats'; const rendered=new Map();
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
