@@ -149,7 +149,7 @@
  body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
  selector.addEventListener('change',render);
  fetch('data/bhl-weekly-stars.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('not published');return r.json()}).then(data=>{
-  periods=(data.periods||[]).sort((a,b)=>b.period-a.period);
+  periods=(data.periods||[]).filter(p=>p.complete===true&&Array.isArray(p.players)&&p.players.length>0).sort((a,b)=>b.period-a.period);
   selector.replaceChildren(...periods.map(p=>new Option('Période '+p.period+' · '+p.start+' au '+p.end+(p.complete?'':' (en cours)'),String(p.period))));
   render();
  }).catch(()=>{body.className='bhl-stars-empty';body.textContent='Les sélections hebdomadaires seront disponibles après la première synchronisation officielle.'});
