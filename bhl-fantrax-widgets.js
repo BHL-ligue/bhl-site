@@ -20,7 +20,7 @@ function draw(){
  if(!snapshot)return;
  if(!root){drawRoster();drawCalendar();return}
  if(root?.hasAttribute('data-fantrax-home')){
- root.innerHTML='<div class="bhl-ft-heading"><h2>Les scores de la semaine <small>· période '+esc(snapshot.scoringPeriod)+'</small></h2><a href="bhl-fantrax.html">Toute la saison →</a></div>'+stamp()+'<div class="bhl-ft-strip" tabindex="0" aria-label="Scores des affrontements; défilement horizontal">'+snapshot.matchups.map(game).join('')+'</div>';
+ root.innerHTML='<div class="bhl-ft-strip" tabindex="0" aria-label="Scores des affrontements; défilement horizontal">'+snapshot.matchups.map(game).join('')+'</div>';
  return;
  }
  const team=snapshot.teams.find(t=>t.name===names[sheet]);
