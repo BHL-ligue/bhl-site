@@ -34,11 +34,21 @@ def number(row,*names):
             except (ValueError,TypeError):pass
     return None
 def score(skater,rt,fo):
-    keys=[number(skater,"goals"),number(skater,"assists"),number(skater,"shots","shotsOnGoal"),
-          number(rt,"hits"),number(rt,"blockedShotAttempts","blockedShots"),
-          number(rt,"takeaways"),number(fo,"faceoffWins","faceoffsWon")]
-    if any(v is None for v in keys):return None
-    return round(sum(v*w for v,w in zip(keys,[3,2.5,.3,.1,.2,.1,.05])),2)
+    # NHL reports can omit a category when its value is zero or when
+    # faceoff statistics are embedded in the skater summary.
+    values=[
+        number(skater,"goals"),
+        number(skater,"assists"),
+        number(skater,"shots","shotsOnGoal"),
+        number(rt,"hits"),
+        number(rt,"blockedShotAttempts","blockedShots"),
+        number(rt,"takeaways"),
+        number(fo,"faceoffWins","faceoffsWon")
+    ]
+    if values[0] is None or values[1] is None or values[2] is None:
+        return None
+    values=[v if v is not None else 0 for v in values]
+    return round(sum(v*w for v,w in zip(values,[3,2.5,.3,.1,.2,.1,.05])),2)
 def goalie_score(row):
     values=[number(row,"wins"),number(row,"goalsAgainst"),number(row,"saves"),number(row,"shutouts")]
     if any(v is None for v in values):return None
@@ -71,8 +81,16 @@ def main():
         if first>dt.datetime.now(dt.timezone.utc).date().isoformat():continue
         try:
             sk=report("skater","summary",season,first,last)
-            rt=report("skater","realtime",season,first,last)
-            fo=report("skater","faceoffwins",season,first,last)
+            try:
+                rt=report("skater","realtime",season,first,last)
+            except (OSError,ValueError,KeyError) as exc:
+                print(f"Period {period['period']}: realtime report unavailable ({exc}); using zero for missing values")
+                rt={}
+            try:
+                fo=report("skater","faceoffwins",season,first,last)
+            except (OSError,ValueError,KeyError) as exc:
+                print(f"Period {period['period']}: faceoff report unavailable ({exc}); using zero for missing values")
+                fo={}
             go=report("goalie","summary",season,first,last)
         except (OSError,ValueError,KeyError) as exc:
             print(f"Period {period['period']}: skipped due to NHL data error: {exc}")
