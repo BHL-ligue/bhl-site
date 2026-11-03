@@ -78,22 +78,22 @@
  const selector=document.getElementById('bhl-stars-period'),body=document.getElementById('bhl-stars-body');
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const teamStyles={
-  'anaheim mighty ducks':['#173b36','#0d2423','#e5a23a','anaheim-mightyducks.png'],
-  'atlanta thrashers':['#1a4269','#10283f','#e8a73d','atlanta-thrashers.png'],
-  'boston bruins':['#38302a','#141414','#fcb514','boston-bruins.png'],
-  'california golden seals':['#17605a','#103b37','#f2c04a','california-goldenseals.png'],
-  'chicago blackhawks':['#811b27','#340d15','#e0ae57','chicago-blackhawks.png'],
-  'colorado avalanche':['#70243a','#291725','#8db7d7','colorado-avalanche.png'],
-  'detroit red wings':['#a51927','#3b1017','#f1f1f1','detroit-redwings.png'],
-  'florida panthers':['#9e2234','#341622','#d6b164','florida-panthers.png'],
-  'hartford whalers':['#156d63','#10322f','#a8d6b5','hartford-whalers.png'],
-  'minnesota north stars':['#236b43','#10331f','#e8c75e','minnesota-northstars.png'],
-  'montreal canadiens':['#a51b35','#291b40','#f4f4f4','montreal-canadiens.png'],
-  'nashville predators':['#a47c14','#222b45','#ffcc32','nashville-predators.png'],
-  'new york rangers':['#194d98','#152b58','#df3548','newyork-rangers.png'],
-  'ottawa senators':['#8d2030','#211c20','#d7b36a','ottawa-senators.png'],
-  'quebec nordiques':['#1755a1','#122b59','#e34148','quebec-nordiques.png'],
-  'toronto maple leafs':['#1b4883','#10284d','#9fc8e8','toronto-mapleleafs.png']
+  'anaheim mighty ducks':['#4a285e','#231533','#c4a2d8','anaheim-mightyducks.png'],
+  'atlanta thrashers':['#175a8c','#862c36','#e6b44d','atlanta-thrashers.png'],
+  'boston bruins':['#2b2b2b','#b88712','#fcb514','boston-bruins.png'],
+  'california golden seals':['#14665b','#bd9234','#f2c04a','california-goldenseals.png'],
+  'chicago blackhawks':['#8b1c2b','#242424','#e0ae57','chicago-blackhawks.png'],
+  'colorado avalanche':['#76243b','#24547c','#8db7d7','colorado-avalanche.png'],
+  'detroit red wings':['#a51927','#641521','#e73d4c','detroit-redwings.png'],
+  'florida panthers':['#9e2234','#9c792d','#d6b164','florida-panthers.png'],
+  'hartford whalers':['#156d63','#1c487a','#a8d6b5','hartford-whalers.png'],
+  'minnesota north stars':['#236b43','#b18e1d','#e8c75e','minnesota-northstars.png'],
+  'montreal canadiens':['#a51b35','#174e91','#f4f4f4','montreal-canadiens.png'],
+  'nashville predators':['#a47c14','#203c73','#ffcc32','nashville-predators.png'],
+  'new york rangers':['#194d98','#a9273d','#df3548','newyork-rangers.png'],
+  'ottawa senators':['#8d2030','#9b772d','#d7b36a','ottawa-senators.png'],
+  'quebec nordiques':['#1755a1','#ad283c','#e34148','quebec-nordiques.png'],
+  'toronto maple leafs':['#1b4883','#3170a7','#9fc8e8','toronto-mapleleafs.png']
  };
  const normalizeTeam=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const number=n=>Number(n).toLocaleString('fr-CA',{maximumFractionDigits:2});
