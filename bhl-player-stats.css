@@ -134,18 +134,19 @@
 @media(max-width:600px){.bhl-player-dialog .bhl-honours-grid{grid-template-columns:1fr;gap:10px}.bhl-player-dialog .bhl-honour-card{padding:11px}.bhl-player-dialog .bhl-honour-art{flex-basis:66px;width:66px;height:72px}.bhl-player-dialog .bhl-honour-info strong{font-size:14px}}
 
 /* NHL per-60 production and league percentile cards */
-.bhl-advanced-intro{margin:16px 0 20px}
-.bhl-advanced-intro h4{font-size:19px;margin:0 0 8px}
-.bhl-advanced-intro p{font-size:13px;line-height:1.5;opacity:.75;margin:0}
-.bhl-advanced-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0 18px}
-.bhl-advanced-stat{padding:15px;border:1px solid #dbe2e9;border-radius:12px;background:#f8fafc}
-.bhl-advanced-stat-head{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:5px 12px}
-.bhl-advanced-stat-head strong{font-size:13px;color:#25344b}
-.bhl-advanced-stat-head b{font-size:23px;color:#121d2c;font-variant-numeric:tabular-nums}
-.bhl-advanced-stat-head span{grid-column:1/-1;color:#69778a;font-size:12px}
-.bhl-advanced-track{height:8px;background:#e1e7ee;border-radius:99px;overflow:hidden;margin-top:11px}
+.bhl-advanced-intro{margin:10px 0 12px;padding:12px 14px;background:linear-gradient(120deg,#f2f5fa,#fff);border:1px solid #e0e6ee;border-radius:12px}
+.bhl-advanced-intro h4{font-size:16px;margin:0 0 5px;color:#1a2b43}
+.bhl-advanced-intro p{font-size:11px;line-height:1.45;color:#5c6b7d;margin:0}
+.bhl-advanced-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0 14px}
+.bhl-advanced-stat{min-width:0;padding:10px 11px;border:1px solid #dce4ed;border-radius:10px;background:linear-gradient(155deg,#fff,#f5f8fc);box-shadow:0 2px 7px #13263a08}
+.bhl-advanced-stat-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:3px 6px}
+.bhl-advanced-stat-head strong{font-size:11px;line-height:1.2;color:#25344b;overflow-wrap:anywhere}
+.bhl-advanced-stat-head b{font-size:17px;line-height:1.15;color:#121d2c;font-variant-numeric:tabular-nums}
+.bhl-advanced-stat-head span{grid-column:1/-1;color:#69778a;font-size:10px;line-height:1.2}
+.bhl-advanced-track{height:5px;background:#e1e7ee;border-radius:99px;overflow:hidden;margin-top:7px}
 .bhl-advanced-track>div{height:100%;background:linear-gradient(90deg,#a70000,#cc0000);border-radius:99px}
-@media(max-width:540px){.bhl-advanced-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.bhl-advanced-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.bhl-advanced-stat{padding:9px}.bhl-advanced-stat-head b{font-size:16px}}
+@media(max-width:350px){.bhl-advanced-stat-head{grid-template-columns:1fr}.bhl-advanced-stat-head b{font-size:15px}}
 
 .bhl-advanced-controls{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 20px}
 .bhl-advanced-controls label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#35455b;flex:1 1 180px}
