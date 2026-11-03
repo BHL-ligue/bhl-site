@@ -8,9 +8,9 @@
 .bhl-season-tab:hover{border-color:#cc0000;color:#cc0000}
 .bhl-season-tab[aria-selected="true"]{background:#cc0000;border-color:#cc0000;color:white}
 .bhl-season-view[hidden]{display:none!important}
-@media(max-width:600px){.bhl-season-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.bhl-season-tab{padding:10px 4px;font-size:12px}}
-</style><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=score1"><link rel="stylesheet" href="bhl-player-stats.css?v=periodfilter20261102"></head><body><div id="bhl-global-nav"></div><main><div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE</div><h1>Saison</h1><p class="muted">Classement, calendrier et honneurs de la saison en cours.</p><p id="sync" role="status">Chargement des données…</p><div id="content" class="hidden">
-<nav class="bhl-season-tabs" role="tablist" aria-label="Sections de la saison"><button class="bhl-season-tab" id="bhl-tab-standings" role="tab" aria-controls="bhl-view-standings" aria-selected="true" tabindex="0" data-season-tab="standings">Classement</button><button class="bhl-season-tab" id="bhl-tab-calendar" role="tab" aria-controls="bhl-view-calendar" aria-selected="false" tabindex="-1" data-season-tab="calendar">Calendrier</button><button class="bhl-season-tab" id="bhl-tab-honours" role="tab" aria-controls="bhl-view-honours" aria-selected="false" tabindex="-1" data-season-tab="honours">Honneurs</button></nav>
+@media(max-width:600px){.bhl-season-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.bhl-season-tab{padding:10px 4px;font-size:12px}}
+</style><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=score1"><link rel="stylesheet" href="bhl-player-stats.css?v=periodfilter20261102"></head><body><div id="bhl-global-nav"></div><main><div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE</div><h1>Saison</h1><p class="muted">Classement, calendrier, effectifs et honneurs de la saison en cours.</p><p id="sync" role="status">Chargement des données…</p><div id="content" class="hidden">
+<nav class="bhl-season-tabs" role="tablist" aria-label="Sections de la saison"><button class="bhl-season-tab" id="bhl-tab-standings" role="tab" aria-controls="bhl-view-standings" aria-selected="true" tabindex="0" data-season-tab="standings">Classement</button><button class="bhl-season-tab" id="bhl-tab-calendar" role="tab" aria-controls="bhl-view-calendar" aria-selected="false" tabindex="-1" data-season-tab="calendar">Calendrier</button><button class="bhl-season-tab" id="bhl-tab-rosters" role="tab" aria-controls="bhl-view-rosters" aria-selected="false" tabindex="-1" data-season-tab="rosters">Effectifs</button><button class="bhl-season-tab" id="bhl-tab-honours" role="tab" aria-controls="bhl-view-honours" aria-selected="false" tabindex="-1" data-season-tab="honours">Honneurs</button></nav>
 <section class="bhl-season-view" id="bhl-view-honours" role="tabpanel" aria-labelledby="bhl-tab-honours" hidden>
 <style>
 .bhl-stars-panel{background:linear-gradient(145deg,#111b2b,#182a43);border-radius:18px;padding:24px;color:white;overflow:hidden}
@@ -70,7 +70,7 @@
  }).catch(()=>{body.className='bhl-stars-empty';body.textContent='Les sélections hebdomadaires seront disponibles après la première synchronisation officielle.'});
 })();
 </script></section><section class="bhl-season-view" id="bhl-view-standings" role="tabpanel" aria-labelledby="bhl-tab-standings"><section class="panel"><h2>Classement · Standings Fantrax</h2><p class="muted">Classement synchronisé depuis Fantrax (Standings). Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
-<section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></section><section class="bhl-season-view" id="bhl-view-calendar" role="tabpanel" aria-labelledby="bhl-tab-calendar"><section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>
+</section><section class="bhl-season-view" id="bhl-view-rosters" role="tabpanel" aria-labelledby="bhl-tab-rosters" hidden><section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></section><section class="bhl-season-view" id="bhl-view-calendar" role="tabpanel" aria-labelledby="bhl-tab-calendar"><section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>
 <section class="panel" id="upcoming-panel" hidden><h2 id="upcoming-title">Prochains affrontements</h2><p id="upcoming-dates" class="muted"></p><div id="upcoming-games" class="games"></div></section></section></div></main>
 <script src="bhl-score-ui.js?v=1"></script><script src="data/fantrax-player-stats.js?v=20261102"></script><script src="bhl-roster.js?v=playerstats1"></script>
 <script>
@@ -78,7 +78,7 @@
 const $=id=>document.getElementById(id);
 (function seasonTabs(){
  const buttons=Array.from(document.querySelectorAll('[data-season-tab]'));
- const valid=['standings','calendar','honours'];
+ const valid=['standings','calendar','rosters','honours'];
  function activate(name,focus){
   if(!valid.includes(name))name='standings';
   buttons.forEach(button=>{
@@ -111,10 +111,10 @@ const norm=v=>String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerC
 let teams=[];
 function drawRoster(){
  const q=norm($('search').value),team=$('team').value,status=$('status').value;
- const rows=teams.filter(t=>!team||t.id===team).flatMap(t=>t.players.map(p=>({...p,teamName:t.name}))).filter(p=>(!status||p.status===status)&&norm(p.name).includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+ const rows=teams.filter(t=>t.id===team).flatMap(t=>t.players.map(p=>({...p,teamName:t.name}))).filter(p=>(!status||p.status===status)&&norm(p.name).includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
  $('count').textContent=rows.length+' joueur(s)';
  $('rosters').innerHTML=BHLRoster.render(rows,true);
- if(team)BHLRoster.photos($('rosters'));
+ BHLRoster.photos($('rosters'));
 }
 async function start(){
  try{
@@ -146,7 +146,9 @@ async function start(){
     $('upcoming-games').innerHTML=data.upcoming.matchups.map(m=>window.BHLScoreUI?BHLScoreUI.card(m):'<div class="game">'+[m.away,m.home].map(t=>'<div class="score"><span>'+esc(t.teamName)+'</span><strong>'+fmt(t.score)+'</strong></div>').join('')+'</div>').join('');
   }
   $('rosterPeriod').textContent='— période '+data.rosterPeriod;
-  $('team').replaceChildren(new Option('Toutes les organisations',''),...teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(t=>new Option(t.name,t.id)));
+  const selectedTeam=$('team').value;
+  $('team').replaceChildren(...teams.slice().sort((a,b)=>a.name.localeCompare(b.name,'fr')).map(t=>new Option(t.name,t.id)));
+  if(teams.some(t=>t.id===selectedTeam))$('team').value=selectedTeam;
   drawRoster();$('content').classList.remove('hidden');
  }catch(error){$('sync').textContent='Impossible de charger les données Fantrax : '+error.message+'. Réessaie plus tard.';$('sync').className='error'}
 }
