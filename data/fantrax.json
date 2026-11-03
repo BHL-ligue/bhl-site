@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T17:06:42.345622+00:00",
+  "updatedAt": "2026-11-03T17:53:52.060380+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12008,7 +12008,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 18.4,
+            "score": 23.4,
             "gamesPlayed": 8
           },
           "home": {
@@ -12050,7 +12050,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 11.75,
+            "score": 9.25,
             "gamesPlayed": 5
           },
           "home": {
@@ -12134,7 +12134,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 18.4,
+            "score": 23.4,
             "gamesPlayed": 8
           },
           "home": {
@@ -12176,7 +12176,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 11.75,
+            "score": 9.25,
             "gamesPlayed": 5
           },
           "home": {
@@ -12260,7 +12260,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 18.4,
+            "score": 23.4,
             "gamesPlayed": 8
           },
           "home": {
@@ -12302,7 +12302,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 11.75,
+            "score": 9.25,
             "gamesPlayed": 5
           },
           "home": {
@@ -18183,7 +18183,7 @@
       "totalPointsFor": 2455.8,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2106.45
+      "totalPointsAgainst": 2103.95
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18203,7 +18203,7 @@
       "totalPointsFor": 2590.2,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2272.6
+      "totalPointsAgainst": 2277.6
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18213,7 +18213,7 @@
       "totalPointsFor": 2472.3,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2291.8
+      "totalPointsAgainst": 2296.8
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18230,7 +18230,7 @@
       "teamName": "New York Rangers",
       "rank": 7,
       "points": "9-6-0",
-      "totalPointsFor": 2364.75,
+      "totalPointsFor": 2379.75,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
       "totalPointsAgainst": 2233.2
@@ -18243,7 +18243,7 @@
       "totalPointsFor": 2290.35,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2180.05
+      "totalPointsAgainst": 2177.55
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18253,7 +18253,7 @@
       "totalPointsFor": 1987.5,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2224.1
+      "totalPointsAgainst": 2221.6
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18293,14 +18293,14 @@
       "totalPointsFor": 1759.05,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2269.1
+      "totalPointsAgainst": 2274.1
     },
     {
       "teamId": "uzhvniysmo2tig2e",
       "teamName": "Boston Bruins",
       "rank": 14,
       "points": "2-13-0",
-      "totalPointsFor": 1928.25,
+      "totalPointsFor": 1920.75,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
       "totalPointsAgainst": 2245.95
@@ -18310,7 +18310,7 @@
       "teamName": "Florida Panthers",
       "rank": 15,
       "points": "2-13-0",
-      "totalPointsFor": 1875.45,
+      "totalPointsFor": 1874.85,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
       "totalPointsAgainst": 2255.7
@@ -18359,7 +18359,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 18.4,
+        "score": 23.4,
         "gamesPlayed": 8
       },
       "home": {
@@ -18401,7 +18401,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 11.75,
+        "score": 9.25,
         "gamesPlayed": 5
       },
       "home": {
@@ -18485,7 +18485,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 18.4,
+        "score": 23.4,
         "gamesPlayed": 8
       },
       "home": {
@@ -18527,7 +18527,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 11.75,
+        "score": 9.25,
         "gamesPlayed": 5
       },
       "home": {
@@ -18611,7 +18611,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 18.4,
+        "score": 23.4,
         "gamesPlayed": 8
       },
       "home": {
@@ -18653,7 +18653,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 11.75,
+        "score": 9.25,
         "gamesPlayed": 5
       },
       "home": {
