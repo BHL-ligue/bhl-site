@@ -1,4 +1,4 @@
-import {renderCover} from './bhl-news-images.js?v=1';
+import {renderCover} from './bhl-news-images.js?v=crop1';
 import {db,node,date,publicFields,articleLink} from './bhl-news-db.js?v=cover1';
 const grid=document.getElementById('newsGrid'),lead=document.getElementById('actualites'),notice=document.getElementById('newsNotice');
 const search=document.getElementById('newsSearch'),count=document.getElementById('newsCount'),more=document.getElementById('newsMore');

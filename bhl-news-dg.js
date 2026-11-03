@@ -1,4 +1,4 @@
-import {attachCover,renderCover} from './bhl-news-images.js?v=1';
+import {attachCover,renderCover} from './bhl-news-images.js?v=crop1';
 import {attachEditor} from './bhl-news-editor.js?v=cover1';
 import {db,node,labels,date,articleLink,paragraphs} from './bhl-news-db.js?v=cover1';
 const $=id=>document.getElementById(id), form=$('articleForm');
