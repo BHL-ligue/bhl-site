@@ -132,3 +132,17 @@
 .bhl-player-dialog .bhl-honours-source{font-size:11px;color:#758196;margin:17px 0 0}
 .bhl-player-dialog .bhl-honours-source a{color:var(--team-color,#cc0000);font-weight:800}
 @media(max-width:600px){.bhl-player-dialog .bhl-honours-grid{grid-template-columns:1fr;gap:10px}.bhl-player-dialog .bhl-honour-card{padding:11px}.bhl-player-dialog .bhl-honour-art{flex-basis:66px;width:66px;height:72px}.bhl-player-dialog .bhl-honour-info strong{font-size:14px}}
+
+/* NHL per-60 production and league percentile cards */
+.bhl-advanced-intro{margin:16px 0 20px}
+.bhl-advanced-intro h4{font-size:19px;margin:0 0 8px}
+.bhl-advanced-intro p{font-size:13px;line-height:1.5;opacity:.75;margin:0}
+.bhl-advanced-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0 18px}
+.bhl-advanced-stat{padding:15px;border:1px solid #dbe2e9;border-radius:12px;background:#f8fafc}
+.bhl-advanced-stat-head{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:5px 12px}
+.bhl-advanced-stat-head strong{font-size:13px;color:#25344b}
+.bhl-advanced-stat-head b{font-size:23px;color:#121d2c;font-variant-numeric:tabular-nums}
+.bhl-advanced-stat-head span{grid-column:1/-1;color:#69778a;font-size:12px}
+.bhl-advanced-track{height:8px;background:#e1e7ee;border-radius:99px;overflow:hidden;margin-top:11px}
+.bhl-advanced-track>div{height:100%;background:linear-gradient(90deg,#a70000,#cc0000);border-radius:99px}
+@media(max-width:540px){.bhl-advanced-grid{grid-template-columns:1fr}}
