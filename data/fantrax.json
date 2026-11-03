@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T16:12:11.785387+00:00",
+  "updatedAt": "2026-11-03T17:06:42.345622+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -1402,6 +1402,7 @@
           "position": "LW",
           "eligiblePositions": [
             "LW",
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
@@ -4579,7 +4580,7 @@
             "LW",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06sn9",
@@ -4692,7 +4693,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04mv2",
@@ -4761,7 +4762,7 @@
         {
           "id": "051z0",
           "name": "Tim Stutzle",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "C"
@@ -12021,7 +12022,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 24.65,
+            "score": 24.45,
             "gamesPlayed": 9
           },
           "home": {
@@ -12147,7 +12148,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 24.65,
+            "score": 24.45,
             "gamesPlayed": 9
           },
           "home": {
@@ -12273,7 +12274,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 24.65,
+            "score": 24.45,
             "gamesPlayed": 9
           },
           "home": {
@@ -18182,7 +18183,7 @@
       "totalPointsFor": 2455.8,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2106.65
+      "totalPointsAgainst": 2106.45
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18242,7 +18243,7 @@
       "totalPointsFor": 2290.35,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2180.25
+      "totalPointsAgainst": 2180.05
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18262,7 +18263,7 @@
       "totalPointsFor": 2262.45,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2151.5
+      "totalPointsAgainst": 2151.3
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18372,7 +18373,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 24.65,
+        "score": 24.45,
         "gamesPlayed": 9
       },
       "home": {
@@ -18498,7 +18499,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 24.65,
+        "score": 24.45,
         "gamesPlayed": 9
       },
       "home": {
@@ -18624,7 +18625,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 24.65,
+        "score": 24.45,
         "gamesPlayed": 9
       },
       "home": {
