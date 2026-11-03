@@ -32,3 +32,13 @@
 @media(max-width:900px){#actualites{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}#actualites .side{padding:14px}#actualites .side h3{font-size:16px}}
 @media(max-width:800px){#actualites{grid-template-columns:minmax(0,1fr)}#actualites .side-stories{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}#actualites .side:has(.side-photo:not([hidden])){display:flex;flex-direction:column}.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){#actualites .side-stories{grid-template-columns:minmax(0,1fr)}#actualites .side:has(.side-photo:not([hidden])){display:grid;grid-template-columns:minmax(90px,.7fr) minmax(0,1.3fr)}#actualites .feature.has-cover .feature-content{padding:18px}.news-grid{grid-template-columns:minmax(0,1fr)}.news-tools{grid-template-columns:auto minmax(0,1fr)}.news-tools #newsSearch,.news-tools #newsCount{grid-column:1/-1}.section-head .plain-link{line-height:1.5}.intro h1{letter-spacing:-1px}}
+
+/* Les trois nouvelles suivantes : photo et titre seulement. */
+#actualites .side.side-compact{display:grid!important;grid-template-columns:minmax(100px,.8fr) minmax(0,1.4fr);align-items:center;gap:16px;min-height:0;padding:18px}
+#actualites .side.side-compact>.side-photo{grid-column:1;grid-row:1;align-self:center;position:relative;aspect-ratio:16/9;background:#eef0f2;border-radius:7px;overflow:hidden}
+#actualites .side.side-compact>.side-photo>img{height:100%;width:100%;object-fit:contain;padding:12px}
+#actualites .side.side-compact>.side-photo .side-cover-layer{position:absolute;inset:0;margin:0}
+#actualites .side.side-compact>.side-photo .side-cover-layer img{height:100%;width:100%;object-fit:cover;padding:0}
+#actualites .side.side-compact>h3{grid-column:2;grid-row:1;margin:0;line-height:1.35;font-size:18px;-webkit-line-clamp:4}
+@media(max-width:900px){#actualites .side.side-compact{padding:14px;gap:12px}#actualites .side.side-compact>h3{font-size:16px}}
+@media(max-width:800px){#actualites .side-stories{grid-template-columns:minmax(0,1fr)}#actualites .side.side-compact{grid-template-columns:minmax(100px,.65fr) minmax(0,1.35fr)}}
