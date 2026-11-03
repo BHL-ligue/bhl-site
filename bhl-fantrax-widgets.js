@@ -93,6 +93,6 @@ async function refresh(){
  }
 }
 refresh();
-setInterval(()=>{if(!document.hidden)refresh()},300000);
+setInterval(()=>{if(!document.hidden)refresh()},60000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh()});
 })();
