@@ -1,0 +1,37 @@
+name: Étoiles de la semaine BHL
+on:
+  schedule:
+    - cron: '28 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bhl-weekly-stars
+  cancel-in-progress: false
+jobs:
+  weekly-stars:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Calculer les étoiles des périodes BHL
+        run: python scripts/sync-weekly-stars.py
+      - name: Publier les sélections
+        run: |
+          git config user.name "BHL Weekly Stars"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp data/bhl-weekly-stars.json /tmp/bhl-weekly-stars.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/bhl-weekly-stars.json data/bhl-weekly-stars.json
+            git add data/bhl-weekly-stars.json
+            if git diff --cached --quiet; then break; fi
+            git commit -m "Actualiser les étoiles de la semaine BHL"
+            if git push origin HEAD:main; then break; fi
+            if [ "$attempt" -eq 5 ]; then exit 1; fi
+            sleep 2
+          done
