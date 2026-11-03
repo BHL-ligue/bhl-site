@@ -26,7 +26,9 @@
 .bhl-star-card:first-child{border-color:var(--star-accent,#d9505c)}
 .bhl-star-card .bhl-star-position{background:var(--star-accent,#cc0000)}
 .bhl-star-photo-wrap{height:150px;display:flex;align-items:center;justify-content:center;position:relative}
-.bhl-star-photo-fallback{font-size:42px;font-weight:900;color:#ffffff77;position:absolute;z-index:0}
+.bhl-star-photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:0;pointer-events:none}
+.bhl-star-photo-fallback img{width:83%;height:92%;object-fit:contain;opacity:.14;filter:grayscale(1) brightness(1.6)}
+.bhl-star-photo-wrap{isolation:isolate}
 .bhl-star-portrait{position:relative;z-index:1;width:auto;max-height:150px;min-height:0}
 .bhl-star-team-logo{width:24px;height:24px;object-fit:contain;vertical-align:middle;margin-right:7px}
 .bhl-star-team{display:flex;align-items:center;gap:4px}
@@ -38,7 +40,29 @@
 .bhl-star-stats span{flex:1;background:#0e1b2b;border-radius:8px;padding:8px;font-size:11px;color:#b9c8d8}
 .bhl-star-stats b{display:block;font-size:20px;color:white}
 .bhl-stars-empty{padding:24px;border:1px dashed #66758a;border-radius:12px;color:#e1e8f2}
-@media(max-width:760px){.bhl-stars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bhl-stars-panel{padding:15px}.bhl-star-portrait{height:100px}}
+@media(max-width:760px){
+ .bhl-stars-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .bhl-stars-panel{padding:10px}
+ .bhl-star-card{padding:8px 6px;border-radius:10px}
+ .bhl-star-photo-wrap{height:100px}
+ .bhl-star-portrait{height:96px;max-height:96px}
+ .bhl-star-name{font-size:clamp(11px,2.9vw,15px);line-height:1.2;overflow-wrap:anywhere;min-height:32px}
+ .bhl-star-team{font-size:10px;line-height:1.2;min-height:36px;overflow-wrap:anywhere}
+ .bhl-star-team-logo{width:17px;height:17px;flex-shrink:0;margin-right:1px}
+ .bhl-star-position{font-size:10px;padding:2px 6px}
+ .bhl-star-stats{gap:3px;margin-top:7px;flex-wrap:wrap}
+ .bhl-star-stats span{padding:5px 3px;font-size:9px;min-width:0;text-align:center}
+ .bhl-star-stats b{font-size:clamp(11px,2.8vw,16px);line-height:1.15}
+ .bhl-stars-title{font-size:24px}
+}
+@media(max-width:390px){
+ .bhl-stars-grid{gap:5px}
+ .bhl-star-card{padding:7px 4px}
+ .bhl-star-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .bhl-star-stats span:last-child{grid-column:1/-1}
+ .bhl-star-photo-wrap{height:84px}
+ .bhl-star-portrait{height:82px}
+}
 </style>
 <section class="panel" id="bhl-weekly-stars">
  <div class="bhl-stars-panel">
@@ -82,10 +106,10 @@
   body.innerHTML=period.players.map(p=>{
    const theme=teamStyles[normalizeTeam(p.team)]||['#263b57','#18263c','#cc0000',null];
    const portrait='https://assets.nhle.com/mugs/nhl/20262027/'+encodeURIComponent(p.nhlId)+'.png';
-   const initials=String(p.name||'').split(/\s+/).map(x=>x[0]||'').slice(0,2).join('').toUpperCase();
    const logo=theme[3]?'<img class="bhl-star-team-logo" loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
+   const watermark=theme[3]?'<img loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
    return '<article class="bhl-star-card" style="--star-primary:'+theme[0]+';--star-secondary:'+theme[1]+';--star-accent:'+theme[2]+'"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
-    '<div class="bhl-star-photo-wrap"><span class="bhl-star-photo-fallback">'+esc(initials)+'</span><img class="bhl-star-portrait" loading="lazy" alt="Photo de '+esc(p.name)+'" data-star-photo="'+esc(p.id)+'" data-star-nhl="'+esc(p.nhlId)+'" src="'+portrait+'"></div>'+
+    '<div class="bhl-star-photo-wrap"><span class="bhl-star-photo-fallback" aria-hidden="true">'+watermark+'</span><img class="bhl-star-portrait" loading="lazy" alt="Photo de '+esc(p.name)+'" data-star-photo="'+esc(p.id)+'" data-star-nhl="'+esc(p.nhlId)+'" src="'+portrait+'"></div>'+
     '<button class="bhl-star-name" type="button" data-star-id="'+esc(p.id)+'" data-star-name="'+esc(p.name)+'">'+esc(p.name)+'</button>'+
     '<div class="bhl-star-team">'+logo+'<span>'+esc(p.team)+'</span></div>'+
     '<div class="bhl-star-stats"><span><b>'+number(p.fpts)+'</b>FPTS</span><span><b>'+number(p.fpg)+'</b>FP/G</span><span><b>'+number(p.gp)+'</b>PJ</span></div></article>';
