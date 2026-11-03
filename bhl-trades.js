@@ -19,7 +19,7 @@ const historical={
  'detroit cougars':['DETROIT','detroit-cougars.png'],
  'detroit red wings':['DETROIT','detroit-redwings.png'],
  'florida panthers':['FLORIDA','florida-panthers.png'],
- 'vegas golden knights':['FLORIDA','vegas-goldenknights.png'],
+ 'vegas golden knights':['FLORIDA','vegas-golden-knights.png'],
  'hartford whalers':['HARTFORD','hartford-whalers.png'],
  'minnesota north stars':['MINNESOTA','minnesota-northstars.png'],
  'montreal maroons':['MONTREAL','montreal-maroons.png'],
