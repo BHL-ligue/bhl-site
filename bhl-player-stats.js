@@ -491,25 +491,45 @@ async function bhlAdvancedPlayer(name,target,fantraxId){
   if(!target.isConnected)return;
   if(!resolved){target.textContent='Identité LNH indisponible.';return}
   const id=await bhlLookupOfficialId(resolved.player,resolved.id);
-  const player=directory.players?.[String(id)];
   if(!target.isConnected)return;
-  if(!player){target.textContent='Aucune statistique /60 disponible pour ce joueur cette saison (minimum 1 match LNH et temps de jeu connu).';return}
-  const labels=directory.metrics||{FPTS60:'FPTS/60',PTS60:'PTS/60',G60:'B/60',A60:'A/60',SOG60:'TIRS/60',HIT60:'HITS/60',BLK60:'BLOCS/60',TK60:'TK/60'};
-  const metrics=Object.entries(labels);
-  const html=metrics.map(([key,label])=>{
-   const rate=player.rates?.[key],pct=player.percentiles?.[key];
-   const value=rate==null?'N/D':Number(rate).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
-   const percentile=pct==null?'N/D':Math.round(pct)+'e';
-   const bar=pct==null?0:Math.max(0,Math.min(100,Number(pct)));
-   return '<div class="bhl-advanced-stat"><div class="bhl-advanced-stat-head"><strong>'+esc(label)+'</strong><b>'+esc(value)+'</b><span>'+esc(percentile)+' percentile</span></div>'+
-    '<div class="bhl-advanced-track"><div style="width:'+bar+'%"></div></div></div>';
-  }).join('');
-  target.innerHTML='<div class="bhl-advanced-intro"><h4>Production par 60 minutes · 2026-2027</h4><p>Comparaison avec '+esc(directory.population)+' patineurs LNH ayant disputé au moins 1 match cette saison. Un percentile élevé indique une meilleure production /60.</p></div>'+
-   (directory.fpts60Provisional?'<p class="bhl-player-source" style="color:#9b1c1c"><strong>FPTS/60 provisoires :</strong> certaines mises au jeu gagnées sont absentes de la source LNH et comptées à zéro. Les percentiles FPTS/60 peuvent donc changer après correction des données.</p>':'')+
-   '<div class="bhl-advanced-grid">'+html+'</div>'+
-   '<p class="bhl-player-source">Temps de glace réel utilisé comme dénominateur · Statistiques officielles LNH · Percentiles calculés sur les joueurs disposant de chaque statistique. Les valeurs indisponibles ne sont pas remplacées par zéro.</p>';
+  if(!id){target.textContent='Identité LNH non confirmée.';return}
+  const labels=directory.metrics||{FPTS:'FPTS',PTS:'PTS',G:'B',A:'A',SOG:'TIRS',HIT:'HITS',BLK:'BLOCS',TK:'TK'};
+  const seasonLabels={current:'Saison en cours · 2026-2027',last3:'Trois dernières saisons · 2024-2027'};
+  const shell=document.createElement('div');
+  shell.innerHTML='<div class="bhl-advanced-controls"><label>Période<select data-advanced-period><option value="current">Saison en cours (2026-2027)</option><option value="last3">3 dernières saisons (2024-2027)</option></select></label><label>Affichage<select data-advanced-mode><option value="per60">Total par 60</option><option value="total">Total</option></select></label></div><div data-advanced-content></div>';
+  target.replaceChildren(shell);
+  const periodSelect=shell.querySelector('[data-advanced-period]');
+  const modeSelect=shell.querySelector('[data-advanced-mode]');
+  const content=shell.querySelector('[data-advanced-content]');
+  function draw(){
+   const period=periodSelect.value,mode=modeSelect.value;
+   const dataset=directory.datasets?.[period];
+   if(!dataset){
+    content.innerHTML='<p>Les nouvelles données multi-saisons sont en attente de synchronisation. Relancez le workflow Statistiques avancées LNH.</p>';
+    return;
+   }
+   const player=dataset.players?.[String(id)];
+   if(!player){content.innerHTML='<p>Ce joueur n’a pas disputé de match LNH dans la période sélectionnée, ou son temps de jeu n’est pas disponible.</p>';return}
+   const metrics=Object.entries(labels);
+   const html=metrics.map(([key,label])=>{
+    const value=mode==='per60'?player.rates?.[key]:player.totals?.[key];
+    const pct=player.percentiles?.[mode]?.[key];
+    const formatted=value==null?'N/D':Number(value).toLocaleString('fr-CA',{minimumFractionDigits:mode==='per60'?2:0,maximumFractionDigits:2});
+    const percentile=pct==null?'N/D':Math.round(pct)+'e';
+    const bar=pct==null?0:Math.max(0,Math.min(100,Number(pct)));
+    return '<div class="bhl-advanced-stat"><div class="bhl-advanced-stat-head"><strong>'+esc(label)+(mode==='per60'?'/60':'')+'</strong><b>'+esc(formatted)+'</b><span>'+esc(percentile)+' percentile</span></div>'+
+      '<div class="bhl-advanced-track"><div style="width:'+bar+'%"></div></div></div>';
+   }).join('');
+   content.innerHTML='<div class="bhl-advanced-intro"><h4>'+esc(seasonLabels[period])+' · '+(mode==='per60'?'Production par 60 minutes':'Totaux cumulés')+'</h4><p>'+esc(dataset.population)+' patineurs LNH ayant disputé au moins 1 match dans la période sélectionnée · '+esc(player.gp)+' matchs pour ce joueur. Les percentiles sont recalculés pour ce filtre.</p></div>'+
+    (dataset.fptsProvisional?'<p class="bhl-player-source" style="color:#9b1c1c"><strong>FPTS provisoires :</strong> des mises au jeu gagnées sont manquantes dans les rapports LNH et comptées à zéro. Les FPTS et leurs percentiles peuvent être sous-estimés.</p>':'')+
+    '<div class="bhl-advanced-grid">'+html+'</div>'+
+    '<p class="bhl-player-source">Source : statistiques officielles LNH · Saison régulière · '+(mode==='per60'?'Statistiques cumulées ÷ temps de glace cumulé × 60.':'Totaux cumulés de la période.')+' Population : joueurs ayant au moins 1 match et du temps de glace connu.</p>';
+  }
+  periodSelect.addEventListener('change',draw);
+  modeSelect.addEventListener('change',draw);
+  draw();
  }catch(error){
-  if(target.isConnected)target.textContent='Statistiques avancées temporairement indisponibles. La première synchronisation doit être exécutée sur GitHub.';
+  if(target.isConnected)target.textContent='Statistiques avancées temporairement indisponibles.';
  }
 }
 function addSections(dialog,name,fantraxId){
