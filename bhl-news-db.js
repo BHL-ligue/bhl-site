@@ -1,0 +1,9 @@
+import {createClient} from 'https://esm.sh/@supabase/supabase-js@2.57.4';
+import {SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY} from './bhl-supabase.js';
+export const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+export const labels={draft:'Brouillon',pending:'En attente d’approbation',published:'Publié',rejected:'À revoir'};
+export const publicFields='id,title,summary,category,author_name,team_name,published_at';
+export function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
+export function date(value){return value?new Date(value).toLocaleString('fr-CA',{dateStyle:'long',timeStyle:'short',timeZone:'America/Toronto'}):'';}
+export function articleLink(id){return 'bhl-article.html?id='+encodeURIComponent(id);}
+export function paragraphs(target,body){target.replaceChildren(...String(body).split(/\n\s*\n/).map(t=>node('p',t)));}
