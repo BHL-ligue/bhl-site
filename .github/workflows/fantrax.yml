@@ -1,7 +1,7 @@
 name: Synchronisation Fantrax et publication
 on:
   schedule:
-    - cron: '0,15,30,45 * * * *'
+    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
