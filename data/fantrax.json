@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T17:53:52.060380+00:00",
+  "updatedAt": "2026-11-03T18:34:31.537925+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12008,7 +12008,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 23.4,
+            "score": 20.9,
             "gamesPlayed": 8
           },
           "home": {
@@ -12134,7 +12134,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 23.4,
+            "score": 20.9,
             "gamesPlayed": 8
           },
           "home": {
@@ -12260,7 +12260,7 @@
           "away": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 23.4,
+            "score": 20.9,
             "gamesPlayed": 8
           },
           "home": {
@@ -18203,7 +18203,7 @@
       "totalPointsFor": 2590.2,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2277.6
+      "totalPointsAgainst": 2275.1
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18213,7 +18213,7 @@
       "totalPointsFor": 2472.3,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2296.8
+      "totalPointsAgainst": 2294.3
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18293,7 +18293,7 @@
       "totalPointsFor": 1759.05,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2274.1
+      "totalPointsAgainst": 2271.6
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18359,7 +18359,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 23.4,
+        "score": 20.9,
         "gamesPlayed": 8
       },
       "home": {
@@ -18485,7 +18485,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 23.4,
+        "score": 20.9,
         "gamesPlayed": 8
       },
       "home": {
@@ -18611,7 +18611,7 @@
       "away": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 23.4,
+        "score": 20.9,
         "gamesPlayed": 8
       },
       "home": {
