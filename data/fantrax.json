@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T00:14:34.562333+00:00",
+  "updatedAt": "2026-11-03T00:17:16.075264+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -11979,7 +11979,7 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 0.0,
+            "score": 2.5,
             "gamesPlayed": 1
           },
           "home": {
@@ -12013,7 +12013,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 0.6,
+            "score": 0.7,
             "gamesPlayed": 3
           }
         },
@@ -12041,7 +12041,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 0.05,
+            "score": 0.15,
             "gamesPlayed": 2
           }
         },
@@ -12049,7 +12049,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 0.2,
+            "score": 0.4,
             "gamesPlayed": 4
           },
           "home": {
@@ -12091,7 +12091,7 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 0.0,
+            "score": 2.5,
             "gamesPlayed": 1
           },
           "home": {
@@ -12111,7 +12111,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 0.6,
+            "score": 0.7,
             "gamesPlayed": 3
           }
         },
@@ -12139,7 +12139,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 0.05,
+            "score": 0.15,
             "gamesPlayed": 2
           }
         },
@@ -12175,7 +12175,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 0.2,
+            "score": 0.4,
             "gamesPlayed": 4
           },
           "home": {
@@ -12203,13 +12203,13 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 0.0,
+            "score": 2.5,
             "gamesPlayed": 1
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 0.6,
+            "score": 0.7,
             "gamesPlayed": 3
           }
         },
@@ -12237,7 +12237,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 0.05,
+            "score": 0.15,
             "gamesPlayed": 2
           }
         },
@@ -12301,7 +12301,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 0.2,
+            "score": 0.4,
             "gamesPlayed": 4
           },
           "home": {
@@ -18182,7 +18182,7 @@
       "totalPointsFor": 2427.9,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2065.45
+      "totalPointsAgainst": 2065.65
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18192,7 +18192,7 @@
       "totalPointsFor": 2432.1,
       "winPercentage": 0.733,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2121.1
+      "totalPointsAgainst": 2123.6
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18212,7 +18212,7 @@
       "totalPointsFor": 2423.25,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2252.05
+      "totalPointsAgainst": 2254.55
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18232,7 +18232,7 @@
       "totalPointsFor": 2309.55,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2202.65
+      "totalPointsAgainst": 2202.85
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18242,7 +18242,7 @@
       "totalPointsFor": 2259.3,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2120.05
+      "totalPointsAgainst": 2120.25
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18252,7 +18252,7 @@
       "totalPointsFor": 1949.55,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2199.35
+      "totalPointsAgainst": 2199.55
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18262,7 +18262,7 @@
       "totalPointsFor": 2229.6,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2279.15
+      "totalPointsAgainst": 2281.85
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18282,7 +18282,7 @@
       "totalPointsFor": 2007.9,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2306.1
+      "totalPointsAgainst": 2306.2
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18322,7 +18322,7 @@
       "totalPointsFor": 1739.4,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2216.0
+      "totalPointsAgainst": 2216.1
     }
   ],
   "matchups": [
@@ -18330,7 +18330,7 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 0.0,
+        "score": 2.5,
         "gamesPlayed": 1
       },
       "home": {
@@ -18364,7 +18364,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 0.6,
+        "score": 0.7,
         "gamesPlayed": 3
       }
     },
@@ -18392,7 +18392,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 0.05,
+        "score": 0.15,
         "gamesPlayed": 2
       }
     },
@@ -18400,7 +18400,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 0.2,
+        "score": 0.4,
         "gamesPlayed": 4
       },
       "home": {
@@ -18442,7 +18442,7 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 0.0,
+        "score": 2.5,
         "gamesPlayed": 1
       },
       "home": {
@@ -18462,7 +18462,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 0.6,
+        "score": 0.7,
         "gamesPlayed": 3
       }
     },
@@ -18490,7 +18490,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 0.05,
+        "score": 0.15,
         "gamesPlayed": 2
       }
     },
@@ -18526,7 +18526,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 0.2,
+        "score": 0.4,
         "gamesPlayed": 4
       },
       "home": {
@@ -18554,13 +18554,13 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 0.0,
+        "score": 2.5,
         "gamesPlayed": 1
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 0.6,
+        "score": 0.7,
         "gamesPlayed": 3
       }
     },
@@ -18588,7 +18588,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 0.05,
+        "score": 0.15,
         "gamesPlayed": 2
       }
     },
@@ -18652,7 +18652,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 0.2,
+        "score": 0.4,
         "gamesPlayed": 4
       },
       "home": {
