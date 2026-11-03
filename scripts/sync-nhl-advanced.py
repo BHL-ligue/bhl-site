@@ -63,9 +63,9 @@ def one_season(season):
                 "SOG":number(s,"shots","shotsOnGoal"),"HIT":number(r,"hits"),
                 "BLK":number(r,"blockedShotAttempts","blockedShots"),
                 "TK":number(r,"takeaways")}
-        wins=number(f,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffWins")
+        wins=number(f,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffWins","totalFaceoffsWon")
         if wins is None:
-            wins=number(s,"faceoffWins","faceoffsWon","faceoffsWonTotal")
+            wins=number(s,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffsWon")
         faceoffs_available=wins is not None
         # NHL report omits some players' faceoff totals. Missing values
         # are provisionally zero, but flagged in output and the UI.
