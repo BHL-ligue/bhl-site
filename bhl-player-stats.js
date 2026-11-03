@@ -486,9 +486,9 @@ async function bhlShowWeeklyHonours(name,fantraxId,target){
 }
 
 async function playerHonours(name,target,fantraxId){
- const weekly=document.createElement('div');
  const traditional=document.createElement('div');
- target.replaceChildren(weekly,traditional);
+ const weekly=document.createElement('div');
+ target.replaceChildren(traditional,weekly);
  bhlShowWeeklyHonours(name,fantraxId,weekly);
  target=traditional;
  target.textContent='Recherche des honneurs dans le palmarès BHL…';
