@@ -1,4 +1,5 @@
-"""Daily NHL skater per-60 rates and league-wide percentiles (GP >= 1)."""
+"""NHL advanced stats: current season and rolling three-season totals/per-60 percentiles."""
+import bisect
 import datetime as dt
 import json
 import urllib.parse
@@ -6,24 +7,28 @@ import urllib.request
 from pathlib import Path
 
 DEST=Path(__file__).resolve().parents[1]/"data/nhl-advanced-stats.json"
-SEASON="20262027"
-METRICS={"FPTS60":"FPTS/60","PTS60":"PTS/60","G60":"B/60","A60":"A/60",
-         "SOG60":"TIRS/60","HIT60":"HITS/60","BLK60":"BLOCS/60","TK60":"TK/60"}
+SEASONS=["20242025","20252026","20262027"]
+METRICS={"FPTS":"FPTS","PTS":"PTS","G":"B","A":"A","SOG":"TIRS","HIT":"HITS","BLK":"BLOCS","TK":"TK"}
+WEIGHTS={"G":3,"A":2.5,"SOG":.3,"HIT":.1,"BLK":.2,"TK":.1,"FOW":.05}
+
 def get(url):
-    req=urllib.request.Request(url,headers={"User-Agent":"BHL-NHL-Advanced/1.0","Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=40) as response:return json.load(response)
-def report(kind):
+    req=urllib.request.Request(url,headers={"User-Agent":"BHL-NHL-Advanced/2.0","Accept":"application/json"})
+    with urllib.request.urlopen(req,timeout=45) as response:
+        return json.load(response)
+
+def report(kind,season):
     out=[];start=0
     while True:
-        params=urllib.parse.urlencode({"cayenneExp":f"seasonId={SEASON} and gameTypeId=2",
+        params=urllib.parse.urlencode({"cayenneExp":f"seasonId={season} and gameTypeId=2",
             "isAggregate":"true","isGame":"false","start":start,"limit":100})
         data=get(f"https://api.nhle.com/stats/rest/en/skater/{kind}?{params}")
         batch=data.get("data",[])
         if not batch:break
         out.extend(batch);start+=len(batch)
         if start>=int(data.get("total",start)):break
-        if start>3000:raise RuntimeError(f"Excessive pagination in {kind}")
+        if start>3000:raise RuntimeError(f"Excessive pagination: {kind} {season}")
     return out
+
 def number(row,*keys):
     for key in keys:
         value=row.get(key)
@@ -31,63 +36,99 @@ def number(row,*keys):
             try:return float(value)
             except (ValueError,TypeError):pass
     return None
+
 def by_id(rows):
     result={}
     for row in rows:
         pid=row.get("playerId")
         if pid is None:continue
         key=str(pid)
-        # Aggregate endpoints can include multiple team lines; prefer
-        # a season-total row if available rather than summing duplicates.
         if key not in result or (number(row,"gamesPlayed") or 0)>(number(result[key],"gamesPlayed") or 0):
             result[key]=row
     return result
-def main():
-    summary=by_id(report("summary"))
-    realtime=by_id(report("realtime"))
-    faceoffs=by_id(report("faceoffwins"))
-    toi=by_id(report("timeonice"))
+
+def one_season(season):
+    summary=by_id(report("summary",season))
+    realtime=by_id(report("realtime",season))
+    faceoffs=by_id(report("faceoffwins",season))
+    toi=by_id(report("timeonice",season))
     players={}
-    missing_faceoff=0
     for pid,s in summary.items():
-        gp=number(s,"gamesPlayed")
-        t=toi.get(pid,{})
-        seconds=number(t,"timeOnIce","totalTimeOnIce")
-        if not gp or gp<1 or seconds is None or seconds<=0:continue
+        gp=number(s,"gamesPlayed") or 0
+        seconds=number(toi.get(pid,{}),"timeOnIce","totalTimeOnIce")
+        if gp<1 or seconds is None or seconds<=0:continue
         r=realtime.get(pid,{})
         f=faceoffs.get(pid,{})
-        goals=number(s,"goals");assists=number(s,"assists")
-        shots=number(s,"shots","shotsOnGoal")
-        hits=number(r,"hits");blocks=number(r,"blockedShotAttempts","blockedShots")
-        takes=number(r,"takeaways")
-        wins=number(f,"faceoffWins","faceoffsWon","faceoffsWonTotal")
+        values={"G":number(s,"goals"),"A":number(s,"assists"),
+                "SOG":number(s,"shots","shotsOnGoal"),"HIT":number(r,"hits"),
+                "BLK":number(r,"blockedShotAttempts","blockedShots"),
+                "TK":number(r,"takeaways")}
+        wins=number(f,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffWins")
         if wins is None:
             wins=number(s,"faceoffWins","faceoffsWon","faceoffsWonTotal")
-        has_faceoff_data=wins is not None
-        if wins is None:
-            missing_faceoff+=1
-            wins=0
-        values={"PTS60":goals+assists if goals is not None and assists is not None else None,
-                "G60":goals,"A60":assists,"SOG60":shots,"HIT60":hits,"BLK60":blocks,"TK60":takes}
-        components=[(goals,3),(assists,2.5),(shots,.3),(hits,.1),(blocks,.2),(takes,.1),(wins,.05)]
-        values["FPTS60"]=sum(x*w for x,w in components) if all(x is not None for x,w in components) else None
-        rates={key:round(v*3600/seconds,3) if v is not None else None for key,v in values.items()}
-        players[pid]={"gp":int(gp),"toiSeconds":seconds,"rates":rates,
-                      "faceoffWinsAvailable":has_faceoff_data}
-    if len(players)<200:raise RuntimeError(f"Only {len(players)} skaters with time on ice; preserving existing data")
-    if not any(p["rates"]["FPTS60"] is not None for p in players.values()):
-        raise RuntimeError("No FPTS/60 values; preserving existing data")
-    for key in METRICS:
-        population=sorted(p["rates"][key] for p in players.values() if p["rates"][key] is not None)
-        if not population:continue
-        import bisect
-        for p in players.values():
-            value=p["rates"][key]
-            p.setdefault("percentiles",{})[key]=round(100*(bisect.bisect_left(population,value)+bisect.bisect_right(population,value))/(2*len(population)),1) if value is not None else None
-    output={"season":SEASON,"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),
-            "population":len(players),"minimumGames":1,"metrics":METRICS,"players":players,
-            "missingFaceoffWinsCount":missing_faceoff,"fpts60Provisional":missing_faceoff>0,
+        faceoffs_available=wins is not None
+        # NHL report omits some players' faceoff totals. Missing values
+        # are provisionally zero, but flagged in output and the UI.
+        values["FOW"]=wins if faceoffs_available else 0
+        if values["G"] is not None and values["A"] is not None:
+            values["PTS"]=values["G"]+values["A"]
+        else:values["PTS"]=None
+        values["FPTS"]=(sum(values[k]*weight for k,weight in WEIGHTS.items())
+                        if all(values[k] is not None for k in WEIGHTS) else None)
+        players[pid]={"gp":int(gp),"toiSeconds":seconds,"totals":values,
+                      "faceoffWinsAvailable":faceoffs_available}
+    print(f"{season}: {len(players)} eligible skaters")
+    return players
+
+def combine(season_data):
+    merged={}
+    for season_players in season_data:
+        for pid,p in season_players.items():
+            entry=merged.setdefault(pid,{"gp":0,"toiSeconds":0,"totals":{},
+                "faceoffWinsAvailable":True})
+            entry["gp"]+=p["gp"]
+            entry["toiSeconds"]+=p["toiSeconds"]
+            entry["faceoffWinsAvailable"] &= p["faceoffWinsAvailable"]
+            for key,value in p["totals"].items():
+                if key not in entry["totals"]:entry["totals"][key]=0
+                if value is None:entry["totals"][key]=None
+                elif entry["totals"][key] is not None:entry["totals"][key]+=value
+    return merged
+
+def publish_dataset(players):
+    if len(players)<200:raise RuntimeError(f"Only {len(players)} eligible skaters")
+    for p in players.values():
+        p["rates"]={key:round(value*3600/p["toiSeconds"],3) if value is not None else None
+                    for key,value in p["totals"].items()}
+        # Rates and totals have their own percentile populations.
+        p["percentiles"]={"total":{},"per60":{}}
+    for mode,field in (("total","totals"),("per60","rates")):
+        for key in METRICS:
+            population=sorted(p[field][key] for p in players.values() if p[field].get(key) is not None)
+            if not population:continue
+            for p in players.values():
+                value=p[field].get(key)
+                p["percentiles"][mode][key]=(round(100*(bisect.bisect_left(population,value)+
+                    bisect.bisect_right(population,value))/(2*len(population)),1)
+                    if value is not None else None)
+    missing=sum(not p["faceoffWinsAvailable"] for p in players.values())
+    complete=sum(p["totals"]["FPTS"] is not None for p in players.values())
+    if not complete:raise RuntimeError("No valid FPTS values; preserving last published file")
+    return {"population":len(players),"missingFaceoffWinsCount":missing,
+            "fptsProvisional":missing>0,"players":players}
+
+def main():
+    seasons={season:one_season(season) for season in SEASONS}
+    current=publish_dataset(combine([seasons[SEASONS[-1]]]))
+    last3=publish_dataset(combine([seasons[s] for s in SEASONS]))
+    output={"season":SEASONS[-1],"seasons":SEASONS,
+            "updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),
+            "minimumGames":1,"metrics":METRICS,
+            "datasets":{"current":current,"last3":last3},
             "source":"NHL official skater summary, realtime, faceoffwins and timeonice reports"}
-    DEST.write_text(json.dumps(output,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
-    print(f"Published {len(players)} skaters, {sum(p['rates']['FPTS60'] is not None for p in players.values())} complete fantasy rates")
+    # Atomic write so an interrupted run does not corrupt the snapshot.
+    tmp=DEST.with_suffix(".tmp")
+    tmp.write_text(json.dumps(output,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    tmp.replace(DEST)
+    print(f"Published current={current['population']} and last3={last3['population']} skaters")
 if __name__=="__main__":main()
