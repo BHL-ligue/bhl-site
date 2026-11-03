@@ -90,25 +90,33 @@
     '<div class="bhl-star-team">'+logo+'<span>'+esc(p.team)+'</span></div>'+
     '<div class="bhl-star-stats"><span><b>'+number(p.fpts)+'</b>FPTS</span><span><b>'+number(p.fpg)+'</b>FP/G</span><span><b>'+number(p.gp)+'</b>PJ</span></div></article>';
   }).join('');
+  // The NHL CDN headshot path requires a team code. Use the canonical
+  // player profile headshot URL instead of a guessed /season/id.png URL.
   body.querySelectorAll('[data-star-photo]').forEach(img=>{
-   const id=img.dataset.starPhoto,nhl=img.dataset.starNhl;
-   let attempts=0;
-   const sources=[
-    'https://assets.nhle.com/mugs/nhl/20252026/'+encodeURIComponent(nhl)+'.png',
-    'https://assets.nhle.com/mugs/nhl/20242025/'+encodeURIComponent(nhl)+'.png',
-    'https://assets.nhle.com/mugs/nhl/latest/'+encodeURIComponent(nhl)+'.png'
-   ];
-   img.onerror=()=>{
-    if(attempts<sources.length){img.src=sources[attempts++];return}
+   const nhl=img.dataset.starNhl;
+   const name=img.closest('.bhl-star-card')?.querySelector('[data-star-name]')?.dataset.starName||'';
+   const fallback=()=>{
     img.hidden=true;
-    const name=img.closest('.bhl-star-card')?.querySelector('[data-star-name]')?.dataset.starName;
-    if(!window.BHLPlayerStats?.officialIdentity||!name)return;
-    window.BHLPlayerStats.officialIdentity(id,name).then(profile=>{
+    const api=window.BHLPlayerStats;
+    if(!api?.officialIdentity)return;
+    api.officialIdentity(img.dataset.starPhoto,name).then(profile=>{
      if(!img.isConnected||!profile?.headshot)return;
      img.onerror=()=>{img.hidden=true};
-     img.hidden=false;img.src=profile.headshot;
+     img.hidden=false;
+     img.src=profile.headshot;
     }).catch(()=>{});
    };
+   img.onerror=fallback;
+   img.hidden=true;
+   if(!/^\\d+$/.test(nhl)){fallback();return}
+   fetch('https://api-web.nhle.com/v1/player/'+encodeURIComponent(nhl)+'/landing')
+    .then(response=>{if(!response.ok)throw Error('NHL profile unavailable');return response.json()})
+    .then(profile=>{
+     if(!img.isConnected)return;
+     if(typeof profile.headshot!=='string'||!/^https:\\/\\//.test(profile.headshot))throw Error('No official portrait');
+     img.hidden=false;
+     img.src=profile.headshot;
+    }).catch(fallback);
   });
  }
  body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
