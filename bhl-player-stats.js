@@ -326,18 +326,53 @@ async function historicNhl(name,target,fantraxId){
 function tradeHistory(name,target){
  target.textContent='Chargement des transactions BHL…';
  if(!window.BHLTrades?.load){target.textContent='Historique des transactions non disponible sur cette page.';return}
+ const historicalLogos={
+  'cleveland barons':'cleveland-barons.png','winnipeg jets':'winnipeg-jets.png',
+  'detroit cougars':'detroit-cougars.png','vegas golden knights':'vegas-golden-knights.png',
+  'montreal maroons':'montreal-maroons.png','edmonton oilers':'edmonton-oilers.png'
+ };
+ const teamLogo=team=>{
+  const key=norm(team);
+  if(historicalLogos[key])return historicalLogos[key];
+  const row=(window.BHLTrades.teams||[]).find(t=>norm(t[1])===key);
+  return row?.[2]||'';
+ };
+ const el=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n};
+ const org=(name)=>{
+  const wrap=el('span','bhl-trade-org');
+  const logo=teamLogo(name);
+  if(logo){const img=el('img','bhl-trade-logo');img.src='logos/'+logo;img.alt='';img.loading='lazy';img.onerror=()=>img.remove();wrap.append(img)}
+  wrap.append(el('span','',name||'Équipe inconnue'));return wrap;
+ };
  window.BHLTrades.load().then(trades=>{
   if(!target.isConnected)return;
   const key=norm(name),events=[];
   for(const t of trades){for(const m of t.moves||[]){if(m.position&&norm(m.asset)===key)events.push({t,m})}}
+  events.sort((a,b)=>String(b.t.date||'').localeCompare(String(a.t.date||''))||Number(b.t.id)-Number(a.t.id));
   const unique=new Set(events.map(e=>String(e.t.id)));
   target.replaceChildren();
-  const summary=document.createElement('p');summary.textContent=unique.size+' transaction(s) BHL enregistrée(s).';target.append(summary);
-  if(!events.length)return;
-  const list=document.createElement('ol');
-  for(const e of events.sort((a,b)=>String(b.t.date||'').localeCompare(String(a.t.date||'')))){
-   const li=document.createElement('li');li.textContent=(e.t.date||e.t.dateText||'Date inconnue')+' · Transaction nº '+e.t.id+' : '+e.m.from+' → '+e.m.to;list.append(li);
-  }target.append(list);
+  const container=el('div','bhl-trade-history');
+  const heading=el('div','bhl-trade-summary');
+  const count=el('strong','bhl-trade-count',String(unique.size));
+  heading.append(count,el('span','','Échange'+(unique.size>1?'s':'')+' dans l’historique BHL'));
+  container.append(heading);
+  if(!events.length){container.append(el('p','bhl-trade-empty','Aucun échange enregistré pour ce joueur.'));target.append(container);return}
+  const list=el('div','bhl-trade-timeline');
+  for(const {t,m} of events){
+   const card=el('article','bhl-trade-entry');
+   const head=el('div','bhl-trade-entry-head');
+   const date=el('span','bhl-trade-date',t.dateText||t.date||'Date inconnue');
+   const id=el('span','bhl-trade-id','ÉCHANGE Nº '+t.id);
+   head.append(date,id);
+   if(t.season)head.append(el('span','bhl-trade-season',t.season));
+   const route=el('div','bhl-trade-route');
+   const from=el('div','bhl-trade-end');from.append(el('small','','DE'),org(m.from));
+   const arrow=el('span','bhl-trade-arrow','→');arrow.setAttribute('aria-label','vers');
+   const to=el('div','bhl-trade-end');to.append(el('small','','VERS'),org(m.to));
+   route.append(from,arrow,to);
+   card.append(head,route);list.append(card);
+  }
+  container.append(list);target.append(container);
  }).catch(()=>{if(target.isConnected)target.textContent='Transactions temporairement indisponibles.'});
 }
 
