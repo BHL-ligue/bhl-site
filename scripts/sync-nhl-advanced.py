@@ -47,18 +47,40 @@ def by_id(rows):
             result[key]=row
     return result
 
+def realtime_fallback(season,pid):
+    """Try the same official report with an explicit player filter.
+
+    The league-wide aggregate report sometimes omits rows that the
+    player-profile endpoint can return individually.
+    """
+    params=urllib.parse.urlencode({"cayenneExp":f"seasonId={season} and gameTypeId=2 and playerId={pid}",
+        "isAggregate":"true","isGame":"false","start":0,"limit":100})
+    try:
+        data=get(f"https://api.nhle.com/stats/rest/en/skater/realtime?{params}")
+        rows=data.get("data",[])
+        return by_id(rows).get(str(pid),{})
+    except (OSError,ValueError,KeyError) as exc:
+        print(f"Realtime fallback unavailable for {season} / {pid}: {exc}")
+        return {}
+
 def one_season(season):
     summary=by_id(report("summary",season))
     realtime=by_id(report("realtime",season))
     faceoffs=by_id(report("faceoffwins",season))
     toi=by_id(report("timeonice",season))
     players={}
+    missing_realtime=[]
     for pid,s in summary.items():
         gp=number(s,"gamesPlayed") or 0
         seconds=number(toi.get(pid,{}),"timeOnIce","totalTimeOnIce")
         if gp<1 or seconds is None or seconds<=0:continue
         r=realtime.get(pid,{})
         f=faceoffs.get(pid,{})
+        if any(number(r,*fields) is None for fields in
+               (("hits",),("blockedShotAttempts","blockedShots"),("takeaways",))):
+            missing_realtime.append(pid)
+            alternate=realtime_fallback(season,pid)
+            if alternate:r=alternate
         values={"G":number(s,"goals"),"A":number(s,"assists"),
                 "SOG":number(s,"shots","shotsOnGoal"),"HIT":number(r,"hits"),
                 "BLK":number(r,"blockedShotAttempts","blockedShots"),
@@ -77,7 +99,8 @@ def one_season(season):
                         if all(values[k] is not None for k in WEIGHTS) else None)
         players[pid]={"gp":int(gp),"toiSeconds":seconds,"totals":values,
                       "faceoffWinsAvailable":faceoffs_available}
-    print(f"{season}: {len(players)} eligible skaters")
+    unresolved=sum(any(p["totals"][key] is None for key in ("HIT","BLK","TK")) for p in players.values())
+    print(f"{season}: {len(players)} eligible skaters, {len(missing_realtime)} realtime retries, {unresolved} unresolved")
     return players
 
 def combine(season_data):
