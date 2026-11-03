@@ -108,12 +108,12 @@
    };
    img.onerror=fallback;
    img.hidden=true;
-   if(!/^\\d+$/.test(nhl)){fallback();return}
+   if(!nhl||!Array.from(nhl).every(char=>char>='0'&&char<='9')){fallback();return}
    fetch('https://api-web.nhle.com/v1/player/'+encodeURIComponent(nhl)+'/landing')
     .then(response=>{if(!response.ok)throw Error('NHL profile unavailable');return response.json()})
     .then(profile=>{
      if(!img.isConnected)return;
-     if(typeof profile.headshot!=='string'||!/^https:\\/\\//.test(profile.headshot))throw Error('No official portrait');
+     if(typeof profile.headshot!=='string'||!profile.headshot.startsWith('https://'))throw Error('No official portrait');
      img.hidden=false;
      img.src=profile.headshot;
     }).catch(fallback);
