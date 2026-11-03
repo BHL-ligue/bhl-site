@@ -435,7 +435,62 @@ function bhlShowCupWinners(target,winners){
  target.append(grid);
 }
 
-async function playerHonours(name,target){
+let bhlWeeklyHonoursRequest;
+function bhlWeeklyHonours(){
+ return bhlWeeklyHonoursRequest||(bhlWeeklyHonoursRequest=fetch('data/bhl-weekly-stars.json',{cache:'no-store'})
+  .then(response=>{if(!response.ok)throw Error('Palmarès hebdomadaire indisponible');return response.json()})
+  .catch(error=>{bhlWeeklyHonoursRequest=null;throw error}));
+}
+async function bhlShowWeeklyHonours(name,fantraxId,target){
+ const section=document.createElement('section');
+ section.className='bhl-weekly-player-honours';
+ target.append(section);
+ try{
+  const data=await bhlWeeklyHonours();
+  if(!section.isConnected)return;
+  const matches=(data.periods||[]).filter(period=>period.complete).flatMap(period=>
+   (period.players||[]).filter(player=>fantraxId
+    ?String(player.id)===String(fantraxId)
+    :bhlTrophyNameKey(player.name)===bhlTrophyNameKey(name))
+    .map(player=>({period,player}))
+  ).sort((a,b)=>Number(b.period.period)-Number(a.period.period));
+  const intro=document.createElement('div');intro.className='bhl-honours-intro';
+  const title=document.createElement('div');title.className='bhl-honours-heading';title.textContent='Joueurs de la semaine';
+  const count=document.createElement('div');count.className='bhl-honours-count';
+  count.textContent=matches.length+' sélection'+(matches.length!==1?'s':'');
+  intro.append(title,count);section.append(intro);
+  if(!matches.length){
+   const empty=document.createElement('p');empty.className='bhl-honours-empty';
+   empty.textContent='Aucune sélection parmi les périodes complétées cette saison.';
+   section.append(empty);return;
+  }
+  const grid=document.createElement('div');grid.className='bhl-honours-grid';
+  for(const {period,player} of matches){
+   const card=document.createElement('article');card.className='bhl-honour-card';
+   const art=document.createElement('div');art.className='bhl-honour-art';
+   art.textContent='⭐';
+   const info=document.createElement('div');info.className='bhl-honour-info';
+   const date=document.createElement('span');date.className='bhl-honour-season';
+   date.textContent='Période '+period.period+' · '+period.start+' au '+period.end;
+   const label=document.createElement('strong');label.textContent='Joueur de la semaine · '+player.slot;
+   const team=document.createElement('small');team.textContent=player.team+' · '+Number(player.fpts).toLocaleString('fr-CA')+' FPTS · '+Number(player.fpg).toLocaleString('fr-CA')+' FP/G';
+   info.append(date,label,team);card.append(art,info);grid.append(card);
+  }
+  section.append(grid);
+  const source=document.createElement('p');source.className='bhl-honours-source';
+  const link=document.createElement('a');link.href='bhl-fantrax.html#honours';link.textContent='Voir les joueurs de la semaine ↗';
+  source.append(link);section.append(source);
+ }catch(error){
+  if(section.isConnected)section.textContent='Sélections hebdomadaires temporairement indisponibles.';
+ }
+}
+
+async function playerHonours(name,target,fantraxId){
+ const weekly=document.createElement('div');
+ const traditional=document.createElement('div');
+ target.replaceChildren(weekly,traditional);
+ bhlShowWeeklyHonours(name,fantraxId,weekly);
+ target=traditional;
  target.textContent='Recherche des honneurs dans le palmarès BHL…';
  try{
   const [trophyData,cupData]=await Promise.allSettled([bhlTrophyRows(),bhlCupRows()]);
@@ -542,7 +597,7 @@ function addSections(dialog,name,fantraxId){
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='honours')playerHonours(name,section);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='honours')playerHonours(name,section,fantraxId);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
