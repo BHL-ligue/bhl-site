@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T18:34:31.537925+00:00",
+  "updatedAt": "2026-11-03T19:30:20.055182+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -9947,7 +9947,7 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 117.15
+        "score": 116.85
       },
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
@@ -9978,7 +9978,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 171.45
+        "score": 171.95
       }
     },
     {
@@ -10038,7 +10038,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.8
+        "score": 174.1
       },
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
@@ -10056,7 +10056,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 117.15
+        "score": 116.85
       }
     },
     {
@@ -10095,7 +10095,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 171.45
+        "score": 171.95
       }
     },
     {
@@ -10129,7 +10129,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.8
+        "score": 174.1
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
@@ -10173,7 +10173,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 117.15
+        "score": 116.85
       }
     },
     {
@@ -10212,7 +10212,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 171.45
+        "score": 171.95
       }
     },
     {
@@ -10220,7 +10220,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 173.8
+        "score": 174.1
       },
       "home": {
         "teamId": "uzhvniysmo2tig2e",
@@ -11665,7 +11665,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 173.8,
+            "score": 174.1,
             "gamesPlayed": 50
           },
           "home": {
@@ -11685,7 +11685,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 171.45,
+            "score": 171.95,
             "gamesPlayed": 55
           }
         },
@@ -11727,7 +11727,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 117.15,
+            "score": 116.85,
             "gamesPlayed": 48
           }
         },
@@ -11763,7 +11763,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 173.8,
+            "score": 174.1,
             "gamesPlayed": 50
           },
           "home": {
@@ -11811,7 +11811,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 171.45,
+            "score": 171.95,
             "gamesPlayed": 55
           }
         },
@@ -11853,7 +11853,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 117.15,
+            "score": 116.85,
             "gamesPlayed": 48
           }
         },
@@ -11861,7 +11861,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 173.8,
+            "score": 174.1,
             "gamesPlayed": 50
           },
           "home": {
@@ -11937,7 +11937,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 171.45,
+            "score": 171.95,
             "gamesPlayed": 55
           }
         },
@@ -11959,7 +11959,7 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 117.15,
+            "score": 116.85,
             "gamesPlayed": 48
           },
           "home": {
@@ -18183,7 +18183,7 @@
       "totalPointsFor": 2455.8,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2103.95
+      "totalPointsAgainst": 2103.65
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18203,7 +18203,7 @@
       "totalPointsFor": 2590.2,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2275.1
+      "totalPointsAgainst": 2275.6
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18213,7 +18213,7 @@
       "totalPointsFor": 2472.3,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2294.3
+      "totalPointsAgainst": 2294.8
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18230,7 +18230,7 @@
       "teamName": "New York Rangers",
       "rank": 7,
       "points": "9-6-0",
-      "totalPointsFor": 2379.75,
+      "totalPointsFor": 2372.25,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
       "totalPointsAgainst": 2233.2
@@ -18243,7 +18243,7 @@
       "totalPointsFor": 2290.35,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2177.55
+      "totalPointsAgainst": 2177.25
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18263,7 +18263,7 @@
       "totalPointsFor": 2262.45,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2151.3
+      "totalPointsAgainst": 2151.0
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18273,7 +18273,7 @@
       "totalPointsFor": 2235.0,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2321.05
+      "totalPointsAgainst": 2321.55
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18283,7 +18283,7 @@
       "totalPointsFor": 2066.55,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2330.05
+      "totalPointsAgainst": 2330.35
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18303,7 +18303,7 @@
       "totalPointsFor": 1920.75,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2245.95
+      "totalPointsAgainst": 2246.25
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18313,7 +18313,7 @@
       "totalPointsFor": 1874.85,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2255.7
+      "totalPointsAgainst": 2256.0
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
