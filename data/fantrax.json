@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T03:10:32.014475+00:00",
+  "updatedAt": "2026-11-03T03:12:53.464987+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12021,7 +12021,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 22.7,
+            "score": 22.65,
             "gamesPlayed": 9
           },
           "home": {
@@ -12147,7 +12147,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 22.7,
+            "score": 22.65,
             "gamesPlayed": 9
           },
           "home": {
@@ -12273,7 +12273,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 22.7,
+            "score": 22.65,
             "gamesPlayed": 9
           },
           "home": {
@@ -18182,7 +18182,7 @@
       "totalPointsFor": 2442.0,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2100.1
+      "totalPointsAgainst": 2100.05
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18242,7 +18242,7 @@
       "totalPointsFor": 2279.1,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2174.1
+      "totalPointsAgainst": 2174.05
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18262,7 +18262,7 @@
       "totalPointsFor": 2250.15,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2148.85
+      "totalPointsAgainst": 2148.8
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18372,7 +18372,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 22.7,
+        "score": 22.65,
         "gamesPlayed": 9
       },
       "home": {
@@ -18498,7 +18498,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 22.7,
+        "score": 22.65,
         "gamesPlayed": 9
       },
       "home": {
@@ -18624,7 +18624,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 22.7,
+        "score": 22.65,
         "gamesPlayed": 9
       },
       "home": {
