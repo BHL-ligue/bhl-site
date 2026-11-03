@@ -24,7 +24,7 @@
 .bhl-star-card{background:linear-gradient(150deg,var(--star-primary,#263b57),var(--star-secondary,#18263c) 78%);border-color:var(--star-accent,#445873)}
 .bhl-star-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--star-accent,#cc0000)}
 .bhl-star-card:first-child{border-color:var(--star-accent,#d9505c)}
-.bhl-star-card .bhl-star-position{background:var(--star-accent,#cc0000)}
+.bhl-star-card .bhl-star-position{background:var(--star-accent,#cc0000);color:var(--star-accent-text,#fff)}
 .bhl-star-photo-wrap{height:150px;display:flex;align-items:center;justify-content:center;position:relative}
 .bhl-star-photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:0;pointer-events:none}
 .bhl-star-photo-fallback img{width:83%;height:92%;object-fit:contain;opacity:.14;filter:grayscale(1) brightness(1.6)}
@@ -78,22 +78,22 @@
  const selector=document.getElementById('bhl-stars-period'),body=document.getElementById('bhl-stars-body');
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const teamStyles={
-  'anaheim mighty ducks':['#4a285e','#231533','#c4a2d8','anaheim-mightyducks.png'],
-  'atlanta thrashers':['#175a8c','#862c36','#e6b44d','atlanta-thrashers.png'],
+  'anaheim mighty ducks':['#4a285e','#231533','#187b66','anaheim-mightyducks.png'],
+  'atlanta thrashers':['#175a8c','#862c36','#b64a34','atlanta-thrashers.png'],
   'boston bruins':['#2b2b2b','#b88712','#fcb514','boston-bruins.png'],
-  'california golden seals':['#14665b','#bd9234','#f2c04a','california-goldenseals.png'],
-  'chicago blackhawks':['#8b1c2b','#242424','#e0ae57','chicago-blackhawks.png'],
-  'colorado avalanche':['#76243b','#24547c','#8db7d7','colorado-avalanche.png'],
+  'california golden seals':['#14665b','#bd9234','#d2aa48','california-goldenseals.png'],
+  'chicago blackhawks':['#8b1c2b','#242424','#d4a53b','chicago-blackhawks.png'],
+  'colorado avalanche':['#76243b','#24547c','#5c99c7','colorado-avalanche.png'],
   'detroit red wings':['#a51927','#641521','#e73d4c','detroit-redwings.png'],
   'florida panthers':['#9e2234','#9c792d','#d6b164','florida-panthers.png'],
-  'hartford whalers':['#156d63','#1c487a','#a8d6b5','hartford-whalers.png'],
+  'hartford whalers':['#156d63','#1c487a','#4fa88b','hartford-whalers.png'],
   'minnesota north stars':['#236b43','#b18e1d','#e8c75e','minnesota-northstars.png'],
-  'montreal canadiens':['#a51b35','#174e91','#f4f4f4','montreal-canadiens.png'],
+  'montreal canadiens':['#a51b35','#174e91','#2567b3','montreal-canadiens.png'],
   'nashville predators':['#a47c14','#203c73','#ffcc32','nashville-predators.png'],
-  'new york rangers':['#194d98','#a9273d','#df3548','newyork-rangers.png'],
+  'new york rangers':['#194d98','#a9273d','#dc344c','newyork-rangers.png'],
   'ottawa senators':['#8d2030','#9b772d','#d7b36a','ottawa-senators.png'],
   'quebec nordiques':['#1755a1','#ad283c','#e34148','quebec-nordiques.png'],
-  'toronto maple leafs':['#1b4883','#3170a7','#9fc8e8','toronto-mapleleafs.png']
+  'toronto maple leafs':['#1b4883','#3170a7','#72a9d4','toronto-mapleleafs.png']
  };
  const normalizeTeam=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const number=n=>Number(n).toLocaleString('fr-CA',{maximumFractionDigits:2});
@@ -108,7 +108,10 @@
    const portrait='https://assets.nhle.com/mugs/nhl/20262027/'+encodeURIComponent(p.nhlId)+'.png';
    const logo=theme[3]?'<img class="bhl-star-team-logo" loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
    const watermark=theme[3]?'<img loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
-   return '<article class="bhl-star-card" style="--star-primary:'+theme[0]+';--star-secondary:'+theme[1]+';--star-accent:'+theme[2]+'"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
+   const accentRgb=[1,3,5].map(i=>parseInt(theme[2].slice(i,i+2),16));
+   const accentLuminance=(accentRgb[0]*299+accentRgb[1]*587+accentRgb[2]*114)/1000;
+   const accentText=accentLuminance>150?'#142132':'#ffffff';
+   return '<article class="bhl-star-card" style="--star-primary:'+theme[0]+';--star-secondary:'+theme[1]+';--star-accent:'+theme[2]+';--star-accent-text:'+accentText+'"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
     '<div class="bhl-star-photo-wrap"><span class="bhl-star-photo-fallback" aria-hidden="true">'+watermark+'</span><img class="bhl-star-portrait" loading="lazy" alt="Photo de '+esc(p.name)+'" data-star-photo="'+esc(p.id)+'" data-star-nhl="'+esc(p.nhlId)+'" src="'+portrait+'"></div>'+
     '<button class="bhl-star-name" type="button" data-star-id="'+esc(p.id)+'" data-star-name="'+esc(p.name)+'">'+esc(p.name)+'</button>'+
     '<div class="bhl-star-team">'+logo+'<span>'+esc(p.team)+'</span></div>'+
