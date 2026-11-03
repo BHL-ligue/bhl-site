@@ -44,3 +44,15 @@
 @media(max-width:800px){#actualites .side-stories{grid-template-columns:minmax(0,1fr)}#actualites .side.side-compact{grid-template-columns:minmax(100px,.65fr) minmax(0,1.35fr)}}
 
 .home-all-news{text-align:right;margin:16px 0 30px}.home-all-news a{display:inline-block;color:#cc0000;font-weight:800;font-size:14px;padding:10px 0}.home-all-news a:hover{text-decoration:underline}.home-all-news a:focus-visible{outline:2px solid #cc0000;outline-offset:4px}
+
+/* Accueil : bandeau des scores compact, discret et harmonisé au fond clair. */
+[data-fantrax-home].bhl-ft{margin:12px 0 24px;padding:10px 12px 6px;background:#f3f4f6;border:1px solid #e7e9ed;border-top:1px solid #e7e9ed;border-radius:12px;box-shadow:none}
+[data-fantrax-home] .bhl-ft-strip{gap:9px;padding:2px 0 7px;scrollbar-width:thin;scrollbar-color:#cbd0d6 transparent}
+[data-fantrax-home] .bhl-score-card{flex:0 0 224px;min-width:0;min-height:0;border:1px solid #e1e4e8;border-radius:9px;background:#f9fafb;box-shadow:none}
+[data-fantrax-home] .bhl-score-card-top{padding:5px 10px;background:#f0f1f3;font-size:8px;border-bottom-color:#e6e8eb}
+[data-fantrax-home] .bhl-score-line{padding:6px 10px;min-height:39px;gap:8px}
+[data-fantrax-home] .bhl-score-line+.bhl-score-line{border-top-color:#e9ebee}
+[data-fantrax-home] .bhl-score-team{font-size:10px;gap:7px}
+[data-fantrax-home] .bhl-score-logo{width:25px;height:25px;flex-basis:25px}
+[data-fantrax-home] .bhl-score-number{font-size:17px}
+@media(max-width:600px){[data-fantrax-home].bhl-ft{padding:8px 9px 4px;margin:9px 0 20px;border-radius:10px}[data-fantrax-home] .bhl-score-card{flex-basis:205px}[data-fantrax-home] .bhl-score-line{min-height:36px;padding:5px 8px}[data-fantrax-home] .bhl-score-logo{width:23px;height:23px;flex-basis:23px}[data-fantrax-home] .bhl-score-number{font-size:16px}}
