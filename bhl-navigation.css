@@ -25,3 +25,9 @@
  #bhl-global-nav .bhl-nav-dg{margin:5px 0 0}
 }
 @media(max-width:440px){#bhl-global-nav .bhl-nav-inner{width:calc(100% - 24px)}#bhl-global-nav .bhl-nav-brand{font-size:17px}}
+
+/* Une bannière discrète au-dessus du menu, sans rogner la photo. */
+#bhl-global-nav .bhl-photo-banner{position:relative;height:200px;overflow:hidden;background:#202020;isolation:isolate}
+#bhl-global-nav .bhl-photo-banner::before{content:"";position:absolute;inset:-24px;background:linear-gradient(#0005,#0005),url("images/jean-beliveau-banner.jpg") center 40%/cover no-repeat;filter:blur(12px);z-index:-1}
+#bhl-global-nav .bhl-photo-banner img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;margin:0;filter:none}
+@media(max-width:600px){#bhl-global-nav .bhl-photo-banner{height:150px}}
