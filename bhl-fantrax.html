@@ -21,7 +21,15 @@
 .bhl-stars-description{color:#bdc9d8;font-size:13px;margin:10px 0 20px}
 .bhl-stars-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .bhl-star-card{position:relative;min-width:0;background:linear-gradient(160deg,#263b57,#18263c);border:1px solid #445873;border-radius:14px;padding:12px;overflow:hidden}
-.bhl-star-card:first-child{border-color:#d9505c}
+.bhl-star-card{background:linear-gradient(150deg,var(--star-primary,#263b57),var(--star-secondary,#18263c) 78%);border-color:var(--star-accent,#445873)}
+.bhl-star-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--star-accent,#cc0000)}
+.bhl-star-card:first-child{border-color:var(--star-accent,#d9505c)}
+.bhl-star-card .bhl-star-position{background:var(--star-accent,#cc0000)}
+.bhl-star-photo-wrap{height:150px;display:flex;align-items:center;justify-content:center;position:relative}
+.bhl-star-photo-fallback{font-size:42px;font-weight:900;color:#ffffff77;position:absolute;z-index:0}
+.bhl-star-portrait{position:relative;z-index:1;width:auto;max-height:150px;min-height:0}
+.bhl-star-team-logo{width:24px;height:24px;object-fit:contain;vertical-align:middle;margin-right:7px}
+.bhl-star-team{display:flex;align-items:center;gap:4px}
 .bhl-star-position{display:inline-block;background:#cc0000;border-radius:5px;padding:3px 9px;font-size:12px;font-weight:900}
 .bhl-star-portrait{height:130px;display:block;margin:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 8px 14px #07111b)}
 .bhl-star-name{font-weight:900;font-size:17px;color:white;display:block;margin:5px 0;cursor:pointer;background:none;border:0;text-align:left;padding:0}
@@ -45,6 +53,25 @@
  const root=document.getElementById('bhl-weekly-stars');if(!root)return;
  const selector=document.getElementById('bhl-stars-period'),body=document.getElementById('bhl-stars-body');
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const teamStyles={
+  'anaheim mighty ducks':['#173b36','#0d2423','#e5a23a','anaheim-mightyducks.png'],
+  'atlanta thrashers':['#1a4269','#10283f','#e8a73d','atlanta-thrashers.png'],
+  'boston bruins':['#38302a','#141414','#fcb514','boston-bruins.png'],
+  'california golden seals':['#17605a','#103b37','#f2c04a','california-goldenseals.png'],
+  'chicago blackhawks':['#811b27','#340d15','#e0ae57','chicago-blackhawks.png'],
+  'colorado avalanche':['#70243a','#291725','#8db7d7','colorado-avalanche.png'],
+  'detroit red wings':['#a51927','#3b1017','#f1f1f1','detroit-redwings.png'],
+  'florida panthers':['#9e2234','#341622','#d6b164','florida-panthers.png'],
+  'hartford whalers':['#156d63','#10322f','#a8d6b5','hartford-whalers.png'],
+  'minnesota north stars':['#236b43','#10331f','#e8c75e','minnesota-northstars.png'],
+  'montreal canadiens':['#a51b35','#291b40','#f4f4f4','montreal-canadiens.png'],
+  'nashville predators':['#a47c14','#222b45','#ffcc32','nashville-predators.png'],
+  'new york rangers':['#194d98','#152b58','#df3548','newyork-rangers.png'],
+  'ottawa senators':['#8d2030','#211c20','#d7b36a','ottawa-senators.png'],
+  'quebec nordiques':['#1755a1','#122b59','#e34148','quebec-nordiques.png'],
+  'toronto maple leafs':['#1b4883','#10284d','#9fc8e8','toronto-mapleleafs.png']
+ };
+ const normalizeTeam=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
  const number=n=>Number(n).toLocaleString('fr-CA',{maximumFractionDigits:2});
  let periods=[];
  function render(){
@@ -53,13 +80,36 @@
   if(!period.players?.length){body.className='bhl-stars-empty';body.textContent='Statistiques officielles indisponibles pour cette période.';return}
   body.className='bhl-stars-grid';
   body.innerHTML=period.players.map(p=>{
+   const theme=teamStyles[normalizeTeam(p.team)]||['#263b57','#18263c','#cc0000',null];
    const portrait='https://assets.nhle.com/mugs/nhl/20262027/'+encodeURIComponent(p.nhlId)+'.png';
-   return '<article class="bhl-star-card"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
-    '<img class="bhl-star-portrait" loading="lazy" alt="" src="'+portrait+'" onerror="this.style.visibility=\'hidden\'">'+
+   const initials=String(p.name||'').split(/\\s+/).map(x=>x[0]||'').slice(0,2).join('').toUpperCase();
+   const logo=theme[3]?'<img class="bhl-star-team-logo" loading="lazy" alt="" src="logos/'+theme[3]+'" onerror="this.hidden=true">':'';
+   return '<article class="bhl-star-card" style="--star-primary:'+theme[0]+';--star-secondary:'+theme[1]+';--star-accent:'+theme[2]+'"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
+    '<div class="bhl-star-photo-wrap"><span class="bhl-star-photo-fallback">'+esc(initials)+'</span><img class="bhl-star-portrait" loading="lazy" alt="Photo de '+esc(p.name)+'" data-star-photo="'+esc(p.id)+'" data-star-nhl="'+esc(p.nhlId)+'" src="'+portrait+'"></div>'+
     '<button class="bhl-star-name" type="button" data-star-id="'+esc(p.id)+'" data-star-name="'+esc(p.name)+'">'+esc(p.name)+'</button>'+
-    '<div class="bhl-star-team">'+esc(p.team)+'</div>'+
+    '<div class="bhl-star-team">'+logo+'<span>'+esc(p.team)+'</span></div>'+
     '<div class="bhl-star-stats"><span><b>'+number(p.fpts)+'</b>FPTS</span><span><b>'+number(p.fpg)+'</b>FP/G</span><span><b>'+number(p.gp)+'</b>PJ</span></div></article>';
   }).join('');
+  body.querySelectorAll('[data-star-photo]').forEach(img=>{
+   const id=img.dataset.starPhoto,nhl=img.dataset.starNhl;
+   let attempts=0;
+   const sources=[
+    'https://assets.nhle.com/mugs/nhl/20252026/'+encodeURIComponent(nhl)+'.png',
+    'https://assets.nhle.com/mugs/nhl/20242025/'+encodeURIComponent(nhl)+'.png',
+    'https://assets.nhle.com/mugs/nhl/latest/'+encodeURIComponent(nhl)+'.png'
+   ];
+   img.onerror=()=>{
+    if(attempts<sources.length){img.src=sources[attempts++];return}
+    img.hidden=true;
+    const name=img.closest('.bhl-star-card')?.querySelector('[data-star-name]')?.dataset.starName;
+    if(!window.BHLPlayerStats?.officialIdentity||!name)return;
+    window.BHLPlayerStats.officialIdentity(id,name).then(profile=>{
+     if(!img.isConnected||!profile?.headshot)return;
+     img.onerror=()=>{img.hidden=true};
+     img.hidden=false;img.src=profile.headshot;
+    }).catch(()=>{});
+   };
+  });;
  }
  body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
  selector.addEventListener('change',render);
