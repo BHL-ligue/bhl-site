@@ -146,3 +146,8 @@
 .bhl-advanced-track{height:8px;background:#e1e7ee;border-radius:99px;overflow:hidden;margin-top:11px}
 .bhl-advanced-track>div{height:100%;background:linear-gradient(90deg,#a70000,#cc0000);border-radius:99px}
 @media(max-width:540px){.bhl-advanced-grid{grid-template-columns:1fr}}
+
+.bhl-advanced-controls{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 20px}
+.bhl-advanced-controls label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#35455b;flex:1 1 180px}
+.bhl-advanced-controls select{width:100%;min-height:42px;padding:9px 12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:#15253b;font:inherit;font-size:13px}
+.bhl-advanced-controls select:focus-visible{outline:2px solid #cc0000;outline-offset:2px}
