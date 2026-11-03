@@ -70,9 +70,9 @@ async function bhlCurrentOfficialStats(player,id){
  return {stats:{...result.v,GP:gp,FPts:Math.round(result.fpts*100)/100,'FP/G':Math.round(result.fpts/gp*100)/100},nhlTeam:String(profile.currentTeamAbbrev||player.nhlTeam||''),goalie};
 }
 const bhlUsageCache=new Map();
-async function bhlSeasonUsage(nhlId,season,team,goalie=false){
+async function bhlSeasonUsage(nhlId,season,team,goalie=false,gamesPlayed=null){
  if(goalie)return {TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'};
- const key=[nhlId,season,team].join(':');
+ const key=[nhlId,season,team,gamesPlayed].join(':');
  if(!bhlUsageCache.has(key)){
   bhlUsageCache.set(key,(async()=>{
    const [toi,pp,pk]=await Promise.all([
@@ -80,9 +80,14 @@ async function bhlSeasonUsage(nhlId,season,team,goalie=false){
     nhlSeasonReport('skater','powerplay',nhlId,season,team).catch(()=>null),
     nhlSeasonReport('skater','penaltykill',nhlId,season,team).catch(()=>null)
    ]);
-   return {TOI:bhlTimeString(historicalNumber(toi,['timeOnIce','totalTimeOnIce'])),
-    TOIPP:bhlTimeString(historicalNumber(pp,['ppTimeOnIce','timeOnIce'])),
-    TOIPK:bhlTimeString(historicalNumber(pk,['shTimeOnIce','timeOnIce']))};
+   const gp=Number(gamesPlayed)||Number(historicalNumber(toi,['gamesPlayed','games'])||0);
+   const average=(report,fields)=>{
+    const total=historicalNumber(report,fields);
+    return gp>0&&total!==null?bhlTimeString(total/gp):'N/D';
+   };
+   return {TOI:average(toi,['timeOnIce','totalTimeOnIce']),
+    TOIPP:average(pp,['ppTimeOnIce','timeOnIce']),
+    TOIPK:average(pk,['shTimeOnIce','timeOnIce'])};
   })().catch(()=>({TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'})));
  }
  return bhlUsageCache.get(key);
@@ -125,7 +130,7 @@ async function fill(target,id,name){
   target.innerHTML=table(official,{period:'Saison régulière 2026-27'});
   if(!official.goalie){
    const nhlId=await bhlLookupOfficialId(resolved.player,resolved.id);
-   const usage=await bhlSeasonUsage(nhlId,'20262027','');
+   const usage=await bhlSeasonUsage(nhlId,'20262027','',false,official.stats.GP);
    if(target.isConnected){const cells=target.querySelectorAll('.bhl-player-table tbody tr td');
     ['TOIPP','TOIPK','TOI'].forEach((key,i)=>{if(cells[cells.length-3+i])cells[cells.length-3+i].textContent=usage[key]});}
   }
@@ -203,7 +208,7 @@ async function nhlSeasonReport(type,report,id,season,team){
      const selected=accepted?rows.filter(row=>accepted.includes(code(row))):rows;
      if(!selected.length){failures.push(mode+': équipes reçues '+[...new Set(rows.map(code))].join(','));continue}
      if(selected.length===1)return selected[0];
-     const excluded=/pct|percentage|average|pergame|per60|rate|ratio|timeonice|plusminus|^(playerId|seasonId|gameTypeId|teamId|gameId|gameDate)$/i;
+     const excluded=/pct|percentage|average|pergame|per60|rate|ratio|plusminus|^(playerId|seasonId|gameTypeId|teamId|gameId|gameDate)$/i;
      const merged={};
      for(const row of selected)for(const [field,value] of Object.entries(row)){
       if(typeof value!=='number'||excluded.test(field))continue;
@@ -310,7 +315,7 @@ async function historicNhl(name,target,fantraxId){
      row.cells[3].textContent=fpts!==null?fmt(Math.round(fpts*100)/100):'N/D';
      keys.forEach((key,j)=>row.cells[5+j+(goalie?(j>=6?1:0):(j>=2?1:0))].textContent=v[key]===null?'N/D':fmt(v[key]));
      if(v.G!==null&&v.A!==null)row.cells[goalie?11:7].textContent=fmt(v.G+v.A);
-     const usage=await bhlSeasonUsage(id,String(season.season),teamCode,goalie);
+     const usage=await bhlSeasonUsage(id,String(season.season),teamCode,goalie,gp);
      if(row.isConnected)['TOIPP','TOIPK','TOI'].forEach((key,j)=>{row.cells[row.cells.length-3+j].textContent=usage[key]});
     }catch(e){if(row.isConnected){row.cells[2].textContent='N/D';row.cells[3].textContent='N/D';row.title=e.message;row.cells[3].title=e.message;row.cells[3].style.cursor='help';const detail=document.createElement('small');detail.style.display='block';detail.style.fontSize='10px';detail.style.fontWeight='normal';detail.textContent='ⓘ';detail.title=e.message;row.cells[3].append(detail);if(!target.querySelector('.bhl-historical-error')){const error=document.createElement('p');error.className='bhl-historical-error';error.style.fontSize='12px';error.style.color='#9b1c1c';error.textContent='Diagnostic LNH : '+e.message;target.append(error)}}}
    }
