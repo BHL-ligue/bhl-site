@@ -18,7 +18,7 @@ end $$;
 update public.bhl_news set status='pending' where id=(select article from news_test_context);
 do $$ declare n int; begin
  update public.bhl_news set title='Changed while pending' where id=(select article from news_test_context); get diagnostics n=row_count;
- if n<>0 then raise exception 'DG changed pending article'; end if;
+ if n<>1 then raise exception 'DG cannot edit own pending article'; end if;
 end $$;
 select set_config('request.jwt.claims',json_build_object('sub',other_dg,'role','authenticated')::text,true) is not null as other_claims_set from news_test_context;
 do $$ begin
@@ -56,5 +56,5 @@ do $$ begin
  if not exists(select 1 from public.bhl_news where id=(select article from news_test_context) and published_at is not null and body='Article corrigé') then raise exception 'Approved article not public'; end if;
 end $$;
 reset role;
-select 'PASS: private drafts, owner-only edits, submission lock, rejection/resubmission, admin approval, public read, anonymous write denied, author spoof denied' as result;
+select 'PASS: private drafts, owner-only edits, pending article edits, rejection/resubmission, admin approval, public read, anonymous write denied, author spoof denied' as result;
 rollback;

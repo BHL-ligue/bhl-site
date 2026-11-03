@@ -14,7 +14,7 @@ do $$ begin
  begin
  update public.bhl_news set cover_path=(select other_dg::text||'/'||image::text||'.webp' from cover_test) where id=(select article from cover_test);
  raise exception 'Other author cover accepted';
- exception when check_violation then null; end;
+ exception when insufficient_privilege then null; end;
 end $$;
 select set_config('request.jwt.claims',json_build_object('sub',other_dg,'role','authenticated')::text,true) is not null as other_session from cover_test;
 do $$ begin
