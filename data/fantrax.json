@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-03T02:51:10.246685+00:00",
+  "updatedAt": "2026-11-03T02:54:08.879451+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12063,13 +12063,13 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 11.45,
+            "score": 11.5,
             "gamesPlayed": 6
           },
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 8.1,
+            "score": 8.2,
             "gamesPlayed": 2
           }
         },
@@ -12167,7 +12167,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 8.1,
+            "score": 8.2,
             "gamesPlayed": 2
           }
         },
@@ -12189,7 +12189,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 11.45,
+            "score": 11.5,
             "gamesPlayed": 6
           },
           "home": {
@@ -12265,7 +12265,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 8.1,
+            "score": 8.2,
             "gamesPlayed": 2
           }
         },
@@ -12307,7 +12307,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 11.45,
+            "score": 11.5,
             "gamesPlayed": 6
           }
         }
@@ -18172,7 +18172,7 @@
       "totalPointsFor": 2702.55,
       "winPercentage": 0.933,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2154.4
+      "totalPointsAgainst": 2154.45
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18232,7 +18232,7 @@
       "totalPointsFor": 2351.85,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2231.0
+      "totalPointsAgainst": 2231.1
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18252,7 +18252,7 @@
       "totalPointsFor": 1959.9,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2219.4
+      "totalPointsAgainst": 2219.5
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18292,7 +18292,7 @@
       "totalPointsFor": 1748.25,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2261.6
+      "totalPointsAgainst": 2261.65
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18302,7 +18302,7 @@
       "totalPointsFor": 1896.3,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2237.4
+      "totalPointsAgainst": 2237.45
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18322,7 +18322,7 @@
       "totalPointsFor": 1748.25,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2234.1
+      "totalPointsAgainst": 2234.2
     }
   ],
   "matchups": [
@@ -18414,13 +18414,13 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 11.45,
+        "score": 11.5,
         "gamesPlayed": 6
       },
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 8.1,
+        "score": 8.2,
         "gamesPlayed": 2
       }
     },
@@ -18518,7 +18518,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 8.1,
+        "score": 8.2,
         "gamesPlayed": 2
       }
     },
@@ -18540,7 +18540,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 11.45,
+        "score": 11.5,
         "gamesPlayed": 6
       },
       "home": {
@@ -18616,7 +18616,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 8.1,
+        "score": 8.2,
         "gamesPlayed": 2
       }
     },
@@ -18658,7 +18658,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 11.45,
+        "score": 11.5,
         "gamesPlayed": 6
       }
     }
