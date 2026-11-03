@@ -1,3 +1,6 @@
+export const ARTICLE_COLORS=['#191919','#626b75','#cc0000'];
+const colorMap=new Map([['rgb(25,25,25)','#191919'],['rgb(98,107,117)','#626b75'],['rgb(204,0,0)','#cc0000'],...ARTICLE_COLORS.map(c=>[c,c])]);
+export function articleColor(value){return colorMap.get(String(value).replace(/\s/g,'').toLowerCase())||null;}
 // Render a deliberately small subset of rich article content, creating fresh DOM
 // nodes. No event attributes, embeds, raw HTML, scripts or unsafe URLs survive.
 const allowed=new Set(['P','BR','H2','H3','STRONG','B','EM','I','U','S','BLOCKQUOTE','UL','OL','LI','A','SPAN']);
@@ -9,7 +12,7 @@ export function richFragment(html){const parsed=new DOMParser().parseFromString(
  const el=document.createElement(child.tagName.toLowerCase());
  if(child.tagName==='A'){const href=safeLink(child.getAttribute('href'));if(href){el.href=href;el.rel='noopener noreferrer';el.target='_blank';}}
  // The CSSOM parses values before this allowlist, rejecting invalid CSS syntax.
- for(const prop of ['color','backgroundColor']){const value=child.style[prop];if(/^(#[0-9a-f]{3,8}|rgba?\([\d.,%\s]+\)|[a-z]+)$/i.test(value)&&value.length<60)el.style[prop]=value;}
+ const color=articleColor(child.style.color);if(color)el.style.color=color;
  const align=child.style.textAlign||[...child.classList].find(c=>/^ql-align-(center|right|justify)$/.test(c))?.slice(9);if(['left','center','right','justify'].includes(align))el.style.textAlign=align;
  copy(child,el);parent.append(el);
  }}copy(parsed.body,out);return out;}
