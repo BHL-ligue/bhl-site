@@ -39,7 +39,7 @@ def by_id(rows):
         key=str(pid)
         # Aggregate endpoints can include multiple team lines; prefer
         # a season-total row if available rather than summing duplicates.
-        if key not in result or number(row,"gamesPlayed") and number(row,"gamesPlayed")>number(result[key],"gamesPlayed"):
+        if key not in result or (number(row,"gamesPlayed") or 0)>(number(result[key],"gamesPlayed") or 0):
             result[key]=row
     return result
 def main():
