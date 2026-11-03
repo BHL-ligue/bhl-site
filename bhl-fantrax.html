@@ -4,7 +4,64 @@
 *{box-sizing:border-box}body{margin:0;background:#f1f3f5;color:#20252d;font:16px/1.5 Arial,sans-serif}main{max-width:1200px;margin:30px auto;padding:0 18px}h1{font-size:36px;margin-bottom:5px}h2{font-size:21px}.eyebrow{color:#c00;font-weight:bold;letter-spacing:.1em}.muted{color:#606975}.panel{background:white;border:1px solid #dfe3e8;border-radius:12px;padding:20px;margin:18px 0}.bar{display:flex;gap:14px;flex-wrap:wrap;align-items:end}label{display:block;font-weight:bold;font-size:14px}input,select{display:block;padding:11px;margin-top:6px;border:1px solid #bec5cd;border-radius:7px;font:inherit;max-width:100%}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:650px}th,td{padding:12px;text-align:left;border-bottom:1px solid #e5e7eb}th{background:#f2f3f5}td.num{text-align:right;font-variant-numeric:tabular-nums}.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.game{padding:16px;border:1px solid #e0e3e7;border-radius:9px}.score{display:flex;justify-content:space-between;gap:12px;margin:7px 0}.score strong{color:#c00}.notice{padding:12px;background:#fff4d8;border-radius:8px}.error{color:#a00}.hidden{display:none}@media(max-width:600px){h1{font-size:29px}.panel{padding:13px}main{padding:0 10px}.bar>label{width:100%}.bar input,.bar select{width:100%}}
 .bhl-standings-table{min-width:1050px;font-size:13px}.bhl-standings-table th{font-size:11px;white-space:nowrap;color:#3d506b;background:#edf2f8;padding:12px 9px}.bhl-standings-table td{padding:10px 9px}.bhl-standings-table tbody tr:nth-child(even){background:#f8fafc}.bhl-standings-table tbody tr:hover{background:#eaf3fa}.bhl-standings-table .bhl-team-col{min-width:205px}.bhl-standings-table .bhl-score-logo{width:29px;height:29px;flex-basis:29px}.bhl-standings-table .bhl-score-team{font-size:12px}.bhl-standings-table .bhl-rank,.bhl-standings-table .bhl-points{font-weight:900;color:#172b47}.bhl-standings-table .num{white-space:nowrap;font-variant-numeric:tabular-nums}.bhl-standings-table tbody tr:nth-child(-n+8) .bhl-rank{color:#11618b}
 </style><link rel="stylesheet" href="bhl-fantrax-widgets.css?v=score1"><link rel="stylesheet" href="bhl-player-stats.css?v=1"></head><body><div id="bhl-global-nav"></div><main><div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE</div><h1>Saison</h1><p class="muted">Classement, affrontements et effectifs de la saison en cours.</p><p id="sync" role="status">Chargement des données…</p><div id="content" class="hidden">
-<section class="panel"><h2>Classement · Standings Fantrax</h2><p class="muted">Classement synchronisé depuis Fantrax (Standings). Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
+<style>
+.bhl-stars-panel{background:linear-gradient(145deg,#111b2b,#182a43);border-radius:18px;padding:24px;color:white;overflow:hidden}
+.bhl-stars-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.bhl-stars-kicker{color:#ff6971;font-size:12px;font-weight:900;letter-spacing:.14em}
+.bhl-stars-title{font-size:clamp(26px,4vw,39px);font-weight:900;line-height:1.1;margin:7px 0}
+.bhl-stars-select{background:#26374f;color:white;border:1px solid #5a6981;border-radius:9px;padding:10px}
+.bhl-stars-description{color:#bdc9d8;font-size:13px;margin:10px 0 20px}
+.bhl-stars-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bhl-star-card{position:relative;min-width:0;background:linear-gradient(160deg,#263b57,#18263c);border:1px solid #445873;border-radius:14px;padding:12px;overflow:hidden}
+.bhl-star-card:first-child{border-color:#d9505c}
+.bhl-star-position{display:inline-block;background:#cc0000;border-radius:5px;padding:3px 9px;font-size:12px;font-weight:900}
+.bhl-star-portrait{height:130px;display:block;margin:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 8px 14px #07111b)}
+.bhl-star-name{font-weight:900;font-size:17px;color:white;display:block;margin:5px 0;cursor:pointer;background:none;border:0;text-align:left;padding:0}
+.bhl-star-team{color:#b7c8dc;font-size:12px;min-height:34px}
+.bhl-star-stats{display:flex;gap:8px;margin-top:12px}
+.bhl-star-stats span{flex:1;background:#0e1b2b;border-radius:8px;padding:8px;font-size:11px;color:#b9c8d8}
+.bhl-star-stats b{display:block;font-size:20px;color:white}
+.bhl-stars-empty{padding:24px;border:1px dashed #66758a;border-radius:12px;color:#e1e8f2}
+@media(max-width:760px){.bhl-stars-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bhl-stars-panel{padding:15px}.bhl-star-portrait{height:100px}}
+</style>
+<section class="panel" id="bhl-weekly-stars">
+ <div class="bhl-stars-panel">
+  <div class="bhl-stars-top"><div><div class="bhl-stars-kicker">BHL • LES ÉTOILES</div><div class="bhl-stars-title">Joueurs de la semaine</div></div><label for="bhl-stars-period">Période BHL<select class="bhl-stars-select" id="bhl-stars-period"></select></label></div>
+  <p class="bhl-stars-description">Le six étoiles de la période : 1 LW · 1 C · 1 RW · 2 D · 1 G. Sélection fondée sur les FPTS (60 %) et FP/G (40 %) officiels LNH, selon le calendrier Fantrax.</p>
+  <div id="bhl-stars-body" class="bhl-stars-empty">Chargement du classement hebdomadaire…</div>
+ </div>
+</section>
+<script src="bhl-player-stats.js?v=averagetimeorder20261102" defer></script>
+<script>
+(function(){
+ const root=document.getElementById('bhl-weekly-stars');if(!root)return;
+ const selector=document.getElementById('bhl-stars-period'),body=document.getElementById('bhl-stars-body');
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const number=n=>Number(n).toLocaleString('fr-CA',{maximumFractionDigits:2});
+ let periods=[];
+ function render(){
+  const period=periods.find(p=>String(p.period)===selector.value);
+  if(!period){body.className='bhl-stars-empty';body.textContent='Aucune période disponible.';return}
+  if(!period.players?.length){body.className='bhl-stars-empty';body.textContent='Statistiques officielles indisponibles pour cette période.';return}
+  body.className='bhl-stars-grid';
+  body.innerHTML=period.players.map(p=>{
+   const portrait='https://assets.nhle.com/mugs/nhl/20262027/'+encodeURIComponent(p.nhlId)+'.png';
+   return '<article class="bhl-star-card"><span class="bhl-star-position">'+esc(p.slot)+'</span>'+
+    '<img class="bhl-star-portrait" loading="lazy" alt="" src="'+portrait+'" onerror="this.style.visibility=\'hidden\'">'+
+    '<button class="bhl-star-name" type="button" data-star-id="'+esc(p.id)+'" data-star-name="'+esc(p.name)+'">'+esc(p.name)+'</button>'+
+    '<div class="bhl-star-team">'+esc(p.team)+'</div>'+
+    '<div class="bhl-star-stats"><span><b>'+number(p.fpts)+'</b>FPTS</span><span><b>'+number(p.fpg)+'</b>FP/G</span><span><b>'+number(p.gp)+'</b>PJ</span></div></article>';
+  }).join('');
+ }
+ body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
+ selector.addEventListener('change',render);
+ fetch('data/bhl-weekly-stars.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('not published');return r.json()}).then(data=>{
+  periods=(data.periods||[]).sort((a,b)=>b.period-a.period);
+  selector.replaceChildren(...periods.map(p=>new Option('Période '+p.period+' · '+p.start+' au '+p.end+(p.complete?'':' (en cours)'),String(p.period))));
+  render();
+ }).catch(()=>{body.className='bhl-stars-empty';body.textContent='Les sélections hebdomadaires seront disponibles après la première synchronisation officielle.'});
+})();
+</script><section class="panel"><h2>Classement · Standings Fantrax</h2><p class="muted">Classement synchronisé depuis Fantrax (Standings). Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
 <section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>
 <section class="panel" id="upcoming-panel" hidden><h2 id="upcoming-title">Prochains affrontements</h2><p id="upcoming-dates" class="muted"></p><div id="upcoming-games" class="games"></div></section><section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></div></main>
 <script src="bhl-score-ui.js?v=1"></script><script src="data/fantrax-player-stats.js?v=20261102"></script><script src="bhl-roster.js?v=playerstats1"></script>
