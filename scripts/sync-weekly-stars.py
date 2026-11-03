@@ -14,11 +14,11 @@ def fetch(url):
     req=urllib.request.Request(url,headers={"User-Agent":"BHL-weekly-stars/1.0","Accept":"application/json"})
     with urllib.request.urlopen(req,timeout=35) as response:return json.load(response)
 def report(kind,report_name,season,start,end):
-    expression=f"gameTypeId=2 and seasonId={season} and gameDate>={start} and gameDate<={end}"
+    expression=f'gameDate>="{start}" and gameDate<="{end} 23:59:59" and gameTypeId=2'
     base=f"https://api.nhle.com/stats/rest/en/{kind}/{report_name}"
     rows=[];offset=0
     while True:
-        query=urllib.parse.urlencode({"cayenneExp":expression,"isAggregate":"true","isGame":"false","start":offset,"limit":100})
+        query=urllib.parse.urlencode({"cayenneExp":expression,"isAggregate":"true","isGame":"true","start":offset,"limit":500})
         result=fetch(base+"?"+query)
         batch=result.get("data",[])
         rows.extend(batch)
@@ -65,9 +65,8 @@ def main():
     for period in period_list:
         start=date_only(period["startDate"])
         end=date_only(period["endDate"])
-        # The Fantrax boundary is in the evening, so NHL games fall on
-        # dates from the next day through the end date, inclusive.
-        first=(start+dt.timedelta(days=1)).isoformat()
+        # Keep the opening date: Fantrax periods begin before NHL evening games.
+        first=start.isoformat()
         last=end.isoformat()
         if first>dt.datetime.now(dt.timezone.utc).date().isoformat():continue
         try:
