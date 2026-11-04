@@ -41,3 +41,10 @@
  #playoff-scorers .scorer-filters label{min-width:0;flex:1 1 0;font-size:11px}
  #playoff-scorers .scorer-filters select{min-width:0;width:100%;font-size:12px;padding:8px 5px}
 }
+
+/* Keep both mobile playoff scorer selectors inside their own columns. */
+@media(max-width:700px){
+ #playoff-scorers .scorer-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:end;width:100%;min-width:0}
+ #playoff-scorers .scorer-filters label{display:flex;flex-direction:column;gap:5px;min-width:0;max-width:none;width:100%;flex:none}
+ #playoff-scorers .scorer-filters select{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;margin:0;padding:9px 24px 9px 7px;font-size:11px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
