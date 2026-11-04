@@ -11,7 +11,37 @@
 </main><script src="bhl-navigation.js?v=global3" defer></script><script src="bhl-player-stats.js?v=clean-trades-20261103" defer></script><script>
 'use strict';
 const $=id=>document.getElementById(id),format=n=>Number(n||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
-let dataset=[];let playerIdentities={};const photoCache=new Map();const photoQueue=[];let photoActive=0;function queuePhoto(task){photoQueue.push(task);runPhotoQueue()}function runPhotoQueue(){while(photoActive<5&&photoQueue.length){const task=photoQueue.shift();photoActive++;Promise.resolve().then(task).catch(()=>{}).finally(()=>{photoActive--;runPhotoQueue()})}}async function loadPortrait(avatar,id,name){if(!avatar.isConnected)return;const key=String(id);if(photoCache.has(key)){const url=photoCache.get(key);if(url)showPortrait(avatar,url);return}let url='';try{const identity=await window.BHLPlayerStats?.officialIdentity?.(id,name);url=identity?.headshot||''}catch(e){}if(!url){const entry=playerIdentities[key];const nhlId=entry?.status==='confirmed'?Number(entry.nhlId):0;if(nhlId>0){try{const response=await fetch('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');if(response.ok)url=(await response.json()).headshot||''}catch(e){}}}photoCache.set(key,url);if(url&&avatar.isConnected)showPortrait(avatar,url)}function showPortrait(avatar,url){if(!/^https:\/\//.test(url))return;const img=new Image();img.alt='';img.loading='lazy';img.onload=()=>{if(avatar.isConnected)avatar.replaceChildren(img)};img.src=url}const portraitObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){portraitObserver.unobserve(entry.target);const el=entry.target;queuePhoto(()=>loadPortrait(el,el.dataset.playerId,el.dataset.playerName))}}},{rootMargin:'500px'}):null;
+let dataset=[];let playerIdentities={};const photoCache=new Map();const photoQueue=[];let photoActive=0;function queuePhoto(task){photoQueue.push(task);runPhotoQueue()}function runPhotoQueue(){while(photoActive<5&&photoQueue.length){const task=photoQueue.shift();photoActive++;Promise.resolve().then(task).catch(()=>{}).finally(()=>{photoActive--;runPhotoQueue()})}}async function loadPortrait(avatar,id,name){
+ if(!avatar.isConnected||!name||name==='Identité non résolue')return;
+ const key=String(id);
+ if(photoCache.has(key)){const cached=photoCache.get(key);if(cached)showPortrait(avatar,cached);return}
+ const entry=playerIdentities[key];
+ let nhlId=entry?.status==='confirmed'?Number(entry.nhlId):0;
+ let url='';
+ // The verified BHL/NHL identity map is preferred over name-only matching.
+ if(nhlId>0){
+  try{const response=await fetch('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');if(response.ok)url=(await response.json()).headshot||''}catch(e){}
+ }
+ if(!url){
+  try{
+   const identity=await window.BHLPlayerStats?.officialIdentity?.(id,name);
+   if(identity?.nhlId&&/^https:\/\//.test(identity.headshot||''))url=identity.headshot;
+   if(!nhlId&&identity?.nhlId)nhlId=Number(identity.nhlId);
+  }catch(e){}
+ }
+ // NHL mugshots can remain available even when the player landing page has no portrait.
+ if(!url&&nhlId>0)url='https://assets.nhle.com/mugs/nhl/latest/'+nhlId+'.png';
+ photoCache.set(key,url);
+ if(url&&avatar.isConnected)showPortrait(avatar,url);
+}
+function showPortrait(avatar,url){
+ if(!/^https:\/\//.test(url))return;
+ const img=new Image();img.alt='';img.loading='lazy';img.decoding='async';
+ img.onload=()=>{if(avatar.isConnected)avatar.replaceChildren(img)};
+ img.onerror=()=>{photoCache.set(String(avatar.dataset.playerId),'')};
+ img.src=url;
+}
+const portraitObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){portraitObserver.unobserve(entry.target);const el=entry.target;queuePhoto(()=>loadPortrait(el,el.dataset.playerId,el.dataset.playerName))}}},{rootMargin:'500px'}):null;
 const organizations={"Cleveland Barons":"Boston Bruins","Boston Bruins":"Boston Bruins","Winnipeg Jets":"Colorado Avalanche","Colorado Avalanche":"Colorado Avalanche","Detroit Cougars":"Detroit Red Wings","Detroit Red Wings":"Detroit Red Wings","Vegas Golden Knights":"Florida Panthers","Florida Panthers":"Florida Panthers","Montréal Maroons":"Montréal Canadiens","Montreal Maroons":"Montréal Canadiens","Montréal Canadiens":"Montréal Canadiens","Montreal Canadiens":"Montréal Canadiens","Edmonton Oilers":"Ottawa Senators","Ottawa Senators":"Ottawa Senators"};
 const normTeam=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const orgMap=new Map(Object.entries(organizations).map(([name,org])=>[normTeam(name),org]));
@@ -34,7 +64,7 @@ function render(){
  for(const [i,r] of rows.entries()){
   const tr=document.createElement('tr');
   const cells=[String(i+1),r.name,'',String(r.starts),String(r.gp),format(r.fpts),r.starts?format(r.fpts/r.starts):'—',r.gp?format(r.fpts/r.gp):'—'];
-  cells.forEach((value,j)=>{const td=document.createElement('td');td.textContent=value;if(j===0)td.className='rank';if(j===1){td.className='player';const btn=document.createElement('button');btn.type='button';btn.className='player-profile';const avatar=document.createElement('span');avatar.className='player-avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent=r.name.split(/\\s+/).slice(0,2).map(x=>x[0]||'').join('').toUpperCase();avatar.dataset.playerId=String(r.id);avatar.dataset.playerName=r.name;if(portraitObserver)portraitObserver.observe(avatar);else queuePhoto(()=>loadPortrait(avatar,r.id,r.name));const label=document.createElement('span');label.className='player-name';label.textContent=r.name;btn.append(avatar,label);btn.dataset.bhlPlayerId=String(r.id);btn.dataset.bhlPlayerName=r.name;btn.title='Ouvrir la fiche de '+r.name;td.replaceChildren(btn)}if(j===2){td.className='team';const holder=document.createElement('div');holder.className='team-logos';for(const name of [...r.teams].sort((a,b)=>a.localeCompare(b,'fr'))){const file=teamLogos[logoKey(name)];if(file){const img=document.createElement('img');img.className='team-logo';img.src='logos/'+file;img.alt=name;img.title=name;img.loading='lazy';img.onerror=()=>{const fallback=document.createElement('span');fallback.className='team-fallback';fallback.textContent=name;img.replaceWith(fallback)};holder.append(img)}else{const fallback=document.createElement('span');fallback.className='team-fallback';fallback.textContent=name;holder.append(fallback)}}td.append(holder)}if(j>=3)td.className='num';tr.append(td)});
+  cells.forEach((value,j)=>{const td=document.createElement('td');td.textContent=value;if(j===0)td.className='rank';if(j===1){td.className='player';const btn=document.createElement('button');btn.type='button';btn.className='player-profile';const avatar=document.createElement('span');avatar.className='player-avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent=r.name.split(/\s+/).slice(0,2).map(x=>x[0]||'').join('').toUpperCase();avatar.dataset.playerId=String(r.id);avatar.dataset.playerName=r.name;if(portraitObserver)portraitObserver.observe(avatar);else queuePhoto(()=>loadPortrait(avatar,r.id,r.name));const label=document.createElement('span');label.className='player-name';label.textContent=r.name;btn.append(avatar,label);btn.dataset.bhlPlayerId=String(r.id);btn.dataset.bhlPlayerName=r.name;btn.title='Ouvrir la fiche de '+r.name;td.replaceChildren(btn)}if(j===2){td.className='team';const holder=document.createElement('div');holder.className='team-logos';for(const name of [...r.teams].sort((a,b)=>a.localeCompare(b,'fr'))){const file=teamLogos[logoKey(name)];if(file){const img=document.createElement('img');img.className='team-logo';img.src='logos/'+file;img.alt=name;img.title=name;img.loading='lazy';img.onerror=()=>{const fallback=document.createElement('span');fallback.className='team-fallback';fallback.textContent=name;img.replaceWith(fallback)};holder.append(img)}else{const fallback=document.createElement('span');fallback.className='team-fallback';fallback.textContent=name;holder.append(fallback)}}td.append(holder)}if(j>=3)td.className='num';tr.append(td)});
   body.append(tr);
  }
  if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=8;td.className='empty';td.textContent='Aucun résultat disponible pour ces filtres.';tr.append(td);body.append(tr)}
