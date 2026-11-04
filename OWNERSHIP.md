@@ -17,3 +17,11 @@ Les noms sont complétés par `getPlayerIds?sport=NHL` et les résultats histori
 - `node tests/test-ownership-view.mjs`: vérifier la génération de la vue et ses filtres avec un DOM simulé.
 
 Le workflow `ownership-history.yml` actualise la saison courante quotidiennement. Lors d’une nouvelle saison, ajouter son identifiant de ligue au registre `LEAGUES` du script. Le jeu de données de la saison courante peut évoluer jusqu’à la fin de chaque période.
+
+## Contrôle de production 2025-26
+
+Le contrôle en lecture seule couvre les 24 périodes de 2025-26. Sur 350 scores d’équipe en compétition, 337 concordent exactement, y compris les points par catégorie. Les 13 autres écarts sont conservés dans `data/ownership/production-audit-2025-26.json`, avec leur période, équipe et catégorie. Aucune correction arbitraire n’est appliquée. Les variantes Samuel/Sam Montembeault, Ben/Benjamin Kindel, Michael/Mikey Eyssimont, Dan/Daniel Vladar et Bo/Benoit-Olivier Groulx sont rapprochées uniquement lorsqu’une identité unique existe dans les rapports officiels LNH de la saison.
+
+La saison régulière comprend les périodes 1 à 21 (323 scores concordants sur 336). Les séries comptent 8, puis 4, puis 2 équipes en compétition (14 scores concordants sur 14). Les effectifs encore marqués ACTIVE chez les équipes éliminées ne sont pas comptés. Les dates limites sont confrontées aux heures de début des matchs LNH; une journée coupée par une limite incompatible est bloquée plutôt qu’arrondie.
+
+Cette concordance agrégée ne certifie pas à elle seule chaque contribution individuelle et ne constitue pas un classement officiel des pointeurs. Le détail individuel original Fantrax, non accessible publiquement, reste nécessaire pour attribuer les petits écarts aux joueurs concernés. Le rapport complet du calcul est conservé sept jours comme artifact du workflow de contrôle; le résumé et les écarts sont conservés dans le dépôt.

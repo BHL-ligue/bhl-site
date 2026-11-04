@@ -1,0 +1,463 @@
+{
+  "status": "needs_review",
+  "season": "2025-26",
+  "checkedAt": "2026-11-04T00:20:03.779079+00:00",
+  "scope": "Read-only season audit of starting-lineup contributions, not official individual records or a career ranking.",
+  "totalPeriods": 24,
+  "checkedPeriods": 24,
+  "validatedPeriods": 17,
+  "validatedTeamPeriods": 337,
+  "teamPeriods": 350,
+  "sourceRun": "https://github.com/BHL-ligue/bhl-site/actions/runs/41746003843",
+  "sourceCommit": "1a295b6e9413418ac2cfe335d6d027caa9002538",
+  "method": "NHL regular-season statistical reports for the exact Fantrax calendar window; ACTIVE players only, using their selected roster position and the season scoringCategorySettings. Playoffs include only teams present in the official matchups.",
+  "rankingPublishable": false,
+  "remainingCause": "Not established. Official individual Fantrax figures are needed to attribute the aggregate differences to particular players. No manual point adjustment has been made.",
+  "periods": [
+    {
+      "period": 1,
+      "phase": "regular",
+      "start": "2025-10-07T17:00:00.0-0400",
+      "end": "2025-10-13T12:29:59.0-0400",
+      "nhlDateStart": "2025-10-07",
+      "nhlDateEnd": "2025-10-12",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 15,
+      "status": "needs_review"
+    },
+    {
+      "period": 2,
+      "phase": "regular",
+      "start": "2025-10-13T12:30:00.0-0400",
+      "end": "2025-10-20T18:59:59.0-0400",
+      "nhlDateStart": "2025-10-13",
+      "nhlDateEnd": "2025-10-19",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 3,
+      "phase": "regular",
+      "start": "2025-10-20T19:00:00.0-0400",
+      "end": "2025-10-27T18:59:59.0-0400",
+      "nhlDateStart": "2025-10-20",
+      "nhlDateEnd": "2025-10-26",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 15,
+      "status": "needs_review"
+    },
+    {
+      "period": 4,
+      "phase": "regular",
+      "start": "2025-10-27T19:00:00.0-0400",
+      "end": "2025-11-03T19:29:59.0-0500",
+      "nhlDateStart": "2025-10-27",
+      "nhlDateEnd": "2025-11-02",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 5,
+      "phase": "regular",
+      "start": "2025-11-03T19:30:00.0-0500",
+      "end": "2025-11-10T18:59:59.0-0500",
+      "nhlDateStart": "2025-11-03",
+      "nhlDateEnd": "2025-11-09",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 6,
+      "phase": "regular",
+      "start": "2025-11-10T19:00:00.0-0500",
+      "end": "2025-11-17T18:59:59.0-0500",
+      "nhlDateStart": "2025-11-10",
+      "nhlDateEnd": "2025-11-16",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 15,
+      "status": "needs_review"
+    },
+    {
+      "period": 7,
+      "phase": "regular",
+      "start": "2025-11-17T19:00:00.0-0500",
+      "end": "2025-11-24T18:59:59.0-0500",
+      "nhlDateStart": "2025-11-17",
+      "nhlDateEnd": "2025-11-23",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 8,
+      "phase": "regular",
+      "start": "2025-11-24T19:00:00.0-0500",
+      "end": "2025-12-01T18:59:59.0-0500",
+      "nhlDateStart": "2025-11-24",
+      "nhlDateEnd": "2025-11-30",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 9,
+      "phase": "regular",
+      "start": "2025-12-01T19:00:00.0-0500",
+      "end": "2025-12-08T19:29:59.0-0500",
+      "nhlDateStart": "2025-12-01",
+      "nhlDateEnd": "2025-12-07",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 10,
+      "phase": "regular",
+      "start": "2025-12-08T19:30:00.0-0500",
+      "end": "2025-12-15T18:59:59.0-0500",
+      "nhlDateStart": "2025-12-08",
+      "nhlDateEnd": "2025-12-14",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 11,
+      "phase": "regular",
+      "start": "2025-12-15T19:00:00.0-0500",
+      "end": "2025-12-22T18:59:59.0-0500",
+      "nhlDateStart": "2025-12-15",
+      "nhlDateEnd": "2025-12-21",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 12,
+      "phase": "regular",
+      "start": "2025-12-22T19:00:00.0-0500",
+      "end": "2025-12-29T18:59:59.0-0500",
+      "nhlDateStart": "2025-12-22",
+      "nhlDateEnd": "2025-12-28",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 13,
+      "phase": "regular",
+      "start": "2025-12-29T19:00:00.0-0500",
+      "end": "2026-01-05T18:59:59.0-0500",
+      "nhlDateStart": "2025-12-29",
+      "nhlDateEnd": "2026-01-04",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 14,
+      "phase": "regular",
+      "start": "2026-01-05T19:00:00.0-0500",
+      "end": "2026-01-12T18:59:59.0-0500",
+      "nhlDateStart": "2026-01-05",
+      "nhlDateEnd": "2026-01-11",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 15,
+      "phase": "regular",
+      "start": "2026-01-12T19:00:00.0-0500",
+      "end": "2026-01-19T13:29:59.0-0500",
+      "nhlDateStart": "2026-01-12",
+      "nhlDateEnd": "2026-01-18",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 16,
+      "phase": "regular",
+      "start": "2026-01-19T13:30:00.0-0500",
+      "end": "2026-01-26T18:59:59.0-0500",
+      "nhlDateStart": "2026-01-19",
+      "nhlDateEnd": "2026-01-25",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 15,
+      "status": "needs_review"
+    },
+    {
+      "period": 17,
+      "phase": "regular",
+      "start": "2026-01-26T19:00:00.0-0500",
+      "end": "2026-02-23T11:59:59.0-0500",
+      "nhlDateStart": "2026-01-26",
+      "nhlDateEnd": "2026-02-23",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 18,
+      "phase": "regular",
+      "start": "2026-02-23T12:00:00.0-0500",
+      "end": "2026-03-02T13:59:59.0-0500",
+      "nhlDateStart": "2026-02-23",
+      "nhlDateEnd": "2026-03-01",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 16,
+      "status": "validated"
+    },
+    {
+      "period": 19,
+      "phase": "regular",
+      "start": "2026-03-02T14:00:00.0-0500",
+      "end": "2026-03-09T15:59:59.0-0400",
+      "nhlDateStart": "2026-03-02",
+      "nhlDateEnd": "2026-03-08",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 13,
+      "status": "needs_review"
+    },
+    {
+      "period": 20,
+      "phase": "regular",
+      "start": "2026-03-09T16:00:00.0-0400",
+      "end": "2026-03-16T18:59:59.0-0400",
+      "nhlDateStart": "2026-03-09",
+      "nhlDateEnd": "2026-03-15",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 13,
+      "status": "needs_review"
+    },
+    {
+      "period": 21,
+      "phase": "regular",
+      "start": "2026-03-16T19:00:00.0-0400",
+      "end": "2026-03-23T19:29:59.0-0400",
+      "nhlDateStart": "2026-03-16",
+      "nhlDateEnd": "2026-03-22",
+      "competingTeams": 16,
+      "notInMatchups": [],
+      "validatedTeams": 13,
+      "status": "needs_review"
+    },
+    {
+      "period": 22,
+      "phase": "playoffs",
+      "start": "2026-03-23T19:30:00.0-0400",
+      "end": "2026-03-30T18:59:59.0-0400",
+      "nhlDateStart": "2026-03-23",
+      "nhlDateEnd": "2026-03-29",
+      "competingTeams": 8,
+      "notInMatchups": [
+        "a0rhv4zsm9n3iko4",
+        "c3tlac31m9n3iknm",
+        "epalqsppm9n3ikno",
+        "nf3tvtjqm9n3iknh",
+        "ir9ertv0m9n3iko9",
+        "6qw5okr5m9n3ikny",
+        "c1diayqdm9n3iko0",
+        "ykpw8vxwm9n3iknq"
+      ],
+      "validatedTeams": 8,
+      "status": "validated"
+    },
+    {
+      "period": 23,
+      "phase": "playoffs",
+      "start": "2026-03-30T19:00:00.0-0400",
+      "end": "2026-04-06T18:59:59.0-0400",
+      "nhlDateStart": "2026-03-30",
+      "nhlDateEnd": "2026-04-05",
+      "competingTeams": 4,
+      "notInMatchups": [
+        "kf3lhlmmm9n3iknd",
+        "a0rhv4zsm9n3iko4",
+        "zvqk74kum9n3ikob",
+        "c3tlac31m9n3iknm",
+        "4ercwyy0m9n3iko8",
+        "epalqsppm9n3ikno",
+        "nf3tvtjqm9n3iknh",
+        "ir9ertv0m9n3iko9",
+        "lamjm433m9n3iknk",
+        "6qw5okr5m9n3ikny",
+        "c1diayqdm9n3iko0",
+        "ykpw8vxwm9n3iknq"
+      ],
+      "validatedTeams": 4,
+      "status": "validated"
+    },
+    {
+      "period": 24,
+      "phase": "playoffs",
+      "start": "2026-04-06T19:00:00.0-0400",
+      "end": "2026-04-17T11:59:58.0-0400",
+      "nhlDateStart": "2026-04-06",
+      "nhlDateEnd": "2026-04-17",
+      "competingTeams": 2,
+      "notInMatchups": [
+        "kf3lhlmmm9n3iknd",
+        "a0rhv4zsm9n3iko4",
+        "zvqk74kum9n3ikob",
+        "c3tlac31m9n3iknm",
+        "4ercwyy0m9n3iko8",
+        "epalqsppm9n3ikno",
+        "2ksge6nim9n3iknt",
+        "nf3tvtjqm9n3iknh",
+        "ir9ertv0m9n3iko9",
+        "t6zjtgtlm9n3ikn8",
+        "lamjm433m9n3iknk",
+        "6qw5okr5m9n3ikny",
+        "c1diayqdm9n3iko0",
+        "ykpw8vxwm9n3iknq"
+      ],
+      "validatedTeams": 2,
+      "status": "validated"
+    }
+  ],
+  "remaining": [
+    {
+      "period": 1,
+      "team": "Detroit Red Wings",
+      "difference": -0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": -0.2
+      }
+    },
+    {
+      "period": 3,
+      "team": "Boston Bruins",
+      "difference": -0.1,
+      "unresolved": [],
+      "categories": {
+        "Hit": -0.1
+      }
+    },
+    {
+      "period": 6,
+      "team": "Ottawa Senators",
+      "difference": 0.3,
+      "unresolved": [],
+      "categories": {
+        "SOG": 0.3
+      }
+    },
+    {
+      "period": 16,
+      "team": "Montréal Canadiens",
+      "difference": 0.05,
+      "unresolved": [],
+      "categories": {
+        "FOW": 0.05
+      }
+    },
+    {
+      "period": 19,
+      "team": "Boston Bruins",
+      "difference": 0.3,
+      "unresolved": [],
+      "categories": {
+        "SOG": 0.3
+      }
+    },
+    {
+      "period": 19,
+      "team": "California Golden Seals",
+      "difference": 0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": 0.2
+      }
+    },
+    {
+      "period": 19,
+      "team": "Minnesota North Stars",
+      "difference": 0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": 0.2
+      }
+    },
+    {
+      "period": 20,
+      "team": "New York Rangers",
+      "difference": -0.1,
+      "unresolved": [],
+      "categories": {
+        "SOG": -0.3,
+        "Blk": 0.2
+      }
+    },
+    {
+      "period": 20,
+      "team": "Hartford Whalers",
+      "difference": -0.2,
+      "unresolved": [],
+      "categories": {
+        "SV": -0.2
+      }
+    },
+    {
+      "period": 20,
+      "team": "Ottawa Senators",
+      "difference": -0.2,
+      "unresolved": [],
+      "categories": {
+        "SV": -0.2
+      }
+    },
+    {
+      "period": 21,
+      "team": "Colorado Avalanche",
+      "difference": -0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": -0.2
+      }
+    },
+    {
+      "period": 21,
+      "team": "California Golden Seals",
+      "difference": 0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": 0.2
+      }
+    },
+    {
+      "period": 21,
+      "team": "Detroit Red Wings",
+      "difference": -0.2,
+      "unresolved": [],
+      "categories": {
+        "Blk": -0.2
+      }
+    }
+  ]
+}
