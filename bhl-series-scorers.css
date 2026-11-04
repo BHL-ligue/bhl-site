@@ -3,19 +3,19 @@
 #playoff-scorers .scorer-filters{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0}
 #playoff-scorers .scorer-filters label{flex:1;max-width:280px;min-width:0}
 #playoff-scorers .scorer-scroll{margin-top:16px;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:9px;scrollbar-width:thin}
-#playoff-scorers .scorer-table{width:100%;min-width:760px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:13px}
+#playoff-scorers .scorer-table{width:100%;min-width:812px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:13px}
 #playoff-scorers .scorer-col-rank{width:5%}
-#playoff-scorers .scorer-col-player{width:29%}
+#playoff-scorers .scorer-col-player{width:27%}
 #playoff-scorers .scorer-col-team{width:10%}
-#playoff-scorers .scorer-col-gp,#playoff-scorers .scorer-col-goals{width:8%}
+#playoff-scorers .scorer-col-starts,#playoff-scorers .scorer-col-gp,#playoff-scorers .scorer-col-goals{width:8%}
 #playoff-scorers .scorer-col-assists{width:10%}
-#playoff-scorers .scorer-col-fpts,#playoff-scorers .scorer-col-average{width:15%}
+#playoff-scorers .scorer-col-fpts,#playoff-scorers .scorer-col-average{width:12%}
 #playoff-scorers .scorer-table th,#playoff-scorers .scorer-table td{padding:11px 8px;vertical-align:middle;line-height:1.4;border-bottom:1px solid #e8ebf0}
 #playoff-scorers .scorer-table th{font-size:11px;font-weight:800;white-space:nowrap}
 #playoff-scorers .scorer-table th:not(:nth-child(2)),#playoff-scorers .scorer-table td:not(:nth-child(2)){text-align:center;font-variant-numeric:tabular-nums}
 #playoff-scorers .scorer-table td:nth-child(n+4){white-space:nowrap}
 #playoff-scorers .scorer-table td:first-child{color:var(--muted);font-size:12px}
-#playoff-scorers .scorer-table td:nth-child(7){font-weight:800;color:var(--red)}
+#playoff-scorers .scorer-table td:nth-child(8){font-weight:800;color:var(--red)}
 #playoff-scorers .scorer-table td:last-child{font-weight:400}
 #playoff-scorers .scorer-table tbody tr:nth-child(even){background:#fafbfc}
 #playoff-scorers .scorer-table tbody tr:last-child td{border-bottom:0}
@@ -30,10 +30,11 @@
  #playoff-scorers .scorer-filters label{display:flex;flex-direction:column;gap:5px;width:100%;min-width:0;max-width:none;font-size:11px}
  #playoff-scorers .scorer-filters select{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;margin:0;padding:9px 24px 9px 7px;font-size:11px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
  #playoff-scorers .scorer-scroll{touch-action:pan-x pan-y}
- #playoff-scorers .scorer-table{width:calc(395px + var(--scorer-team-width,28px));min-width:calc(395px + var(--scorer-team-width,28px));max-width:calc(395px + var(--scorer-team-width,28px));font-size:11px}
+ #playoff-scorers .scorer-table{width:calc(447px + var(--scorer-team-width,28px));min-width:calc(447px + var(--scorer-team-width,28px));max-width:calc(447px + var(--scorer-team-width,28px));font-size:11px}
  #playoff-scorers .scorer-col-rank{width:30px}
  #playoff-scorers .scorer-col-player{width:144px}
  #playoff-scorers .scorer-col-team{width:var(--scorer-team-width,28px)}
+ #playoff-scorers .scorer-col-starts{width:52px}
  #playoff-scorers .scorer-col-gp,#playoff-scorers .scorer-col-goals{width:34px}
  #playoff-scorers .scorer-col-assists{width:40px}
  #playoff-scorers .scorer-col-fpts{width:59px}

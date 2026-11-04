@@ -47,17 +47,21 @@ const LOGOS={
 };
 const $=id=>document.getElementById(id),fmt=n=>Number(n||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
-let dataset=[];
+// The cancelled 2019-20 third round remains in Fantrax's roster archive.
+// Remove its zero-game selections from start totals, once per player.
+const cancelled2020Starts={"01mzf":1,"02i6q":1,"03ee4":1,"02non":1,"031og":1,"01z7v":1,"02ybm":1,"003kg":1,"00qnu":1,"048x9":1,"01bvd":1,"04n4n":1,"03ril":1,"02un9":1,"03mn5":1,"02b42":1,"02yjw":1,"03yuc":1,"031oi":1,"003nc":1,"023wa":1,"003fj":1,"027i6":1,"02azb":1,"015pv":1,"005is":1,"01ztp":1,"003x7":1,"01zv1":1,"01f64":1,"01lkz":1,"02yjl":1,"03ra7":1,"01f6k":1,"02azm":1,"0222k":1,"03rip":1,"02ybl":1};
+let dataset=[],excludeCancelled2020Starts=true;
 function ranking(source,season){
  const grouped=new Map();
  for(const r of source){
   if(r.phase!=='playoffs'||(season&&r.season!==season)||!r.id||!r.name||r.name==='Identité non résolue')continue;
   const key=String(r.id)+'|'+String(r.kind||'');
-  if(!grouped.has(key))grouped.set(key,{id:r.id,name:r.name,teams:new Set(),fpts:0,gp:0,goals:0,assists:0});
+  if(!grouped.has(key))grouped.set(key,{id:r.id,name:r.name,teams:new Set(),fpts:0,starts:0,cancelledStarts:0,gp:0,goals:0,assists:0});
   const p=grouped.get(key);p.teams.add(r.team);
-  for(const k of ['fpts','gp','goals','assists'])p[k]+=Number(r[k])||0;
+  if(r.season==='2019-20'&&excludeCancelled2020Starts)p.cancelledStarts=cancelled2020Starts[String(r.id)]||0;
+  for(const k of ['fpts','starts','gp','goals','assists'])p[k]+=Number(r[k])||0;
  }
- return [...grouped.values()].filter(p=>p.gp>0||p.fpts!==0).sort((a,b)=>Math.round(b.fpts*10000)-Math.round(a.fpts*10000)||a.name.localeCompare(b.name,'fr'));
+ return [...grouped.values()].map(p=>({...p,starts:Math.max(0,p.starts-p.cancelledStarts)})).filter(p=>p.gp>0||p.fpts!==0).sort((a,b)=>Math.round(b.fpts*10000)-Math.round(a.fpts*10000)||a.name.localeCompare(b.name,'fr'));
 }
 function render(){
  const selectedSeason=$('season').value;if(!selectedSeason&&$('scorer-scope').value!=='all')return;
@@ -68,7 +72,7 @@ function render(){
  for(const [index,p] of visible.entries()){
   const tr=document.createElement('tr');
   const rank=rows.findIndex(r=>Math.round(r.fpts*10000)===Math.round(p.fpts*10000))+1;
-  const values=[rank,'','',p.gp,p.goals,p.assists,fmt(p.fpts),p.gp?fmt(p.fpts/p.gp):'—'];
+  const values=[rank,'','',p.starts,p.gp,p.goals,p.assists,fmt(p.fpts),p.gp?fmt(p.fpts/p.gp):'—'];
   values.forEach((value,col)=>{
    const td=document.createElement('td');td.textContent=value;
    if(col===1){const button=document.createElement('button');button.type='button';button.className='scorer-player';button.dataset.bhlPlayerId=String(p.id);button.dataset.bhlPlayerName=p.name;button.title='Ouvrir la fiche de '+p.name;
@@ -78,12 +82,12 @@ function render(){
    tr.append(td);
   });body.append(tr);
  }
- if(!visible.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=8;td.textContent='Aucun pointeur disponible pour cette saison.';tr.append(td);body.append(tr)}
+ if(!visible.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=9;td.textContent='Aucun pointeur disponible pour cette saison.';tr.append(td);body.append(tr)}
  $('scorer-status').textContent=visible.length+' sur '+rows.length+' joueurs · '+(season||'Toutes les saisons')+' · Classement par FPTS en séries';
 }
 async function start(){
  try{
-  const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data.rows))throw Error();dataset=data.rows;
+  const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data.rows))throw Error();dataset=data.rows;excludeCancelled2020Starts=(data.coverage||[]).some(c=>c.season==='2019-20'&&c.phase==='playoffs'&&c.periods>=3);
 
   try{const r=await fetch('data/player-identity-map.json',{cache:'force-cache'});if(r.ok)playerIdentities=(await r.json()).players||{}}catch(e){}
   render();
