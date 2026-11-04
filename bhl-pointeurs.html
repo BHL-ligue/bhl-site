@@ -83,6 +83,9 @@ async function init(){
   const data=await response.json();if(!Array.isArray(data.rows))throw Error('Format des données invalide');
   dataset=data.rows;try{const ids=await fetch('data/player-identity-map.json',{cache:'force-cache'});if(ids.ok)playerIdentities=(await ids.json()).players||{}}catch(e){console.warn('Photos non disponibles',e)}const seasons=[...new Set(dataset.map(x=>x.season))].sort().reverse();
   for(const season of seasons)$('season').append(new Option(season,season));
+  const now=new Date(),year=now.getFullYear()-(now.getMonth()<8?1:0);
+  const currentSeason=year+'-'+String((year+1)%100).padStart(2,'0');
+  $('season').value=seasons.includes(currentSeason)?currentSeason:(seasons[0]||'');
   const teams=[...new Set(dataset.map(x=>x.team).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));
   fillOptions('team',teams);fillOptions('organization',[...new Set(teams.map(orgFor))].sort((a,b)=>a.localeCompare(b,'fr')));
   render();
