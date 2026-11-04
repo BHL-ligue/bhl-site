@@ -18,9 +18,8 @@ function mount(){
   {href:'index.html',label:'Accueil'},
   {href:'bhl-nouvelles.html',label:'Nouvelles'},
   {href:'bhl-equipes-connectees.html',label:'Équipes'},
-  {label:'La ligue',items:[['bhl-accueil-forbes-connecte.html','FORBES'],['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements']]},
-  {label:'Compétitions',items:[['bhl-fantrax.html','Saison'],['bhl-series.html','Séries éliminatoires'],['bhl-matchs-joues.html','Matchs joués']]},
-  {label:'Statistiques',items:[['bhl-pointeurs.html','Stats des joueurs'],['bhl-records.html','Records']]},
+  {label:'La ligue',items:[['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements']]},
+  {label:'Statistiques',items:[['bhl-fantrax.html','Saison'],['bhl-series.html','Séries éliminatoires'],['bhl-pointeurs.html','Stats des joueurs'],['bhl-records.html','Records']]} ,
   {label:'Mouvements',items:[['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
   {href:'bhl-espace-dg.html',label:'Espace DG'}
  ];
