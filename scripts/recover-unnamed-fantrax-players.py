@@ -34,6 +34,23 @@ def rows_for(season,league,group):
   data=post(league,{"positionOrGroup":group,"seasonOrProjection":code,"pageNumber":str(page)})
   if data.get("displayedSeasonOrProjection",{}).get("code")!=code:raise ValueError("Wrong season during pagination")
   yield data,code
+
+def public_archived_names(missing):
+ """Read a publisher's archived Fantrax records; require the exact original ID."""
+ result={}
+ for pid in sorted(missing):
+  url="https://www.yofhl.com/api/players/"+pid
+  try:
+   req=urllib.request.Request(url,headers={"User-Agent":"BHL-Archive-Identity/1.0","Accept":"application/json"})
+   with urllib.request.urlopen(req,timeout=15) as response:row=json.load(response)
+   if str(row.get("id","")).strip("*")!=pid:raise ValueError("Wrong archived player ID")
+   name=str(row.get("name") or "").strip()
+   if not name or "<" in name or ">" in name:raise ValueError("Invalid archived name")
+   result[pid]={"name":name,"source":"Public archived Fantrax player record, exact ID","url":url}
+   print("PUBLIC_IDENTITY",pid,name,flush=True)
+  except Exception as error:print("PUBLIC_IDENTITY_UNAVAILABLE",pid,str(error)[:120],flush=True)
+ return result
+
 def main():
  path=ROOT/"data/ownership/players.json";directory=json.loads(path.read_text());missing={pid for pid,p in directory["players"].items() if not p.get("name")}
  report={"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"requestedIds":sorted(missing),"matches":{},"sources":[],"unresolved":[]}
@@ -58,6 +75,8 @@ def main():
    except Exception as error:source["error"]=str(error)
    report["sources"].append(source)
    print("IDENTITY_SOURCE",json.dumps(source),flush=True)
+ for pid,record in public_archived_names(missing-found.keys()).items():
+  found[pid]=record["name"];report["matches"][pid]=record
  for pid,name in found.items():
   directory["players"][pid].update(name=name,status="confirmed")
   directory["players"][pid]["identitySource"]=report["matches"][pid]
