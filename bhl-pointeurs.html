@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BHL — Pointeurs historiques</title><link rel="stylesheet" href="bhl-navigation.css?v=1">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f3f5;color:#1d2734;font:15px/1.5 Arial,sans-serif}main{max-width:1240px;margin:32px auto;padding:0 18px}h1{font-size:clamp(28px,4vw,40px);margin:4px 0}.eyebrow{color:#c00;font-size:12px;font-weight:900;letter-spacing:.12em}.muted{color:#64748b}.panel{background:white;border:1px solid #dfe4e9;border-radius:14px;padding:20px;margin:18px 0}.filters{display:flex;gap:12px;flex-wrap:wrap}.filters label{flex:1;min-width:155px;font-size:13px;font-weight:700}.filters select,.filters input{display:block;width:100%;padding:10px;margin-top:5px;border:1px solid #ccd4dc;border-radius:8px;background:white;font:inherit}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;min-width:700px}th{text-align:left;background:#172232;color:white;font-size:12px}th,td{padding:12px;border-bottom:1px solid #e7eaf0}td.num{text-align:right;font-variant-numeric:tabular-nums}th.num{text-align:right}tr:hover td{background:#f8fafc}.rank{font-weight:900;color:#c00}.player{font-weight:800}.warning{background:#fff8eb;border:1px solid #f1dfb8;border-radius:10px;padding:12px 15px;font-size:13px}.empty{text-align:center;padding:30px;color:#64748b}.team{font-size:12px;color:#64748b}.status{font-size:12px;color:#64748b}
+</style></head><body><div id="bhl-global-nav"></div><main>
+<div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE · ARCHIVES</div><h1>Pointeurs historiques</h1>
+<p class="muted">Production des joueurs lorsqu'ils figuraient dans l'alignement partant d'une équipe BHL.</p>
+<div class="warning"><strong>Classement provisoire.</strong> Les statistiques sont reconstituées à partir des archives d'alignements et des statistiques LNH. Les écarts avec Fantrax et les départs non résolus doivent être validés avant toute homologation des records.</div>
+<section class="panel"><div class="filters"><label>Phase<select id="phase"><option value="regular">Saison régulière</option><option value="playoffs">Séries éliminatoires</option><option value="all">Total combiné</option></select></label><label>Saison<select id="season"><option value="">Toutes les saisons</option></select></label><label>Recherche<input id="search" type="search" placeholder="Nom du joueur ou équipe"></label></div><p id="status" class="status" role="status">Chargement des archives…</p><div class="scroll"><table><thead><tr><th>Rang</th><th>Joueur</th><th>Équipes</th><th class="num">FPTS</th><th class="num">Départs</th><th class="num">FPTS / départ</th><th class="num">Départs à vérifier</th></tr></thead><tbody id="results"></tbody></table></div></section>
+</main><script src="bhl-navigation.js?v=global3" defer></script><script>
+'use strict';
+const $=id=>document.getElementById(id),format=n=>Number(n||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+let dataset=[];
+function render(){
+ const phase=$('phase').value,season=$('season').value,search=$('search').value.trim().toLocaleLowerCase('fr');
+ const grouped=new Map();
+ for(const r of dataset){
+  if(phase!=='all'&&r.phase!==phase||season&&r.season!==season)continue;
+  const key=String(r.id)+'|'+String(r.kind||'');
+  if(!grouped.has(key))grouped.set(key,{id:r.id,name:r.name||'Identité non résolue',teams:new Set(),fpts:0,starts:0,review:0,missing:0});
+  const x=grouped.get(key);x.teams.add(r.team);x.fpts+=Number(r.fpts)||0;x.starts+=Number(r.starts)||0;x.review+=Number(r.reviewStarts)||0;x.missing+=Number(r.missingStarts)||0;
+ }
+ const rows=[...grouped.values()].filter(r=>(r.name+' '+[...r.teams].join(' ')).toLocaleLowerCase('fr').includes(search)).sort((a,b)=>b.fpts-a.fpts||a.name.localeCompare(b.name,'fr'));
+ const body=$('results');body.replaceChildren();
+ for(const [i,r] of rows.entries()){
+  const tr=document.createElement('tr');
+  const cells=[String(i+1),r.name,[...r.teams].join(' · '),format(r.fpts),String(r.starts),r.starts?format(r.fpts/r.starts):'—',String(r.review+r.missing)];
+  cells.forEach((value,j)=>{const td=document.createElement('td');td.textContent=value;if(j===0)td.className='rank';if(j===1)td.className='player';if(j===2)td.className='team';if(j>=3)td.className='num';tr.append(td)});
+  body.append(tr);
+ }
+ if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=7;td.className='empty';td.textContent='Aucun résultat disponible pour ces filtres.';tr.append(td);body.append(tr)}
+ $('status').textContent=rows.length+' joueurs · données provisoires · les départs à vérifier peuvent inclure des points déjà comptés';
+}
+async function init(){
+ try{
+  const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)throw Error('Archives non encore publiées');
+  const data=await response.json();if(!Array.isArray(data.rows))throw Error('Format des données invalide');
+  dataset=data.rows;const seasons=[...new Set(dataset.map(x=>x.season))].sort().reverse();
+  for(const season of seasons)$('season').append(new Option(season,season));
+  render();
+ }catch(e){$('status').textContent='Le calcul historique est en cours de préparation : '+e.message;$('results').innerHTML='<tr><td colspan="7" class="empty">Les résultats apparaîtront après une reconstitution validée et publiée.</td></tr>'}
+}
+['phase','season','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
+</script></body></html>
