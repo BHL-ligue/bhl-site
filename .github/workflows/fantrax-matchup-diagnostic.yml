@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/diagnose-fantrax-matchup-duplicates.py'
       - 'scripts/check-fantrax-hit-source.py'
+      - 'scripts/inspect-fantrax-matchup-structure.py'
       - '.github/workflows/fantrax-matchup-diagnostic.yml'
 permissions:
   contents: write
@@ -23,11 +24,13 @@ jobs:
           python-version: '3.12'
       - name: Vérifier les doublons et la source HIT
         run: python scripts/diagnose-fantrax-matchup-duplicates.py
+      - name: Examiner la structure des données du matchup Minnesota
+        run: python scripts/inspect-fantrax-matchup-structure.py
       - name: Publier le diagnostic
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/production/fantrax-hit-source-check-2023-24.json
+          git add data/production/fantrax-hit-source-check-2023-24.json data/production/fantrax-matchup-structure-2023-24-p1.json
           if ! git diff --cached --quiet; then
             git commit -m "Documenter les doublons des matchups Fantrax"
             for attempt in 1 2 3 4 5; do
