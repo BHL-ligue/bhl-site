@@ -1,0 +1,50 @@
+name: Actualiser les meneurs de l’accueil
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: bhl-home-leaders
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recalculer les meneurs et les profils
+        run: python scripts/build-home-leaders.py
+      - name: Publier les données calculées
+        run: |
+          git config user.name "BHL Data Sync"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/home-top-scorers.json data/player-profile-index.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiser les classements de l’accueil"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                exit 1
+              fi
+            done
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deploy

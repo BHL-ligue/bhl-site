@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-bhl-scorers.py'
+      - 'scripts/build-home-leaders.py'
       - 'scripts/analyze-hit-discrepancies.py'
       - 'scripts/check-fantrax-hit-source.py'
       - '.github/workflows/scorers-build.yml'
@@ -26,6 +27,8 @@ jobs:
         run: python tests/test-production-audit.py
       - name: Reconstituer les contributions des partants pour toutes les saisons
         run: python scripts/build-bhl-scorers.py
+      - name: Préparer les meneurs de l’accueil et les liens de profils
+        run: python scripts/build-home-leaders.py
       - name: Analyser les écarts de mises en échec 2023-24
         run: python scripts/analyze-hit-discrepancies.py
       - name: Comparer les catégories HIT de Fantrax aux valeurs brutes des matchups
@@ -59,7 +62,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/production/scorers.json data/production/summary.json data/production/diagnostics.json data/production/hit-investigation-2023-24.json data/production/hit-player-evidence-2023-24.json data/production/hit-reconciliation-2023-24.csv data/production/fantrax-hit-source-check-2023-24.json
+          git add data/production/scorers.json data/production/summary.json data/production/diagnostics.json data/production/hit-investigation-2023-24.json data/production/hit-player-evidence-2023-24.json data/production/hit-reconciliation-2023-24.csv data/production/fantrax-hit-source-check-2023-24.json data/home-top-scorers.json data/player-profile-index.json
           if ! git diff --cached --quiet; then
             git commit -m "Publier le classement historique BHL provisoire"
             # Changes to the website may land while the long scorer audit runs.

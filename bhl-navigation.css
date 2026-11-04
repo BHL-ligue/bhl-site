@@ -43,3 +43,7 @@
  #bhl-global-nav .bhl-nav-submenu{position:static;min-width:0;box-shadow:none;background:#b50000;border-radius:8px;margin:0 0 5px 12px;padding:4px}
  #bhl-global-nav .bhl-nav-submenu a{padding:11px 13px;font-size:13px}
 }
+
+.bhl-player-inline-link{display:inline;color:inherit;background:none;border:0;border-radius:2px;padding:0;font:inherit;font-weight:inherit;text-align:inherit;line-height:inherit;cursor:pointer;text-decoration:underline;text-decoration-color:#cc000045;text-decoration-thickness:1px;text-underline-offset:2px}
+.bhl-player-inline-link:hover,.bhl-player-inline-link:focus-visible{color:#b00000;text-decoration-color:currentColor}
+.bhl-player-inline-link:focus-visible{outline:2px solid #cc0000;outline-offset:3px}

@@ -10,6 +10,7 @@ function ensurePlayerProfile(){
   const trades=document.createElement('script');trades.src='bhl-trades.js?v=global3';document.head.append(trades);
  }
  if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=bhl-team-badges-20261104';document.head.append(script)}
+ if(!document.querySelector('script[src^="bhl-player-links.js"]')){const links=document.createElement('script');links.src='bhl-player-links.js?v=20261104';document.head.append(links)}
 }
 function ensureTableVisuals(){
  if(!document.querySelector('link[href^="bhl-table-visuals.css"]')){const css=document.createElement('link');css.rel='stylesheet';css.href='bhl-table-visuals.css?v=1';document.head.append(css)}

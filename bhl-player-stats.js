@@ -1022,7 +1022,7 @@ function open(id,name,source){
 document.addEventListener('click',e=>{
  const button=e.target.closest('[data-bhl-player-id]');
  if(!button)return;
- e.preventDefault();open(button.dataset.bhlPlayerId,button.dataset.bhlPlayerName||button.textContent.trim(),button);
+ e.preventDefault();e.stopPropagation();open(button.dataset.bhlPlayerId,button.dataset.bhlPlayerName||button.textContent.trim(),button);
 });
 // Compatibilité avec les anciennes fiches portrait utilisées dans les pages historiques.
 if(typeof window.bhlPortraitModal==='function'){
