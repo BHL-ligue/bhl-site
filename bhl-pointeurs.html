@@ -7,7 +7,7 @@
 <div class="eyebrow">BÉLIVEAU HOCKEY LEAGUE · ARCHIVES</div><h1>Pointeurs historiques</h1>
 <p class="muted">Production des joueurs lorsqu'ils figuraient dans l'alignement partant d'une équipe BHL.</p>
 <div class="warning"><strong>Classement provisoire.</strong> Les statistiques sont reconstituées à partir des archives d'alignements et des statistiques LNH. Les écarts avec Fantrax et les départs non résolus doivent être validés avant toute homologation des records.</div>
-<section class="panel"><div class="filters"><label>Phase<select id="phase"><option value="regular">Saison régulière</option><option value="playoffs">Séries éliminatoires</option><option value="all">Total combiné</option></select></label><label>Saison<select id="season"><option value="">Toutes les saisons</option></select></label><label>Équipe (nom historique)<select id="team"><option value="">Toutes les équipes</option></select></label><label>Organisation (franchise)<select id="organization"><option value="">Toutes les organisations</option></select></label><label>Recherche<input id="search" type="search" placeholder="Nom du joueur"></label></div><p id="status" class="status" role="status">Chargement des archives…</p><div class="scroll"><table><thead><tr><th>Rang</th><th>Joueur</th><th>Équipes</th><th class="num">FPTS</th><th class="num">Départs</th><th class="num">FPTS / départ</th><th class="num">Départs à vérifier</th></tr></thead><tbody id="results"></tbody></table></div></section>
+<section class="panel"><div class="filters"><label>Phase<select id="phase"><option value="regular">Saison régulière</option><option value="playoffs">Séries éliminatoires</option><option value="all">Total combiné</option></select></label><label>Saison<select id="season"><option value="">Toutes les saisons</option></select></label><label>Position<select id="position"><option value="">Toutes les positions</option><option value="forward">Attaquants</option><option value="defense">Défenseurs</option><option value="goalie">Gardiens</option></select></label><label>Équipe (nom historique)<select id="team"><option value="">Toutes les équipes</option></select></label><label>Organisation (franchise)<select id="organization"><option value="">Toutes les organisations</option></select></label><label>Recherche<input id="search" type="search" placeholder="Nom du joueur"></label></div><p id="status" class="status" role="status">Chargement des archives…</p><div class="scroll"><table><thead><tr><th>Rang</th><th>Joueur</th><th>Équipes</th><th class="num">FPTS</th><th class="num">Départs</th><th class="num">FPTS / départ</th><th class="num">Départs à vérifier</th></tr></thead><tbody id="results"></tbody></table></div></section>
 </main><script src="bhl-navigation.js?v=global3" defer></script><script>
 'use strict';
 const $=id=>document.getElementById(id),format=n=>Number(n||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -19,10 +19,10 @@ const orgFor=team=>orgMap.get(normTeam(team))||team;
 function fillOptions(id,items){const select=$(id);for(const name of items)select.append(new Option(name,name))}
 
 function render(){
- const phase=$('phase').value,season=$('season').value,team=$('team').value,organization=$('organization').value,search=$('search').value.trim().toLocaleLowerCase('fr');
+ const phase=$('phase').value,season=$('season').value,position=$('position').value,team=$('team').value,organization=$('organization').value,search=$('search').value.trim().toLocaleLowerCase('fr');
  const grouped=new Map();
  for(const r of dataset){
-  if((phase!=='all'&&r.phase!==phase)||(season&&r.season!==season)||(team&&r.team!==team)||(organization&&orgFor(r.team)!==organization))continue;
+  if((phase!=='all'&&r.phase!==phase)||(season&&r.season!==season)||(position&&r.positionGroup!==position)||(team&&r.team!==team)||(organization&&orgFor(r.team)!==organization))continue;
   const key=String(r.id)+'|'+String(r.kind||'');
   if(!grouped.has(key))grouped.set(key,{id:r.id,name:r.name||'Identité non résolue',teams:new Set(),fpts:0,starts:0,review:0,missing:0});
   const x=grouped.get(key);x.teams.add(r.team);x.fpts+=Number(r.fpts)||0;x.starts+=Number(r.starts)||0;x.review+=Number(r.reviewStarts)||0;x.missing+=Number(r.missingStarts)||0;
@@ -49,5 +49,5 @@ async function init(){
   render();
  }catch(e){$('status').textContent='Le calcul historique est en cours de préparation : '+e.message;$('results').innerHTML='<tr><td colspan="7" class="empty">Les résultats apparaîtront après une reconstitution validée et publiée.</td></tr>'}
 }
-['phase','season','team','organization','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
+['phase','season','position','team','organization','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
 </script></body></html>
