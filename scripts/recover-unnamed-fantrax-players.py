@@ -3,6 +3,7 @@ Only exact scorerId records may confirm a name. Numeric BHL statistics are uncha
 """
 import datetime as dt
 import json
+import os
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -10,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 LEAGUES={"2018-19":"vwa89uoajhz15dxv","2019-20":"2uolurhgjv9p9ryl","2020-21":"x84a2ac9kb7zbs0w","2021-22":"o981oceokoydzrkt","2023-24":"ukw6z6r2lgjl09qn"}
 def post(league,data):
  body=json.dumps({"msgs":[{"method":"getPlayerStats","data":{"leagueId":league,"view":"STATS","statusOrTeamFilter":"ALL","positionOrGroup":"HOCKEY_SKATING","pageNumber":"1","maxResultsPerPage":"10000","miscDisplayType":"1",**data}}]}).encode()
- req=urllib.request.Request("https://www.fantrax.com/fxpa/req?"+urllib.parse.urlencode({"leagueId":league}),data=body,headers={"Content-Type":"application/json","User-Agent":"BHL-Archive-Identity/1.0"})
+ req=urllib.request.Request("https://www.fantrax.com/fxpa/req?"+urllib.parse.urlencode({"leagueId":league}),data=body,headers={"Content-Type":"application/json","User-Agent":"BHL-Archive-Identity/1.0",**({"Cookie":os.environ["FANTRAX_COOKIE"].strip()} if os.environ.get("FANTRAX_COOKIE","").strip() else {})})
  with urllib.request.urlopen(req,timeout=40) as response:raw=json.load(response)
  responses=raw.get("responses") or []
  result=responses[0].get("data",{}) if responses else {}
@@ -37,6 +38,7 @@ def main():
  path=ROOT/"data/ownership/players.json";directory=json.loads(path.read_text());missing={pid for pid,p in directory["players"].items() if not p.get("name")}
  report={"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"requestedIds":sorted(missing),"matches":{},"sources":[],"unresolved":[]}
  found={}
+ print("Authenticated Fantrax session configured:",bool(os.environ.get("FANTRAX_COOKIE","").strip()),flush=True)
  for season,league in LEAGUES.items():
   if not missing-found.keys():break
   for group in ("HOCKEY_SKATING","POS_201"):

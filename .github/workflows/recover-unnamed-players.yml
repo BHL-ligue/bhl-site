@@ -26,6 +26,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Retrouver les noms dans les listes historiques
+        env:
+          FANTRAX_COOKIE: ${{ secrets.FANTRAX_COOKIE }}
         run: python scripts/recover-unnamed-fantrax-players.py
       - name: Confirmer les identités LNH et reconstruire les liens des profils
         run: |
