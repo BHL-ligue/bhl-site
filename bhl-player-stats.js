@@ -67,7 +67,7 @@ async function bhlCurrentOfficialStats(player,id){
  const snapshot=await bhlOfficialSnapshot();
  if(snapshot?.season==='20262027'&&snapshot.players){
   const stored=snapshot.players[String(nhlId)];
-  if(stored)return {...stored,updatedAt:snapshot.updatedAt};
+  if(stored)return {...stored,nhlTeam:stored.nhlTeam||player.nhlTeam||'',updatedAt:snapshot.updatedAt};
   const goalie=!!player.goalie,keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
   return {goalie,nhlTeam:player.nhlTeam||'',stats:{...Object.fromEntries(keys.map(k=>[k,0])),GP:0,FPts:0,'FP/G':null},usage:{TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'},noGames:true,updatedAt:snapshot.updatedAt};
  }
@@ -116,9 +116,12 @@ async function bhlPlayerForOfficial(id,name){
   load().catch(()=>({players:{}})),
   bhlIdentityDirectory().catch(()=>({players:{}}))
  ]);
- const fromDetails=details.players?.[key]||Object.values(details.players||{}).find(p=>norm(p.name)===norm(name));
- if(fromDetails)return {player:fromDetails,id:key};
- const entry=directory.players?.[key]||Object.entries(directory.players||{}).find(([_,p])=>norm(p.fantraxName)===norm(name))?.[1];
+ const detailMatches=Object.entries(details.players||{}).filter(([,p])=>norm(p.name)===norm(name));
+ const detailId=key||((detailMatches.length===1&&detailMatches[0][0])||'');
+ const fromDetails=details.players?.[detailId];
+ if(fromDetails)return {player:fromDetails,id:detailId};
+ const identityMatches=Object.entries(directory.players||{}).filter(([,p])=>norm(p.fantraxName)===norm(name));
+ const entry=directory.players?.[key]||(!key&&identityMatches.length===1?identityMatches[0][1]:null);
  if(!entry)return null;
  const resolvedId=key||Object.keys(directory.players||{}).find(k=>directory.players[k]===entry);
  return {player:{name:entry.fantraxName||name,nhlTeam:entry.nhlTeam||'',goalie:entry.position==='G',stats:{}},id:resolvedId};

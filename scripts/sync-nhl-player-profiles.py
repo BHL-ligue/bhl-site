@@ -29,8 +29,12 @@ def read(path,default):
  except (OSError,ValueError):return default
 def write(path,value):
  p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(value,ensure_ascii=False,separators=(",",":"))+"\n")
-def identity(name):
- query=urllib.parse.urlencode({"culture":"en-us","limit":100,"q":name})
+ALIASES={
+ "Pat Maroon":"Patrick Maroon","Christopher Tanev":"Chris Tanev","Zach Sanford":"Zachary Sanford","Daniel Vladar":"Dan Vladar","Sam Montembeault":"Samuel Montembeault","Mikhail S. Vorobyov":"Mikhail Vorobyev","Joe Veleno":"Joseph Veleno","Alexander Nylander":"Alex Nylander","Max Lajoie":"Maxime Lajoie","Mikey Eyssimont":"Michael Eyssimont","Benoit-Olivier Groulx":"Bo Groulx","Phillip Tomasino":"Philip Tomasino","Zachary Jones":"Zac Jones","Nicolas Daws":"Nico Daws","Georgi Merkulov":"Georgii Merkulov","Anton Silayev":"Anton Silaev","Yegor Surin":"Egor Surin","Benjamin Kindel":"Ben Kindel"
+}
+def identity(name,required_seasons=(),position_group=""):
+ canonical=ALIASES.get(name,name)
+ query=urllib.parse.urlencode({"culture":"en-us","limit":100,"q":canonical})
  data=get("https://search.d3.nhle.com/api/v1/search/player?"+query,attempts=1,timeout=5)
  rows=data if isinstance(data,list) else data.get("data",[])
  matches={}
@@ -38,13 +42,20 @@ def identity(name):
   label=row.get("name") or row.get("fullName") or row.get("playerName") or ""
   if isinstance(label,dict):label=label.get("default","")
   pid=row.get("playerId") or row.get("id")
-  if norm(label)==norm(name) and str(pid).isdigit():matches[int(pid)]=label
- if len(matches)!=1:return None,"ambiguous" if matches else "not_found"
- pid=next(iter(matches))
- profile=get(f"https://api-web.nhle.com/v1/player/{pid}/landing",attempts=1,timeout=5)
- label=" ".join(filter(None,[profile.get("firstName",{}).get("default"),profile.get("lastName",{}).get("default")]))
- if norm(label)!=norm(name):return None,"name_mismatch"
- return {"nhlId":pid,"nhlName":label,"nhlTeam":profile.get("currentTeamAbbrev") or "","position":profile.get("position") or profile.get("positionCode") or "","status":"confirmed","verifiedAt":dt.datetime.now(dt.timezone.utc).isoformat()},None
+  if norm(label) in (norm(name),norm(canonical)) and str(pid).isdigit():matches[int(pid)]=label
+ verified=[]
+ for pid in matches:
+  profile=get(f"https://api-web.nhle.com/v1/player/{pid}/landing",attempts=1,timeout=5)
+  label=" ".join(filter(None,[profile.get("firstName",{}).get("default"),profile.get("lastName",{}).get("default")]))
+  if norm(label) not in (norm(name),norm(canonical)):continue
+  position=profile.get("position") or profile.get("positionCode") or ""
+  group="goalie" if position=="G" else "defense" if position=="D" else "forward"
+  if position_group and group!=position_group:continue
+  played={str(x.get("season")) for x in profile.get("seasonTotals",[]) if str(x.get("leagueAbbrev")).upper()=="NHL" and x.get("gameTypeId")==2 and (x.get("gamesPlayed") or 0)>0}
+  if required_seasons and not set(required_seasons).issubset(played):continue
+  verified.append({"nhlId":pid,"nhlName":label,"nhlTeam":profile.get("currentTeamAbbrev") or "","position":position,"status":"confirmed","verifiedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"verification":"Official NHL name, position and BHL seasons with NHL games"})
+ if len(verified)!=1:return None,"ambiguous" if len(verified)>1 else "not_found_or_season_mismatch"
+ return verified[0],None
 def build_identities():
  current=read("data/player-identity-map.json",{}).get("players",{})
  archived=read("data/ownership/players.json",{}).get("players",{})
@@ -58,14 +69,20 @@ def build_identities():
   if previous.get(fid,{}).get("status")=="confirmed":result[fid]={**base,**previous[fid]};continue
   result[fid]=base;pending.setdefault(name,[]).append(fid)
  audit=[]
- def lookup(name):
-  try:return name,*identity(name)
-  except (OSError,ValueError,KeyError,TypeError) as error:return name,None,"lookup_error: "+str(error)[:180]
+ constraints={}
+ for row in read("data/production/scorers.json",{}).get("rows",[]):
+  if not row.get("gp"):continue
+  constraint=constraints.setdefault(str(row.get("id")),{"seasons":set(),"groups":set()})
+  year=int(row["season"][:4]);constraint["seasons"].add(str(year)+str(year+1));constraint["groups"].add(row.get("positionGroup"))
+ tasks=[(fid,name) for name,ids in pending.items() for fid in ids]
+ def lookup(task):
+  fid,name=task;constraint=constraints.get(fid,{});groups=constraint.get("groups",set())
+  try:return fid,name,*identity(name,constraint.get("seasons",()),next(iter(groups)) if len(groups)==1 else "")
+  except (OSError,ValueError,KeyError,TypeError) as error:return fid,name,None,"lookup_error: "+str(error)[:180]
  with cf.ThreadPoolExecutor(max_workers=8) as pool:
-  for name,entry,reason in pool.map(lookup,pending):
-   for fid in pending[name]:
-    if entry:result[fid].update(entry)
-    else:audit.append({"id":fid,"name":name,"reason":reason})
+  for fid,name,entry,reason in pool.map(lookup,tasks):
+   if entry:result[fid].update(entry)
+   else:audit.append({"id":fid,"name":name,"reason":reason})
  write("data/historical-player-identities.json",{"source":"Official NHL exact-name search and player landing; archived BHL Fantrax IDs","updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"players":result})
  write("data/player-profile-audit.json",{"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"addedIdentities":len(result),"confirmed":sum(p.get("status")=="confirmed" for p in result.values()),"unresolved":audit})
  print("Historical profile identities:",len(result),"unresolved:",len(audit),flush=True)
