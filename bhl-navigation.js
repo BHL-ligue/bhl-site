@@ -23,9 +23,8 @@ function mount(){
   {href:'index.html',label:'Accueil'},
   {href:'bhl-nouvelles.html',label:'Nouvelles'},
   {href:'bhl-equipes-connectees.html',label:'Équipes'},
-  {label:'La ligue',items:[['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements']]},
+  {label:'La ligue',items:[['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements'],['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
   {label:'Statistiques',items:[['bhl-fantrax.html','Saison régulière'],['bhl-series.html','Séries éliminatoires'],['bhl-pointeurs.html','Joueurs'],['bhl-records.html','Records']]} ,
-  {label:'Mouvements',items:[['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
   {href:'bhl-espace-dg.html',label:'Espace DG'}
  ];
  const page=decodeURIComponent(location.pathname.split('/').pop()||'index.html');
