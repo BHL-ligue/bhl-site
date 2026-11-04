@@ -1,0 +1,190 @@
+{
+  "source": "https://www.fantrax.com/fxea/general/getPlayerIds?sport=NHL",
+  "status": "diagnostic_only",
+  "ids": [
+    "003hb",
+    "003hf",
+    "003i5",
+    "003jc",
+    "003mh",
+    "003pa",
+    "003xs",
+    "0040f",
+    "0045o",
+    "010wq",
+    "01dr6",
+    "01f61",
+    "01mlo",
+    "01zu0",
+    "02nq8",
+    "031qf",
+    "03rga",
+    "06iml"
+  ],
+  "matches": {
+    "03rga": [
+      {
+        "path": "root.03rga",
+        "value": {
+          "statsIncId": 6846,
+          "rotowireId": 5391,
+          "name": "Vorobyov, Mikhail S.",
+          "fantraxId": "03rga",
+          "team": "(N/A)",
+          "position": "C"
+        }
+      },
+      {
+        "path": "root.03rga",
+        "value": {
+          "statsIncId": 6846,
+          "rotowireId": 5391,
+          "name": "Vorobyov, Mikhail S.",
+          "fantraxId": "03rga",
+          "team": "(N/A)",
+          "position": "C"
+        }
+      }
+    ],
+    "06iml": [
+      {
+        "path": "root.06iml",
+        "value": {
+          "rotowireId": 7066,
+          "sportRadarId": "567519b3-6757-46a2-ada0-b87c6dfe24ff",
+          "name": "Tsyplakov, Maxim",
+          "fantraxId": "06iml",
+          "team": "CGY",
+          "position": "LW"
+        }
+      },
+      {
+        "path": "root.06iml",
+        "value": {
+          "rotowireId": 7066,
+          "sportRadarId": "567519b3-6757-46a2-ada0-b87c6dfe24ff",
+          "name": "Tsyplakov, Maxim",
+          "fantraxId": "06iml",
+          "team": "CGY",
+          "position": "LW"
+        }
+      }
+    ],
+    "02nq8": [
+      {
+        "path": "root.02nq8",
+        "value": {
+          "statsIncId": 5774,
+          "rotowireId": 4539,
+          "sportRadarId": "3680b71f-575d-4eb9-95c6-4fb672b2672a",
+          "name": "Murray, Matt",
+          "fantraxId": "02nq8",
+          "team": "(N/A)",
+          "position": "G"
+        }
+      },
+      {
+        "path": "root.02nq8",
+        "value": {
+          "statsIncId": 5774,
+          "rotowireId": 4539,
+          "sportRadarId": "3680b71f-575d-4eb9-95c6-4fb672b2672a",
+          "name": "Murray, Matt",
+          "fantraxId": "02nq8",
+          "team": "(N/A)",
+          "position": "G"
+        }
+      }
+    ],
+    "031qf": [
+      {
+        "path": "root.031qf",
+        "value": {
+          "statsIncId": 6109,
+          "rotowireId": 5438,
+          "sportRadarId": "7f2c1e3b-ea4b-4319-8545-6cf5a0cc3c92",
+          "name": "Petersen, Cal",
+          "fantraxId": "031qf",
+          "team": "WSH",
+          "position": "G"
+        }
+      },
+      {
+        "path": "root.031qf",
+        "value": {
+          "statsIncId": 6109,
+          "rotowireId": 5438,
+          "sportRadarId": "7f2c1e3b-ea4b-4319-8545-6cf5a0cc3c92",
+          "name": "Petersen, Cal",
+          "fantraxId": "031qf",
+          "team": "WSH",
+          "position": "G"
+        }
+      }
+    ]
+  },
+  "unmatched": [
+    "003hb",
+    "003hf",
+    "003i5",
+    "003jc",
+    "003mh",
+    "003pa",
+    "003xs",
+    "0040f",
+    "0045o",
+    "010wq",
+    "01dr6",
+    "01f61",
+    "01mlo",
+    "01zu0"
+  ],
+  "responseType": "dict",
+  "responseKeys": [
+    "04qyi",
+    "04qyh",
+    "04qyk",
+    "04qyj",
+    "04qye",
+    "04qyd",
+    "04qyg",
+    "04qyf",
+    "04qya",
+    "04qyc",
+    "04qyb",
+    "04qxx",
+    "04qz9",
+    "04qxz",
+    "01yqh",
+    "04qxy",
+    "04qz6",
+    "04qz5",
+    "04qz8",
+    "04qz7",
+    "04qz2",
+    "04qz1",
+    "04qz4",
+    "04qz3",
+    "04qz0"
+  ],
+  "existingNames": {
+    "003hb": null,
+    "003hf": null,
+    "003i5": null,
+    "003jc": null,
+    "003mh": null,
+    "003pa": null,
+    "003xs": null,
+    "0040f": null,
+    "0045o": null,
+    "010wq": null,
+    "01dr6": null,
+    "01f61": null,
+    "01mlo": null,
+    "01zu0": null,
+    "02nq8": "Matt Murray",
+    "031qf": "Cal Petersen",
+    "03rga": "Mikhail S. Vorobyov",
+    "06iml": "Maxim Tsyplakov"
+  }
+}
