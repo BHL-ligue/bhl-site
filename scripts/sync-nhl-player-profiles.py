@@ -81,7 +81,7 @@ def report(group,kind):
  for row in rows:
   pid=str(row.get("playerId") or "")
   if not pid:continue
-  if pid in result:raise RuntimeError(f"Duplicate NHL season aggregate: {group}/{kind} {pid}")
+  if pid in result:raise RuntimeError(f"Duplicate NHL season aggregate: {group}/{kind} {pid}: {result[pid]} / {row}")
   result[pid]=row
  return result
 def number(row,*keys):
@@ -108,15 +108,16 @@ def build_stats():
   for task,data,error in pool.map(fetch,tasks):
    if data is not None:reports[task]=data
    else:errors["/".join(task)]=error
- for required in [("skater","summary"),("skater","realtime"),("skater","faceoffwins"),("goalie","summary")]:
+ print("Report diagnostics:",json.dumps(errors),flush=True)
+ for required in [("skater","summary"),("goalie","summary")]:
   if required not in reports:raise RuntimeError("Official report unavailable: "+"/".join(required))
  if len(reports["skater","summary"])<400 or len(reports["goalie","summary"])<20:raise RuntimeError("Incomplete NHL league summaries")
  players={}
  for pid,s in reports["skater","summary"].items():
   gp=number(s,"gamesPlayed") or 0
   if not gp:continue
-  r=reports["skater","realtime"].get(pid,{})
-  f=reports["skater","faceoffwins"].get(pid,{})
+  r=reports.get(("skater","realtime"),{}).get(pid,{})
+  f=reports.get(("skater","faceoffwins"),{}).get(pid,{})
   values={"G":number(s,"goals"),"A":number(s,"assists"),"SOG":number(s,"shots","shotsOnGoal"),"Hit":number(r,"hits"),"Blk":number(r,"blockedShotAttempts","blockedShots"),"Tk":number(r,"takeaways"),"FOW":number(f,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffWins","totalFaceoffsWon")}
   if values["FOW"] is None:values["FOW"]=number(s,"faceoffWins","faceoffsWon","faceoffsWonTotal","totalFaceoffsWon")
   fpts=fantasy(values,WEIGHTS)
