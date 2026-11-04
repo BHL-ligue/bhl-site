@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Vérifier la récupération des identités
+        run: python tests/test_unnamed_player_recovery.py
       - name: Retrouver les noms dans les listes historiques
         env:
           FANTRAX_COOKIE: ${{ secrets.FANTRAX_COOKIE }}

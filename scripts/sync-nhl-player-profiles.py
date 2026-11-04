@@ -77,7 +77,15 @@ def build_identities():
  tasks=[(fid,name) for name,ids in pending.items() for fid in ids]
  def lookup(task):
   fid,name=task;constraint=constraints.get(fid,{});groups=constraint.get("groups",set())
-  try:return fid,name,*identity(name,constraint.get("seasons",()),next(iter(groups)) if len(groups)==1 else "")
+  try:
+   entry,reason=identity(name,constraint.get("seasons",()),next(iter(groups)) if len(groups)==1 else "")
+   # Missing scoring rows may still have archived roster seasons. Use those only
+   # to disambiguate homonyms, never to replace an already unique exact name.
+   if reason=="ambiguous" and not constraint.get("seasons"):
+    seasons=archived.get(fid,{}).get("seasons",[])
+    required=[season[:4]+str(int(season[:4])+1) for season in seasons]
+    if required:entry,reason=identity(name,required,next(iter(groups)) if len(groups)==1 else "")
+   return fid,name,entry,reason
   except (OSError,ValueError,KeyError,TypeError) as error:return fid,name,None,"lookup_error: "+str(error)[:180]
  with cf.ThreadPoolExecutor(max_workers=8) as pool:
   for fid,name,entry,reason in pool.map(lookup,tasks):
