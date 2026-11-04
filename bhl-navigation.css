@@ -28,3 +28,18 @@
 
 /* Protection contre une ancienne bannière conservée en cache. */
 #bhl-global-nav .bhl-photo-banner{display:none!important}
+
+/* Grouped navigation: compact desktop dropdowns and mobile accordions. */
+#bhl-global-nav .bhl-nav-group{position:relative}
+#bhl-global-nav .bhl-nav-group-toggle{display:flex;align-items:center;gap:7px;white-space:nowrap;border:0;background:transparent;color:rgba(255,255,255,.92);padding:11px 10px;border-radius:8px;font:800 12px Arial,Helvetica,sans-serif;cursor:pointer}
+#bhl-global-nav .bhl-nav-group-toggle:hover,#bhl-global-nav .bhl-nav-group-toggle:focus-visible,#bhl-global-nav .bhl-nav-group.is-current>.bhl-nav-group-toggle,#bhl-global-nav .bhl-nav-group.is-open>.bhl-nav-group-toggle{background:rgba(255,255,255,.2);color:white}
+#bhl-global-nav .bhl-nav-chevron{font-size:17px;line-height:10px;transition:transform .15s}
+#bhl-global-nav .bhl-nav-group.is-open .bhl-nav-chevron{transform:rotate(180deg)}
+#bhl-global-nav .bhl-nav-submenu{display:none;position:absolute;top:100%;left:0;min-width:205px;background:#b50000;padding:7px;border-radius:0 0 11px 11px;box-shadow:0 10px 25px #0003;z-index:10}
+#bhl-global-nav .bhl-nav-group.is-open>.bhl-nav-submenu{display:flex;flex-direction:column}
+#bhl-global-nav .bhl-nav-submenu a{font-size:13px;padding:11px 13px}
+@media(max-width:1380px){
+ #bhl-global-nav .bhl-nav-group-toggle{width:100%;justify-content:space-between;font-size:14px;padding:12px 14px}
+ #bhl-global-nav .bhl-nav-submenu{position:static;min-width:0;box-shadow:none;background:#b50000;border-radius:8px;margin:0 0 5px 12px;padding:4px}
+ #bhl-global-nav .bhl-nav-submenu a{padding:11px 13px;font-size:13px}
+}
