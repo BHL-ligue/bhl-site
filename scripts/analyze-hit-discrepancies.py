@@ -77,6 +77,6 @@ if audit_path.exists():
     evidence_path.write_text(json.dumps({
         "status": "reconstructed_player_hits_not_verified_against_original_fantrax_player_counts",
         "season": "2023-24", "examples": evidence,
-    }, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Wrote", evidence_path, "examples:", len(evidence))
 print("Wrote", output)
