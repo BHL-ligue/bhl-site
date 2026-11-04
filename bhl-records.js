@@ -3,7 +3,8 @@
 const $=id=>document.getElementById(id);
 const fmt=n=>Number(n||0).toLocaleString('fr-CA',{maximumFractionDigits:2,minimumFractionDigits:2});
 const defs=[
- ['start-fpts','Plus de FPTS en un départ','fpts','starts','desc'],
+ ['start-fpts-skaters','Plus de FPTS en un départ · Patineurs','fpts','starts','skater'],
+ ['start-fpts-goalies','Plus de FPTS en un départ · Gardiens','fpts','starts','goalie'],
  ['start-goals','Plus de buts en un départ','goals','starts','desc'],
  ['start-assists','Plus de passes en un départ','assists','starts','desc'],
  ['start-shots','Plus de tirs en un départ','SOG','starts','desc'],
@@ -11,17 +12,21 @@ const defs=[
  ['start-blocks','Plus de tirs bloqués en un départ','Blk','starts','desc'],
  ['start-saves','Plus d’arrêts en un départ','SV','starts','desc'],
  ['start-wins','Plus de victoires en un départ','W','starts','desc'],
- ['career-fpts','Plus de FPTS en carrière','fpts','career','desc'],
+ ['career-fpts-skaters','Plus de FPTS en carrière · Patineurs','fpts','career','skater'],
+ ['career-fpts-goalies','Plus de FPTS en carrière · Gardiens','fpts','career','goalie'],
  ['career-starts','Plus de départs en carrière','starts','career','desc'],
  ['career-gp','Plus de matchs NHL en étant partant','gp','career','desc'],
  ['career-goals','Plus de buts en carrière','goals','career','desc'],
  ['career-assists','Plus de passes en carrière','assists','career','desc'],
- ['career-average','Meilleure moyenne FPTS par départ (min. 20)','average','career','desc'],
- ['season-fpts','Plus de FPTS en une saison','fpts','season','desc'],
+ ['career-average-skaters','Meilleure moyenne FPTS par départ · Patineurs (min. 20)','average','career','skater'],
+ ['career-average-goalies','Meilleure moyenne FPTS par départ · Gardiens (min. 20)','average','career','goalie'],
+ ['season-fpts-skaters','Plus de FPTS en une saison · Patineurs','fpts','season','skater'],
+ ['season-fpts-goalies','Plus de FPTS en une saison · Gardiens','fpts','season','goalie'],
  ['season-starts','Plus de départs en une saison','starts','season','desc'],
  ['season-goals','Plus de buts en une saison','goals','season','desc'],
  ['season-assists','Plus de passes en une saison','assists','season','desc'],
- ['season-average','Meilleure moyenne FPTS par départ en une saison (min. 10)','average','season','desc'],
+ ['season-average-skaters','Meilleure moyenne FPTS par départ en une saison · Patineurs (min. 10)','average','season','skater'],
+ ['season-average-goalies','Meilleure moyenne FPTS par départ en une saison · Gardiens (min. 10)','average','season','goalie'],
  ['career-teams','Plus d’équipes BHL représentées','teams','career','desc'],
  ['career-seasons','Plus de saisons BHL disputées','seasons','career','desc']
 ];
@@ -30,8 +35,8 @@ function recordsRows(source,scope){
  const map=new Map();
  for(const r of source){
   if(!r.name||r.name==='Identité non résolue')continue;
-  const key=String(r.id)+'|'+(scope==='season'?r.season:'');
-  if(!map.has(key))map.set(key,{id:r.id,name:r.name,season:scope==='season'?r.season:'',fpts:0,starts:0,gp:0,goals:0,assists:0,teamSet:new Set(),seasonSet:new Set(),review:false});
+  const key=String(r.id)+'|'+(r.kind==='goalie'||r.positionGroup==='goalie'?'goalie':'skater')+'|'+(scope==='season'?r.season:'');
+  if(!map.has(key))map.set(key,{id:r.id,name:r.name,kind:r.kind==='goalie'||r.positionGroup==='goalie'?'goalie':'skater',season:scope==='season'?r.season:'',fpts:0,starts:0,gp:0,goals:0,assists:0,teamSet:new Set(),seasonSet:new Set(),review:false});
   const x=map.get(key);
   x.fpts+=Number(r.fpts)||0;x.starts+=Number(r.starts)||0;x.gp+=Number(r.gp)||0;
   x.goals+=Number(r.goals)||0;x.assists+=Number(r.assists)||0;
@@ -63,12 +68,13 @@ function render(){
   status.textContent=duration==='all'?'Toutes les durées de périodes · '+matched+' départs':duration==='regular'?'Périodes de 7 jours ou moins · '+matched+' départs retenus · '+excluded+' départs exclus':'Périodes de plus de 7 jours · '+matched+' départs retenus';
  }
  const career=recordsRows(allAggregates,'career'),seasonRows=recordsRows(allAggregates,'season');
- for(const [id,title,field,scope] of defs){
+ for(const [id,title,field,scope,group] of defs){
+  if(group==='skater'&&position==='goalie'||group==='goalie'&&position!=='all'&&position!=='goalie')continue;
   const section=document.createElement('section');section.className='record-section';
   const h=document.createElement('h3');h.textContent=title;section.append(h);
   if(scope==='starts'&&!ready){const msg=document.createElement('p');msg.className='muted';msg.textContent='Données par départ en préparation : une reconstruction des archives est nécessaire.';section.append(msg);root.append(section);continue}
   const source=scope==='starts'?allStarts:scope==='career'?career:seasonRows;
-  let ranked=source.filter(r=>r.name&&r.name!=='Identité non résolue'&&value(r,field,scope)>0);
+  let ranked=source.filter(r=>r.name&&r.name!=='Identité non résolue'&&value(r,field,scope)>0&&(group!=='skater'||r.kind!=='goalie')&&(group!=='goalie'||r.kind==='goalie'));
   if(field==='average')ranked=ranked.filter(r=>r.starts>=(scope==='career'?20:10));
   ranked.sort((a,b)=>value(b,field,scope)-value(a,field,scope)||String(a.name).localeCompare(String(b.name),'fr'));
   ranked=ranked.slice(0,10);
