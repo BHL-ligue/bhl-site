@@ -10067,5 +10067,293 @@
       "pointsMinusHitsTimesWeight": 0.0,
       "internallyConsistent": true
     }
-  ]
+  ],
+  "duplicateAnalysis": {
+    "uniqueTeamPeriods": 382,
+    "repeatedTeamPeriods": 368,
+    "conflictingRepeatedTeamPeriods": 0,
+    "minnesotaPeriod1": [
+      {
+        "period": 1,
+        "teamId": "qtetgxu8lgjl09t1",
+        "team": "Minnesota North Stars",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            34.0,
+            3.4
+          ]
+        ],
+        "conflictingValues": false
+      }
+    ],
+    "examples": [
+      {
+        "period": 1,
+        "teamId": "4ebdjplwlgjl09sp",
+        "team": "Florida Panthers",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            37.0,
+            3.7
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "ahjtppo4lgjl09ta",
+        "team": "Montréal Canadiens",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            37.0,
+            3.7
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "d03ajfvflgjl09s9",
+        "team": "Nashville Predators",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            50.0,
+            5.0
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "e317hlodlgjl09t7",
+        "team": "California Golden Seals",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            25.0,
+            2.5
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "eymolqbelgjl09s5",
+        "team": "Anaheim Mighty Ducks",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            40.0,
+            4.0
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "fvjdgkq7lgjl09th",
+        "team": "Detroit Red Wings",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            35.0,
+            3.5
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "i2flbb1klgjl09sr",
+        "team": "Atlanta Thrashers",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            48.0,
+            4.8
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "iwod7m46lgjl09sm",
+        "team": "Hartford Whalers",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            26.0,
+            2.6
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "k5q5lgoqlgjl09te",
+        "team": "Toronto Maple Leafs",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            41.0,
+            4.1
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "pbtnet0vlgjl09t5",
+        "team": "Ottawa Senators",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            21.0,
+            2.1
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "q15wn5eolgjl09sv",
+        "team": "Cleveland Barons",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            38.0,
+            3.8
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "qtetgxu8lgjl09t1",
+        "team": "Minnesota North Stars",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            34.0,
+            3.4
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "rmq4bwfklgjl09sy",
+        "team": "Chicago Blackhawks",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            48.0,
+            4.8
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "u4g5a6btlgjl09sf",
+        "team": "Québec Nordiques",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            31.0,
+            3.1
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "vx0fb6aelgjl09sj",
+        "team": "Colorado Avalanche",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            29.0,
+            2.9
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 1,
+        "teamId": "ybtctjw2lgjl09sd",
+        "team": "New York Rangers",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            25.0,
+            2.5
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 2,
+        "teamId": "4ebdjplwlgjl09sp",
+        "team": "Florida Panthers",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            38.0,
+            3.8
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 2,
+        "teamId": "ahjtppo4lgjl09ta",
+        "team": "Montréal Canadiens",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            45.0,
+            4.5
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 2,
+        "teamId": "d03ajfvflgjl09s9",
+        "team": "Nashville Predators",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            50.0,
+            5.0
+          ]
+        ],
+        "conflictingValues": false
+      },
+      {
+        "period": 2,
+        "teamId": "e317hlodlgjl09t7",
+        "team": "California Golden Seals",
+        "appearances": 3,
+        "distinctHitValues": [
+          [
+            42.0,
+            4.2
+          ]
+        ],
+        "conflictingValues": false
+      }
+    ]
+  },
+  "liveScoringComparison": {
+    "minnesotaPeriod1VisibleHits": 51,
+    "minnesotaPeriod1VisibleHitFpts": 5.1,
+    "evidence": "Fantrax live-scoring screenshots supplied by league commissioner",
+    "note": "The live-scoring display and getMatchupScores response are distinct sources; do not treat as equivalent without validation."
+  }
 }
