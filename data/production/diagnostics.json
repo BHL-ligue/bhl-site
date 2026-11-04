@@ -109,10 +109,10 @@
         "01f61"
       ],
       "categoryDifferences": {
-        "Blk": -0.6,
-        "SOG": -1.2,
         "A": -2.5,
-        "Hit": -0.3
+        "Blk": -0.6,
+        "Hit": -0.3,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -144,10 +144,10 @@
         "003mh"
       ],
       "categoryDifferences": {
-        "Blk": -0.4,
         "Tk": -0.4,
-        "SOG": -0.6,
-        "Hit": -0.6
+        "Blk": -0.4,
+        "Hit": -0.6,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -164,8 +164,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.2,
-        "SOG": -0.6,
-        "Hit": -0.7
+        "Hit": -0.7,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -181,11 +181,11 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Tk": -0.1,
-        "SOG": -0.9,
         "A": -2.5,
-        "Hit": -0.4
+        "Tk": -0.1,
+        "Blk": -0.2,
+        "Hit": -0.4,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -201,10 +201,10 @@
         "003hb"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Tk": -0.1,
         "G": -9.0,
-        "SOG": -3.3,
-        "A": -2.5
+        "SOG": -3.3
       },
       "reason": "unresolved_player"
     },
@@ -234,11 +234,11 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
         "Tk": -0.1,
+        "Blk": -0.2,
         "G": -3.0,
-        "SOG": -1.2,
-        "Hit": -0.6
+        "Hit": -0.6,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -254,11 +254,11 @@
         "003hb"
       ],
       "categoryDifferences": {
+        "A": -5.0,
         "Blk": -0.1,
         "G": -9.0,
-        "SOG": -4.8,
-        "A": -5.0,
-        "Hit": -0.1
+        "Hit": -0.1,
+        "SOG": -4.8
       },
       "reason": "unresolved_player"
     },
@@ -274,11 +274,11 @@
         "003mh"
       ],
       "categoryDifferences": {
-        "Blk": -0.5,
-        "Tk": -0.1,
-        "SOG": -0.6,
         "A": -2.5,
-        "Hit": -0.2
+        "Tk": -0.1,
+        "Blk": -0.5,
+        "Hit": -0.2,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -295,8 +295,8 @@
       ],
       "categoryDifferences": {
         "Tk": -0.1,
-        "SOG": -1.8,
-        "Hit": -0.3
+        "Hit": -0.3,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -312,9 +312,9 @@
         "003hb"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.2,
-        "SOG": -1.2,
-        "A": -2.5
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -330,10 +330,10 @@
         "003mh"
       ],
       "categoryDifferences": {
-        "Blk": -0.7,
-        "SOG": -0.6,
         "A": -5.0,
-        "Hit": -0.2
+        "Blk": -0.7,
+        "Hit": -0.2,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -349,8 +349,8 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "A": -2.5
+        "A": -2.5,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -366,11 +366,11 @@
         "003hb"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.2,
         "G": -3.0,
-        "SOG": -0.6,
-        "A": -2.5,
-        "Hit": -0.1
+        "Hit": -0.1,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -386,10 +386,10 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "SOG": -2.4,
         "A": -2.5,
-        "Hit": -0.2
+        "Blk": -0.1,
+        "Hit": -0.2,
+        "SOG": -2.4
       },
       "reason": "unresolved_player"
     },
@@ -405,11 +405,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.3,
-        "Tk": -0.5,
         "FOW": -1.55,
-        "SOG": -2.4,
-        "Hit": -1.3
+        "Tk": -0.5,
+        "Blk": -0.3,
+        "Hit": -1.3,
+        "SOG": -2.4
       },
       "reason": "unresolved_player"
     },
@@ -427,8 +427,8 @@
       "categoryDifferences": {
         "FOW": -1.1,
         "G": -3.0,
-        "SOG": -1.5,
-        "Hit": -0.4
+        "Hit": -0.4,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -444,11 +444,11 @@
         "0040f"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.2,
         "G": -3.0,
-        "SOG": -1.2,
-        "A": -2.5,
-        "Hit": -0.2
+        "Hit": -0.2,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -464,11 +464,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.3,
-        "Tk": -0.2,
         "FOW": -1.1,
-        "SOG": -1.5,
-        "Hit": -0.3
+        "Tk": -0.2,
+        "Blk": -0.3,
+        "Hit": -0.3,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -485,8 +485,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.5,
-        "SOG": -0.6,
-        "Hit": -0.7
+        "Hit": -0.7,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -519,11 +519,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "Tk": -0.2,
         "FOW": -0.2,
-        "SOG": -0.3,
-        "Hit": -0.6
+        "Tk": -0.2,
+        "Blk": -0.1,
+        "Hit": -0.6,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -556,12 +556,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Tk": -0.3,
         "FOW": -1.25,
-        "SOG": -2.4,
         "A": -2.5,
-        "Hit": -0.7
+        "Tk": -0.3,
+        "Blk": -0.2,
+        "Hit": -0.7,
+        "SOG": -2.4
       },
       "reason": "unresolved_player"
     },
@@ -578,12 +578,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Tk": -0.1,
         "FOW": -0.65,
-        "G": -3.0,
-        "SOG": -2.7,
         "A": -7.5,
-        "Hit": -0.4
+        "Tk": -0.1,
+        "G": -3.0,
+        "Hit": -0.4,
+        "SOG": -2.7
       },
       "reason": "unresolved_player"
     },
@@ -599,9 +599,9 @@
         "003i5"
       ],
       "categoryDifferences": {
+        "W": -8.0,
         "SV": -11.6,
-        "GA": 6.0,
-        "W": -8.0
+        "GA": 6.0
       },
       "reason": "unresolved_player"
     },
@@ -618,11 +618,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.5,
-        "Tk": -0.2,
-        "SOG": -1.5,
         "A": -7.5,
-        "Hit": -0.6
+        "Tk": -0.2,
+        "Blk": -0.5,
+        "Hit": -0.6,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -638,11 +638,11 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -1.6,
         "Tk": -0.1,
+        "Blk": -1.6,
         "G": -3.0,
-        "SOG": -2.1,
-        "Hit": -0.2
+        "Hit": -0.2,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -659,8 +659,8 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": -0.3
+        "Hit": -0.3,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -677,11 +677,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
         "Tk": -0.1,
+        "Blk": -0.1,
         "G": -3.0,
-        "SOG": -1.5,
-        "Hit": -0.7
+        "Hit": -0.7,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -697,10 +697,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -0.8,
-        "SOG": -1.5,
         "A": -2.5,
-        "Hit": -0.3
+        "Blk": -0.8,
+        "Hit": -0.3,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -717,11 +717,11 @@
         "010wq"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.4,
         "G": -6.0,
-        "SOG": -4.5,
-        "A": -2.5,
-        "Hit": -0.8
+        "Hit": -0.8,
+        "SOG": -4.5
       },
       "reason": "unresolved_player"
     },
@@ -754,10 +754,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -1.4,
         "Tk": -0.2,
-        "SOG": -3.0,
-        "Hit": -0.1
+        "Blk": -1.4,
+        "Hit": -0.1,
+        "SOG": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -774,12 +774,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "Tk": -0.2,
-        "G": -3.0,
-        "SOG": -3.6,
         "A": -2.5,
-        "Hit": -0.3
+        "Tk": -0.2,
+        "Blk": -0.1,
+        "G": -3.0,
+        "Hit": -0.3,
+        "SOG": -3.6
       },
       "reason": "unresolved_player"
     },
@@ -795,11 +795,11 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -0.8,
-        "Tk": -0.1,
-        "SOG": -1.2,
         "A": -5.0,
-        "Hit": -0.3
+        "Tk": -0.1,
+        "Blk": -0.8,
+        "Hit": -0.3,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -818,8 +818,8 @@
       "categoryDifferences": {
         "Tk": -0.3,
         "G": -3.0,
-        "SOG": -3.0,
-        "Hit": -1.2
+        "Hit": -1.2,
+        "SOG": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -836,12 +836,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "Tk": -0.5,
-        "G": -6.0,
-        "SOG": -5.4,
         "A": -2.5,
-        "Hit": -0.7
+        "Tk": -0.5,
+        "Blk": -0.1,
+        "G": -6.0,
+        "Hit": -0.7,
+        "SOG": -5.4
       },
       "reason": "unresolved_player"
     },
@@ -857,10 +857,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -0.6,
         "Tk": -0.2,
-        "SOG": -0.6,
-        "Hit": -0.3
+        "Blk": -0.6,
+        "Hit": -0.3,
+        "SOG": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -877,11 +877,11 @@
         "010wq"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Tk": -0.4,
         "G": -3.0,
-        "SOG": -2.1,
-        "A": -2.5,
-        "Hit": -1.0
+        "Hit": -1.0,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -914,10 +914,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -0.4,
-        "SOG": -1.8,
         "A": -2.5,
-        "Hit": -0.2
+        "Blk": -0.4,
+        "Hit": -0.2,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -933,11 +933,11 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -1.5,
-        "Tk": -0.1,
-        "SOG": -0.9,
         "A": -7.5,
-        "Hit": -0.3
+        "Tk": -0.1,
+        "Blk": -1.5,
+        "Hit": -0.3,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -954,8 +954,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.6,
-        "SOG": -0.3,
-        "Hit": -0.1
+        "Hit": -0.1,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -972,8 +972,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.1,
-        "SOG": -1.2,
-        "Hit": -0.1
+        "Hit": -0.1,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -989,10 +989,10 @@
         "01mlo"
       ],
       "categoryDifferences": {
-        "Tk": -0.4,
-        "SOG": -1.5,
         "A": -2.5,
-        "Hit": -0.2
+        "Tk": -0.4,
+        "Hit": -0.2,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -1010,8 +1010,8 @@
       "categoryDifferences": {
         "Blk": -0.2,
         "G": -6.0,
-        "SOG": -2.1,
-        "Hit": -0.8
+        "Hit": -0.8,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -1029,8 +1029,8 @@
       "categoryDifferences": {
         "Blk": -0.2,
         "G": -3.0,
-        "SOG": -1.8,
-        "Hit": -0.3
+        "Hit": -0.3,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1048,8 +1048,8 @@
       "categoryDifferences": {
         "Tk": -0.1,
         "G": -3.0,
-        "SOG": -1.5,
-        "Hit": -0.2
+        "Hit": -0.2,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -1065,11 +1065,11 @@
         "01zu0"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.8,
         "G": -3.0,
-        "SOG": -2.4,
-        "A": -2.5,
-        "Hit": -0.6
+        "Hit": -0.6,
+        "SOG": -2.4
       },
       "reason": "unresolved_player"
     },
@@ -1085,10 +1085,10 @@
         "01zu0"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
         "Tk": -0.2,
-        "SOG": -1.8,
-        "Hit": -0.6
+        "Blk": -0.1,
+        "Hit": -0.6,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1135,9 +1135,9 @@
         "031qf"
       ],
       "categoryDifferences": {
+        "W": -4.0,
         "SV": -14.6,
-        "GA": 4.0,
-        "W": -4.0
+        "GA": 4.0
       },
       "reason": "unresolved_player"
     },
@@ -1170,9 +1170,9 @@
         "031qf"
       ],
       "categoryDifferences": {
+        "W": -4.0,
         "SV": -10.4,
-        "GA": 7.0,
-        "W": -4.0
+        "GA": 7.0
       },
       "reason": "unresolved_player"
     },
@@ -1188,9 +1188,9 @@
         "031qf"
       ],
       "categoryDifferences": {
+        "W": -8.0,
         "SV": -16.6,
-        "GA": 10.0,
-        "W": -8.0
+        "GA": 10.0
       },
       "reason": "unresolved_player"
     },
@@ -1223,9 +1223,9 @@
         "02nq8"
       ],
       "categoryDifferences": {
+        "W": -8.0,
         "SV": -11.8,
-        "GA": 4.0,
-        "W": -8.0
+        "GA": 4.0
       },
       "reason": "unresolved_player"
     },
@@ -1241,9 +1241,9 @@
         "02nq8"
       ],
       "categoryDifferences": {
+        "W": -4.0,
         "SV": -14.2,
-        "GA": 6.0,
-        "W": -4.0
+        "GA": 6.0
       },
       "reason": "unresolved_player"
     },
@@ -1259,9 +1259,9 @@
         "02nq8"
       ],
       "categoryDifferences": {
+        "W": -4.0,
         "SV": -8.6,
-        "GA": 6.0,
-        "W": -4.0
+        "GA": 6.0
       },
       "reason": "unresolved_player"
     },
@@ -1277,9 +1277,9 @@
         "02nq8"
       ],
       "categoryDifferences": {
+        "W": -4.0,
         "SV": -12.4,
-        "GA": 5.0,
-        "W": -4.0
+        "GA": 5.0
       },
       "reason": "unresolved_player"
     },
@@ -1297,8 +1297,8 @@
       "categoryDifferences": {
         "Tk": -0.1,
         "G": -3.0,
-        "SOG": -1.5,
-        "Hit": -0.8
+        "Hit": -0.8,
+        "SOG": -1.5
       },
       "reason": "unresolved_player"
     },
@@ -1314,10 +1314,10 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "SOG": -0.9,
         "A": -5.0,
-        "Hit": -0.5
+        "Blk": -0.2,
+        "Hit": -0.5,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -1333,10 +1333,10 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Tk": -0.2,
-        "SOG": -0.9,
         "A": -5.0,
-        "Hit": -0.7
+        "Tk": -0.2,
+        "Hit": -0.7,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -1352,11 +1352,11 @@
         "06iml"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -0.4,
         "G": -3.0,
-        "SOG": -2.1,
-        "A": -2.5,
-        "Hit": -1.4
+        "Hit": -1.4,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -1372,10 +1372,10 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Tk": -0.4,
-        "SOG": -0.3,
         "A": -5.0,
-        "Hit": -1.1
+        "Tk": -0.4,
+        "Hit": -1.1,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -1391,11 +1391,11 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Blk": -0.6,
-        "Tk": -0.2,
-        "SOG": -1.8,
         "A": -2.5,
-        "Hit": -0.5
+        "Tk": -0.2,
+        "Blk": -0.6,
+        "Hit": -0.5,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1411,11 +1411,11 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Blk": -0.6,
-        "Tk": -0.1,
-        "SOG": -1.2,
         "A": -2.5,
-        "Hit": -0.8
+        "Tk": -0.1,
+        "Blk": -0.6,
+        "Hit": -0.8,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -1431,12 +1431,12 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Blk": -0.4,
-        "Tk": -0.3,
-        "G": -3.0,
-        "SOG": -2.1,
         "A": -2.5,
-        "Hit": -1.3
+        "Tk": -0.3,
+        "Blk": -0.4,
+        "G": -3.0,
+        "Hit": -1.3,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -1452,11 +1452,11 @@
         "06iml"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Tk": -0.1,
         "G": -6.0,
-        "SOG": -2.1,
-        "A": -2.5,
-        "Hit": -0.7
+        "Hit": -0.7,
+        "SOG": -2.1
       },
       "reason": "unresolved_player"
     },
@@ -1472,11 +1472,11 @@
         "06iml"
       ],
       "categoryDifferences": {
+        "A": -2.5,
         "Blk": -1.0,
         "G": -3.0,
-        "SOG": -0.9,
-        "A": -2.5,
-        "Hit": -0.9
+        "Hit": -0.9,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -1493,8 +1493,8 @@
       ],
       "categoryDifferences": {
         "Tk": -0.2,
-        "SOG": -1.8,
-        "Hit": -0.1
+        "Hit": -0.1,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1511,8 +1511,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.4,
-        "SOG": -0.3,
-        "Hit": -0.4
+        "Hit": -0.4,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -1529,8 +1529,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.2,
-        "SOG": -1.2,
-        "Hit": -0.5
+        "Hit": -0.5,
+        "SOG": -1.2
       },
       "reason": "unresolved_player"
     },
@@ -1547,8 +1547,8 @@
       ],
       "categoryDifferences": {
         "Blk": -0.2,
-        "SOG": -0.9,
-        "Hit": -0.4
+        "Hit": -0.4,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -1564,11 +1564,11 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Tk": -0.1,
-        "SOG": -1.8,
         "A": -5.0,
-        "Hit": -0.4
+        "Tk": -0.1,
+        "Blk": -0.2,
+        "Hit": -0.4,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1586,8 +1586,8 @@
       "categoryDifferences": {
         "Tk": -0.2,
         "G": -3.0,
-        "SOG": -0.9,
-        "Hit": -0.2
+        "Hit": -0.2,
+        "SOG": -0.9
       },
       "reason": "unresolved_player"
     },
@@ -1603,10 +1603,10 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "Tk": -0.1,
-        "SOG": -1.8,
         "A": -5.0,
-        "Hit": -0.3
+        "Tk": -0.1,
+        "Hit": -0.3,
+        "SOG": -1.8
       },
       "reason": "unresolved_player"
     },
@@ -1622,8 +1622,8 @@
         "06iml"
       ],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": -0.9
+        "Hit": -0.9,
+        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -1637,9 +1637,9 @@
       "difference": 2.6,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
         "SV": 0.2,
-        "Hit": 2.1
+        "Hit": 2.1,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -1667,8 +1667,8 @@
       "difference": 2.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "A": 2.5
+        "A": 2.5,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -1696,8 +1696,8 @@
       "difference": 2.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.7
+        "Hit": 1.7,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -1711,8 +1711,8 @@
       "difference": 2.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.7
+        "Hit": 1.7,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -1824,8 +1824,8 @@
       "difference": 1.8,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.6,
-        "Hit": 1.2
+        "Hit": 1.2,
+        "SOG": 0.6
       },
       "reason": "score_difference"
     },
@@ -1839,8 +1839,8 @@
       "difference": 1.8,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.5
+        "Hit": 1.5,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -1995,8 +1995,8 @@
       "difference": 1.6,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -2038,9 +2038,9 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
         "SV": 0.6,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -2054,8 +2054,8 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.2
+        "Hit": 1.2,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -2409,8 +2409,8 @@
       "difference": 1.4,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -2551,8 +2551,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "Blk": 0.2,
-        "SOG": 0.3,
-        "Hit": 0.8
+        "Hit": 0.8,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -2665,8 +2665,8 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 1.0
+        "Hit": 1.0,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -3018,9 +3018,9 @@
       "difference": 1.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
         "SV": 0.2,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3076,8 +3076,8 @@
       "difference": 1.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 0.9
+        "Hit": 0.9,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -3348,9 +3348,9 @@
       "difference": 1.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
         "SV": -0.2,
-        "Hit": 1.6
+        "Hit": 1.6,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3504,8 +3504,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3618,8 +3618,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3647,9 +3647,9 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
         "SV": 0.2,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3691,8 +3691,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 0.7
+        "Hit": 0.7,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -3706,8 +3706,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -3835,8 +3835,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -4019,8 +4019,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -4104,8 +4104,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -4301,8 +4301,8 @@
       "difference": 0.8,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
-        "Hit": 0.5
+        "Hit": 0.5,
+        "SOG": 0.3
       },
       "reason": "score_difference"
     },
@@ -4372,8 +4372,8 @@
       "difference": 0.8,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.0,
-        "SV": -0.2
+        "SV": -0.2,
+        "Hit": 1.0
       },
       "reason": "score_difference"
     },
@@ -4684,8 +4684,8 @@
       "difference": 0.7,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 1.0
+        "Hit": 1.0,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -5290,9 +5290,9 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.6,
         "SV": -0.2,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SOG": -0.6
       },
       "reason": "score_difference"
     },
@@ -5320,8 +5320,8 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -5335,8 +5335,8 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -5574,8 +5574,8 @@
       "difference": 0.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 0.5
+        "Hit": 0.5,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -6164,8 +6164,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "Blk": -0.2,
-        "SOG": -0.3,
-        "Hit": 0.4
+        "Hit": 0.4,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -6179,8 +6179,8 @@
       "difference": 0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.6,
-        "Hit": 0.7
+        "Hit": 0.7,
+        "SOG": -0.6
       },
       "reason": "score_difference"
     },
@@ -6194,8 +6194,8 @@
       "difference": 0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": 0.4
+        "Hit": 0.4,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
