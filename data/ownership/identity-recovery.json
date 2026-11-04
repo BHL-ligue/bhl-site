@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T22:41:57.831505+00:00",
+  "updatedAt": "2026-11-04T22:45:10.316112+00:00",
   "requestedIds": [
     "003hb",
     "003hf",
@@ -27,70 +27,70 @@
       "leagueId": "vwa89uoajhz15dxv",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832117962}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310376}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2018-19",
       "leagueId": "vwa89uoajhz15dxv",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118056}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310439}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2019-20",
       "leagueId": "2uolurhgjv9p9ryl",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118175}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310560}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2019-20",
       "leagueId": "2uolurhgjv9p9ryl",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118264}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310620}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2020-21",
       "leagueId": "x84a2ac9kb7zbs0w",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118308}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310635}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2020-21",
       "leagueId": "x84a2ac9kb7zbs0w",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118414}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310694}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2021-22",
       "leagueId": "o981oceokoydzrkt",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118520}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310779}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2021-22",
       "leagueId": "o981oceokoydzrkt",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118608}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832310824}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2023-24",
       "leagueId": "ukw6z6r2lgjl09qn",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118697}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
+      "error": "No historical stats table: {'data': {'sDate': 1793832310882}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
     },
     {
       "season": "2023-24",
       "leagueId": "ukw6z6r2lgjl09qn",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832118798}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
+      "error": "No historical stats table: {'data': {'sDate': 1793832310953}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
     }
   ],
   "unresolved": [
