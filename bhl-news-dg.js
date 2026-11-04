@@ -66,6 +66,7 @@ async function boot(){
  if(view==='review'&&p.role!=='admin'){$('access').classList.remove('hidden');$('access').querySelector('h2').textContent='Espace réservé à l’administration';$('access').querySelector('p').textContent='Retrouve tes soumissions dans « Articles en attente d’approbation ».';message('La validation des articles est réservée à l’administration.');return;}
  $('app').classList.remove('hidden');$('identity').textContent=(p.full_name||'DG BHL')+' · '+(p.role==='admin'?'Administration BHL':'Rédaction DG');
  document.querySelectorAll('.admin-only').forEach(el=>el.classList.toggle('hidden',p.role!=='admin'));
+ if(p.role==='admin'){const back=document.querySelector('main>a:first-child');if(back){back.href='bhl-admin-dg.html#articles';back.textContent='← Retour au portail administrateur'}}
  document.querySelectorAll('.article-nav a').forEach(el=>{if(el.dataset.page===view)el.setAttribute('aria-current','page');});
  $('articleHub').classList.toggle('hidden',view!=='hub');$('articleList').classList.toggle('hidden',!['edit','pending','drafts'].includes(view));$('moderation').classList.toggle('hidden',view!=='review');$('newArticle').hidden=view==='write'||view==='hub';
  $('listTitle').textContent=view==='drafts'?'Mes brouillons':view==='pending'?'Mes articles soumis':p.role==='admin'?'Tous les articles de la ligue':'Mes articles';
