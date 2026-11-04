@@ -1,0 +1,451 @@
+season,period,team,periodStart,periodEnd,fantraxId,nhlId,player,nhlReconstructedHits,fantraxOriginalHits,individualHitDifference,teamFantraxHitFpts,teamReconstructedHitFpts,verification
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,03161,8477498,Darnell Nurse,10.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,03wpm,8479325,Charlie McAvoy,6.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,02fzm,8476887,Filip Forsberg,5.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,03rfl,8478519,Anthony Cirelli,4.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,03169,8477505,Alexander Wennberg,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,04qve,8480817,KAndre Miller,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,0457g,8479980,Nicolas Hague,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,02b76,8476389,Vincent Trocheck,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,04ye7,8481546,Cam York,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,04lo0,8482124,Quinton Byfield,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,02nqh,8476960,Andreas Athanasiou,3.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,02422,8476454,Ryan Nugent-Hopkins,2.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,038vb,8478439,Travis Konecny,2.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,03dms,8477942,Kevin Fiala,1.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,04mto,8481554,Kaapo Kakko,0.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,05gdo,8482146,Luke Evangelista,0.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,02b81,8476346,Johnny Gaudreau,0.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,1,Minnesota North Stars,2023-10-10T17:30:00.0-0400,2023-10-16T18:59:59.0-0400,00u0m,8474565,Alex Pietrangelo,0.0,,,3.4,5.1,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,01f3c,8475169,Evander Kane,12.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,02ybm,8477506,Ryan Pulock,10.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03e1n,8477960,Adrian Kempe,8.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,003dv,8470621,Corey Perry,6.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,004jl,8473419,Brad Marchand,5.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,02un4,8478402,Connor McDavid,4.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,01f3e,8475172,Nazem Kadri,4.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03rez,8478466,Daniel Sprong,3.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03eb0,8477987,Ryan Donato,3.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03as6,8477955,Jared McCann,3.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,05k8c,8482159,Tyson Foerster,2.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,0045j,8471724,Kris Letang,2.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03yg4,8479398,Samuel Girard,1.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,031oq,8477488,Brett Pesce,1.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,003tz,8470613,Brent Burns,1.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,03rfx,8478438,Tommy Novak,0.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,05ylt,8484145,Zach Benson,0.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,2,Nashville Predators,2023-10-16T19:00:00.0-0400,2023-10-23T18:59:59.0-0400,04lcz,8480884,Calen Addison,0.0,,,5.0,6.5,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,01c32,8475170,Brayden Schenn,10.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,01zu5,8475753,Justin Faulk,8.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,03l0t,8478401,Pavel Zacha,8.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,05r1l,8482667,William Eklund,6.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,02nok,8476881,Tomas Hertl,6.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,02noq,8476875,Mike Matheson,4.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,04lc8,8480829,Jesperi Kotkaniemi,4.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,04ymt,8482078,Lucas Raymond,4.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,04dwk,8480064,Josh Norris,4.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,04mv3,8481618,Alex Newhook,4.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,03d09,8477949,Alex Tuch,2.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,05gda,8482660,Kent Johnson,2.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,042vl,8479385,Jordan Kyrou,2.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,048x7,8479976,Juuso Valimaki,1.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,03924,8478403,Jack Eichel,1.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,03pax,8478500,Ivan Provorov,1.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,005gi,8474166,Alec Martinez,1.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,3,Cleveland Barons,2023-10-23T19:00:00.0-0400,2023-10-30T18:59:59.0-0400,01skq,8475764,Cam Fowler,0.0,,,5.0,6.8,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,048t9,8479661,Tanner Jeannot,13.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04kyh,8480801,Brady Tkachuk,11.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0046u,8470794,Joe Pavelski,6.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02noe,8476853,Morgan Rielly,6.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04ye8,8481606,Jordan Spence,5.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04lct,8480798,Philipp Kurashev,4.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,051m4,8481605,Jackson LaCombe,4.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03duf,8477946,Dylan Larkin,4.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,05ltj,8482122,Brock Faber,3.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02ybn,8477504,Josh Morrissey,3.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01mza,8475197,Tyson Barrie,3.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02wy3,8477496,Elias Lindholm,3.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,00454,8471675,Sidney Crosby,2.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02fqa,8476292,Ondrej Palat,2.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0045k,8471215,Evgeni Malkin,1.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0042t,8473512,Claude Giroux,1.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,031p0,8477404,Jake Guentzel,0.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Atlanta Thrashers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,05ltt,8482155,Alex Laferriere,0.0,,,5.4,7.099999999999999,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03vuj,8479336,Carl Grundstrom,13.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,05x9g,8482964,Arber Xhekaj,10.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04amg,8482109,Alexis Lafreniere,7.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03jxy,8479318,Auston Matthews,6.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,020f4,8476457,Adam Larsson,6.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,051wb,8481704,Juuso Parssinen,5.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04f2d,8480208,Drake Batherson,4.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04f29,8480205,Emil Bemstrom,3.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02b6w,8476448,William Karlsson,2.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03yuf,8480009,Eeli Tolvanen,2.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04f75,8480220,Noah Cates,2.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03raf,8478444,Brock Boeser,1.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03ekl,8478882,Vladislav Gavrikov,1.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03rae,8478493,Joel Eriksson Ek,1.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04gek,8480434,Sean Durzi,1.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02azg,8476463,Jonas Brodin,1.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04lcf,8480797,Joel Farabee,0.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Chicago Blackhawks,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01g14,8474673,T.J. Brodie,0.0,,,5.0,6.500000000000001,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03l0t,8478401,Pavel Zacha,9.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01c32,8475170,Brayden Schenn,9.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01zu5,8475753,Justin Faulk,8.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01skq,8475764,Cam Fowler,6.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03d09,8477949,Alex Tuch,4.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01xfp,8475768,Jaden Schwartz,4.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02noq,8476875,Mike Matheson,3.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03pax,8478500,Ivan Provorov,3.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,005gi,8474166,Alec Martinez,3.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,042vl,8479385,Jordan Kyrou,2.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0457b,8479999,Casey Mittelstadt,2.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04az7,8480113,Alex Iafallo,1.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04lc8,8480829,Jesperi Kotkaniemi,1.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,048x7,8479976,Juuso Valimaki,1.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03924,8478403,Jack Eichel,1.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,05gda,8482660,Kent Johnson,0.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04uql,8482149,Cole Perfetti,0.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,Cleveland Barons,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01z7v,8476461,Sean Couturier,0.0,,,4.2,5.7,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02yjp,8477964,Ivan Barbashev,12.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03e7p,8477948,Travis Sanheim,6.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01f3d,8475171,Oliver Ekman-Larsson,5.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02ybk,8477476,Artturi Lehkonen,4.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,004jg,8474034,Pat Maroon,4.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,048x9,8480012,Elias Pettersson,3.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04xjf,8482671,Owen Power,3.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02ni5,8476539,Jonathan Marchessault,2.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03mqg,8479345,Jakob Chychrun,2.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04osu,8480849,Barrett Hayton,2.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0579x,8484166,Adam Fantilli,2.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04408,8479718,Alex Barre-Boulet,2.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,042vx,8479425,Filip Hronek,1.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02yjo,8477944,Jakub Vrana,1.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,04zj8,8481553,Bobby Brink,1.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01zvf,8475913,Mark Stone,1.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,0043s,8474037,James van Riemsdyk,1.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,New York Rangers,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,059e0,8482105,Jake Sanderson,0.0,,,3.3,5.200000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02dq6,8476419,Jean-Gabriel Pageau,13.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02dq2,8476856,Mathew Dumba,6.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,051z1,8482111,Justin Barron,5.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,01ztf,8475714,Calle Jarnkrok,4.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,05gd8,8482745,Mason McTavish,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03ra7,8478460,Zach Werenski,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,031p3,8477409,Carter Verhaeghe,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03e2l,8478233,Andrew Mangiapane,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02azb,8476460,Mark Scheifele,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03ne3,8478366,Frank Vatrano,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03rip,8478507,John Marino,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,027i6,8476459,Mika Zibanejad,2.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02yjl,8477934,Leon Draisaitl,1.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02nol,8476882,Teuvo Teravainen,1.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03dde,8478013,Jake Walman,1.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,02unz,8477951,Nick Schmaltz,0.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,03rag,8478458,Jack Roslovic,0.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,4,Ottawa Senators,2023-10-30T19:00:00.0-0400,2023-11-06T18:59:59.0-0500,015pv,8474590,John Carlson,0.0,,,2.9,4.700000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04kyh,8480801,Brady Tkachuk,18.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,048t9,8479661,Tanner Jeannot,15.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02noe,8476853,Morgan Rielly,9.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01skr,8475798,Mikael Granlund,6.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,05ltj,8482122,Brock Faber,4.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,0046u,8470794,Joe Pavelski,4.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,00454,8471675,Sidney Crosby,4.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02wy3,8477496,Elias Lindholm,4.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,051m4,8481605,Jackson LaCombe,3.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,0045k,8471215,Evgeni Malkin,3.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,051xf,8482475,Egor Chinakhov,3.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04ye8,8481606,Jordan Spence,2.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,031p0,8477404,Jake Guentzel,2.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03duf,8477946,Dylan Larkin,2.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04f17,8480188,Fabian Zetterlund,2.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,0042t,8473512,Claude Giroux,1.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02ybn,8477504,Josh Morrissey,0.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Atlanta Thrashers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01mza,8475197,Tyson Barrie,0.0,,,6.1,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,004cq,8471214,Alex Ovechkin,10.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03eer,8478136,Jake Middleton,9.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01zvp,8475810,Bryan Rust,7.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02nou,8476869,Brady Skjei,6.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01mz5,8475200,Dmitry Orlov,6.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02un7,8477493,Aleksander Barkov,5.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02ytx,8477451,Ryan Hartman,5.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03nfr,8478542,Evan Rodrigues,4.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02nqk,8476979,Erik Gustafsson,4.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,031v6,8477346,MacKenzie Weegar,4.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02uws,8478445,Mathew Barzal,3.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02aza,8476458,Ryan Strome,3.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04y4m,8484144,Connor Bedard,2.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02npl,8476923,Damon Severson,1.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,042yb,8479542,Brandon Hagel,1.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02nq2,8476905,Chandler Stephenson,0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02un5,8477933,Sam Reinhart,0.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,Florida Panthers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01sio,8475692,Mats Zuccarello,0.0,,,5.5,7.0,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,048x9,8480012,Elias Pettersson,11.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,042vx,8479425,Filip Hronek,7.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02jrw,8476826,Yanni Gourde,7.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,059e0,8482105,Jake Sanderson,7.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,004jg,8474034,Pat Maroon,7.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01f3d,8475171,Oliver Ekman-Larsson,6.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03e7p,8477948,Travis Sanheim,6.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,0579x,8484166,Adam Fantilli,6.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02npb,8476925,Colton Sissons,6.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02ybk,8477476,Artturi Lehkonen,5.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02yjp,8477964,Ivan Barbashev,4.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02ni5,8476539,Jonathan Marchessault,2.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04xjf,8482671,Owen Power,2.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,0043s,8474037,James van Riemsdyk,1.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04zj8,8481553,Bobby Brink,0.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03mqg,8479345,Jakob Chychrun,0.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01zvf,8475913,Mark Stone,0.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,New York Rangers,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04408,8479718,Alex Barre-Boulet,0.0,,,6.0,7.7,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02noj,8476880,Tom Wilson,11.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02b3w,8476432,Boone Jenner,10.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03yg3,8479410,Mikhail Sergachev,7.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,048vf,8480830,Andrei Svechnikov,6.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02ib8,8476792,Torey Krug,4.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01bw5,8473507,Jeff Petry,4.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03yh8,8480015,Owen Tippett,4.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01whl,8475784,Jeff Skinner,3.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02npz,8476902,Esa Lindell,2.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,04mq1,8481624,Ilya Mikheyev,2.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,05ui2,8483431,Logan Cooley,2.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,026p4,8476456,Jonathan Huberdeau,1.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03as9,8478440,Dylan Strome,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01zto,8475745,Charlie Coyle,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01yj4,8474715,Cam Atkinson,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,03kra,8478398,Kyle Connor,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,02npq,8476917,Adam Pelech,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,5,Toronto Maple Leafs,2023-11-06T19:00:00.0-0500,2023-11-13T20:29:59.0-0500,01mzc,8475188,Brayden McNabb,0.0,,,3.9,5.600000000000001,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03rg2,8478840,Will Borgen,12.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,042xa,8479525,Ross Colton,7.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,049ph,8480145,Neal Pionk,6.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04lc0,8480803,Evan Bouchard,4.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04ldb,8481524,Bowen Byram,4.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03rgp,8478472,Mathieu Joseph,4.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,01sif,8475794,Tyler Seguin,3.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03mn9,8478420,Mikko Rantanen,3.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03ebb,8477998,Warren Foegele,2.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03ec6,8478038,Devon Toews,2.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,01ztp,8475786,Zach Hyman,2.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04yqp,8482113,Anton Lundell,2.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04f1z,8479998,Mikey Anderson,2.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,02wy7,8477402,Pavel Buchnevich,1.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,05y3a,8484153,Leo Carlsson,1.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,01f5z,8475184,Chris Kreider,0.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03rik,8478873,Troy Terry,0.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,California Golden Seals,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03wpi,8479400,Pierre-Luc Dubois,0.0,,,4.0,5.5,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,02jrw,8476826,Yanni Gourde,10.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,042vx,8479425,Filip Hronek,7.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,0579x,8484166,Adam Fantilli,7.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,039cg,8477935,Sam Bennett,6.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,048x9,8480012,Elias Pettersson,6.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,02yjp,8477964,Ivan Barbashev,5.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,02ni5,8476539,Jonathan Marchessault,3.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04xjf,8482671,Owen Power,3.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,01f3d,8475171,Oliver Ekman-Larsson,2.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,02yjo,8477944,Jakub Vrana,2.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,059e0,8482105,Jake Sanderson,1.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03mqg,8479345,Jakob Chychrun,1.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03e7p,8477948,Travis Sanheim,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04zj8,8481553,Bobby Brink,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,01zvf,8475913,Mark Stone,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,0043s,8474037,James van Riemsdyk,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,03mn5,8479339,Patrik Laine,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,6,New York Rangers,2023-11-13T20:30:00.0-0500,2023-11-20T18:59:59.0-0500,04408,8479718,Alex Barre-Boulet,0.0,,,3.8,5.3,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01yj6,8475462,Radko Gudas,13.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,00qs7,8473994,Jamie Benn,7.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01s88,8474641,Adam Henrique,6.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,024lv,8475218,Mattias Ekholm,5.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03de2,8477986,Brandon Montour,5.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03rgk,8478851,Alex Carrier,5.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,031pn,8477426,Nick Paul,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03v70,8479337,Alex DeBrincat,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04an5,8480036,Miro Heiskanen,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01c13,8475167,Victor Hedman,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,05gtp,8482110,Dawson Mercer,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02fro,8476392,Adam Lowry,3.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02b70,8476453,Nikita Kucherov,2.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01zti,8475726,Tyler Toffoli,2.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01mzf,8475191,Reilly Smith,1.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04bdb,8481559,Jack Hughes,0.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04apb,8480023,Robert Thomas,0.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,Hartford Whalers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04zj5,8482175,JJ Peterka,0.0,,,4.9,6.4,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,039cg,8477935,Sam Bennett,12.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02jrw,8476826,Yanni Gourde,7.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02npb,8476925,Colton Sissons,6.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01f3d,8475171,Oliver Ekman-Larsson,4.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,048x9,8480012,Elias Pettersson,4.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01zvf,8475913,Mark Stone,3.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,0579x,8484166,Adam Fantilli,3.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02ni5,8476539,Jonathan Marchessault,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,042vx,8479425,Filip Hronek,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,059e0,8482105,Jake Sanderson,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03e7p,8477948,Travis Sanheim,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04zj8,8481553,Bobby Brink,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04xjf,8482671,Owen Power,2.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02yjo,8477944,Jakub Vrana,1.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03mn5,8479339,Patrik Laine,1.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01gjh,8475193,Tomas Tatar,0.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03mqg,8479345,Jakob Chychrun,0.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,New York Rangers,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,0043s,8474037,James van Riemsdyk,0.0,,,3.4,5.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03yh8,8480015,Owen Tippett,12.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02fzj,8476399,Blake Coleman,7.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01zto,8475745,Charlie Coyle,7.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02b3w,8476432,Boone Jenner,6.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01bw5,8473507,Jeff Petry,6.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,026p4,8476456,Jonathan Huberdeau,5.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,048vf,8480830,Andrei Svechnikov,5.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02ib8,8476792,Torey Krug,3.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01mzc,8475188,Brayden McNabb,3.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01whl,8475784,Jeff Skinner,2.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03yg3,8479410,Mikhail Sergachev,2.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,04mq1,8481624,Ilya Mikheyev,2.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02npz,8476902,Esa Lindell,1.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,01yj4,8474715,Cam Atkinson,1.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,02npq,8476917,Adam Pelech,1.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03as9,8478440,Dylan Strome,0.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,03kra,8478398,Kyle Connor,0.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,7,Toronto Maple Leafs,2023-11-20T19:00:00.0-0500,2023-11-27T18:59:59.0-0500,05ui2,8483431,Logan Cooley,0.0,,,4.3,6.3,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,02dq6,8476419,Jean-Gabriel Pageau,11.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,024lv,8475218,Mattias Ekholm,8.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,03wor,8478975,Mason Marchment,8.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,00qs7,8473994,Jamie Benn,7.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,02nqb,8476892,Colton Parayko,7.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,01yj6,8475462,Radko Gudas,6.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,01zti,8475726,Tyler Toffoli,5.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,03v70,8479337,Alex DeBrincat,4.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,04an5,8480036,Miro Heiskanen,4.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,031pn,8477426,Nick Paul,3.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,03de2,8477986,Brandon Montour,3.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,02b70,8476453,Nikita Kucherov,2.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,04apb,8480023,Robert Thomas,1.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,01c13,8475167,Victor Hedman,1.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,04zj5,8482175,JJ Peterka,1.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,0457f,8480002,Nico Hischier,0.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,01s88,8474641,Adam Henrique,0.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,9,Hartford Whalers,2023-12-04T19:00:00.0-0500,2023-12-11T18:59:59.0-0500,04bdb,8481559,Jack Hughes,0.0,,,5.1,7.1000000000000005,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,03yh8,8480015,Owen Tippett,10.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,02noj,8476880,Tom Wilson,9.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,05ui2,8483431,Logan Cooley,7.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,03rgv,8478859,Niko Mikkola,7.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,02fzj,8476399,Blake Coleman,6.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,02npz,8476902,Esa Lindell,5.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01mzc,8475188,Brayden McNabb,4.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01bw5,8473507,Jeff Petry,3.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,02ib8,8476792,Torey Krug,2.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,026p4,8476456,Jonathan Huberdeau,2.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,04mq1,8481624,Ilya Mikheyev,2.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,02o8b,8477021,Alexander Kerfoot,2.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01zto,8475745,Charlie Coyle,1.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01yj4,8474715,Cam Atkinson,1.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01n84,8473986,Alex Killorn,1.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,01whl,8475784,Jeff Skinner,0.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,03as9,8478440,Dylan Strome,0.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,11,Toronto Maple Leafs,2023-12-18T19:00:00.0-0500,2023-12-25T11:59:59.0-0500,03yg3,8479410,Mikhail Sergachev,0.0,,,4.5,6.200000000000001,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04qve,8480817,KAndre Miller,13.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,03wpm,8479325,Charlie McAvoy,9.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,0457g,8479980,Nicolas Hague,7.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02b76,8476389,Vincent Trocheck,7.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,038vb,8478439,Travis Konecny,7.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02fzm,8476887,Filip Forsberg,6.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,00u0m,8474565,Alex Pietrangelo,5.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,03rfl,8478519,Anthony Cirelli,3.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04ye7,8481546,Cam York,3.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,05gdo,8482146,Luke Evangelista,3.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04sy1,8481560,Arthur Kaliyev,2.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,03dms,8477942,Kevin Fiala,2.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04o0g,8482079,Marco Rossi,2.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,05ymq,8483505,Matthew Poitras,2.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04lo0,8482124,Quinton Byfield,1.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,01bvd,8474031,Kevin Shattenkirk,1.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02422,8476454,Ryan Nugent-Hopkins,0.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,Minnesota North Stars,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02b81,8476346,Johnny Gaudreau,0.0,,,5.5,7.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,048x9,8480012,Elias Pettersson,9.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02yjp,8477964,Ivan Barbashev,9.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02npb,8476925,Colton Sissons,8.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02ni5,8476539,Jonathan Marchessault,6.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,039cg,8477935,Sam Bennett,6.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04zj8,8481553,Bobby Brink,6.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,0579x,8484166,Adam Fantilli,3.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,05gtp,8482110,Dawson Mercer,3.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,042vx,8479425,Filip Hronek,2.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,01zvf,8475913,Mark Stone,2.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,0043s,8474037,James van Riemsdyk,2.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,02npq,8476917,Adam Pelech,2.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,04yn0,8481580,Connor McMichael,2.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,059e0,8482105,Jake Sanderson,1.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,03e7p,8477948,Travis Sanheim,1.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,03mqg,8479345,Jakob Chychrun,1.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,05ril,8483495,Simon Nemec,0.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,14,New York Rangers,2024-01-08T19:00:00.0-0500,2024-01-15T11:59:59.0-0500,039ch,8477953,Kasperi Kapanen,0.0,,,4.6,6.3,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rg2,8478840,Will Borgen,15.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03wqz,8479415,Michael McLeod,9.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01f5z,8475184,Chris Kreider,8.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,042xa,8479525,Ross Colton,6.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,049ph,8480145,Neal Pionk,6.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rgp,8478472,Mathieu Joseph,5.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04lc0,8480803,Evan Bouchard,4.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03ec6,8478038,Devon Toews,4.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01ztp,8475786,Zach Hyman,4.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01sif,8475794,Tyler Seguin,4.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rik,8478873,Troy Terry,2.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04ezy,8480028,Morgan Frost,2.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04f1z,8479998,Mikey Anderson,2.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,020h1,8474602,Justin Schultz,1.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04mkd,8481068,Yegor Sharangovich,1.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03ecd,8478047,Michael Bunting,1.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02wy7,8477402,Pavel Buchnevich,1.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,California Golden Seals,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03mn9,8478420,Mikko Rantanen,1.0,,,5.9,7.6000000000000005,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03vuj,8479336,Carl Grundstrom,11.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,020f4,8476457,Adam Larsson,9.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rae,8478493,Joel Eriksson Ek,7.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04amg,8482109,Alexis Lafreniere,7.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04lcf,8480797,Joel Farabee,6.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03jxy,8479318,Auston Matthews,6.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03mm6,8478474,Lawson Crouse,6.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rad,8478469,Thomas Chabot,5.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04f2d,8480208,Drake Batherson,5.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,06age,8484258,Sam Malinski,5.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03raf,8478444,Brock Boeser,4.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,031qx,8477380,Jonny Brodzinski,4.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04gek,8480434,Sean Durzi,3.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01mz5,8475200,Dmitry Orlov,3.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02b3l,8476480,Vladislav Namestnikov,2.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04r0j,8480891,Michael Kesselring,2.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03y54,8479619,Michael Carcone,1.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Chicago Blackhawks,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01xfs,8475744,Evgeny Kuznetsov,0.0,,,6.6,8.6,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04abd,8482245,Artem Zub,10.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01c32,8475170,Brayden Schenn,9.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,027i6,8476459,Mika Zibanejad,5.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02noq,8476875,Mike Matheson,5.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01skq,8475764,Cam Fowler,5.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03pax,8478500,Ivan Provorov,4.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03d09,8477949,Alex Tuch,3.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01z7v,8476461,Sean Couturier,3.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03e2l,8478233,Andrew Mangiapane,2.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03ne3,8478366,Frank Vatrano,2.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,015pv,8474590,John Carlson,2.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02nok,8476881,Tomas Hertl,2.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03l0t,8478401,Pavel Zacha,2.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01xfp,8475768,Jaden Schwartz,1.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02unz,8477951,Nick Schmaltz,0.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01zu5,8475753,Justin Faulk,0.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,042vl,8479385,Jordan Kyrou,0.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Cleveland Barons,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,0457b,8479999,Casey Mittelstadt,0.0,,,3.8,5.5,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02440,8475314,Anders Lee,17.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03uzr,8479314,Matthew Tkachuk,8.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01ztq,8475760,Nick Bjugstad,8.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02dq3,8476885,Jacob Trouba,7.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01c12,8475166,John Tavares,6.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04mx6,8482087,Kaiden Guhle,6.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04yu5,8481581,Thomas Harley,5.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03d5e,8477952,Robby Fabbri,4.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,00qru,8474564,Steven Stamkos,4.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01kn1,8474149,Evgenii Dadonov,4.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,01fx3,8474600,Roman Josi,3.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,031p8,8477416,Oliver Bjorkstrand,3.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,04mtp,8481528,Dylan Cozens,2.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,0243f,8477495,Seth Jones,2.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03bfj,8478550,Artemi Panarin,2.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rf2,8478449,Roope Hintz,1.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,03rf8,8478407,Vince Dunn,0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
+2023-24,15,Montréal Canadiens,2024-01-15T12:00:00.0-0500,2024-01-22T18:59:59.0-0500,02yjj,8477939,William Nylander,0.0,,,6.6,8.200000000000001,pending_original_fantrax_player_hits
