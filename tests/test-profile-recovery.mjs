@@ -18,6 +18,6 @@ assert.equal(await api.bhlResolveUniqueDirectoryId('Brayden Yager'), 'yager');
 assert.equal(await api.bhlResolveUniqueDirectoryId('Yanni Gourde'), 'gourde');
 const demidov=await context.window.BHLPlayerStats.officialStats('demidov','Ivan Demidov');assert.equal(demidov.fpts,7.5);assert.equal(demidov.gp,2);
 const goalie=await context.window.BHLPlayerStats.officialStats('binnington','Jordan Binnington');assert.equal(goalie.fpts,12);assert.equal(goalie.gp,4);
-const resolved=await api.bhlPlayerForOfficial('yager','Brayden Yager');const noGames=await api.bhlCurrentOfficialStats(resolved.player,resolved.id);assert.equal(noGames.stats.GP,0);assert.equal(noGames.noGames,true);
+const resolved=await api.bhlPlayerForOfficial('yager','Brayden Yager');const noGames=await api.bhlCurrentOfficialStats(resolved.player,resolved.id);assert.equal(noGames.stats.GP,null);assert.equal(noGames.noSeasonRecord,true);
 assert.ok(calls.every(url=>url.startsWith('data/')));
-console.log('Historical identities, protected confirmed IDs, Demidov/goalie official snapshots, zero-game state and same-origin loading passed.');
+console.log('Historical identities, protected confirmed IDs, Demidov/goalie official snapshots, missing-season state and same-origin loading passed.');
