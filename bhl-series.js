@@ -33,15 +33,34 @@ function renderSeason(){
  $('bracket').innerHTML='<div class="bracket">'+ordered.map(r=>'<section class="round"><h3>'+esc(r.number===3?'Finale · Coupe Béliveau':'Ronde '+r.number)+'</h3><p class="note" style="margin:0 0 16px">'+esc(date(r.start)+(r.end?' — '+date(r.end):''))+'</p><div class="duels">'+r.matches.map(m=>'<div class="duel">'+m.teams.map(t=>'<div class="team '+(!s.cancelled||r.number===1?m.winner===t.id?'winner':'':'')+'">'+logo(t.name)+'<span class="name">'+esc(t.name)+'</span><span class="score">'+fmt(t.score)+'</span></div>').join('')+'<small>'+esc(r.interrupted?'Ronde interrompue · pointages archivés, sans résultat final':'FPTS · pointages officiels Fantrax')+'</small></div>').join('')+'</div></section>').join('')+(s.cancelled?'<section class="round"><h3>Troisième ronde</h3><div class="duels"><div class="empty">Non disputée<br><b>Aucun champion en 2019-20</b></div></div></section>':'')+'</div>';
 }
 function renderRecords(){const title=$('record').value;const rows=records.find(s=>s.title===title)?.entries||[];$('records').innerHTML=rows.length?'<table><thead><tr><th>Rang</th><th>Organisation</th><th>'+esc($('record').selectedOptions[0].text)+'</th></tr></thead><tbody>'+[...rows].sort((a,b)=>Number(b.value)-Number(a.value)||a.team.localeCompare(b.team,'fr')).map((r,i,all)=>'<tr><td>'+ (all.findIndex(x=>Number(x.value)===Number(r.value))+1)+'</td><td><span class="org">'+logo(r.team)+esc(r.team)+'</span></td><td>'+esc(r.value)+'</td></tr>').join('')+'</tbody></table>':'<p class="empty">Palmarès indisponible pour le moment.</p>'}
+async function loadPlayoffArchive(){
+ const urls=['data/playoffs.json','https://raw.githubusercontent.com/BHL-ligue/bhl-site/main/data/playoffs.json'];
+ let lastError;
+ for(const url of urls){
+  for(let attempt=0;attempt<2;attempt++){
+   try{
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),15000);
+    let response;
+    try{response=await fetch(url,{cache:'no-store',signal:controller.signal})}finally{clearTimeout(timer)}
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const payload=await response.json();
+    if(!Array.isArray(payload.seasons)||!payload.seasons.length)throw Error('Archives incomplètes');
+    return payload;
+   }catch(e){lastError=e}
+  }
+ }
+ throw lastError||Error('Archives indisponibles');
+}
 async function start(){
- try{const response=await fetch('data/playoffs.json',{cache:'no-store'});if(!response.ok)throw Error('Archives indisponibles');data=await response.json();
+ try{data=await loadPlayoffArchive();
  const champions=data.seasons.filter(s=>s.champion);
  $('season').innerHTML=data.seasons.map(s=>'<option value="'+esc(s.season)+'">'+esc(s.season)+'</option>').join('');$('season').disabled=false;
  const requested=new URL(location.href).searchParams.get('saison');if(data.seasons.some(s=>s.season===requested))$('season').value=requested;
  $('banner-wall').innerHTML=champions.map(s=>'<article class="banner-card"><img src="'+esc(s.banner)+'" alt="Bannière des champions '+esc(s.season)+' — '+esc(s.champion)+'" loading="lazy"><strong>'+esc(s.season)+'</strong><span>'+esc(s.champion)+'</span><button type="button" data-season="'+esc(s.season)+'">Voir le parcours →</button></article>').join('');
  $('banner-wall').addEventListener('click',e=>{const b=e.target.closest('[data-season]');if(b){$('season').value=b.dataset.season;renderSeason();$('season').scrollIntoView({behavior:'smooth',block:'center'})}});
  $('source').textContent=data.source||'Archives officielles BHL et affrontements Fantrax.';$('season').addEventListener('change',renderSeason);renderSeason();
- }catch(e){$('season-result').textContent='Impossible de charger les archives. Réessayez dans quelques instants.'}
+ }catch(e){console.error('BHL playoff archives:',e);$('season-result').textContent='Impossible de charger les archives. Vérifiez la connexion et réessayez.';const retry=document.createElement('button');retry.type='button';retry.textContent='Réessayer le chargement';retry.className='retry-playoffs';retry.addEventListener('click',()=>{retry.disabled=true;start()});$('season-result').append(document.createElement('br'),retry)}
  try{const r=await fetch('bhl-records-data.json');if(!r.ok)throw Error();records=(await r.json()).find(g=>g.sheet==='Recordsv4')?.sections||[];renderRecords()}catch(e){$('records').textContent='Impossible de charger le palmarès.'}
  $('record').addEventListener('change',renderRecords);
 }
