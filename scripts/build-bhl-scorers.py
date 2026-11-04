@@ -28,6 +28,25 @@ def aggregate(reports,directory):
  for row in rows.values():row['fpts']=round(row['fpts'],4)
  return list(rows.values()),coverage
 
+def diagnostics(reports):
+ """Aggregate team-period discrepancies without silently adjusting player scores."""
+ seasons=[]
+ categories=collections.Counter()
+ examples=[]
+ for report in reports:
+  season=report['season'];teams=[(p,t) for p in report.get('periods',[]) for t in p.get('teams',[])]
+  mismatches=[(p,t) for p,t in teams if not t['validated']]
+  missing=sum(1 for _,t in mismatches if t.get('unresolved'))
+  numeric=sum(1 for _,t in mismatches if t.get('difference') is not None and abs(t['difference'])>=0.005)
+  category_only=sum(1 for _,t in mismatches if t.get('difference') is not None and abs(t['difference'])<0.005 and t.get('categoryDifferences'))
+  for p,t in mismatches:
+   for code,value in t.get('categoryDifferences',{}).items():
+    categories[code]+=1
+   examples.append({'season':season,'phase':p['phase'],'period':p['period'],'team':t['team'],'official':t['official'],'calculated':t['calculated'],'difference':t.get('difference'),'unresolved':t.get('unresolved',[]),'categoryDifferences':t.get('categoryDifferences',{}),'reason':'unresolved_player' if t.get('unresolved') else 'score_difference' if t.get('difference') is not None and abs(t['difference'])>=0.005 else 'category_only'})
+  seasons.append({'season':season,'compared':len(teams),'matching':len(teams)-len(mismatches),'mismatches':len(mismatches),'unresolvedPlayerPeriods':missing,'scoreDifferencePeriods':numeric,'categoryOnlyPeriods':category_only})
+ examples.sort(key=lambda x:(x['reason']!='unresolved_player',-abs(x['difference'] or 0),x['season'],x['period']))
+ return {'schemaVersion':1,'status':'diagnostic_only','seasons':seasons,'categoryFrequency':dict(categories.most_common()),'mismatches':examples}
+
 def main():
  out=ROOT/'data/production';(out/'audits').mkdir(parents=True,exist_ok=True)
  manifest=json.loads((ROOT/'data/ownership/index.json').read_text());directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];reports=[]
@@ -54,8 +73,10 @@ def main():
   audit.OUT=out/'audits'/f'{season}.json'
   report=audit.main(season,completed_only=True);reports.append(report)
  rows,coverage=aggregate(reports,directory)
+ report_diagnostics=diagnostics(reports)
+ (out/'diagnostics.json').write_text(json.dumps(report_diagnostics,ensure_ascii=False,indent=2)+'\n')
  result={'schemaVersion':1,'updatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'reconstructed','metric':'FPTS produced while ACTIVE for a BHL team, using the historical position and season scoring settings','completedPeriodsOnly':True,'careerRankingOfficial':False,'seasons':sorted((r['season'] for r in reports),reverse=True),'coverage':coverage,'rows':rows,'unresolvedIds':sorted({r['id'] for r in rows if r['missingStarts']})}
  (out/'scorers.json').write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n')
- summary={'seasons':len(reports),'records':len(rows),'periods':sum(c['checkedPeriods'] for c in coverage),'matchingTeamPeriods':sum(c['matchingComparisons'] for c in coverage),'teamPeriods':sum(c['comparisons'] for c in coverage),'unresolvedIds':len(result['unresolvedIds']),'blockedPeriods':sum(len(c['blockedPeriods']) for c in coverage)}
+ summary={'seasons':len(reports),'records':len(rows),'periods':sum(c['checkedPeriods'] for c in coverage),'matchingTeamPeriods':sum(c['matchingComparisons'] for c in coverage),'teamPeriods':sum(c['comparisons'] for c in coverage),'unresolvedIds':len(result['unresolvedIds']),'blockedPeriods':sum(len(c['blockedPeriods']) for c in coverage),'diagnosticMismatches':len(report_diagnostics['mismatches'])}
  (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print('SCORERS_SUMMARY',json.dumps(summary),flush=True)
 if __name__=='__main__':main()
