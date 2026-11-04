@@ -58,7 +58,22 @@ jobs:
           git add data/production/scorers.json data/production/summary.json data/production/diagnostics.json data/production/hit-investigation-2023-24.json data/production/hit-player-evidence-2023-24.json
           if ! git diff --cached --quiet; then
             git commit -m "Publier le classement historique BHL provisoire"
-            git push
+            # Changes to the website may land while the long scorer audit runs.
+            # Replay only this generated-data commit on top of the latest main,
+            # without overwriting any intervening website modifications.
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                echo "Données BHL publiées avec succès (tentative $attempt)." >> "$GITHUB_STEP_SUMMARY"
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                echo "Publication GitHub refusée après 5 tentatives." >&2
+                exit 1
+              fi
+              sleep 2
+            done
           fi
       - uses: actions/upload-artifact@v4
         with:
