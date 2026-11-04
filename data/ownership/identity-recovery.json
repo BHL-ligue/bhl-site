@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T22:45:10.316112+00:00",
+  "updatedAt": "2026-11-04T22:48:56.141857+00:00",
   "requestedIds": [
     "003hb",
     "003hf",
@@ -20,97 +20,169 @@
     "03cba",
     "059dz"
   ],
-  "matches": {},
+  "matches": {
+    "003hb": {
+      "name": "Jason Pominville",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003hb"
+    },
+    "003hf": {
+      "name": "Andrej Sekera",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003hf"
+    },
+    "003i5": {
+      "name": "Curtis McElhinney",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003i5"
+    },
+    "003jc": {
+      "name": "Andrew Ladd",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003jc"
+    },
+    "003mh": {
+      "name": "Ron Hainsey",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003mh"
+    },
+    "003pa": {
+      "name": "Darren Helm",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003pa"
+    },
+    "003pc": {
+      "name": "Jimmy Howard",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003pc"
+    },
+    "003xs": {
+      "name": "Andy Greene",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/003xs"
+    },
+    "0040f": {
+      "name": "Dan Girardi",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/0040f"
+    },
+    "0040l": {
+      "name": "Jaromir Jagr",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/0040l"
+    },
+    "0045o": {
+      "name": "Brooks Orpik",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/0045o"
+    },
+    "010wq": {
+      "name": "Zack Smith",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/010wq"
+    },
+    "01dr6": {
+      "name": "Carl Gunnarsson",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/01dr6"
+    },
+    "01f61": {
+      "name": "John Moore",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/01f61"
+    },
+    "01mlo": {
+      "name": "Matt Calvert",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/01mlo"
+    },
+    "01zu0": {
+      "name": "Stephen Johns",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/01zu0"
+    },
+    "03cba": {
+      "name": "Colby Cave",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/03cba"
+    },
+    "059dz": {
+      "name": "Rodion Amirov",
+      "source": "Public archived Fantrax player record, exact ID",
+      "url": "https://www.yofhl.com/api/players/059dz"
+    }
+  },
   "sources": [
     {
       "season": "2018-19",
       "leagueId": "vwa89uoajhz15dxv",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310376}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536318}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2018-19",
       "leagueId": "vwa89uoajhz15dxv",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310439}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536433}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2019-20",
       "leagueId": "2uolurhgjv9p9ryl",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310560}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536513}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2019-20",
       "leagueId": "2uolurhgjv9p9ryl",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310620}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536632}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2020-21",
       "leagueId": "x84a2ac9kb7zbs0w",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310635}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536750}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2020-21",
       "leagueId": "x84a2ac9kb7zbs0w",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310694}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536859}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2021-22",
       "leagueId": "o981oceokoydzrkt",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310779}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832536978}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2021-22",
       "leagueId": "o981oceokoydzrkt",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310824}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
+      "error": "No historical stats table: {'data': {'sDate': 1793832537096}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'text': 'Sorry, you must be logged in to perform that action. You can click <a href=\"/login\" class=\"defaultLink\">here</a> to login now, or if you\\'re not a member yet, click <a href="
     },
     {
       "season": "2023-24",
       "leagueId": "ukw6z6r2lgjl09qn",
       "positionGroup": "HOCKEY_SKATING",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310882}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
+      "error": "No historical stats table: {'data': {'sDate': 1793832537228}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
     },
     {
       "season": "2023-24",
       "leagueId": "ukw6z6r2lgjl09qn",
       "positionGroup": "POS_201",
       "rows": 0,
-      "error": "No historical stats table: {'data': {'sDate': 1793832310953}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
+      "error": "No historical stats table: {'data': {'sDate': 1793832537346}, 'roles': ['03'], 'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}, 'responses': [{'pageError': {'onScreen': False, 'code': 'WARNING_NOT_LOGGED_IN', 'forceReload': False}}]}"
     }
   ],
-  "unresolved": [
-    "003hb",
-    "003hf",
-    "003i5",
-    "003jc",
-    "003mh",
-    "003pa",
-    "003pc",
-    "003xs",
-    "0040f",
-    "0040l",
-    "0045o",
-    "010wq",
-    "01dr6",
-    "01f61",
-    "01mlo",
-    "01zu0",
-    "03cba",
-    "059dz"
-  ]
+  "unresolved": []
 }
