@@ -1,0 +1,10 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Tests de mise en forme des règlements BHL</title><link rel="stylesheet" href="../bhl-rules-admin.css"><link rel="stylesheet" href="../bhl-rules.css"><div id="rulesAdmin"><div class="rules-preview-body" id="preview"></div></div><div class="rules-body" id="public"></div><pre id="results"></pre><script type="module">
+import {cleanHTML,richFragment} from '../bhl-rules-format.js';
+const results=[];function check(value,label){if(!value)throw Error(label);results.push('PASS '+label)}
+const html='<h3>Sous-titre</h3><p>Normal <strong>Gras choisi</strong> <span style="color:#1257ab">Bleu</span> <font color="#008800">Vert</font></p>';
+for(const id of ['preview','public']){const root=document.getElementById(id);root.append(richFragment(html));check(getComputedStyle(root.querySelector('h3')).fontWeight==='400',id+' : sous-titre sans gras automatique');check(getComputedStyle(root.querySelector('strong')).fontWeight==='700',id+' : gras explicite');check(root.querySelector('span').style.color==='rgb(18, 87, 171)',id+' : couleur personnalisée');check(root.querySelectorAll('span')[1].style.color==='rgb(0, 136, 0)',id+' : ancienne balise couleur')}
+const clean=cleanHTML(html);check(cleanHTML(clean)===clean,'couleurs et mise en forme stables après plusieurs sauvegardes');
+const hostile=cleanHTML('<script>alert(1)<\/script><img src=x onerror=alert(1)><p onclick="alert(1)" style="color:var(--unsafe)"><a href="javascript:alert(1)">Lien</a></p>');
+check(!/script|onerror|onclick|<img|javascript|var\(/i.test(hostile),'scripts, attributs et couleurs non littérales exclus');
+document.getElementById('results').textContent=results.join('\n');
+</script></html>

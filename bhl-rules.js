@@ -1,5 +1,5 @@
 import {db} from './bhl-news-db.js';
-import {richFragment} from './bhl-news-format.js';
+import {richFragment} from './bhl-rules-format.js?v=2';
 const $=id=>document.getElementById(id),node=(tag,text,cls)=>{const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el};
 const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr');
 let rules=[],category='';
