@@ -1,0 +1,734 @@
+{
+  "status": "diagnostic_only",
+  "missingIds": [
+    "003hb",
+    "003hf",
+    "003i5",
+    "003jc",
+    "003mh",
+    "003pa",
+    "003xs",
+    "0040f",
+    "0045o",
+    "010wq",
+    "01dr6",
+    "01f61",
+    "01mlo",
+    "01zu0",
+    "02nq8",
+    "031qf",
+    "03rga",
+    "06iml"
+  ],
+  "sources": [
+    {
+      "season": "2018-19",
+      "endpoint": "getLeagueInfo",
+      "responseType": "dict",
+      "keys": [
+        "matchups",
+        "rosterInfo",
+        "endDate",
+        "playerInfo",
+        "poolSettings",
+        "rosterPeriods",
+        "scoringPeriods",
+        "teamInfo",
+        "draftSettings",
+        "leagueName",
+        "leagueHistoryId",
+        "scoringSystem",
+        "seasonYear",
+        "startDate",
+        "playoffs"
+      ]
+    },
+    {
+      "season": "2018-19",
+      "endpoint": "getDraftResults",
+      "responseType": "dict",
+      "keys": [
+        "draftPicks",
+        "draftState",
+        "endDate",
+        "draftOrder",
+        "startDate"
+      ]
+    },
+    {
+      "season": "2019-20",
+      "endpoint": "getLeagueInfo",
+      "responseType": "dict",
+      "keys": [
+        "matchups",
+        "rosterInfo",
+        "endDate",
+        "playerInfo",
+        "poolSettings",
+        "rosterPeriods",
+        "scoringPeriods",
+        "teamInfo",
+        "draftType",
+        "draftSettings",
+        "leagueName",
+        "leagueHistoryId",
+        "scoringSystem",
+        "seasonYear",
+        "startDate",
+        "playoffs"
+      ]
+    },
+    {
+      "season": "2019-20",
+      "endpoint": "getDraftResults",
+      "responseType": "dict",
+      "keys": [
+        "draftDate",
+        "draftPicks",
+        "draftState",
+        "endDate",
+        "draftOrder",
+        "draftType",
+        "startDate"
+      ]
+    },
+    {
+      "season": "2022-23",
+      "endpoint": "getLeagueInfo",
+      "responseType": "dict",
+      "keys": [
+        "matchups",
+        "rosterInfo",
+        "endDate",
+        "playerInfo",
+        "poolSettings",
+        "rosterPeriods",
+        "scoringPeriods",
+        "teamInfo",
+        "draftType",
+        "draftSettings",
+        "leagueName",
+        "leagueHistoryId",
+        "scoringSystem",
+        "seasonYear",
+        "startDate",
+        "playoffs"
+      ]
+    },
+    {
+      "season": "2022-23",
+      "endpoint": "getDraftResults",
+      "responseType": "dict",
+      "keys": [
+        "draftDate",
+        "draftPicks",
+        "draftState",
+        "endDate",
+        "draftOrder",
+        "draftType",
+        "startDate"
+      ]
+    },
+    {
+      "season": "2024-25",
+      "endpoint": "getLeagueInfo",
+      "responseType": "dict",
+      "keys": [
+        "matchups",
+        "rosterInfo",
+        "endDate",
+        "playerInfo",
+        "poolSettings",
+        "rosterPeriods",
+        "scoringPeriods",
+        "teamInfo",
+        "draftType",
+        "draftSettings",
+        "leagueName",
+        "leagueHistoryId",
+        "scoringSystem",
+        "seasonYear",
+        "startDate",
+        "playoffs"
+      ]
+    },
+    {
+      "season": "2024-25",
+      "endpoint": "getDraftResults",
+      "responseType": "dict",
+      "keys": [
+        "draftDate",
+        "draftPicks",
+        "draftState",
+        "endDate",
+        "draftOrder",
+        "draftType",
+        "startDate"
+      ]
+    }
+  ],
+  "matches": {
+    "0040f": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.0040f",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "01zu0": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01zu0",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01zu0",
+        "record": {
+          "eligiblePos": "D",
+          "status": "T"
+        }
+      }
+    ],
+    "003jc": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003jc",
+        "record": {
+          "eligiblePos": "LW",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003jc",
+        "record": {
+          "eligiblePos": "LW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003jc",
+        "record": {
+          "eligiblePos": "LW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003jc",
+        "record": {
+          "eligiblePos": "LW",
+          "status": "FA"
+        }
+      }
+    ],
+    "003hf": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hf",
+        "record": {
+          "eligiblePos": "D",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hf",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "003hb": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hb",
+        "record": {
+          "eligiblePos": "RW",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hb",
+        "record": {
+          "eligiblePos": "RW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hb",
+        "record": {
+          "eligiblePos": "RW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003hb",
+        "record": {
+          "eligiblePos": "RW",
+          "status": "FA"
+        }
+      }
+    ],
+    "003i5": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003i5",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003i5",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003i5",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003i5",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      }
+    ],
+    "003mh": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003mh",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003mh",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003mh",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003mh",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "003pa": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003pa",
+        "record": {
+          "eligiblePos": "LW,RW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003pa",
+        "record": {
+          "eligiblePos": "LW,RW",
+          "status": "FA"
+        }
+      }
+    ],
+    "0045o": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.0045o",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.0045o",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.0045o",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.0045o",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "003xs": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003xs",
+        "record": {
+          "eligiblePos": "D",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003xs",
+        "record": {
+          "eligiblePos": "D",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003xs",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.003xs",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "03rga": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.03rga",
+        "record": {
+          "eligiblePos": "C",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.03rga",
+        "record": {
+          "eligiblePos": "C",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.03rga",
+        "record": {
+          "eligiblePos": "C",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.03rga",
+        "record": {
+          "eligiblePos": "C",
+          "status": "FA"
+        }
+      }
+    ],
+    "02nq8": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.02nq8",
+        "record": {
+          "eligiblePos": "G",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2018-19",
+        "source": "getDraftResults",
+        "path": "root.draftPicks[37]",
+        "record": {
+          "round": 3,
+          "pick": 38,
+          "teamId": "6k1cwxj8jjbjc99i",
+          "time": 1535935279000,
+          "pickInRound": 6,
+          "playerId": "02nq8"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.02nq8",
+        "record": {
+          "eligiblePos": "G",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.02nq8",
+        "record": {
+          "eligiblePos": "G",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getDraftResults",
+        "path": "root.draftPicks[205]",
+        "record": {
+          "round": 13,
+          "pick": 206,
+          "teamId": "67ico45zl2q74pii",
+          "time": 1664673865000,
+          "pickInRound": 14,
+          "playerId": "02nq8"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.02nq8",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      }
+    ],
+    "01dr6": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01dr6",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01dr6",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "010wq": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.010wq",
+        "record": {
+          "eligiblePos": "LW,C",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.010wq",
+        "record": {
+          "eligiblePos": "LW,C",
+          "status": "FA"
+        }
+      }
+    ],
+    "01f61": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01f61",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01f61",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01f61",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01f61",
+        "record": {
+          "eligiblePos": "D",
+          "status": "FA"
+        }
+      }
+    ],
+    "01mlo": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01mlo",
+        "record": {
+          "eligiblePos": "LW,RW",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.01mlo",
+        "record": {
+          "eligiblePos": "LW,RW",
+          "status": "T"
+        }
+      }
+    ],
+    "031qf": [
+      {
+        "season": "2018-19",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.031qf",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2019-20",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.031qf",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2022-23",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.031qf",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.031qf",
+        "record": {
+          "eligiblePos": "G",
+          "status": "FA"
+        }
+      }
+    ],
+    "06iml": [
+      {
+        "season": "2024-25",
+        "source": "getLeagueInfo",
+        "path": "root.playerInfo.06iml",
+        "record": {
+          "eligiblePos": "LW,RW",
+          "status": "T"
+        }
+      },
+      {
+        "season": "2024-25",
+        "source": "getDraftResults",
+        "path": "root.draftPicks[26]",
+        "record": {
+          "round": 2,
+          "pick": 27,
+          "teamId": "1s1ck294lva6m2xj",
+          "time": 1728170858000,
+          "pickInRound": 11,
+          "playerId": "06iml"
+        }
+      }
+    ]
+  },
+  "unmatched": []
+}
