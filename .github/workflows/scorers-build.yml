@@ -24,6 +24,17 @@ jobs:
         run: python tests/test-production-audit.py
       - name: Reconstituer les contributions des partants pour toutes les saisons
         run: python scripts/build-bhl-scorers.py
+      - name: Publier un résumé de couverture
+        if: always()
+        run: |
+          if [ -f data/production/summary.json ]; then
+            echo "## Reconstitution historique BHL" >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~json' >> "$GITHUB_STEP_SUMMARY"
+            cat data/production/summary.json >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "La reconstitution n'a pas produit de résumé. Consulter les logs." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: bhl-scorers-data
