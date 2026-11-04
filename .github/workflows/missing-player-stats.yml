@@ -6,6 +6,9 @@ on:
     paths:
       - 'scripts/match-missing-player-stats.py'
       - '.github/workflows/missing-player-stats.yml'
+concurrency:
+  group: bhl-historical-stat-candidates
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
@@ -28,7 +31,10 @@ jobs:
             git commit -m "Publier les candidats statistiques historiques"
             for attempt in 1 2 3 4 5; do
               git fetch origin main
-              git rebase origin/main
+              git reset --soft origin/main
+              git reset
+              git add data/production/fantrax-missing-player-stat-candidates.json
+              git commit -m "Publier les candidats statistiques historiques" || exit 0
               if git push origin HEAD:main; then exit 0; fi
               sleep 2
             done
