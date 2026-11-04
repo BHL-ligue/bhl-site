@@ -1,0 +1,198 @@
+{
+  "status": "diagnostic_only",
+  "ids": [
+    "003hb",
+    "003hf",
+    "003i5",
+    "003jc",
+    "003mh",
+    "003pa",
+    "003xs",
+    "0040f",
+    "0045o",
+    "010wq",
+    "01dr6",
+    "01f61",
+    "01mlo",
+    "01zu0",
+    "02nq8",
+    "031qf",
+    "03rga",
+    "06iml"
+  ],
+  "probes": [
+    {
+      "method": "getPlayerInfo",
+      "season": "2018-19",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 105,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerInfo'\"}}"
+    },
+    {
+      "method": "getPlayerInfo",
+      "season": "2019-20",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 105,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerInfo'\"}}"
+    },
+    {
+      "method": "getPlayerDetails",
+      "season": "2018-19",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 108,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerDetails'\"}}"
+    },
+    {
+      "method": "getPlayerDetails",
+      "season": "2019-20",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 108,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerDetails'\"}}"
+    },
+    {
+      "method": "getPlayerStats",
+      "season": "2018-19",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 106,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerStats'\"}}"
+    },
+    {
+      "method": "getPlayerStats",
+      "season": "2019-20",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 106,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerStats'\"}}"
+    },
+    {
+      "method": "getPlayerProfile",
+      "season": "2018-19",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 108,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerProfile'\"}}"
+    },
+    {
+      "method": "getPlayerProfile",
+      "season": "2019-20",
+      "id": "003hb",
+      "httpStatus": 200,
+      "contentType": "text/plain",
+      "bytes": 108,
+      "keys": [
+        "error"
+      ],
+      "matches": [],
+      "sample": "{'error': {'onScreen': False, 'code': 'WARNING', 'message': \"Unable to find method 'getPlayerProfile'\"}}"
+    },
+    {
+      "method": "getTeamRosters",
+      "season": "2018-19",
+      "period": 1,
+      "httpStatus": 200,
+      "bytes": 23518,
+      "keys": [
+        "period",
+        "rosters"
+      ],
+      "matches": {}
+    },
+    {
+      "method": "getTeamRosters",
+      "season": "2018-19",
+      "period": 8,
+      "httpStatus": 200,
+      "bytes": 24111,
+      "keys": [
+        "period",
+        "rosters"
+      ],
+      "matches": {}
+    },
+    {
+      "method": "getTeamRosters",
+      "season": "2019-20",
+      "period": 1,
+      "httpStatus": 200,
+      "bytes": 23545,
+      "keys": [
+        "period",
+        "rosters"
+      ],
+      "matches": {}
+    },
+    {
+      "method": "getTeamRosters",
+      "season": "2019-20",
+      "period": 8,
+      "httpStatus": 200,
+      "bytes": 24039,
+      "keys": [
+        "period",
+        "rosters"
+      ],
+      "matches": {}
+    }
+  ],
+  "identityCandidates": {},
+  "knownNames": {
+    "003hb": null,
+    "003hf": null,
+    "003i5": null,
+    "003jc": null,
+    "003mh": null,
+    "003pa": null,
+    "003xs": null,
+    "0040f": null,
+    "0045o": null,
+    "010wq": null,
+    "01dr6": null,
+    "01f61": null,
+    "01mlo": null,
+    "01zu0": null,
+    "02nq8": "Matt Murray",
+    "031qf": "Cal Petersen",
+    "03rga": "Mikhail S. Vorobyov",
+    "06iml": "Maxim Tsyplakov"
+  }
+}
