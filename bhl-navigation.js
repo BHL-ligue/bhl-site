@@ -26,6 +26,7 @@ function mount(){
   ['bhl-repechage.html','Repêchage'],
   ['bhl-records.html','Records'],
   ['bhl-transactions.html','Transactions'],
+  ['bhl-reglements.html','Règlements'],
   ['bhl-espace-dg.html','Espace DG']
  ];
  const page=decodeURIComponent(location.pathname.split('/').pop()||'index.html');

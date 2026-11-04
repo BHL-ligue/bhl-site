@@ -15,7 +15,7 @@
 #bhl-global-nav .bhl-nav-toggle svg{width:19px;height:19px;stroke:currentColor;stroke-width:2;fill:none}
 .bhl-header-retained{max-width:1400px;margin:8px auto;padding:0 18px;display:flex;justify-content:flex-end}
 .bhl-header-retained:empty{display:none}
-@media(max-width:1180px){
+@media(max-width:1380px){
  #bhl-global-nav .bhl-nav-inner{min-height:68px;flex-wrap:wrap;justify-content:space-between;gap:0}
  #bhl-global-nav .bhl-nav-logo{width:46px;height:46px}
  #bhl-global-nav .bhl-nav-toggle{display:inline-flex}
