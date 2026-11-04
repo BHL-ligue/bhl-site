@@ -20,7 +20,7 @@ def aggregate(reports,directory):
    phase=period['phase']
    for team in period.get('teams',[]):
     for player in team['players']:
-     pid=player['fantraxId'];k=(season,phase,pid,team['team']);row=rows.setdefault(k,{'season':season,'phase':phase,'id':pid,'name':directory[pid].get('name'),'team':team['team'],'kind':'goalie' if player['position']=='G' else 'skater','fpts':0,'goals':0,'assists':0,'gp':0,'starts':0,'missingStarts':0,'reviewStarts':0})
+     pid=player['fantraxId'];position_group='goalie' if player['position']=='G' else 'defense' if player['position']=='D' else 'forward';k=(season,phase,pid,team['team'],position_group);row=rows.setdefault(k,{'season':season,'phase':phase,'id':pid,'name':directory[pid].get('name'),'team':team['team'],'kind':'goalie' if player['position']=='G' else 'skater','positionGroup':position_group,'fpts':0,'goals':0,'assists':0,'gp':0,'starts':0,'missingStarts':0,'reviewStarts':0})
      row['starts']+=1
      if player['points'] is None:row['missingStarts']+=1;continue
      row['fpts']+=player['points'];row['goals']+=player['stats'].get('G',0);row['assists']+=player['stats'].get('A',0);row['gp']+=player.get('gamesPlayed',0) or 0
