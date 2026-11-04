@@ -711,9 +711,9 @@ async function bhlHistoricalScorers(name,target,fantraxId){
    const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
    const table=document.createElement('table');table.className='bhl-player-table';
    const thead=document.createElement('thead');const tr=document.createElement('tr');
-   for(const label of ['Saison','Équipe BHL','FPTS','Départs','FPTS / départ','Départs à vérifier']){const th=document.createElement('th');th.textContent=label;tr.append(th)}thead.append(tr);table.append(thead);
+   for(const label of ['Saison','Équipe BHL','Départs','PJ','FPTS','FP/Départ','FP/GP']){const th=document.createElement('th');th.textContent=label;tr.append(th)}thead.append(tr);table.append(thead);
    const tbody=document.createElement('tbody');
-   for(const row of items){const tr=document.createElement('tr');for(const value of [row.season,row.team,fmtBhl(row.fpts),row.starts||0,row.starts?fmtBhl(row.fpts/row.starts):'—',(row.reviewStarts||0)+(row.missingStarts||0)]){const td=document.createElement('td');td.textContent=String(value);tr.append(td)}tbody.append(tr)}
+   for(const row of items){const tr=document.createElement('tr');for(const value of [row.season,row.team,row.starts||0,row.gp||0,fmtBhl(row.fpts),row.starts?fmtBhl(row.fpts/row.starts):'—',row.gp?fmtBhl(row.fpts/row.gp):'—']){const td=document.createElement('td');td.textContent=String(value);tr.append(td)}tbody.append(tr)}
    table.append(tbody);wrap.append(table);target.append(wrap);
   };
   target.replaceChildren();
