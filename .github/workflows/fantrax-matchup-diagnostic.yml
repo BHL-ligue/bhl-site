@@ -1,0 +1,42 @@
+name: Diagnostiquer les matchups Fantrax 2023-24
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/diagnose-fantrax-matchup-duplicates.py'
+      - 'scripts/check-fantrax-hit-source.py'
+      - '.github/workflows/fantrax-matchup-diagnostic.yml'
+permissions:
+  contents: write
+concurrency:
+  group: bhl-fantrax-matchup-diagnostic
+  cancel-in-progress: false
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier les doublons et la source HIT
+        run: python scripts/diagnose-fantrax-matchup-duplicates.py
+      - name: Publier le diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/production/fantrax-hit-source-check-2023-24.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Documenter les doublons des matchups Fantrax"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then exit 1; fi
+              sleep 2
+            done
+          fi
