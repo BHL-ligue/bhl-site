@@ -25,7 +25,7 @@ const defs=[
  ['career-teams','Plus d’équipes BHL représentées','teams','career','desc'],
  ['career-seasons','Plus de saisons BHL disputées','seasons','career','desc']
 ];
-let starts=[],aggregates=[],ready=false;
+let starts=[],aggregates=[],ready=false,periodDurations={};
 function recordsRows(source,scope){
  const map=new Map();
  for(const r of source){
@@ -52,9 +52,10 @@ function portrait(id,name){
 function render(){
  const root=$('records-content');if(!root)return;
  root.replaceChildren();
- const phase=$('record-phase').value,season=$('record-season').value,position=$('record-position').value;
- const allStarts=starts.filter(r=>(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||(position==='goalie'?r.kind==='goalie':position==='defense'?r.position==='D':r.kind!=='goalie'&&r.position!=='D')));
- const allAggregates=aggregates.filter(r=>(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||r.positionGroup===position));
+ const phase=$('record-phase').value,season=$('record-season').value,position=$('record-position').value,duration=$('record-duration').value;
+ const allowed=r=>{const days=periodDurations[r.season]?.[String(r.period)];return duration==='all'||(Number.isFinite(days)&&(duration==='regular'?days<=7:days>7))};
+ const allStarts=starts.filter(r=>allowed(r)&&(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||(position==='goalie'?r.kind==='goalie':position==='defense'?r.position==='D':r.kind!=='goalie'&&r.position!=='D')));
+ const allAggregates=(duration==='all'?aggregates:allStarts.map(r=>({...r,starts:1,positionGroup:r.kind==='goalie'?'goalie':r.position==='D'?'defense':'forward'}))).filter(r=>(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||r.positionGroup===position));
  const career=recordsRows(allAggregates,'career'),seasonRows=recordsRows(allAggregates,'season');
  for(const [id,title,field,scope] of defs){
   const section=document.createElement('section');section.className='record-section';
@@ -86,9 +87,10 @@ async function init(){
  aggregates=source.rows||[];
  const seasons=[...new Set(aggregates.map(r=>r.season))].sort().reverse();
  for(const s of seasons)$('record-season').append(new Option(s,s));
+ try{const response=await fetch('data/production/period-durations.json',{cache:'no-store'});if(response.ok)periodDurations=(await response.json()).seasons||{}}catch(e){console.warn('Period durations unavailable',e)}
  try{const response=await fetch('data/production/starts.json',{cache:'no-store'});if(response.ok){const data=await response.json();if(Array.isArray(data.rows)){starts=data.rows;ready=true}}}catch(e){console.warn('BHL records per-start archive unavailable',e)}
  render();
 }
-for(const id of ['record-phase','record-season','record-position'])$(id)?.addEventListener('change',render);
+for(const id of ['record-phase','record-season','record-position','record-duration'])$(id)?.addEventListener('change',render);
 init().catch(e=>{$('records-content').textContent='Impossible de charger les records : '+e.message});
 })();
