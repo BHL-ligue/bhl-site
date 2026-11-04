@@ -1,69 +1,1119 @@
 {
-  "source": "Archives BHL et bannières officielles.",
+  "updatedAt": "2026-11-04T03:16:27.221564+00:00",
+  "source": "Pointages officiels des affrontements Fantrax; bannières de champions BHL. Saison 2019-20 : arrêt en deuxième ronde confirmé par la ligue.",
   "seasons": [
     {
       "season": "2025-26",
+      "leagueId": "xawnq4p0m9n3ikmo",
       "champion": "Ottawa Senators",
       "banner": "banners/BannerOTT2026.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 22,
+          "start": "2026-03-23T19:30:00.0-0400",
+          "end": "2026-03-30T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "lamjm433m9n3iknk",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 153.95
+                },
+                {
+                  "id": "mcb1ca6km9n3iko2",
+                  "name": "Ottawa Senators",
+                  "score": 189.7
+                }
+              ],
+              "winner": "mcb1ca6km9n3iko2"
+            },
+            {
+              "teams": [
+                {
+                  "id": "4ercwyy0m9n3iko8",
+                  "name": "Québec Nordiques",
+                  "score": 186.5
+                },
+                {
+                  "id": "2ksge6nim9n3iknt",
+                  "name": "Detroit Red Wings",
+                  "score": 209.75
+                }
+              ],
+              "winner": "2ksge6nim9n3iknt"
+            },
+            {
+              "teams": [
+                {
+                  "id": "kf3lhlmmm9n3iknd",
+                  "name": "Atlanta Thrashers",
+                  "score": 180.6
+                },
+                {
+                  "id": "arjyl6l5m9n3iko6",
+                  "name": "Colorado Avalanche",
+                  "score": 209.35
+                }
+              ],
+              "winner": "arjyl6l5m9n3iko6"
+            },
+            {
+              "teams": [
+                {
+                  "id": "zvqk74kum9n3ikob",
+                  "name": "New York Rangers",
+                  "score": 176.4
+                },
+                {
+                  "id": "t6zjtgtlm9n3ikn8",
+                  "name": "Hartford Whalers",
+                  "score": 190.45
+                }
+              ],
+              "winner": "t6zjtgtlm9n3ikn8"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 23,
+          "start": "2026-03-30T19:00:00.0-0400",
+          "end": "2026-04-06T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "2ksge6nim9n3iknt",
+                  "name": "Detroit Red Wings",
+                  "score": 208.35
+                },
+                {
+                  "id": "mcb1ca6km9n3iko2",
+                  "name": "Ottawa Senators",
+                  "score": 211.8
+                }
+              ],
+              "winner": "mcb1ca6km9n3iko2"
+            },
+            {
+              "teams": [
+                {
+                  "id": "t6zjtgtlm9n3ikn8",
+                  "name": "Hartford Whalers",
+                  "score": 213.4
+                },
+                {
+                  "id": "arjyl6l5m9n3iko6",
+                  "name": "Colorado Avalanche",
+                  "score": 253.4
+                }
+              ],
+              "winner": "arjyl6l5m9n3iko6"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 24,
+          "start": "2026-04-06T19:00:00.0-0400",
+          "end": "2026-04-17T11:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "arjyl6l5m9n3iko6",
+                  "name": "Colorado Avalanche",
+                  "score": 227.4
+                },
+                {
+                  "id": "mcb1ca6km9n3iko2",
+                  "name": "Ottawa Senators",
+                  "score": 296.8
+                }
+              ],
+              "winner": "mcb1ca6km9n3iko2"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2024-25",
+      "leagueId": "jdltul4alva6m2x8",
       "champion": "Detroit Red Wings",
       "banner": "banners/BannerDET2025.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 23,
+          "start": "2025-03-24T19:30:00.0-0400",
+          "end": "2025-03-31T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "awbr6hndlva6m2xj",
+                  "name": "Montréal Canadiens",
+                  "score": 223.4
+                },
+                {
+                  "id": "tenme5kolva6m2xj",
+                  "name": "Boston Bruins",
+                  "score": 177.35
+                }
+              ],
+              "winner": "awbr6hndlva6m2xj"
+            },
+            {
+              "teams": [
+                {
+                  "id": "pg3kns0vlva6m2xj",
+                  "name": "Florida Panthers",
+                  "score": 114.9
+                },
+                {
+                  "id": "vnq9vikllva6m2xj",
+                  "name": "Detroit Red Wings",
+                  "score": 186.9
+                }
+              ],
+              "winner": "vnq9vikllva6m2xj"
+            },
+            {
+              "teams": [
+                {
+                  "id": "ciai4o44lva6m2xj",
+                  "name": "Ottawa Senators",
+                  "score": 183.35
+                },
+                {
+                  "id": "zbf23faylva6m2xj",
+                  "name": "Atlanta Thrashers",
+                  "score": 154.85
+                }
+              ],
+              "winner": "ciai4o44lva6m2xj"
+            },
+            {
+              "teams": [
+                {
+                  "id": "pgs1a409lva6m2xj",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 163.1
+                },
+                {
+                  "id": "gckh8ev2lva6m2xi",
+                  "name": "Hartford Whalers",
+                  "score": 251.6
+                }
+              ],
+              "winner": "gckh8ev2lva6m2xi"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 24,
+          "start": "2025-03-31T19:00:00.0-0400",
+          "end": "2025-04-07T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "awbr6hndlva6m2xj",
+                  "name": "Montréal Canadiens",
+                  "score": 143.95
+                },
+                {
+                  "id": "gckh8ev2lva6m2xi",
+                  "name": "Hartford Whalers",
+                  "score": 161.8
+                }
+              ],
+              "winner": "gckh8ev2lva6m2xi"
+            },
+            {
+              "teams": [
+                {
+                  "id": "ciai4o44lva6m2xj",
+                  "name": "Ottawa Senators",
+                  "score": 121.3
+                },
+                {
+                  "id": "vnq9vikllva6m2xj",
+                  "name": "Detroit Red Wings",
+                  "score": 171.15
+                }
+              ],
+              "winner": "vnq9vikllva6m2xj"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 25,
+          "start": "2025-04-07T19:00:00.0-0400",
+          "end": "2025-04-18T11:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "vnq9vikllva6m2xj",
+                  "name": "Detroit Red Wings",
+                  "score": 283.55
+                },
+                {
+                  "id": "gckh8ev2lva6m2xi",
+                  "name": "Hartford Whalers",
+                  "score": 243.35
+                }
+              ],
+              "winner": "vnq9vikllva6m2xj"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2023-24",
+      "leagueId": "ukw6z6r2lgjl09qn",
       "champion": "Anaheim Mighty Ducks",
       "banner": "banners/BannerANA2024.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 24,
+          "start": "2024-03-25T20:00:00.0-0400",
+          "end": "2024-04-01T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "4ebdjplwlgjl09sp",
+                  "name": "Florida Panthers",
+                  "score": 180.35
+                },
+                {
+                  "id": "ahjtppo4lgjl09ta",
+                  "name": "Montréal Canadiens",
+                  "score": 153.35
+                }
+              ],
+              "winner": "4ebdjplwlgjl09sp"
+            },
+            {
+              "teams": [
+                {
+                  "id": "fvjdgkq7lgjl09th",
+                  "name": "Detroit Red Wings",
+                  "score": 144.8
+                },
+                {
+                  "id": "eymolqbelgjl09s5",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 181.2
+                }
+              ],
+              "winner": "eymolqbelgjl09s5"
+            },
+            {
+              "teams": [
+                {
+                  "id": "e317hlodlgjl09t7",
+                  "name": "California Golden Seals",
+                  "score": 162.05
+                },
+                {
+                  "id": "iwod7m46lgjl09sm",
+                  "name": "Hartford Whalers",
+                  "score": 173.65
+                }
+              ],
+              "winner": "iwod7m46lgjl09sm"
+            },
+            {
+              "teams": [
+                {
+                  "id": "i2flbb1klgjl09sr",
+                  "name": "Atlanta Thrashers",
+                  "score": 168.55
+                },
+                {
+                  "id": "vx0fb6aelgjl09sj",
+                  "name": "Colorado Avalanche",
+                  "score": 175.3
+                }
+              ],
+              "winner": "vx0fb6aelgjl09sj"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 25,
+          "start": "2024-04-01T19:00:00.0-0400",
+          "end": "2024-04-08T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "4ebdjplwlgjl09sp",
+                  "name": "Florida Panthers",
+                  "score": 223.1
+                },
+                {
+                  "id": "iwod7m46lgjl09sm",
+                  "name": "Hartford Whalers",
+                  "score": 242.7
+                }
+              ],
+              "winner": "iwod7m46lgjl09sm"
+            },
+            {
+              "teams": [
+                {
+                  "id": "eymolqbelgjl09s5",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 229.7
+                },
+                {
+                  "id": "vx0fb6aelgjl09sj",
+                  "name": "Colorado Avalanche",
+                  "score": 210.15
+                }
+              ],
+              "winner": "eymolqbelgjl09s5"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 26,
+          "start": "2024-04-08T19:00:00.0-0400",
+          "end": "2024-04-19T11:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "eymolqbelgjl09s5",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 307.25
+                },
+                {
+                  "id": "iwod7m46lgjl09sm",
+                  "name": "Hartford Whalers",
+                  "score": 265.3
+                }
+              ],
+              "winner": "eymolqbelgjl09s5"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2022-23",
+      "leagueId": "xekefw5vl2q74pi9",
       "champion": "Hartford Whalers",
       "banner": "banners/BannerHAR2023.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 23,
+          "start": "2023-03-20T19:00:00.0-0400",
+          "end": "2023-03-27T18:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "0nxc0zh8l2q74pii",
+                  "name": "Nashville Predators",
+                  "score": 194.05
+                },
+                {
+                  "id": "0dtf1cktl2q74pii",
+                  "name": "Montréal Canadiens",
+                  "score": 203.65
+                }
+              ],
+              "winner": "0dtf1cktl2q74pii"
+            },
+            {
+              "teams": [
+                {
+                  "id": "yqdlhhzhl2q74pii",
+                  "name": "Minnesota North Stars",
+                  "score": 160.2
+                },
+                {
+                  "id": "vs9imdwtl2q74pij",
+                  "name": "Detroit Red Wings",
+                  "score": 202.0
+                }
+              ],
+              "winner": "vs9imdwtl2q74pij"
+            },
+            {
+              "teams": [
+                {
+                  "id": "4u6qqfbfl2q74pii",
+                  "name": "Anaheim Mighty Ducks",
+                  "score": 200.3
+                },
+                {
+                  "id": "67ico45zl2q74pii",
+                  "name": "Hartford Whalers",
+                  "score": 242.45
+                }
+              ],
+              "winner": "67ico45zl2q74pii"
+            },
+            {
+              "teams": [
+                {
+                  "id": "3xsygj1xl2q74pii",
+                  "name": "Winnipeg Jets",
+                  "score": 189.9
+                },
+                {
+                  "id": "coy5s4gyl2q74pii",
+                  "name": "Atlanta Thrashers",
+                  "score": 190.0
+                }
+              ],
+              "winner": "coy5s4gyl2q74pii"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 24,
+          "start": "2023-03-27T19:00:00.0-0400",
+          "end": "2023-04-03T19:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "vs9imdwtl2q74pij",
+                  "name": "Detroit Red Wings",
+                  "score": 196.9
+                },
+                {
+                  "id": "0dtf1cktl2q74pii",
+                  "name": "Montréal Canadiens",
+                  "score": 152.25
+                }
+              ],
+              "winner": "vs9imdwtl2q74pij"
+            },
+            {
+              "teams": [
+                {
+                  "id": "coy5s4gyl2q74pii",
+                  "name": "Atlanta Thrashers",
+                  "score": 192.95
+                },
+                {
+                  "id": "67ico45zl2q74pii",
+                  "name": "Hartford Whalers",
+                  "score": 198.1
+                }
+              ],
+              "winner": "67ico45zl2q74pii"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 25,
+          "start": "2023-04-03T20:00:00.0-0400",
+          "end": "2023-04-12T18:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "vs9imdwtl2q74pij",
+                  "name": "Detroit Red Wings",
+                  "score": 244.85
+                },
+                {
+                  "id": "67ico45zl2q74pii",
+                  "name": "Hartford Whalers",
+                  "score": 288.75
+                }
+              ],
+              "winner": "67ico45zl2q74pii"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2021-22",
+      "leagueId": "o981oceokoydzrkt",
       "champion": "Montréal Canadiens",
       "banner": "banners/BannerMTL2022.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 23,
+          "start": "2022-04-04T19:00:00.0-0400",
+          "end": "2022-04-11T18:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "4u5pyoqqkoydzrl5",
+                  "name": "Edmonton Oilers",
+                  "score": 157.65
+                },
+                {
+                  "id": "iu9xmq5rkoydzrlj",
+                  "name": "Montréal Maroons",
+                  "score": 250.1
+                }
+              ],
+              "winner": "iu9xmq5rkoydzrlj"
+            },
+            {
+              "teams": [
+                {
+                  "id": "kguks7xakoydzrla",
+                  "name": "Atlanta Thrashers",
+                  "score": 204.45
+                },
+                {
+                  "id": "5cmxz7jbkoydzrl7",
+                  "name": "Nashville Predators",
+                  "score": 176.55
+                }
+              ],
+              "winner": "kguks7xakoydzrla"
+            },
+            {
+              "teams": [
+                {
+                  "id": "9gy4yn14koydzrl2",
+                  "name": "Florida Panthers",
+                  "score": 198.65
+                },
+                {
+                  "id": "v9lfkpq1koydzrlb",
+                  "name": "Winnipeg Jets",
+                  "score": 223.75
+                }
+              ],
+              "winner": "v9lfkpq1koydzrlb"
+            },
+            {
+              "teams": [
+                {
+                  "id": "0jt7kwyhkoydzrms",
+                  "name": "California Golden Seals",
+                  "score": 200.45
+                },
+                {
+                  "id": "6hgtqqegkoydzrmi",
+                  "name": "Hartford Whalers",
+                  "score": 209.45
+                }
+              ],
+              "winner": "6hgtqqegkoydzrmi"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 24,
+          "start": "2022-04-11T19:00:00.0-0400",
+          "end": "2022-04-18T19:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "kguks7xakoydzrla",
+                  "name": "Atlanta Thrashers",
+                  "score": 217.8
+                },
+                {
+                  "id": "iu9xmq5rkoydzrlj",
+                  "name": "Montréal Maroons",
+                  "score": 240.4
+                }
+              ],
+              "winner": "iu9xmq5rkoydzrlj"
+            },
+            {
+              "teams": [
+                {
+                  "id": "6hgtqqegkoydzrmi",
+                  "name": "Hartford Whalers",
+                  "score": 215.6
+                },
+                {
+                  "id": "v9lfkpq1koydzrlb",
+                  "name": "Winnipeg Jets",
+                  "score": 201.35
+                }
+              ],
+              "winner": "6hgtqqegkoydzrmi"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 25,
+          "start": "2022-04-18T20:00:00.0-0400",
+          "end": "2022-04-28T18:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "6hgtqqegkoydzrmi",
+                  "name": "Hartford Whalers",
+                  "score": 324.95
+                },
+                {
+                  "id": "iu9xmq5rkoydzrlj",
+                  "name": "Montréal Maroons",
+                  "score": 333.3
+                }
+              ],
+              "winner": "iu9xmq5rkoydzrlj"
+            }
+          ]
+        }
+      ],
+      "status": "partial",
+      "error": "La finale Fantrax ne correspond pas à la bannière BHL"
     },
     {
       "season": "2020-21",
+      "leagueId": "x84a2ac9kb7zbs0w",
       "champion": "Nashville Predators",
       "banner": "banners/BannerNSH2021.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 14,
+          "start": "2021-04-12T19:00:00.0-0400",
+          "end": "2021-04-19T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "i2gqeyu5kb7zbs1i",
+                  "name": "Chicago Blackhawks",
+                  "score": 151.4
+                },
+                {
+                  "id": "805ih0edkb7zbs12",
+                  "name": "Atlanta Thrashers",
+                  "score": 194.1
+                }
+              ],
+              "winner": "805ih0edkb7zbs12"
+            },
+            {
+              "teams": [
+                {
+                  "id": "7naukpl8kb7zbs1j",
+                  "name": "Montréal Maroons",
+                  "score": 187.15
+                },
+                {
+                  "id": "6zkdp30akb7zbs1f",
+                  "name": "Edmonton Oilers",
+                  "score": 180.2
+                }
+              ],
+              "winner": "7naukpl8kb7zbs1j"
+            },
+            {
+              "teams": [
+                {
+                  "id": "kb2h1gcbkb7zbs1d",
+                  "name": "New York Rangers",
+                  "score": 132.65
+                },
+                {
+                  "id": "g1fgekepkb7zbs1e",
+                  "name": "Nashville Predators",
+                  "score": 157.1
+                }
+              ],
+              "winner": "g1fgekepkb7zbs1e"
+            },
+            {
+              "teams": [
+                {
+                  "id": "gapgpoj6kb7zbs1g",
+                  "name": "Minnesota North Stars",
+                  "score": 118.8
+                },
+                {
+                  "id": "fjhipyxpkb7zbs17",
+                  "name": "Winnipeg Jets",
+                  "score": 160.45
+                }
+              ],
+              "winner": "fjhipyxpkb7zbs17"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 15,
+          "start": "2021-04-19T19:00:00.0-0400",
+          "end": "2021-04-26T18:29:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "7naukpl8kb7zbs1j",
+                  "name": "Montréal Maroons",
+                  "score": 184.05
+                },
+                {
+                  "id": "805ih0edkb7zbs12",
+                  "name": "Atlanta Thrashers",
+                  "score": 177.2
+                }
+              ],
+              "winner": "7naukpl8kb7zbs1j"
+            },
+            {
+              "teams": [
+                {
+                  "id": "fjhipyxpkb7zbs17",
+                  "name": "Winnipeg Jets",
+                  "score": 177.4
+                },
+                {
+                  "id": "g1fgekepkb7zbs1e",
+                  "name": "Nashville Predators",
+                  "score": 178.3
+                }
+              ],
+              "winner": "g1fgekepkb7zbs1e"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 16,
+          "start": "2021-04-26T18:30:00.0-0400",
+          "end": "2021-05-07T11:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "7naukpl8kb7zbs1j",
+                  "name": "Montréal Maroons",
+                  "score": 247.5
+                },
+                {
+                  "id": "g1fgekepkb7zbs1e",
+                  "name": "Nashville Predators",
+                  "score": 293.85
+                }
+              ],
+              "winner": "g1fgekepkb7zbs1e"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2019-20",
+      "leagueId": "2uolurhgjv9p9ryl",
       "champion": null,
       "banner": null,
       "cancelled": true,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 22,
+          "start": "2020-03-02T19:30:00.0-0500",
+          "end": "2020-03-09T18:59:58.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "0zq68t8cjv9p9rz7",
+                  "name": "Québec Nordiques",
+                  "score": 124.85
+                },
+                {
+                  "id": "o9r42gxajv9p9ryz",
+                  "name": "Edmonton Oilers",
+                  "score": 183.05
+                }
+              ],
+              "winner": "o9r42gxajv9p9ryz"
+            },
+            {
+              "teams": [
+                {
+                  "id": "61vzvm3ajv9p9ryw",
+                  "name": "Minnesota North Stars",
+                  "score": 166.15
+                },
+                {
+                  "id": "g2jbdxd4jv9p9rza",
+                  "name": "Nashville Predators",
+                  "score": 170.3
+                }
+              ],
+              "winner": "g2jbdxd4jv9p9rza"
+            },
+            {
+              "teams": [
+                {
+                  "id": "r54m65najv9p9rz3",
+                  "name": "Vegas Golden Knights",
+                  "score": 164.8
+                },
+                {
+                  "id": "l8z7fsz3jv9p9rz4",
+                  "name": "Winnipeg Jets",
+                  "score": 154.95
+                }
+              ],
+              "winner": "r54m65najv9p9rz3"
+            },
+            {
+              "teams": [
+                {
+                  "id": "lbthms3cjv9p9ryp",
+                  "name": "New York Rangers",
+                  "score": 151.85
+                },
+                {
+                  "id": "0d03ka8hjv9p9ryu",
+                  "name": "Montréal Maroons",
+                  "score": 126.15
+                }
+              ],
+              "winner": "lbthms3cjv9p9ryp"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 23,
+          "start": "2020-03-09T19:00:00.0-0400",
+          "end": "2020-03-16T18:59:58.0-0400",
+          "interrupted": true,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "r54m65najv9p9rz3",
+                  "name": "Vegas Golden Knights",
+                  "score": 58.35
+                },
+                {
+                  "id": "o9r42gxajv9p9ryz",
+                  "name": "Edmonton Oilers",
+                  "score": 59.95
+                }
+              ],
+              "winner": null
+            },
+            {
+              "teams": [
+                {
+                  "id": "lbthms3cjv9p9ryp",
+                  "name": "New York Rangers",
+                  "score": 63.6
+                },
+                {
+                  "id": "g2jbdxd4jv9p9rza",
+                  "name": "Nashville Predators",
+                  "score": 59.8
+                }
+              ],
+              "winner": null
+            }
+          ]
+        }
+      ],
+      "status": "available"
     },
     {
       "season": "2018-19",
+      "leagueId": "vwa89uoajhz15dxv",
       "champion": "Minnesota North Stars",
       "banner": "banners/BannerMIN2019.png",
       "cancelled": false,
-      "rounds": [],
-      "status": "pending"
+      "rounds": [
+        {
+          "number": 1,
+          "period": 24,
+          "start": "2019-03-11T19:00:00.0-0400",
+          "end": "2019-03-18T19:29:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "8ghvkhoijjbjc99i",
+                  "name": "Cleveland Barons",
+                  "score": 150.6
+                },
+                {
+                  "id": "ij27mnm4jjbjc99i",
+                  "name": "Edmonton Oilers",
+                  "score": 209.35
+                }
+              ],
+              "winner": "ij27mnm4jjbjc99i"
+            },
+            {
+              "teams": [
+                {
+                  "id": "vop3da30jjbjc99i",
+                  "name": "Minnesota North Stars",
+                  "score": 192.05
+                },
+                {
+                  "id": "2cayz8tfjjbjc99i",
+                  "name": "Detroit Cougars",
+                  "score": 158.05
+                }
+              ],
+              "winner": "vop3da30jjbjc99i"
+            },
+            {
+              "teams": [
+                {
+                  "id": "zvmz9b8ojjbjc99i",
+                  "name": "Vegas Golden Knights",
+                  "score": 196.25
+                },
+                {
+                  "id": "5e6c01yrjjbjc99i",
+                  "name": "Montréal Maroons",
+                  "score": 148.6
+                }
+              ],
+              "winner": "zvmz9b8ojjbjc99i"
+            },
+            {
+              "teams": [
+                {
+                  "id": "va02m7ewjjbjc99i",
+                  "name": "Winnipeg Jets",
+                  "score": 151.0
+                },
+                {
+                  "id": "ye7fmcmwjjbjc99i",
+                  "name": "Nashville Predators",
+                  "score": 215.7
+                }
+              ],
+              "winner": "ye7fmcmwjjbjc99i"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "period": 25,
+          "start": "2019-03-18T19:30:00.0-0400",
+          "end": "2019-03-25T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "zvmz9b8ojjbjc99i",
+                  "name": "Vegas Golden Knights",
+                  "score": 163.75
+                },
+                {
+                  "id": "ij27mnm4jjbjc99i",
+                  "name": "Edmonton Oilers",
+                  "score": 183.65
+                }
+              ],
+              "winner": "ij27mnm4jjbjc99i"
+            },
+            {
+              "teams": [
+                {
+                  "id": "vop3da30jjbjc99i",
+                  "name": "Minnesota North Stars",
+                  "score": 157.8
+                },
+                {
+                  "id": "ye7fmcmwjjbjc99i",
+                  "name": "Nashville Predators",
+                  "score": 157.15
+                }
+              ],
+              "winner": "vop3da30jjbjc99i"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "period": 26,
+          "start": "2019-03-25T19:00:00.0-0400",
+          "end": "2019-04-01T18:59:59.0-0400",
+          "interrupted": false,
+          "matches": [
+            {
+              "teams": [
+                {
+                  "id": "vop3da30jjbjc99i",
+                  "name": "Minnesota North Stars",
+                  "score": 188.25
+                },
+                {
+                  "id": "ij27mnm4jjbjc99i",
+                  "name": "Edmonton Oilers",
+                  "score": 177.75
+                }
+              ],
+              "winner": "vop3da30jjbjc99i"
+            }
+          ]
+        }
+      ],
+      "status": "available"
     }
   ]
 }
