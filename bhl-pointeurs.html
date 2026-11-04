@@ -13,28 +13,33 @@
 const $=id=>document.getElementById(id),format=n=>Number(n||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
 let dataset=[];let playerIdentities={};const photoCache=new Map();const photoQueue=[];let photoActive=0;function queuePhoto(task){photoQueue.push(task);runPhotoQueue()}function runPhotoQueue(){while(photoActive<5&&photoQueue.length){const task=photoQueue.shift();photoActive++;Promise.resolve().then(task).catch(()=>{}).finally(()=>{photoActive--;runPhotoQueue()})}}async function loadPortrait(avatar,id,name){
  if(!avatar.isConnected||!name||name==='Identité non résolue')return;
- const key=String(id),entry=playerIdentities[key];
+ const entry=playerIdentities[String(id)];
  let nhlId=entry?.status==='confirmed'?Number(entry.nhlId):0;
- if(!nhlId){
-  try{const identity=await window.BHLPlayerStats?.officialIdentity?.(id,name);nhlId=Number(identity?.nhlId)||0}catch(e){}
- }
+ if(!nhlId){try{const identity=await window.BHLPlayerStats?.officialIdentity?.(id,name);nhlId=Number(identity?.nhlId)||0}catch(e){}}
  if(!nhlId||!avatar.isConnected)return;
- // Attach the image before loading it: a detached image marked lazy may never fire onload.
- const sources=[];
- if(entry?.nhlTeam)sources.push('https://assets.nhle.com/mugs/nhl/latest/'+encodeURIComponent(entry.nhlTeam)+'/'+nhlId+'.png');
- sources.push('https://assets.nhle.com/mugs/nhl/latest/'+nhlId+'.png');
- let fallback='';
+ // Same NHL seasonal portrait sources used by the BHL player profile.
+ const team=String(entry?.nhlTeam||'NHL').toUpperCase();
+ const sources=[
+  'https://assets.nhle.com/mugs/nhl/20262027/'+team+'/'+nhlId+'.png',
+  'https://assets.nhle.com/mugs/nhl/20252026/'+team+'/'+nhlId+'.png',
+  'https://assets.nhle.com/mugs/nhl/20252026/NHL/'+nhlId+'.png',
+  'https://assets.nhle.com/mugs/nhl/20242025/NHL/'+nhlId+'.png'
+ ];
+ const img=document.createElement('img');img.alt='';img.decoding='async';
+ let index=0,done=false;
+ img.onload=()=>{done=true;avatar.classList.add('has-photo')};
+ img.onerror=()=>{index++;if(index<sources.length)img.src=sources[index];else if(!done){img.remove();avatar.classList.remove('has-photo')}};
+ avatar.append(img);img.src=sources[0];
+ // As on the player profile, the official NHL landing headshot takes priority.
  try{
   const response=await fetch('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
-  if(response.ok)fallback=(await response.json()).headshot||'';
+  if(response.ok){
+   const profile=await response.json();
+   if(profile.headshot&&/^https:\/\//.test(profile.headshot)&&avatar.isConnected){
+    sources.unshift(profile.headshot);index=0;img.src=sources[0];
+   }
+  }
  }catch(e){}
- if(fallback&&/^https:\/\//.test(fallback))sources.push(fallback);
- if(!avatar.isConnected)return;
- const img=document.createElement('img');img.alt='';img.decoding='async';
- let index=0;
- img.onload=()=>{avatar.classList.add('has-photo')};
- img.onerror=()=>{index++;if(index<sources.length)img.src=sources[index];else{img.remove();avatar.classList.remove('has-photo')}};
- avatar.append(img);img.src=sources[index];
 }
 window.BHLRecordPortrait=(avatar,id,name)=>{avatar.dataset.playerId=String(id);avatar.dataset.playerName=name;if(portraitObserver)portraitObserver.observe(avatar);else queuePhoto(()=>loadPortrait(avatar,id,name))};const portraitObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){portraitObserver.unobserve(entry.target);const el=entry.target;queuePhoto(()=>loadPortrait(el,el.dataset.playerId,el.dataset.playerName))}}},{rootMargin:'500px'}):null;
 const organizations={"Cleveland Barons":"Boston Bruins","Boston Bruins":"Boston Bruins","Winnipeg Jets":"Colorado Avalanche","Colorado Avalanche":"Colorado Avalanche","Detroit Cougars":"Detroit Red Wings","Detroit Red Wings":"Detroit Red Wings","Vegas Golden Knights":"Florida Panthers","Florida Panthers":"Florida Panthers","Montréal Maroons":"Montréal Canadiens","Montreal Maroons":"Montréal Canadiens","Montréal Canadiens":"Montréal Canadiens","Montreal Canadiens":"Montréal Canadiens","Edmonton Oilers":"Ottawa Senators","Ottawa Senators":"Ottawa Senators"};
