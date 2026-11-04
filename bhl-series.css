@@ -22,3 +22,22 @@
  #playoff-scorers .scorer-teams img{width:20px;height:20px}
  #playoff-scorers .scorer-table th:nth-child(n+4),#playoff-scorers .scorer-table td:nth-child(n+4){min-width:43px}
 }
+
+/* Extra-compact phone layout: reserve most of the screen for statistics. */
+@media(max-width:700px){
+ #playoff-scorers .scorer-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;touch-action:pan-x pan-y}
+ #playoff-scorers .scorer-table{min-width:0;width:max-content;font-size:10px;border-spacing:0;table-layout:fixed}
+ #playoff-scorers .scorer-table th,#playoff-scorers .scorer-table td{box-sizing:border-box;padding:5px 3px;line-height:1.15;vertical-align:middle}
+ #playoff-scorers .scorer-table th:first-child,#playoff-scorers .scorer-table td:first-child{left:0;width:25px;min-width:25px;max-width:25px;padding-left:2px;padding-right:2px}
+ #playoff-scorers .scorer-table th:nth-child(2),#playoff-scorers .scorer-table td:nth-child(2){left:25px;width:117px;min-width:117px;max-width:117px;padding-left:3px;padding-right:3px}
+ #playoff-scorers .scorer-player{gap:3px;font-size:10px;font-weight:700;line-height:1.1;overflow-wrap:anywhere;white-space:normal}
+ #playoff-scorers .scorer-avatar{width:21px;height:21px;min-width:21px;font-size:8px}
+ #playoff-scorers .scorer-table th:nth-child(3),#playoff-scorers .scorer-table td:nth-child(3){width:54px;min-width:54px;max-width:54px}
+ #playoff-scorers .scorer-teams{max-width:52px;gap:1px;flex-wrap:wrap}
+ #playoff-scorers .scorer-teams img{width:17px;height:17px}
+ #playoff-scorers .scorer-table th:nth-child(n+4),#playoff-scorers .scorer-table td:nth-child(n+4){width:43px;min-width:43px;max-width:48px;font-size:10px}
+ #playoff-scorers .scorer-table th:nth-child(7),#playoff-scorers .scorer-table td:nth-child(7){width:57px;min-width:57px;max-width:57px}
+ #playoff-scorers .scorer-filters{gap:8px}
+ #playoff-scorers .scorer-filters label{min-width:0;flex:1 1 0;font-size:11px}
+ #playoff-scorers .scorer-filters select{min-width:0;width:100%;font-size:12px;padding:8px 5px}
+}
