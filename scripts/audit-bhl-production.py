@@ -11,7 +11,8 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/ownership/production-pilot.json'
 FIELDS={'G':['goals'],'A':['assists'],'SOG':['shots','shotsOnGoal'],'Hit':['hits'],'Blk':['blockedShotAttempts','blockedShots'],'Tk':['takeaways'],'FOW':['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'],'W':['wins'],'GA':['goalsAgainst'],'SV':['saves'],'SHO':['shutouts']}
-REVIEWED_ALIASES={'03rfp':['Samuel Montembeault'],'06snb':['Ben Kindel'],'042xv':['Michael Eyssimont'],'03rfo':['Dan Vladar'],'04ajl':['Bo Groulx']}
+REVIEWED_ALIASES={'03rfp':['Samuel Montembeault'],'06snb':['Ben Kindel'],'042xv':['Michael Eyssimont'],'03rfo':['Dan Vladar'],'04ajl':['Bo Groulx'],'004jg':['Patrick Maroon'],'01uor':['Chris Tanev'],'02oax':['Vincent Hinostroza'],'02ob1':['Matthew Benning'],'03edx':['Samuel Blais'],'03eer':['Jacob Middleton'],'03rg2':['William Borgen'],'03rga':['Mikhail Vorobyov'],'03w5q':['Joseph Veleno'],'042xm':['Maxime Lajoie'],'04zb8':['Philip Tomasino'],'051tm':['Zac Jones'],'06iml':['Max Tsyplakov'],'031oi':['Zachary Sanford']}
+HISTORICAL_NHL_IDS={}
 NHL_SEASON_ID='20252026'
 REPORTS=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
 def get(url):
@@ -22,8 +23,8 @@ def number(row,category):
  for field in FIELDS[category]:
   if row and row.get(field) is not None:return float(row[field])
  return None
-def nhl_report(kind,name,start=None,end=None):
- expr='gameTypeId=2 and seasonId='+NHL_SEASON_ID
+def nhl_report(kind,name,start=None,end=None,season_id=None):
+ expr='gameTypeId=2 and seasonId='+(season_id or NHL_SEASON_ID)
  if start:expr+=f' and gameDate>="{start}" and gameDate<="{end}"'
  url='https://api.nhle.com/stats/rest/en/'+kind+'/'+name+'?'+urllib.parse.urlencode({'isAggregate':'true','isGame':'true','start':0,'limit':-1,'cayenneExp':expr})
  data=get(url);rows=data.get('data',[])
@@ -51,6 +52,7 @@ def date_window(period,schedules):
 def resolve_id(pid,position,directory,identities,season_rows):
  identity=identities.get(pid,{})
  if identity.get('status')=='confirmed' and identity.get('nhlId'):return str(identity['nhlId']),'existing_confirmed_id'
+ if pid in HISTORICAL_NHL_IDS:return HISTORICAL_NHL_IDS[pid],'unique_name_across_nhl_seasons'
  names={key(n) for n in [directory[pid].get('name'),*directory[pid].get('aliases',[]),*REVIEWED_ALIASES.get(pid,[])] if n}
  kind='goalie' if position=='G' else 'skater'
  matches={str(r['playerId']) for r in season_rows[kind] if key(r.get('skaterFullName') or r.get('goalieFullName')) in names}
@@ -59,11 +61,11 @@ def official_scores(data,allow_partial=False):
  official={}
  for matchup in data.get('matchups',[]):
   for side in ['away','home']:
-   team=matchup[side];tid=team['teamId'];points=float(team['score']);categories={}
+   team=matchup[side];tid=team['teamId'];points=float(team['score']);categories={};values={}
    for category in matchup.get('categories',[]):
-    code=category['shortName'];categories[code]=categories.get(code,0)+float(category.get(side,{}).get('points',0))
+    code=category['shortName'];categories[code]=categories.get(code,0)+float(category.get(side,{}).get('points',0));values[code]=values.get(code,0)+float(category.get(side,{}).get('value',0))
    if tid in official and official[tid]['points']!=points:raise ValueError('Inconsistent official team scores')
-   official[tid]={'points':points,'categoryPoints':categories}
+   official[tid]={'points':points,'categoryPoints':categories,'categoryValues':values}
  if (not allow_partial and len(official)!=16) or not 1<=len(official)<=16:raise ValueError('Incomplete Fantrax team scores')
  return official
 def calculate(period,archive,directory,identities,season_rows,raw,official):
@@ -72,7 +74,7 @@ def calculate(period,archive,directory,identities,season_rows,raw,official):
   for config in group.get('configs',[]):
    category=config.get('scoringCategory',{}).get('shortName');pos=config.get('position',{}).get('shortName');points=config.get('points')
    if category and pos and points is not None:configs[(category,pos)]=float(points)
- teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items() if tid in official}
+ teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'officialCategoryValues':official[tid].get('categoryValues',{}),'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items() if tid in official}
  for pid,spans in archive['lineups'].items():
   span=next((s for s in spans if s[0]<=n<=s[1]),None)
   if not span or span[3]!='ACTIVE':continue

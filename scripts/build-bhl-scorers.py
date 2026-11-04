@@ -1,6 +1,7 @@
 """Build transparent BHL starter-contribution standings from archived lineups.
 Does not adjust individual points to force a match with official team totals.
 """
+import concurrent.futures as cf
 import collections
 import datetime as dt
 import importlib.util
@@ -30,7 +31,26 @@ def aggregate(reports,directory):
 def main():
  out=ROOT/'data/production';(out/'audits').mkdir(parents=True,exist_ok=True)
  manifest=json.loads((ROOT/'data/ownership/index.json').read_text());directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];reports=[]
- for season in sorted(s['season'] for s in manifest['seasons']):
+ # A retired/injured player may have no games in one season. Resolve a name
+ # only if it maps to a single NHL ID across the entire archived range.
+ seasons=sorted(s['season'] for s in manifest['seasons']);lookups=[]
+ def get_names(job):
+  season,kind=job;year=int(season[:4]);return kind,audit.nhl_report(kind,'summary',season_id=str(year)+str(year+1))
+ with cf.ThreadPoolExecutor(max_workers=4) as pool:lookups=list(pool.map(get_names,[(s,k) for s in seasons for k in ['skater','goalie']]))
+ role={}
+ for season in seasons:
+  archive=json.loads((ROOT/('data/ownership/'+season+'.json')).read_text())
+  for pid,spans in archive['lineups'].items():
+   if spans:role.setdefault(pid,spans[0][4])
+ for pid,player in directory.items():
+  names={audit.key(n) for n in [player.get('name'),*player.get('aliases',[]),*audit.REVIEWED_ALIASES.get(pid,[])] if n};kind='goalie' if role.get(pid)=='G' else 'skater'
+  matches=[r for k,rows in lookups if k==kind for r in rows if audit.key(r.get('goalieFullName') or r.get('skaterFullName')) in names]
+  ids={str(r['playerId']) for r in matches}
+  if len(ids)>1 and kind=='skater':
+   matches=[r for r in matches if (r.get('positionCode')=='D')==(role.get(pid)=='D')];ids={str(r['playerId']) for r in matches}
+  if len(ids)==1:audit.HISTORICAL_NHL_IDS[pid]=next(iter(ids))
+ print('CROSS_SEASON_IDENTITIES',len(audit.HISTORICAL_NHL_IDS),flush=True)
+ for season in seasons:
   audit.OUT=out/'audits'/f'{season}.json'
   report=audit.main(season,completed_only=True);reports.append(report)
  rows,coverage=aggregate(reports,directory)
