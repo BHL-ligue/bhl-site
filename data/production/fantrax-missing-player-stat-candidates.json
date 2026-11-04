@@ -1,0 +1,15 @@
+{
+  "status": "hypotheses_only",
+  "method": "official Fantrax category totals minus known starter category points; compare to NHL per-period stats",
+  "candidates": {},
+  "errors": [
+    {
+      "season": "2018-19",
+      "error": "[Errno 2] No such file or directory: '/home/runner/work/bhl-site/bhl-site/data/production/audits/2018-19.json'"
+    },
+    {
+      "season": "2019-20",
+      "error": "[Errno 2] No such file or directory: '/home/runner/work/bhl-site/bhl-site/data/production/audits/2019-20.json'"
+    }
+  ]
+}
