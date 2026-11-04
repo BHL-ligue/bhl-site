@@ -20,6 +20,7 @@ function mount(){
   ['bhl-accueil-forbes-connecte.html','FORBES'],
   ['bhl-equipes-connectees.html','Équipes'],
   ['bhl-trophees.html','Trophées'],
+  ['bhl-series.html','Séries éliminatoires'],
   ['bhl-matchs-joues.html','Matchs joués'],
   ['bhl-fantrax.html','Saison'],
   ['bhl-repechage.html','Repêchage'],

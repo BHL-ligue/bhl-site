@@ -1,0 +1,35 @@
+name: Archives des séries BHL
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/build-bhl-playoffs.py
+      - .github/workflows/bhl-playoffs.yml
+permissions:
+  contents: write
+concurrency:
+  group: bhl-playoffs
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/build-bhl-playoffs.py
+      - name: Sauvegarder les archives
+        run: |
+          cp data/playoffs.json /tmp/bhl-playoffs.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/bhl-playoffs.json data/playoffs.json
+          git add data/playoffs.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Actualiser les arbres historiques des séries BHL'
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,69 @@
+{
+  "source": "Archives BHL et bannières officielles.",
+  "seasons": [
+    {
+      "season": "2025-26",
+      "champion": "Ottawa Senators",
+      "banner": "banners/BannerOTT2026.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2024-25",
+      "champion": "Detroit Red Wings",
+      "banner": "banners/BannerDET2025.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2023-24",
+      "champion": "Anaheim Mighty Ducks",
+      "banner": "banners/BannerANA2024.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2022-23",
+      "champion": "Hartford Whalers",
+      "banner": "banners/BannerHAR2023.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2021-22",
+      "champion": "Montréal Canadiens",
+      "banner": "banners/BannerMTL2022.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2020-21",
+      "champion": "Nashville Predators",
+      "banner": "banners/BannerNSH2021.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2019-20",
+      "champion": null,
+      "banner": null,
+      "cancelled": true,
+      "rounds": [],
+      "status": "pending"
+    },
+    {
+      "season": "2018-19",
+      "champion": "Minnesota North Stars",
+      "banner": "banners/BannerMIN2019.png",
+      "cancelled": false,
+      "rounds": [],
+      "status": "pending"
+    }
+  ]
+}
