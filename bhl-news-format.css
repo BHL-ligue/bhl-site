@@ -10,3 +10,13 @@
 .bhl-article-body{display:flow-root;overflow-wrap:break-word}
 .article .summary{font-size:18px;font-weight:400;color:#191919;line-height:1.85;margin:0 0 1.1em;white-space:pre-wrap;overflow-wrap:break-word}
 #reader .preview-summary{font-size:17px;font-weight:400;color:#191919;line-height:1.8;margin:0 0 1.1em;white-space:pre-wrap}
+
+/* Les photos insérées gardent le cadrage choisi, sur mobile comme sur ordinateur. */
+.bhl-article-body img.bhl-inline-image,#bodyRich .ql-editor img.bhl-inline-image{display:block;width:auto;max-width:100%;height:auto;max-height:none;margin:20px auto;border-radius:9px;object-fit:contain}
+#bodyRich .ql-editor img.bhl-inline-image{cursor:pointer;max-height:600px}
+#bodyRich .ql-editor img.bhl-inline-selected{outline:3px solid #cc0000;outline-offset:3px}
+.bhl-inline-feedback{color:#626b75;font-size:13px;margin:8px 0}
+.bhl-crop-dialog>label{display:block;font-weight:700;margin:14px 0}
+.bhl-crop-dialog>label select,.bhl-crop-dialog>label input{display:block;width:100%;font:inherit;padding:10px;border:1px solid #ccd2d8;border-radius:7px;background:white;color:#191919;margin-top:5px}
+.bhl-crop-controls>label{display:flex;flex:1;gap:14px;align-items:center}
+.bhl-crop-controls input[type=range]{flex:1;min-width:0}

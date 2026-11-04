@@ -1,5 +1,5 @@
-import {chooseCoverCrop} from './bhl-news-crop.js?v=1';
-export {prepareCover} from './bhl-news-crop.js?v=1';
+import {chooseCoverCrop} from './bhl-news-crop.js?v=inline1';
+export {prepareCover} from './bhl-news-crop.js?v=inline1';
 const BUCKET='bhl-news-images';
 const signed=new Map();
 function imageId(){if(typeof crypto.randomUUID==='function')return crypto.randomUUID();const b=crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const h=[...b].map(v=>v.toString(16).padStart(2,'0')).join('');return h.slice(0,8)+'-'+h.slice(8,12)+'-'+h.slice(12,16)+'-'+h.slice(16,20)+'-'+h.slice(20);}
@@ -16,4 +16,12 @@ recrop.onclick=()=>{if(!path)return;uploadCover(async()=>{const url=await coverU
 $('removeCover').onclick=()=>{if(!canEdit()||uploading)return;path=null;refresh();onChange();$('coverFeedback').textContent='Image retirée de cet article. Enregistre le brouillon pour conserver ce changement.';};
 for(const id of ['coverAlt','coverCaption'])$(id).addEventListener('input',()=>{onChange();});
 return {value,set(article){path=article?.cover_path||null;$('coverAlt').value=article?.cover_alt||'';$('coverCaption').value=article?.cover_caption||'';$('coverFile').value='';$('coverFeedback').textContent='';refresh();},enable(yes){$('coverFile').disabled=!yes;$('coverAlt').disabled=!yes;$('coverCaption').disabled=!yes;$('removeCover').disabled=!yes;recrop.disabled=!yes;},busy(){return uploading;}};
+}
+
+export function hydrateInlineImages(db,target){
+ for(const image of target.querySelectorAll('img[data-bhl-image]')){
+  const path=image.dataset.bhlImage;if(!validCoverPath(path))continue;
+  image.loading='lazy';image.decoding='async';
+  coverURL(db,path).then(url=>{if(image.dataset.bhlImage===path)image.src=url}).catch(()=>{image.alt='Photo temporairement indisponible';});
+ }
 }
