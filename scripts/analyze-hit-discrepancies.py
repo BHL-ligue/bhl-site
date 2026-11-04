@@ -80,3 +80,35 @@ if audit_path.exists():
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Wrote", evidence_path, "examples:", len(evidence))
 print("Wrote", output)
+
+# Reconciliation worksheet: actionable per-player samples for checking against
+# Fantrax's ORIGINAL period HIT totals (not NHL's subsequently updated totals).
+# Never infer an individual Fantrax count from a team-wide discrepancy.
+if audit_path.exists():
+    rows = []
+    for example in evidence:
+        for player in example["players"]:
+            rows.append({
+                "season": "2023-24",
+                "period": example["period"],
+                "team": example["team"],
+                "periodStart": example["start"],
+                "periodEnd": example["end"],
+                "fantraxId": player["fantraxId"],
+                "nhlId": player["nhlId"],
+                "player": player["name"],
+                "nhlReconstructedHits": player["reconstructedHits"],
+                "fantraxOriginalHits": None,
+                "individualHitDifference": None,
+                "teamFantraxHitFpts": example["officialTeamHitFpts"],
+                "teamReconstructedHitFpts": example["reconstructedTeamHitFpts"],
+                "verification": "pending_original_fantrax_player_hits"
+            })
+    import csv
+    worksheet = ROOT / "data/production/hit-reconciliation-2023-24.csv"
+    if rows:
+        with worksheet.open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
+    print("Wrote reconciliation worksheet", worksheet, "players:", len(rows))
