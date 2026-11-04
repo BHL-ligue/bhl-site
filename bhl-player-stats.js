@@ -338,13 +338,29 @@ function tradeHistory(name,target){
   return row?.[2]||'';
  };
  const el=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n};
+ // Les choix sont identifiés par leur année, ronde et équipe d'origine.
+ const pickInfo=asset=>{
+  const m=String(asset||'').match(/^(20\\d{2})\\s+Draft Pick,\\s*Round\\s*(\\d+)\\s*\\(([^)]+)\\)/i);
+  return m?{year:Number(m[1]),round:Number(m[2]),origin:m[3]}:null;
+ };
+ const draftSelections=fetch('https://docs.google.com/spreadsheets/d/1KtgVk6viZc6wMMKoxBhbUgL6JkjuwuMTyfNH173XWUc/gviz/tq?tqx=out:csv&sheet=DRAFTS')
+  .then(r=>{if(!r.ok)throw Error('DRAFTS');return r.text()}).then(csv=>{
+   const rows=[];let row=[],cell='',quoted=false;
+   for(let i=0;i<csv.length;i++){const c=csv[i];if(c==='"'){if(quoted&&csv[i+1]==='"'){cell+='"';i++}else quoted=!quoted}else if(c===','&&!quoted){row.push(cell);cell=''}else if((c==='\\n'||c==='\\r')&&!quoted){if(c==='\\r'&&csv[i+1]==='\\n')i++;row.push(cell);if(row.some(v=>v!==''))rows.push(row);row=[];cell=''}else cell+=c}
+   row.push(cell);if(row.some(v=>v!==''))rows.push(row);
+   const headers=(rows.shift()||[]).map(x=>x.trim().toLowerCase()),idx=k=>headers.indexOf(k);
+   const yearIdx=headers.findIndex(x=>['year','season','année','annee'].includes(x));
+   const yi=yearIdx>=0?yearIdx:(headers.length>9?9:-1);
+   return rows.map(r=>({year:yi>=0?Number(r[yi]):0,round:Number(r[idx('round')]),team:r[idx('fantasy team')]||'',player:r[idx('player')]||''}))
+    .filter(x=>x.year>=2000&&x.round>0&&x.team&&x.player);
+  }).catch(()=>[]);
  const org=(name)=>{
   const wrap=el('span','bhl-trade-org');
   const logo=teamLogo(name);
   if(logo){const img=el('img','bhl-trade-logo');img.src='logos/'+logo;img.alt='';img.loading='lazy';img.onerror=()=>img.remove();wrap.append(img)}
   wrap.append(el('span','',name||'Équipe inconnue'));return wrap;
  };
- window.BHLTrades.load().then(trades=>{
+ window.BHLTrades.load().then(async trades=>{
   if(!target.isConnected)return;
   const key=norm(name),events=[];
   for(const t of trades){for(const m of t.moves||[]){if(m.position&&norm(m.asset)===key)events.push({t,m})}}
@@ -390,8 +406,20 @@ function tradeHistory(name,target){
      header.append(el('strong','',group.team));
      column.append(header);
      const assets=el('div','bhl-trade-full-assets');
+     const selections=await draftSelections;
      for(const asset of group.assets.length?group.assets:['Détails non disponibles']){
-      assets.append(el('div','bhl-trade-asset',asset));
+      const pick=pickInfo(asset);
+      if(!pick){assets.append(el('div','bhl-trade-asset',asset));continue}
+      const item=el('div','bhl-trade-asset');
+      item.style.display='flex';item.style.alignItems='center';item.style.gap='6px';item.style.flexWrap='wrap';
+      const logo=teamLogo(pick.origin);
+      if(logo){const img=el('img','bhl-trade-logo');img.src='logos/'+logo;img.alt=pick.origin;img.title=pick.origin;img.loading='lazy';img.style.width='22px';img.style.height='22px';img.style.objectFit='contain';img.onerror=()=>img.remove();item.append(img)}
+      else item.append(el('span','',pick.origin+' · '));
+      item.append(el('span','',pick.year+' · Round '+pick.round));
+      // Afficher un joueur uniquement si la correspondance est unique et vérifiable.
+      const matches=selections.filter(x=>x.year===pick.year&&x.round===pick.round&&norm(x.team)===norm(pick.origin));
+      if(matches.length===1)item.append(el('span','', '('+matches[0].player+')'));
+      assets.append(item);
      }
      column.append(assets);
      columns.append(column);
