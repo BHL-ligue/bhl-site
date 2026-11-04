@@ -1,6 +1,7 @@
+import {initJournalistsAdmin} from './bhl-news-journalists.js?v=1';
 import{initRulesAdmin}from'./bhl-rules-admin.js?v=2';import{initCaptainAdmin}from'./bhl-admin-captains.js?v=1';import{createClient}from'https://esm.sh/@supabase/supabase-js@2.57.4';import{SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY}from'./bhl-supabase.js';const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function msg(t,c=''){$('#status').textContent=t;$('#status').className='status '+c}
 let adminReady=false,adminUser=null;
-const views={accueil:['Tableau de bord','L’essentiel de ta ligue, au même endroit.'],capitaines:['Capitaines et assistants','Gère le leadership des organisations de la BHL.'],articles:['Articles et nouvelles','De la rédaction à la publication.'],reglements:['Règlements','Modifie les articles et publie les changements sur le site.'],dgs:['Directeurs généraux','Responsables et attribution des organisations.'],demandes:['Demandes d’accès','Les inscriptions qui attendent ta validation.'],site:['Site et outils','Les raccourcis vers les pages de la ligue.']};
+const views={journalistes:['Journalistes','Les signatures de la ligue et leur attribution aux comptes du portail.'],accueil:['Tableau de bord','L’essentiel de ta ligue, au même endroit.'],capitaines:['Capitaines et assistants','Gère le leadership des organisations de la BHL.'],articles:['Articles et nouvelles','De la rédaction à la publication.'],reglements:['Règlements','Modifie les articles et publie les changements sur le site.'],dgs:['Directeurs généraux','Responsables et attribution des organisations.'],demandes:['Demandes d’accès','Les inscriptions qui attendent ta validation.'],site:['Site et outils','Les raccourcis vers les pages de la ligue.']};
 function metric(key,value){document.querySelectorAll('[data-admin-metric="'+key+'"]').forEach(el=>el.textContent=value)}
 async function showView(name,focus=false){
  if(!adminReady)return;name=views[name]?name:'accueil';
@@ -8,6 +9,7 @@ async function showView(name,focus=false){
  document.querySelectorAll('.admin-sidebar [data-admin-view]').forEach(a=>{if(a.dataset.adminView===name)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  $('#adminViewTitle').textContent=views[name][0];$('#adminBreadcrumb').textContent=views[name][0];$('#adminViewDescription').textContent=views[name][1];
  if(focus){$('#adminViewTitle').tabIndex=-1;$('#adminViewTitle').focus({preventScroll:true});$('#adminViewTitle').scrollIntoView({behavior:'smooth',block:'start'})}
+ if(name==='journalistes')await initJournalistsAdmin(db,$('#journalistsAdmin'));
  if(name==='reglements')await initRulesAdmin(db,$('#rulesAdmin'));
  if(name==='capitaines')await initCaptainAdmin(db,$('#captainAdmin'),{user:adminUser,onSaved:leaders});
 }
