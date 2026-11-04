@@ -5,45 +5,45 @@
     {
       "season": "2018-19",
       "compared": 382,
-      "matching": 338,
-      "mismatches": 44,
-      "unresolvedPlayerPeriods": 44,
+      "matching": 382,
+      "mismatches": 0,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 0,
       "categoryOnlyPeriods": 0
     },
     {
       "season": "2019-20",
-      "compared": 350,
-      "matching": 337,
-      "mismatches": 13,
-      "unresolvedPlayerPeriods": 10,
+      "compared": 348,
+      "matching": 345,
+      "mismatches": 3,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 3,
       "categoryOnlyPeriods": 0
     },
     {
       "season": "2020-21",
       "compared": 222,
-      "matching": 213,
-      "mismatches": 9,
-      "unresolvedPlayerPeriods": 2,
+      "matching": 215,
+      "mismatches": 7,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 7,
       "categoryOnlyPeriods": 0
     },
     {
       "season": "2021-22",
       "compared": 350,
-      "matching": 318,
-      "mismatches": 32,
-      "unresolvedPlayerPeriods": 2,
+      "matching": 320,
+      "mismatches": 30,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 30,
       "categoryOnlyPeriods": 0
     },
     {
       "season": "2022-23",
       "compared": 366,
-      "matching": 356,
-      "mismatches": 10,
-      "unresolvedPlayerPeriods": 5,
+      "matching": 361,
+      "mismatches": 5,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 5,
       "categoryOnlyPeriods": 0
     },
@@ -85,1204 +85,15 @@
     }
   ],
   "categoryFrequency": {
-    "Hit": 330,
-    "SOG": 99,
-    "Blk": 59,
-    "SV": 50,
-    "FOW": 34,
-    "Tk": 29,
-    "A": 26,
-    "G": 18,
-    "GA": 10,
-    "W": 8
+    "Hit": 287,
+    "SOG": 50,
+    "SV": 40,
+    "FOW": 28,
+    "Blk": 19,
+    "Tk": 3,
+    "A": 2
   },
   "mismatches": [
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 3,
-      "team": "Toronto Maple Leafs",
-      "official": 131.95,
-      "calculated": 127.35,
-      "difference": null,
-      "unresolved": [
-        "01f61"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Hit": -0.3,
-        "Blk": -0.6,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 3,
-      "team": "California Golden Seals",
-      "official": 132.75,
-      "calculated": 132.65,
-      "difference": null,
-      "unresolved": [
-        "03rga"
-      ],
-      "categoryDifferences": {
-        "Tk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 3,
-      "team": "Nashville Predators",
-      "official": 155.3,
-      "calculated": 153.3,
-      "difference": null,
-      "unresolved": [
-        "003mh"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Tk": -0.4,
-        "Hit": -0.6,
-        "Blk": -0.4
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 4,
-      "team": "Toronto Maple Leafs",
-      "official": 106.0,
-      "calculated": 104.5,
-      "difference": null,
-      "unresolved": [
-        "0045o"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Hit": -0.7,
-        "Blk": -0.2
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 4,
-      "team": "Atlanta Thrashers",
-      "official": 126.8,
-      "calculated": 122.7,
-      "difference": null,
-      "unresolved": [
-        "003jc"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.9,
-        "Tk": -0.1,
-        "Hit": -0.4,
-        "Blk": -0.2,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 4,
-      "team": "Detroit Cougars",
-      "official": 134.5,
-      "calculated": 119.6,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -3.3,
-        "Tk": -0.1,
-        "A": -2.5,
-        "G": -9.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 5,
-      "team": "Toronto Maple Leafs",
-      "official": 120.45,
-      "calculated": 120.45,
-      "difference": null,
-      "unresolved": [
-        "0045o"
-      ],
-      "categoryDifferences": {},
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 5,
-      "team": "Atlanta Thrashers",
-      "official": 167.25,
-      "calculated": 162.15,
-      "difference": null,
-      "unresolved": [
-        "003jc"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Tk": -0.1,
-        "Hit": -0.6,
-        "Blk": -0.2,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 5,
-      "team": "Detroit Cougars",
-      "official": 162.45,
-      "calculated": 143.45,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -4.8,
-        "Hit": -0.1,
-        "Blk": -0.1,
-        "A": -5.0,
-        "G": -9.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 5,
-      "team": "Nashville Predators",
-      "official": 140.4,
-      "calculated": 136.5,
-      "difference": null,
-      "unresolved": [
-        "003mh"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Tk": -0.1,
-        "Hit": -0.2,
-        "Blk": -0.5,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 6,
-      "team": "Atlanta Thrashers",
-      "official": 158.2,
-      "calculated": 156.0,
-      "difference": null,
-      "unresolved": [
-        "003jc"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.8,
-        "Tk": -0.1,
-        "Hit": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 6,
-      "team": "Detroit Cougars",
-      "official": 155.75,
-      "calculated": 151.85,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Blk": -0.2,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 6,
-      "team": "Nashville Predators",
-      "official": 167.6,
-      "calculated": 161.1,
-      "difference": null,
-      "unresolved": [
-        "003mh"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Hit": -0.2,
-        "Blk": -0.7,
-        "A": -5.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 7,
-      "team": "Atlanta Thrashers",
-      "official": 114.7,
-      "calculated": 111.9,
-      "difference": null,
-      "unresolved": [
-        "003jc"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 7,
-      "team": "Detroit Cougars",
-      "official": 160.15,
-      "calculated": 153.75,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Hit": -0.1,
-        "Blk": -0.2,
-        "A": -2.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 8,
-      "team": "Detroit Cougars",
-      "official": 190.75,
-      "calculated": 185.55,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.4,
-        "Hit": -0.2,
-        "Blk": -0.1,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 10,
-      "team": "Winnipeg Jets",
-      "official": 153.9,
-      "calculated": 147.85,
-      "difference": null,
-      "unresolved": [
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.4,
-        "Tk": -0.5,
-        "Hit": -1.3,
-        "FOW": -1.55,
-        "Blk": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 11,
-      "team": "Winnipeg Jets",
-      "official": 179.9,
-      "calculated": 173.9,
-      "difference": null,
-      "unresolved": [
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Hit": -0.4,
-        "FOW": -1.1,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 12,
-      "team": "New York Rangers",
-      "official": 136.4,
-      "calculated": 129.3,
-      "difference": null,
-      "unresolved": [
-        "0040f"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Hit": -0.2,
-        "Blk": -0.2,
-        "A": -2.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 12,
-      "team": "Winnipeg Jets",
-      "official": 160.2,
-      "calculated": 156.8,
-      "difference": null,
-      "unresolved": [
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Tk": -0.2,
-        "Hit": -0.3,
-        "FOW": -1.1,
-        "Blk": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 13,
-      "team": "New York Rangers",
-      "official": 110.25,
-      "calculated": 108.45,
-      "difference": null,
-      "unresolved": [
-        "0040f"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Hit": -0.7,
-        "Blk": -0.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 13,
-      "team": "Anaheim Mighty Ducks",
-      "official": 81.65,
-      "calculated": 80.95,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 13,
-      "team": "Winnipeg Jets",
-      "official": 107.3,
-      "calculated": 105.9,
-      "difference": null,
-      "unresolved": [
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Tk": -0.2,
-        "Hit": -0.6,
-        "FOW": -0.2,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 14,
-      "team": "Anaheim Mighty Ducks",
-      "official": 163.9,
-      "calculated": 162.3,
-      "difference": null,
-      "unresolved": [
-        "003hb"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 14,
-      "team": "Winnipeg Jets",
-      "official": 149.6,
-      "calculated": 142.25,
-      "difference": null,
-      "unresolved": [
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.4,
-        "Tk": -0.3,
-        "Hit": -0.7,
-        "FOW": -1.25,
-        "Blk": -0.2,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 15,
-      "team": "Anaheim Mighty Ducks",
-      "official": 121.85,
-      "calculated": 107.5,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.7,
-        "Tk": -0.1,
-        "Hit": -0.4,
-        "FOW": -0.65,
-        "A": -7.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 15,
-      "team": "Edmonton Oilers",
-      "official": 192.35,
-      "calculated": 178.75,
-      "difference": null,
-      "unresolved": [
-        "003i5"
-      ],
-      "categoryDifferences": {
-        "SV": -11.6,
-        "W": -8.0,
-        "GA": 6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 16,
-      "team": "Anaheim Mighty Ducks",
-      "official": 129.25,
-      "calculated": 118.95,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Tk": -0.2,
-        "Hit": -0.6,
-        "Blk": -0.5,
-        "A": -7.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 16,
-      "team": "Vegas Golden Knights",
-      "official": 148.8,
-      "calculated": 141.8,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.1,
-        "Tk": -0.1,
-        "Hit": -0.2,
-        "Blk": -1.6,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 17,
-      "team": "Anaheim Mighty Ducks",
-      "official": 70.05,
-      "calculated": 69.45,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 18,
-      "team": "Anaheim Mighty Ducks",
-      "official": 64.6,
-      "calculated": 59.2,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Tk": -0.1,
-        "Hit": -0.7,
-        "Blk": -0.1,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 18,
-      "team": "Vegas Golden Knights",
-      "official": 110.85,
-      "calculated": 105.75,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Hit": -0.3,
-        "Blk": -0.8,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 19,
-      "team": "Anaheim Mighty Ducks",
-      "official": 195.4,
-      "calculated": 181.2,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -4.5,
-        "Hit": -0.8,
-        "Blk": -0.4,
-        "A": -2.5,
-        "G": -6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 19,
-      "team": "Edmonton Oilers",
-      "official": 224.55,
-      "calculated": 224.15,
-      "difference": null,
-      "unresolved": [
-        "01dr6"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 19,
-      "team": "Vegas Golden Knights",
-      "official": 177.6,
-      "calculated": 172.9,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -3.0,
-        "Tk": -0.2,
-        "Hit": -0.1,
-        "Blk": -1.4
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 20,
-      "team": "Anaheim Mighty Ducks",
-      "official": 172.45,
-      "calculated": 162.75,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -3.6,
-        "Tk": -0.2,
-        "Hit": -0.3,
-        "Blk": -0.1,
-        "A": -2.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 20,
-      "team": "Vegas Golden Knights",
-      "official": 172.0,
-      "calculated": 164.6,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Tk": -0.1,
-        "Hit": -0.3,
-        "Blk": -0.8,
-        "A": -5.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 21,
-      "team": "Anaheim Mighty Ducks",
-      "official": 187.35,
-      "calculated": 179.85,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -3.0,
-        "Tk": -0.3,
-        "Hit": -1.2,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 22,
-      "team": "Anaheim Mighty Ducks",
-      "official": 161.0,
-      "calculated": 145.8,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -5.4,
-        "Tk": -0.5,
-        "Hit": -0.7,
-        "Blk": -0.1,
-        "A": -2.5,
-        "G": -6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 22,
-      "team": "Vegas Golden Knights",
-      "official": 181.3,
-      "calculated": 179.6,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.6,
-        "Tk": -0.2,
-        "Hit": -0.3,
-        "Blk": -0.6
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 23,
-      "team": "Anaheim Mighty Ducks",
-      "official": 118.5,
-      "calculated": 109.5,
-      "difference": null,
-      "unresolved": [
-        "003hb",
-        "010wq"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.1,
-        "Tk": -0.4,
-        "Hit": -1.0,
-        "A": -2.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 23,
-      "team": "Minnesota North Stars",
-      "official": 154.3,
-      "calculated": 153.8,
-      "difference": null,
-      "unresolved": [
-        "003jc"
-      ],
-      "categoryDifferences": {
-        "Hit": -0.4,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "regular",
-      "period": 23,
-      "team": "Vegas Golden Knights",
-      "official": 182.3,
-      "calculated": 177.4,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.8,
-        "Hit": -0.2,
-        "Blk": -0.4,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2018-19",
-      "phase": "playoffs",
-      "period": 24,
-      "team": "Vegas Golden Knights",
-      "official": 196.25,
-      "calculated": 185.95,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.9,
-        "Tk": -0.1,
-        "Hit": -0.3,
-        "Blk": -1.5,
-        "A": -7.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 2,
-      "team": "Atlanta Thrashers",
-      "official": 129.7,
-      "calculated": 128.7,
-      "difference": null,
-      "unresolved": [
-        "003hf"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Hit": -0.1,
-        "Blk": -0.6
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 5,
-      "team": "Nashville Predators",
-      "official": 138.4,
-      "calculated": 137.0,
-      "difference": null,
-      "unresolved": [
-        "003pa"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.2,
-        "Hit": -0.1,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 5,
-      "team": "Edmonton Oilers",
-      "official": 172.55,
-      "calculated": 167.95,
-      "difference": null,
-      "unresolved": [
-        "01mlo"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Tk": -0.4,
-        "Hit": -0.2,
-        "A": -2.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 12,
-      "team": "Atlanta Thrashers",
-      "official": 186.6,
-      "calculated": 177.5,
-      "difference": null,
-      "unresolved": [
-        "01mlo"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.1,
-        "Hit": -0.8,
-        "Blk": -0.2,
-        "G": -6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 15,
-      "team": "Vegas Golden Knights",
-      "official": 141.85,
-      "calculated": 136.55,
-      "difference": null,
-      "unresolved": [
-        "01mlo"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.8,
-        "Hit": -0.3,
-        "Blk": -0.2,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 16,
-      "team": "Vegas Golden Knights",
-      "official": 180.5,
-      "calculated": 175.7,
-      "difference": null,
-      "unresolved": [
-        "01mlo"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.5,
-        "Tk": -0.1,
-        "Hit": -0.2,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 19,
-      "team": "Anaheim Mighty Ducks",
-      "official": 127.5,
-      "calculated": 118.2,
-      "difference": null,
-      "unresolved": [
-        "01zu0"
-      ],
-      "categoryDifferences": {
-        "SOG": -2.4,
-        "Hit": -0.6,
-        "Blk": -0.8,
-        "A": -2.5,
-        "G": -3.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 20,
-      "team": "Anaheim Mighty Ducks",
-      "official": 149.85,
-      "calculated": 147.15,
-      "difference": null,
-      "unresolved": [
-        "01zu0"
-      ],
-      "categoryDifferences": {
-        "SOG": -1.8,
-        "Tk": -0.2,
-        "Hit": -0.6,
-        "Blk": -0.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 21,
-      "team": "Québec Nordiques",
-      "official": 149.2,
-      "calculated": 148.5,
-      "difference": null,
-      "unresolved": [
-        "003xs"
-      ],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": -0.4
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2019-20",
-      "phase": "regular",
-      "period": 21,
-      "team": "Anaheim Mighty Ducks",
-      "official": 129.25,
-      "calculated": 129.25,
-      "difference": null,
-      "unresolved": [
-        "01zu0"
-      ],
-      "categoryDifferences": {},
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2020-21",
-      "phase": "regular",
-      "period": 12,
-      "team": "Montréal Maroons",
-      "official": 177.5,
-      "calculated": 162.9,
-      "difference": null,
-      "unresolved": [
-        "031qf"
-      ],
-      "categoryDifferences": {
-        "SV": -14.6,
-        "W": -4.0,
-        "GA": 4.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2020-21",
-      "phase": "playoffs",
-      "period": 14,
-      "team": "Montréal Maroons",
-      "official": 187.15,
-      "calculated": 182.55,
-      "difference": null,
-      "unresolved": [
-        "031qf"
-      ],
-      "categoryDifferences": {
-        "SV": -11.6,
-        "GA": 7.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2021-22",
-      "phase": "regular",
-      "period": 19,
-      "team": "Detroit Cougars",
-      "official": 155.1,
-      "calculated": 147.7,
-      "difference": null,
-      "unresolved": [
-        "031qf"
-      ],
-      "categoryDifferences": {
-        "SV": -10.4,
-        "W": -4.0,
-        "GA": 7.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2021-22",
-      "phase": "regular",
-      "period": 22,
-      "team": "Detroit Cougars",
-      "official": 156.5,
-      "calculated": 141.9,
-      "difference": null,
-      "unresolved": [
-        "031qf"
-      ],
-      "categoryDifferences": {
-        "SV": -16.6,
-        "W": -8.0,
-        "GA": 10.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2022-23",
-      "phase": "regular",
-      "period": 1,
-      "team": "Hartford Whalers",
-      "official": 93.3,
-      "calculated": 93.5,
-      "difference": null,
-      "unresolved": [
-        "02nq8"
-      ],
-      "categoryDifferences": {
-        "SV": -3.8,
-        "GA": 4.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2022-23",
-      "phase": "regular",
-      "period": 7,
-      "team": "Hartford Whalers",
-      "official": 194.1,
-      "calculated": 178.3,
-      "difference": null,
-      "unresolved": [
-        "02nq8"
-      ],
-      "categoryDifferences": {
-        "SV": -11.8,
-        "W": -8.0,
-        "GA": 4.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2022-23",
-      "phase": "regular",
-      "period": 8,
-      "team": "Hartford Whalers",
-      "official": 171.9,
-      "calculated": 159.7,
-      "difference": null,
-      "unresolved": [
-        "02nq8"
-      ],
-      "categoryDifferences": {
-        "SV": -14.2,
-        "W": -4.0,
-        "GA": 6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2022-23",
-      "phase": "regular",
-      "period": 12,
-      "team": "Hartford Whalers",
-      "official": 223.9,
-      "calculated": 217.3,
-      "difference": null,
-      "unresolved": [
-        "02nq8"
-      ],
-      "categoryDifferences": {
-        "SV": -8.6,
-        "W": -4.0,
-        "GA": 6.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2022-23",
-      "phase": "regular",
-      "period": 14,
-      "team": "Hartford Whalers",
-      "official": 198.3,
-      "calculated": 186.9,
-      "difference": null,
-      "unresolved": [
-        "02nq8"
-      ],
-      "categoryDifferences": {
-        "SV": -12.4,
-        "W": -4.0,
-        "GA": 5.0
-      },
-      "reason": "unresolved_player"
-    },
     {
       "season": "2023-24",
       "phase": "regular",
@@ -1293,9 +104,9 @@
       "difference": 2.6,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
         "SOG": 0.3,
-        "Hit": 2.1
+        "Hit": 2.1,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -1580,8 +391,8 @@
       "difference": 1.7,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 1.5
+        "Hit": 1.5,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -1694,9 +505,9 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.6,
         "SOG": 0.3,
-        "Hit": 0.6
+        "Hit": 0.6,
+        "SV": 0.6
       },
       "reason": "score_difference"
     },
@@ -1837,8 +648,8 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -1852,8 +663,8 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.7
+        "Hit": 1.7,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -1966,8 +777,8 @@
       "difference": 1.4,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 1.2
+        "Hit": 1.2,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -2207,8 +1018,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SOG": 0.3,
-        "Hit": 0.8,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "Hit": 0.8
       },
       "reason": "score_difference"
     },
@@ -2236,8 +1047,8 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -2336,8 +1147,8 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.5
+        "Hit": 1.5,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -2589,8 +1400,8 @@
       "difference": 1.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 1.0
+        "Hit": 1.0,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -2674,9 +1485,9 @@
       "difference": 1.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
         "SOG": -0.3,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -2803,8 +1614,8 @@
       "difference": 1.15,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.1,
-        "FOW": 0.05
+        "FOW": 0.05,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -2888,8 +1699,8 @@
       "difference": 1.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 0.9
+        "Hit": 0.9,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -2903,8 +1714,8 @@
       "difference": 1.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -2961,8 +1772,8 @@
       "difference": 1.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.3
+        "Hit": 1.3,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -3004,9 +1815,9 @@
       "difference": 1.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
         "SOG": -0.3,
-        "Hit": 1.6
+        "Hit": 1.6,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -3231,8 +2042,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.2,
-        "Blk": -0.2
+        "Blk": -0.2,
+        "Hit": 1.2
       },
       "reason": "score_difference"
     },
@@ -3303,9 +2114,9 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
         "SOG": -0.3,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -3391,8 +2202,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": 0.2,
-        "Hit": 0.8
+        "Hit": 0.8,
+        "SV": 0.2
       },
       "reason": "score_difference"
     },
@@ -3476,8 +2287,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.2
+        "Hit": 1.2,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -3604,8 +2415,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.1,
-        "Blk": -0.2
+        "Blk": -0.2,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -4028,8 +2839,8 @@
       "difference": 0.8,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.0
+        "Hit": 1.0,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -4099,8 +2910,8 @@
       "difference": 0.8,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 1.0
+        "Hit": 1.0,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -4226,8 +3037,8 @@
       "difference": 0.7,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 0.9
+        "Hit": 0.9,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -4297,8 +3108,8 @@
       "difference": 0.7,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.9,
-        "Blk": -0.2
+        "Blk": -0.2,
+        "Hit": 0.9
       },
       "reason": "score_difference"
     },
@@ -4537,8 +3348,8 @@
       "difference": 0.6,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.4,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "Hit": 0.4
       },
       "reason": "score_difference"
     },
@@ -4748,8 +3559,8 @@
       "difference": 0.5,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 0.7
+        "Hit": 0.7,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -4847,8 +3658,8 @@
       "difference": -0.35,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "FOW": -0.05
+        "FOW": -0.05,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -4946,9 +3757,9 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
         "SOG": -0.6,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -5820,8 +4631,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SOG": -0.3,
-        "Hit": 0.4,
-        "Blk": -0.2
+        "Blk": -0.2,
+        "Hit": 0.4
       },
       "reason": "score_difference"
     },
@@ -6075,8 +4886,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SV": -0.2,
-        "Hit": 0.1
+        "Hit": 0.1,
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -6399,8 +5210,8 @@
       "difference": 0.05,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.1,
-        "FOW": -0.05
+        "FOW": -0.05,
+        "Hit": 0.1
       },
       "reason": "score_difference"
     },
