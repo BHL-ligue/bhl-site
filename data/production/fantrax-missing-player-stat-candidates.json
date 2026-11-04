@@ -124,6 +124,12 @@
             "categories": 3
           },
           {
+            "nhlId": "8477463",
+            "name": "Steven Santini",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
             "nhlId": "8470318",
             "name": "Jonathan Ericsson",
             "error": 0.0,
@@ -132,12 +138,6 @@
           {
             "nhlId": "8474066",
             "name": "Thomas Hickey",
-            "error": 0.0,
-            "categories": 3
-          },
-          {
-            "nhlId": "8477463",
-            "name": "Steven Santini",
             "error": 0.0,
             "categories": 3
           }
@@ -165,12 +165,6 @@
         },
         "top": [
           {
-            "nhlId": "8479465",
-            "name": "Drake Caggiula",
-            "error": 0.0,
-            "categories": 3
-          },
-          {
             "nhlId": "8478561",
             "name": "Andreas Martinsen",
             "error": 0.0,
@@ -189,6 +183,12 @@
             "categories": 3
           },
           {
+            "nhlId": "8479465",
+            "name": "Drake Caggiula",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
             "nhlId": "8476915",
             "name": "Jujhar Khaira",
             "error": 0.0,
@@ -201,14 +201,14 @@
             "categories": 3
           },
           {
-            "nhlId": "8477961",
-            "name": "John Quenneville",
+            "nhlId": "8475768",
+            "name": "Jaden Schwartz",
             "error": 0.0,
             "categories": 3
           },
           {
-            "nhlId": "8475768",
-            "name": "Jaden Schwartz",
+            "nhlId": "8477987",
+            "name": "Ryan Donato",
             "error": 0.0,
             "categories": 3
           }
@@ -236,14 +236,14 @@
         },
         "top": [
           {
-            "nhlId": "8471743",
-            "name": "Vladimir Sobotka",
+            "nhlId": "8477448",
+            "name": "Marko Dano",
             "error": 0.0,
             "categories": 3
           },
           {
-            "nhlId": "8477448",
-            "name": "Marko Dano",
+            "nhlId": "8471743",
+            "name": "Vladimir Sobotka",
             "error": 0.0,
             "categories": 3
           },
@@ -266,6 +266,12 @@
             "categories": 3
           },
           {
+            "nhlId": "8477903",
+            "name": "Garnet Hathaway",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
             "nhlId": "8478458",
             "name": "Jack Roslovic",
             "error": 0.0,
@@ -274,12 +280,6 @@
           {
             "nhlId": "8477488",
             "name": "Brett Pesce",
-            "error": 0.0,
-            "categories": 3
-          },
-          {
-            "nhlId": "8478569",
-            "name": "Noel Acciari",
             "error": 0.0,
             "categories": 3
           }
