@@ -1,15 +1,504 @@
 {
   "status": "hypotheses_only",
   "method": "official Fantrax category totals minus known starter category points; compare to NHL per-period stats",
-  "candidates": {},
-  "errors": [
-    {
-      "season": "2018-19",
-      "error": "[Errno 2] No such file or directory: '/home/runner/work/bhl-site/bhl-site/data/production/audits/2018-19.json'"
-    },
-    {
-      "season": "2019-20",
-      "error": "[Errno 2] No such file or directory: '/home/runner/work/bhl-site/bhl-site/data/production/audits/2019-20.json'"
-    }
-  ]
+  "candidates": {
+    "01f61": [
+      {
+        "season": "2018-19",
+        "period": 3,
+        "team": "Toronto Maple Leafs",
+        "position": "D",
+        "residual": {
+          "G": 0.0,
+          "A": 2.5,
+          "SOG": 1.2,
+          "Hit": 0.3,
+          "Tk": -0.0,
+          "Blk": 0.6,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8471675",
+            "name": "Sidney Crosby",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8478046",
+            "name": "Danton Heinen",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476779",
+            "name": "Brad Hunt",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475186",
+            "name": "John Moore",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8479293",
+            "name": "Brandon Tanev",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477416",
+            "name": "Oliver Bjorkstrand",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477998",
+            "name": "Warren Foegele",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8470281",
+            "name": "Duncan Keith",
+            "error": 0.0,
+            "categories": 3
+          }
+        ]
+      }
+    ],
+    "03rga": [
+      {
+        "season": "2018-19",
+        "period": 3,
+        "team": "California Golden Seals",
+        "position": "C",
+        "residual": {
+          "G": 0.0,
+          "A": 0.0,
+          "SOG": 0.0,
+          "Hit": -0.0,
+          "Tk": 0.1,
+          "Blk": 0.0,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8475163",
+            "name": "Alex Chiasson",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8479385",
+            "name": "Jordan Kyrou",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475227",
+            "name": "Chris Wideman",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477845",
+            "name": "Trevor van Riemsdyk",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475235",
+            "name": "Nicolas Deslauriers",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8470318",
+            "name": "Jonathan Ericsson",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8474066",
+            "name": "Thomas Hickey",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477463",
+            "name": "Steven Santini",
+            "error": 0.0,
+            "categories": 3
+          }
+        ]
+      }
+    ],
+    "003mh": [
+      {
+        "season": "2018-19",
+        "period": 3,
+        "team": "Nashville Predators",
+        "position": "D",
+        "residual": {
+          "G": 0.0,
+          "A": 0.0,
+          "SOG": 0.6,
+          "Hit": 0.6,
+          "Tk": 0.4,
+          "Blk": 0.4,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8479465",
+            "name": "Drake Caggiula",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8478561",
+            "name": "Andreas Martinsen",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8474722",
+            "name": "Luke Witkowski",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8471768",
+            "name": "Tom Pyatt",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476915",
+            "name": "Jujhar Khaira",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477488",
+            "name": "Brett Pesce",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477961",
+            "name": "John Quenneville",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475768",
+            "name": "Jaden Schwartz",
+            "error": 0.0,
+            "categories": 3
+          }
+        ]
+      }
+    ],
+    "0045o": [
+      {
+        "season": "2018-19",
+        "period": 4,
+        "team": "Toronto Maple Leafs",
+        "position": "D",
+        "residual": {
+          "G": 0.0,
+          "A": 0.0,
+          "SOG": 0.6,
+          "Hit": 0.7,
+          "Tk": 0.0,
+          "Blk": 0.2,
+          "FOW": -0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8471743",
+            "name": "Vladimir Sobotka",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477448",
+            "name": "Marko Dano",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8471769",
+            "name": "Niklas Hjalmarsson",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476872",
+            "name": "Scott Laughton",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476428",
+            "name": "Rocco Grimaldi",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8478458",
+            "name": "Jack Roslovic",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477488",
+            "name": "Brett Pesce",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8478569",
+            "name": "Noel Acciari",
+            "error": 0.0,
+            "categories": 3
+          }
+        ]
+      }
+    ],
+    "003jc": [
+      {
+        "season": "2018-19",
+        "period": 4,
+        "team": "Atlanta Thrashers",
+        "position": "LW",
+        "residual": {
+          "G": 0.0,
+          "A": 2.5,
+          "SOG": 0.9,
+          "Hit": 0.4,
+          "Tk": 0.1,
+          "Blk": 0.2,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8475413",
+            "name": "Justin Dowling",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8475227",
+            "name": "Chris Wideman",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8476915",
+            "name": "Jujhar Khaira",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8474870",
+            "name": "Tyler Johnson",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8477478",
+            "name": "William Carrier",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8477945",
+            "name": "Julius Honka",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8468493",
+            "name": "Ron Hainsey",
+            "error": 0.0,
+            "categories": 2
+          },
+          {
+            "nhlId": "8477973",
+            "name": "Vladislav Kamenev",
+            "error": 0.0,
+            "categories": 2
+          }
+        ]
+      }
+    ],
+    "003hb": [
+      {
+        "season": "2018-19",
+        "period": 4,
+        "team": "Detroit Cougars",
+        "position": "RW",
+        "residual": {
+          "G": 9.0,
+          "A": 2.5,
+          "SOG": 3.3,
+          "Hit": -0.0,
+          "Tk": 0.1,
+          "Blk": 0.0,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8469506",
+            "name": "Jason Pominville",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475765",
+            "name": "Vladimir Tarasenko",
+            "error": 2.8,
+            "categories": 3
+          },
+          {
+            "nhlId": "8478042",
+            "name": "Viktor Arvidsson",
+            "error": 2.8,
+            "categories": 3
+          },
+          {
+            "nhlId": "8471887",
+            "name": "Patric Hornqvist",
+            "error": 3.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476438",
+            "name": "Brandon Saad",
+            "error": 3.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475168",
+            "name": "Matt Duchene",
+            "error": 3.1,
+            "categories": 3
+          },
+          {
+            "nhlId": "8477934",
+            "name": "Leon Draisaitl",
+            "error": 3.3,
+            "categories": 3
+          },
+          {
+            "nhlId": "8471698",
+            "name": "T.J. Oshie",
+            "error": 3.6,
+            "categories": 3
+          }
+        ]
+      }
+    ],
+    "003hf": [
+      {
+        "season": "2019-20",
+        "period": 2,
+        "team": "Atlanta Thrashers",
+        "position": "D",
+        "residual": {
+          "G": 0.0,
+          "A": 0.0,
+          "SOG": 0.3,
+          "Hit": 0.1,
+          "Tk": -0.0,
+          "Blk": 0.6,
+          "FOW": 0.0,
+          "W": 0.0,
+          "SHO": 0.0,
+          "GA": 0.0,
+          "SV": 0.0
+        },
+        "top": [
+          {
+            "nhlId": "8474145",
+            "name": "Robert Bortuzzo",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8472382",
+            "name": "Andy Greene",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8474584",
+            "name": "Michael Del Zotto",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476953",
+            "name": "Trevor Carrick",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475413",
+            "name": "Justin Dowling",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8479465",
+            "name": "Drake Caggiula",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8476879",
+            "name": "Cody Ceci",
+            "error": 0.0,
+            "categories": 3
+          },
+          {
+            "nhlId": "8475790",
+            "name": "Erik Gudbranson",
+            "error": 0.0,
+            "categories": 3
+          }
+        ]
+      }
+    ]
+  },
+  "errors": []
 }
