@@ -1,0 +1,286 @@
+{
+  "season": "2023-24",
+  "status": "hypothesis_not_verified",
+  "source": "data/production/diagnostics.json",
+  "comparisonsWithDiscrepancy": 281,
+  "comparisonsWithHitDiscrepancy": 276,
+  "hitOnlyDiscrepancies": 222,
+  "positiveHitDiscrepancies": 257,
+  "negativeHitDiscrepancies": 19,
+  "byTeam": {
+    "Anaheim Mighty Ducks": {
+      "periods": 18,
+      "positive": 16,
+      "negative": 2,
+      "hitFptsDifference": 16.9
+    },
+    "Atlanta Thrashers": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 16.9
+    },
+    "California Golden Seals": {
+      "periods": 16,
+      "positive": 16,
+      "negative": 0,
+      "hitFptsDifference": 16.8
+    },
+    "Chicago Blackhawks": {
+      "periods": 16,
+      "positive": 16,
+      "negative": 0,
+      "hitFptsDifference": 17.4
+    },
+    "Cleveland Barons": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 17.7
+    },
+    "Colorado Avalanche": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 14.1
+    },
+    "Detroit Red Wings": {
+      "periods": 18,
+      "positive": 16,
+      "negative": 2,
+      "hitFptsDifference": 15.1
+    },
+    "Florida Panthers": {
+      "periods": 18,
+      "positive": 16,
+      "negative": 2,
+      "hitFptsDifference": 18.5
+    },
+    "Hartford Whalers": {
+      "periods": 18,
+      "positive": 16,
+      "negative": 2,
+      "hitFptsDifference": 15.8
+    },
+    "Minnesota North Stars": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 17.0
+    },
+    "Montréal Canadiens": {
+      "periods": 18,
+      "positive": 16,
+      "negative": 2,
+      "hitFptsDifference": 17.2
+    },
+    "Nashville Predators": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 16.2
+    },
+    "New York Rangers": {
+      "periods": 17,
+      "positive": 17,
+      "negative": 0,
+      "hitFptsDifference": 21.5
+    },
+    "Ottawa Senators": {
+      "periods": 17,
+      "positive": 16,
+      "negative": 1,
+      "hitFptsDifference": 15.8
+    },
+    "Québec Nordiques": {
+      "periods": 16,
+      "positive": 16,
+      "negative": 0,
+      "hitFptsDifference": 14.7
+    },
+    "Toronto Maple Leafs": {
+      "periods": 19,
+      "positive": 16,
+      "negative": 3,
+      "hitFptsDifference": 19.3
+    }
+  },
+  "sampleHitOnly": [
+    {
+      "period": 5,
+      "team": "Atlanta Thrashers",
+      "fantraxFpts": 169.7,
+      "reconstructedFpts": 171.8,
+      "hitFptsDifference": 2.1
+    },
+    {
+      "period": 7,
+      "team": "Toronto Maple Leafs",
+      "fantraxFpts": 156.0,
+      "reconstructedFpts": 158.0,
+      "hitFptsDifference": 2.0
+    },
+    {
+      "period": 9,
+      "team": "Hartford Whalers",
+      "fantraxFpts": 186.65,
+      "reconstructedFpts": 188.65,
+      "hitFptsDifference": 2.0
+    },
+    {
+      "period": 15,
+      "team": "Chicago Blackhawks",
+      "fantraxFpts": 188.1,
+      "reconstructedFpts": 190.1,
+      "hitFptsDifference": 2.0
+    },
+    {
+      "period": 4,
+      "team": "New York Rangers",
+      "fantraxFpts": 180.85,
+      "reconstructedFpts": 182.75,
+      "hitFptsDifference": 1.9
+    },
+    {
+      "period": 7,
+      "team": "New York Rangers",
+      "fantraxFpts": 94.45,
+      "reconstructedFpts": 96.35,
+      "hitFptsDifference": 1.9
+    },
+    {
+      "period": 3,
+      "team": "Cleveland Barons",
+      "fantraxFpts": 147.2,
+      "reconstructedFpts": 149.0,
+      "hitFptsDifference": 1.8
+    },
+    {
+      "period": 4,
+      "team": "Ottawa Senators",
+      "fantraxFpts": 139.35,
+      "reconstructedFpts": 141.15,
+      "hitFptsDifference": 1.8
+    },
+    {
+      "period": 14,
+      "team": "Minnesota North Stars",
+      "fantraxFpts": 129.7,
+      "reconstructedFpts": 131.5,
+      "hitFptsDifference": 1.8
+    },
+    {
+      "period": 1,
+      "team": "Minnesota North Stars",
+      "fantraxFpts": 135.75,
+      "reconstructedFpts": 137.45,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 4,
+      "team": "Atlanta Thrashers",
+      "fantraxFpts": 148.6,
+      "reconstructedFpts": 150.3,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 5,
+      "team": "New York Rangers",
+      "fantraxFpts": 163.1,
+      "reconstructedFpts": 164.8,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 5,
+      "team": "Toronto Maple Leafs",
+      "fantraxFpts": 186.05,
+      "reconstructedFpts": 187.75,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 11,
+      "team": "Toronto Maple Leafs",
+      "fantraxFpts": 149.2,
+      "reconstructedFpts": 150.9,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 14,
+      "team": "New York Rangers",
+      "fantraxFpts": 132.45,
+      "reconstructedFpts": 134.15,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 15,
+      "team": "Cleveland Barons",
+      "fantraxFpts": 165.05,
+      "reconstructedFpts": 166.75,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 15,
+      "team": "California Golden Seals",
+      "fantraxFpts": 213.05,
+      "reconstructedFpts": 214.75,
+      "hitFptsDifference": 1.7
+    },
+    {
+      "period": 15,
+      "team": "Montréal Canadiens",
+      "fantraxFpts": 162.2,
+      "reconstructedFpts": 163.8,
+      "hitFptsDifference": 1.6
+    },
+    {
+      "period": 2,
+      "team": "Nashville Predators",
+      "fantraxFpts": 144.45,
+      "reconstructedFpts": 145.95,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 4,
+      "team": "Cleveland Barons",
+      "fantraxFpts": 214.95,
+      "reconstructedFpts": 216.45,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 4,
+      "team": "Chicago Blackhawks",
+      "fantraxFpts": 140.7,
+      "reconstructedFpts": 142.2,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 5,
+      "team": "Florida Panthers",
+      "fantraxFpts": 235.3,
+      "reconstructedFpts": 236.8,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 6,
+      "team": "California Golden Seals",
+      "fantraxFpts": 166.1,
+      "reconstructedFpts": 167.6,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 6,
+      "team": "New York Rangers",
+      "fantraxFpts": 132.85,
+      "reconstructedFpts": 134.35,
+      "hitFptsDifference": 1.5
+    },
+    {
+      "period": 7,
+      "team": "Hartford Whalers",
+      "fantraxFpts": 169.95,
+      "reconstructedFpts": 171.45,
+      "hitFptsDifference": 1.5
+    }
+  ],
+  "nextValidation": "Compare original Fantrax individual HIT counts with NHL historical game-by-game counts for the same starting players and scoring periods. Do not alter points until corroborated."
+}

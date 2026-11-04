@@ -1,0 +1,3856 @@
+{
+  "status": "reconstructed_player_hits_not_verified_against_original_fantrax_player_counts",
+  "season": "2023-24",
+  "examples": [
+    {
+      "period": 1,
+      "team": "Minnesota North Stars",
+      "start": "2023-10-10T17:30:00.0-0400",
+      "end": "2023-10-16T18:59:59.0-0400",
+      "officialTeamHitFpts": 3.4,
+      "reconstructedTeamHitFpts": 5.1,
+      "players": [
+        {
+          "name": "Darnell Nurse",
+          "fantraxId": "03161",
+          "nhlId": "8477498",
+          "position": "D",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Charlie McAvoy",
+          "fantraxId": "03wpm",
+          "nhlId": "8479325",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Filip Forsberg",
+          "fantraxId": "02fzm",
+          "nhlId": "8476887",
+          "position": "LW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Anthony Cirelli",
+          "fantraxId": "03rfl",
+          "nhlId": "8478519",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Alexander Wennberg",
+          "fantraxId": "03169",
+          "nhlId": "8477505",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "KAndre Miller",
+          "fantraxId": "04qve",
+          "nhlId": "8480817",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Nicolas Hague",
+          "fantraxId": "0457g",
+          "nhlId": "8479980",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Vincent Trocheck",
+          "fantraxId": "02b76",
+          "nhlId": "8476389",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Cam York",
+          "fantraxId": "04ye7",
+          "nhlId": "8481546",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Quinton Byfield",
+          "fantraxId": "04lo0",
+          "nhlId": "8482124",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Andreas Athanasiou",
+          "fantraxId": "02nqh",
+          "nhlId": "8476960",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Ryan Nugent-Hopkins",
+          "fantraxId": "02422",
+          "nhlId": "8476454",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Travis Konecny",
+          "fantraxId": "038vb",
+          "nhlId": "8478439",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Kevin Fiala",
+          "fantraxId": "03dms",
+          "nhlId": "8477942",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Kaapo Kakko",
+          "fantraxId": "04mto",
+          "nhlId": "8481554",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Luke Evangelista",
+          "fantraxId": "05gdo",
+          "nhlId": "8482146",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Johnny Gaudreau",
+          "fantraxId": "02b81",
+          "nhlId": "8476346",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Alex Pietrangelo",
+          "fantraxId": "00u0m",
+          "nhlId": "8474565",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 2,
+      "team": "Nashville Predators",
+      "start": "2023-10-16T19:00:00.0-0400",
+      "end": "2023-10-23T18:59:59.0-0400",
+      "officialTeamHitFpts": 5.0,
+      "reconstructedTeamHitFpts": 6.5,
+      "players": [
+        {
+          "name": "Evander Kane",
+          "fantraxId": "01f3c",
+          "nhlId": "8475169",
+          "position": "LW",
+          "reconstructedHits": 12.0,
+          "reconstructedHitFpts": 1.2
+        },
+        {
+          "name": "Ryan Pulock",
+          "fantraxId": "02ybm",
+          "nhlId": "8477506",
+          "position": "D",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Adrian Kempe",
+          "fantraxId": "03e1n",
+          "nhlId": "8477960",
+          "position": "RW",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Corey Perry",
+          "fantraxId": "003dv",
+          "nhlId": "8470621",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Brad Marchand",
+          "fantraxId": "004jl",
+          "nhlId": "8473419",
+          "position": "LW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Connor McDavid",
+          "fantraxId": "02un4",
+          "nhlId": "8478402",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Nazem Kadri",
+          "fantraxId": "01f3e",
+          "nhlId": "8475172",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Daniel Sprong",
+          "fantraxId": "03rez",
+          "nhlId": "8478466",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Ryan Donato",
+          "fantraxId": "03eb0",
+          "nhlId": "8477987",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jared McCann",
+          "fantraxId": "03as6",
+          "nhlId": "8477955",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Tyson Foerster",
+          "fantraxId": "05k8c",
+          "nhlId": "8482159",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Kris Letang",
+          "fantraxId": "0045j",
+          "nhlId": "8471724",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Samuel Girard",
+          "fantraxId": "03yg4",
+          "nhlId": "8479398",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Brett Pesce",
+          "fantraxId": "031oq",
+          "nhlId": "8477488",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Brent Burns",
+          "fantraxId": "003tz",
+          "nhlId": "8470613",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Tommy Novak",
+          "fantraxId": "03rfx",
+          "nhlId": "8478438",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Zach Benson",
+          "fantraxId": "05ylt",
+          "nhlId": "8484145",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Calen Addison",
+          "fantraxId": "04lcz",
+          "nhlId": "8480884",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 3,
+      "team": "Cleveland Barons",
+      "start": "2023-10-23T19:00:00.0-0400",
+      "end": "2023-10-30T18:59:59.0-0400",
+      "officialTeamHitFpts": 5.0,
+      "reconstructedTeamHitFpts": 6.8,
+      "players": [
+        {
+          "name": "Brayden Schenn",
+          "fantraxId": "01c32",
+          "nhlId": "8475170",
+          "position": "LW",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Justin Faulk",
+          "fantraxId": "01zu5",
+          "nhlId": "8475753",
+          "position": "D",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Pavel Zacha",
+          "fantraxId": "03l0t",
+          "nhlId": "8478401",
+          "position": "C",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "William Eklund",
+          "fantraxId": "05r1l",
+          "nhlId": "8482667",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Tomas Hertl",
+          "fantraxId": "02nok",
+          "nhlId": "8476881",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Mike Matheson",
+          "fantraxId": "02noq",
+          "nhlId": "8476875",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jesperi Kotkaniemi",
+          "fantraxId": "04lc8",
+          "nhlId": "8480829",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Lucas Raymond",
+          "fantraxId": "04ymt",
+          "nhlId": "8482078",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Josh Norris",
+          "fantraxId": "04dwk",
+          "nhlId": "8480064",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Alex Newhook",
+          "fantraxId": "04mv3",
+          "nhlId": "8481618",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Alex Tuch",
+          "fantraxId": "03d09",
+          "nhlId": "8477949",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Kent Johnson",
+          "fantraxId": "05gda",
+          "nhlId": "8482660",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jordan Kyrou",
+          "fantraxId": "042vl",
+          "nhlId": "8479385",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Juuso Valimaki",
+          "fantraxId": "048x7",
+          "nhlId": "8479976",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jack Eichel",
+          "fantraxId": "03924",
+          "nhlId": "8478403",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Ivan Provorov",
+          "fantraxId": "03pax",
+          "nhlId": "8478500",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Alec Martinez",
+          "fantraxId": "005gi",
+          "nhlId": "8474166",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Cam Fowler",
+          "fantraxId": "01skq",
+          "nhlId": "8475764",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 4,
+      "team": "Atlanta Thrashers",
+      "start": "2023-10-30T19:00:00.0-0400",
+      "end": "2023-11-06T18:59:59.0-0500",
+      "officialTeamHitFpts": 5.4,
+      "reconstructedTeamHitFpts": 7.099999999999999,
+      "players": [
+        {
+          "name": "Tanner Jeannot",
+          "fantraxId": "048t9",
+          "nhlId": "8479661",
+          "position": "RW",
+          "reconstructedHits": 13.0,
+          "reconstructedHitFpts": 1.3
+        },
+        {
+          "name": "Brady Tkachuk",
+          "fantraxId": "04kyh",
+          "nhlId": "8480801",
+          "position": "LW",
+          "reconstructedHits": 11.0,
+          "reconstructedHitFpts": 1.1
+        },
+        {
+          "name": "Joe Pavelski",
+          "fantraxId": "0046u",
+          "nhlId": "8470794",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Morgan Rielly",
+          "fantraxId": "02noe",
+          "nhlId": "8476853",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Jordan Spence",
+          "fantraxId": "04ye8",
+          "nhlId": "8481606",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Philipp Kurashev",
+          "fantraxId": "04lct",
+          "nhlId": "8480798",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jackson LaCombe",
+          "fantraxId": "051m4",
+          "nhlId": "8481605",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Dylan Larkin",
+          "fantraxId": "03duf",
+          "nhlId": "8477946",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Brock Faber",
+          "fantraxId": "05ltj",
+          "nhlId": "8482122",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Josh Morrissey",
+          "fantraxId": "02ybn",
+          "nhlId": "8477504",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Tyson Barrie",
+          "fantraxId": "01mza",
+          "nhlId": "8475197",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Elias Lindholm",
+          "fantraxId": "02wy3",
+          "nhlId": "8477496",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Sidney Crosby",
+          "fantraxId": "00454",
+          "nhlId": "8471675",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Ondrej Palat",
+          "fantraxId": "02fqa",
+          "nhlId": "8476292",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Evgeni Malkin",
+          "fantraxId": "0045k",
+          "nhlId": "8471215",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Claude Giroux",
+          "fantraxId": "0042t",
+          "nhlId": "8473512",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jake Guentzel",
+          "fantraxId": "031p0",
+          "nhlId": "8477404",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Alex Laferriere",
+          "fantraxId": "05ltt",
+          "nhlId": "8482155",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 4,
+      "team": "Chicago Blackhawks",
+      "start": "2023-10-30T19:00:00.0-0400",
+      "end": "2023-11-06T18:59:59.0-0500",
+      "officialTeamHitFpts": 5.0,
+      "reconstructedTeamHitFpts": 6.500000000000001,
+      "players": [
+        {
+          "name": "Carl Grundstrom",
+          "fantraxId": "03vuj",
+          "nhlId": "8479336",
+          "position": "RW",
+          "reconstructedHits": 13.0,
+          "reconstructedHitFpts": 1.3
+        },
+        {
+          "name": "Arber Xhekaj",
+          "fantraxId": "05x9g",
+          "nhlId": "8482964",
+          "position": "D",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Alexis Lafreniere",
+          "fantraxId": "04amg",
+          "nhlId": "8482109",
+          "position": "LW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Auston Matthews",
+          "fantraxId": "03jxy",
+          "nhlId": "8479318",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Adam Larsson",
+          "fantraxId": "020f4",
+          "nhlId": "8476457",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Juuso Parssinen",
+          "fantraxId": "051wb",
+          "nhlId": "8481704",
+          "position": "LW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Drake Batherson",
+          "fantraxId": "04f2d",
+          "nhlId": "8480208",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Emil Bemstrom",
+          "fantraxId": "04f29",
+          "nhlId": "8480205",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "William Karlsson",
+          "fantraxId": "02b6w",
+          "nhlId": "8476448",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Eeli Tolvanen",
+          "fantraxId": "03yuf",
+          "nhlId": "8480009",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Noah Cates",
+          "fantraxId": "04f75",
+          "nhlId": "8480220",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Brock Boeser",
+          "fantraxId": "03raf",
+          "nhlId": "8478444",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Vladislav Gavrikov",
+          "fantraxId": "03ekl",
+          "nhlId": "8478882",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Joel Eriksson Ek",
+          "fantraxId": "03rae",
+          "nhlId": "8478493",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Sean Durzi",
+          "fantraxId": "04gek",
+          "nhlId": "8480434",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jonas Brodin",
+          "fantraxId": "02azg",
+          "nhlId": "8476463",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Joel Farabee",
+          "fantraxId": "04lcf",
+          "nhlId": "8480797",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "T.J. Brodie",
+          "fantraxId": "01g14",
+          "nhlId": "8474673",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 4,
+      "team": "Cleveland Barons",
+      "start": "2023-10-30T19:00:00.0-0400",
+      "end": "2023-11-06T18:59:59.0-0500",
+      "officialTeamHitFpts": 4.2,
+      "reconstructedTeamHitFpts": 5.7,
+      "players": [
+        {
+          "name": "Pavel Zacha",
+          "fantraxId": "03l0t",
+          "nhlId": "8478401",
+          "position": "C",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Brayden Schenn",
+          "fantraxId": "01c32",
+          "nhlId": "8475170",
+          "position": "LW",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Justin Faulk",
+          "fantraxId": "01zu5",
+          "nhlId": "8475753",
+          "position": "D",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Cam Fowler",
+          "fantraxId": "01skq",
+          "nhlId": "8475764",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Alex Tuch",
+          "fantraxId": "03d09",
+          "nhlId": "8477949",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jaden Schwartz",
+          "fantraxId": "01xfp",
+          "nhlId": "8475768",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Mike Matheson",
+          "fantraxId": "02noq",
+          "nhlId": "8476875",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Ivan Provorov",
+          "fantraxId": "03pax",
+          "nhlId": "8478500",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Alec Martinez",
+          "fantraxId": "005gi",
+          "nhlId": "8474166",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jordan Kyrou",
+          "fantraxId": "042vl",
+          "nhlId": "8479385",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Casey Mittelstadt",
+          "fantraxId": "0457b",
+          "nhlId": "8479999",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Alex Iafallo",
+          "fantraxId": "04az7",
+          "nhlId": "8480113",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jesperi Kotkaniemi",
+          "fantraxId": "04lc8",
+          "nhlId": "8480829",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Juuso Valimaki",
+          "fantraxId": "048x7",
+          "nhlId": "8479976",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jack Eichel",
+          "fantraxId": "03924",
+          "nhlId": "8478403",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Kent Johnson",
+          "fantraxId": "05gda",
+          "nhlId": "8482660",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Cole Perfetti",
+          "fantraxId": "04uql",
+          "nhlId": "8482149",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Sean Couturier",
+          "fantraxId": "01z7v",
+          "nhlId": "8476461",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 4,
+      "team": "New York Rangers",
+      "start": "2023-10-30T19:00:00.0-0400",
+      "end": "2023-11-06T18:59:59.0-0500",
+      "officialTeamHitFpts": 3.3,
+      "reconstructedTeamHitFpts": 5.200000000000001,
+      "players": [
+        {
+          "name": "Ivan Barbashev",
+          "fantraxId": "02yjp",
+          "nhlId": "8477964",
+          "position": "RW",
+          "reconstructedHits": 12.0,
+          "reconstructedHitFpts": 1.2
+        },
+        {
+          "name": "Travis Sanheim",
+          "fantraxId": "03e7p",
+          "nhlId": "8477948",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Oliver Ekman-Larsson",
+          "fantraxId": "01f3d",
+          "nhlId": "8475171",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Artturi Lehkonen",
+          "fantraxId": "02ybk",
+          "nhlId": "8477476",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Pat Maroon",
+          "fantraxId": "004jg",
+          "nhlId": "8474034",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Elias Pettersson",
+          "fantraxId": "048x9",
+          "nhlId": "8480012",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Owen Power",
+          "fantraxId": "04xjf",
+          "nhlId": "8482671",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "fantraxId": "02ni5",
+          "nhlId": "8476539",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jakob Chychrun",
+          "fantraxId": "03mqg",
+          "nhlId": "8479345",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Barrett Hayton",
+          "fantraxId": "04osu",
+          "nhlId": "8480849",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Adam Fantilli",
+          "fantraxId": "0579x",
+          "nhlId": "8484166",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Alex Barre-Boulet",
+          "fantraxId": "04408",
+          "nhlId": "8479718",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Filip Hronek",
+          "fantraxId": "042vx",
+          "nhlId": "8479425",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jakub Vrana",
+          "fantraxId": "02yjo",
+          "nhlId": "8477944",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Bobby Brink",
+          "fantraxId": "04zj8",
+          "nhlId": "8481553",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Mark Stone",
+          "fantraxId": "01zvf",
+          "nhlId": "8475913",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "James van Riemsdyk",
+          "fantraxId": "0043s",
+          "nhlId": "8474037",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jake Sanderson",
+          "fantraxId": "059e0",
+          "nhlId": "8482105",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 4,
+      "team": "Ottawa Senators",
+      "start": "2023-10-30T19:00:00.0-0400",
+      "end": "2023-11-06T18:59:59.0-0500",
+      "officialTeamHitFpts": 2.9,
+      "reconstructedTeamHitFpts": 4.700000000000001,
+      "players": [
+        {
+          "name": "Jean-Gabriel Pageau",
+          "fantraxId": "02dq6",
+          "nhlId": "8476419",
+          "position": "C",
+          "reconstructedHits": 13.0,
+          "reconstructedHitFpts": 1.3
+        },
+        {
+          "name": "Mathew Dumba",
+          "fantraxId": "02dq2",
+          "nhlId": "8476856",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Justin Barron",
+          "fantraxId": "051z1",
+          "nhlId": "8482111",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Calle Jarnkrok",
+          "fantraxId": "01ztf",
+          "nhlId": "8475714",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Mason McTavish",
+          "fantraxId": "05gd8",
+          "nhlId": "8482745",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Zach Werenski",
+          "fantraxId": "03ra7",
+          "nhlId": "8478460",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Carter Verhaeghe",
+          "fantraxId": "031p3",
+          "nhlId": "8477409",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Andrew Mangiapane",
+          "fantraxId": "03e2l",
+          "nhlId": "8478233",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mark Scheifele",
+          "fantraxId": "02azb",
+          "nhlId": "8476460",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Frank Vatrano",
+          "fantraxId": "03ne3",
+          "nhlId": "8478366",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "John Marino",
+          "fantraxId": "03rip",
+          "nhlId": "8478507",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mika Zibanejad",
+          "fantraxId": "027i6",
+          "nhlId": "8476459",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Leon Draisaitl",
+          "fantraxId": "02yjl",
+          "nhlId": "8477934",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Teuvo Teravainen",
+          "fantraxId": "02nol",
+          "nhlId": "8476882",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jake Walman",
+          "fantraxId": "03dde",
+          "nhlId": "8478013",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Nick Schmaltz",
+          "fantraxId": "02unz",
+          "nhlId": "8477951",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Jack Roslovic",
+          "fantraxId": "03rag",
+          "nhlId": "8478458",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "John Carlson",
+          "fantraxId": "015pv",
+          "nhlId": "8474590",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "team": "Atlanta Thrashers",
+      "start": "2023-11-06T19:00:00.0-0500",
+      "end": "2023-11-13T20:29:59.0-0500",
+      "officialTeamHitFpts": 6.1,
+      "reconstructedTeamHitFpts": 8.200000000000001,
+      "players": [
+        {
+          "name": "Brady Tkachuk",
+          "fantraxId": "04kyh",
+          "nhlId": "8480801",
+          "position": "LW",
+          "reconstructedHits": 18.0,
+          "reconstructedHitFpts": 1.8
+        },
+        {
+          "name": "Tanner Jeannot",
+          "fantraxId": "048t9",
+          "nhlId": "8479661",
+          "position": "RW",
+          "reconstructedHits": 15.0,
+          "reconstructedHitFpts": 1.5
+        },
+        {
+          "name": "Morgan Rielly",
+          "fantraxId": "02noe",
+          "nhlId": "8476853",
+          "position": "D",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Mikael Granlund",
+          "fantraxId": "01skr",
+          "nhlId": "8475798",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Brock Faber",
+          "fantraxId": "05ltj",
+          "nhlId": "8482122",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Joe Pavelski",
+          "fantraxId": "0046u",
+          "nhlId": "8470794",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Sidney Crosby",
+          "fantraxId": "00454",
+          "nhlId": "8471675",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Elias Lindholm",
+          "fantraxId": "02wy3",
+          "nhlId": "8477496",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jackson LaCombe",
+          "fantraxId": "051m4",
+          "nhlId": "8481605",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Evgeni Malkin",
+          "fantraxId": "0045k",
+          "nhlId": "8471215",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Egor Chinakhov",
+          "fantraxId": "051xf",
+          "nhlId": "8482475",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jordan Spence",
+          "fantraxId": "04ye8",
+          "nhlId": "8481606",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jake Guentzel",
+          "fantraxId": "031p0",
+          "nhlId": "8477404",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Dylan Larkin",
+          "fantraxId": "03duf",
+          "nhlId": "8477946",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Fabian Zetterlund",
+          "fantraxId": "04f17",
+          "nhlId": "8480188",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Claude Giroux",
+          "fantraxId": "0042t",
+          "nhlId": "8473512",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Josh Morrissey",
+          "fantraxId": "02ybn",
+          "nhlId": "8477504",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Tyson Barrie",
+          "fantraxId": "01mza",
+          "nhlId": "8475197",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "team": "Florida Panthers",
+      "start": "2023-11-06T19:00:00.0-0500",
+      "end": "2023-11-13T20:29:59.0-0500",
+      "officialTeamHitFpts": 5.5,
+      "reconstructedTeamHitFpts": 7.0,
+      "players": [
+        {
+          "name": "Alex Ovechkin",
+          "fantraxId": "004cq",
+          "nhlId": "8471214",
+          "position": "LW",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Jake Middleton",
+          "fantraxId": "03eer",
+          "nhlId": "8478136",
+          "position": "D",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Bryan Rust",
+          "fantraxId": "01zvp",
+          "nhlId": "8475810",
+          "position": "RW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Brady Skjei",
+          "fantraxId": "02nou",
+          "nhlId": "8476869",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Dmitry Orlov",
+          "fantraxId": "01mz5",
+          "nhlId": "8475200",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Aleksander Barkov",
+          "fantraxId": "02un7",
+          "nhlId": "8477493",
+          "position": "C",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Ryan Hartman",
+          "fantraxId": "02ytx",
+          "nhlId": "8477451",
+          "position": "C",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Evan Rodrigues",
+          "fantraxId": "03nfr",
+          "nhlId": "8478542",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Erik Gustafsson",
+          "fantraxId": "02nqk",
+          "nhlId": "8476979",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "MacKenzie Weegar",
+          "fantraxId": "031v6",
+          "nhlId": "8477346",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Mathew Barzal",
+          "fantraxId": "02uws",
+          "nhlId": "8478445",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Ryan Strome",
+          "fantraxId": "02aza",
+          "nhlId": "8476458",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Connor Bedard",
+          "fantraxId": "04y4m",
+          "nhlId": "8484144",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Damon Severson",
+          "fantraxId": "02npl",
+          "nhlId": "8476923",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Brandon Hagel",
+          "fantraxId": "042yb",
+          "nhlId": "8479542",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Chandler Stephenson",
+          "fantraxId": "02nq2",
+          "nhlId": "8476905",
+          "position": "C",
+          "reconstructedHits": 0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Sam Reinhart",
+          "fantraxId": "02un5",
+          "nhlId": "8477933",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Mats Zuccarello",
+          "fantraxId": "01sio",
+          "nhlId": "8475692",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "team": "New York Rangers",
+      "start": "2023-11-06T19:00:00.0-0500",
+      "end": "2023-11-13T20:29:59.0-0500",
+      "officialTeamHitFpts": 6.0,
+      "reconstructedTeamHitFpts": 7.7,
+      "players": [
+        {
+          "name": "Elias Pettersson",
+          "fantraxId": "048x9",
+          "nhlId": "8480012",
+          "position": "LW",
+          "reconstructedHits": 11.0,
+          "reconstructedHitFpts": 1.1
+        },
+        {
+          "name": "Filip Hronek",
+          "fantraxId": "042vx",
+          "nhlId": "8479425",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Yanni Gourde",
+          "fantraxId": "02jrw",
+          "nhlId": "8476826",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Jake Sanderson",
+          "fantraxId": "059e0",
+          "nhlId": "8482105",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Pat Maroon",
+          "fantraxId": "004jg",
+          "nhlId": "8474034",
+          "position": "LW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Oliver Ekman-Larsson",
+          "fantraxId": "01f3d",
+          "nhlId": "8475171",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Travis Sanheim",
+          "fantraxId": "03e7p",
+          "nhlId": "8477948",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Adam Fantilli",
+          "fantraxId": "0579x",
+          "nhlId": "8484166",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Colton Sissons",
+          "fantraxId": "02npb",
+          "nhlId": "8476925",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Artturi Lehkonen",
+          "fantraxId": "02ybk",
+          "nhlId": "8477476",
+          "position": "LW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Ivan Barbashev",
+          "fantraxId": "02yjp",
+          "nhlId": "8477964",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "fantraxId": "02ni5",
+          "nhlId": "8476539",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Owen Power",
+          "fantraxId": "04xjf",
+          "nhlId": "8482671",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "James van Riemsdyk",
+          "fantraxId": "0043s",
+          "nhlId": "8474037",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Bobby Brink",
+          "fantraxId": "04zj8",
+          "nhlId": "8481553",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Jakob Chychrun",
+          "fantraxId": "03mqg",
+          "nhlId": "8479345",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Mark Stone",
+          "fantraxId": "01zvf",
+          "nhlId": "8475913",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Alex Barre-Boulet",
+          "fantraxId": "04408",
+          "nhlId": "8479718",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 5,
+      "team": "Toronto Maple Leafs",
+      "start": "2023-11-06T19:00:00.0-0500",
+      "end": "2023-11-13T20:29:59.0-0500",
+      "officialTeamHitFpts": 3.9,
+      "reconstructedTeamHitFpts": 5.600000000000001,
+      "players": [
+        {
+          "name": "Tom Wilson",
+          "fantraxId": "02noj",
+          "nhlId": "8476880",
+          "position": "RW",
+          "reconstructedHits": 11.0,
+          "reconstructedHitFpts": 1.1
+        },
+        {
+          "name": "Boone Jenner",
+          "fantraxId": "02b3w",
+          "nhlId": "8476432",
+          "position": "C",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Mikhail Sergachev",
+          "fantraxId": "03yg3",
+          "nhlId": "8479410",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Andrei Svechnikov",
+          "fantraxId": "048vf",
+          "nhlId": "8480830",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Torey Krug",
+          "fantraxId": "02ib8",
+          "nhlId": "8476792",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jeff Petry",
+          "fantraxId": "01bw5",
+          "nhlId": "8473507",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Owen Tippett",
+          "fantraxId": "03yh8",
+          "nhlId": "8480015",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jeff Skinner",
+          "fantraxId": "01whl",
+          "nhlId": "8475784",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Esa Lindell",
+          "fantraxId": "02npz",
+          "nhlId": "8476902",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Ilya Mikheyev",
+          "fantraxId": "04mq1",
+          "nhlId": "8481624",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Logan Cooley",
+          "fantraxId": "05ui2",
+          "nhlId": "8483431",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jonathan Huberdeau",
+          "fantraxId": "026p4",
+          "nhlId": "8476456",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Dylan Strome",
+          "fantraxId": "03as9",
+          "nhlId": "8478440",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Charlie Coyle",
+          "fantraxId": "01zto",
+          "nhlId": "8475745",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Cam Atkinson",
+          "fantraxId": "01yj4",
+          "nhlId": "8474715",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Kyle Connor",
+          "fantraxId": "03kra",
+          "nhlId": "8478398",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Adam Pelech",
+          "fantraxId": "02npq",
+          "nhlId": "8476917",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Brayden McNabb",
+          "fantraxId": "01mzc",
+          "nhlId": "8475188",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 6,
+      "team": "California Golden Seals",
+      "start": "2023-11-13T20:30:00.0-0500",
+      "end": "2023-11-20T18:59:59.0-0500",
+      "officialTeamHitFpts": 4.0,
+      "reconstructedTeamHitFpts": 5.5,
+      "players": [
+        {
+          "name": "Will Borgen",
+          "fantraxId": "03rg2",
+          "nhlId": "8478840",
+          "position": "D",
+          "reconstructedHits": 12.0,
+          "reconstructedHitFpts": 1.2
+        },
+        {
+          "name": "Ross Colton",
+          "fantraxId": "042xa",
+          "nhlId": "8479525",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Neal Pionk",
+          "fantraxId": "049ph",
+          "nhlId": "8480145",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Evan Bouchard",
+          "fantraxId": "04lc0",
+          "nhlId": "8480803",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Bowen Byram",
+          "fantraxId": "04ldb",
+          "nhlId": "8481524",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Mathieu Joseph",
+          "fantraxId": "03rgp",
+          "nhlId": "8478472",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Tyler Seguin",
+          "fantraxId": "01sif",
+          "nhlId": "8475794",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Mikko Rantanen",
+          "fantraxId": "03mn9",
+          "nhlId": "8478420",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Warren Foegele",
+          "fantraxId": "03ebb",
+          "nhlId": "8477998",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Devon Toews",
+          "fantraxId": "03ec6",
+          "nhlId": "8478038",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Zach Hyman",
+          "fantraxId": "01ztp",
+          "nhlId": "8475786",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Anton Lundell",
+          "fantraxId": "04yqp",
+          "nhlId": "8482113",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mikey Anderson",
+          "fantraxId": "04f1z",
+          "nhlId": "8479998",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Pavel Buchnevich",
+          "fantraxId": "02wy7",
+          "nhlId": "8477402",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Leo Carlsson",
+          "fantraxId": "05y3a",
+          "nhlId": "8484153",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Chris Kreider",
+          "fantraxId": "01f5z",
+          "nhlId": "8475184",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Troy Terry",
+          "fantraxId": "03rik",
+          "nhlId": "8478873",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Pierre-Luc Dubois",
+          "fantraxId": "03wpi",
+          "nhlId": "8479400",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 6,
+      "team": "New York Rangers",
+      "start": "2023-11-13T20:30:00.0-0500",
+      "end": "2023-11-20T18:59:59.0-0500",
+      "officialTeamHitFpts": 3.8,
+      "reconstructedTeamHitFpts": 5.3,
+      "players": [
+        {
+          "name": "Yanni Gourde",
+          "fantraxId": "02jrw",
+          "nhlId": "8476826",
+          "position": "C",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Filip Hronek",
+          "fantraxId": "042vx",
+          "nhlId": "8479425",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Adam Fantilli",
+          "fantraxId": "0579x",
+          "nhlId": "8484166",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Sam Bennett",
+          "fantraxId": "039cg",
+          "nhlId": "8477935",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Elias Pettersson",
+          "fantraxId": "048x9",
+          "nhlId": "8480012",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Ivan Barbashev",
+          "fantraxId": "02yjp",
+          "nhlId": "8477964",
+          "position": "RW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "fantraxId": "02ni5",
+          "nhlId": "8476539",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Owen Power",
+          "fantraxId": "04xjf",
+          "nhlId": "8482671",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Oliver Ekman-Larsson",
+          "fantraxId": "01f3d",
+          "nhlId": "8475171",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jakub Vrana",
+          "fantraxId": "02yjo",
+          "nhlId": "8477944",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jake Sanderson",
+          "fantraxId": "059e0",
+          "nhlId": "8482105",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jakob Chychrun",
+          "fantraxId": "03mqg",
+          "nhlId": "8479345",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Travis Sanheim",
+          "fantraxId": "03e7p",
+          "nhlId": "8477948",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Bobby Brink",
+          "fantraxId": "04zj8",
+          "nhlId": "8481553",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Mark Stone",
+          "fantraxId": "01zvf",
+          "nhlId": "8475913",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "James van Riemsdyk",
+          "fantraxId": "0043s",
+          "nhlId": "8474037",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Patrik Laine",
+          "fantraxId": "03mn5",
+          "nhlId": "8479339",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Alex Barre-Boulet",
+          "fantraxId": "04408",
+          "nhlId": "8479718",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 7,
+      "team": "Hartford Whalers",
+      "start": "2023-11-20T19:00:00.0-0500",
+      "end": "2023-11-27T18:59:59.0-0500",
+      "officialTeamHitFpts": 4.9,
+      "reconstructedTeamHitFpts": 6.4,
+      "players": [
+        {
+          "name": "Radko Gudas",
+          "fantraxId": "01yj6",
+          "nhlId": "8475462",
+          "position": "D",
+          "reconstructedHits": 13.0,
+          "reconstructedHitFpts": 1.3
+        },
+        {
+          "name": "Jamie Benn",
+          "fantraxId": "00qs7",
+          "nhlId": "8473994",
+          "position": "LW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Adam Henrique",
+          "fantraxId": "01s88",
+          "nhlId": "8474641",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Mattias Ekholm",
+          "fantraxId": "024lv",
+          "nhlId": "8475218",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Brandon Montour",
+          "fantraxId": "03de2",
+          "nhlId": "8477986",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Alex Carrier",
+          "fantraxId": "03rgk",
+          "nhlId": "8478851",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Nick Paul",
+          "fantraxId": "031pn",
+          "nhlId": "8477426",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Alex DeBrincat",
+          "fantraxId": "03v70",
+          "nhlId": "8479337",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Miro Heiskanen",
+          "fantraxId": "04an5",
+          "nhlId": "8480036",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Victor Hedman",
+          "fantraxId": "01c13",
+          "nhlId": "8475167",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Dawson Mercer",
+          "fantraxId": "05gtp",
+          "nhlId": "8482110",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Adam Lowry",
+          "fantraxId": "02fro",
+          "nhlId": "8476392",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Nikita Kucherov",
+          "fantraxId": "02b70",
+          "nhlId": "8476453",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Tyler Toffoli",
+          "fantraxId": "01zti",
+          "nhlId": "8475726",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Reilly Smith",
+          "fantraxId": "01mzf",
+          "nhlId": "8475191",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jack Hughes",
+          "fantraxId": "04bdb",
+          "nhlId": "8481559",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Robert Thomas",
+          "fantraxId": "04apb",
+          "nhlId": "8480023",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "JJ Peterka",
+          "fantraxId": "04zj5",
+          "nhlId": "8482175",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 7,
+      "team": "New York Rangers",
+      "start": "2023-11-20T19:00:00.0-0500",
+      "end": "2023-11-27T18:59:59.0-0500",
+      "officialTeamHitFpts": 3.4,
+      "reconstructedTeamHitFpts": 5.3,
+      "players": [
+        {
+          "name": "Sam Bennett",
+          "fantraxId": "039cg",
+          "nhlId": "8477935",
+          "position": "C",
+          "reconstructedHits": 12.0,
+          "reconstructedHitFpts": 1.2
+        },
+        {
+          "name": "Yanni Gourde",
+          "fantraxId": "02jrw",
+          "nhlId": "8476826",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Colton Sissons",
+          "fantraxId": "02npb",
+          "nhlId": "8476925",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Oliver Ekman-Larsson",
+          "fantraxId": "01f3d",
+          "nhlId": "8475171",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Elias Pettersson",
+          "fantraxId": "048x9",
+          "nhlId": "8480012",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Mark Stone",
+          "fantraxId": "01zvf",
+          "nhlId": "8475913",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Adam Fantilli",
+          "fantraxId": "0579x",
+          "nhlId": "8484166",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "fantraxId": "02ni5",
+          "nhlId": "8476539",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Filip Hronek",
+          "fantraxId": "042vx",
+          "nhlId": "8479425",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jake Sanderson",
+          "fantraxId": "059e0",
+          "nhlId": "8482105",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Travis Sanheim",
+          "fantraxId": "03e7p",
+          "nhlId": "8477948",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Bobby Brink",
+          "fantraxId": "04zj8",
+          "nhlId": "8481553",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Owen Power",
+          "fantraxId": "04xjf",
+          "nhlId": "8482671",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jakub Vrana",
+          "fantraxId": "02yjo",
+          "nhlId": "8477944",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Patrik Laine",
+          "fantraxId": "03mn5",
+          "nhlId": "8479339",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Tomas Tatar",
+          "fantraxId": "01gjh",
+          "nhlId": "8475193",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Jakob Chychrun",
+          "fantraxId": "03mqg",
+          "nhlId": "8479345",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "James van Riemsdyk",
+          "fantraxId": "0043s",
+          "nhlId": "8474037",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 7,
+      "team": "Toronto Maple Leafs",
+      "start": "2023-11-20T19:00:00.0-0500",
+      "end": "2023-11-27T18:59:59.0-0500",
+      "officialTeamHitFpts": 4.3,
+      "reconstructedTeamHitFpts": 6.3,
+      "players": [
+        {
+          "name": "Owen Tippett",
+          "fantraxId": "03yh8",
+          "nhlId": "8480015",
+          "position": "RW",
+          "reconstructedHits": 12.0,
+          "reconstructedHitFpts": 1.2
+        },
+        {
+          "name": "Blake Coleman",
+          "fantraxId": "02fzj",
+          "nhlId": "8476399",
+          "position": "RW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Charlie Coyle",
+          "fantraxId": "01zto",
+          "nhlId": "8475745",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Boone Jenner",
+          "fantraxId": "02b3w",
+          "nhlId": "8476432",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Jeff Petry",
+          "fantraxId": "01bw5",
+          "nhlId": "8473507",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Jonathan Huberdeau",
+          "fantraxId": "026p4",
+          "nhlId": "8476456",
+          "position": "LW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Andrei Svechnikov",
+          "fantraxId": "048vf",
+          "nhlId": "8480830",
+          "position": "RW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Torey Krug",
+          "fantraxId": "02ib8",
+          "nhlId": "8476792",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Brayden McNabb",
+          "fantraxId": "01mzc",
+          "nhlId": "8475188",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Jeff Skinner",
+          "fantraxId": "01whl",
+          "nhlId": "8475784",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mikhail Sergachev",
+          "fantraxId": "03yg3",
+          "nhlId": "8479410",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Ilya Mikheyev",
+          "fantraxId": "04mq1",
+          "nhlId": "8481624",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Esa Lindell",
+          "fantraxId": "02npz",
+          "nhlId": "8476902",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Cam Atkinson",
+          "fantraxId": "01yj4",
+          "nhlId": "8474715",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Adam Pelech",
+          "fantraxId": "02npq",
+          "nhlId": "8476917",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Dylan Strome",
+          "fantraxId": "03as9",
+          "nhlId": "8478440",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Kyle Connor",
+          "fantraxId": "03kra",
+          "nhlId": "8478398",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Logan Cooley",
+          "fantraxId": "05ui2",
+          "nhlId": "8483431",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 9,
+      "team": "Hartford Whalers",
+      "start": "2023-12-04T19:00:00.0-0500",
+      "end": "2023-12-11T18:59:59.0-0500",
+      "officialTeamHitFpts": 5.1,
+      "reconstructedTeamHitFpts": 7.1000000000000005,
+      "players": [
+        {
+          "name": "Jean-Gabriel Pageau",
+          "fantraxId": "02dq6",
+          "nhlId": "8476419",
+          "position": "C",
+          "reconstructedHits": 11.0,
+          "reconstructedHitFpts": 1.1
+        },
+        {
+          "name": "Mattias Ekholm",
+          "fantraxId": "024lv",
+          "nhlId": "8475218",
+          "position": "D",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Mason Marchment",
+          "fantraxId": "03wor",
+          "nhlId": "8478975",
+          "position": "LW",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Jamie Benn",
+          "fantraxId": "00qs7",
+          "nhlId": "8473994",
+          "position": "LW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Colton Parayko",
+          "fantraxId": "02nqb",
+          "nhlId": "8476892",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Radko Gudas",
+          "fantraxId": "01yj6",
+          "nhlId": "8475462",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Tyler Toffoli",
+          "fantraxId": "01zti",
+          "nhlId": "8475726",
+          "position": "RW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Alex DeBrincat",
+          "fantraxId": "03v70",
+          "nhlId": "8479337",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Miro Heiskanen",
+          "fantraxId": "04an5",
+          "nhlId": "8480036",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Nick Paul",
+          "fantraxId": "031pn",
+          "nhlId": "8477426",
+          "position": "LW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Brandon Montour",
+          "fantraxId": "03de2",
+          "nhlId": "8477986",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Nikita Kucherov",
+          "fantraxId": "02b70",
+          "nhlId": "8476453",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Robert Thomas",
+          "fantraxId": "04apb",
+          "nhlId": "8480023",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Victor Hedman",
+          "fantraxId": "01c13",
+          "nhlId": "8475167",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "JJ Peterka",
+          "fantraxId": "04zj5",
+          "nhlId": "8482175",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Nico Hischier",
+          "fantraxId": "0457f",
+          "nhlId": "8480002",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Adam Henrique",
+          "fantraxId": "01s88",
+          "nhlId": "8474641",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Jack Hughes",
+          "fantraxId": "04bdb",
+          "nhlId": "8481559",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 11,
+      "team": "Toronto Maple Leafs",
+      "start": "2023-12-18T19:00:00.0-0500",
+      "end": "2023-12-25T11:59:59.0-0500",
+      "officialTeamHitFpts": 4.5,
+      "reconstructedTeamHitFpts": 6.200000000000001,
+      "players": [
+        {
+          "name": "Owen Tippett",
+          "fantraxId": "03yh8",
+          "nhlId": "8480015",
+          "position": "RW",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Tom Wilson",
+          "fantraxId": "02noj",
+          "nhlId": "8476880",
+          "position": "RW",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Logan Cooley",
+          "fantraxId": "05ui2",
+          "nhlId": "8483431",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Niko Mikkola",
+          "fantraxId": "03rgv",
+          "nhlId": "8478859",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Blake Coleman",
+          "fantraxId": "02fzj",
+          "nhlId": "8476399",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Esa Lindell",
+          "fantraxId": "02npz",
+          "nhlId": "8476902",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Brayden McNabb",
+          "fantraxId": "01mzc",
+          "nhlId": "8475188",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jeff Petry",
+          "fantraxId": "01bw5",
+          "nhlId": "8473507",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Torey Krug",
+          "fantraxId": "02ib8",
+          "nhlId": "8476792",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jonathan Huberdeau",
+          "fantraxId": "026p4",
+          "nhlId": "8476456",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Ilya Mikheyev",
+          "fantraxId": "04mq1",
+          "nhlId": "8481624",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Alexander Kerfoot",
+          "fantraxId": "02o8b",
+          "nhlId": "8477021",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Charlie Coyle",
+          "fantraxId": "01zto",
+          "nhlId": "8475745",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Cam Atkinson",
+          "fantraxId": "01yj4",
+          "nhlId": "8474715",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Alex Killorn",
+          "fantraxId": "01n84",
+          "nhlId": "8473986",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jeff Skinner",
+          "fantraxId": "01whl",
+          "nhlId": "8475784",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Dylan Strome",
+          "fantraxId": "03as9",
+          "nhlId": "8478440",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Mikhail Sergachev",
+          "fantraxId": "03yg3",
+          "nhlId": "8479410",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 14,
+      "team": "Minnesota North Stars",
+      "start": "2024-01-08T19:00:00.0-0500",
+      "end": "2024-01-15T11:59:59.0-0500",
+      "officialTeamHitFpts": 5.5,
+      "reconstructedTeamHitFpts": 7.3,
+      "players": [
+        {
+          "name": "KAndre Miller",
+          "fantraxId": "04qve",
+          "nhlId": "8480817",
+          "position": "D",
+          "reconstructedHits": 13.0,
+          "reconstructedHitFpts": 1.3
+        },
+        {
+          "name": "Charlie McAvoy",
+          "fantraxId": "03wpm",
+          "nhlId": "8479325",
+          "position": "D",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Nicolas Hague",
+          "fantraxId": "0457g",
+          "nhlId": "8479980",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Vincent Trocheck",
+          "fantraxId": "02b76",
+          "nhlId": "8476389",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Travis Konecny",
+          "fantraxId": "038vb",
+          "nhlId": "8478439",
+          "position": "RW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Filip Forsberg",
+          "fantraxId": "02fzm",
+          "nhlId": "8476887",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Alex Pietrangelo",
+          "fantraxId": "00u0m",
+          "nhlId": "8474565",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Anthony Cirelli",
+          "fantraxId": "03rfl",
+          "nhlId": "8478519",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Cam York",
+          "fantraxId": "04ye7",
+          "nhlId": "8481546",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Luke Evangelista",
+          "fantraxId": "05gdo",
+          "nhlId": "8482146",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Arthur Kaliyev",
+          "fantraxId": "04sy1",
+          "nhlId": "8481560",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Kevin Fiala",
+          "fantraxId": "03dms",
+          "nhlId": "8477942",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Marco Rossi",
+          "fantraxId": "04o0g",
+          "nhlId": "8482079",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Matthew Poitras",
+          "fantraxId": "05ymq",
+          "nhlId": "8483505",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Quinton Byfield",
+          "fantraxId": "04lo0",
+          "nhlId": "8482124",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Kevin Shattenkirk",
+          "fantraxId": "01bvd",
+          "nhlId": "8474031",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Ryan Nugent-Hopkins",
+          "fantraxId": "02422",
+          "nhlId": "8476454",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Johnny Gaudreau",
+          "fantraxId": "02b81",
+          "nhlId": "8476346",
+          "position": "LW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 14,
+      "team": "New York Rangers",
+      "start": "2024-01-08T19:00:00.0-0500",
+      "end": "2024-01-15T11:59:59.0-0500",
+      "officialTeamHitFpts": 4.6,
+      "reconstructedTeamHitFpts": 6.3,
+      "players": [
+        {
+          "name": "Elias Pettersson",
+          "fantraxId": "048x9",
+          "nhlId": "8480012",
+          "position": "LW",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Ivan Barbashev",
+          "fantraxId": "02yjp",
+          "nhlId": "8477964",
+          "position": "LW",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Colton Sissons",
+          "fantraxId": "02npb",
+          "nhlId": "8476925",
+          "position": "C",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Jonathan Marchessault",
+          "fantraxId": "02ni5",
+          "nhlId": "8476539",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Sam Bennett",
+          "fantraxId": "039cg",
+          "nhlId": "8477935",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Bobby Brink",
+          "fantraxId": "04zj8",
+          "nhlId": "8481553",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Adam Fantilli",
+          "fantraxId": "0579x",
+          "nhlId": "8484166",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Dawson Mercer",
+          "fantraxId": "05gtp",
+          "nhlId": "8482110",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Filip Hronek",
+          "fantraxId": "042vx",
+          "nhlId": "8479425",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mark Stone",
+          "fantraxId": "01zvf",
+          "nhlId": "8475913",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "James van Riemsdyk",
+          "fantraxId": "0043s",
+          "nhlId": "8474037",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Adam Pelech",
+          "fantraxId": "02npq",
+          "nhlId": "8476917",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Connor McMichael",
+          "fantraxId": "04yn0",
+          "nhlId": "8481580",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jake Sanderson",
+          "fantraxId": "059e0",
+          "nhlId": "8482105",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Travis Sanheim",
+          "fantraxId": "03e7p",
+          "nhlId": "8477948",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Jakob Chychrun",
+          "fantraxId": "03mqg",
+          "nhlId": "8479345",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Simon Nemec",
+          "fantraxId": "05ril",
+          "nhlId": "8483495",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Kasperi Kapanen",
+          "fantraxId": "039ch",
+          "nhlId": "8477953",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 15,
+      "team": "California Golden Seals",
+      "start": "2024-01-15T12:00:00.0-0500",
+      "end": "2024-01-22T18:59:59.0-0500",
+      "officialTeamHitFpts": 5.9,
+      "reconstructedTeamHitFpts": 7.6000000000000005,
+      "players": [
+        {
+          "name": "Will Borgen",
+          "fantraxId": "03rg2",
+          "nhlId": "8478840",
+          "position": "D",
+          "reconstructedHits": 15.0,
+          "reconstructedHitFpts": 1.5
+        },
+        {
+          "name": "Michael McLeod",
+          "fantraxId": "03wqz",
+          "nhlId": "8479415",
+          "position": "C",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Chris Kreider",
+          "fantraxId": "01f5z",
+          "nhlId": "8475184",
+          "position": "LW",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Ross Colton",
+          "fantraxId": "042xa",
+          "nhlId": "8479525",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Neal Pionk",
+          "fantraxId": "049ph",
+          "nhlId": "8480145",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Mathieu Joseph",
+          "fantraxId": "03rgp",
+          "nhlId": "8478472",
+          "position": "RW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Evan Bouchard",
+          "fantraxId": "04lc0",
+          "nhlId": "8480803",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Devon Toews",
+          "fantraxId": "03ec6",
+          "nhlId": "8478038",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Zach Hyman",
+          "fantraxId": "01ztp",
+          "nhlId": "8475786",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Tyler Seguin",
+          "fantraxId": "01sif",
+          "nhlId": "8475794",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Troy Terry",
+          "fantraxId": "03rik",
+          "nhlId": "8478873",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Morgan Frost",
+          "fantraxId": "04ezy",
+          "nhlId": "8480028",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Mikey Anderson",
+          "fantraxId": "04f1z",
+          "nhlId": "8479998",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Justin Schultz",
+          "fantraxId": "020h1",
+          "nhlId": "8474602",
+          "position": "D",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Yegor Sharangovich",
+          "fantraxId": "04mkd",
+          "nhlId": "8481068",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Michael Bunting",
+          "fantraxId": "03ecd",
+          "nhlId": "8478047",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Pavel Buchnevich",
+          "fantraxId": "02wy7",
+          "nhlId": "8477402",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Mikko Rantanen",
+          "fantraxId": "03mn9",
+          "nhlId": "8478420",
+          "position": "RW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        }
+      ]
+    },
+    {
+      "period": 15,
+      "team": "Chicago Blackhawks",
+      "start": "2024-01-15T12:00:00.0-0500",
+      "end": "2024-01-22T18:59:59.0-0500",
+      "officialTeamHitFpts": 6.6,
+      "reconstructedTeamHitFpts": 8.6,
+      "players": [
+        {
+          "name": "Carl Grundstrom",
+          "fantraxId": "03vuj",
+          "nhlId": "8479336",
+          "position": "LW",
+          "reconstructedHits": 11.0,
+          "reconstructedHitFpts": 1.1
+        },
+        {
+          "name": "Adam Larsson",
+          "fantraxId": "020f4",
+          "nhlId": "8476457",
+          "position": "D",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Joel Eriksson Ek",
+          "fantraxId": "03rae",
+          "nhlId": "8478493",
+          "position": "C",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Alexis Lafreniere",
+          "fantraxId": "04amg",
+          "nhlId": "8482109",
+          "position": "RW",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "Joel Farabee",
+          "fantraxId": "04lcf",
+          "nhlId": "8480797",
+          "position": "LW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Auston Matthews",
+          "fantraxId": "03jxy",
+          "nhlId": "8479318",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Lawson Crouse",
+          "fantraxId": "03mm6",
+          "nhlId": "8478474",
+          "position": "RW",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Thomas Chabot",
+          "fantraxId": "03rad",
+          "nhlId": "8478469",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Drake Batherson",
+          "fantraxId": "04f2d",
+          "nhlId": "8480208",
+          "position": "RW",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Sam Malinski",
+          "fantraxId": "06age",
+          "nhlId": "8484258",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Brock Boeser",
+          "fantraxId": "03raf",
+          "nhlId": "8478444",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Jonny Brodzinski",
+          "fantraxId": "031qx",
+          "nhlId": "8477380",
+          "position": "C",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Sean Durzi",
+          "fantraxId": "04gek",
+          "nhlId": "8480434",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Dmitry Orlov",
+          "fantraxId": "01mz5",
+          "nhlId": "8475200",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Vladislav Namestnikov",
+          "fantraxId": "02b3l",
+          "nhlId": "8476480",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Michael Kesselring",
+          "fantraxId": "04r0j",
+          "nhlId": "8480891",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Michael Carcone",
+          "fantraxId": "03y54",
+          "nhlId": "8479619",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Evgeny Kuznetsov",
+          "fantraxId": "01xfs",
+          "nhlId": "8475744",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 15,
+      "team": "Cleveland Barons",
+      "start": "2024-01-15T12:00:00.0-0500",
+      "end": "2024-01-22T18:59:59.0-0500",
+      "officialTeamHitFpts": 3.8,
+      "reconstructedTeamHitFpts": 5.5,
+      "players": [
+        {
+          "name": "Artem Zub",
+          "fantraxId": "04abd",
+          "nhlId": "8482245",
+          "position": "D",
+          "reconstructedHits": 10.0,
+          "reconstructedHitFpts": 1.0
+        },
+        {
+          "name": "Brayden Schenn",
+          "fantraxId": "01c32",
+          "nhlId": "8475170",
+          "position": "LW",
+          "reconstructedHits": 9.0,
+          "reconstructedHitFpts": 0.9
+        },
+        {
+          "name": "Mika Zibanejad",
+          "fantraxId": "027i6",
+          "nhlId": "8476459",
+          "position": "C",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Mike Matheson",
+          "fantraxId": "02noq",
+          "nhlId": "8476875",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Cam Fowler",
+          "fantraxId": "01skq",
+          "nhlId": "8475764",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Ivan Provorov",
+          "fantraxId": "03pax",
+          "nhlId": "8478500",
+          "position": "D",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Alex Tuch",
+          "fantraxId": "03d09",
+          "nhlId": "8477949",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Sean Couturier",
+          "fantraxId": "01z7v",
+          "nhlId": "8476461",
+          "position": "C",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Andrew Mangiapane",
+          "fantraxId": "03e2l",
+          "nhlId": "8478233",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Frank Vatrano",
+          "fantraxId": "03ne3",
+          "nhlId": "8478366",
+          "position": "RW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "John Carlson",
+          "fantraxId": "015pv",
+          "nhlId": "8474590",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Tomas Hertl",
+          "fantraxId": "02nok",
+          "nhlId": "8476881",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Pavel Zacha",
+          "fantraxId": "03l0t",
+          "nhlId": "8478401",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Jaden Schwartz",
+          "fantraxId": "01xfp",
+          "nhlId": "8475768",
+          "position": "LW",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Nick Schmaltz",
+          "fantraxId": "02unz",
+          "nhlId": "8477951",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Justin Faulk",
+          "fantraxId": "01zu5",
+          "nhlId": "8475753",
+          "position": "D",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Jordan Kyrou",
+          "fantraxId": "042vl",
+          "nhlId": "8479385",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "Casey Mittelstadt",
+          "fantraxId": "0457b",
+          "nhlId": "8479999",
+          "position": "C",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    },
+    {
+      "period": 15,
+      "team": "Montréal Canadiens",
+      "start": "2024-01-15T12:00:00.0-0500",
+      "end": "2024-01-22T18:59:59.0-0500",
+      "officialTeamHitFpts": 6.6,
+      "reconstructedTeamHitFpts": 8.200000000000001,
+      "players": [
+        {
+          "name": "Anders Lee",
+          "fantraxId": "02440",
+          "nhlId": "8475314",
+          "position": "LW",
+          "reconstructedHits": 17.0,
+          "reconstructedHitFpts": 1.7
+        },
+        {
+          "name": "Matthew Tkachuk",
+          "fantraxId": "03uzr",
+          "nhlId": "8479314",
+          "position": "RW",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Nick Bjugstad",
+          "fantraxId": "01ztq",
+          "nhlId": "8475760",
+          "position": "C",
+          "reconstructedHits": 8.0,
+          "reconstructedHitFpts": 0.8
+        },
+        {
+          "name": "Jacob Trouba",
+          "fantraxId": "02dq3",
+          "nhlId": "8476885",
+          "position": "D",
+          "reconstructedHits": 7.0,
+          "reconstructedHitFpts": 0.7
+        },
+        {
+          "name": "John Tavares",
+          "fantraxId": "01c12",
+          "nhlId": "8475166",
+          "position": "C",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Kaiden Guhle",
+          "fantraxId": "04mx6",
+          "nhlId": "8482087",
+          "position": "D",
+          "reconstructedHits": 6.0,
+          "reconstructedHitFpts": 0.6
+        },
+        {
+          "name": "Thomas Harley",
+          "fantraxId": "04yu5",
+          "nhlId": "8481581",
+          "position": "D",
+          "reconstructedHits": 5.0,
+          "reconstructedHitFpts": 0.5
+        },
+        {
+          "name": "Robby Fabbri",
+          "fantraxId": "03d5e",
+          "nhlId": "8477952",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Steven Stamkos",
+          "fantraxId": "00qru",
+          "nhlId": "8474564",
+          "position": "LW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Evgenii Dadonov",
+          "fantraxId": "01kn1",
+          "nhlId": "8474149",
+          "position": "RW",
+          "reconstructedHits": 4.0,
+          "reconstructedHitFpts": 0.4
+        },
+        {
+          "name": "Roman Josi",
+          "fantraxId": "01fx3",
+          "nhlId": "8474600",
+          "position": "D",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Oliver Bjorkstrand",
+          "fantraxId": "031p8",
+          "nhlId": "8477416",
+          "position": "RW",
+          "reconstructedHits": 3.0,
+          "reconstructedHitFpts": 0.3
+        },
+        {
+          "name": "Dylan Cozens",
+          "fantraxId": "04mtp",
+          "nhlId": "8481528",
+          "position": "C",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Seth Jones",
+          "fantraxId": "0243f",
+          "nhlId": "8477495",
+          "position": "D",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Artemi Panarin",
+          "fantraxId": "03bfj",
+          "nhlId": "8478550",
+          "position": "LW",
+          "reconstructedHits": 2.0,
+          "reconstructedHitFpts": 0.2
+        },
+        {
+          "name": "Roope Hintz",
+          "fantraxId": "03rf2",
+          "nhlId": "8478449",
+          "position": "C",
+          "reconstructedHits": 1.0,
+          "reconstructedHitFpts": 0.1
+        },
+        {
+          "name": "Vince Dunn",
+          "fantraxId": "03rf8",
+          "nhlId": "8478407",
+          "position": "D",
+          "reconstructedHits": 0,
+          "reconstructedHitFpts": 0.0
+        },
+        {
+          "name": "William Nylander",
+          "fantraxId": "02yjj",
+          "nhlId": "8477939",
+          "position": "RW",
+          "reconstructedHits": 0.0,
+          "reconstructedHitFpts": 0.0
+        }
+      ]
+    }
+  ]
+}
