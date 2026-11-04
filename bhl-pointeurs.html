@@ -60,9 +60,9 @@ function render(){
   const x=grouped.get(key);x.teams.add(r.team);x.fpts+=Number(r.fpts)||0;x.starts+=Number(r.starts)||0;x.gp+=Number(r.gp)||0;
  }
  const rows=[...grouped.values()].filter(r=>(r.name+' '+[...r.teams].join(' ')).toLocaleLowerCase('fr').includes(search)).sort((a,b)=>{
-  const [field,direction]=$('sort').value.split('-');
+  const choice=$('sort').value;const direction=choice.endsWith('-asc')?'asc':'desc';const field=choice.replace(/-(asc|desc)$/,'');
   if(field==='name')return a.name.localeCompare(b.name,'fr')*(direction==='desc'?-1:1);
-  const value=(r)=>field==='per'?0:field==='starts'?r.starts:field==='gp'?r.gp:r.fpts;
+  const value=(r)=>field==='starts'?r.starts:field==='gp'?r.gp:r.fpts;
   const metric=(r)=>$('sort').value.startsWith('per-start')?(r.starts?r.fpts/r.starts:0):$('sort').value.startsWith('per-gp')?(r.gp?r.fpts/r.gp:0):value(r);
   const diff=metric(a)-metric(b);
   return (direction==='asc'?diff:-diff)||a.name.localeCompare(b.name,'fr');
@@ -88,6 +88,6 @@ async function init(){
   render();
  }catch(e){$('status').textContent='Le calcul historique est en cours de préparation : '+e.message;$('results').innerHTML='<tr><td colspan="8" class="empty">Les résultats apparaîtront après une reconstitution validée et publiée.</td></tr>'}
 }
-['phase','season','position','team','organization','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
+['phase','season','position','team','organization','search','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
 document.querySelectorAll('.record-tab').forEach(btn=>btn.addEventListener('click',()=>{const records=btn.id==='tab-records';document.getElementById('panel-records').hidden=!records;document.getElementById('panel-pointeurs').hidden=records;document.getElementById('tab-records').setAttribute('aria-selected',String(records));document.getElementById('tab-pointeurs').setAttribute('aria-selected',String(!records));}));
 </script><script src="bhl-records.js?v=split-skaters-goalies-20261104" defer></script></body></html>
