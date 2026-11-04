@@ -1,0 +1,331 @@
+{
+  "season": "2023-24",
+  "period": 1,
+  "team": "Minnesota North Stars",
+  "responseKeys": [
+    "matchups",
+    "period"
+  ],
+  "matchupCount": 24,
+  "samples": [
+    {
+      "matchupIndex": 4,
+      "matchupKeys": [
+        "away",
+        "categories",
+        "home"
+      ],
+      "side": "away",
+      "teamPayload": {
+        "teamName": "Minnesota North Stars",
+        "score": 135.75,
+        "gamesPlayed": 44,
+        "teamId": "qtetgxu8lgjl09t1"
+      },
+      "categories": [
+        {
+          "code": "G",
+          "side": {
+            "display": "8",
+            "value": 8.0,
+            "points": 24.0
+          }
+        },
+        {
+          "code": "A",
+          "side": {
+            "display": "20",
+            "value": 20.0,
+            "points": 50.0
+          }
+        },
+        {
+          "code": "SOG",
+          "side": {
+            "display": "104",
+            "value": 104.0,
+            "points": 31.2
+          }
+        },
+        {
+          "code": "Hit",
+          "side": {
+            "display": "34",
+            "value": 34.0,
+            "points": 3.4
+          }
+        },
+        {
+          "code": "Tk",
+          "side": {
+            "display": "17",
+            "value": 17.0,
+            "points": 1.7
+          }
+        },
+        {
+          "code": "Blk",
+          "side": {
+            "display": "33",
+            "value": 33.0,
+            "points": 6.6
+          }
+        },
+        {
+          "code": "FOW",
+          "side": {
+            "display": "75",
+            "value": 75.0,
+            "points": 3.65
+          }
+        },
+        {
+          "code": "W",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "SHO",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "GA",
+          "side": {
+            "display": "3",
+            "value": 3.0,
+            "points": -3.0
+          }
+        },
+        {
+          "code": "SV",
+          "side": {
+            "display": "51",
+            "value": 51.0,
+            "points": 10.2
+          }
+        }
+      ]
+    },
+    {
+      "matchupIndex": 11,
+      "matchupKeys": [
+        "away",
+        "categories",
+        "home"
+      ],
+      "side": "away",
+      "teamPayload": {
+        "teamName": "Minnesota North Stars",
+        "score": 135.75,
+        "gamesPlayed": 44,
+        "teamId": "qtetgxu8lgjl09t1"
+      },
+      "categories": [
+        {
+          "code": "G",
+          "side": {
+            "display": "8",
+            "value": 8.0,
+            "points": 24.0
+          }
+        },
+        {
+          "code": "A",
+          "side": {
+            "display": "20",
+            "value": 20.0,
+            "points": 50.0
+          }
+        },
+        {
+          "code": "SOG",
+          "side": {
+            "display": "104",
+            "value": 104.0,
+            "points": 31.2
+          }
+        },
+        {
+          "code": "Hit",
+          "side": {
+            "display": "34",
+            "value": 34.0,
+            "points": 3.4
+          }
+        },
+        {
+          "code": "Tk",
+          "side": {
+            "display": "17",
+            "value": 17.0,
+            "points": 1.7
+          }
+        },
+        {
+          "code": "Blk",
+          "side": {
+            "display": "33",
+            "value": 33.0,
+            "points": 6.6
+          }
+        },
+        {
+          "code": "FOW",
+          "side": {
+            "display": "75",
+            "value": 75.0,
+            "points": 3.65
+          }
+        },
+        {
+          "code": "W",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "SHO",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "GA",
+          "side": {
+            "display": "3",
+            "value": 3.0,
+            "points": -3.0
+          }
+        },
+        {
+          "code": "SV",
+          "side": {
+            "display": "51",
+            "value": 51.0,
+            "points": 10.2
+          }
+        }
+      ]
+    },
+    {
+      "matchupIndex": 18,
+      "matchupKeys": [
+        "away",
+        "categories",
+        "home"
+      ],
+      "side": "away",
+      "teamPayload": {
+        "teamName": "Minnesota North Stars",
+        "score": 135.75,
+        "gamesPlayed": 44,
+        "teamId": "qtetgxu8lgjl09t1"
+      },
+      "categories": [
+        {
+          "code": "G",
+          "side": {
+            "display": "8",
+            "value": 8.0,
+            "points": 24.0
+          }
+        },
+        {
+          "code": "A",
+          "side": {
+            "display": "20",
+            "value": 20.0,
+            "points": 50.0
+          }
+        },
+        {
+          "code": "SOG",
+          "side": {
+            "display": "104",
+            "value": 104.0,
+            "points": 31.2
+          }
+        },
+        {
+          "code": "Hit",
+          "side": {
+            "display": "34",
+            "value": 34.0,
+            "points": 3.4
+          }
+        },
+        {
+          "code": "Tk",
+          "side": {
+            "display": "17",
+            "value": 17.0,
+            "points": 1.7
+          }
+        },
+        {
+          "code": "Blk",
+          "side": {
+            "display": "33",
+            "value": 33.0,
+            "points": 6.6
+          }
+        },
+        {
+          "code": "FOW",
+          "side": {
+            "display": "75",
+            "value": 75.0,
+            "points": 3.65
+          }
+        },
+        {
+          "code": "W",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "SHO",
+          "side": {
+            "display": "1",
+            "value": 1.0,
+            "points": 4.0
+          }
+        },
+        {
+          "code": "GA",
+          "side": {
+            "display": "3",
+            "value": 3.0,
+            "points": -3.0
+          }
+        },
+        {
+          "code": "SV",
+          "side": {
+            "display": "51",
+            "value": 51.0,
+            "points": 10.2
+          }
+        }
+      ]
+    }
+  ],
+  "status": "diagnostic_only",
+  "knownScreenshotHitCount": 51,
+  "apiHitCount": 34,
+  "warning": "Do not replace historical player statistics based solely on this comparison"
+}
