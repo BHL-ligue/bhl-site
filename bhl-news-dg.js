@@ -1,4 +1,4 @@
-import {articleIdentity} from './bhl-news-journalists.js?v=1';
+import {articleIdentity} from './bhl-news-journalists.js?v=bank1';
 import {articleTags} from './bhl-news-tag-ui.js?v=1';
 import {today,seasonForDate,fillSeasons,articleByline} from './bhl-news-metadata.js?v=1';
 import {attachCover,renderCover} from './bhl-news-images.js?v=crop1';
@@ -6,6 +6,7 @@ import {attachEditor} from './bhl-news-editor.js?v=spaces1';
 import {db,node,labels,date,articleLink,paragraphs} from './bhl-news-db.js?v=journalists1';
 const $=id=>document.getElementById(id), form=$('articleForm');
 const view=document.body.dataset.articlePage||'hub';
+const journalistBankLink=node('a','Mes journalistes / Banque');journalistBankLink.href='bhl-journalistes.html';document.querySelector('.article-nav')?.append(journalistBankLink);
 if(location.hash==='#moderation')location.replace('bhl-articles-approbation.html');
 let identityFields;
 let user,profile,current=null,reservedId=null,busy=false,dirty=false,reviewing=null,mine=[],queue=[],minePage=0,reviewPage=0,seasonChosen=false;
