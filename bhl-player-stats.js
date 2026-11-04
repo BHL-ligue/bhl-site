@@ -280,7 +280,7 @@ async function historicNhl(name,target,fantraxId){
   if(!target.isConnected)return;
   const goalie=String(profile.position||profile.positionCode||'').toUpperCase()==='G';
   const center=String(profile.position||profile.positionCode||'').toUpperCase()==='C';
-  const seasons=(profile.seasonTotals||[]).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).sort((a,b)=>Number(b.season)-Number(a.season));
+  const seasons=(profile.seasonTotals||[]).map((x,index)=>({...x,_sourceIndex:index})).filter(x=>String(x.leagueAbbrev).toUpperCase()==='NHL'&&Number(x.gameTypeId)===2).sort((a,b)=>Number(b.season)-Number(a.season)||b._sourceIndex-a._sourceIndex);
   if(!seasons.length){target.textContent='Aucune saison régulière LNH trouvée pour ce joueur.';return}
   const columns=(goalie?['Saison','Équipe','FP/G','FPTS','PJ','V','BA','ARR','BL','B','A','PTS']:['Saison','Équipe','FP/G','FPTS','PJ','B','A','PTS','TIRS','HITS','BLOCS','TK','MÀJ']).concat(['PPTOI','PKTOI','TOI']);
   const keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
@@ -679,17 +679,48 @@ async function bhlAdvancedPlayer(name,target,fantraxId){
   if(target.isConnected)target.textContent='Statistiques avancées temporairement indisponibles.';
  }
 }
+const bhlHistoricalScorersCache={promise:null};
+async function bhlHistoricalScorers(name,target,fantraxId){
+ target.textContent='Chargement des statistiques BHL par saison et équipe…';
+ try{
+  if(!bhlHistoricalScorersCache.promise)bhlHistoricalScorersCache.promise=fetch('data/production/scorers.json').then(r=>{if(!r.ok)throw Error('Données non disponibles');return r.json()}).catch(e=>{bhlHistoricalScorersCache.promise=null;throw e});
+  const data=await bhlHistoricalScorersCache.promise;
+  if(!target.isConnected)return;
+  const rows=(data.rows||[]).map((row,index)=>({...row,_index:index})).filter(row=>fantraxId?String(row.id)===String(fantraxId):norm(row.name)===norm(name));
+  if(!rows.length){target.textContent='Aucune production BHL reconstituée pour ce joueur.';return}
+  // The scorer builder inserts records in period order. For multiple BHL teams
+  // in one season, the last encountered team is the most recently played for.
+  rows.sort((a,b)=>b.season.localeCompare(a.season)||b._index-a._index||a.team.localeCompare(b.team,'fr'));
+  const regular=rows.filter(r=>r.phase==='regular'),playoffs=rows.filter(r=>r.phase==='playoffs');
+  const fmtBhl=v=>Number(v||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const tableFor=(items,label)=>{
+   const heading=document.createElement('h4');heading.textContent=label;target.append(heading);
+   if(!items.length){const empty=document.createElement('p');empty.className='bhl-player-source';empty.textContent='Aucune donnée disponible.';target.append(empty);return}
+   const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
+   const table=document.createElement('table');table.className='bhl-player-table';
+   const thead=document.createElement('thead');const tr=document.createElement('tr');
+   for(const label of ['Saison','Équipe BHL','FPTS','Départs','FPTS / départ','Départs à vérifier']){const th=document.createElement('th');th.textContent=label;tr.append(th)}thead.append(tr);table.append(thead);
+   const tbody=document.createElement('tbody');
+   for(const row of items){const tr=document.createElement('tr');for(const value of [row.season,row.team,fmtBhl(row.fpts),row.starts||0,row.starts?fmtBhl(row.fpts/row.starts):'—',(row.reviewStarts||0)+(row.missingStarts||0)]){const td=document.createElement('td');td.textContent=String(value);tr.append(td)}tbody.append(tr)}
+   table.append(tbody);wrap.append(table);target.append(wrap);
+  };
+  target.replaceChildren();
+  const intro=document.createElement('p');intro.className='bhl-player-source';intro.textContent='Points produits uniquement lors des périodes où le joueur était partant pour une équipe BHL. Les équipes sont présentées de la plus récente à la plus ancienne dans une même saison.';target.append(intro);
+  tableFor(regular,'Saison régulière');tableFor(playoffs,'Séries éliminatoires');
+  const note=document.createElement('p');note.className='bhl-player-source';note.textContent='Données historiques provisoires : certaines périodes et statistiques sont encore en validation avec Fantrax.';target.append(note);
+ }catch(error){if(target.isConnected)target.textContent='Statistiques BHL temporairement indisponibles : '+error.message}
+}
 function addSections(dialog,name,fantraxId){
  const stats=dialog.querySelector('.bhl-player-stats');if(!stats)return;
  const tabs=document.createElement('div');tabs.className='bhl-unified-tabs';
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
  stats.before(tabs);stats.after(panel);
- const items=[['stats','Statistiques'],['advanced','Stats avancées'],['nhl','Historique LNH'],['trades','Transactions BHL'],['ownership','Appartenance BHL'],['honours','Honneurs']];
+ const items=[['stats','Statistiques'],['advanced','Stats avancées'],['nhl','Historique LNH'],['bhl','Stats BHL'],['trades','Transactions BHL'],['ownership','Appartenance BHL'],['honours','Honneurs']];
  let active='stats'; const rendered=new Map();
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='ownership')import('./bhl-ownership.js?v=1').then(m=>m.renderOwnership(name,section,fantraxId)).catch(()=>{section.textContent='Historique d’appartenance temporairement indisponible.';});else if(id==='honours')playerHonours(name,section,fantraxId);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='bhl')bhlHistoricalScorers(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='ownership')import('./bhl-ownership.js?v=1').then(m=>m.renderOwnership(name,section,fantraxId)).catch(()=>{section.textContent='Historique d’appartenance temporairement indisponible.';});else if(id==='honours')playerHonours(name,section,fantraxId);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
