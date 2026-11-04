@@ -60,7 +60,9 @@ function ranking(source,season){
  return [...grouped.values()].filter(p=>p.gp>0||p.fpts!==0).sort((a,b)=>Math.round(b.fpts*10000)-Math.round(a.fpts*10000)||a.name.localeCompare(b.name,'fr'));
 }
 function render(){
- const rows=ranking(dataset,$('scorer-season').value),limit=$('scorer-limit').value,visible=limit==='all'?rows:rows.slice(0,Number(limit));
+ const selectedSeason=$('season').value;if(!selectedSeason&&$('scorer-scope').value!=='all')return;
+ const season=$('scorer-scope').value==='all'?'':selectedSeason;
+ const rows=ranking(dataset,season),limit=$('scorer-limit').value,visible=limit==='all'?rows:rows.slice(0,Number(limit));
  portraitObserver?.disconnect();const body=$('scorer-results');body.replaceChildren();
  for(const [index,p] of visible.entries()){
   const tr=document.createElement('tr');
@@ -76,15 +78,15 @@ function render(){
   });body.append(tr);
  }
  if(!visible.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=8;td.textContent='Aucun pointeur disponible pour cette saison.';tr.append(td);body.append(tr)}
- $('scorer-status').textContent=visible.length+' sur '+rows.length+' joueurs · '+($('scorer-season').value||'Toutes les saisons')+' · Classement par FPTS en séries';
+ $('scorer-status').textContent=visible.length+' sur '+rows.length+' joueurs · '+(season||'Toutes les saisons')+' · Classement par FPTS en séries';
 }
 async function start(){
  try{
   const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)throw Error();const data=await response.json();if(!Array.isArray(data.rows))throw Error();dataset=data.rows;
-  const seasons=[...new Set(dataset.filter(r=>r.phase==='playoffs'&&(Number(r.gp)>0||Number(r.fpts)!==0)).map(r=>r.season))].sort().reverse();for(const s of seasons)$('scorer-season').append(new Option(s,s));
+
   try{const r=await fetch('data/player-identity-map.json',{cache:'force-cache'});if(r.ok)playerIdentities=(await r.json()).players||{}}catch(e){}
   render();
  }catch(e){$('scorer-status').textContent='Impossible de charger les pointeurs. Rechargez la page pour réessayer.'}
 }
-$('scorer-season').addEventListener('change',render);$('scorer-limit').addEventListener('change',render);start();
+$('scorer-scope').addEventListener('change',render);document.addEventListener('bhl:playoff-season',()=>{if(dataset.length)render()});document.addEventListener('bhl:playoff-scorers-open',()=>{if(dataset.length)render()});$('scorer-limit').addEventListener('change',render);start();
 })();
