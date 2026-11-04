@@ -72,7 +72,7 @@ def build_identities():
 def report(group,kind):
  rows=[];start=0
  while True:
-  query=urllib.parse.urlencode({"cayenneExp":f"seasonId={SEASON} and gameTypeId=2","isAggregate":"true","isGame":"false","start":start,"limit":100})
+  query=urllib.parse.urlencode({"cayenneExp":f"seasonId={SEASON} and gameTypeId=2","isAggregate":"true","isGame":"false","start":start,"limit":100,"sort":json.dumps([{"property":"playerId","direction":"ASC"}])})
   data=get(f"https://api.nhle.com/stats/rest/en/{group}/{kind}?{query}")
   batch=data.get("data",[]);rows.extend(batch);start+=len(batch)
   if not batch or start>=int(data.get("total",start)):break
@@ -81,7 +81,9 @@ def report(group,kind):
  for row in rows:
   pid=str(row.get("playerId") or "")
   if not pid:continue
-  if pid in result:raise RuntimeError(f"Duplicate NHL season aggregate: {group}/{kind} {pid}: {result[pid]} / {row}")
+  if pid in result:
+   if result[pid]==row:continue
+   raise RuntimeError(f"Conflicting NHL season aggregate: {group}/{kind} {pid}")
   result[pid]=row
  return result
 def number(row,*keys):
