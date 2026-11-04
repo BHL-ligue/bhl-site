@@ -1,0 +1,32 @@
+name: Publier les records historiques BHL
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bhl-records-build
+  cancel-in-progress: false
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruire les records par depart
+        run: python scripts/build-bhl-scorers.py
+      - name: Publier les records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/production/starts.json
+          if ! git diff --cached --quiet; then
+            git fetch origin main
+            git reset --soft origin/main
+            git reset
+            git add data/production/starts.json
+            git commit -m "Publier les records individuels par depart"
+            git push origin HEAD:main
+          fi
