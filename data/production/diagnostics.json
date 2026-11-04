@@ -59,9 +59,9 @@
     {
       "season": "2024-25",
       "compared": 366,
-      "matching": 331,
-      "mismatches": 35,
-      "unresolvedPlayerPeriods": 17,
+      "matching": 348,
+      "mismatches": 18,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 18,
       "categoryOnlyPeriods": 0
     },
@@ -77,22 +77,22 @@
     {
       "season": "2026-27",
       "compared": 80,
-      "matching": 74,
-      "mismatches": 6,
-      "unresolvedPlayerPeriods": 1,
+      "matching": 75,
+      "mismatches": 5,
+      "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 5,
       "categoryOnlyPeriods": 0
     }
   ],
   "categoryFrequency": {
-    "Hit": 348,
-    "SOG": 117,
-    "Blk": 69,
+    "Hit": 330,
+    "SOG": 99,
+    "Blk": 59,
     "SV": 50,
-    "Tk": 40,
-    "A": 37,
     "FOW": 34,
-    "G": 24,
+    "Tk": 29,
+    "A": 26,
+    "G": 18,
     "GA": 10,
     "W": 8
   },
@@ -109,10 +109,10 @@
         "01f61"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.6,
+        "SOG": -1.2,
         "Hit": -0.3,
-        "SOG": -1.2
+        "Blk": -0.6,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -144,10 +144,10 @@
         "003mh"
       ],
       "categoryDifferences": {
+        "SOG": -0.6,
         "Tk": -0.4,
-        "Blk": -0.4,
         "Hit": -0.6,
-        "SOG": -0.6
+        "Blk": -0.4
       },
       "reason": "unresolved_player"
     },
@@ -163,9 +163,9 @@
         "0045o"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
+        "SOG": -0.6,
         "Hit": -0.7,
-        "SOG": -0.6
+        "Blk": -0.2
       },
       "reason": "unresolved_player"
     },
@@ -181,11 +181,11 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -0.9,
         "Tk": -0.1,
-        "Blk": -0.2,
         "Hit": -0.4,
-        "SOG": -0.9
+        "Blk": -0.2,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -201,10 +201,10 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -3.3,
         "Tk": -0.1,
-        "G": -9.0,
-        "SOG": -3.3
+        "A": -2.5,
+        "G": -9.0
       },
       "reason": "unresolved_player"
     },
@@ -234,11 +234,11 @@
         "003jc"
       ],
       "categoryDifferences": {
+        "SOG": -1.2,
         "Tk": -0.1,
-        "Blk": -0.2,
-        "G": -3.0,
         "Hit": -0.6,
-        "SOG": -1.2
+        "Blk": -0.2,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -254,11 +254,11 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "A": -5.0,
-        "Blk": -0.1,
-        "G": -9.0,
+        "SOG": -4.8,
         "Hit": -0.1,
-        "SOG": -4.8
+        "Blk": -0.1,
+        "A": -5.0,
+        "G": -9.0
       },
       "reason": "unresolved_player"
     },
@@ -274,11 +274,11 @@
         "003mh"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -0.6,
         "Tk": -0.1,
-        "Blk": -0.5,
         "Hit": -0.2,
-        "SOG": -0.6
+        "Blk": -0.5,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -294,9 +294,9 @@
         "003jc"
       ],
       "categoryDifferences": {
+        "SOG": -1.8,
         "Tk": -0.1,
-        "Hit": -0.3,
-        "SOG": -1.8
+        "Hit": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -312,9 +312,9 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -1.2,
         "Blk": -0.2,
-        "SOG": -1.2
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -330,10 +330,10 @@
         "003mh"
       ],
       "categoryDifferences": {
-        "A": -5.0,
-        "Blk": -0.7,
+        "SOG": -0.6,
         "Hit": -0.2,
-        "SOG": -0.6
+        "Blk": -0.7,
+        "A": -5.0
       },
       "reason": "unresolved_player"
     },
@@ -349,8 +349,8 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -366,11 +366,11 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.2,
-        "G": -3.0,
+        "SOG": -0.6,
         "Hit": -0.1,
-        "SOG": -0.6
+        "Blk": -0.2,
+        "A": -2.5,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -386,10 +386,10 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.1,
+        "SOG": -2.4,
         "Hit": -0.2,
-        "SOG": -2.4
+        "Blk": -0.1,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -405,11 +405,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "FOW": -1.55,
+        "SOG": -2.4,
         "Tk": -0.5,
-        "Blk": -0.3,
         "Hit": -1.3,
-        "SOG": -2.4
+        "FOW": -1.55,
+        "Blk": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -425,10 +425,10 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "FOW": -1.1,
-        "G": -3.0,
+        "SOG": -1.5,
         "Hit": -0.4,
-        "SOG": -1.5
+        "FOW": -1.1,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -444,11 +444,11 @@
         "0040f"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.2,
-        "G": -3.0,
+        "SOG": -1.2,
         "Hit": -0.2,
-        "SOG": -1.2
+        "Blk": -0.2,
+        "A": -2.5,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -464,11 +464,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "FOW": -1.1,
+        "SOG": -1.5,
         "Tk": -0.2,
-        "Blk": -0.3,
         "Hit": -0.3,
-        "SOG": -1.5
+        "FOW": -1.1,
+        "Blk": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -484,9 +484,9 @@
         "0040f"
       ],
       "categoryDifferences": {
-        "Blk": -0.5,
+        "SOG": -0.6,
         "Hit": -0.7,
-        "SOG": -0.6
+        "Blk": -0.5
       },
       "reason": "unresolved_player"
     },
@@ -502,8 +502,8 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "SOG": -0.6
+        "SOG": -0.6,
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -519,11 +519,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "FOW": -0.2,
+        "SOG": -0.3,
         "Tk": -0.2,
-        "Blk": -0.1,
         "Hit": -0.6,
-        "SOG": -0.3
+        "FOW": -0.2,
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -539,8 +539,8 @@
         "003hb"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "SOG": -1.5
+        "SOG": -1.5,
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -556,12 +556,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "FOW": -1.25,
-        "A": -2.5,
+        "SOG": -2.4,
         "Tk": -0.3,
-        "Blk": -0.2,
         "Hit": -0.7,
-        "SOG": -2.4
+        "FOW": -1.25,
+        "Blk": -0.2,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -578,12 +578,12 @@
         "010wq"
       ],
       "categoryDifferences": {
+        "SOG": -2.7,
+        "Tk": -0.1,
+        "Hit": -0.4,
         "FOW": -0.65,
         "A": -7.5,
-        "Tk": -0.1,
-        "G": -3.0,
-        "Hit": -0.4,
-        "SOG": -2.7
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -599,8 +599,8 @@
         "003i5"
       ],
       "categoryDifferences": {
-        "W": -8.0,
         "SV": -11.6,
+        "W": -8.0,
         "GA": 6.0
       },
       "reason": "unresolved_player"
@@ -618,11 +618,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "A": -7.5,
+        "SOG": -1.5,
         "Tk": -0.2,
-        "Blk": -0.5,
         "Hit": -0.6,
-        "SOG": -1.5
+        "Blk": -0.5,
+        "A": -7.5
       },
       "reason": "unresolved_player"
     },
@@ -638,11 +638,11 @@
         "003xs"
       ],
       "categoryDifferences": {
+        "SOG": -2.1,
         "Tk": -0.1,
-        "Blk": -1.6,
-        "G": -3.0,
         "Hit": -0.2,
-        "SOG": -2.1
+        "Blk": -1.6,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -659,8 +659,8 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "Hit": -0.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -677,11 +677,11 @@
         "010wq"
       ],
       "categoryDifferences": {
+        "SOG": -1.5,
         "Tk": -0.1,
-        "Blk": -0.1,
-        "G": -3.0,
         "Hit": -0.7,
-        "SOG": -1.5
+        "Blk": -0.1,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -697,10 +697,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.8,
+        "SOG": -1.5,
         "Hit": -0.3,
-        "SOG": -1.5
+        "Blk": -0.8,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -717,11 +717,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.4,
-        "G": -6.0,
+        "SOG": -4.5,
         "Hit": -0.8,
-        "SOG": -4.5
+        "Blk": -0.4,
+        "A": -2.5,
+        "G": -6.0
       },
       "reason": "unresolved_player"
     },
@@ -737,8 +737,8 @@
         "01dr6"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -754,10 +754,10 @@
         "003xs"
       ],
       "categoryDifferences": {
+        "SOG": -3.0,
         "Tk": -0.2,
-        "Blk": -1.4,
         "Hit": -0.1,
-        "SOG": -3.0
+        "Blk": -1.4
       },
       "reason": "unresolved_player"
     },
@@ -774,12 +774,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -3.6,
         "Tk": -0.2,
-        "Blk": -0.1,
-        "G": -3.0,
         "Hit": -0.3,
-        "SOG": -3.6
+        "Blk": -0.1,
+        "A": -2.5,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -795,11 +795,11 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "A": -5.0,
+        "SOG": -1.2,
         "Tk": -0.1,
-        "Blk": -0.8,
         "Hit": -0.3,
-        "SOG": -1.2
+        "Blk": -0.8,
+        "A": -5.0
       },
       "reason": "unresolved_player"
     },
@@ -816,10 +816,10 @@
         "010wq"
       ],
       "categoryDifferences": {
+        "SOG": -3.0,
         "Tk": -0.3,
-        "G": -3.0,
         "Hit": -1.2,
-        "SOG": -3.0
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -836,12 +836,12 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -5.4,
         "Tk": -0.5,
-        "Blk": -0.1,
-        "G": -6.0,
         "Hit": -0.7,
-        "SOG": -5.4
+        "Blk": -0.1,
+        "A": -2.5,
+        "G": -6.0
       },
       "reason": "unresolved_player"
     },
@@ -857,10 +857,10 @@
         "003xs"
       ],
       "categoryDifferences": {
+        "SOG": -0.6,
         "Tk": -0.2,
-        "Blk": -0.6,
         "Hit": -0.3,
-        "SOG": -0.6
+        "Blk": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -877,11 +877,11 @@
         "010wq"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -2.1,
         "Tk": -0.4,
-        "G": -3.0,
         "Hit": -1.0,
-        "SOG": -2.1
+        "A": -2.5,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -897,8 +897,8 @@
         "003jc"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
-        "Hit": -0.4
+        "Hit": -0.4,
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -914,10 +914,10 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.4,
+        "SOG": -1.8,
         "Hit": -0.2,
-        "SOG": -1.8
+        "Blk": -0.4,
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -933,11 +933,11 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "A": -7.5,
+        "SOG": -0.9,
         "Tk": -0.1,
-        "Blk": -1.5,
         "Hit": -0.3,
-        "SOG": -0.9
+        "Blk": -1.5,
+        "A": -7.5
       },
       "reason": "unresolved_player"
     },
@@ -953,9 +953,9 @@
         "003hf"
       ],
       "categoryDifferences": {
-        "Blk": -0.6,
+        "SOG": -0.3,
         "Hit": -0.1,
-        "SOG": -0.3
+        "Blk": -0.6
       },
       "reason": "unresolved_player"
     },
@@ -971,9 +971,9 @@
         "003pa"
       ],
       "categoryDifferences": {
-        "Blk": -0.1,
+        "SOG": -1.2,
         "Hit": -0.1,
-        "SOG": -1.2
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -989,10 +989,10 @@
         "01mlo"
       ],
       "categoryDifferences": {
-        "A": -2.5,
+        "SOG": -1.5,
         "Tk": -0.4,
         "Hit": -0.2,
-        "SOG": -1.5
+        "A": -2.5
       },
       "reason": "unresolved_player"
     },
@@ -1008,10 +1008,10 @@
         "01mlo"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "G": -6.0,
+        "SOG": -2.1,
         "Hit": -0.8,
-        "SOG": -2.1
+        "Blk": -0.2,
+        "G": -6.0
       },
       "reason": "unresolved_player"
     },
@@ -1027,10 +1027,10 @@
         "01mlo"
       ],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "G": -3.0,
+        "SOG": -1.8,
         "Hit": -0.3,
-        "SOG": -1.8
+        "Blk": -0.2,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -1046,10 +1046,10 @@
         "01mlo"
       ],
       "categoryDifferences": {
+        "SOG": -1.5,
         "Tk": -0.1,
-        "G": -3.0,
         "Hit": -0.2,
-        "SOG": -1.5
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -1065,11 +1065,11 @@
         "01zu0"
       ],
       "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.8,
-        "G": -3.0,
+        "SOG": -2.4,
         "Hit": -0.6,
-        "SOG": -2.4
+        "Blk": -0.8,
+        "A": -2.5,
+        "G": -3.0
       },
       "reason": "unresolved_player"
     },
@@ -1085,10 +1085,10 @@
         "01zu0"
       ],
       "categoryDifferences": {
+        "SOG": -1.8,
         "Tk": -0.2,
-        "Blk": -0.1,
         "Hit": -0.6,
-        "SOG": -1.8
+        "Blk": -0.1
       },
       "reason": "unresolved_player"
     },
@@ -1104,8 +1104,8 @@
         "003xs"
       ],
       "categoryDifferences": {
-        "Blk": -0.4,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Blk": -0.4
       },
       "reason": "unresolved_player"
     },
@@ -1135,8 +1135,8 @@
         "031qf"
       ],
       "categoryDifferences": {
-        "W": -4.0,
         "SV": -14.6,
+        "W": -4.0,
         "GA": 4.0
       },
       "reason": "unresolved_player"
@@ -1170,8 +1170,8 @@
         "031qf"
       ],
       "categoryDifferences": {
-        "W": -4.0,
         "SV": -10.4,
+        "W": -4.0,
         "GA": 7.0
       },
       "reason": "unresolved_player"
@@ -1188,8 +1188,8 @@
         "031qf"
       ],
       "categoryDifferences": {
-        "W": -8.0,
         "SV": -16.6,
+        "W": -8.0,
         "GA": 10.0
       },
       "reason": "unresolved_player"
@@ -1223,8 +1223,8 @@
         "02nq8"
       ],
       "categoryDifferences": {
-        "W": -8.0,
         "SV": -11.8,
+        "W": -8.0,
         "GA": 4.0
       },
       "reason": "unresolved_player"
@@ -1241,8 +1241,8 @@
         "02nq8"
       ],
       "categoryDifferences": {
-        "W": -4.0,
         "SV": -14.2,
+        "W": -4.0,
         "GA": 6.0
       },
       "reason": "unresolved_player"
@@ -1259,8 +1259,8 @@
         "02nq8"
       ],
       "categoryDifferences": {
-        "W": -4.0,
         "SV": -8.6,
+        "W": -4.0,
         "GA": 6.0
       },
       "reason": "unresolved_player"
@@ -1277,353 +1277,9 @@
         "02nq8"
       ],
       "categoryDifferences": {
-        "W": -4.0,
         "SV": -12.4,
+        "W": -4.0,
         "GA": 5.0
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 1,
-      "team": "New York Rangers",
-      "official": 104.9,
-      "calculated": 99.5,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Tk": -0.1,
-        "G": -3.0,
-        "Hit": -0.8,
-        "SOG": -1.5
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 2,
-      "team": "New York Rangers",
-      "official": 150.65,
-      "calculated": 144.05,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -5.0,
-        "Blk": -0.2,
-        "Hit": -0.5,
-        "SOG": -0.9
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 3,
-      "team": "New York Rangers",
-      "official": 116.4,
-      "calculated": 109.6,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -5.0,
-        "Tk": -0.2,
-        "Hit": -0.7,
-        "SOG": -0.9
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 4,
-      "team": "New York Rangers",
-      "official": 118.95,
-      "calculated": 109.55,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -0.4,
-        "G": -3.0,
-        "Hit": -1.4,
-        "SOG": -2.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 5,
-      "team": "New York Rangers",
-      "official": 115.4,
-      "calculated": 108.6,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -5.0,
-        "Tk": -0.4,
-        "Hit": -1.1,
-        "SOG": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 6,
-      "team": "New York Rangers",
-      "official": 154.8,
-      "calculated": 149.2,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Tk": -0.2,
-        "Blk": -0.6,
-        "Hit": -0.5,
-        "SOG": -1.8
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 7,
-      "team": "New York Rangers",
-      "official": 128.35,
-      "calculated": 123.15,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Tk": -0.1,
-        "Blk": -0.6,
-        "Hit": -0.8,
-        "SOG": -1.2
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 8,
-      "team": "New York Rangers",
-      "official": 180.65,
-      "calculated": 171.05,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Tk": -0.3,
-        "Blk": -0.4,
-        "G": -3.0,
-        "Hit": -1.3,
-        "SOG": -2.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 9,
-      "team": "New York Rangers",
-      "official": 128.65,
-      "calculated": 117.25,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Tk": -0.1,
-        "G": -6.0,
-        "Hit": -0.7,
-        "SOG": -2.1
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 10,
-      "team": "New York Rangers",
-      "official": 163.65,
-      "calculated": 155.35,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -2.5,
-        "Blk": -1.0,
-        "G": -3.0,
-        "Hit": -0.9,
-        "SOG": -0.9
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 12,
-      "team": "New York Rangers",
-      "official": 140.45,
-      "calculated": 138.35,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Tk": -0.2,
-        "Hit": -0.1,
-        "SOG": -1.8
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 13,
-      "team": "New York Rangers",
-      "official": 136.3,
-      "calculated": 135.2,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Blk": -0.4,
-        "Hit": -0.4,
-        "SOG": -0.3
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 14,
-      "team": "New York Rangers",
-      "official": 156.05,
-      "calculated": 154.15,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Blk": -0.2,
-        "Hit": -0.5,
-        "SOG": -1.2
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 15,
-      "team": "New York Rangers",
-      "official": 117.2,
-      "calculated": 115.7,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Blk": -0.2,
-        "Hit": -0.4,
-        "SOG": -0.9
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 20,
-      "team": "New York Rangers",
-      "official": 164.35,
-      "calculated": 156.85,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -5.0,
-        "Tk": -0.1,
-        "Blk": -0.2,
-        "Hit": -0.4,
-        "SOG": -1.8
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 21,
-      "team": "New York Rangers",
-      "official": 124.25,
-      "calculated": 119.95,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Tk": -0.2,
-        "G": -3.0,
-        "Hit": -0.2,
-        "SOG": -0.9
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2024-25",
-      "phase": "regular",
-      "period": 22,
-      "team": "New York Rangers",
-      "official": 122.65,
-      "calculated": 115.45,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "A": -5.0,
-        "Tk": -0.1,
-        "Hit": -0.3,
-        "SOG": -1.8
-      },
-      "reason": "unresolved_player"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 1,
-      "team": "California Golden Seals",
-      "official": 101.7,
-      "calculated": 100.5,
-      "difference": null,
-      "unresolved": [
-        "06iml"
-      ],
-      "categoryDifferences": {
-        "Hit": -0.9,
-        "SOG": -0.3
       },
       "reason": "unresolved_player"
     },
@@ -1638,8 +1294,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": 0.2,
-        "Hit": 2.1,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 2.1
       },
       "reason": "score_difference"
     },
@@ -1667,8 +1323,8 @@
       "difference": 2.2,
       "unresolved": [],
       "categoryDifferences": {
-        "A": 2.5,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "A": 2.5
       },
       "reason": "score_difference"
     },
@@ -1696,8 +1352,8 @@
       "difference": 2.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.7,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.7
       },
       "reason": "score_difference"
     },
@@ -1711,8 +1367,8 @@
       "difference": 2.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.7,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.7
       },
       "reason": "score_difference"
     },
@@ -1824,8 +1480,8 @@
       "difference": 1.8,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.2,
-        "SOG": 0.6
+        "SOG": 0.6,
+        "Hit": 1.2
       },
       "reason": "score_difference"
     },
@@ -1839,8 +1495,8 @@
       "difference": 1.8,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.5,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.5
       },
       "reason": "score_difference"
     },
@@ -1995,8 +1651,8 @@
       "difference": 1.6,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.3,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -2039,8 +1695,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": 0.6,
-        "Hit": 0.6,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.6
       },
       "reason": "score_difference"
     },
@@ -2054,8 +1710,8 @@
       "difference": 1.5,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.2,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.2
       },
       "reason": "score_difference"
     },
@@ -2409,8 +2065,8 @@
       "difference": 1.4,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.1,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -2550,9 +2206,9 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2,
+        "SOG": 0.3,
         "Hit": 0.8,
-        "SOG": 0.3
+        "Blk": 0.2
       },
       "reason": "score_difference"
     },
@@ -2665,8 +2321,8 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.0,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 1.0
       },
       "reason": "score_difference"
     },
@@ -3019,8 +2675,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": 0.2,
-        "Hit": 1.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -3076,8 +2732,8 @@
       "difference": 1.2,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.9,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.9
       },
       "reason": "score_difference"
     },
@@ -3147,8 +2803,8 @@
       "difference": 1.15,
       "unresolved": [],
       "categoryDifferences": {
-        "FOW": 0.05,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "FOW": 0.05
       },
       "reason": "score_difference"
     },
@@ -3349,8 +3005,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": -0.2,
-        "Hit": 1.6,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.6
       },
       "reason": "score_difference"
     },
@@ -3504,8 +3160,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -3575,8 +3231,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Hit": 1.2
+        "Hit": 1.2,
+        "Blk": -0.2
       },
       "reason": "score_difference"
     },
@@ -3618,8 +3274,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -3648,8 +3304,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": 0.2,
-        "Hit": 1.1,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -3691,8 +3347,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.7,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.7
       },
       "reason": "score_difference"
     },
@@ -3706,8 +3362,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -3835,8 +3491,8 @@
       "difference": 1.0,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.3,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.3
       },
       "reason": "score_difference"
     },
@@ -3948,8 +3604,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Hit": 1.1
+        "Hit": 1.1,
+        "Blk": -0.2
       },
       "reason": "score_difference"
     },
@@ -4019,8 +3675,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.6,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.6
       },
       "reason": "score_difference"
     },
@@ -4104,8 +3760,8 @@
       "difference": 0.9,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.6,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.6
       },
       "reason": "score_difference"
     },
@@ -4301,8 +3957,8 @@
       "difference": 0.8,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.5,
-        "SOG": 0.3
+        "SOG": 0.3,
+        "Hit": 0.5
       },
       "reason": "score_difference"
     },
@@ -4641,8 +4297,8 @@
       "difference": 0.7,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": -0.2,
-        "Hit": 0.9
+        "Hit": 0.9,
+        "Blk": -0.2
       },
       "reason": "score_difference"
     },
@@ -4684,8 +4340,8 @@
       "difference": 0.7,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.0,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 1.0
       },
       "reason": "score_difference"
     },
@@ -4881,8 +4537,8 @@
       "difference": 0.6,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2,
-        "Hit": 0.4
+        "Hit": 0.4,
+        "Blk": 0.2
       },
       "reason": "score_difference"
     },
@@ -5191,8 +4847,8 @@
       "difference": -0.35,
       "unresolved": [],
       "categoryDifferences": {
-        "FOW": -0.05,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "FOW": -0.05
       },
       "reason": "score_difference"
     },
@@ -5291,8 +4947,8 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": -0.2,
-        "Hit": 1.1,
-        "SOG": -0.6
+        "SOG": -0.6,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -5320,8 +4976,8 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.6,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 0.6
       },
       "reason": "score_difference"
     },
@@ -5335,8 +4991,8 @@
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.6,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 0.6
       },
       "reason": "score_difference"
     },
@@ -5574,8 +5230,8 @@
       "difference": 0.2,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.5,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 0.5
       },
       "reason": "score_difference"
     },
@@ -6163,9 +5819,9 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": -0.2,
+        "SOG": -0.3,
         "Hit": 0.4,
-        "SOG": -0.3
+        "Blk": -0.2
       },
       "reason": "score_difference"
     },
@@ -6179,8 +5835,8 @@
       "difference": 0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.7,
-        "SOG": -0.6
+        "SOG": -0.6,
+        "Hit": 0.7
       },
       "reason": "score_difference"
     },
@@ -6194,8 +5850,8 @@
       "difference": 0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.4,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Hit": 0.4
       },
       "reason": "score_difference"
     },
@@ -6448,8 +6104,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Blk": 0.2
       },
       "reason": "score_difference"
     },
@@ -6743,8 +6399,8 @@
       "difference": 0.05,
       "unresolved": [],
       "categoryDifferences": {
-        "FOW": -0.05,
-        "Hit": 0.1
+        "Hit": 0.1,
+        "FOW": -0.05
       },
       "reason": "score_difference"
     },
