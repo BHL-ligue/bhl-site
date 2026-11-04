@@ -30,7 +30,7 @@ export async function initJournalistsAdmin(db,target){
  name.required=true;name.maxLength=120;media.maxLength=160;save.type='submit';cancel.type='button';cancel.hidden=true;feedback.setAttribute('role','status');
  for(const [title,input] of [['Nom du journaliste',name],['Média',media],['Compte du portail (facultatif)',owner],['Équipe du journaliste',team]]){const label=node('label',title,'field');label.append(input);form.append(label)}
  owner.add(new Option('Disponible — aucun compte attribué',''));profiles.forEach(p=>owner.add(new Option((p.full_name||'Compte BHL')+' · '+teamName(p.team_id),p.user_id)));
- team.add(new Option('Rédaction BHL / aucune équipe',''));teams.forEach(t=>team.add(new Option(t.team_name,t.team_id)));team.disabled=true;
+ team.add(new Option('BHL — Couverture générale de la ligue',''));teams.forEach(t=>team.add(new Option(t.team_name,t.team_id)));team.disabled=true;
  owner.onchange=()=>{team.value=profiles.find(p=>p.user_id===owner.value)?.team_id||'';team.disabled=!owner.value};
  function reset(){editing=null;form.reset();team.disabled=true;save.textContent='Ajouter le journaliste';cancel.hidden=true}cancel.onclick=reset;
  form.append(save,cancel,feedback);target.append(form);
