@@ -11,8 +11,12 @@ function ensurePlayerProfile(){
  }
  if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=coyle-fix1';document.head.append(script)}
 }
+function ensureTableVisuals(){
+ if(!document.querySelector('link[href^="bhl-table-visuals.css"]')){const css=document.createElement('link');css.rel='stylesheet';css.href='bhl-table-visuals.css?v=1';document.head.append(css)}
+ if(!document.querySelector('script[src^="bhl-table-visuals.js"]')){const script=document.createElement('script');script.src='bhl-table-visuals.js?v=1';document.head.append(script)}
+}
 function mount(){
- ensurePlayerProfile();
+ ensurePlayerProfile();ensureTableVisuals();
  const root=document.getElementById('bhl-global-nav');if(!root)return;
  const groups=[
   {href:'index.html',label:'Accueil'},
