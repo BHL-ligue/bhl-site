@@ -690,7 +690,19 @@ async function bhlHistoricalScorers(name,target,fantraxId){
   if(!rows.length){target.textContent='Aucune production BHL reconstituée pour ce joueur.';return}
   // The scorer builder inserts records in period order. For multiple BHL teams
   // in one season, the last encountered team is the most recently played for.
-  rows.sort((a,b)=>b.season.localeCompare(a.season)||b._index-a._index||a.team.localeCompare(b.team,'fr'));
+  const latestBySeason=new Map();
+  await Promise.all([...new Set(rows.map(r=>r.season))].map(async season=>{
+   try{
+    const response=await fetch('data/ownership/'+encodeURIComponent(season)+'.json');
+    if(!response.ok)return;
+    const archive=await response.json();
+    const spans=archive.lineups?.[String(fantraxId)]||[];
+    const latest=new Map();
+    for(const span of spans){const team=archive.teams?.[span[2]]?.name;if(team)latest.set(team,Math.max(latest.get(team)||0,Number(span[1])||0))}
+    latestBySeason.set(season,latest);
+   }catch(e){}
+  }));
+  rows.sort((a,b)=>b.season.localeCompare(a.season)||(latestBySeason.get(b.season)?.get(b.team)||0)-(latestBySeason.get(a.season)?.get(a.team)||0)||b._index-a._index||a.team.localeCompare(b.team,'fr'));
   const regular=rows.filter(r=>r.phase==='regular'),playoffs=rows.filter(r=>r.phase==='playoffs');
   const fmtBhl=v=>Number(v||0).toLocaleString('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
   const tableFor=(items,label)=>{
