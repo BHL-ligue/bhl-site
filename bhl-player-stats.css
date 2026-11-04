@@ -205,3 +205,21 @@
 .bhl-trade-full-assets{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
 .bhl-trade-asset{display:block;width:100%;line-height:1.5}
 .bhl-trade-asset-separator{display:none}
+
+/* Transaction complète : deux colonnes selon les équipes qui reçoivent les éléments. */
+.bhl-trade-full-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:stretch}
+.bhl-trade-full-column{min-width:0;border:1px solid #e3e7ec;background:#fff;border-radius:9px;overflow:hidden}
+.bhl-trade-full-team{display:flex;align-items:center;gap:7px;padding:9px 10px;background:#f0f2f5;border-bottom:1px solid #e3e7ec;color:#28374a;font-size:11px;line-height:1.25;overflow-wrap:anywhere}
+.bhl-trade-full-team strong{min-width:0}
+.bhl-trade-full-logo{width:24px;height:24px;flex:0 0 24px;object-fit:contain}
+.bhl-trade-full-column .bhl-trade-full-assets{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:5px 10px 7px}
+.bhl-trade-full-column .bhl-trade-asset{display:block;width:100%;min-width:0;padding:5px 0;font-size:11px;line-height:1.35;color:#304057;overflow-wrap:anywhere;word-break:normal}
+.bhl-trade-full-column .bhl-trade-asset+.bhl-trade-asset{border-top:1px solid #f0f1f3}
+@media(max-width:540px){
+ .bhl-trade-full-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .bhl-trade-full-team{padding:7px 6px;gap:5px;font-size:9px}
+ .bhl-trade-full-logo{width:19px;height:19px;flex-basis:19px}
+ .bhl-trade-full-column .bhl-trade-full-assets{padding:4px 6px 6px}
+ .bhl-trade-full-column .bhl-trade-asset{font-size:10px;line-height:1.3;padding:5px 0;overflow-wrap:anywhere}
+}
+@media(max-width:360px){.bhl-trade-full-team{font-size:8px}.bhl-trade-full-column .bhl-trade-asset{font-size:9px}}
