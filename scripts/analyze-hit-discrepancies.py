@@ -41,4 +41,42 @@ report = {
 output = ROOT / "data/production/hit-investigation-2023-24.json"
 output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(json.dumps({k: v for k, v in report.items() if k not in ("byTeam", "sampleHitOnly")}, ensure_ascii=False, indent=2))
+# Player-level evidence from the audited starting lineups, when available.
+audit_path = ROOT / "data/production/audits/2023-24.json"
+if audit_path.exists():
+    audit = json.loads(audit_path.read_text(encoding="utf-8"))
+    selected = {(x["period"], x["team"]) for x in report["sampleHitOnly"]}
+    evidence = []
+    for period in audit.get("periods", []):
+        for team in period.get("teams", []):
+            if (period["period"], team["team"]) not in selected:
+                continue
+            players = []
+            for player in team.get("players", []):
+                value = player.get("stats", {}).get("Hit")
+                if value is None:
+                    continue
+                players.append({
+                    "name": player["name"],
+                    "fantraxId": player["fantraxId"],
+                    "nhlId": player.get("nhlId"),
+                    "position": player.get("position"),
+                    "reconstructedHits": value,
+                    "reconstructedHitFpts": player.get("categoryPoints", {}).get("Hit", 0),
+                })
+            players.sort(key=lambda p: -p["reconstructedHits"])
+            evidence.append({
+                "period": period["period"], "team": team["team"],
+                "start": period.get("start"), "end": period.get("end"),
+                "officialTeamHitFpts": team.get("officialCategoryPoints", {}).get("Hit"),
+                "reconstructedTeamHitFpts": team.get("calculatedCategoryPoints", {}).get("Hit"),
+                "players": players,
+            })
+    evidence.sort(key=lambda x: (x["period"], x["team"]))
+    evidence_path = ROOT / "data/production/hit-player-evidence-2023-24.json"
+    evidence_path.write_text(json.dumps({
+        "status": "reconstructed_player_hits_not_verified_against_original_fantrax_player_counts",
+        "season": "2023-24", "examples": evidence,
+    }, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    print("Wrote", evidence_path, "examples:", len(evidence))
 print("Wrote", output)
