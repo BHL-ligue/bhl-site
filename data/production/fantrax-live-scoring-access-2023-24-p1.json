@@ -1,0 +1,22 @@
+{
+  "season": "2023-24",
+  "period": 1,
+  "matchupId": "qtetgxu8lgjl09t1_u4g5a6btlgjl09sf",
+  "source": "Public Live Scoring page, unauthenticated",
+  "status": "diagnostic_only",
+  "httpStatus": 200,
+  "finalUrl": "https://www.fantrax.com/fantasy/league/ukw6z6r2lgjl09qn/livescoring;period=1?mobileMatchupView=true&matchupId=qtetgxu8lgjl09t1_u4g5a6btlgjl09sf&teamId=ALL&layout=STANDARD&mainView=MATCHUP&mobileView=MATCHUPS",
+  "contentType": "text/html",
+  "htmlBytes": 22375,
+  "pageTitle": "Fantrax - The Home of Fantasy Sports",
+  "mentionsMinnesota": false,
+  "mentionsQuebec": false,
+  "mentionsLiveScoring": false,
+  "scriptSources": [
+    "https://www.google-analytics.com/analytics.js",
+    "https://www.google.com/recaptcha/api.js?render=6LdDq7EUAAAAAMEuxaY-OFMCGx2orUsrbTI33F9v",
+    "main-C4DPXOYQ.js"
+  ],
+  "possibleApiPaths": [],
+  "hasEmbedded51Hits": false
+}
