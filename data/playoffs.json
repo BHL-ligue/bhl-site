@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T03:16:27.221564+00:00",
+  "updatedAt": "2026-11-04T03:18:06.172501+00:00",
   "source": "Pointages officiels des affrontements Fantrax; bannières de champions BHL. Saison 2019-20 : arrêt en deuxième ronde confirmé par la ligue.",
   "seasons": [
     {
@@ -467,7 +467,7 @@
                 {
                   "id": "vs9imdwtl2q74pij",
                   "name": "Detroit Red Wings",
-                  "score": 202
+                  "score": 202.0
                 }
               ],
               "winner": "vs9imdwtl2q74pij"
@@ -497,7 +497,7 @@
                 {
                   "id": "coy5s4gyl2q74pii",
                   "name": "Atlanta Thrashers",
-                  "score": 190
+                  "score": 190.0
                 }
               ],
               "winner": "coy5s4gyl2q74pii"
@@ -1036,7 +1036,7 @@
                 {
                   "id": "va02m7ewjjbjc99i",
                   "name": "Winnipeg Jets",
-                  "score": 151
+                  "score": 151.0
                 },
                 {
                   "id": "ye7fmcmwjjbjc99i",
