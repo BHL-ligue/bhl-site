@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "source": "Fantrax getTeamRosters / getLeagueInfo",
+  "updatedAt": "2026-11-03T23:52:14.531840+00:00",
+  "seasons": [
+    {
+      "season": "2026-27",
+      "leagueId": "32q8rjpomo2tig1z",
+      "file": "2026-27.json",
+      "periods": 6,
+      "availablePeriods": 6,
+      "players": 544,
+      "missingPeriods": []
+    },
+    {
+      "season": "2025-26",
+      "leagueId": "xawnq4p0m9n3ikmo",
+      "file": "2025-26.json",
+      "periods": 24,
+      "availablePeriods": 24,
+      "players": 601,
+      "missingPeriods": []
+    },
+    {
+      "season": "2024-25",
+      "leagueId": "jdltul4alva6m2x8",
+      "file": "2024-25.json",
+      "periods": 25,
+      "availablePeriods": 25,
+      "players": 614,
+      "missingPeriods": []
+    },
+    {
+      "season": "2023-24",
+      "leagueId": "ukw6z6r2lgjl09qn",
+      "file": "2023-24.json",
+      "periods": 26,
+      "availablePeriods": 26,
+      "players": 623,
+      "missingPeriods": []
+    },
+    {
+      "season": "2022-23",
+      "leagueId": "xekefw5vl2q74pi9",
+      "file": "2022-23.json",
+      "periods": 25,
+      "availablePeriods": 25,
+      "players": 602,
+      "missingPeriods": []
+    },
+    {
+      "season": "2021-22",
+      "leagueId": "o981oceokoydzrkt",
+      "file": "2021-22.json",
+      "periods": 25,
+      "availablePeriods": 25,
+      "players": 581,
+      "missingPeriods": []
+    },
+    {
+      "season": "2020-21",
+      "leagueId": "x84a2ac9kb7zbs0w",
+      "file": "2020-21.json",
+      "periods": 16,
+      "availablePeriods": 16,
+      "players": 567,
+      "missingPeriods": []
+    },
+    {
+      "season": "2019-20",
+      "leagueId": "2uolurhgjv9p9ryl",
+      "file": "2019-20.json",
+      "periods": 25,
+      "availablePeriods": 25,
+      "players": 595,
+      "missingPeriods": []
+    },
+    {
+      "season": "2018-19",
+      "leagueId": "vwa89uoajhz15dxv",
+      "file": "2018-19.json",
+      "periods": 27,
+      "availablePeriods": 27,
+      "players": 597,
+      "missingPeriods": []
+    }
+  ]
+}

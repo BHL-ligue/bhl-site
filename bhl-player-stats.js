@@ -650,12 +650,12 @@ function addSections(dialog,name,fantraxId){
  const tabs=document.createElement('div');tabs.className='bhl-unified-tabs';
  const panel=document.createElement('div');panel.className='bhl-unified-panel';
  stats.before(tabs);stats.after(panel);
- const items=[['stats','Statistiques'],['advanced','Stats avancées'],['nhl','Historique LNH'],['trades','Transactions BHL'],['honours','Honneurs']];
+ const items=[['stats','Statistiques'],['advanced','Stats avancées'],['nhl','Historique LNH'],['trades','Transactions BHL'],['ownership','Appartenance BHL'],['honours','Honneurs']];
  let active='stats'; const rendered=new Map();
  const select=id=>{
   active=id;stats.hidden=id!=='stats';panel.hidden=id==='stats';
   for(const b of tabs.querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===id));
-  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='honours')playerHonours(name,section,fantraxId);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
+  if(id!=='stats'){if(!rendered.has(id)){const section=document.createElement('section');rendered.set(id,section);panel.append(section);if(id==='nhl')historicNhl(name,section,fantraxId);else if(id==='advanced')bhlAdvancedPlayer(name,section,fantraxId);else if(id==='ownership')import('./bhl-ownership.js?v=1').then(m=>m.renderOwnership(name,section,fantraxId)).catch(()=>{section.textContent='Historique d’appartenance temporairement indisponible.';});else if(id==='honours')playerHonours(name,section,fantraxId);else tradeHistory(name,section)}for(const [key,section] of rendered)section.hidden=key!==id;}
  };
  for(const [id,label] of items){const b=document.createElement('button');b.type='button';b.dataset.tab=id;b.textContent=label;b.onclick=()=>select(id);tabs.append(b)}
  select(active);
