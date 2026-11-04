@@ -17,7 +17,8 @@ function mount(){
  const groups=[
   {href:'index.html',label:'Accueil'},
   {href:'bhl-nouvelles.html',label:'Nouvelles'},
-  {label:'La ligue',items:[['bhl-accueil-forbes-connecte.html','FORBES'],['bhl-equipes-connectees.html','Équipes'],['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements']]},
+  {href:'bhl-equipes-connectees.html',label:'Équipes'},
+  {label:'La ligue',items:[['bhl-accueil-forbes-connecte.html','FORBES'],['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements']]},
   {label:'Compétitions',items:[['bhl-fantrax.html','Saison'],['bhl-series.html','Séries éliminatoires'],['bhl-matchs-joues.html','Matchs joués']]},
   {label:'Statistiques',items:[['bhl-pointeurs.html','Stats des joueurs'],['bhl-records.html','Records']]},
   {label:'Mouvements',items:[['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
