@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/ownership/production-pilot.json'
 FIELDS={'G':['goals'],'A':['assists'],'SOG':['shots','shotsOnGoal'],'Hit':['hits'],'Blk':['blockedShotAttempts','blockedShots'],'Tk':['takeaways'],'FOW':['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'],'W':['wins'],'GA':['goalsAgainst'],'SV':['saves'],'SHO':['shutouts']}
 REVIEWED_ALIASES={'03rfp':['Samuel Montembeault'],'06snb':['Ben Kindel'],'042xv':['Michael Eyssimont'],'03rfo':['Dan Vladar'],'04ajl':['Bo Groulx'],'004jg':['Patrick Maroon'],'01uor':['Chris Tanev'],'02oax':['Vincent Hinostroza'],'02ob1':['Matthew Benning'],'03edx':['Samuel Blais'],'03eer':['Jacob Middleton'],'03rg2':['William Borgen'],'03rga':['Mikhail Vorobyov'],'03w5q':['Joseph Veleno'],'042xm':['Maxime Lajoie'],'04zb8':['Philip Tomasino'],'051tm':['Zac Jones'],'06iml':['Max Tsyplakov'],'031oi':['Zachary Sanford']}
-HISTORICAL_NHL_IDS={}
+HISTORICAL_NHL_IDS={'06iml':'8484958'} # Maxim Tsyplakov; NHL ID independently verified
 NHL_SEASON_ID='20252026'
 REPORTS=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
 def get(url):
