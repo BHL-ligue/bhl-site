@@ -1,5 +1,5 @@
-"""Read-only pilot: compare reconstructed starter points against Fantrax team scores.
-Never publishes a career ranking; missing identities/stats prevent validation.
+"""Read-only season audit. Reconstructed points remain provisional until reconciled.
+Reads public Fantrax lineups and NHL reports; never changes official scores.
 """
 import concurrent.futures as cf
 import datetime as dt
@@ -11,72 +11,123 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/ownership/production-pilot.json'
 FIELDS={'G':['goals'],'A':['assists'],'SOG':['shots','shotsOnGoal'],'Hit':['hits'],'Blk':['blockedShotAttempts','blockedShots'],'Tk':['takeaways'],'FOW':['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'],'W':['wins'],'GA':['goalsAgainst'],'SV':['saves'],'SHO':['shutouts']}
+REVIEWED_ALIASES={'03rfp':['Samuel Montembeault']}
+REPORTS=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
 def get(url):
- req=urllib.request.Request(url,headers={'User-Agent':'BHL-Sync/1.0','Accept':'application/json'})
- with urllib.request.urlopen(req,timeout=30) as response:return json.load(response)
+ request=urllib.request.Request(url,headers={'User-Agent':'BHL-Sync/1.0','Accept':'application/json'})
+ with urllib.request.urlopen(request,timeout=35) as response:return json.load(response)
 def key(name):return ''.join(c for c in unicodedata.normalize('NFD',str(name or '')).lower() if c.isalnum() and not unicodedata.combining(c))
 def number(row,category):
  for field in FIELDS[category]:
   if row and row.get(field) is not None:return float(row[field])
  return None
+def nhl_report(kind,name,start=None,end=None):
+ expr='gameTypeId=2 and seasonId=20252026'
+ if start:expr+=f' and gameDate>="{start}" and gameDate<="{end}"'
+ url='https://api.nhle.com/stats/rest/en/'+kind+'/'+name+'?'+urllib.parse.urlencode({'isAggregate':'true','isGame':'true','start':0,'limit':-1,'cayenneExp':expr})
+ data=get(url);rows=data.get('data',[])
+ if data.get('total')!=len(rows):raise ValueError('Incomplete NHL report '+kind+'/'+name)
+ ids=[str(r['playerId']) for r in rows]
+ if len(ids)!=len(set(ids)):raise ValueError('Multiple NHL rows per player require explicit aggregation')
+ return rows
+def date_window(period,schedules):
+ """Reject a boundary day containing games on both sides of the cutoff."""
+ start=dt.datetime.fromisoformat(period['start']);end=dt.datetime.fromisoformat(period['end'])
+ first=start.date();last=end.date()
+ for boundary,is_start in [(start,True),(end,False)]:
+  date=boundary.date().isoformat();data=schedules[date]
+  day=next((d for d in data.get('gameWeek',[]) if d.get('date')==date),None)
+  if day is None:raise ValueError('NHL schedule date missing: '+date)
+  games=[g for g in day.get('games',[]) if g.get('gameType')==2]
+  times=[dt.datetime.fromisoformat(g['startTimeUTC'].replace('Z','+00:00')) for g in games]
+  included=[t>=boundary if is_start else t<=boundary for t in times]
+  if included and any(included) and not all(included):raise ValueError('Split NHL game day at Fantrax boundary: '+date)
+  if included and not any(included):
+   if is_start:first+=dt.timedelta(days=1)
+   else:last-=dt.timedelta(days=1)
+ if first>last:raise ValueError('Empty calendar window')
+ return first.isoformat(),last.isoformat()
+def resolve_id(pid,position,directory,identities,season_rows):
+ identity=identities.get(pid,{})
+ if identity.get('status')=='confirmed' and identity.get('nhlId'):return str(identity['nhlId']),'existing_confirmed_id'
+ names={key(n) for n in [directory[pid].get('name'),*directory[pid].get('aliases',[]),*REVIEWED_ALIASES.get(pid,[])] if n}
+ kind='goalie' if position=='G' else 'skater'
+ matches={str(r['playerId']) for r in season_rows[kind] if key(r.get('skaterFullName') or r.get('goalieFullName')) in names}
+ return (next(iter(matches)),'unique_official_season_name') if len(matches)==1 else (None,'unresolved')
+def official_scores(data):
+ official={}
+ for matchup in data.get('matchups',[]):
+  for side in ['away','home']:
+   team=matchup[side];tid=team['teamId'];points=float(team['score']);categories={}
+   for category in matchup.get('categories',[]):
+    code=category['shortName'];categories[code]=categories.get(code,0)+float(category.get(side,{}).get('points',0))
+   if tid in official and official[tid]['points']!=points:raise ValueError('Inconsistent official team scores')
+   official[tid]={'points':points,'categoryPoints':categories}
+ if len(official)!=16:raise ValueError('Incomplete Fantrax team scores')
+ return official
+def calculate(period,archive,directory,identities,season_rows,raw,official):
+ n=period['number'];indexed={job:{str(r['playerId']):r for r in rows} for job,rows in raw.items()};configs={}
+ for group in archive['scoring']['settings']:
+  for config in group.get('configs',[]):
+   category=config.get('scoringCategory',{}).get('shortName');pos=config.get('position',{}).get('shortName');points=config.get('points')
+   if category and pos and points is not None:configs[(category,pos)]=float(points)
+ teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items()}
+ for pid,spans in archive['lineups'].items():
+  span=next((s for s in spans if s[0]<=n<=s[1]),None)
+  if not span or span[3]!='ACTIVE':continue
+  _,_,tid,status,pos=span;name=directory[pid]['name'];kind='goalie' if pos=='G' else 'skater';summary=indexed[(kind,'summary')]
+  nhl_id,evidence=resolve_id(pid,pos,directory,identities,season_rows)
+  player={'fantraxId':pid,'name':name,'position':pos,'nhlId':nhl_id,'identityEvidence':evidence,'stats':{},'categoryPoints':{},'points':None}
+  if not nhl_id:player['error']='NHL identity not confirmed'
+  else:
+   categories=['W','GA','SV','SHO','G','A'] if kind=='goalie' else ['G','A','SOG','Hit','Blk','Tk','FOW']
+   no_games=nhl_id not in summary;player['gamesPlayed']=0 if no_games else summary[nhl_id].get('gamesPlayed')
+   for category in categories:
+    weight=configs.get((category,pos),configs.get((category,'Default'),0))
+    if weight==0 or no_games:value=0
+    elif kind=='goalie' or category in ['G','A','SOG']:value=number(summary.get(nhl_id),category)
+    elif category=='FOW':value=number(indexed[('skater','faceoffwins')].get(nhl_id),category)
+    else:value=number(indexed[('skater','realtime')].get(nhl_id),category)
+    player['stats'][category]=value
+    if value is not None:player['categoryPoints'][category]=round(value*weight,4)
+   if all(v is not None for v in player['stats'].values()):player['points']=round(sum(player['categoryPoints'].values()),4)
+   else:player['error']='NHL statistical category missing'
+  team=teams[tid];team['players'].append(player)
+  if player['points'] is None:team['unresolved'].append(pid)
+  else:
+   team['calculated']+=player['points']
+   for c,v in player['categoryPoints'].items():team['calculatedCategoryPoints'][c]=team['calculatedCategoryPoints'].get(c,0)+v
+ for team in teams.values():
+  team['calculated']=round(team['calculated'],4);team['difference']=round(team['calculated']-team['official'],4) if not team['unresolved'] else None
+  team['categoryDifferences']={c:round(team['calculatedCategoryPoints'].get(c,0)-team['officialCategoryPoints'].get(c,0),4) for c in team['calculatedCategoryPoints'].keys()|team['officialCategoryPoints'].keys() if abs(team['calculatedCategoryPoints'].get(c,0)-team['officialCategoryPoints'].get(c,0))>=0.005}
+  team['validated']=not team['unresolved'] and abs(team['difference'])<0.005 and not team['categoryDifferences']
+ return list(teams.values())
 def main():
- report={'status':'pending','season':'2025-26','period':1,'checkedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'scope':'Pilot only: starting lineup, NHL regular-season games 2025-10-07 through 2025-10-12. Not a validated career ranking.'}
+ report={'status':'pending','season':'2025-26','checkedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'scope':'Read-only season audit of starting-lineup contributions, not official individual records or a career ranking.'}
  try:
   archive=json.loads((ROOT/'data/ownership/2025-26.json').read_text());directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=json.loads((ROOT/'data/player-identity-map.json').read_text())['players']
-  period=archive['periods'][0]
-  # This pilot has its own explicitly inspected boundary before Monday's first game.
-  if period['number']!=1 or not period['start'].startswith('2025-10-07') or not period['end'].startswith('2025-10-13T12:29:59'):raise ValueError('Pilot date boundary changed; inspect the NHL schedule before computing')
-  expr='gameTypeId=2 and seasonId=20252026 and gameDate>="2025-10-07" and gameDate<="2025-10-12"'
-  jobs=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
-  def fetch_report(job):
-   kind,name=job;url='https://api.nhle.com/stats/rest/en/'+kind+'/'+name+'?'+urllib.parse.urlencode({'isAggregate':'true','isGame':'true','start':0,'limit':-1,'cayenneExp':expr});data=get(url)
-   if data.get('total')!=len(data.get('data',[])):raise ValueError('Incomplete NHL report '+kind+'/'+name)
-   return job,data['data']
-  with cf.ThreadPoolExecutor(max_workers=4) as pool:raw=dict(pool.map(fetch_report,jobs))
-  indexed={job:{str(r['playerId']):r for r in rows} for job,rows in raw.items()}
-  if any(len(indexed[job])!=len(rows) for job,rows in raw.items()):raise ValueError('NHL report contains multiple rows per player; aggregate them explicitly')
-  report['reports']={kind+'/'+name:{'rows':len(rows),'fields':sorted(rows[0]) if rows else []} for (kind,name),rows in raw.items()}
-  scores=get('https://www.fantrax.com/fxea/general/getMatchupScores?leagueId='+archive['leagueId']+'&period=1');official={}
-  for matchup in scores.get('matchups',[]):
-   for side in ['away','home']:
-    team=matchup[side];tid=team['teamId'];value=float(team['score'])
-    if tid in official and official[tid]!=value:raise ValueError('Inconsistent Fantrax team scores')
-    official[tid]=value
-  if len(official)!=16:raise ValueError('Incomplete Fantrax team scores')
-  configs={}
-  for group in archive['scoring']['settings']:
-   for config in group.get('configs',[]):
-    category=config.get('scoringCategory',{}).get('shortName');pos=config.get('position',{}).get('shortName');points=config.get('points')
-    if category and pos and points is not None:configs[(category,pos)]=float(points)
-  team_results={tid:{'team':t['name'],'official':official.get(tid),'calculated':0,'unresolved':[],'players':[]} for tid,t in archive['teams'].items()}
-  for pid,spans in archive['lineups'].items():
-   span=next((s for s in spans if s[0]<=1<=s[1]),None)
-   if not span or span[3]!='ACTIVE':continue
-   _,_,tid,status,pos=span;name=directory[pid]['name'];goalie=pos=='G';kind='goalie' if goalie else 'skater';summary=indexed[(kind,'summary')];identity=identities.get(pid,{})
-   nhl_id=str(identity.get('nhlId') or '') if identity.get('status')=='confirmed' else ''
-   if not nhl_id:
-    matches=[str(r['playerId']) for r in raw[(kind,'summary')] if key(r.get('skaterFullName') or r.get('goalieFullName'))==key(name)]
-    if len(matches)==1:nhl_id=matches[0]
-   row={'fantraxId':pid,'name':name,'position':pos,'nhlId':nhl_id or None,'stats':{},'points':None}
-   if not nhl_id:row['error']='NHL identity not confirmed for this pilot'
-   else:
-    categories=['W','GA','SV','SHO','G','A'] if goalie else ['G','A','SOG','Hit','Blk','Tk','FOW']
-    no_games=nhl_id not in summary;row['gamesPlayed']=0 if no_games else summary[nhl_id].get('gamesPlayed')
-    for category in categories:
-     weight=configs.get((category,pos),configs.get((category,'Default'),0))
-     if weight==0 or no_games:value=0
-     elif goalie or category in ['G','A','SOG']:value=number(summary.get(nhl_id),category)
-     elif category=='FOW':value=number(indexed[('skater','faceoffwins')].get(nhl_id),category)
-     else:value=number(indexed[('skater','realtime')].get(nhl_id),category)
-     row['stats'][category]=value
-    if all(v is not None for v in row['stats'].values()):row['points']=round(sum(v*configs.get((c,pos),configs.get((c,'Default'),0)) for c,v in row['stats'].items()),4)
-    else:row['error']='NHL statistical category missing'
-   team_results[tid]['players'].append(row)
-   if row['points'] is None:team_results[tid]['unresolved'].append(pid)
-   else:team_results[tid]['calculated']+=row['points']
-  for result in team_results.values():
-   result['calculated']=round(result['calculated'],4);result['difference']=round(result['calculated']-result['official'],4) if not result['unresolved'] else None;result['validated']=not result['unresolved'] and abs(result['difference'])<0.005
-  report['teams']=list(team_results.values());report['validatedTeams']=sum(t['validated'] for t in report['teams']);report['status']='validated_pilot' if report['validatedTeams']==16 else 'needs_review'
+  with cf.ThreadPoolExecutor(max_workers=4) as pool:
+   names=list(pool.map(lambda kind:(kind,nhl_report(kind,'summary')),['skater','goalie']));season_rows=dict(names)
+   dates=sorted({p[k][:10] for p in archive['periods'] for k in ['start','end']})
+   schedules=dict(pool.map(lambda date:(date,get('https://api-web.nhle.com/v1/schedule/'+date)),dates))
+  report['periods']=[];info=get('https://www.fantrax.com/fxea/general/getLeagueInfo?leagueId='+archive['leagueId']+'&excludePlayerInfo=true');first_playoff=info.get('playoffs',{}).get('firstPlayoffPeriod')
+  def audit_period(period):
+   n=period['number'];result={'period':n,'phase':'playoffs' if first_playoff and n>=first_playoff else 'regular','start':period['start'],'end':period['end']}
+   try:
+    if not period['available']:raise ValueError('Roster archive missing')
+    start,end=date_window(period,schedules);result['nhlDateStart']=start;result['nhlDateEnd']=end
+    raw={job:nhl_report(*job,start,end) for job in REPORTS}
+    scores=get('https://www.fantrax.com/fxea/general/getMatchupScores?leagueId='+archive['leagueId']+'&period='+str(n))
+    if scores.get('period')!=n:raise ValueError('Wrong Fantrax scoring period')
+    result['teams']=calculate(period,archive,directory,identities,season_rows,raw,official_scores(scores));result['validatedTeams']=sum(t['validated'] for t in result['teams']);result['status']='validated' if result['validatedTeams']==16 else 'needs_review'
+   except Exception as error:result['status']='blocked';result['error']=type(error).__name__+': '+str(error)
+   print('AUDIT_PERIOD',json.dumps({k:v for k,v in result.items() if k!='teams'},ensure_ascii=False),flush=True)
+   return result
+  with cf.ThreadPoolExecutor(max_workers=3) as pool:report['periods']=sorted(pool.map(audit_period,archive['periods']),key=lambda p:p['period'])
+  report['totalPeriods']=len(report['periods']);report['checkedPeriods']=sum('teams' in p for p in report['periods']);report['validatedPeriods']=sum(p['status']=='validated' for p in report['periods']);report['validatedTeamPeriods']=sum(p.get('validatedTeams',0) for p in report['periods']);report['teamPeriods']=16*report['totalPeriods'];report['status']='validated_season' if report['validatedTeamPeriods']==report['teamPeriods'] else 'needs_review'
+  report['remaining']=[{'period':p['period'],'team':t['team'],'difference':t['difference'],'unresolved':t['unresolved'],'categories':t['categoryDifferences']} for p in report['periods'] for t in p.get('teams',[]) if not t['validated']]
  except Exception as error:report['status']='blocked';report['error']=type(error).__name__+': '+str(error)
- OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k not in ['teams','reports']},ensure_ascii=False))
+ OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+ print('AUDIT_SUMMARY',json.dumps({k:v for k,v in report.items() if k not in ['periods','remaining']},ensure_ascii=False),flush=True)
+ for row in report.get('remaining',[]):print('AUDIT_REMAINING',json.dumps(row,ensure_ascii=False),flush=True)
 if __name__=='__main__':main()

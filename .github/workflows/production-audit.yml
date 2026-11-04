@@ -1,10 +1,11 @@
-name: Contrôle pilote de la production BHL
+name: Contrôle de la production BHL 2025-26
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'scripts/audit-bhl-production.py'
+      - 'tests/test-production-audit.py'
       - '.github/workflows/production-audit.yml'
 permissions:
   contents: read
@@ -14,26 +15,18 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Contrôler une période complète avant tout classement historique
+      - name: Vérifier les règles du calcul
+        run: python tests/test-production-audit.py
+      - name: Comparer les partants aux scores Fantrax pour toute la saison
         run: python scripts/audit-bhl-production.py
-      - name: Résumé du contrôle
-        run: |
-          python - <<'PY'
-          import json
-          report=json.load(open('data/ownership/production-pilot.json'))
-          print('PILOT_SUMMARY',json.dumps({k:v for k,v in report.items() if k not in ['teams','reports']},ensure_ascii=False))
-          for team in report.get('teams',[]):
-            print('PILOT_TEAM',json.dumps({k:v for k,v in team.items() if k!='players'},ensure_ascii=False))
-          print('PILOT_REPORTS',json.dumps(report.get('reports',{})))
-          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: bhl-production-pilot
+          name: bhl-production-audit-2025-26
           path: data/ownership/production-pilot.json
           retention-days: 7
