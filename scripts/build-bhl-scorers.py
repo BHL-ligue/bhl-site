@@ -80,7 +80,7 @@ def main():
     for player in team.get('players',[]):
      if player.get('points') is None:continue
      starts.append({'id':player['fantraxId'],'name':player.get('name') or directory.get(player['fantraxId'],{}).get('name'),'season':report['season'],'phase':period['phase'],'period':period['period'],'team':team['team'],'position':player['position'],'kind':'goalie' if player['position']=='G' else 'skater','fpts':player['points'],'gp':player.get('gamesPlayed') or 0,'goals':player.get('stats',{}).get('G') or 0,'assists':player.get('stats',{}).get('A') or 0,'stats':player.get('stats',{}),'review':not team.get('validated',False)})
- (out/'starts.json').write_text(json.dumps({'schemaVersion':1,'status':'provisional','rows':starts},ensure_ascii=False,separators=(',',':'))+'\\n')
+ (out/'starts.json').write_text(json.dumps({'schemaVersion':1,'status':'provisional','rows':starts},ensure_ascii=False,separators=(',',':')))
  rows,coverage=aggregate(reports,directory)
  report_diagnostics=diagnostics(reports)
  (out/'diagnostics.json').write_text(json.dumps(report_diagnostics,ensure_ascii=False,indent=2)+'\n')
