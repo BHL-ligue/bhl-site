@@ -53,6 +53,9 @@ def public_archived_names(missing):
 
 def main():
  path=ROOT/"data/ownership/players.json";directory=json.loads(path.read_text());missing={pid for pid,p in directory["players"].items() if not p.get("name")}
+ if not missing:
+  print("IDENTITY_RECOVERY: all archived player names already resolved",flush=True)
+  return
  report={"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"requestedIds":sorted(missing),"matches":{},"sources":[],"unresolved":[]}
  found={}
  print("Authenticated Fantrax session configured:",bool(os.environ.get("FANTRAX_COOKIE","").strip()),flush=True)

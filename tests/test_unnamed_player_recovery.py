@@ -18,6 +18,15 @@ class RecoveryTests(unittest.TestCase):
   with patch.object(recovery.urllib.request,"urlopen",side_effect=response):
    result=recovery.public_archived_names({"correct","wrong"})
   self.assertEqual(set(result),{"correct"})
+ def test_complete_archive_keeps_recovery_evidence(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);(root/"data/ownership").mkdir(parents=True)
+   (root/"data/ownership/players.json").write_text(json.dumps({"players":{"known":{"name":"Existing"}}}))
+   report=root/"data/ownership/identity-recovery.json";report.write_text('{"matches":{"known":{"name":"Existing"}}}')
+   with patch.object(recovery,"ROOT",root),patch.object(recovery,"public_archived_names") as external:
+    recovery.main()
+   external.assert_not_called()
+   self.assertIn("known",json.loads(report.read_text())["matches"])
  def test_names_only_change_scoring_rows(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=Path(tmp);(root/"data/ownership").mkdir(parents=True);(root/"data/production").mkdir()
