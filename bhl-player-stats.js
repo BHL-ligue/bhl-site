@@ -378,19 +378,30 @@ function tradeHistory(name,target){
    if(allMoves.length){
     const detail=el('div','bhl-trade-full');
     detail.append(el('div','bhl-trade-full-title','TRANSACTION COMPLÈTE'));
+    // Regrouper chaque élément sous l'équipe qui le reçoit.
     const groups=new Map();
     for(const move of allMoves){
-     const direction=(move.from||'Équipe inconnue')+' → '+(move.to||'Équipe inconnue');
-     if(!groups.has(direction))groups.set(direction,{from:move.from,to:move.to,assets:[]});
-     if(move.asset&&!groups.get(direction).assets.includes(move.asset))groups.get(direction).assets.push(move.asset);
+     const receiver=move.to||'Équipe inconnue';
+     const key=norm(receiver);
+     if(!groups.has(key))groups.set(key,{team:receiver,assets:[]});
+     if(move.asset&&!groups.get(key).assets.includes(move.asset))groups.get(key).assets.push(move.asset);
     }
+    const columns=el('div','bhl-trade-full-columns');
     for(const group of groups.values()){
-     const line=el('div','bhl-trade-full-group');
-     const teamLine=el('div','bhl-trade-full-teams');
-     teamLine.append(el('strong','',group.from||'Équipe inconnue'),el('span','',' → '),el('strong','',group.to||'Équipe inconnue'));
-     line.append(teamLine,el('div','bhl-trade-full-assets',group.assets.join(' · ')||'Détails non disponibles'));
-     detail.append(line);
+     const column=el('div','bhl-trade-full-column');
+     const header=el('div','bhl-trade-full-team');
+     const logo=teamLogo(group.team);
+     if(logo){const img=el('img','bhl-trade-full-logo');img.src='logos/'+logo;img.alt='';img.loading='lazy';img.onerror=()=>img.remove();header.append(img)}
+     header.append(el('strong','',group.team));
+     column.append(header);
+     const assets=el('div','bhl-trade-full-assets');
+     for(const asset of group.assets.length?group.assets:['Détails non disponibles']){
+      assets.append(el('div','bhl-trade-asset',asset));
+     }
+     column.append(assets);
+     columns.append(column);
     }
+    detail.append(columns);
     card.append(detail);
    }
    list.append(card);
