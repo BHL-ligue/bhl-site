@@ -57,9 +57,20 @@ async function bhlLookupOfficialId(player,id){
  }
  return bhlNhlLookupCache.get(cacheKey);
 }
+let bhlOfficialSnapshotRequest;
+function bhlOfficialSnapshot(){
+ return bhlOfficialSnapshotRequest||(bhlOfficialSnapshotRequest=fetch('data/nhl-profile-stats.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Instantané LNH indisponible');return r.json()}).catch(()=>{bhlOfficialSnapshotRequest=null;return null}));
+}
 async function bhlCurrentOfficialStats(player,id){
  const nhlId=await bhlLookupOfficialId(player,id);
  if(!nhlId)return null;
+ const snapshot=await bhlOfficialSnapshot();
+ if(snapshot?.season==='20262027'&&snapshot.players){
+  const stored=snapshot.players[String(nhlId)];
+  if(stored)return {...stored,updatedAt:snapshot.updatedAt};
+  const goalie=!!player.goalie,keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
+  return {goalie,nhlTeam:player.nhlTeam||'',stats:{...Object.fromEntries(keys.map(k=>[k,0])),GP:0,FPts:0,'FP/G':null},usage:{TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'},noGames:true,updatedAt:snapshot.updatedAt};
+ }
  const goalie=!!player.goalie;
  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
  const season='20262027';
@@ -130,12 +141,12 @@ async function fill(target,id,name){
   target.innerHTML=table(official,{period:'Saison régulière 2026-27'});
   if(!official.goalie){
    const nhlId=await bhlLookupOfficialId(resolved.player,resolved.id);
-   const usage=await bhlSeasonUsage(nhlId,'20262027','',false,official.stats.GP);
+   const usage=official.usage||await bhlSeasonUsage(nhlId,'20262027','',false,official.stats.GP);
    if(target.isConnected){const cells=target.querySelectorAll('.bhl-player-table tbody tr td');
     ['TOIPP','TOIPK','TOI'].forEach((key,i)=>{if(cells[cells.length-3+i])cells[cells.length-3+i].textContent=usage[key]});}
   }
   const source=target.querySelector('.bhl-player-source');
-  if(source)source.textContent='Source : statistiques officielles LNH, FPTS et FP/G calculés selon le barème BHL. Actualisation à chaque ouverture de la fiche.';
+  if(source)source.textContent='Source : statistiques officielles LNH, FPTS et FP/G calculés selon le barème BHL.'+(official.updatedAt?' Mise à jour : '+new Date(official.updatedAt).toLocaleString('fr-CA',{timeZone:'America/Toronto'})+'.':'')+(official.noGames?' Aucun match de saison régulière LNH cette saison.':'')+(official.missing?.length?' FPTS et FP/G en attente : certaines statistiques officielles sont manquantes.':'');
  }catch(error){
   console.warn('Calcul officiel LNH indisponible',error);
   if(target.isConnected)target.innerHTML='<p>Statistiques officielles LNH temporairement indisponibles. Aucun ancien total Fantrax affiché.</p>';
@@ -858,7 +869,7 @@ function bhlApplyTeamIdentity(dialog,team){
  return true;
 }
 function bhlResolvePlayerId(id,name,source){
- if(id)return String(id);
+ if(id)return String(id).replaceAll('*','');
  if(norm(name)!=='eliaspettersson')return id;
  const team=bhlTeamKey(source?.dataset?.bhlTeam||source?.closest?.('[data-bhl-team],[data-team-name]')?.dataset?.bhlTeam||source?.closest?.('[data-team-name]')?.dataset?.teamName||document.querySelector('.teamchip.active')?.title||'');
  if(team==='quebec nordiques')return '048x9';
@@ -871,7 +882,17 @@ function bhlSpecificNhlId(id,name){
 }
 let bhlIdentityDirectoryRequest;
 function bhlIdentityDirectory(){
- return bhlIdentityDirectoryRequest||(bhlIdentityDirectoryRequest=fetch('data/player-identity-map.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Répertoire indisponible');return r.json()}).catch(e=>{bhlIdentityDirectoryRequest=null;throw e}));
+ return bhlIdentityDirectoryRequest||(bhlIdentityDirectoryRequest=Promise.all([
+  fetch('data/player-identity-map.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Répertoire indisponible');return r.json()}),
+  fetch('data/historical-player-identities.json',{cache:'no-store'}).then(r=>r.ok?r.json():{players:{}}).catch(()=>({players:{}}))
+ ]).then(([current,historical])=>{
+  const players={...historical.players};
+  for(const [id,entry] of Object.entries(current.players||{})){
+   const verified=players[id];
+   players[id]=entry.status==='confirmed'||verified?.status!=='confirmed'?entry:{...entry,nhlId:verified.nhlId,nhlName:verified.nhlName,status:'confirmed'};
+  }
+  return {...current,players};
+ }).catch(e=>{bhlIdentityDirectoryRequest=null;throw e}));
 }
 const BHL_NHL_ID_BY_FANTRAX={'03rgk':8478851,'048x9':8480012,'060v8':8483678};
 const BHL_NHL_NAME_ALIASES={'alexcarrier':'Alexandre Carrier'};

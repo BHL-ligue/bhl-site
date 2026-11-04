@@ -9,7 +9,7 @@ function ensurePlayerProfile(){
  if(!document.querySelector('script[src^="bhl-trades.js"]')){
   const trades=document.createElement('script');trades.src='bhl-trades.js?v=global3';document.head.append(trades);
  }
- if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=bhl-team-badges-20261104';document.head.append(script)}
+ if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=official-profiles2';document.head.append(script)}
  if(!document.querySelector('script[src^="bhl-player-links.js"]')){const links=document.createElement('script');links.src='bhl-player-links.js?v=20261104';document.head.append(links)}
 }
 function ensureTableVisuals(){
