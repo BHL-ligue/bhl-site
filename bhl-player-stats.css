@@ -223,3 +223,7 @@
  .bhl-trade-full-column .bhl-trade-asset{font-size:10px;line-height:1.3;padding:5px 0;overflow-wrap:anywhere}
 }
 @media(max-width:360px){.bhl-trade-full-team{font-size:8px}.bhl-trade-full-column .bhl-trade-asset{font-size:9px}}
+
+/* Entête des statistiques : séparateurs ton sur ton, sans lignes grises. */
+.bhl-player-dialog .bhl-player-table thead th{border-right:1px solid var(--profile-accent,#cc0000)!important;border-left:0!important;border-top:0!important;border-bottom:0!important}
+.bhl-player-dialog .bhl-player-table thead th:last-child{border-right:0!important}
