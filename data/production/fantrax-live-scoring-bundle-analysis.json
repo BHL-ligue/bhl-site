@@ -1,0 +1,65 @@
+{
+  "source": "https://www.fantrax.com/main-C4DPXOYQ.js",
+  "status": "diagnostic_only",
+  "keywords": {
+    "getLiveScoring": {
+      "occurrences": 1,
+      "contexts": [
+        "score`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`getFantasyLeagueInfo`,`getFantasyTeams`,`getLiveDraft`,`getLiveScoringStats`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`getScoresSummaryData`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsIn"
+      ]
+    },
+    "liveScoring": {
+      "occurrences": 18,
+      "contexts": [
+        "E_RESTORE_EXPIRE_AFTER:504e5,KLIPY_APP_KEY:`KnWAiNfkTGTji6i2Xzc5YJg1NUVwb6Y5S4kJL6hHIOb9OGTChrDx4ZlFY2gUaacg`,LIVESCORING_DEFAULT_RELOAD_TIME:60,MARKETING_REF_LIST:[`10115`,`10117`,`10118`,`10119`,`10120`,`10121`,`10122`,`10123`,`10124`,`10125`,`10126`,`10127`,`10128`,`10129`,`10130`,`1013",
+        "AYER_PICKER:n=>[...Se,n,`player-picker`],FANTASY_STANDINGS:n=>[...Se,n,`standings`],LIVE_SCORING:n=>[...Se,n,`livescoring`],MATCHUP_PREVIEW:n=>[...Se,n,`projected-scoring`],LEAGUE_RULES_SUMMARY:n=>[...Se,n,`rules`],PENDING_TRANSACTIONS:n=>[...Se,n,`transactions`,`pending`],PENDING_TRANSACT",
+        "re`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`getFantasyLeagueInfo`,`getFantasyTeams`,`getLiveDraft`,`getLiveScoringStats`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`getScoresSummaryData`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsInfo`",
+        "ull;let m=`Others`;l.includes(`/team/roster`)?m=`Team_roster`:l.includes(`/players`)?m=`Players`:l.includes(`/livescoring`)||l.includes(`/matchup`)?m=`Matchups`:l.includes(`/home`)?m=`League_home`:l.includes(`/player/`)&&(m=`Player_profile`);let _=/FX_I/.test(navigator.userAgent)?`IOS`:`AN",
+        "SCREEN_CHAT`,n[n.SCREEN_TEAM_ROSTER=7]=`SCREEN_TEAM_ROSTER`,n[n.SCREEN_PLAYERS=8]=`SCREEN_PLAYERS`,n[n.SCREEN_LIVESCORING=9]=`SCREEN_LIVESCORING`,n[n.SCREEN_DRAFT=10]=`SCREEN_DRAFT`,n[n.SCREEN_LEAGUE_HOME=11]=`SCREEN_LEAGUE_HOME`,n[n.SCREEN_TREASURER_PAYMENT=12]=`SCREEN_TREASURER_PAYMENT`,",
+        "_TEAM_ROSTER=7]=`SCREEN_TEAM_ROSTER`,n[n.SCREEN_PLAYERS=8]=`SCREEN_PLAYERS`,n[n.SCREEN_LIVESCORING=9]=`SCREEN_LIVESCORING`,n[n.SCREEN_DRAFT=10]=`SCREEN_DRAFT`,n[n.SCREEN_LEAGUE_HOME=11]=`SCREEN_LEAGUE_HOME`,n[n.SCREEN_TREASURER_PAYMENT=12]=`SCREEN_TREASURER_PAYMENT`,n[n.SCREEN_PREMIUM_PAYM",
+        "cation.pathname;return n.includes(`/team/roster`)?`Team_roster`:n.includes(`/players`)?`Players`:n.includes(`/livescoring`)||n.includes(`/matchup`)?`Matchups`:n.includes(`/home`)?`League_home`:n.includes(`/player/`)?`Player_profile`:`Others`}var zu=class zu{constructor(i,t,e,o,r,a,l,c,m){t",
+        "cation.pathname;return n.includes(`/team/roster`)?`Team_roster`:n.includes(`/players`)?`Players`:n.includes(`/livescoring`)||n.includes(`/matchup`)?`Matchups`:n.includes(`/home`)?`League_home`:n.includes(`/player/`)?`Player_profile`:`Others`}var Zc=(()=>{let i=class i{constructor(e,o,r,a){"
+      ]
+    },
+    "livescoring": {
+      "occurrences": 18,
+      "contexts": [
+        "E_RESTORE_EXPIRE_AFTER:504e5,KLIPY_APP_KEY:`KnWAiNfkTGTji6i2Xzc5YJg1NUVwb6Y5S4kJL6hHIOb9OGTChrDx4ZlFY2gUaacg`,LIVESCORING_DEFAULT_RELOAD_TIME:60,MARKETING_REF_LIST:[`10115`,`10117`,`10118`,`10119`,`10120`,`10121`,`10122`,`10123`,`10124`,`10125`,`10126`,`10127`,`10128`,`10129`,`10130`,`1013",
+        "AYER_PICKER:n=>[...Se,n,`player-picker`],FANTASY_STANDINGS:n=>[...Se,n,`standings`],LIVE_SCORING:n=>[...Se,n,`livescoring`],MATCHUP_PREVIEW:n=>[...Se,n,`projected-scoring`],LEAGUE_RULES_SUMMARY:n=>[...Se,n,`rules`],PENDING_TRANSACTIONS:n=>[...Se,n,`transactions`,`pending`],PENDING_TRANSACT",
+        "re`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`getFantasyLeagueInfo`,`getFantasyTeams`,`getLiveDraft`,`getLiveScoringStats`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`getScoresSummaryData`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsInfo`",
+        "ull;let m=`Others`;l.includes(`/team/roster`)?m=`Team_roster`:l.includes(`/players`)?m=`Players`:l.includes(`/livescoring`)||l.includes(`/matchup`)?m=`Matchups`:l.includes(`/home`)?m=`League_home`:l.includes(`/player/`)&&(m=`Player_profile`);let _=/FX_I/.test(navigator.userAgent)?`IOS`:`AN",
+        "SCREEN_CHAT`,n[n.SCREEN_TEAM_ROSTER=7]=`SCREEN_TEAM_ROSTER`,n[n.SCREEN_PLAYERS=8]=`SCREEN_PLAYERS`,n[n.SCREEN_LIVESCORING=9]=`SCREEN_LIVESCORING`,n[n.SCREEN_DRAFT=10]=`SCREEN_DRAFT`,n[n.SCREEN_LEAGUE_HOME=11]=`SCREEN_LEAGUE_HOME`,n[n.SCREEN_TREASURER_PAYMENT=12]=`SCREEN_TREASURER_PAYMENT`,",
+        "_TEAM_ROSTER=7]=`SCREEN_TEAM_ROSTER`,n[n.SCREEN_PLAYERS=8]=`SCREEN_PLAYERS`,n[n.SCREEN_LIVESCORING=9]=`SCREEN_LIVESCORING`,n[n.SCREEN_DRAFT=10]=`SCREEN_DRAFT`,n[n.SCREEN_LEAGUE_HOME=11]=`SCREEN_LEAGUE_HOME`,n[n.SCREEN_TREASURER_PAYMENT=12]=`SCREEN_TREASURER_PAYMENT`,n[n.SCREEN_PREMIUM_PAYM",
+        "cation.pathname;return n.includes(`/team/roster`)?`Team_roster`:n.includes(`/players`)?`Players`:n.includes(`/livescoring`)||n.includes(`/matchup`)?`Matchups`:n.includes(`/home`)?`League_home`:n.includes(`/player/`)?`Player_profile`:`Others`}var zu=class zu{constructor(i,t,e,o,r,a,l,c,m){t",
+        "cation.pathname;return n.includes(`/team/roster`)?`Team_roster`:n.includes(`/players`)?`Players`:n.includes(`/livescoring`)||n.includes(`/matchup`)?`Matchups`:n.includes(`/home`)?`League_home`:n.includes(`/player/`)?`Player_profile`:`Others`}var Zc=(()=>{let i=class i{constructor(e,o,r,a){"
+      ]
+    },
+    "getMatchupScores": {
+      "occurrences": 0,
+      "contexts": []
+    },
+    "getMatchup": {
+      "occurrences": 0,
+      "contexts": []
+    },
+    "matchupId": {
+      "occurrences": 0,
+      "contexts": []
+    },
+    "fxea/": {
+      "occurrences": 0,
+      "contexts": []
+    }
+  },
+  "endpointCandidates": [
+    "/livescoring",
+    "LIVESCORING",
+    "LIVESCORING_DEFAULT_RELOAD_TIME",
+    "LeagueLivescoringModule",
+    "SCREEN_LIVESCORING",
+    "getLiveScoringStats",
+    "livescoring"
+  ],
+  "httpStatus": 200,
+  "bytesInspected": 2668882
+}
