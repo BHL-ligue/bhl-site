@@ -1,0 +1,53 @@
+name: Récupérer les noms Fantrax historiques
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/recover-unnamed-fantrax-players.py'
+      - '.github/workflows/recover-unnamed-players.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: bhl-unnamed-player-recovery
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrouver les noms dans les listes historiques
+        run: python scripts/recover-unnamed-fantrax-players.py
+      - name: Confirmer les identités LNH et reconstruire les liens des profils
+        run: |
+          python scripts/sync-nhl-player-profiles.py
+          python scripts/build-home-leaders.py
+      - name: Publier les identités récupérées
+        run: |
+          git config user.name "BHL Identity Recovery"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ownership/players.json data/ownership/identity-recovery.json data/production/scorers.json data/historical-player-identities.json data/nhl-profile-stats.json data/player-profile-audit.json data/home-top-scorers.json data/player-profile-index.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Nommer les joueurs historiques retrouvés dans Fantrax"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" -eq 5 ]; then exit 1; fi
+            done
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deploy
