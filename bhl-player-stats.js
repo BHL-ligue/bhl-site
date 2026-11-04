@@ -368,12 +368,7 @@ function tradeHistory(name,target){
    const id=el('span','bhl-trade-id','ÉCHANGE Nº '+t.id);
    head.append(date,id);
    if(t.season)head.append(el('span','bhl-trade-season',t.season));
-   const route=el('div','bhl-trade-route');
-   const from=el('div','bhl-trade-end');from.append(el('small','','DE'),org(m.from));
-   const arrow=el('span','bhl-trade-arrow','→');arrow.setAttribute('aria-label','vers');
-   const to=el('div','bhl-trade-end');to.append(el('small','','VERS'),org(m.to));
-   route.append(from,arrow,to);
-   card.append(head,route);
+   card.append(head);
    const allMoves=t.moves||[];
    if(allMoves.length){
     const detail=el('div','bhl-trade-full');
