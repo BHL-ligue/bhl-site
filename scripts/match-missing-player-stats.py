@@ -13,7 +13,8 @@ missing=sorted({pid for m in diag['mismatches'] for pid in m.get('unresolved',[]
 result={'status':'hypotheses_only','method':'official Fantrax category totals minus known starter category points; compare to NHL per-period stats','candidates':{},'errors':[]}
 for season in ('2018-19','2019-20'):
  try:
-  report=json.loads((ROOT/'data/production/audits'/f'{season}.json').read_text())
+  audit.OUT=ROOT/'data/production'/f'temporary-audit-{season}.json'
+  report=audit.main(season,completed_only=True)
   for p in report.get('periods',[]):
    if not p.get('teams'):continue
    unresolved_teams=[t for t in p['teams'] if len(t.get('unresolved',[]))==1 and t['unresolved'][0] in missing]
