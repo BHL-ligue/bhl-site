@@ -1,0 +1,6766 @@
+{
+  "schemaVersion": 1,
+  "status": "diagnostic_only",
+  "seasons": [
+    {
+      "season": "2018-19",
+      "compared": 382,
+      "matching": 338,
+      "mismatches": 44,
+      "unresolvedPlayerPeriods": 44,
+      "scoreDifferencePeriods": 0,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2019-20",
+      "compared": 350,
+      "matching": 337,
+      "mismatches": 13,
+      "unresolvedPlayerPeriods": 10,
+      "scoreDifferencePeriods": 3,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2020-21",
+      "compared": 222,
+      "matching": 213,
+      "mismatches": 9,
+      "unresolvedPlayerPeriods": 2,
+      "scoreDifferencePeriods": 7,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2021-22",
+      "compared": 350,
+      "matching": 318,
+      "mismatches": 32,
+      "unresolvedPlayerPeriods": 2,
+      "scoreDifferencePeriods": 30,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2022-23",
+      "compared": 366,
+      "matching": 356,
+      "mismatches": 10,
+      "unresolvedPlayerPeriods": 5,
+      "scoreDifferencePeriods": 5,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2023-24",
+      "compared": 382,
+      "matching": 101,
+      "mismatches": 281,
+      "unresolvedPlayerPeriods": 0,
+      "scoreDifferencePeriods": 281,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2024-25",
+      "compared": 366,
+      "matching": 331,
+      "mismatches": 35,
+      "unresolvedPlayerPeriods": 17,
+      "scoreDifferencePeriods": 18,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2025-26",
+      "compared": 350,
+      "matching": 337,
+      "mismatches": 13,
+      "unresolvedPlayerPeriods": 0,
+      "scoreDifferencePeriods": 13,
+      "categoryOnlyPeriods": 0
+    },
+    {
+      "season": "2026-27",
+      "compared": 80,
+      "matching": 74,
+      "mismatches": 6,
+      "unresolvedPlayerPeriods": 1,
+      "scoreDifferencePeriods": 5,
+      "categoryOnlyPeriods": 0
+    }
+  ],
+  "categoryFrequency": {
+    "Hit": 348,
+    "SOG": 117,
+    "Blk": 69,
+    "SV": 50,
+    "Tk": 40,
+    "A": 37,
+    "FOW": 34,
+    "G": 24,
+    "GA": 10,
+    "W": 8
+  },
+  "mismatches": [
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 3,
+      "team": "Toronto Maple Leafs",
+      "official": 131.95,
+      "calculated": 127.35,
+      "difference": null,
+      "unresolved": [
+        "01f61"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Blk": -0.6,
+        "Hit": -0.3,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 3,
+      "team": "California Golden Seals",
+      "official": 132.75,
+      "calculated": 132.65,
+      "difference": null,
+      "unresolved": [
+        "03rga"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 3,
+      "team": "Nashville Predators",
+      "official": 155.3,
+      "calculated": 153.3,
+      "difference": null,
+      "unresolved": [
+        "003mh"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.4,
+        "Blk": -0.4,
+        "Hit": -0.6,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 4,
+      "team": "Toronto Maple Leafs",
+      "official": 106.0,
+      "calculated": 104.5,
+      "difference": null,
+      "unresolved": [
+        "0045o"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": -0.7,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 4,
+      "team": "Atlanta Thrashers",
+      "official": 126.8,
+      "calculated": 122.7,
+      "difference": null,
+      "unresolved": [
+        "003jc"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.1,
+        "Blk": -0.2,
+        "Hit": -0.4,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 4,
+      "team": "Detroit Cougars",
+      "official": 134.5,
+      "calculated": 119.6,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.1,
+        "G": -9.0,
+        "SOG": -3.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 5,
+      "team": "Toronto Maple Leafs",
+      "official": 120.45,
+      "calculated": 120.45,
+      "difference": null,
+      "unresolved": [
+        "0045o"
+      ],
+      "categoryDifferences": {},
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 5,
+      "team": "Atlanta Thrashers",
+      "official": 167.25,
+      "calculated": 162.15,
+      "difference": null,
+      "unresolved": [
+        "003jc"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "G": -3.0,
+        "Blk": -0.2,
+        "Hit": -0.6,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 5,
+      "team": "Detroit Cougars",
+      "official": 162.45,
+      "calculated": 143.45,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "G": -9.0,
+        "Blk": -0.1,
+        "Hit": -0.1,
+        "SOG": -4.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 5,
+      "team": "Nashville Predators",
+      "official": 140.4,
+      "calculated": 136.5,
+      "difference": null,
+      "unresolved": [
+        "003mh"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.1,
+        "Blk": -0.5,
+        "Hit": -0.2,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 6,
+      "team": "Atlanta Thrashers",
+      "official": 158.2,
+      "calculated": 156.0,
+      "difference": null,
+      "unresolved": [
+        "003jc"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "Hit": -0.3,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 6,
+      "team": "Detroit Cougars",
+      "official": 155.75,
+      "calculated": 151.85,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Blk": -0.2,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 6,
+      "team": "Nashville Predators",
+      "official": 167.6,
+      "calculated": 161.1,
+      "difference": null,
+      "unresolved": [
+        "003mh"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Blk": -0.7,
+        "Hit": -0.2,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 7,
+      "team": "Atlanta Thrashers",
+      "official": 114.7,
+      "calculated": 111.9,
+      "difference": null,
+      "unresolved": [
+        "003jc"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 7,
+      "team": "Detroit Cougars",
+      "official": 160.15,
+      "calculated": 153.75,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -3.0,
+        "Blk": -0.2,
+        "Hit": -0.1,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 8,
+      "team": "Detroit Cougars",
+      "official": 190.75,
+      "calculated": 185.55,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Blk": -0.1,
+        "Hit": -0.2,
+        "SOG": -2.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 10,
+      "team": "Winnipeg Jets",
+      "official": 153.9,
+      "calculated": 147.85,
+      "difference": null,
+      "unresolved": [
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.5,
+        "FOW": -1.55,
+        "Blk": -0.3,
+        "Hit": -1.3,
+        "SOG": -2.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 11,
+      "team": "Winnipeg Jets",
+      "official": 179.9,
+      "calculated": 173.9,
+      "difference": null,
+      "unresolved": [
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "FOW": -1.1,
+        "G": -3.0,
+        "Hit": -0.4,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 12,
+      "team": "New York Rangers",
+      "official": 136.4,
+      "calculated": 129.3,
+      "difference": null,
+      "unresolved": [
+        "0040f"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -3.0,
+        "Blk": -0.2,
+        "Hit": -0.2,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 12,
+      "team": "Winnipeg Jets",
+      "official": 160.2,
+      "calculated": 156.8,
+      "difference": null,
+      "unresolved": [
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "FOW": -1.1,
+        "Blk": -0.3,
+        "Hit": -0.3,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 13,
+      "team": "New York Rangers",
+      "official": 110.25,
+      "calculated": 108.45,
+      "difference": null,
+      "unresolved": [
+        "0040f"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.5,
+        "Hit": -0.7,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 13,
+      "team": "Anaheim Mighty Ducks",
+      "official": 81.65,
+      "calculated": 80.95,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.1,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 13,
+      "team": "Winnipeg Jets",
+      "official": 107.3,
+      "calculated": 105.9,
+      "difference": null,
+      "unresolved": [
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "FOW": -0.2,
+        "Blk": -0.1,
+        "Hit": -0.6,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 14,
+      "team": "Anaheim Mighty Ducks",
+      "official": 163.9,
+      "calculated": 162.3,
+      "difference": null,
+      "unresolved": [
+        "003hb"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.1,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 14,
+      "team": "Winnipeg Jets",
+      "official": 149.6,
+      "calculated": 142.25,
+      "difference": null,
+      "unresolved": [
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.3,
+        "FOW": -1.25,
+        "Blk": -0.2,
+        "Hit": -0.7,
+        "SOG": -2.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 15,
+      "team": "Anaheim Mighty Ducks",
+      "official": 121.85,
+      "calculated": 107.5,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -7.5,
+        "Tk": -0.1,
+        "FOW": -0.65,
+        "G": -3.0,
+        "Hit": -0.4,
+        "SOG": -2.7
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 15,
+      "team": "Edmonton Oilers",
+      "official": 192.35,
+      "calculated": 178.75,
+      "difference": null,
+      "unresolved": [
+        "003i5"
+      ],
+      "categoryDifferences": {
+        "SV": -11.6,
+        "W": -8.0,
+        "GA": 6.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 16,
+      "team": "Anaheim Mighty Ducks",
+      "official": 129.25,
+      "calculated": 118.95,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -7.5,
+        "Tk": -0.2,
+        "Blk": -0.5,
+        "Hit": -0.6,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 16,
+      "team": "Vegas Golden Knights",
+      "official": 148.8,
+      "calculated": 141.8,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "G": -3.0,
+        "Blk": -1.6,
+        "Hit": -0.2,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 17,
+      "team": "Anaheim Mighty Ducks",
+      "official": 70.05,
+      "calculated": 69.45,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Hit": -0.3,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 18,
+      "team": "Anaheim Mighty Ducks",
+      "official": 64.6,
+      "calculated": 59.2,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "G": -3.0,
+        "Blk": -0.1,
+        "Hit": -0.7,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 18,
+      "team": "Vegas Golden Knights",
+      "official": 110.85,
+      "calculated": 105.75,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Blk": -0.8,
+        "Hit": -0.3,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 19,
+      "team": "Anaheim Mighty Ducks",
+      "official": 195.4,
+      "calculated": 181.2,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -6.0,
+        "Blk": -0.4,
+        "Hit": -0.8,
+        "SOG": -4.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 19,
+      "team": "Edmonton Oilers",
+      "official": 224.55,
+      "calculated": 224.15,
+      "difference": null,
+      "unresolved": [
+        "01dr6"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.1,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 19,
+      "team": "Vegas Golden Knights",
+      "official": 177.6,
+      "calculated": 172.9,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "Blk": -1.4,
+        "Hit": -0.1,
+        "SOG": -3.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 20,
+      "team": "Anaheim Mighty Ducks",
+      "official": 172.45,
+      "calculated": 162.75,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.2,
+        "G": -3.0,
+        "Blk": -0.1,
+        "Hit": -0.3,
+        "SOG": -3.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 20,
+      "team": "Vegas Golden Knights",
+      "official": 172.0,
+      "calculated": 164.6,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Tk": -0.1,
+        "Blk": -0.8,
+        "Hit": -0.3,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 21,
+      "team": "Anaheim Mighty Ducks",
+      "official": 187.35,
+      "calculated": 179.85,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.3,
+        "G": -3.0,
+        "Hit": -1.2,
+        "SOG": -3.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 22,
+      "team": "Anaheim Mighty Ducks",
+      "official": 161.0,
+      "calculated": 145.8,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.5,
+        "G": -6.0,
+        "Blk": -0.1,
+        "Hit": -0.7,
+        "SOG": -5.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 22,
+      "team": "Vegas Golden Knights",
+      "official": 181.3,
+      "calculated": 179.6,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "Blk": -0.6,
+        "Hit": -0.3,
+        "SOG": -0.6
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 23,
+      "team": "Anaheim Mighty Ducks",
+      "official": 118.5,
+      "calculated": 109.5,
+      "difference": null,
+      "unresolved": [
+        "003hb",
+        "010wq"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.4,
+        "G": -3.0,
+        "Hit": -1.0,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 23,
+      "team": "Minnesota North Stars",
+      "official": 154.3,
+      "calculated": 153.8,
+      "difference": null,
+      "unresolved": [
+        "003jc"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.1,
+        "Hit": -0.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "regular",
+      "period": 23,
+      "team": "Vegas Golden Knights",
+      "official": 182.3,
+      "calculated": 177.4,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Blk": -0.4,
+        "Hit": -0.2,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2018-19",
+      "phase": "playoffs",
+      "period": 24,
+      "team": "Vegas Golden Knights",
+      "official": 196.25,
+      "calculated": 185.95,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "A": -7.5,
+        "Tk": -0.1,
+        "Blk": -1.5,
+        "Hit": -0.3,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 2,
+      "team": "Atlanta Thrashers",
+      "official": 129.7,
+      "calculated": 128.7,
+      "difference": null,
+      "unresolved": [
+        "003hf"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.6,
+        "Hit": -0.1,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 5,
+      "team": "Nashville Predators",
+      "official": 138.4,
+      "calculated": 137.0,
+      "difference": null,
+      "unresolved": [
+        "003pa"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.1,
+        "Hit": -0.1,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 5,
+      "team": "Edmonton Oilers",
+      "official": 172.55,
+      "calculated": 167.95,
+      "difference": null,
+      "unresolved": [
+        "01mlo"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.4,
+        "Hit": -0.2,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 12,
+      "team": "Atlanta Thrashers",
+      "official": 186.6,
+      "calculated": 177.5,
+      "difference": null,
+      "unresolved": [
+        "01mlo"
+      ],
+      "categoryDifferences": {
+        "G": -6.0,
+        "Blk": -0.2,
+        "Hit": -0.8,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 15,
+      "team": "Vegas Golden Knights",
+      "official": 141.85,
+      "calculated": 136.55,
+      "difference": null,
+      "unresolved": [
+        "01mlo"
+      ],
+      "categoryDifferences": {
+        "G": -3.0,
+        "Blk": -0.2,
+        "Hit": -0.3,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 16,
+      "team": "Vegas Golden Knights",
+      "official": 180.5,
+      "calculated": 175.7,
+      "difference": null,
+      "unresolved": [
+        "01mlo"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "G": -3.0,
+        "Hit": -0.2,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 19,
+      "team": "Anaheim Mighty Ducks",
+      "official": 127.5,
+      "calculated": 118.2,
+      "difference": null,
+      "unresolved": [
+        "01zu0"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -3.0,
+        "Blk": -0.8,
+        "Hit": -0.6,
+        "SOG": -2.4
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 20,
+      "team": "Anaheim Mighty Ducks",
+      "official": 149.85,
+      "calculated": 147.15,
+      "difference": null,
+      "unresolved": [
+        "01zu0"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "Blk": -0.1,
+        "Hit": -0.6,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 21,
+      "team": "Québec Nordiques",
+      "official": 149.2,
+      "calculated": 148.5,
+      "difference": null,
+      "unresolved": [
+        "003xs"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.4,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 21,
+      "team": "Anaheim Mighty Ducks",
+      "official": 129.25,
+      "calculated": 129.25,
+      "difference": null,
+      "unresolved": [
+        "01zu0"
+      ],
+      "categoryDifferences": {},
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 12,
+      "team": "Montréal Maroons",
+      "official": 177.5,
+      "calculated": 162.9,
+      "difference": null,
+      "unresolved": [
+        "031qf"
+      ],
+      "categoryDifferences": {
+        "SV": -14.6,
+        "W": -4.0,
+        "GA": 4.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2020-21",
+      "phase": "playoffs",
+      "period": 14,
+      "team": "Montréal Maroons",
+      "official": 187.15,
+      "calculated": 182.55,
+      "difference": null,
+      "unresolved": [
+        "031qf"
+      ],
+      "categoryDifferences": {
+        "SV": -11.6,
+        "GA": 7.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 19,
+      "team": "Detroit Cougars",
+      "official": 155.1,
+      "calculated": 147.7,
+      "difference": null,
+      "unresolved": [
+        "031qf"
+      ],
+      "categoryDifferences": {
+        "SV": -10.4,
+        "W": -4.0,
+        "GA": 7.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 22,
+      "team": "Detroit Cougars",
+      "official": 156.5,
+      "calculated": 141.9,
+      "difference": null,
+      "unresolved": [
+        "031qf"
+      ],
+      "categoryDifferences": {
+        "SV": -16.6,
+        "W": -8.0,
+        "GA": 10.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 1,
+      "team": "Hartford Whalers",
+      "official": 93.3,
+      "calculated": 93.5,
+      "difference": null,
+      "unresolved": [
+        "02nq8"
+      ],
+      "categoryDifferences": {
+        "SV": -3.8,
+        "GA": 4.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 7,
+      "team": "Hartford Whalers",
+      "official": 194.1,
+      "calculated": 178.3,
+      "difference": null,
+      "unresolved": [
+        "02nq8"
+      ],
+      "categoryDifferences": {
+        "SV": -11.8,
+        "W": -8.0,
+        "GA": 4.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 8,
+      "team": "Hartford Whalers",
+      "official": 171.9,
+      "calculated": 159.7,
+      "difference": null,
+      "unresolved": [
+        "02nq8"
+      ],
+      "categoryDifferences": {
+        "SV": -14.2,
+        "W": -4.0,
+        "GA": 6.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 12,
+      "team": "Hartford Whalers",
+      "official": 223.9,
+      "calculated": 217.3,
+      "difference": null,
+      "unresolved": [
+        "02nq8"
+      ],
+      "categoryDifferences": {
+        "SV": -8.6,
+        "W": -4.0,
+        "GA": 6.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 14,
+      "team": "Hartford Whalers",
+      "official": 198.3,
+      "calculated": 186.9,
+      "difference": null,
+      "unresolved": [
+        "02nq8"
+      ],
+      "categoryDifferences": {
+        "SV": -12.4,
+        "W": -4.0,
+        "GA": 5.0
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 1,
+      "team": "New York Rangers",
+      "official": 104.9,
+      "calculated": 99.5,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.1,
+        "G": -3.0,
+        "Hit": -0.8,
+        "SOG": -1.5
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "New York Rangers",
+      "official": 150.65,
+      "calculated": 144.05,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Blk": -0.2,
+        "Hit": -0.5,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 3,
+      "team": "New York Rangers",
+      "official": 116.4,
+      "calculated": 109.6,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Tk": -0.2,
+        "Hit": -0.7,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 4,
+      "team": "New York Rangers",
+      "official": 118.95,
+      "calculated": 109.55,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -3.0,
+        "Blk": -0.4,
+        "Hit": -1.4,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 5,
+      "team": "New York Rangers",
+      "official": 115.4,
+      "calculated": 108.6,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Tk": -0.4,
+        "Hit": -1.1,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 6,
+      "team": "New York Rangers",
+      "official": 154.8,
+      "calculated": 149.2,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.2,
+        "Blk": -0.6,
+        "Hit": -0.5,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 7,
+      "team": "New York Rangers",
+      "official": 128.35,
+      "calculated": 123.15,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.1,
+        "Blk": -0.6,
+        "Hit": -0.8,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 8,
+      "team": "New York Rangers",
+      "official": 180.65,
+      "calculated": 171.05,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.3,
+        "G": -3.0,
+        "Blk": -0.4,
+        "Hit": -1.3,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 9,
+      "team": "New York Rangers",
+      "official": 128.65,
+      "calculated": 117.25,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "Tk": -0.1,
+        "G": -6.0,
+        "Hit": -0.7,
+        "SOG": -2.1
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 10,
+      "team": "New York Rangers",
+      "official": 163.65,
+      "calculated": 155.35,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -2.5,
+        "G": -3.0,
+        "Blk": -1.0,
+        "Hit": -0.9,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 12,
+      "team": "New York Rangers",
+      "official": 140.45,
+      "calculated": 138.35,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "Hit": -0.1,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 13,
+      "team": "New York Rangers",
+      "official": 136.3,
+      "calculated": 135.2,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.4,
+        "Hit": -0.4,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 14,
+      "team": "New York Rangers",
+      "official": 156.05,
+      "calculated": 154.15,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": -0.5,
+        "SOG": -1.2
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 15,
+      "team": "New York Rangers",
+      "official": 117.2,
+      "calculated": 115.7,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": -0.4,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 20,
+      "team": "New York Rangers",
+      "official": 164.35,
+      "calculated": 156.85,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Tk": -0.1,
+        "Blk": -0.2,
+        "Hit": -0.4,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 21,
+      "team": "New York Rangers",
+      "official": 124.25,
+      "calculated": 119.95,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Tk": -0.2,
+        "G": -3.0,
+        "Hit": -0.2,
+        "SOG": -0.9
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 22,
+      "team": "New York Rangers",
+      "official": 122.65,
+      "calculated": 115.45,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "A": -5.0,
+        "Tk": -0.1,
+        "Hit": -0.3,
+        "SOG": -1.8
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 1,
+      "team": "California Golden Seals",
+      "official": 101.7,
+      "calculated": 100.5,
+      "difference": null,
+      "unresolved": [
+        "06iml"
+      ],
+      "categoryDifferences": {
+        "Hit": -0.9,
+        "SOG": -0.3
+      },
+      "reason": "unresolved_player"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Florida Panthers",
+      "official": 166.4,
+      "calculated": 169.0,
+      "difference": 2.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 2.1,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 3,
+      "team": "Atlanta Thrashers",
+      "official": 173.7,
+      "calculated": 171.2,
+      "difference": -2.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "A": -2.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 13,
+      "team": "New York Rangers",
+      "official": 197.4,
+      "calculated": 199.6,
+      "difference": 2.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "A": 2.5,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Atlanta Thrashers",
+      "official": 169.7,
+      "calculated": 171.8,
+      "difference": 2.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 2.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Anaheim Mighty Ducks",
+      "official": 165.15,
+      "calculated": 167.15,
+      "difference": 2.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Anaheim Mighty Ducks",
+      "official": 192.1,
+      "calculated": 194.1,
+      "difference": 2.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Toronto Maple Leafs",
+      "official": 156.0,
+      "calculated": 158.0,
+      "difference": 2.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 2.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Hartford Whalers",
+      "official": 186.65,
+      "calculated": 188.65,
+      "difference": 2.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 2.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Chicago Blackhawks",
+      "official": 188.1,
+      "calculated": 190.1,
+      "difference": 2.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 2.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "New York Rangers",
+      "official": 180.85,
+      "calculated": 182.75,
+      "difference": 1.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "New York Rangers",
+      "official": 94.45,
+      "calculated": 96.35,
+      "difference": 1.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Cleveland Barons",
+      "official": 147.2,
+      "calculated": 149.0,
+      "difference": 1.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Ottawa Senators",
+      "official": 139.35,
+      "calculated": 141.15,
+      "difference": 1.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Cleveland Barons",
+      "official": 130.5,
+      "calculated": 132.3,
+      "difference": 1.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2,
+        "SOG": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Florida Panthers",
+      "official": 194.65,
+      "calculated": 196.45,
+      "difference": 1.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Minnesota North Stars",
+      "official": 129.7,
+      "calculated": 131.5,
+      "difference": 1.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Minnesota North Stars",
+      "official": 135.75,
+      "calculated": 137.45,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Atlanta Thrashers",
+      "official": 148.6,
+      "calculated": 150.3,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "New York Rangers",
+      "official": 163.1,
+      "calculated": 164.8,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Toronto Maple Leafs",
+      "official": 186.05,
+      "calculated": 187.75,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Montréal Canadiens",
+      "official": 181.8,
+      "calculated": 183.5,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Toronto Maple Leafs",
+      "official": 149.2,
+      "calculated": 150.9,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "New York Rangers",
+      "official": 132.45,
+      "calculated": 134.15,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Cleveland Barons",
+      "official": 165.05,
+      "calculated": 166.75,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "California Golden Seals",
+      "official": 213.05,
+      "calculated": 214.75,
+      "difference": 1.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Québec Nordiques",
+      "official": 137.95,
+      "calculated": 139.55,
+      "difference": 1.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Montréal Canadiens",
+      "official": 162.2,
+      "calculated": 163.8,
+      "difference": 1.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Nashville Predators",
+      "official": 144.45,
+      "calculated": 145.95,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Québec Nordiques",
+      "official": 132.65,
+      "calculated": 134.15,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.6,
+        "Hit": 0.6,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Anaheim Mighty Ducks",
+      "official": 193.95,
+      "calculated": 195.45,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Cleveland Barons",
+      "official": 214.95,
+      "calculated": 216.45,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Chicago Blackhawks",
+      "official": 140.7,
+      "calculated": 142.2,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Florida Panthers",
+      "official": 235.3,
+      "calculated": 236.8,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "California Golden Seals",
+      "official": 166.1,
+      "calculated": 167.6,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "New York Rangers",
+      "official": 132.85,
+      "calculated": 134.35,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Hartford Whalers",
+      "official": 169.95,
+      "calculated": 171.45,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Montréal Canadiens",
+      "official": 194.6,
+      "calculated": 196.1,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Minnesota North Stars",
+      "official": 163.95,
+      "calculated": 165.45,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Nashville Predators",
+      "official": 168.65,
+      "calculated": 170.15,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Anaheim Mighty Ducks",
+      "official": 193.6,
+      "calculated": 195.1,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Cleveland Barons",
+      "official": 157.65,
+      "calculated": 159.15,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "New York Rangers",
+      "official": 164.15,
+      "calculated": 165.65,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "New York Rangers",
+      "official": 165.6,
+      "calculated": 167.1,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Montréal Canadiens",
+      "official": 158.85,
+      "calculated": 160.35,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Montréal Canadiens",
+      "official": 229.0,
+      "calculated": 230.5,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Nashville Predators",
+      "official": 160.05,
+      "calculated": 161.55,
+      "difference": 1.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Detroit Red Wings",
+      "official": 165.45,
+      "calculated": 166.85,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8,
+        "SOG": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Chicago Blackhawks",
+      "official": 171.05,
+      "calculated": 172.45,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Chicago Blackhawks",
+      "official": 178.65,
+      "calculated": 180.05,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Québec Nordiques",
+      "official": 140.8,
+      "calculated": 142.2,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Detroit Red Wings",
+      "official": 167.15,
+      "calculated": 168.55,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Cleveland Barons",
+      "official": 154.7,
+      "calculated": 156.1,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Detroit Red Wings",
+      "official": 154.1,
+      "calculated": 155.5,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Colorado Avalanche",
+      "official": 216.85,
+      "calculated": 218.25,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Montréal Canadiens",
+      "official": 156.1,
+      "calculated": 157.5,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Minnesota North Stars",
+      "official": 148.75,
+      "calculated": 150.15,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Toronto Maple Leafs",
+      "official": 166.6,
+      "calculated": 168.0,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Florida Panthers",
+      "official": 161.0,
+      "calculated": 162.4,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Detroit Red Wings",
+      "official": 164.55,
+      "calculated": 165.95,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Québec Nordiques",
+      "official": 113.25,
+      "calculated": 114.65,
+      "difference": 1.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Montréal Canadiens",
+      "official": 201.85,
+      "calculated": 203.15,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Ottawa Senators",
+      "official": 133.45,
+      "calculated": 134.75,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Minnesota North Stars",
+      "official": 126.9,
+      "calculated": 128.2,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "New York Rangers",
+      "official": 151.4,
+      "calculated": 152.7,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Toronto Maple Leafs",
+      "official": 147.45,
+      "calculated": 148.75,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2,
+        "Hit": 0.8,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Florida Panthers",
+      "official": 151.15,
+      "calculated": 152.45,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Colorado Avalanche",
+      "official": 158.7,
+      "calculated": 160.0,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Toronto Maple Leafs",
+      "official": 134.4,
+      "calculated": 135.7,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Detroit Red Wings",
+      "official": 212.55,
+      "calculated": 213.85,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "New York Rangers",
+      "official": 145.15,
+      "calculated": 146.45,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Florida Panthers",
+      "official": 158.1,
+      "calculated": 159.4,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Toronto Maple Leafs",
+      "official": 128.15,
+      "calculated": 129.45,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Montréal Canadiens",
+      "official": 169.5,
+      "calculated": 170.8,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "New York Rangers",
+      "official": 120.7,
+      "calculated": 122.0,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Colorado Avalanche",
+      "official": 243.6,
+      "calculated": 244.9,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Atlanta Thrashers",
+      "official": 193.15,
+      "calculated": 194.45,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Florida Panthers",
+      "official": 155.1,
+      "calculated": 156.4,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Ottawa Senators",
+      "official": 152.65,
+      "calculated": 153.95,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "California Golden Seals",
+      "official": 156.2,
+      "calculated": 157.5,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Florida Panthers",
+      "official": 188.75,
+      "calculated": 190.05,
+      "difference": 1.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "New York Rangers",
+      "official": 117.1,
+      "calculated": 118.3,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Hartford Whalers",
+      "official": 158.15,
+      "calculated": 159.35,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "California Golden Seals",
+      "official": 181.85,
+      "calculated": 183.05,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Ottawa Senators",
+      "official": 132.45,
+      "calculated": 133.65,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "California Golden Seals",
+      "official": 188.2,
+      "calculated": 189.4,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Florida Panthers",
+      "official": 121.7,
+      "calculated": 122.9,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Ottawa Senators",
+      "official": 144.8,
+      "calculated": 146.0,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Québec Nordiques",
+      "official": 95.55,
+      "calculated": 96.75,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Nashville Predators",
+      "official": 144.75,
+      "calculated": 145.95,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Toronto Maple Leafs",
+      "official": 151.1,
+      "calculated": 152.3,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Atlanta Thrashers",
+      "official": 152.25,
+      "calculated": 153.45,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Hartford Whalers",
+      "official": 209.3,
+      "calculated": 210.5,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Minnesota North Stars",
+      "official": 117.85,
+      "calculated": 119.05,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Anaheim Mighty Ducks",
+      "official": 178.2,
+      "calculated": 179.4,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "California Golden Seals",
+      "official": 155.15,
+      "calculated": 156.35,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Atlanta Thrashers",
+      "official": 164.45,
+      "calculated": 165.65,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Anaheim Mighty Ducks",
+      "official": 176.1,
+      "calculated": 177.3,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Colorado Avalanche",
+      "official": 171.35,
+      "calculated": 172.55,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.3,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Chicago Blackhawks",
+      "official": 111.85,
+      "calculated": 113.05,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Detroit Red Wings",
+      "official": 166.8,
+      "calculated": 168.0,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "California Golden Seals",
+      "official": 181.4,
+      "calculated": 182.6,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Québec Nordiques",
+      "official": 123.3,
+      "calculated": 124.5,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Hartford Whalers",
+      "official": 167.1,
+      "calculated": 168.3,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Ottawa Senators",
+      "official": 113.45,
+      "calculated": 114.65,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "New York Rangers",
+      "official": 171.9,
+      "calculated": 173.1,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Hartford Whalers",
+      "official": 224.25,
+      "calculated": 225.45,
+      "difference": 1.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Ottawa Senators",
+      "official": 161.95,
+      "calculated": 163.1,
+      "difference": 1.15,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05,
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Cleveland Barons",
+      "official": 114.5,
+      "calculated": 115.6,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Toronto Maple Leafs",
+      "official": 97.8,
+      "calculated": 98.9,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Hartford Whalers",
+      "official": 180.25,
+      "calculated": 181.35,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Anaheim Mighty Ducks",
+      "official": 197.6,
+      "calculated": 198.7,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Atlanta Thrashers",
+      "official": 132.4,
+      "calculated": 133.5,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Detroit Red Wings",
+      "official": 164.55,
+      "calculated": 165.65,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Colorado Avalanche",
+      "official": 154.2,
+      "calculated": 155.3,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Nashville Predators",
+      "official": 122.2,
+      "calculated": 123.3,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Florida Panthers",
+      "official": 152.55,
+      "calculated": 153.65,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Montréal Canadiens",
+      "official": 168.6,
+      "calculated": 169.7,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Québec Nordiques",
+      "official": 108.9,
+      "calculated": 110.0,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Anaheim Mighty Ducks",
+      "official": 136.85,
+      "calculated": 137.95,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "New York Rangers",
+      "official": 163.05,
+      "calculated": 164.15,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Atlanta Thrashers",
+      "official": 155.65,
+      "calculated": 156.75,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.6,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Toronto Maple Leafs",
+      "official": 180.4,
+      "calculated": 181.5,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Hartford Whalers",
+      "official": 164.55,
+      "calculated": 165.65,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Cleveland Barons",
+      "official": 176.9,
+      "calculated": 178.0,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Chicago Blackhawks",
+      "official": 139.8,
+      "calculated": 140.9,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Ottawa Senators",
+      "official": 132.95,
+      "calculated": 134.05,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Nashville Predators",
+      "official": 134.45,
+      "calculated": 135.55,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Chicago Blackhawks",
+      "official": 170.4,
+      "calculated": 171.5,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Chicago Blackhawks",
+      "official": 153.85,
+      "calculated": 154.95,
+      "difference": 1.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Chicago Blackhawks",
+      "official": 127.0,
+      "calculated": 128.0,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "California Golden Seals",
+      "official": 154.65,
+      "calculated": 155.65,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Toronto Maple Leafs",
+      "official": 173.35,
+      "calculated": 174.35,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Anaheim Mighty Ducks",
+      "official": 142.75,
+      "calculated": 143.75,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Detroit Red Wings",
+      "official": 146.0,
+      "calculated": 147.0,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Colorado Avalanche",
+      "official": 178.05,
+      "calculated": 179.05,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Montréal Canadiens",
+      "official": 207.7,
+      "calculated": 208.7,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Ottawa Senators",
+      "official": 191.2,
+      "calculated": 192.2,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Cleveland Barons",
+      "official": 142.3,
+      "calculated": 143.3,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Colorado Avalanche",
+      "official": 206.05,
+      "calculated": 207.05,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Nashville Predators",
+      "official": 147.05,
+      "calculated": 148.05,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Chicago Blackhawks",
+      "official": 120.0,
+      "calculated": 121.0,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Chicago Blackhawks",
+      "official": 118.45,
+      "calculated": 119.45,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 1.1,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Québec Nordiques",
+      "official": 128.35,
+      "calculated": 129.35,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Hartford Whalers",
+      "official": 174.8,
+      "calculated": 175.8,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Florida Panthers",
+      "official": 196.8,
+      "calculated": 197.8,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Minnesota North Stars",
+      "official": 185.8,
+      "calculated": 186.8,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Nashville Predators",
+      "official": 177.7,
+      "calculated": 178.7,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Montréal Canadiens",
+      "official": 204.85,
+      "calculated": 205.85,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2,
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Florida Panthers",
+      "official": 156.6,
+      "calculated": 157.6,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Nashville Predators",
+      "official": 137.85,
+      "calculated": 138.85,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Hartford Whalers",
+      "official": 188.5,
+      "calculated": 189.5,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Minnesota North Stars",
+      "official": 162.6,
+      "calculated": 163.6,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Hartford Whalers",
+      "official": 152.6,
+      "calculated": 153.6,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Toronto Maple Leafs",
+      "official": 142.55,
+      "calculated": 143.55,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Atlanta Thrashers",
+      "official": 175.0,
+      "calculated": 176.0,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.3,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Colorado Avalanche",
+      "official": 164.55,
+      "calculated": 165.55,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Minnesota North Stars",
+      "official": 140.9,
+      "calculated": 141.9,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Anaheim Mighty Ducks",
+      "official": 161.05,
+      "calculated": 162.05,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Detroit Red Wings",
+      "official": 191.4,
+      "calculated": 192.4,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "New York Rangers",
+      "official": 195.85,
+      "calculated": 196.85,
+      "difference": 1.0,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Ottawa Senators",
+      "official": 129.3,
+      "calculated": 130.2,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "California Golden Seals",
+      "official": 84.15,
+      "calculated": 85.05,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Colorado Avalanche",
+      "official": 162.85,
+      "calculated": 163.75,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": 1.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Montréal Canadiens",
+      "official": 163.85,
+      "calculated": 164.75,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Atlanta Thrashers",
+      "official": 141.1,
+      "calculated": 142.0,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Nashville Predators",
+      "official": 143.65,
+      "calculated": 144.55,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Québec Nordiques",
+      "official": 151.25,
+      "calculated": 152.15,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Minnesota North Stars",
+      "official": 158.35,
+      "calculated": 159.25,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Detroit Red Wings",
+      "official": 164.5,
+      "calculated": 165.4,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Nashville Predators",
+      "official": 137.8,
+      "calculated": 138.7,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Montréal Canadiens",
+      "official": 152.8,
+      "calculated": 153.7,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Cleveland Barons",
+      "official": 151.65,
+      "calculated": 152.55,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Detroit Red Wings",
+      "official": 163.35,
+      "calculated": 164.25,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Colorado Avalanche",
+      "official": 178.35,
+      "calculated": 179.25,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "California Golden Seals",
+      "official": 139.85,
+      "calculated": 140.75,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Chicago Blackhawks",
+      "official": 144.0,
+      "calculated": 144.9,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Anaheim Mighty Ducks",
+      "official": 179.9,
+      "calculated": 180.8,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Cleveland Barons",
+      "official": 182.7,
+      "calculated": 183.6,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Chicago Blackhawks",
+      "official": 165.9,
+      "calculated": 166.8,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "California Golden Seals",
+      "official": 161.75,
+      "calculated": 162.65,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Detroit Red Wings",
+      "official": 148.05,
+      "calculated": 148.95,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Chicago Blackhawks",
+      "official": 139.05,
+      "calculated": 139.95,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Anaheim Mighty Ducks",
+      "official": 184.55,
+      "calculated": 185.45,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Atlanta Thrashers",
+      "official": 201.75,
+      "calculated": 202.65,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Minnesota North Stars",
+      "official": 151.25,
+      "calculated": 152.15,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Toronto Maple Leafs",
+      "official": 157.6,
+      "calculated": 158.5,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Cleveland Barons",
+      "official": 172.1,
+      "calculated": 173.0,
+      "difference": 0.9,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Montréal Canadiens",
+      "official": 147.3,
+      "calculated": 148.1,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5,
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Anaheim Mighty Ducks",
+      "official": 147.55,
+      "calculated": 148.35,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "California Golden Seals",
+      "official": 138.55,
+      "calculated": 139.35,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Hartford Whalers",
+      "official": 147.9,
+      "calculated": 148.7,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "California Golden Seals",
+      "official": 113.4,
+      "calculated": 114.2,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Florida Panthers",
+      "official": 129.35,
+      "calculated": 130.15,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Cleveland Barons",
+      "official": 164.1,
+      "calculated": 164.9,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Nashville Predators",
+      "official": 157.3,
+      "calculated": 158.1,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Montréal Canadiens",
+      "official": 174.4,
+      "calculated": 175.2,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "California Golden Seals",
+      "official": 144.9,
+      "calculated": 145.7,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Florida Panthers",
+      "official": 203.8,
+      "calculated": 204.6,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.0
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Colorado Avalanche",
+      "official": 179.5,
+      "calculated": 180.3,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Ottawa Senators",
+      "official": 131.0,
+      "calculated": 131.8,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Cleveland Barons",
+      "official": 101.6,
+      "calculated": 102.4,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Québec Nordiques",
+      "official": 111.05,
+      "calculated": 111.85,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Florida Panthers",
+      "official": 154.65,
+      "calculated": 155.45,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 15,
+      "team": "Anaheim Mighty Ducks",
+      "official": 197.1,
+      "calculated": 197.9,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Toronto Maple Leafs",
+      "official": 132.55,
+      "calculated": 133.35,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Québec Nordiques",
+      "official": 121.2,
+      "calculated": 122.0,
+      "difference": 0.8,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.8
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Nashville Predators",
+      "official": 113.35,
+      "calculated": 114.05,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Chicago Blackhawks",
+      "official": 99.3,
+      "calculated": 100.0,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Québec Nordiques",
+      "official": 93.35,
+      "calculated": 94.05,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Florida Panthers",
+      "official": 140.95,
+      "calculated": 141.65,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Cleveland Barons",
+      "official": 140.45,
+      "calculated": 141.15,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 2,
+      "team": "Toronto Maple Leafs",
+      "official": 122.75,
+      "calculated": 123.45,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": 0.9
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Ottawa Senators",
+      "official": 170.8,
+      "calculated": 171.5,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "New York Rangers",
+      "official": 126.45,
+      "calculated": 127.15,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Toronto Maple Leafs",
+      "official": 116.75,
+      "calculated": 117.45,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 1.0,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Atlanta Thrashers",
+      "official": 169.0,
+      "calculated": 169.7,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Ottawa Senators",
+      "official": 165.7,
+      "calculated": 166.4,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Detroit Red Wings",
+      "official": 181.8,
+      "calculated": 182.5,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Minnesota North Stars",
+      "official": 123.7,
+      "calculated": 124.4,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "California Golden Seals",
+      "official": 176.25,
+      "calculated": 176.95,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Québec Nordiques",
+      "official": 143.85,
+      "calculated": 144.55,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "California Golden Seals",
+      "official": 184.25,
+      "calculated": 184.95,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Hartford Whalers",
+      "official": 154.45,
+      "calculated": 155.15,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Montréal Canadiens",
+      "official": 230.8,
+      "calculated": 231.5,
+      "difference": 0.7,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 18,
+      "team": "Anaheim Mighty Ducks",
+      "official": 160.65,
+      "calculated": 160.05,
+      "difference": -0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Atlanta Thrashers",
+      "official": 174.45,
+      "calculated": 175.05,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Minnesota North Stars",
+      "official": 142.45,
+      "calculated": 143.05,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 4,
+      "team": "Minnesota North Stars",
+      "official": 146.5,
+      "calculated": 147.1,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Hartford Whalers",
+      "official": 177.5,
+      "calculated": 178.1,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2,
+        "Hit": 0.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 7,
+      "team": "Atlanta Thrashers",
+      "official": 166.45,
+      "calculated": 167.05,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Ottawa Senators",
+      "official": 166.15,
+      "calculated": 166.75,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Québec Nordiques",
+      "official": 152.85,
+      "calculated": 153.45,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Atlanta Thrashers",
+      "official": 191.6,
+      "calculated": 192.2,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Nashville Predators",
+      "official": 140.05,
+      "calculated": 140.65,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Québec Nordiques",
+      "official": 118.45,
+      "calculated": 119.05,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 14,
+      "team": "Cleveland Barons",
+      "official": 177.7,
+      "calculated": 178.3,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Nashville Predators",
+      "official": 167.95,
+      "calculated": 168.55,
+      "difference": 0.6,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Hartford Whalers",
+      "official": 142.15,
+      "calculated": 142.65,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Detroit Red Wings",
+      "official": 108.8,
+      "calculated": 109.3,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 3,
+      "team": "Québec Nordiques",
+      "official": 173.05,
+      "calculated": 173.55,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 5,
+      "team": "Colorado Avalanche",
+      "official": 181.15,
+      "calculated": 181.65,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Anaheim Mighty Ducks",
+      "official": 145.5,
+      "calculated": 146.0,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Detroit Red Wings",
+      "official": 162.55,
+      "calculated": 163.05,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Atlanta Thrashers",
+      "official": 180.3,
+      "calculated": 180.8,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 0.7
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 10,
+      "team": "Ottawa Senators",
+      "official": 134.7,
+      "calculated": 135.2,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Anaheim Mighty Ducks",
+      "official": 141.0,
+      "calculated": 141.5,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Atlanta Thrashers",
+      "official": 175.1,
+      "calculated": 175.6,
+      "difference": 0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Minnesota North Stars",
+      "official": 112.65,
+      "calculated": 113.05,
+      "difference": 0.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 11,
+      "team": "Ottawa Senators",
+      "official": 144.75,
+      "calculated": 145.15,
+      "difference": 0.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "Colorado Avalanche",
+      "official": 159.5,
+      "calculated": 159.9,
+      "difference": 0.4,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.4
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 2,
+      "team": "Minnesota North Stars",
+      "official": 171.7,
+      "calculated": 171.35,
+      "difference": -0.35,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 2,
+      "team": "Toronto Maple Leafs",
+      "official": 148.5,
+      "calculated": 148.2,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 2,
+      "team": "Québec Nordiques",
+      "official": 148.85,
+      "calculated": 149.15,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 13,
+      "team": "Nashville Predators",
+      "official": 217.5,
+      "calculated": 217.8,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 9,
+      "team": "New York Rangers",
+      "official": 125.3,
+      "calculated": 125.0,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 12,
+      "team": "Anaheim Mighty Ducks",
+      "official": 113.65,
+      "calculated": 113.35,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 18,
+      "team": "Toronto Maple Leafs",
+      "official": 205.2,
+      "calculated": 204.9,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Minnesota North Stars",
+      "official": 171.55,
+      "calculated": 171.85,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 1.1,
+        "SOG": -0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 8,
+      "team": "Chicago Blackhawks",
+      "official": 151.65,
+      "calculated": 151.95,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Detroit Red Wings",
+      "official": 189.9,
+      "calculated": 190.2,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 13,
+      "team": "Nashville Predators",
+      "official": 159.45,
+      "calculated": 159.75,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.6,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 16,
+      "team": "Colorado Avalanche",
+      "official": 149.1,
+      "calculated": 149.4,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Montréal Canadiens",
+      "official": 142.4,
+      "calculated": 142.1,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Anaheim Mighty Ducks",
+      "official": 161.05,
+      "calculated": 160.75,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Florida Panthers",
+      "official": 174.4,
+      "calculated": 174.1,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 20,
+      "team": "Québec Nordiques",
+      "official": 114.05,
+      "calculated": 114.35,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 23,
+      "team": "Colorado Avalanche",
+      "official": 204.0,
+      "calculated": 203.7,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "playoffs",
+      "period": 25,
+      "team": "Colorado Avalanche",
+      "official": 210.15,
+      "calculated": 210.45,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Florida Panthers",
+      "official": 186.15,
+      "calculated": 185.85,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 6,
+      "team": "Ottawa Senators",
+      "official": 169.85,
+      "calculated": 170.15,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 19,
+      "team": "Boston Bruins",
+      "official": 119.4,
+      "calculated": 119.7,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "New York Rangers",
+      "official": 177.45,
+      "calculated": 177.15,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "Boston Bruins",
+      "official": 138.7,
+      "calculated": 139.0,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 14,
+      "team": "Cleveland Barons",
+      "official": 96.75,
+      "calculated": 96.95,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 19,
+      "team": "Anaheim Mighty Ducks",
+      "official": 174.95,
+      "calculated": 175.15,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 21,
+      "team": "New York Rangers",
+      "official": 148.0,
+      "calculated": 148.2,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2022-23",
+      "phase": "regular",
+      "period": 21,
+      "team": "Detroit Red Wings",
+      "official": 181.55,
+      "calculated": 181.75,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 6,
+      "team": "Hartford Whalers",
+      "official": 150.0,
+      "calculated": 150.2,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.5,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Hartford Whalers",
+      "official": 145.55,
+      "calculated": 145.35,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Ottawa Senators",
+      "official": 130.75,
+      "calculated": 130.55,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Cleveland Barons",
+      "official": 133.15,
+      "calculated": 132.95,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Hartford Whalers",
+      "official": 213.9,
+      "calculated": 213.7,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Montréal Canadiens",
+      "official": 185.45,
+      "calculated": 185.25,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Detroit Red Wings",
+      "official": 189.55,
+      "calculated": 189.35,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Toronto Maple Leafs",
+      "official": 120.1,
+      "calculated": 119.9,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "playoffs",
+      "period": 24,
+      "team": "Colorado Avalanche",
+      "official": 175.3,
+      "calculated": 175.5,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "playoffs",
+      "period": 24,
+      "team": "Atlanta Thrashers",
+      "official": 168.55,
+      "calculated": 168.35,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Atlanta Thrashers",
+      "official": 163.95,
+      "calculated": 164.15,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Chicago Blackhawks",
+      "official": 146.75,
+      "calculated": 146.95,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 3,
+      "team": "Ottawa Senators",
+      "official": 160.55,
+      "calculated": 160.75,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 8,
+      "team": "Colorado Avalanche",
+      "official": 174.1,
+      "calculated": 174.3,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 10,
+      "team": "Toronto Maple Leafs",
+      "official": 115.85,
+      "calculated": 116.05,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 14,
+      "team": "Nashville Predators",
+      "official": 151.25,
+      "calculated": 151.45,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 19,
+      "team": "Minnesota North Stars",
+      "official": 239.15,
+      "calculated": 239.35,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 19,
+      "team": "Québec Nordiques",
+      "official": 157.45,
+      "calculated": 157.65,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 22,
+      "team": "Colorado Avalanche",
+      "official": 105.35,
+      "calculated": 105.55,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "playoffs",
+      "period": 23,
+      "team": "Atlanta Thrashers",
+      "official": 154.85,
+      "calculated": 155.05,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 1,
+      "team": "Detroit Red Wings",
+      "official": 152.8,
+      "calculated": 152.6,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 19,
+      "team": "California Golden Seals",
+      "official": 179.85,
+      "calculated": 180.05,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 19,
+      "team": "Minnesota North Stars",
+      "official": 152.75,
+      "calculated": 152.95,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 20,
+      "team": "Hartford Whalers",
+      "official": 161.95,
+      "calculated": 161.75,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 20,
+      "team": "Ottawa Senators",
+      "official": 220.45,
+      "calculated": 220.25,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 21,
+      "team": "Colorado Avalanche",
+      "official": 210.25,
+      "calculated": 210.05,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 21,
+      "team": "California Golden Seals",
+      "official": 101.25,
+      "calculated": 101.45,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 21,
+      "team": "Detroit Red Wings",
+      "official": 226.15,
+      "calculated": 225.95,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 2,
+      "team": "Florida Panthers",
+      "official": 72.0,
+      "calculated": 72.2,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "Detroit Red Wings",
+      "official": 145.65,
+      "calculated": 145.85,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 21,
+      "team": "Chicago Blackhawks",
+      "official": 158.55,
+      "calculated": 158.7,
+      "difference": 0.15,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.15
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 4,
+      "team": "Vegas Golden Knights",
+      "official": 156.9,
+      "calculated": 157.0,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Tk": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 17,
+      "team": "Atlanta Thrashers",
+      "official": 159.4,
+      "calculated": 159.3,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 3,
+      "team": "Minnesota North Stars",
+      "official": 120.6,
+      "calculated": 120.5,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 3,
+      "team": "Edmonton Oilers",
+      "official": 137.0,
+      "calculated": 137.1,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Cleveland Barons",
+      "official": 100.6,
+      "calculated": 100.5,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 12,
+      "team": "Minnesota North Stars",
+      "official": 105.4,
+      "calculated": 105.5,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 12,
+      "team": "Nashville Predators",
+      "official": 160.15,
+      "calculated": 160.25,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Tk": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 12,
+      "team": "Detroit Cougars",
+      "official": 126.0,
+      "calculated": 126.1,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Tk": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 14,
+      "team": "Cleveland Barons",
+      "official": 76.15,
+      "calculated": 76.05,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 17,
+      "team": "Atlanta Thrashers",
+      "official": 447.65,
+      "calculated": 447.55,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2022-23",
+      "phase": "playoffs",
+      "period": 23,
+      "team": "Montréal Canadiens",
+      "official": 203.65,
+      "calculated": 203.75,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 1,
+      "team": "Colorado Avalanche",
+      "official": 126.55,
+      "calculated": 126.45,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": -0.2,
+        "Hit": 0.4,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 9,
+      "team": "Colorado Avalanche",
+      "official": 154.95,
+      "calculated": 155.05,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.7,
+        "SOG": -0.6
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 12,
+      "team": "New York Rangers",
+      "official": 106.6,
+      "calculated": 106.7,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.4,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Detroit Red Wings",
+      "official": 149.15,
+      "calculated": 149.05,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Colorado Avalanche",
+      "official": 129.8,
+      "calculated": 129.7,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Nashville Predators",
+      "official": 143.05,
+      "calculated": 142.95,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "New York Rangers",
+      "official": 116.7,
+      "calculated": 116.8,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Toronto Maple Leafs",
+      "official": 125.75,
+      "calculated": 125.65,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 17,
+      "team": "Atlanta Thrashers",
+      "official": 142.1,
+      "calculated": 142.0,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Anaheim Mighty Ducks",
+      "official": 183.75,
+      "calculated": 183.65,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 18,
+      "team": "Florida Panthers",
+      "official": 137.4,
+      "calculated": 137.3,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 19,
+      "team": "Minnesota North Stars",
+      "official": 183.7,
+      "calculated": 183.6,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2023-24",
+      "phase": "regular",
+      "period": 19,
+      "team": "Toronto Maple Leafs",
+      "official": 155.45,
+      "calculated": 155.35,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 1,
+      "team": "Hartford Whalers",
+      "official": 125.35,
+      "calculated": 125.45,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 1,
+      "team": "Florida Panthers",
+      "official": 138.05,
+      "calculated": 138.15,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 1,
+      "team": "Colorado Avalanche",
+      "official": 145.3,
+      "calculated": 145.2,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Boston Bruins",
+      "official": 187.45,
+      "calculated": 187.55,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Minnesota North Stars",
+      "official": 145.85,
+      "calculated": 145.95,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 2,
+      "team": "Montréal Canadiens",
+      "official": 163.55,
+      "calculated": 163.45,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 3,
+      "team": "Boston Bruins",
+      "official": 128.25,
+      "calculated": 128.15,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 20,
+      "team": "New York Rangers",
+      "official": 167.8,
+      "calculated": 167.7,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 4,
+      "team": "Minnesota North Stars",
+      "official": 142.15,
+      "calculated": 142.05,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2019-20",
+      "phase": "regular",
+      "period": 1,
+      "team": "Montréal Maroons",
+      "official": 124.45,
+      "calculated": 124.4,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2020-21",
+      "phase": "regular",
+      "period": 2,
+      "team": "Hartford Whalers",
+      "official": 179.6,
+      "calculated": 179.65,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 3,
+      "team": "Atlanta Thrashers",
+      "official": 131.4,
+      "calculated": 131.45,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 3,
+      "team": "Detroit Cougars",
+      "official": 178.95,
+      "calculated": 178.9,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 5,
+      "team": "Winnipeg Jets",
+      "official": 127.9,
+      "calculated": 127.85,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 6,
+      "team": "Florida Panthers",
+      "official": 170.65,
+      "calculated": 170.7,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 7,
+      "team": "Québec Nordiques",
+      "official": 161.4,
+      "calculated": 161.35,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 7,
+      "team": "Hartford Whalers",
+      "official": 178.3,
+      "calculated": 178.35,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Québec Nordiques",
+      "official": 148.7,
+      "calculated": 148.75,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Hartford Whalers",
+      "official": 144.0,
+      "calculated": 143.95,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "New York Rangers",
+      "official": 133.35,
+      "calculated": 133.4,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Anaheim Mighty Ducks",
+      "official": 146.5,
+      "calculated": 146.45,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Detroit Cougars",
+      "official": 122.6,
+      "calculated": 122.65,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 8,
+      "team": "Chicago Blackhawks",
+      "official": 138.2,
+      "calculated": 138.15,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 12,
+      "team": "Cleveland Barons",
+      "official": 71.45,
+      "calculated": 71.4,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 15,
+      "team": "Florida Panthers",
+      "official": 176.4,
+      "calculated": 176.35,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 16,
+      "team": "Edmonton Oilers",
+      "official": 217.7,
+      "calculated": 217.65,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 17,
+      "team": "Florida Panthers",
+      "official": 456.5,
+      "calculated": 456.55,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2021-22",
+      "phase": "regular",
+      "period": 19,
+      "team": "Minnesota North Stars",
+      "official": 218.7,
+      "calculated": 218.65,
+      "difference": -0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2024-25",
+      "phase": "regular",
+      "period": 1,
+      "team": "Atlanta Thrashers",
+      "official": 122.95,
+      "calculated": 123.0,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": -0.05,
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2025-26",
+      "phase": "regular",
+      "period": 16,
+      "team": "Montréal Canadiens",
+      "official": 176.85,
+      "calculated": 176.9,
+      "difference": 0.05,
+      "unresolved": [],
+      "categoryDifferences": {
+        "FOW": 0.05
+      },
+      "reason": "score_difference"
+    }
+  ]
+}
