@@ -38,7 +38,7 @@ def build(path):
   if champion:
    final=item['rounds'][-1]['matches'][0]
    winning=next((t for t in final['teams'] if t['id']==final['winner']),None)
-   if not winning or winning['name']!=champion[0]:raise ValueError('La finale Fantrax ne correspond pas à la bannière BHL')
+   if not winning or winning['name'].replace('Montréal Maroons','Montréal Canadiens')!=champion[0]:raise ValueError('La finale Fantrax ne correspond pas à la bannière BHL')
   item['status']='available'
  except Exception as e:
   item['status']='partial' if item['rounds'] else 'unavailable';item['error']=str(e)

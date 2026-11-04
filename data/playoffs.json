@@ -467,7 +467,7 @@
                 {
                   "id": "vs9imdwtl2q74pij",
                   "name": "Detroit Red Wings",
-                  "score": 202.0
+                  "score": 202
                 }
               ],
               "winner": "vs9imdwtl2q74pij"
@@ -497,7 +497,7 @@
                 {
                   "id": "coy5s4gyl2q74pii",
                   "name": "Atlanta Thrashers",
-                  "score": 190.0
+                  "score": 190
                 }
               ],
               "winner": "coy5s4gyl2q74pii"
@@ -710,8 +710,7 @@
           ]
         }
       ],
-      "status": "partial",
-      "error": "La finale Fantrax ne correspond pas à la bannière BHL"
+      "status": "available"
     },
     {
       "season": "2020-21",
@@ -1037,7 +1036,7 @@
                 {
                   "id": "va02m7ewjjbjc99i",
                   "name": "Winnipeg Jets",
-                  "score": 151.0
+                  "score": 151
                 },
                 {
                   "id": "ye7fmcmwjjbjc99i",

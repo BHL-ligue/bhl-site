@@ -21,6 +21,8 @@ function renderSeason(){
  const s=data.seasons.find(x=>x.season===$('season').value);if(!s)return;
  const url=new URL(location.href);url.searchParams.set('saison',s.season);history.replaceState(null,'',url);
  $('season-result').innerHTML='<div class="season-heading '+(s.cancelled?'covid':'')+'"><strong>'+esc(s.cancelled?'2019-20 · Séries interrompues':s.season+' · '+s.champion)+'</strong><p>'+esc(s.cancelled?'Arrêt en deuxième ronde en raison de la COVID-19. Aucune troisième ronde et aucun champion.':'Champion de la Coupe Béliveau')+'</p></div>';
+ const final=s.rounds.find(r=>r.number===3)?.matches[0];
+ if(final&&!s.cancelled){const winner=final.teams.find(t=>t.id===final.winner),runner=final.teams.find(t=>t.id!==final.winner);if(winner&&runner)$('season-result').querySelector('p').innerHTML=logo(winner.name)+' '+esc(winner.name)+' · '+fmt(winner.score)+' — '+fmt(runner.score)+' · '+logo(runner.name)+' '+esc(runner.name)}
  const rounds=s.rounds.filter(r=>!s.cancelled||r.number<=2);
  if(!rounds.length){$('bracket').innerHTML='<p class="empty">Les affrontements de cette saison ne sont pas disponibles pour le moment. Le champion et sa bannière figurent dans les archives ci-dessous.</p>';return}
  // Arrange each previous round underneath its actual next-round opponent.
