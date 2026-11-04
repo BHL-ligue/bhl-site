@@ -24,7 +24,6 @@ function mount(){
   ['bhl-fantrax.html','Saison'],
   ['bhl-repechage.html','Repêchage'],
   ['bhl-records.html','Records'],
-  ['bhl-pointeurs.html','Pointeurs historiques'],
   ['bhl-transactions.html','Transactions'],
   ['bhl-espace-dg.html','Espace DG']
  ];
