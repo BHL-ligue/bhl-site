@@ -12,6 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/ownership/production-pilot.json'
 FIELDS={'G':['goals'],'A':['assists'],'SOG':['shots','shotsOnGoal'],'Hit':['hits'],'Blk':['blockedShotAttempts','blockedShots'],'Tk':['takeaways'],'FOW':['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'],'W':['wins'],'GA':['goalsAgainst'],'SV':['saves'],'SHO':['shutouts']}
 REVIEWED_ALIASES={'03rfp':['Samuel Montembeault'],'06snb':['Ben Kindel'],'042xv':['Michael Eyssimont'],'03rfo':['Dan Vladar'],'04ajl':['Bo Groulx']}
+NHL_SEASON_ID='20252026'
 REPORTS=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
 def get(url):
  request=urllib.request.Request(url,headers={'User-Agent':'BHL-Sync/1.0','Accept':'application/json'})
@@ -22,7 +23,7 @@ def number(row,category):
   if row and row.get(field) is not None:return float(row[field])
  return None
 def nhl_report(kind,name,start=None,end=None):
- expr='gameTypeId=2 and seasonId=20252026'
+ expr='gameTypeId=2 and seasonId='+NHL_SEASON_ID
  if start:expr+=f' and gameDate>="{start}" and gameDate<="{end}"'
  url='https://api.nhle.com/stats/rest/en/'+kind+'/'+name+'?'+urllib.parse.urlencode({'isAggregate':'true','isGame':'true','start':0,'limit':-1,'cayenneExp':expr})
  data=get(url);rows=data.get('data',[])
@@ -104,10 +105,16 @@ def calculate(period,archive,directory,identities,season_rows,raw,official):
   team['categoryDifferences']={c:round(team['calculatedCategoryPoints'].get(c,0)-team['officialCategoryPoints'].get(c,0),4) for c in team['calculatedCategoryPoints'].keys()|team['officialCategoryPoints'].keys() if abs(team['calculatedCategoryPoints'].get(c,0)-team['officialCategoryPoints'].get(c,0))>=0.005}
   team['validated']=not team['unresolved'] and abs(team['difference'])<0.005 and not team['categoryDifferences']
  return list(teams.values())
-def main():
- report={'status':'pending','season':'2025-26','checkedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'scope':'Read-only season audit of starting-lineup contributions, not official individual records or a career ranking.'}
+def main(season='2025-26',completed_only=False):
+ global NHL_SEASON_ID
+ year=int(season[:4]);NHL_SEASON_ID=str(year)+str(year+1)
+ report={'status':'pending','season':season,'checkedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'scope':'Read-only season audit of starting-lineup contributions, not official individual records or a career ranking.'}
  try:
-  archive=json.loads((ROOT/'data/ownership/2025-26.json').read_text());directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=json.loads((ROOT/'data/player-identity-map.json').read_text())['players']
+  archive=json.loads((ROOT/('data/ownership/'+season+'.json')).read_text());
+  report['archivedPeriods']=len(archive['periods']);report['excludedOpenPeriods']=[]
+  if completed_only:
+   now=dt.datetime.now(dt.timezone.utc);report['excludedOpenPeriods']=[p['number'] for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])>now];archive['periods']=[p for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])<=now]
+  directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=json.loads((ROOT/'data/player-identity-map.json').read_text())['players']
   with cf.ThreadPoolExecutor(max_workers=4) as pool:
    names=list(pool.map(lambda kind:(kind,nhl_report(kind,'summary')),['skater','goalie']));season_rows=dict(names)
    dates=sorted({p[k][:10] for p in archive['periods'] for k in ['start','end']})
@@ -133,4 +140,5 @@ def main():
  OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print('AUDIT_SUMMARY',json.dumps({k:v for k,v in report.items() if k not in ['periods','remaining']},ensure_ascii=False),flush=True)
  for row in report.get('remaining',[]):print('AUDIT_REMAINING',json.dumps(row,ensure_ascii=False),flush=True)
+ return report
 if __name__=='__main__':main()

@@ -1,0 +1,31 @@
+name: Reconstituer les pointeurs BHL
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-bhl-scorers.py'
+      - '.github/workflows/scorers-build.yml'
+permissions:
+  contents: read
+concurrency:
+  group: bhl-scorers-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier le calcul
+        run: python tests/test-production-audit.py
+      - name: Reconstituer les contributions des partants pour toutes les saisons
+        run: python scripts/build-bhl-scorers.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bhl-scorers-data
+          path: data/production
+          retention-days: 7
