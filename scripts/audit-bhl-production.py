@@ -11,7 +11,7 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data/ownership/production-pilot.json'
 FIELDS={'G':['goals'],'A':['assists'],'SOG':['shots','shotsOnGoal'],'Hit':['hits'],'Blk':['blockedShotAttempts','blockedShots'],'Tk':['takeaways'],'FOW':['faceoffWins','faceoffsWon','totalFaceoffWins','faceoffsWonTotal','totalFaceoffsWon'],'W':['wins'],'GA':['goalsAgainst'],'SV':['saves'],'SHO':['shutouts']}
-REVIEWED_ALIASES={'03rfp':['Samuel Montembeault']}
+REVIEWED_ALIASES={'03rfp':['Samuel Montembeault'],'06snb':['Ben Kindel'],'042xv':['Michael Eyssimont'],'03rfo':['Dan Vladar'],'04ajl':['Bo Groulx']}
 REPORTS=[('skater','summary'),('skater','realtime'),('skater','faceoffwins'),('goalie','summary')]
 def get(url):
  request=urllib.request.Request(url,headers={'User-Agent':'BHL-Sync/1.0','Accept':'application/json'})
@@ -54,7 +54,7 @@ def resolve_id(pid,position,directory,identities,season_rows):
  kind='goalie' if position=='G' else 'skater'
  matches={str(r['playerId']) for r in season_rows[kind] if key(r.get('skaterFullName') or r.get('goalieFullName')) in names}
  return (next(iter(matches)),'unique_official_season_name') if len(matches)==1 else (None,'unresolved')
-def official_scores(data):
+def official_scores(data,allow_partial=False):
  official={}
  for matchup in data.get('matchups',[]):
   for side in ['away','home']:
@@ -63,7 +63,7 @@ def official_scores(data):
     code=category['shortName'];categories[code]=categories.get(code,0)+float(category.get(side,{}).get('points',0))
    if tid in official and official[tid]['points']!=points:raise ValueError('Inconsistent official team scores')
    official[tid]={'points':points,'categoryPoints':categories}
- if len(official)!=16:raise ValueError('Incomplete Fantrax team scores')
+ if (not allow_partial and len(official)!=16) or not 1<=len(official)<=16:raise ValueError('Incomplete Fantrax team scores')
  return official
 def calculate(period,archive,directory,identities,season_rows,raw,official):
  n=period['number'];indexed={job:{str(r['playerId']):r for r in rows} for job,rows in raw.items()};configs={}
@@ -71,11 +71,13 @@ def calculate(period,archive,directory,identities,season_rows,raw,official):
   for config in group.get('configs',[]):
    category=config.get('scoringCategory',{}).get('shortName');pos=config.get('position',{}).get('shortName');points=config.get('points')
    if category and pos and points is not None:configs[(category,pos)]=float(points)
- teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items()}
+ teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items() if tid in official}
  for pid,spans in archive['lineups'].items():
   span=next((s for s in spans if s[0]<=n<=s[1]),None)
   if not span or span[3]!='ACTIVE':continue
-  _,_,tid,status,pos=span;name=directory[pid]['name'];kind='goalie' if pos=='G' else 'skater';summary=indexed[(kind,'summary')]
+  _,_,tid,status,pos=span
+  if tid not in teams:continue
+  name=directory[pid]['name'];kind='goalie' if pos=='G' else 'skater';summary=indexed[(kind,'summary')]
   nhl_id,evidence=resolve_id(pid,pos,directory,identities,season_rows)
   player={'fantraxId':pid,'name':name,'position':pos,'nhlId':nhl_id,'identityEvidence':evidence,'stats':{},'categoryPoints':{},'points':None}
   if not nhl_id:player['error']='NHL identity not confirmed'
@@ -119,12 +121,13 @@ def main():
     raw={job:nhl_report(*job,start,end) for job in REPORTS}
     scores=get('https://www.fantrax.com/fxea/general/getMatchupScores?leagueId='+archive['leagueId']+'&period='+str(n))
     if scores.get('period')!=n:raise ValueError('Wrong Fantrax scoring period')
-    result['teams']=calculate(period,archive,directory,identities,season_rows,raw,official_scores(scores));result['validatedTeams']=sum(t['validated'] for t in result['teams']);result['status']='validated' if result['validatedTeams']==16 else 'needs_review'
+    official=official_scores(scores,allow_partial=result['phase']=='playoffs');result['competingTeams']=len(official);result['notInMatchups']=[tid for tid in archive['teams'] if tid not in official]
+    result['teams']=calculate(period,archive,directory,identities,season_rows,raw,official);result['validatedTeams']=sum(t['validated'] for t in result['teams']);result['status']='validated' if result['validatedTeams']==result['competingTeams'] else 'needs_review'
    except Exception as error:result['status']='blocked';result['error']=type(error).__name__+': '+str(error)
    print('AUDIT_PERIOD',json.dumps({k:v for k,v in result.items() if k!='teams'},ensure_ascii=False),flush=True)
    return result
   with cf.ThreadPoolExecutor(max_workers=3) as pool:report['periods']=sorted(pool.map(audit_period,archive['periods']),key=lambda p:p['period'])
-  report['totalPeriods']=len(report['periods']);report['checkedPeriods']=sum('teams' in p for p in report['periods']);report['validatedPeriods']=sum(p['status']=='validated' for p in report['periods']);report['validatedTeamPeriods']=sum(p.get('validatedTeams',0) for p in report['periods']);report['teamPeriods']=16*report['totalPeriods'];report['status']='validated_season' if report['validatedTeamPeriods']==report['teamPeriods'] else 'needs_review'
+  report['totalPeriods']=len(report['periods']);report['checkedPeriods']=sum('teams' in p for p in report['periods']);report['validatedPeriods']=sum(p['status']=='validated' for p in report['periods']);report['validatedTeamPeriods']=sum(p.get('validatedTeams',0) for p in report['periods']);report['teamPeriods']=sum(p.get('competingTeams',16 if p['phase']=='regular' else 0) for p in report['periods']);report['status']='validated_season' if report['checkedPeriods']==report['totalPeriods'] and report['validatedTeamPeriods']==report['teamPeriods'] else 'needs_review'
   report['remaining']=[{'period':p['period'],'team':t['team'],'difference':t['difference'],'unresolved':t['unresolved'],'categories':t['categoryDifferences']} for p in report['periods'] for t in p.get('teams',[]) if not t['validated']]
  except Exception as error:report['status']='blocked';report['error']=type(error).__name__+': '+str(error)
  OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

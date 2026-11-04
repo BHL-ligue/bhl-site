@@ -21,4 +21,8 @@ class AuditTests(unittest.TestCase):
   raw={('skater','summary'):[{'playerId':'c','gamesPlayed':1},{'playerId':'lw','gamesPlayed':1}],('skater','realtime'):[],('skater','faceoffwins'):[{'playerId':'c','totalFaceoffWins':10},{'playerId':'lw','totalFaceoffWins':20}],('goalie','summary'):[]}
   teams=m.calculate({'number':1},archive,directory,ids,{},raw,{'a':{'points':0.5,'categoryPoints':{'FOW':0.5}}})
   self.assertEqual(len(teams[0]['players']),2);self.assertEqual(teams[0]['calculated'],0.5);self.assertTrue(teams[0]['validated'])
+ def test_playoff_only_counts_teams_in_matchups(self):
+  data={'matchups':[{'home':{'teamId':'a','score':1},'away':{'teamId':'b','score':2}}]}
+  self.assertEqual(len(m.official_scores(data,allow_partial=True)),2)
+  with self.assertRaises(ValueError):m.official_scores(data)
 if __name__=='__main__':unittest.main()
