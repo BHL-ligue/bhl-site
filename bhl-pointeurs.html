@@ -83,4 +83,4 @@ async function init(){
 }
 ['phase','season','position','team','organization','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
 document.querySelectorAll('.record-tab').forEach(btn=>btn.addEventListener('click',()=>{const records=btn.id==='tab-records';document.getElementById('panel-records').hidden=!records;document.getElementById('panel-pointeurs').hidden=records;document.getElementById('tab-records').setAttribute('aria-selected',String(records));document.getElementById('tab-pointeurs').setAttribute('aria-selected',String(!records));}));
-</script><script src="bhl-records.js?v=period-filter-fix-20261104-2" defer></script></body></html>
+</script><script src="bhl-records.js?v=split-skaters-goalies-20261104" defer></script></body></html>
