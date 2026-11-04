@@ -11,7 +11,7 @@ function renderPlayer(player,rank,season){
   const image=document.createElement('img');image.alt='';image.loading='lazy';image.decoding='async';
   const team=String(player.nhlTeam||'NHL').toUpperCase();
   const seasons=imageSeasons(season),sources=[...seasons.map(year=>`https://assets.nhle.com/mugs/nhl/${year}/${team}/${player.nhlId}.png`),`https://assets.nhle.com/mugs/nhl/${seasons.at(-1)}/NHL/${player.nhlId}.png`];
-  let source=0;image.onload=()=>{photo.firstChild?.remove()};image.onerror=()=>{source++;if(source<sources.length)image.src=sources[source];else image.remove()};photo.append(image);image.src=sources[0];
+  let source=0;image.onload=()=>{photo.childNodes.forEach(node=>{if(node.nodeType===Node.TEXT_NODE)node.remove()})};image.onerror=()=>{source++;if(source<sources.length)image.src=sources[source];else image.remove()};photo.append(image);image.src=sources[0];
  }
  const name=document.createElement('button');name.type='button';name.className='home-leader-name bhl-player-inline-link';name.dataset.bhlPlayerId=player.id;name.dataset.bhlPlayerName=player.name;name.setAttribute('aria-label','Ouvrir la fiche de '+player.name);name.title='Ouvrir la fiche de '+player.name;name.textContent=player.name;
  const info=document.createElement('div');info.className='home-leader-person';info.append(photo,name);
