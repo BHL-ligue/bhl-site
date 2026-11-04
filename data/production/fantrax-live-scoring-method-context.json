@@ -1,0 +1,44 @@
+{
+  "source": "https://www.fantrax.com/main-C4DPXOYQ.js",
+  "status": "diagnostic_only",
+  "occurrences": {
+    "getLiveScoringStats": [
+      {
+        "offset": 800309,
+        "before": "\n         ERR: ${JSON.stringify(i)}`),xe([])}reportError(i,t,e=`warning`){this.createRequest(`sendEmailAlert`,{alertType:e,source:t,body:i})}getUpdatePriority(){return localStorage.getItem(me.API_UPDATE_PRIORITY_FLAG)}setServerNumber(i){this.serverNumber=i}getServerNumber(){return this.serverNumber}};Ml.RETRY_EMPTY_ANSWER=new Set([`getBoxscore`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`getFantasyLeagueInfo`,`getFantasyTeams`,`getLiveDraft`,`",
+        "after": "`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`getScoresSummaryData`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsInfo`,`getTransactionDetailsHistory`,`chatAdmin.getChatGroupInfo`,`chatAdmin.getChatGroupUserIds`,`chatAdmin.getChatGroups`,`chatAdmin.getChatMessages`,`chatAdmin.getLeagueAndGuestUsers`,`chatAdmin.getPinnedMessageCount`,`chatAdmin.getPinnedMessages`,`chatAdmin.getThreadMessages`,`liveDraft.getAveragePickTimes`,`liveDraft.getMissedPicks`,`liveDraft.getPickInfo`,`notificationCenter.get`,`notificationManagement.getRegistrations`]),Ml.ɵfac=function(t){return new(t||Ml)(M(Ca$1),M(gn$1),M(J)"
+      }
+    ],
+    "getScoresSummaryData": [
+      {
+        "offset": 800407,
+        "before": "EmailAlert`,{alertType:e,source:t,body:i})}getUpdatePriority(){return localStorage.getItem(me.API_UPDATE_PRIORITY_FLAG)}setServerNumber(i){this.serverNumber=i}getServerNumber(){return this.serverNumber}};Ml.RETRY_EMPTY_ANSWER=new Set([`getBoxscore`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`getFantasyLeagueInfo`,`getFantasyTeams`,`getLiveDraft`,`getLiveScoringStats`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`",
+        "after": "`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsInfo`,`getTransactionDetailsHistory`,`chatAdmin.getChatGroupInfo`,`chatAdmin.getChatGroupUserIds`,`chatAdmin.getChatGroups`,`chatAdmin.getChatMessages`,`chatAdmin.getLeagueAndGuestUsers`,`chatAdmin.getPinnedMessageCount`,`chatAdmin.getPinnedMessages`,`chatAdmin.getThreadMessages`,`liveDraft.getAveragePickTimes`,`liveDraft.getMissedPicks`,`liveDraft.getPickInfo`,`notificationCenter.get`,`notificationManagement.getRegistrations`]),Ml.ɵfac=function(t){return new(t||Ml)(M(Ca$1),M(gn$1),M(J),M(nr$1),M(Fs),M(kc),M(He),M(Ne),M(At),M(Ls))},Ml.ɵprov=H({token:Ml,factory:Ml.ɵfac});var pe=Ml;Ut("
+      }
+    ],
+    "getFantasyLeagueInfo": [
+      {
+        "offset": 800253,
+        "before": "ror.message):console.error(`API error 2: ${i&&i.status},\n         ERR: ${JSON.stringify(i)}`),xe([])}reportError(i,t,e=`warning`){this.createRequest(`sendEmailAlert`,{alertType:e,source:t,body:i})}getUpdatePriority(){return localStorage.getItem(me.API_UPDATE_PRIORITY_FLAG)}setServerNumber(i){this.serverNumber=i}getServerNumber(){return this.serverNumber}};Ml.RETRY_EMPTY_ANSWER=new Set([`getBoxscore`,`getClaimDropConfirmInfo`,`getFantasyColumns`,`",
+        "after": "`,`getFantasyTeams`,`getLiveDraft`,`getLiveScoringStats`,`getPendingTransactions`,`getPlayerProfile`,`getPlayerStats`,`getRefObject`,`getScoresSummaryData`,`getStatCorrections`,`getTeamRosterInfo`,`getTeamStandingsInfo`,`getTransactionDetailsHistory`,`chatAdmin.getChatGroupInfo`,`chatAdmin.getChatGroupUserIds`,`chatAdmin.getChatGroups`,`chatAdmin.getChatMessages`,`chatAdmin.getLeagueAndGuestUsers`,`chatAdmin.getPinnedMessageCount`,`chatAdmin.getPinnedMessages`,`chatAdmin.getThreadMessages`,`liveDraft.getAveragePickTimes`,`liveDraft.getMissedPicks`,`liveDraft.getPickInfo`,`notificationCenter.get`,`notificationManagement.getRegistrations`]),Ml."
+      },
+      {
+        "offset": 1186913,
+        "before": " r=this.navStore.getFantasyInfoSnapshot(e)?.fantasySettings;if(!r||!o)return;let a=new Set(o.map(f=>f.id)),c=[r.myDefaultTeamId,...r.myTeamIds||[]].filter(f=>f&&!a.has(f));if(!c.length)return;let m=[...new Set(c)].sort().join(`,`);this.refreshedForRemovedTeams.get(e)!==m&&(this.refreshedForRemovedTeams.set(e,m),this.getLatestFantasyInfo$(e).subscribe())}getLatestFantasyInfo$(e=this.navStore.getLeagueId()){return e?this.dataService.createRequest(`",
+        "after": "`,{},{leagueId:e}).pipe(Ie(o=>{this.apiCache.putItem({leagueId:e,data:o,requestId:this.FANTASY_INFO_CACHE_NAME,expiryAfterSec:this.FANTASY_INFO_CACHE_UNUSABLE_AFTER_SEC}),this.navStore.setFantasyInfo(e,o)})):(this.logger.log({title:`ERROR.NO_LEAGUE_ID`,color:`red`})(),xe(null))}};i.ɵfac=function(o){return new(o||i)(M(In$1),M(pe),M(Fs),M(At))},i.ɵprov=H({token:i,factory:i.ɵfac});return i})();var gU=(()=>{let i=class i{constructor(e){this.leagueService=e}resolve({params:{leagueId:e}}){return e?this.leagueService.resolveFantasyInfoForRoute(e):null}};i.ɵfac=function(o){return new(o||i)(M(eC))},i.ɵprov=H({token:i,factory:i.ɵfac});return i})();var "
+      },
+      {
+        "offset": 1454321,
+        "before": "red:x,stats:C.map((W,Q)=>E(E({},k[Q]),W))}}})).subscribe(m=>{if(!m){this.errorService.reportCustomError(`SCORER_DETAILS_NO_ROW: getScorerDetails answered no row, scorerId=${o}, teamId=${r}, txType=${a}`);return}this.playerTxStore.setScorerDetails(e,m)})}getTeamScorerUniqueKey(e,o){return`${e}:${o}`}submitClaimDropDialog(e,o,r){this.dataService.createBatchedRequest({getClaimDropConfirmInfo:{transactionSets:this.getClaimDropAPIParams(e),txSetId:r},",
+        "after": ":{},getRefObject:[{type:`FantasyItemStatus`},{type:`ClaimRosterActionType`}]},{leagueId:e}).pipe(ae(({getClaimDropConfirmInfo:a,getFantasyLeagueInfo:l,getRefObject:[c,m]})=>({alertTitle:a.alertTitle||`Submit Claim/Drop`,confirmResponses:a.confirmResponses,txResponses:a.txResponses,positionMap:l.positionMap,statusMap:c.allObjs,actionMap:m.allObjs,txSetId:r,leagueId:e,isDropScreen:this.isDropScreen()}))).subscribe(a=>{this.dialog.open(m6,{width:`54rem`,id:`navigation-dialog`,disableClose:!0,data:a}).afterClosed().subscribe(l=>{l===`COMPLETED`?this.resetAndReload(o):l===`BACK_TO_CLAIMS`?this.resetAndGoToPlayers(e):l===`COPY_BIDS`?this.removeBids"
+      },
+      {
+        "offset": 1454469,
+        "before": "wered no row, scorerId=${o}, teamId=${r}, txType=${a}`);return}this.playerTxStore.setScorerDetails(e,m)})}getTeamScorerUniqueKey(e,o){return`${e}:${o}`}submitClaimDropDialog(e,o,r){this.dataService.createBatchedRequest({getClaimDropConfirmInfo:{transactionSets:this.getClaimDropAPIParams(e),txSetId:r},getFantasyLeagueInfo:{},getRefObject:[{type:`FantasyItemStatus`},{type:`ClaimRosterActionType`}]},{leagueId:e}).pipe(ae(({getClaimDropConfirmInfo:a,",
+        "after": ":l,getRefObject:[c,m]})=>({alertTitle:a.alertTitle||`Submit Claim/Drop`,confirmResponses:a.confirmResponses,txResponses:a.txResponses,positionMap:l.positionMap,statusMap:c.allObjs,actionMap:m.allObjs,txSetId:r,leagueId:e,isDropScreen:this.isDropScreen()}))).subscribe(a=>{this.dialog.open(m6,{width:`54rem`,id:`navigation-dialog`,disableClose:!0,data:a}).afterClosed().subscribe(l=>{l===`COMPLETED`?this.resetAndReload(o):l===`BACK_TO_CLAIMS`?this.resetAndGoToPlayers(e):l===`COPY_BIDS`?this.removeBidsAndGoToRosters(e):console.log(l)})})}rejectTradeAndSubmitNewTrade(e,o){this.dataService.createRequest(`rejectTrade`,{txSetId:o},{leagueId:e}).subscr"
+      }
+    ]
+  },
+  "apiRouteCandidates": [],
+  "bytesInspected": 2668882
+}
