@@ -679,6 +679,13 @@ async function bhlAdvancedPlayer(name,target,fantraxId){
   if(target.isConnected)target.textContent='Statistiques avancées temporairement indisponibles.';
  }
 }
+function bhlHistoricalTeamCell(name){
+ const team=bhlTeamKey(name),codes={'anaheim mighty ducks':'ANA','atlanta thrashers':'ATL','boston bruins':'BOS','cleveland barons':'CLE','california golden seals':'CAL','chicago blackhawks':'CHI','colorado avalanche':'COL','detroit red wings':'DET','detroit cougars':'DET','florida panthers':'FLA','hartford whalers':'HAR','minnesota north stars':'MIN','montreal canadiens':'MTL','montreal maroons':'MTL','nashville predators':'NSH','new york rangers':'NYR','ottawa senators':'OTT','edmonton oilers':'EDM','quebec nordiques':'QUE','toronto maple leafs':'TOR','vegas golden knights':'VGK','winnipeg jets':'WPG'};
+ const logo=({'montreal maroons':'montreal-maroons.png','detroit cougars':'detroit-cougars.png'})[team]||BHL_PROFILE_TEAMS[team]?.[1];
+ const badge=document.createElement('span');badge.title=name;badge.style.cssText='display:inline-flex;align-items:center;gap:5px;white-space:nowrap';
+ if(logo){const image=document.createElement('img');image.src='logos/'+logo;image.alt=name;image.loading='lazy';image.style.cssText='width:24px;height:24px;object-fit:contain;flex-shrink:0';badge.append(image)}
+ const code=document.createElement('span');code.textContent=codes[team]||name;badge.append(code);return badge;
+}
 const bhlHistoricalScorersCache={promise:null};
 async function bhlHistoricalScorers(name,target,fantraxId){
  target.textContent='Chargement des statistiques BHL par saison et équipe…';
@@ -709,11 +716,11 @@ async function bhlHistoricalScorers(name,target,fantraxId){
    const heading=document.createElement('h4');heading.textContent=label;target.append(heading);
    if(!items.length){const empty=document.createElement('p');empty.className='bhl-player-source';empty.textContent='Aucune donnée disponible.';target.append(empty);return}
    const wrap=document.createElement('div');wrap.className='bhl-player-scroll';
-   const table=document.createElement('table');table.className='bhl-player-table';
+   const table=document.createElement('table');table.className='bhl-player-table bhl-historical-scorers';
    const thead=document.createElement('thead');const tr=document.createElement('tr');
    for(const label of ['Saison','Équipe BHL','Départs','PJ','FPTS','FP/Départ','FP/GP']){const th=document.createElement('th');th.textContent=label;tr.append(th)}thead.append(tr);table.append(thead);
    const tbody=document.createElement('tbody');
-   for(const row of items){const tr=document.createElement('tr');for(const value of [row.season,row.team,row.starts||0,row.gp||0,fmtBhl(row.fpts),row.starts?fmtBhl(row.fpts/row.starts):'—',row.gp?fmtBhl(row.fpts/row.gp):'—']){const td=document.createElement('td');td.textContent=String(value);tr.append(td)}tbody.append(tr)}
+   for(const row of items){const tr=document.createElement('tr');for(const value of [row.season,row.team,row.starts||0,row.gp||0,fmtBhl(row.fpts),row.starts?fmtBhl(row.fpts/row.starts):'—',row.gp?fmtBhl(row.fpts/row.gp):'—']){const td=document.createElement('td');if(tr.cells.length===1){td.append(bhlHistoricalTeamCell(row.team))}else td.textContent=String(value);tr.append(td)}tbody.append(tr)}
    table.append(tbody);wrap.append(table);target.append(wrap);
   };
   target.replaceChildren();

@@ -13,6 +13,7 @@ function describe(header,index,rows){
  if(/^(pos(?:ition)?|poste)$/.test(label))return{kind:'short',width:48};
  if(/saison|annee/.test(label))return{kind:'season',width:/saisons/.test(label)?112:68};
  if(/equipe|organisation|adversaire|proprietaire|club/.test(label)){
+  if(header.closest('table').classList.contains('bhl-historical-scorers'))return{kind:'team',width:72};
   const hasImages=cells.some(c=>c.querySelector('img'));
   if(hasImages&&texts.length===0){const count=Math.max(1,...cells.map(c=>c.querySelectorAll('img').length));return{kind:'logos',width:Math.max(28,Math.min(label.length*5+10,84),Math.min(count,3)*17+8)}}
   if(!hasImages&&texts.length&&texts.every(t=>t.length<=5))return{kind:'short',width:52};

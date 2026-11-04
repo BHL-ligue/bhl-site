@@ -9,11 +9,11 @@ function ensurePlayerProfile(){
  if(!document.querySelector('script[src^="bhl-trades.js"]')){
   const trades=document.createElement('script');trades.src='bhl-trades.js?v=global3';document.head.append(trades);
  }
- if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=coyle-fix1';document.head.append(script)}
+ if(needsProfile){const script=document.createElement('script');script.src='bhl-player-stats.js?v=bhl-team-badges-20261104';document.head.append(script)}
 }
 function ensureTableVisuals(){
  if(!document.querySelector('link[href^="bhl-table-visuals.css"]')){const css=document.createElement('link');css.rel='stylesheet';css.href='bhl-table-visuals.css?v=1';document.head.append(css)}
- if(!document.querySelector('script[src^="bhl-table-visuals.js"]')){const script=document.createElement('script');script.src='bhl-table-visuals.js?v=1';document.head.append(script)}
+ if(!document.querySelector('script[src^="bhl-table-visuals.js"]')){const script=document.createElement('script');script.src='bhl-table-visuals.js?v=2';document.head.append(script)}
 }
 function mount(){
  ensurePlayerProfile();ensureTableVisuals();

@@ -71,7 +71,10 @@ def main():
  print('CROSS_SEASON_IDENTITIES',len(audit.HISTORICAL_NHL_IDS),flush=True)
  for season in seasons:
   audit.OUT=out/'audits'/f'{season}.json'
-  report=audit.main(season,completed_only=True);reports.append(report)
+  report=audit.main(season,completed_only=True)
+  # Fantrax retained a fictitious third round after the COVID interruption.
+  if season=='2019-20':report['periods']=[p for p in report['periods'] if p['phase']!='playoffs' or p['period']<=23]
+  reports.append(report)
  # Preserve individual BHL starting-lineup periods for true single-start records.
  starts=[]
  for report in reports:

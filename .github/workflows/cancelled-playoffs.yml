@@ -1,0 +1,44 @@
+name: Corriger les séries interrompues 2019-20
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/correct-cancelled-playoffs.py'
+      - '.github/workflows/cancelled-playoffs.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: bhl-cancelled-playoffs
+  cancel-in-progress: false
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retirer la troisième ronde annulée sans changer les points
+        run: python scripts/correct-cancelled-playoffs.py
+      - name: Publier les archives corrigées
+        run: |
+          git config user.name "BHL Data Sync"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/production/starts.json data/production/scorers.json data/production/summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Retirer les départs de la troisième ronde annulée 2019-20"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deploy

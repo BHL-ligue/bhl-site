@@ -54,3 +54,15 @@ export function loadUsage(){
  })().catch(error=>{pending=null;throw error});
  return pending;
 }
+let bracketPending;
+export function loadTeamPlayoffs(organization){
+ if(!bracketPending)bracketPending=json('data/playoffs.json').catch(error=>{bracketPending=null;throw error});
+ return bracketPending.then(data=>data.seasons.map(season=>{
+  const rounds=season.rounds.flatMap(round=>round.matches.flatMap(match=>{
+   const team=match.teams.find(t=>organizationCode(t.name)===organization);if(!team)return[];
+   const opponent=match.teams.find(t=>t.id!==team.id);
+   return[{number:round.number,team:team.name,opponent:opponent?.name||'—',score:team.score,against:opponent?.score,interrupted:!!round.interrupted,result:round.interrupted?'Interrompue':match.winner===team.id?'Victoire':match.winner?'Défaite':'À déterminer'}];
+  }));
+  return{season:season.season,rounds,champion:organizationCode(season.champion)===organization,banner:organizationCode(season.champion)===organization?season.banner:null,cancelled:!!season.cancelled};
+ }));
+}
