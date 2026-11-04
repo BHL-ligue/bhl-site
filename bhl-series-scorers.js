@@ -63,6 +63,7 @@ function render(){
  const selectedSeason=$('season').value;if(!selectedSeason&&$('scorer-scope').value!=='all')return;
  const season=$('scorer-scope').value==='all'?'':selectedSeason;
  const rows=ranking(dataset,season),limit=$('scorer-limit').value,visible=limit==='all'?rows:rows.slice(0,Number(limit));
+ const table=$('scorer-results').closest('table');table.style.setProperty('--scorer-team-width',visible.some(p=>p.teams.size>1)?'52px':'28px');
  portraitObserver?.disconnect();const body=$('scorer-results');body.replaceChildren();
  for(const [index,p] of visible.entries()){
   const tr=document.createElement('tr');
