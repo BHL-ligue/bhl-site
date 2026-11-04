@@ -17,6 +17,9 @@ function ensureTableVisuals(){
  if(!document.querySelector('script[src^="bhl-table-visuals.js"]')){const script=document.createElement('script');script.src='bhl-table-visuals.js?v=2';document.head.append(script)}
 }
 function mount(){
+ // Icône de l'onglet du navigateur sur toutes les pages BHL.
+ if(!document.querySelector('link[rel="icon"]')){const favicon=document.createElement('link');favicon.rel='icon';favicon.type='image/png';favicon.href='logos/BHLlogo.png?v=bhl-favicon-20261104';document.head.appendChild(favicon)}
+ if(!document.querySelector('link[rel="apple-touch-icon"]')){const touch=document.createElement('link');touch.rel='apple-touch-icon';touch.href='logos/BHLlogo.png?v=bhl-favicon-20261104';document.head.appendChild(touch)}
  ensurePlayerProfile();ensureTableVisuals();
  const root=document.getElementById('bhl-global-nav');if(!root)return;
  const groups=[
