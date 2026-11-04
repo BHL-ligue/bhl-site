@@ -47,3 +47,9 @@
 .bhl-player-inline-link{display:inline;color:inherit;background:none;border:0;border-radius:2px;padding:0;font:inherit;font-weight:inherit;text-align:inherit;line-height:inherit;cursor:pointer;text-decoration:underline;text-decoration-color:#cc000045;text-decoration-thickness:1px;text-underline-offset:2px}
 .bhl-player-inline-link:hover,.bhl-player-inline-link:focus-visible{color:#b00000;text-decoration-color:currentColor}
 .bhl-player-inline-link:focus-visible{outline:2px solid #cc0000;outline-offset:3px}
+
+/* Team quick links: scrollable logo dropdown, accessible on mobile and desktop. */
+#bhl-global-nav .bhl-nav-team-group .bhl-nav-submenu{min-width:230px;max-height:min(70vh,590px);overflow-y:auto;overscroll-behavior:contain}
+#bhl-global-nav .bhl-nav-team-link{display:flex;align-items:center;gap:11px}
+#bhl-global-nav .bhl-nav-team-link img{width:28px;height:28px;object-fit:contain;flex:none}
+@media(max-width:1380px){#bhl-global-nav .bhl-nav-team-group .bhl-nav-submenu{max-height:55vh;overflow-y:auto}}
