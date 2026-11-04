@@ -21,10 +21,10 @@ function mount(){
  const root=document.getElementById('bhl-global-nav');if(!root)return;
  const groups=[
   {href:'index.html',label:'Accueil'},
-  {href:'bhl-nouvelles.html',label:'Nouvelles'},
+  {label:'Ligue',items:[['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements'],['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
+  {label:'Statistiques',items:[['bhl-fantrax.html','Saison régulière'],['bhl-series.html','Séries éliminatoires'],['bhl-pointeurs.html','Joueurs'],['bhl-records.html','Records']]},
   {href:'bhl-equipes-connectees.html',label:'Équipes'},
-  {label:'La ligue',items:[['bhl-trophees.html','Trophées'],['bhl-reglements.html','Règlements'],['bhl-transactions.html','Transactions'],['bhl-repechage.html','Repêchage']]},
-  {label:'Statistiques',items:[['bhl-fantrax.html','Saison régulière'],['bhl-series.html','Séries éliminatoires'],['bhl-pointeurs.html','Joueurs'],['bhl-records.html','Records']]} ,
+  {href:'bhl-nouvelles.html',label:'Nouvelles'},
   {href:'bhl-espace-dg.html',label:'Espace DG'}
  ];
  const page=decodeURIComponent(location.pathname.split('/').pop()||'index.html');
