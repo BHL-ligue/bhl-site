@@ -69,7 +69,7 @@ async function bhlCurrentOfficialStats(player,id){
   const stored=snapshot.players[String(nhlId)];
   if(stored)return {...stored,nhlTeam:stored.nhlTeam||player.nhlTeam||'',updatedAt:snapshot.updatedAt};
   const goalie=!!player.goalie,keys=goalie?['W','GA','SV','SHO','G','A']:['G','A','SOG','Hit','Blk','Tk','FOW'];
-  return {goalie,nhlTeam:player.nhlTeam||'',stats:{...Object.fromEntries(keys.map(k=>[k,0])),GP:0,FPts:0,'FP/G':null},usage:{TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'},noGames:true,updatedAt:snapshot.updatedAt};
+  return {goalie,nhlTeam:player.nhlTeam||'',stats:{...Object.fromEntries(keys.map(k=>[k,null])),GP:null,FPts:null,'FP/G':null},usage:{TOI:'N/D',TOIPP:'N/D',TOIPK:'N/D'},noSeasonRecord:true,updatedAt:snapshot.updatedAt};
  }
  const goalie=!!player.goalie;
  const profile=await nhlJson('https://api-web.nhle.com/v1/player/'+nhlId+'/landing');
@@ -141,6 +141,7 @@ async function fill(target,id,name){
    target.innerHTML='<p>FPTS et FP/G LNH en attente : identité LNH non confirmée, statistiques incomplètes ou saison sans match. Aucun ancien total Fantrax ne sera présenté comme un calcul BHL.</p>';
    return;
   }
+  if(official.noSeasonRecord){target.innerHTML='<p>Aucune statistique officielle de saison régulière disponible pour 2026-27 dans le dernier relevé LNH. Le profil et les autres onglets restent accessibles.</p>';return;}
   target.innerHTML=table(official,{period:'Saison régulière 2026-27'});
   if(!official.goalie){
    const nhlId=await bhlLookupOfficialId(resolved.player,resolved.id);
