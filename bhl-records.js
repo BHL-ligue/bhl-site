@@ -53,9 +53,15 @@ function render(){
  const root=$('records-content');if(!root)return;
  root.replaceChildren();
  const phase=$('record-phase').value,season=$('record-season').value,position=$('record-position').value,duration=$('record-duration').value;
- const allowed=r=>{const days=periodDurations[r.season]?.[String(r.period)];return duration==='all'||(Number.isFinite(days)&&(duration==='regular'?days<=7:days>7))};
+ const allowed=r=>{const days=periodDurations[String(r.season)]?.[String(r.period)];return duration==='all'||(Number.isFinite(days)&&(duration==='regular'?days<=7:days>7))};
  const allStarts=starts.filter(r=>allowed(r)&&(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||(position==='goalie'?r.kind==='goalie':position==='defense'?r.position==='D':r.kind!=='goalie'&&r.position!=='D')));
  const allAggregates=(duration==='all'?aggregates:allStarts.map(r=>({...r,starts:1,positionGroup:r.kind==='goalie'?'goalie':r.position==='D'?'defense':'forward'}))).filter(r=>(phase==='all'||r.phase===phase)&&(!season||r.season===season)&&(position==='all'||r.positionGroup===position));
+ const status=$('record-filter-status');
+ if(status){
+  const excluded=starts.filter(r=>!allowed(r)).length;
+  const matched=allStarts.length;
+  status.textContent=duration==='all'?'Toutes les durées de périodes · '+matched+' départs':duration==='regular'?'Périodes de 7 jours ou moins · '+matched+' départs retenus · '+excluded+' départs exclus':'Périodes de plus de 7 jours · '+matched+' départs retenus';
+ }
  const career=recordsRows(allAggregates,'career'),seasonRows=recordsRows(allAggregates,'season');
  for(const [id,title,field,scope] of defs){
   const section=document.createElement('section');section.className='record-section';
