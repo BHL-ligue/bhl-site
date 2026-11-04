@@ -14,7 +14,7 @@ def aggregate(reports,directory):
  for report in reports:
   season=report['season'];periods=report.get('periods',[])
   for phase in ['regular','playoffs']:
-   selected=[p for p in periods if p['phase']==phase];teams=[t for p in selected for t in p.get('teams',[])]
+   selected=[p for p in periods if p['phase']==phase and p.get('status')!='not_scheduled'];teams=[t for p in selected for t in p.get('teams',[])]
    coverage.append({'season':season,'phase':phase,'periods':len(selected),'checkedPeriods':sum('teams' in p for p in selected),'comparisons':len(teams),'matchingComparisons':sum(t['validated'] for t in teams),'unresolvedStarts':sum(len(t['unresolved']) for t in teams),'blockedPeriods':[p['period'] for p in selected if 'teams' not in p]})
   for period in periods:
    phase=period['phase']

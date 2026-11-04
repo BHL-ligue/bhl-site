@@ -58,6 +58,7 @@ def resolve_id(pid,position,directory,identities,season_rows):
  matches={str(r['playerId']) for r in season_rows[kind] if key(r.get('skaterFullName') or r.get('goalieFullName')) in names}
  return (next(iter(matches)),'unique_official_season_name') if len(matches)==1 else (None,'unresolved')
 def official_scores(data,allow_partial=False):
+ if data.get('matchups')==[]:return {}
  official={}
  for matchup in data.get('matchups',[]):
   for side in ['away','home']:
@@ -71,9 +72,10 @@ def official_scores(data,allow_partial=False):
 def calculate(period,archive,directory,identities,season_rows,raw,official):
  n=period['number'];indexed={job:{str(r['playerId']):r for r in rows} for job,rows in raw.items()};configs={}
  for group in archive['scoring']['settings']:
+  group_kind='goalie' if group.get('group',{}).get('code')=='HOCKEY_GOALIE' else 'skater'
   for config in group.get('configs',[]):
    category=config.get('scoringCategory',{}).get('shortName');pos=config.get('position',{}).get('shortName');points=config.get('points')
-   if category and pos and points is not None:configs[(category,pos)]=float(points)
+   if category and pos and points is not None:configs[(group_kind,category,pos)]=float(points)
  teams={tid:{'teamId':tid,'team':team['name'],'official':official[tid]['points'],'officialCategoryPoints':official[tid]['categoryPoints'],'officialCategoryValues':official[tid].get('categoryValues',{}),'calculatedCategoryPoints':{},'calculated':0,'unresolved':[],'players':[]} for tid,team in archive['teams'].items() if tid in official}
  for pid,spans in archive['lineups'].items():
   span=next((s for s in spans if s[0]<=n<=s[1]),None)
@@ -88,11 +90,12 @@ def calculate(period,archive,directory,identities,season_rows,raw,official):
    categories=['W','GA','SV','SHO','G','A'] if kind=='goalie' else ['G','A','SOG','Hit','Blk','Tk','FOW']
    no_games=nhl_id not in summary;player['gamesPlayed']=0 if no_games else summary[nhl_id].get('gamesPlayed')
    for category in categories:
-    weight=configs.get((category,pos),configs.get((category,'Default'),0))
-    if weight==0 or no_games:value=0
+    weight=configs.get((kind,category,pos),configs.get((kind,category,'Default'),0))
+    if no_games:value=0
     elif kind=='goalie' or category in ['G','A','SOG']:value=number(summary.get(nhl_id),category)
     elif category=='FOW':value=number(indexed[('skater','faceoffwins')].get(nhl_id),category)
     else:value=number(indexed[('skater','realtime')].get(nhl_id),category)
+    if value is None and weight==0:value=0
     player['stats'][category]=value
     if value is not None:player['categoryPoints'][category]=round(value*weight,4)
    if all(v is not None for v in player['stats'].values()):player['points']=round(sum(player['categoryPoints'].values()),4)
@@ -131,7 +134,7 @@ def main(season='2025-26',completed_only=False):
     scores=get('https://www.fantrax.com/fxea/general/getMatchupScores?leagueId='+archive['leagueId']+'&period='+str(n))
     if scores.get('period')!=n:raise ValueError('Wrong Fantrax scoring period')
     official=official_scores(scores,allow_partial=result['phase']=='playoffs');result['competingTeams']=len(official);result['notInMatchups']=[tid for tid in archive['teams'] if tid not in official]
-    result['teams']=calculate(period,archive,directory,identities,season_rows,raw,official);result['validatedTeams']=sum(t['validated'] for t in result['teams']);result['status']='validated' if result['validatedTeams']==result['competingTeams'] else 'needs_review'
+    result['teams']=calculate(period,archive,directory,identities,season_rows,raw,official);result['validatedTeams']=sum(t['validated'] for t in result['teams']);result['status']='not_scheduled' if not official else 'validated' if result['validatedTeams']==result['competingTeams'] else 'needs_review'
    except Exception as error:result['status']='blocked';result['error']=type(error).__name__+': '+str(error)
    print('AUDIT_PERIOD',json.dumps({k:v for k,v in result.items() if k!='teams'},ensure_ascii=False),flush=True)
    return result
