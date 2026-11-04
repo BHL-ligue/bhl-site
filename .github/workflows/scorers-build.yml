@@ -9,8 +9,11 @@ on:
       - 'scripts/analyze-hit-discrepancies.py'
       - 'scripts/check-fantrax-hit-source.py'
       - '.github/workflows/scorers-build.yml'
+      - 'scripts/audit-bhl-production.py'
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: bhl-scorers-build
   cancel-in-progress: false
@@ -18,6 +21,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,6 +31,8 @@ jobs:
           python-version: '3.12'
       - name: Vérifier le calcul
         run: python tests/test-production-audit.py
+      - name: Conserver le relevé précédent pour contrôler la couverture
+        run: cp data/production/scorers.json /tmp/bhl-scorers-before.json
       - name: Reconstituer les contributions des partants pour toutes les saisons
         run: python scripts/build-bhl-scorers.py
       - name: Préparer les meneurs de l’accueil et les liens de profils
@@ -56,6 +64,13 @@ jobs:
           assert len(data.get('seasons',[])) >= 8
           assert len(data.get('rows',[])) > 0
           assert summary.get('records',0) == len(data['rows'])
+          previous=json.loads(Path('/tmp/bhl-scorers-before.json').read_text())
+          key=lambda r:(r['season'],r['phase'],r['id'],r['team'],r['positionGroup'])
+          old={key(r):r for r in previous['rows']}
+          new={key(r):r for r in data['rows']}
+          for k,r in old.items():
+            assert k in new and new[k]['starts'] >= r['starts'], ('Lost archived starts',k)
+          assert sum(r['missingStarts'] for r in new.values()) <= sum(r['missingStarts'] for r in old.values()), 'Missing statistics increased'
           print('Provisional standings validated:', len(data['rows']), 'rows')
           PY
       - name: Publier les données provisoires pour la page historique
@@ -87,3 +102,10 @@ jobs:
           name: bhl-scorers-data
           path: data/production
           retention-days: 7
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
+        id: deploy

@@ -49,6 +49,12 @@ def date_window(period,schedules):
    else:last-=dt.timedelta(days=1)
  if first>last:raise ValueError('Empty calendar window')
  return first.isoformat(),last.isoformat()
+def confirmed_identities(current,historical):
+ """Use verified historic identities, preserving confirmed current mappings."""
+ identities={pid:p for pid,p in historical.items() if p.get('status')=='confirmed' and p.get('nhlId')}
+ for pid,p in current.items():
+  if p.get('status')=='confirmed' and p.get('nhlId'):identities[pid]=p
+ return identities
 def resolve_id(pid,position,directory,identities,season_rows):
  identity=identities.get(pid,{})
  if identity.get('status')=='confirmed' and identity.get('nhlId'):return str(identity['nhlId']),'existing_confirmed_id'
@@ -119,7 +125,7 @@ def main(season='2025-26',completed_only=False):
   report['archivedPeriods']=len(archive['periods']);report['excludedOpenPeriods']=[]
   if completed_only:
    now=dt.datetime.now(dt.timezone.utc);report['excludedOpenPeriods']=[p['number'] for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])>now];archive['periods']=[p for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])<=now]
-  directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=json.loads((ROOT/'data/player-identity-map.json').read_text())['players']
+  directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=confirmed_identities(json.loads((ROOT/'data/player-identity-map.json').read_text())['players'],json.loads((ROOT/'data/historical-player-identities.json').read_text()).get('players',{}))
   with cf.ThreadPoolExecutor(max_workers=4) as pool:
    names=list(pool.map(lambda kind:(kind,nhl_report(kind,'summary')),['skater','goalie']));season_rows=dict(names)
    dates=sorted({p[k][:10] for p in archive['periods'] for k in ['start','end']})

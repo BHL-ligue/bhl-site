@@ -8,6 +8,14 @@ class AuditTests(unittest.TestCase):
   names={'03rfp':{'name':'Sam Montembeault','aliases':[]},'x':{'name':'Homonyme','aliases':[]}}
   rows={'goalie':[{'playerId':7,'goalieFullName':'Samuel Montembeault'}],'skater':[{'playerId':8,'skaterFullName':'Homonyme'},{'playerId':9,'skaterFullName':'Homonyme'}]}
   self.assertEqual(m.resolve_id('03rfp','G',names,{},rows)[0],'7');self.assertIsNone(m.resolve_id('x','C',names,{},rows)[0])
+ def test_recovered_identity_and_current_precedence(self):
+  recovered={'003xs':{'status':'confirmed','nhlId':8470601},'bad':{'status':'candidate','nhlId':1}}
+  current={'003xs':{'status':'unresolved'},'current':{'status':'confirmed','nhlId':2}}
+  recovered['current']={'status':'confirmed','nhlId':3}
+  ids=m.confirmed_identities(current,recovered)
+  self.assertNotIn('bad',ids)
+  self.assertEqual(ids['current']['nhlId'],2)
+  self.assertEqual(m.resolve_id('003xs','D',{},ids,{})[0],'8470601')
  def test_calendar_boundaries(self):
   period={'start':'2025-10-07T17:00:00-04:00','end':'2025-10-13T12:29:59-04:00'}
   schedules={'2025-10-07':{'gameWeek':[{'date':'2025-10-07','games':[{'gameType':2,'startTimeUTC':'2025-10-07T21:00:00Z'}]}]},'2025-10-13':{'gameWeek':[{'date':'2025-10-13','games':[{'gameType':2,'startTimeUTC':'2025-10-13T16:30:00Z'}]}]}}
