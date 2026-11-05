@@ -11,13 +11,19 @@ def main():
     with urllib.request.urlopen(URL+"?"+q,timeout=30) as response:
         gs=json.load(response)["GC"]["Gamesummary"]
     result={"game_id":game_id,"date":gs.get("meta",{}).get("date_played"),"season_id":gs.get("meta",{}).get("season_id"),"skaters":[],"goalies":[]}
+    # Skaters: use per-game lineup fields verified in the API.
     for side in ("home_team_lineup","visitor_team_lineup"):
-        lineup=gs.get(side,{})
-        for role,weights,dest in (("players",SKATER,"skaters"),("goalies",GOALIE,"goalies")):
-            for p in lineup.get(role,[]):
-                missing=[k for k in weights if p.get(k) in (None,"")]
-                fpts=None if missing else str(sum((Decimal(str(p[k]))*Decimal(str(w)) for k,w in weights.items()),Decimal(0)).quantize(Decimal("0.01")))
-                result[dest].append({"id":p.get("player_id"),"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in weights},"fpts":fpts,"missing":missing})
+        for p in gs.get(side,{}).get("players",[]):
+            missing=[k for k in SKATER if p.get(k) in (None,"")]
+            fpts=None if missing else str(sum((Decimal(str(p[k]))*Decimal(str(w)) for k,w in SKATER.items()),Decimal(0)).quantize(Decimal("0.01")))
+            result["skaters"].append({"id":p.get("player_id"),"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in SKATER},"fpts":fpts,"missing":missing})
+    # Goalies: game-summary goalie records carry win, shutout and saves.
+    # Bench-only roster goalies must not be credited with a played game.
+    for side in ("home","visitor"):
+        for p in gs.get("goalies",{}).get(side,[]):
+            missing=[k for k in GOALIE if p.get(k) in (None,"")]
+            fpts=None if missing else str(sum((Decimal(str(p[k]))*Decimal(str(w)) for k,w in GOALIE.items()),Decimal(0)).quantize(Decimal("0.01")))
+            result["goalies"].append({"id":p.get("player_id"),"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in GOALIE},"fpts":fpts,"missing":missing})
     for role in ("skaters","goalies"):
         result[role].sort(key=lambda p:(p["fpts"] is None,-float(p["fpts"] or 0)))
     result["summary"]={role:{"total":len(result[role]),"scored":sum(p["fpts"] is not None for p in result[role])} for role in ("skaters","goalies")}
