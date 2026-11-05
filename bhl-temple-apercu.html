@@ -22,9 +22,20 @@ function loadCups(){return new Promise(resolve=>{const cb='bhlHallCup'+Date.now(
 // Une photo NHL non disponible ne doit pas faire disparaître la carte.
 function portraitSources(c){
  const id=Number(c.nhlId);if(!id)return [];
- const years=['20262027','20252026','20242025','20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014'];
- const team=String(c.nhlTeam||'NHL').toUpperCase();
- return [...new Set([c.headshot,...years.flatMap(y=>team==='NHL'?['https://assets.nhle.com/mugs/nhl/'+y+'/NHL/'+id+'.png']:['https://assets.nhle.com/mugs/nhl/'+y+'/'+team+'/'+id+'.png','https://assets.nhle.com/mugs/nhl/'+y+'/NHL/'+id+'.png'])].filter(Boolean))];
+ const years=['20252026','20242025','20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014','20122013','20112012','20102011','20092010'];
+ const entries=Array.isArray(c.nhlSeasons)?c.nhlSeasons:[];
+ const sources=[];
+ // NHL generic /NHL/ mug URLs often return a successful HTTP 200 silhouette.
+ // Use the actual NHL club for each season, especially for retired players.
+ for(const entry of entries){
+  const year=String(entry.season||'');
+  const code=String(entry.teamAbbrev||entry.team||'').toUpperCase();
+  if(!/^20\d{6}$/.test(year)||!/^[A-Z]{2,3}$/.test(code))continue;
+  sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+code+'/'+id+'.png');
+ }
+ const team=String(c.nhlTeam||'').toUpperCase();
+ if(/^[A-Z]{2,3}$/.test(team))for(const year of years)sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+team+'/'+id+'.png');
+ return [...new Set([...sources,c.headshot].filter(Boolean))];
 }
 const portraitNameKey=name=>key(name).replace(/[^a-z0-9]/g,'');
 async function resolveMissingIdentity(name,directory){
@@ -101,9 +112,11 @@ async function start(){
   async function worker(){while(next<queue.length){const c=queue[next++];try{
    const response=await fetch('https://api-web.nhle.com/v1/player/'+c.nhlId+'/landing');
    if(!response.ok)continue;const data=await response.json();
-   if(typeof data.headshot==='string'&&data.headshot.startsWith('https://')){c.headshot=data.headshot;const card=[...document.querySelectorAll('.candidate')].find(el=>el.dataset.playerId===c.id);const photo=card?.querySelector('.player-photo');if(photo){photo.onerror=()=>{const fallback=portraitSources({...c,headshot:''});let index=0;photo.onerror=()=>{index++;if(index<fallback.length)photo.src=fallback[index];else{photo.onerror=null;photo.src='logos/BHLlogo.png'}};photo.src=fallback[0]||'logos/BHLlogo.png'};photo.src=c.headshot}}
+   if(typeof data.headshot==='string'&&data.headshot.startsWith('https://'))c.headshot=data.headshot;
    if(data.currentTeamAbbrev)c.nhlTeam=data.currentTeamAbbrev;
    const totals=Array.isArray(data.seasonTotals)?data.seasonTotals:[];
+   c.nhlSeasons=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0&&x.teamAbbrev).sort((a,b)=>Number(b.season)-Number(a.season));
+   if(c.nhlSeasons.length)c.nhlTeam=String(c.nhlSeasons[0].teamAbbrev).toUpperCase();
    const nhl=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0);
    if(!nhl.length)continue;
    const last=Math.max(...nhl.map(x=>Number(String(x.season).slice(0,4))));
