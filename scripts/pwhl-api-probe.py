@@ -40,6 +40,7 @@ def main():
       ("game_summary",dict(feed="gc",tab="gamesummary",game_id=args.game_id)),
       ("play_by_play",dict(feed="statviewfeed",view="gameCenterPlayByPlay",game_id=args.game_id,league_id=1)),
       ("shifts",dict(feed="modulekit",view="gameshifts",game_id=args.game_id)),
+      ("player_stats",dict(feed="statviewfeed",view="players",season=args.season_id,team=-1,position="skaters",page=1)),
     ]
     report={"testedAt":dt.datetime.now(dt.timezone.utc).isoformat(),"source":"HockeyTech PWHL","seasonId":args.season_id,"gameId":args.game_id,"tests":{}}
     for name,params in tests:
