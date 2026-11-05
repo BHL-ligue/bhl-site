@@ -1,0 +1,35 @@
+name: PWHL API research (unpublished)
+on:
+  push:
+    branches: [research/pwhl-fantasy-data]
+    paths:
+      - 'scripts/pwhl-api-probe.py'
+      - '.github/workflows/pwhl-api-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  api-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/pwhl-fantasy-data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Query PWHL data API
+        run: python scripts/pwhl-api-probe.py --output research/pwhl/api-probe-report.json
+      - name: Commit research report only to research branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if test -f research/pwhl/api-probe-report.json; then
+            git add research/pwhl/api-probe-report.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record PWHL API feasibility results [skip ci]"
+              git push origin HEAD:research/pwhl-fantasy-data
+            fi
+          fi
