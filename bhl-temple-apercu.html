@@ -21,23 +21,33 @@ function loadCups(){return new Promise(resolve=>{const cb='bhlHallCup'+Date.now(
 
 // Réutilise les portraits officiels de la fiche LNH et des saisons historiques.
 // Une photo NHL non disponible ne doit pas faire disparaître la carte.
+const HISTORIC_NHL_CLUBS={8473548:['VGK','ARI','PIT','TOR','BOS'],8470604:['PIT','LAK','PHI'],8474161:['CBJ','PHI'],8470638:['BOS'],8470594:['MIN','CHI','VGK','PIT'],8470966:['TOR','SEA','CGY']};
+const NHL_TEAM_CODES={ANAHEIM:'ANA',ARIZONA:'ARI',BOSTON:'BOS',BUFFALO:'BUF',CALGARY:'CGY',CAROLINA:'CAR',CHICAGO:'CHI',COLORADO:'COL',COLUMBUS:'CBJ',DALLAS:'DAL',DETROIT:'DET',EDMONTON:'EDM',FLORIDA:'FLA',LOSANGELES:'LAK',MINNESOTA:'MIN',MONTREAL:'MTL',NASHVILLE:'NSH',NEWJERSEY:'NJD',NEWYORKISLANDERS:'NYI',NEWYORKRANGERS:'NYR',OTTAWA:'OTT',PHILADELPHIA:'PHI',PITTSBURGH:'PIT',SANJOSE:'SJS',SEATTLE:'SEA',STLOUIS:'STL',TAMPA:'TBL',TORONTO:'TOR',UTAH:'UTA',VANCOUVER:'VAN',VEGAS:'VGK',WASHINGTON:'WSH',WINNIPEG:'WPG'};
 function portraitSources(c){
  const id=Number(c.nhlId);if(!id)return [];
- const years=['20262027','20252026','20242025','20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014','20122013','20112012','20102011','20092010'];
- const entries=Array.isArray(c.nhlSeasons)?c.nhlSeasons:[];
+ const years=['20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014','20122013','20112012','20102011'];
  const sources=[];
- // NHL generic /NHL/ mug URLs often return a successful HTTP 200 silhouette.
- // Use the actual NHL club for each season, especially for retired players.
+ const entries=Array.isArray(c.nhlSeasons)?c.nhlSeasons:[];
  for(const entry of entries){
   const year=String(entry.season||'');
-  const code=String(entry.teamAbbrev||entry.team||'').toUpperCase();
-  if(!/^20\d{6}$/.test(year)||!/^[A-Z]{2,3}$/.test(code))continue;
+  const raw=String(entry.teamAbbrev||entry.team||entry.teamName?.default||'').toUpperCase().replace(/[^A-Z]/g,'');
+  const code=raw.length<=3?raw:NHL_TEAM_CODES[raw]||'';
+  if(!/^20\\d{6}$/.test(year)||!/^[A-Z]{2,3}$/.test(code))continue;
   sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+code+'/'+id+'.png');
  }
- const knownHistoricalTeams={8470638:'BOS',8470594:'MIN',8470966:'TOR',8470604:'ATL'};
- const team=String(c.nhlTeam||knownHistoricalTeams[id]||'').toUpperCase();
- if(/^[A-Z]{2,3}$/.test(team))for(const year of years)sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+team+'/'+id+'.png');
+ const codes=[...new Set([c.nhlTeam,...(HISTORIC_NHL_CLUBS[id]||[])].filter(x=>/^[A-Z]{2,3}$/.test(String(x||''))))];
+ for(const year of years)for(const code of codes)sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+code+'/'+id+'.png');
  return [...new Set([c.headshot,...sources].filter(Boolean))];
+}
+function updateHallPortrait(c){
+ const card=[...document.querySelectorAll('.candidate')].find(el=>el.dataset.playerId===c.id);
+ const img=card?.querySelector('.player-photo');if(!img)return;
+ const head=card.querySelector('.head'),sources=portraitSources(c);
+ if(!sources.length)return;
+ let index=0;
+ img.onload=()=>{img.hidden=false;head.classList.remove('missing-portrait')};
+ img.onerror=()=>{index++;if(index<sources.length)img.src=sources[index];else{img.onerror=null;img.hidden=true;head.classList.add('missing-portrait')}};
+ img.src=sources[0];
 }
 const portraitNameKey=name=>key(name).replace(/[^a-z0-9]/g,'');
 async function resolveMissingIdentity(name,directory){
@@ -67,14 +77,6 @@ function render(){
   img.onload=()=>{img.hidden=false;head.classList.remove('missing-portrait')};
   img.onerror=fallbackPortrait;
   if(photoSources.length)img.src=photoSources[0];else{img.hidden=true;head.classList.add('missing-portrait')}
-  // Exact same NHL landing headshot used by the BHL player profile.
-  if(c.nhlId)fetch('https://api-web.nhle.com/v1/player/'+c.nhlId+'/landing').then(res=>res.ok?res.json():null).then(profile=>{
-    if(!profile||!img.isConnected)return;
-    if(profile.headshot&&/^https:\/\//.test(profile.headshot)){
-      const preferred=profile.headshot;
-      const probe=new Image();probe.onload=()=>{if(!img.isConnected)return;photoSources.unshift(preferred);photoIndex=0;img.src=preferred};probe.src=preferred;
-    }
-  }).catch(()=>{});
   const title=document.createElement('div');const h=document.createElement('h2');h.textContent=c.name;const sub=document.createElement('div');sub.className='small';sub.textContent=(c.position==='G'?'Gardien':c.position==='D'?'Défenseur':'Attaquant')+' · Dernier départ : '+c.last;title.append(h,sub);const clubLabel=document.createElement('div');clubLabel.className='club-label';const primaryLogo=document.createElement('img');primaryLogo.src=club[1]?'logos/'+club[1]:'';primaryLogo.alt='';if(!club[1])primaryLogo.hidden=true;clubLabel.append(primaryLogo,document.createTextNode(' '+(c.teamStarts.get(c.mainTeam)||0)+' départs'));clubLabel.title='Équipe avec le plus de départs : '+club[0];title.append(clubLabel);head.append(watermark,img,title);
   const badge=document.createElement('div');badge.className='status'+(c.verified?' ok':'');badge.textContent=c.verified?'Admissibilité LNH + BHL vérifiée':c.status==='noteligible'?'LNH : activité trop récente':'Carrière LNH à confirmer';
   const metrics=document.createElement('div');metrics.className='metrics';for(const [label,value] of [['FPTS',fmt(c.fpts)],['Départs',c.starts],['FP/Départ',c.starts?fmt(c.fpts/c.starts):'—'],['FP/GP',c.gp?fmt(c.fpts/c.gp):'—']]){const box=document.createElement('div');const strong=document.createElement('strong');strong.textContent=value;const small=document.createElement('small');small.textContent=label;box.append(strong,small);metrics.append(box)}
@@ -130,7 +132,8 @@ async function start(){
    if(data.currentTeamAbbrev)c.nhlTeam=data.currentTeamAbbrev;
    const totals=Array.isArray(data.seasonTotals)?data.seasonTotals:[];
    c.nhlSeasons=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0&&x.teamAbbrev).sort((a,b)=>Number(b.season)-Number(a.season));
-   if(c.nhlSeasons.length)c.nhlTeam=String(c.nhlSeasons[0].teamAbbrev).toUpperCase();
+   if(c.nhlSeasons.length)c.nhlTeam=String(c.nhlSeasons[0].teamAbbrev||'').toUpperCase();
+   updateHallPortrait(c);
    const nhl=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0);
    if(!nhl.length)continue;
    const last=Math.max(...nhl.map(x=>Number(String(x.season).slice(0,4))));
