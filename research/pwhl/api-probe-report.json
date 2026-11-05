@@ -1,0 +1,832 @@
+{
+  "testedAt": "2026-11-05T01:04:12.079054+00:00",
+  "source": "HockeyTech PWHL",
+  "seasonId": 8,
+  "gameId": 215,
+  "tests": {
+    "seasons": {
+      "ok": true,
+      "shape": {
+        "type": "object",
+        "keys": [
+          "SiteKit"
+        ],
+        "sample": {
+          "SiteKit": {
+            "type": "object",
+            "keys": [
+              "Parameters",
+              "Seasons",
+              "Copyright"
+            ],
+            "sample": {
+              "Parameters": {
+                "type": "object",
+                "keys": [
+                  "key",
+                  "client_code",
+                  "site_id",
+                  "lang",
+                  "feed",
+                  "callback",
+                  "view",
+                  "lang_id",
+                  "league_id",
+                  "season_id"
+                ],
+                "sample": {
+                  "key": "str",
+                  "client_code": "str",
+                  "site_id": "str",
+                  "lang": "str",
+                  "feed": "str",
+                  "callback": "str"
+                }
+              },
+              "Seasons": {
+                "type": "array",
+                "count": 11,
+                "sample": {
+                  "type": "object",
+                  "keys": [
+                    "season_id",
+                    "season_name",
+                    "shortname",
+                    "career",
+                    "playoff",
+                    "start_date",
+                    "end_date"
+                  ],
+                  "sample": {
+                    "season_id": "str",
+                    "season_name": "str",
+                    "shortname": "str",
+                    "career": "str",
+                    "playoff": "str",
+                    "start_date": "str"
+                  }
+                }
+              },
+              "Copyright": {
+                "type": "object",
+                "keys": [
+                  "required_copyright",
+                  "required_link",
+                  "powered_by",
+                  "powered_by_url"
+                ],
+                "sample": {
+                  "required_copyright": "str",
+                  "required_link": "str",
+                  "powered_by": "str",
+                  "powered_by_url": "str"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "schedule": {
+      "ok": true,
+      "shape": {
+        "type": "array",
+        "count": 1,
+        "sample": {
+          "type": "object",
+          "keys": [
+            "sections"
+          ],
+          "sample": {
+            "sections": {
+              "type": "array",
+              "count": 1,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "title",
+                  "headers",
+                  "data"
+                ],
+                "sample": {
+                  "title": "str",
+                  "headers": {
+                    "type": "object",
+                    "keys": [
+                      "date_with_day",
+                      "game_status",
+                      "tickets_url",
+                      "visiting_team_city",
+                      "visiting_goal_count",
+                      "home_team_city",
+                      "home_goal_count",
+                      "venue_name",
+                      "broadcasters",
+                      "game_center",
+                      "game_sheet",
+                      "game_report",
+                      "game_summary_long",
+                      "mobile_calendar",
+                      "game_id"
+                    ],
+                    "sample": {
+                      "date_with_day": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "game_status": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "tickets_url": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "visiting_team_city": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "visiting_goal_count": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "home_team_city": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "data": {
+                    "type": "array",
+                    "count": 120,
+                    "sample": {
+                      "type": "object",
+                      "keys": [
+                        "prop",
+                        "row"
+                      ],
+                      "sample": {
+                        "prop": {
+                          "type": "object",
+                          "keys": [
+                            "home_team_city",
+                            "visiting_team_city",
+                            "venue_name",
+                            "broadcasters",
+                            "game_report",
+                            "game_sheet",
+                            "game_summary_long",
+                            "game_center"
+                          ],
+                          "sample": {
+                            "home_team_city": {
+                              "type": "object",
+                              "keys": [
+                                "teamLink"
+                              ],
+                              "sample": {
+                                "teamLink": "str"
+                              }
+                            },
+                            "visiting_team_city": {
+                              "type": "object",
+                              "keys": [
+                                "teamLink"
+                              ],
+                              "sample": {
+                                "teamLink": "str"
+                              }
+                            },
+                            "venue_name": {
+                              "type": "object",
+                              "keys": [
+                                "venueUrl"
+                              ],
+                              "sample": {
+                                "venueUrl": "str"
+                              }
+                            },
+                            "broadcasters": {
+                              "type": "object",
+                              "keys": [
+                                "home_video",
+                                "home_video_fr"
+                              ],
+                              "sample": {
+                                "home_video": {
+                                  "type": "array",
+                                  "count": 1,
+                                  "sample": {
+                                    "type": "object",
+                                    "keys": [
+                                      "broadcaster_id",
+                                      "name",
+                                      "logo_url",
+                                      "url"
+                                    ],
+                                    "sample": {
+                                      "broadcaster_id": "str",
+                                      "name": "str",
+                                      "logo_url": "str",
+                                      "url": "str"
+                                    }
+                                  }
+                                },
+                                "home_video_fr": {
+                                  "type": "array",
+                                  "count": 1,
+                                  "sample": {
+                                    "type": "object",
+                                    "keys": [
+                                      "broadcaster_id",
+                                      "name",
+                                      "logo_url",
+                                      "url"
+                                    ],
+                                    "sample": {
+                                      "broadcaster_id": "str",
+                                      "name": "str",
+                                      "logo_url": "str",
+                                      "url": "str"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "game_report": {
+                              "type": "object",
+                              "keys": [
+                                "link"
+                              ],
+                              "sample": {
+                                "link": "str"
+                              }
+                            },
+                            "game_sheet": {
+                              "type": "object",
+                              "keys": [
+                                "link"
+                              ],
+                              "sample": {
+                                "link": "str"
+                              }
+                            }
+                          }
+                        },
+                        "row": {
+                          "type": "object",
+                          "keys": [
+                            "game_id",
+                            "date_with_day",
+                            "home_goal_count",
+                            "visiting_goal_count",
+                            "game_status",
+                            "home_team_city",
+                            "visiting_team_city",
+                            "venue_name",
+                            "broadcasters",
+                            "game_report",
+                            "game_sheet",
+                            "game_summary_long",
+                            "game_center"
+                          ],
+                          "sample": {
+                            "game_id": "str",
+                            "date_with_day": "str",
+                            "home_goal_count": "str",
+                            "visiting_goal_count": "str",
+                            "game_status": "str",
+                            "home_team_city": "str"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "game_summary": {
+      "ok": true,
+      "shape": {
+        "type": "object",
+        "keys": [
+          "GC"
+        ],
+        "sample": {
+          "GC": {
+            "type": "object",
+            "keys": [
+              "Parameters",
+              "Gamesummary"
+            ],
+            "sample": {
+              "Parameters": {
+                "type": "object",
+                "keys": [
+                  "key",
+                  "client_code",
+                  "site_id",
+                  "lang",
+                  "feed",
+                  "callback",
+                  "tab",
+                  "game_id",
+                  "lang_code",
+                  "lang_id",
+                  "fmt"
+                ],
+                "sample": {
+                  "key": "str",
+                  "client_code": "str",
+                  "site_id": "str",
+                  "lang": "str",
+                  "feed": "str",
+                  "callback": "str"
+                }
+              },
+              "Gamesummary": {
+                "type": "object",
+                "keys": [
+                  "meta",
+                  "txt_title",
+                  "txt_scoring",
+                  "txt_total",
+                  "txt_shots",
+                  "game_ident",
+                  "game_date",
+                  "game_length",
+                  "status_title",
+                  "status_value",
+                  "periods",
+                  "shootout",
+                  "visitor",
+                  "home",
+                  "visitor_division",
+                  "visitor_division_id",
+                  "home_division",
+                  "home_division_id",
+                  "mvp_type",
+                  "shootoutDetail",
+                  "mvps",
+                  "venue",
+                  "referee1",
+                  "referee2",
+                  "linesman1",
+                  "linesman2",
+                  "officialsOnIce",
+                  "officialsOffIce",
+                  "homeShootout",
+                  "visitorShootout",
+                  "benchGoalCount",
+                  "penalties",
+                  "goals",
+                  "goalies",
+                  "home_team_lineup"
+                ],
+                "sample": {
+                  "meta": {
+                    "type": "object",
+                    "keys": [
+                      "id",
+                      "season_id",
+                      "league_id",
+                      "home_team",
+                      "visiting_team",
+                      "game_number",
+                      "game_letter",
+                      "type_id",
+                      "if_necessary",
+                      "quick_score",
+                      "mvp1",
+                      "mvp2",
+                      "mvp3",
+                      "featured_player_id",
+                      "date_played",
+                      "date_tbd",
+                      "schedule_time",
+                      "time_tbd",
+                      "timezone",
+                      "start_time",
+                      "end_time",
+                      "forfeit",
+                      "shootout",
+                      "shootout_first_shooter_home",
+                      "attendance",
+                      "location",
+                      "home_coach",
+                      "home_assistant_coach1",
+                      "home_assistant_coach2",
+                      "home_manager",
+                      "visiting_coach",
+                      "visiting_assistant_coach1",
+                      "visiting_assistant_coach2",
+                      "visiting_manager",
+                      "period"
+                    ],
+                    "sample": {
+                      "id": "str",
+                      "season_id": "str",
+                      "league_id": "str",
+                      "home_team": "str",
+                      "visiting_team": "str",
+                      "game_number": "str"
+                    }
+                  },
+                  "txt_title": "str",
+                  "txt_scoring": "str",
+                  "txt_total": "str",
+                  "txt_shots": "str",
+                  "game_ident": "str"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "play_by_play": {
+      "ok": true,
+      "shape": {
+        "type": "array",
+        "count": 166,
+        "sample": {
+          "type": "object",
+          "keys": [
+            "event",
+            "details"
+          ],
+          "sample": {
+            "event": "str",
+            "details": {
+              "type": "object",
+              "keys": [
+                "goalieComingIn",
+                "goalieGoingOut",
+                "team_id",
+                "period",
+                "time"
+              ],
+              "sample": {
+                "goalieComingIn": {
+                  "type": "object",
+                  "keys": [
+                    "id",
+                    "firstName",
+                    "lastName",
+                    "jerseyNumber",
+                    "position",
+                    "birthDate",
+                    "playerImageURL"
+                  ],
+                  "sample": {
+                    "id": "int",
+                    "firstName": "str",
+                    "lastName": "str",
+                    "jerseyNumber": "int",
+                    "position": "str",
+                    "birthDate": "str"
+                  }
+                },
+                "goalieGoingOut": "NoneType",
+                "team_id": "str",
+                "period": {
+                  "type": "object",
+                  "keys": [
+                    "id",
+                    "shortName",
+                    "longName"
+                  ],
+                  "sample": {
+                    "id": "str",
+                    "shortName": "str",
+                    "longName": "str"
+                  }
+                },
+                "time": "str"
+              }
+            }
+          }
+        }
+      }
+    },
+    "shifts": {
+      "ok": true,
+      "shape": {
+        "type": "object",
+        "keys": [
+          "SiteKit"
+        ],
+        "sample": {
+          "SiteKit": {
+            "type": "object",
+            "keys": [
+              "Parameters",
+              "Gameshifts",
+              "Copyright"
+            ],
+            "sample": {
+              "Parameters": {
+                "type": "object",
+                "keys": [
+                  "key",
+                  "client_code",
+                  "site_id",
+                  "lang",
+                  "feed",
+                  "callback",
+                  "game_id",
+                  "view",
+                  "lang_id",
+                  "league_id",
+                  "season_id"
+                ],
+                "sample": {
+                  "key": "str",
+                  "client_code": "str",
+                  "site_id": "str",
+                  "lang": "str",
+                  "feed": "str",
+                  "callback": "str"
+                }
+              },
+              "Gameshifts": {
+                "type": "object",
+                "keys": [
+                  "home",
+                  "visitor"
+                ],
+                "sample": {
+                  "home": {
+                    "type": "array",
+                    "count": 19,
+                    "sample": {
+                      "type": "object",
+                      "keys": [
+                        "jersey_number",
+                        "first_name",
+                        "last_name",
+                        "home",
+                        "shifts",
+                        "player_id"
+                      ],
+                      "sample": {
+                        "jersey_number": "str",
+                        "first_name": "str",
+                        "last_name": "str",
+                        "home": "str",
+                        "shifts": {
+                          "type": "array",
+                          "count": 19,
+                          "sample": {
+                            "type": "object",
+                            "keys": [
+                              "period",
+                              "start_time",
+                              "end_time",
+                              "length",
+                              "goal_on_shift",
+                              "penalty_on_shift"
+                            ],
+                            "sample": {
+                              "period": "str",
+                              "start_time": "str",
+                              "end_time": "str",
+                              "length": "str",
+                              "goal_on_shift": "str",
+                              "penalty_on_shift": "str"
+                            }
+                          }
+                        },
+                        "player_id": "int"
+                      }
+                    }
+                  },
+                  "visitor": {
+                    "type": "array",
+                    "count": 20,
+                    "sample": {
+                      "type": "object",
+                      "keys": [
+                        "jersey_number",
+                        "first_name",
+                        "last_name",
+                        "home",
+                        "shifts",
+                        "player_id"
+                      ],
+                      "sample": {
+                        "jersey_number": "str",
+                        "first_name": "str",
+                        "last_name": "str",
+                        "home": "str",
+                        "shifts": {
+                          "type": "array",
+                          "count": 26,
+                          "sample": {
+                            "type": "object",
+                            "keys": [
+                              "period",
+                              "start_time",
+                              "end_time",
+                              "length",
+                              "goal_on_shift",
+                              "penalty_on_shift"
+                            ],
+                            "sample": {
+                              "period": "str",
+                              "start_time": "str",
+                              "end_time": "str",
+                              "length": "str",
+                              "goal_on_shift": "str",
+                              "penalty_on_shift": "str"
+                            }
+                          }
+                        },
+                        "player_id": "int"
+                      }
+                    }
+                  }
+                }
+              },
+              "Copyright": {
+                "type": "object",
+                "keys": [
+                  "required_copyright",
+                  "required_link",
+                  "powered_by",
+                  "powered_by_url"
+                ],
+                "sample": {
+                  "required_copyright": "str",
+                  "required_link": "str",
+                  "powered_by": "str",
+                  "powered_by_url": "str"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
