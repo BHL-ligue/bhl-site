@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-05T01:09:41.473456+00:00",
+  "testedAt": "2026-11-05T01:11:30.460912+00:00",
   "source": "HockeyTech PWHL",
   "seasonId": 8,
   "gameId": 215,
@@ -1119,6 +1119,7 @@
           "players": 38
         }
       },
+      "turnover_like_fields": [],
       "sample_player_stats": [
         {
           "id": "71",
@@ -1236,7 +1237,8 @@
         "hit",
         "penalty",
         "shot"
-      ]
+      ],
+      "turnover_like_events": []
     },
     "shifts": {
       "ok": true,
@@ -1647,6 +1649,7 @@
           }
         }
       },
+      "turnover_like_headers": [],
       "section_shapes": [
         {
           "keys": [
