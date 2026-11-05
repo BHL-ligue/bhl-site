@@ -16,18 +16,19 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--season",default="2025-26")
     parser.add_argument("--limit",type=int,default=5)
+    parser.add_argument("--offset",type=int,default=0,help="Start index in the season schedule; use batches of at most 20")
     parser.add_argument("--delay",type=float,default=1.0)
     args=parser.parse_args()
     if not 1<=args.limit<=20:raise ValueError("limit must be 1..20")
+    if args.offset<0:raise ValueError("offset must be nonnegative")
     index=json.loads((ROOT/"season-game-index.json").read_text())
     season=index["seasons"][args.season]
     ids=season.get("game_ids",[])
     if not ids:raise ValueError("No game IDs available")
-    manifest={"season":args.season,"season_id":season["season_id"],"requested":args.limit,"scored":[],"skipped":[]}
+    manifest={"season":args.season,"season_id":season["season_id"],"requested":args.limit,"offset":args.offset,"scored":[],"skipped":[]}
     output=ROOT/"batch"/args.season
     output.mkdir(parents=True,exist_ok=True)
-    for game_id in ids:
-        if len(manifest["scored"])>=args.limit:break
+    for game_id in ids[args.offset:args.offset+args.limit]:
         try:
             gs=fetch(game_id)
             meta=gs.get("meta",{})
@@ -46,6 +47,6 @@ def main():
             manifest["skipped"].append({"game":game_id,"reason":str(exc)[:180]})
         time.sleep(args.delay)
         if len(manifest["skipped"])>60:break
-    (ROOT/"batch-manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+    (ROOT/f"batch-manifest-{args.season}-{args.offset:03d}.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps({"scored":len(manifest["scored"]),"skipped":len(manifest["skipped"])},ensure_ascii=False))
 if __name__=="__main__":main()
