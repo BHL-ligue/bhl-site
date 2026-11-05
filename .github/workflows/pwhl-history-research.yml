@@ -1,0 +1,46 @@
+name: PWHL historical seasons research (unpublished)
+on:
+  push:
+    branches: [research/pwhl-fantasy-data]
+    paths:
+      - 'scripts/pwhl-batch-import.py'
+      - 'scripts/pwhl-game-fpts.py'
+      - 'scripts/pwhl-season-aggregate.py'
+      - '.github/workflows/pwhl-history-research.yml'
+  workflow_dispatch:
+concurrency:
+  group: pwhl-history-${{ github.ref }}
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  historical-2024:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/pwhl-fantasy-data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import first 20 games from inaugural 2024 season
+        run: python scripts/pwhl-batch-import.py --season 2024 --offset 0 --limit 20
+      - name: Aggregate only imported 2024 games
+        shell: bash
+        run: |
+          shopt -s nullglob
+          games=(research/pwhl/batch/2024/*.json)
+          if (( ${#games[@]} > 0 )); then
+            python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-2024.json
+          fi
+      - name: Persist historical research data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/pwhl/batch/2024/ research/pwhl/batch-manifest-2024-000.json research/pwhl/season-aggregate-2024.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record PWHL 2024 historical research [skip ci]"
+            git push origin HEAD:research/pwhl-fantasy-data
+          fi
