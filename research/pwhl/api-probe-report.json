@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-05T01:08:12.081605+00:00",
+  "testedAt": "2026-11-05T01:09:41.473456+00:00",
   "source": "HockeyTech PWHL",
   "seasonId": 8,
   "gameId": 215,
@@ -1076,7 +1076,93 @@
             }
           }
         }
-      }
+      },
+      "skater_field_coverage": {
+        "goals": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "assists": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "shots_on": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "hits": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "faceoff_wins": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "faceoff_attempts": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "shots_blocked_by_player": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        },
+        "pim": {
+          "present": 38,
+          "nonempty": 38,
+          "players": 38
+        }
+      },
+      "sample_player_stats": [
+        {
+          "id": "71",
+          "name": "Jocelyne Larocque",
+          "stats": {
+            "goals": 0,
+            "assists": 0,
+            "shots_on": "0",
+            "hits": "1",
+            "faceoff_wins": "0",
+            "faceoff_attempts": "0",
+            "shots_blocked_by_player": "1",
+            "pim": 0
+          }
+        },
+        {
+          "id": "242",
+          "name": "Rory Guilday",
+          "stats": {
+            "goals": 0,
+            "assists": 2,
+            "shots_on": "0",
+            "hits": "0",
+            "faceoff_wins": "0",
+            "faceoff_attempts": "0",
+            "shots_blocked_by_player": "1",
+            "pim": 0
+          }
+        },
+        {
+          "id": "219",
+          "name": "Stephanie Markowski",
+          "stats": {
+            "goals": 0,
+            "assists": 1,
+            "shots_on": "0",
+            "hits": "0",
+            "faceoff_wins": "0",
+            "faceoff_attempts": "0",
+            "shots_blocked_by_player": "2",
+            "pim": 0
+          }
+        }
+      ]
     },
     "play_by_play": {
       "ok": true,
