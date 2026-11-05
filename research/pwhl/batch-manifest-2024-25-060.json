@@ -1,0 +1,249 @@
+{
+  "season": "2024-25",
+  "season_id": 5,
+  "requested": 20,
+  "offset": 60,
+  "scored": [
+    {
+      "game": "165",
+      "date": "2025-03-22",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "166",
+      "date": "2025-03-23",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "167",
+      "date": "2025-03-25",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "168",
+      "date": "2025-03-26",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "169",
+      "date": "2025-03-30",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "170",
+      "date": "2025-04-01",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "171",
+      "date": "2025-04-02",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "172",
+      "date": "2024-12-06",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "173",
+      "date": "2025-01-05",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "174",
+      "date": "2025-01-08",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "175",
+      "date": "2025-01-12",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "176",
+      "date": "2025-01-19",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "177",
+      "date": "2025-01-25",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "178",
+      "date": "2025-02-16",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "179",
+      "date": "2025-02-23",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "180",
+      "date": "2025-03-01",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "181",
+      "date": "2025-03-07",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "182",
+      "date": "2025-03-08",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "183",
+      "date": "2025-03-16",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "184",
+      "date": "2025-03-26",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    }
+  ],
+  "skipped": []
+}
