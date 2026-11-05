@@ -18,7 +18,7 @@ permissions:
 jobs:
   api-probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,6 +40,10 @@ jobs:
         run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 40 --limit 20
       - name: Import fourth twenty historical games
         run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 60 --limit 20
+      - name: Import fifth twenty historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 80 --limit 20
+      - name: Import final twenty historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 100 --limit 20
       - name: Aggregate available scored games
         shell: bash
         run: |
