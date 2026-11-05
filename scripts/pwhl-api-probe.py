@@ -47,6 +47,21 @@ def main():
         try:
             result=request(**params)
             report["tests"][name]={"ok":True,"shape":shape(result)}
+            if name=="seasons":
+                report["tests"][name]["seasons"]=[{"id":x.get("season_id"),"name":x.get("season_name"),"start":x.get("start_date"),"end":x.get("end_date"),"playoff":x.get("playoff")} for x in result.get("SiteKit",{}).get("Seasons",[])]
+            elif name=="schedule" and isinstance(result,list):
+                rows=[x.get("row",{}) for section in result for group in section.get("sections",[]) for x in group.get("data",[])]
+                report["tests"][name]["games_count"]=len(rows)
+                report["tests"][name]["sample_games"]=[{"id":x.get("game_id"),"date":x.get("date_with_day"),"home":x.get("home_team_city"),"away":x.get("visiting_team_city")} for x in rows[:4]]
+            elif name=="game_summary":
+                summary=result.get("GC",{}).get("Gamesummary",{})
+                report["tests"][name]["game_meta"]={k:summary.get("meta",{}).get(k) for k in ("id","season_id","date_played","home_team","visiting_team")}
+                report["tests"][name]["summary_fields"]=list(summary.keys())
+                report["tests"][name]["lineup_shapes"]={k:shape(v) for k,v in summary.items() if "lineup" in k.lower() or k in ("goalies","goals")}
+            elif name=="play_by_play" and isinstance(result,list):
+                report["tests"][name]["event_types"]=sorted({str(x.get("event")) for x in result if isinstance(x,dict)})
+            elif name=="player_stats" and isinstance(result,list):
+                report["tests"][name]["section_shapes"]=[{"keys":list(x.keys()),"data_shape":shape(x.get("sections",x))} for x in result[:2]]
             print(name,"OK",json.dumps(report["tests"][name]["shape"],ensure_ascii=False)[:350])
         except Exception as exc:
             report["tests"][name]={"ok":False,"error":str(exc)[:400]}
