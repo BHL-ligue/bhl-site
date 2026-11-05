@@ -576,75 +576,57 @@
   ],
   "goalies": [
     {
-      "id": "238",
-      "name": "Sanni Ahola",
-      "side": "home_team_lineup",
-      "stats": {
-        "win": null,
-        "goals_against": 0,
-        "saves": 0,
-        "shutout": null,
-        "goals": 0,
-        "assists": 0
-      },
-      "fpts": null,
-      "missing": [
-        "win",
-        "shutout"
-      ]
-    },
-    {
       "id": "222",
       "name": "Gwyneth Philips",
-      "side": "home_team_lineup",
+      "side": "home",
       "stats": {
-        "win": null,
-        "goals_against": 1,
-        "saves": 18,
-        "shutout": null,
-        "goals": 0,
-        "assists": 0
+        "win": "1",
+        "goals_against": "1",
+        "saves": "18",
+        "shutout": "0",
+        "goals": null,
+        "assists": null
       },
       "fpts": null,
       "missing": [
-        "win",
-        "shutout"
+        "goals",
+        "assists"
       ]
     },
     {
       "id": "59",
       "name": "Emerance Maschmeyer",
-      "side": "visitor_team_lineup",
+      "side": "visitor",
       "stats": {
-        "win": null,
-        "goals_against": 4,
-        "saves": 30,
-        "shutout": null,
-        "goals": 0,
-        "assists": 0
+        "win": "0",
+        "goals_against": "4",
+        "saves": "28",
+        "shutout": "0",
+        "goals": null,
+        "assists": null
       },
       "fpts": null,
       "missing": [
-        "win",
-        "shutout"
+        "goals",
+        "assists"
       ]
     },
     {
-      "id": "64",
-      "name": "Kristen Campbell",
-      "side": "visitor_team_lineup",
+      "id": "59",
+      "name": "Emerance Maschmeyer",
+      "side": "visitor",
       "stats": {
-        "win": null,
-        "goals_against": 0,
-        "saves": 0,
-        "shutout": null,
-        "goals": 0,
-        "assists": 0
+        "win": "0",
+        "goals_against": "0",
+        "saves": "2",
+        "shutout": "0",
+        "goals": null,
+        "assists": null
       },
       "fpts": null,
       "missing": [
-        "win",
-        "shutout"
+        "goals",
+        "assists"
       ]
     }
   ],
@@ -654,7 +636,7 @@
       "scored": 38
     },
     "goalies": {
-      "total": 4,
+      "total": 3,
       "scored": 0
     }
   }
