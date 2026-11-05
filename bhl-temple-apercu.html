@@ -64,6 +64,7 @@ function render(){
   const photoSources=portraitSources(c);
   let photoIndex=0;
   const fallbackPortrait=()=>{photoIndex++;if(photoIndex<photoSources.length)img.src=photoSources[photoIndex];else{img.onerror=null;img.hidden=true;head.classList.add('missing-portrait')}};
+  img.onload=()=>{img.hidden=false;head.classList.remove('missing-portrait')};
   img.onerror=fallbackPortrait;
   if(photoSources.length)img.src=photoSources[0];else{img.hidden=true;head.classList.add('missing-portrait')}
   // Exact same NHL landing headshot used by the BHL player profile.
@@ -71,7 +72,7 @@ function render(){
     if(!profile||!img.isConnected)return;
     if(profile.headshot&&/^https:\/\//.test(profile.headshot)){
       const preferred=profile.headshot;
-      const probe=new Image();probe.onload=()=>{if(!img.isConnected)return;img.hidden=false;head.classList.remove('missing-portrait');photoSources.unshift(preferred);photoIndex=0;img.src=preferred};probe.src=preferred;
+      const probe=new Image();probe.onload=()=>{if(!img.isConnected)return;photoSources.unshift(preferred);photoIndex=0;img.src=preferred};probe.src=preferred;
     }
   }).catch(()=>{});
   const title=document.createElement('div');const h=document.createElement('h2');h.textContent=c.name;const sub=document.createElement('div');sub.className='small';sub.textContent=(c.position==='G'?'Gardien':c.position==='D'?'Défenseur':'Attaquant')+' · Dernier départ : '+c.last;title.append(h,sub);const clubLabel=document.createElement('div');clubLabel.className='club-label';const primaryLogo=document.createElement('img');primaryLogo.src=club[1]?'logos/'+club[1]:'';primaryLogo.alt='';if(!club[1])primaryLogo.hidden=true;clubLabel.append(primaryLogo,document.createTextNode(' '+(c.teamStarts.get(c.mainTeam)||0)+' départs'));clubLabel.title='Équipe avec le plus de départs : '+club[0];title.append(clubLabel);head.append(watermark,img,title);
@@ -137,7 +138,9 @@ async function start(){
    c.lastNhlYear=last;c.status=last<=2022?'eligible':'noteligible';c.verified=last<=2022;
    if(last>2022)c.active=true;
   }catch(e){}/* Ne pas reconstruire les cartes pendant le chargement des portraits. */}}
-  await Promise.all(Array.from({length:4},worker));render();
+  await Promise.all(Array.from({length:4},worker));
+  // Ne pas remplacer les éléments IMG après que les portraits ont commencé à charger.
+  const verified=$('verifiedCount');if(verified)verified.textContent=String(candidates.filter(c=>c.verified).length);
  }catch(e){$('message').textContent='Impossible de charger les archives pour le moment.';console.error(e)}
 }
 for(const id of ['search','position','state','sort'])$(id).addEventListener('input',render);
