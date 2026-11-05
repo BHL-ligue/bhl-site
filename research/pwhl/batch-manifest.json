@@ -1,7 +1,7 @@
 {
   "season": "2025-26",
   "season_id": 8,
-  "requested": 5,
+  "requested": 20,
   "scored": [
     {
       "game": "210",
@@ -54,6 +54,186 @@
     {
       "game": "214",
       "date": "2025-11-25",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "215",
+      "date": "2025-11-26",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "216",
+      "date": "2025-11-28",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "217",
+      "date": "2025-11-29",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "218",
+      "date": "2025-11-29",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "219",
+      "date": "2025-12-02",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "220",
+      "date": "2025-12-03",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "221",
+      "date": "2025-12-03",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "222",
+      "date": "2025-12-04",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "223",
+      "date": "2025-12-06",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "224",
+      "date": "2025-12-07",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "225",
+      "date": "2025-12-07",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "226",
+      "date": "2025-12-16",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "227",
+      "date": "2025-12-17",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "228",
+      "date": "2025-12-17",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "229",
+      "date": "2025-12-17",
       "skaters": {
         "total": 38,
         "scored": 38
