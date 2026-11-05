@@ -584,14 +584,11 @@
         "goals_against": "1",
         "saves": "18",
         "shutout": "0",
-        "goals": null,
-        "assists": null
+        "goals": 0,
+        "assists": 0
       },
-      "fpts": null,
-      "missing": [
-        "goals",
-        "assists"
-      ]
+      "fpts": "6.60",
+      "missing": []
     },
     {
       "id": "59",
@@ -600,34 +597,13 @@
       "stats": {
         "win": "0",
         "goals_against": "4",
-        "saves": "28",
+        "saves": "30",
         "shutout": "0",
-        "goals": null,
-        "assists": null
+        "goals": 0,
+        "assists": 0
       },
-      "fpts": null,
-      "missing": [
-        "goals",
-        "assists"
-      ]
-    },
-    {
-      "id": "59",
-      "name": "Emerance Maschmeyer",
-      "side": "visitor",
-      "stats": {
-        "win": "0",
-        "goals_against": "0",
-        "saves": "2",
-        "shutout": "0",
-        "goals": null,
-        "assists": null
-      },
-      "fpts": null,
-      "missing": [
-        "goals",
-        "assists"
-      ]
+      "fpts": "2.00",
+      "missing": []
     }
   ],
   "summary": {
@@ -636,8 +612,8 @@
       "scored": 38
     },
     "goalies": {
-      "total": 3,
-      "scored": 0
+      "total": 2,
+      "scored": 2
     }
   }
 }
