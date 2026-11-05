@@ -16,7 +16,7 @@ permissions:
 jobs:
   historical-2024:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,6 +26,12 @@ jobs:
           python-version: '3.12'
       - name: Import first 20 games from inaugural 2024 season
         run: python scripts/pwhl-batch-import.py --season 2024 --offset 0 --limit 20
+      - name: Import next 20 games of 2024
+        run: python scripts/pwhl-batch-import.py --season 2024 --offset 20 --limit 20
+      - name: Import third 20 games of 2024
+        run: python scripts/pwhl-batch-import.py --season 2024 --offset 40 --limit 20
+      - name: Import final 12 games of 2024
+        run: python scripts/pwhl-batch-import.py --season 2024 --offset 60 --limit 12
       - name: Aggregate only imported 2024 games
         shell: bash
         run: |
@@ -39,7 +45,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/pwhl/batch/2024/ research/pwhl/batch-manifest-2024-000.json research/pwhl/season-aggregate-2024.json 2>/dev/null || true
+          git add research/pwhl/batch/2024/ research/pwhl/season-aggregate-2024.json 2>/dev/null || true
+          for manifest in research/pwhl/batch-manifest-2024-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
           if ! git diff --cached --quiet; then
             git commit -m "Record PWHL 2024 historical research [skip ci]"
             git push origin HEAD:research/pwhl-fantasy-data
