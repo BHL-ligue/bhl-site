@@ -6,11 +6,23 @@ export function lottery(standings,random=Math.random){
  return [...winners,...inverse.filter(t=>!winners.some(w=>w.teamId===t.teamId))].map((t,i)=>({...t,pick:i+1,initialPick:17-t.rank,lotteryWinner:i<3}));
 }
 const positions=p=>String(p||'').toUpperCase().split(/[\/, ]+/).map(p=>p==='L'?'LW':p==='R'?'RW':p).flatMap(p=>p==='F'?['C','LW','RW']:[p]).filter(p=>['C','LW','RW','D','G'].includes(p));
-export function teamNeeds(team){const targets={C:4,LW:4,RW:4,D:6,G:1},counts={C:0,LW:0,RW:0,D:0,G:0};for(const p of team?.players||[]){const pos=positions(p.position);for(const k of pos)counts[k]+=1/pos.length;}return Object.fromEntries(Object.keys(targets).map(k=>[k,Math.max(0,1-counts[k]/targets[k])]));}
-export function mockDraft(order,prospects,data,{needsWeight=.15,candidateWindow=5}={}){
- const available=prospects.slice().sort((a,b)=>a.rank-b.rank),picks=(data.draft?.futurePicks||[]).filter(p=>p.year===2027&&p.round===1);const needs=new Map(data.teams.map(t=>[t.id,teamNeeds(t)]));
- return order.map(slot=>{const ownership=picks.filter(p=>p.originalOwnerTeamId===slot.teamId);const ownerId=ownership.length===1?ownership[0].currentOwnerTeamId:slot.teamId;const owner=data.teams.find(t=>t.id===ownerId);const teamNeed=needs.get(ownerId)||{};
-  let best=-1,bestValue=-Infinity;for(let i=0;i<Math.min(candidateWindow,available.length);i++){const p=available[i],fit=Math.max(0,...positions(p.position).map(k=>teamNeed[k]||0));const strength=p.strength==null?Math.max(0,100-3*(p.rank-1)):Number(p.strength);const value=(1-needsWeight)*strength+needsWeight*100*fit;if(value>bestValue){best=i;bestValue=value;}}
-  const prospect=best<0?null:available.splice(best,1)[0];return {...slot,ownerId,ownerName:owner?.name||slot.teamName,ownershipConfirmed:ownership.length===1,prospect,need:prospect?Math.max(0,...positions(prospect.position).map(k=>teamNeed[k]||0)):0};
+const TARGETS={C:4,LW:4,RW:4,D:6,G:1};
+function depthFor(team){const counts={C:0,LW:0,RW:0,D:0,G:0};for(const p of team?.players||[]){const pos=[...new Set(positions(p.position))];const status=String(p.status||'ACTIVE').toUpperCase();const weight=/MINOR|RESERVE_MINORS/.test(status)?.45:/INJUR|IR/.test(status)?.6:/BENCH|RESERVE/.test(status)?.8:1;for(const k of pos)counts[k]+=weight/pos.length;}return counts;}
+const needsFor=counts=>Object.fromEntries(Object.entries(TARGETS).map(([k,target])=>[k,target/(target+(counts[k]||0))]));
+export function teamNeeds(team){return needsFor(depthFor(team));}
+export function mockDraft(order,prospects,data,{needsWeight=.15,candidateWindow=5,variation=3,random=null}={}){
+ const available=prospects.slice().sort((a,b)=>a.rank-b.rank),picks=(data.draft?.futurePicks||[]).filter(p=>p.year===2027&&p.round===1),depth=new Map(data.teams.map(t=>[t.id,depthFor(t)]));
+ const variability=Number.isFinite(Number(variation))?Math.max(0,Math.min(10,Number(variation))):3;
+ return order.map(slot=>{const ownership=picks.filter(p=>p.originalOwnerTeamId===slot.teamId);const ownerId=ownership.length===1?ownership[0].currentOwnerTeamId:slot.teamId,owner=data.teams.find(t=>t.id===ownerId);if(!depth.has(ownerId))depth.set(ownerId,{C:0,LW:0,RW:0,D:0,G:0});const counts=depth.get(ownerId),teamNeed=needsFor(counts);
+  const candidates=available.slice(0,candidateWindow).map((p,index)=>{const fit=Math.max(0,...positions(p.position).map(k=>teamNeed[k]||0)),strength=p.strength==null?Math.max(0,100-3*(p.rank-1)):Number(p.strength);return {index,fit,strength,score:(1-needsWeight)*strength+needsWeight*100*fit};});
+  candidates.sort((a,b)=>b.score-a.score||available[a.index].rank-available[b.index].rank);
+  let chosen=candidates[0];
+  if(chosen&&random&&variability>0){
+   // Vary only comparable candidates. Strongly weaker fits cannot jump the best score.
+   const best=chosen.score,close=candidates.filter(c=>best-c.score<=Math.min(8,variability*2));const weights=close.map(c=>Math.exp((c.score-best)/variability));let draw=random()*weights.reduce((a,b)=>a+b,0);for(let i=0;i<close.length;i++){draw-=weights[i];if(draw<0){chosen=close[i];break;}}
+  }
+  const prospect=chosen?available.splice(chosen.index,1)[0]:null;
+  if(prospect){const pos=[...new Set(positions(prospect.position))];for(const k of pos)counts[k]+=1/pos.length;}
+  return {...slot,ownerId,ownerName:owner?.name||slot.teamName,ownershipConfirmed:ownership.length===1,prospect,need:chosen?.fit||0,selectionScore:chosen?.score??null,strength:chosen?.strength??null};
  });
 }

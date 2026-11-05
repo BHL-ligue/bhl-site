@@ -8,3 +8,16 @@ test('Lottery uses eight eligible original picks, three distinct winners and no 
 test('Mock draft respects traded picks and selects a prospect only once',()=>{const x=structuredClone(data),source=x.draft.futurePicks.find(p=>p.year===2027&&p.round===1);source.currentOwnerTeamId=x.teams.find(t=>t.id!==source.originalOwnerTeamId).id;const board=validateBoard(Array.from({length:20},(_,i)=>({rank:i+1,name:'Test '+i,position:i%2?'C':'D'})));const out=mockDraft(lottery(x.standings,()=>0),board,x,{needsWeight:0});assert.equal(new Set(out.map(p=>p.prospect.name)).size,16);assert.deepEqual(out.map(p=>p.prospect.rank),Array.from({length:16},(_,i)=>i+1));assert.equal(out.find(p=>p.teamId===source.originalOwnerTeamId).ownerId,source.currentOwnerTeamId);});
 test('Board rejects duplicate ranks, invalid positions and duplicate names',()=>{assert.throws(()=>validateBoard([{rank:1,name:'A',position:'Z'}]));assert.throws(()=>validateBoard([{rank:1,name:'A',position:'D'},{rank:2,name:'A',position:'C'}]));});
 test('Admin strength changes picks and is balanced against needs',()=>{const order=lottery(data.standings,()=>0);const board=validateBoard([{rank:1,name:'Test A',position:'D',strength:70,team:'Club A'},{rank:2,name:'Test B',position:'C',strength:98,team:'Club B'}]);const out=mockDraft(order,board,data,{needsWeight:0,candidateWindow:5});assert.equal(out[0].prospect.name,'Test B');assert.equal(out[0].prospect.team,'Club B');assert.throws(()=>validateBoard([{rank:1,name:'Bad',position:'C',strength:101}]));assert.throws(()=>validateBoard([{rank:1,name:'Bad',position:'C',strength:-1}]));});
+test('Close prospects vary across trials while clear strength gaps remain decisive',()=>{
+ const order=lottery(data.standings,()=>0),board=validateBoard(Array.from({length:20},(_,i)=>({rank:i+1,name:'Close '+i,position:'C',strength:80})));
+ const sequences=new Set();for(let seed=1;seed<=30;seed++)sequences.add(mockDraft(order,board,data,{needsWeight:0,random:seededRandom(seed)}).map(p=>p.prospect.rank).join(','));assert.ok(sequences.size>10);
+ const strong=[{rank:1,name:'Elite',position:'C',strength:100},...board.map(p=>({...p,rank:p.rank+1}))];for(let seed=1;seed<=30;seed++)assert.equal(mockDraft(order,strong,data,{needsWeight:0,variation:10,random:seededRandom(seed)})[0].prospect.name,'Elite');
+ assert.deepEqual(mockDraft(order,board,data,{variation:0,random:()=>0}),mockDraft(order,board,data,{variation:0,random:()=>.99}));
+});
+test('Depth needs still distinguish full rosters and decrease after each owned pick',()=>{
+ const roster={id:'owner',name:'Owner',players:[...Array(8)].map(()=>({position:'C'})).concat([...Array(6)].map(()=>({position:'D'})))};
+ const x={teams:[roster],draft:{futurePicks:[{year:2027,round:1,originalOwnerTeamId:'other',currentOwnerTeamId:'owner'}]}};
+ const order=[{teamId:'owner',teamName:'Owner',pick:1},{teamId:'other',teamName:'Other',pick:2}];
+ const board=[{rank:1,name:'C',position:'C',strength:80},{rank:2,name:'D1',position:'D',strength:80},{rank:3,name:'D2',position:'D',strength:80}];
+ const out=mockDraft(order,board,x,{needsWeight:1});assert.equal(out[0].prospect.name,'D1');assert.equal(out[1].ownerId,'owner');assert.equal(out[1].prospect.name,'D2');assert.ok(out[1].need<out[0].need);
+});

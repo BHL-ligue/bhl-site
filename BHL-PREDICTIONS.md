@@ -22,3 +22,8 @@ Vérifications navigateur locales : loterie trois gagnants; affichage des probab
 
 ## Réglages du Tankathon
 Les visiteurs disposent de la simulation et du retour à l’ordre actuel. Les paramètres sont persistés dans la centrale et modifiables seulement par les comptes Admin via RLS. Force facultative /100 par espoir; sans note, valeur issue du rang. Score = (1 − poids des besoins) × force + poids des besoins × adéquation au club. L’Admin définit le poids (0–100 %) et le nombre de candidats parmi les meilleurs rangs (1–50). L’équipe actuelle de chaque espoir peut être renseignée dans la quatrième colonne. Ordre public : Choix, Équipe BHL, Évolution, Joueur, Position, Équipe, Rang de la centrale BHL.
+
+## Simulation après loterie
+Onglet public « Tankathon ». Défilement des logos pendant trois secondes puis révélation du premier gagnant et simulation complète des seize choix. Animation facultative (bouton et Échap); mouvement réduit respecté. La loterie est calculée avant son animation.
+
+Profondeur continue : cible / (cible + effectif pondéré), avec poids actif 1, banc 0,8, blessé 0,6 et mineures 0,45. Positions multiples réparties; besoins recalculés pour le propriétaire après chaque choix. Variabilité Admin 0–10, défaut 3 : tirage pondéré exponentiellement parmi les scores proches du meilleur (écart maximal min(8, 2 × variabilité)); 0 désactive le hasard. Les forts écarts restent déterminants. Classement et notes existants conservés.
