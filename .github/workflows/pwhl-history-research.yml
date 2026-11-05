@@ -16,7 +16,7 @@ permissions:
 jobs:
   historical-2024:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,14 +40,32 @@ jobs:
           if (( ${#games[@]} > 0 )); then
             python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-2024.json
           fi
+      - name: Import 2024-25 games 1-20
+        run: python scripts/pwhl-batch-import.py --season 2024-25 --offset 0 --limit 20
+      - name: Import 2024-25 games 21-40
+        run: python scripts/pwhl-batch-import.py --season 2024-25 --offset 20 --limit 20
+      - name: Import 2024-25 games 41-60
+        run: python scripts/pwhl-batch-import.py --season 2024-25 --offset 40 --limit 20
+      - name: Import 2024-25 games 61-80
+        run: python scripts/pwhl-batch-import.py --season 2024-25 --offset 60 --limit 20
+      - name: Import final 10 games of 2024-25
+        run: python scripts/pwhl-batch-import.py --season 2024-25 --offset 80 --limit 10
+      - name: Aggregate only imported 2024-25 games
+        shell: bash
+        run: |
+          shopt -s nullglob
+          games=(research/pwhl/batch/2024-25/*.json)
+          if (( ${#games[@]} > 0 )); then
+            python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-2024-25.json
+          fi
       - name: Persist historical research data
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/pwhl/batch/2024/ research/pwhl/season-aggregate-2024.json 2>/dev/null || true
-          for manifest in research/pwhl/batch-manifest-2024-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
+          git add research/pwhl/batch/2024/ research/pwhl/batch/2024-25/ research/pwhl/season-aggregate-2024.json research/pwhl/season-aggregate-2024-25.json 2>/dev/null || true
+          for manifest in research/pwhl/batch-manifest-2024-*.json research/pwhl/batch-manifest-2024-25-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
           if ! git diff --cached --quiet; then
-            git commit -m "Record PWHL 2024 historical research [skip ci]"
+            git commit -m "Record PWHL 2024 and 2024-25 historical research [skip ci]"
             git push origin HEAD:research/pwhl-fantasy-data
           fi
