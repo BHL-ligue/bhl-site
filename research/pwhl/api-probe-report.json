@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-05T01:04:12.079054+00:00",
+  "testedAt": "2026-11-05T01:07:02.864605+00:00",
   "source": "HockeyTech PWHL",
   "seasonId": 8,
   "gameId": 215,
@@ -821,6 +821,257 @@
                   "required_link": "str",
                   "powered_by": "str",
                   "powered_by_url": "str"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "player_stats": {
+      "ok": true,
+      "shape": {
+        "type": "array",
+        "count": 1,
+        "sample": {
+          "type": "object",
+          "keys": [
+            "sections"
+          ],
+          "sample": {
+            "sections": {
+              "type": "array",
+              "count": 1,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "title",
+                  "headers",
+                  "data"
+                ],
+                "sample": {
+                  "title": "str",
+                  "headers": {
+                    "type": "object",
+                    "keys": [
+                      "rank",
+                      "rookie",
+                      "active",
+                      "name",
+                      "position",
+                      "team_code",
+                      "games_played",
+                      "goals",
+                      "assists",
+                      "points",
+                      "plus_minus",
+                      "penalty_minutes",
+                      "power_play_goals",
+                      "power_play_assists",
+                      "short_handed_goals",
+                      "short_handed_assists",
+                      "points_per_game",
+                      "faceoff_wins",
+                      "faceoff_attempts",
+                      "faceoff_pct",
+                      "penalty_minutes_per_game",
+                      "shots",
+                      "shooting_percentage",
+                      "shots_blocked_by_player",
+                      "hits",
+                      "hits_per_game_avg",
+                      "ice_time_minutes_seconds",
+                      "ice_time_per_game_avg",
+                      "player_id"
+                    ],
+                    "sample": {
+                      "rank": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "rookie": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "active": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "name": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "position": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      },
+                      "team_code": {
+                        "type": "object",
+                        "keys": [
+                          "properties"
+                        ],
+                        "sample": {
+                          "properties": {
+                            "type": "object",
+                            "keys": [
+                              "key",
+                              "hidden",
+                              "class",
+                              "label",
+                              "title",
+                              "sortable",
+                              "align",
+                              "highlight",
+                              "sortKey"
+                            ],
+                            "sample": {
+                              "key": "str",
+                              "hidden": "bool",
+                              "class": "str",
+                              "label": "str",
+                              "title": "str",
+                              "sortable": "bool"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "data": {
+                    "type": "array",
+                    "count": 0,
+                    "sample": null
+                  }
                 }
               }
             }
