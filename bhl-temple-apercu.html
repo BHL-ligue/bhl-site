@@ -8,6 +8,7 @@ body{background:#101a29;color:#edf1f6}main{max-width:1450px}.hero{background:lin
 .candidate .head{position:relative;isolation:isolate;background:linear-gradient(110deg,var(--club-primary,#a60b22),var(--club-secondary,#17283f));min-height:168px;align-items:flex-end;overflow:hidden}.candidate .head:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 5%,#0002 50%,#0006 100%);z-index:-1}.candidate .club-watermark{position:absolute;width:155px;height:155px;object-fit:contain;left:-22px;top:5px;opacity:.25;filter:grayscale(.15);z-index:-1}.candidate .head h2{color:#fff;text-shadow:0 2px 5px #0009}.candidate .head .small{color:#f4f5fa;text-shadow:0 1px 3px #000}.candidate .head img.player-photo{position:relative;z-index:1;filter:drop-shadow(0 3px 5px #0009)}.candidate .club-label{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;color:#fff;margin-top:5px;background:#0005;border-radius:6px;padding:3px 6px}.candidate .club-label img{width:18px;height:18px;object-fit:contain}.candidate .trophy-totals{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #e3e3e3;background:#fff;padding:9px 12px;gap:8px}.candidate .trophy-total{display:flex;align-items:center;gap:9px;border:1px solid #e8d7ad;border-radius:9px;padding:8px;background:#fffaf0}.candidate .trophy-total img{width:34px;height:36px;object-fit:contain}.candidate .trophy-total strong{display:block;font-size:22px;line-height:1.1;color:#273040}.candidate .trophy-total small{font-size:10px;line-height:1.2;display:block;color:#715b37;font-weight:800;text-transform:uppercase}.candidate .status{position:relative;z-index:2}.candidate .honors{border-top:1px solid #ece6da}@media(max-width:580px){.candidate .head{min-height:155px}.candidate .club-watermark{width:145px;height:145px}}
 
 .candidate .team-logo-strip{display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding:10px 14px;background:#f0f2f6;border-top:1px solid #e0e3e8;min-height:52px}.candidate .team-logo-strip img{height:30px;width:35px;object-fit:contain;transition:transform .15s}.candidate .team-logo-strip img:hover{transform:scale(1.15)}.candidate .club-label{font-size:11px}.candidate .club-label img{width:26px;height:26px}.candidate .club-watermark{z-index:0!important;opacity:.35}.candidate .head:after{z-index:0!important;pointer-events:none}.candidate .head>div{position:relative;z-index:2}.candidate .head img.player-photo{z-index:2;height:145px;width:125px;object-fit:contain;object-position:bottom}.candidate .head{padding-bottom:8px}
+.candidate .head.missing-portrait:before{content:'PORTRAIT EN ATTENTE';position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:116px;min-width:116px;height:125px;color:#ffffffaa;font-size:10px;font-weight:800;text-align:center;letter-spacing:.06em}.candidate .head img.player-photo[hidden]{display:none!important}
 </style></head><body><div id="bhl-global-nav"></div><main><section class="hero"><div class="eyebrow">BHL · PROJET NON ANNONCÉ</div><h1>Temple de la renommée</h1><p>Prévisualisation des candidatures historiques. La sélection repose sur les départs et FPTS réellement produits dans la BHL. L'admissibilité exige trois saisons complètes sans match LNH <strong>et</strong> sans départ BHL. Seul le vote des 16 DG (12 voix favorables requises) permet une intronisation.</p></section><div class="notice"><strong>Page de travail — aucune intronisation annoncée.</strong> La liste affiche les joueurs sans départ BHL depuis trois saisons et absents des effectifs LNH actuels. Les joueurs dont la dernière saison LNH n'a pas pu être confirmée sont clairement identifiés : ils ne sont pas encore officiellement admissibles. Les bâtisseurs seront ajoutés lorsque leur historique et leur admissibilité auront été validés. Cette page n'est pas liée au menu, mais son adresse reste publique pour toute personne qui la connaît.</div><div class="filters"><input id="search" type="search" placeholder="Rechercher un joueur ou une équipe…"><select id="position"><option value="">Toutes les positions</option><option value="F">Attaquants</option><option value="D">Défenseurs</option><option value="G">Gardiens</option></select><select id="state"><option value="all">Retraités ou à confirmer</option><option value="verified">Admissibilité confirmée</option><option value="pending">Dossiers à vérifier</option></select><select id="sort"><option value="fpts">Plus de FPTS</option><option value="starts">Plus de départs</option><option value="name">Nom A-Z</option></select></div><div class="summary" id="summary"></div><p id="message" class="small">Chargement des archives…</p><div class="grid" id="candidates"></div><p class="foot">Sources : archives de production BHL, identités historiques et profils officiels LNH. Les honneurs individuels, Coupes Béliveau et dossiers de bâtisseurs seront croisés lors de la prochaine phase. Cette présélection n'est ni un bulletin de vote ni une liste définitive.</p></main><script src="bhl-navigation.js" defer></script><script>
 const $=id=>document.getElementById(id),fmt=n=>Number(n||0).toLocaleString('fr-CA',{maximumFractionDigits:2});
 let candidates=[];let honorsByName=new Map();let cupsByName=new Map();
@@ -22,7 +23,7 @@ function loadCups(){return new Promise(resolve=>{const cb='bhlHallCup'+Date.now(
 // Une photo NHL non disponible ne doit pas faire disparaître la carte.
 function portraitSources(c){
  const id=Number(c.nhlId);if(!id)return [];
- const years=['20252026','20242025','20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014','20122013','20112012','20102011','20092010'];
+ const years=['20262027','20252026','20242025','20232024','20222023','20212022','20202021','20192020','20182019','20172018','20162017','20152016','20142015','20132014','20122013','20112012','20102011','20092010'];
  const entries=Array.isArray(c.nhlSeasons)?c.nhlSeasons:[];
  const sources=[];
  // NHL generic /NHL/ mug URLs often return a successful HTTP 200 silhouette.
@@ -33,9 +34,10 @@ function portraitSources(c){
   if(!/^20\d{6}$/.test(year)||!/^[A-Z]{2,3}$/.test(code))continue;
   sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+code+'/'+id+'.png');
  }
- const team=String(c.nhlTeam||'').toUpperCase();
+ const knownHistoricalTeams={8470638:'BOS',8470594:'MIN',8470966:'TOR',8470604:'ATL'};
+ const team=String(c.nhlTeam||knownHistoricalTeams[id]||'').toUpperCase();
  if(/^[A-Z]{2,3}$/.test(team))for(const year of years)sources.push('https://assets.nhle.com/mugs/nhl/'+year+'/'+team+'/'+id+'.png');
- return [...new Set([...sources,c.headshot].filter(Boolean))];
+ return [...new Set([c.headshot,...sources].filter(Boolean))];
 }
 const portraitNameKey=name=>key(name).replace(/[^a-z0-9]/g,'');
 async function resolveMissingIdentity(name,directory){
@@ -60,7 +62,18 @@ function render(){
   const club=clubFor(c.mainTeam);card.style.setProperty('--club-primary',club[2]);card.style.setProperty('--club-secondary',club[3]);const watermark=document.createElement('img');watermark.className='club-watermark';watermark.src=club[1]?'logos/'+club[1]:'';watermark.alt='';if(!club[1])watermark.hidden=true;
   const img=document.createElement('img');img.className='player-photo';img.alt='';img.loading='lazy';
   const photoSources=portraitSources(c);
-  let photoIndex=0;img.onerror=()=>{photoIndex++;if(photoIndex<photoSources.length)img.src=photoSources[photoIndex];else{img.onerror=null;img.src='logos/BHLlogo.png'}};img.src=photoSources[0]||'logos/BHLlogo.png';
+  let photoIndex=0;
+  const fallbackPortrait=()=>{photoIndex++;if(photoIndex<photoSources.length)img.src=photoSources[photoIndex];else{img.onerror=null;img.hidden=true;head.classList.add('missing-portrait')}};
+  img.onerror=fallbackPortrait;
+  if(photoSources.length)img.src=photoSources[0];else{img.hidden=true;head.classList.add('missing-portrait')}
+  // Exact same NHL landing headshot used by the BHL player profile.
+  if(c.nhlId)fetch('https://api-web.nhle.com/v1/player/'+c.nhlId+'/landing').then(res=>res.ok?res.json():null).then(profile=>{
+    if(!profile||!img.isConnected)return;
+    if(profile.headshot&&/^https:\/\//.test(profile.headshot)){
+      const preferred=profile.headshot;
+      const probe=new Image();probe.onload=()=>{if(!img.isConnected)return;img.hidden=false;head.classList.remove('missing-portrait');photoSources.unshift(preferred);photoIndex=0;img.src=preferred};probe.src=preferred;
+    }
+  }).catch(()=>{});
   const title=document.createElement('div');const h=document.createElement('h2');h.textContent=c.name;const sub=document.createElement('div');sub.className='small';sub.textContent=(c.position==='G'?'Gardien':c.position==='D'?'Défenseur':'Attaquant')+' · Dernier départ : '+c.last;title.append(h,sub);const clubLabel=document.createElement('div');clubLabel.className='club-label';const primaryLogo=document.createElement('img');primaryLogo.src=club[1]?'logos/'+club[1]:'';primaryLogo.alt='';if(!club[1])primaryLogo.hidden=true;clubLabel.append(primaryLogo,document.createTextNode(' '+(c.teamStarts.get(c.mainTeam)||0)+' départs'));clubLabel.title='Équipe avec le plus de départs : '+club[0];title.append(clubLabel);head.append(watermark,img,title);
   const badge=document.createElement('div');badge.className='status'+(c.verified?' ok':'');badge.textContent=c.verified?'Admissibilité LNH + BHL vérifiée':c.status==='noteligible'?'LNH : activité trop récente':'Carrière LNH à confirmer';
   const metrics=document.createElement('div');metrics.className='metrics';for(const [label,value] of [['FPTS',fmt(c.fpts)],['Départs',c.starts],['FP/Départ',c.starts?fmt(c.fpts/c.starts):'—'],['FP/GP',c.gp?fmt(c.fpts/c.gp):'—']]){const box=document.createElement('div');const strong=document.createElement('strong');strong.textContent=value;const small=document.createElement('small');small.textContent=label;box.append(strong,small);metrics.append(box)}
