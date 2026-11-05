@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {scoreLineup} from '../bhl-pwhl-engine.mjs';
+test('Only starters count, including negative goalie results and absent players',()=>{const week={players:{a:{gp:2,units:615},b:{gp:1,units:900},c:{gp:1,units:-120}}};assert.deepEqual(scoreLineup(week,[{id:'a',status:'active'},{id:'b',status:'bench'},{id:'c',status:'active'},{id:'d',status:'active'}]).units,495);});
+test('Duplicate entries and invalid scores are rejected',()=>{assert.throws(()=>scoreLineup({players:{}},[{id:'a',status:'active'},{id:'a',status:'bench'}]));assert.throws(()=>scoreLineup({players:{a:{gp:1,units:null}}},[{id:'a',status:'active'}]));});
