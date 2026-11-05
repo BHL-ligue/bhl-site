@@ -1,0 +1,12 @@
+{
+  "season": "2025-26",
+  "scheduled_games": 120,
+  "imported_games": 120,
+  "missing_game_ids": [],
+  "scored_player_games": 4793,
+  "unique_players": 207,
+  "complete_schedule": true,
+  "errors": [],
+  "skipped_by_batch": {},
+  "note": "A complete import is not equivalent to official-stat reconciliation or API licensing."
+}
