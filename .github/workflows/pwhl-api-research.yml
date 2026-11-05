@@ -29,14 +29,16 @@ jobs:
         run: python scripts/pwhl-game-fpts.py
       - name: Index regular-season game IDs
         run: python scripts/pwhl-season-index.py
-      - name: Import twenty completed historical games
-        run: python scripts/pwhl-batch-import.py --season 2025-26 --limit 20
+      - name: Import first twenty historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 0 --limit 20
+      - name: Import next twenty historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --offset 20 --limit 20
       - name: Aggregate available scored games
         shell: bash
         run: |
           shopt -s nullglob
           games=(research/pwhl/batch/2025-26/*.json)
-          if (("${#games[@]}" > 0)); then
+          if (( ${#games[@]} > 0 )); then
             python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-sample.json
           else
             echo "No completed games imported; skipping aggregate"
@@ -51,7 +53,7 @@ jobs:
             if test -f research/pwhl/game-fpts-sample.json; then git add research/pwhl/game-fpts-sample.json; fi
             if test -f research/pwhl/season-game-index.json; then git add research/pwhl/season-game-index.json; fi
             if test -f research/pwhl/season-aggregate-sample.json; then git add research/pwhl/season-aggregate-sample.json; fi
-            if test -f research/pwhl/batch-manifest.json; then git add research/pwhl/batch-manifest.json; fi
+            for manifest in research/pwhl/batch-manifest-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
             if test -d research/pwhl/batch; then git add research/pwhl/batch/; fi
             if ! git diff --cached --quiet; then
               git commit -m "Record PWHL API feasibility results [skip ci]"
