@@ -1,0 +1,1430 @@
+{
+  "scope": "Only imported completed games, NOT complete-season standings",
+  "games_loaded": 5,
+  "scored_player_games": 198,
+  "incomplete_player_games": [],
+  "standings": [
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "28",
+      "name": "Ann-Renée Desbiens",
+      "gp": 2,
+      "fpts": "17.80",
+      "fp_gp": "8.90"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "228",
+      "name": "Kayle Osborne",
+      "gp": 2,
+      "fpts": "15.80",
+      "fp_gp": "7.90"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "6",
+      "name": "Aerin Frankel",
+      "gp": 1,
+      "fpts": "13.00",
+      "fp_gp": "13.00"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "211",
+      "name": "Raygan Kirk",
+      "gp": 1,
+      "fpts": "9.00",
+      "fp_gp": "9.00"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "59",
+      "name": "Emerance Maschmeyer",
+      "gp": 1,
+      "fpts": "5.80",
+      "fp_gp": "5.80"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "222",
+      "name": "Gwyneth Philips",
+      "gp": 1,
+      "fpts": "4.60",
+      "fp_gp": "4.60"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "123",
+      "name": "Maddie Rooney",
+      "gp": 1,
+      "fpts": "1.40",
+      "fp_gp": "1.40"
+    },
+    {
+      "season_id": "8",
+      "type": "goalies",
+      "player_id": "155",
+      "name": "Corinne Schroeder",
+      "gp": 1,
+      "fpts": "0.60",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "9",
+      "name": "Taylor Girard",
+      "gp": 2,
+      "fpts": "10.50",
+      "fp_gp": "5.25"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "42",
+      "name": "Abby Roque",
+      "gp": 2,
+      "fpts": "9.35",
+      "fp_gp": "4.68"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "285",
+      "name": "Maddi Wheeler",
+      "gp": 2,
+      "fpts": "9.10",
+      "fp_gp": "4.55"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "31",
+      "name": "Marie-Philip Poulin",
+      "gp": 2,
+      "fpts": "8.40",
+      "fp_gp": "4.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "210",
+      "name": "Julia Gosling",
+      "gp": 1,
+      "fpts": "7.85",
+      "fp_gp": "7.85"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "78",
+      "name": "Susanna Tapani",
+      "gp": 1,
+      "fpts": "7.10",
+      "fp_gp": "7.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "206",
+      "name": "Elle Hartje",
+      "gp": 2,
+      "fpts": "6.30",
+      "fp_gp": "3.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "114",
+      "name": "Abby Boreen",
+      "gp": 1,
+      "fpts": "6.20",
+      "fp_gp": "6.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "100",
+      "name": "Natalie Spooner",
+      "gp": 1,
+      "fpts": "6.15",
+      "fp_gp": "6.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "169",
+      "name": "Claire Thompson",
+      "gp": 1,
+      "fpts": "6.00",
+      "fp_gp": "6.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "32",
+      "name": "Laura Stacey",
+      "gp": 2,
+      "fpts": "5.80",
+      "fp_gp": "2.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "75",
+      "name": "Sarah Nurse",
+      "gp": 1,
+      "fpts": "4.75",
+      "fp_gp": "4.75"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "229",
+      "name": "Maja Nylén Persson",
+      "gp": 2,
+      "fpts": "4.40",
+      "fp_gp": "2.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "83",
+      "name": "Erin Ambrose",
+      "gp": 2,
+      "fpts": "4.10",
+      "fp_gp": "2.05"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "181",
+      "name": "Hannah Bilka",
+      "gp": 1,
+      "fpts": "4.00",
+      "fp_gp": "4.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "189",
+      "name": "Britta Curl-Salemme",
+      "gp": 1,
+      "fpts": "3.95",
+      "fp_gp": "3.95"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "227",
+      "name": "Gabby Rosenthal",
+      "gp": 1,
+      "fpts": "3.95",
+      "fp_gp": "3.95"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "79",
+      "name": "Maggie Flaherty",
+      "gp": 2,
+      "fpts": "3.90",
+      "fp_gp": "1.95"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "20",
+      "name": "Kendall Coyne Schofield",
+      "gp": 1,
+      "fpts": "3.70",
+      "fp_gp": "3.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "44",
+      "name": "Ella Shelton",
+      "gp": 1,
+      "fpts": "3.60",
+      "fp_gp": "3.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "39",
+      "name": "Alexandra Labelle",
+      "gp": 2,
+      "fpts": "3.50",
+      "fp_gp": "1.75"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "224",
+      "name": "Danielle Serdachny",
+      "gp": 1,
+      "fpts": "3.50",
+      "fp_gp": "3.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "18",
+      "name": "Sophie Shirley",
+      "gp": 1,
+      "fpts": "3.50",
+      "fp_gp": "3.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "15",
+      "name": "Alina Müller",
+      "gp": 1,
+      "fpts": "3.45",
+      "fp_gp": "3.45"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "12",
+      "name": "Megan Keller",
+      "gp": 1,
+      "fpts": "3.40",
+      "fp_gp": "3.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "23",
+      "name": "Kelly Pannek",
+      "gp": 1,
+      "fpts": "3.35",
+      "fp_gp": "3.35"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "34",
+      "name": "Alex Carpenter",
+      "gp": 1,
+      "fpts": "3.30",
+      "fp_gp": "3.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "73",
+      "name": "Emma Maltais",
+      "gp": 1,
+      "fpts": "3.30",
+      "fp_gp": "3.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "317",
+      "name": "Kiara Zanon",
+      "gp": 1,
+      "fpts": "3.30",
+      "fp_gp": "3.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "274",
+      "name": "Natálie Mlýnková",
+      "gp": 2,
+      "fpts": "3.30",
+      "fp_gp": "1.65"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "198",
+      "name": "Jenn Gardiner",
+      "gp": 1,
+      "fpts": "3.20",
+      "fp_gp": "3.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "84",
+      "name": "Kati Tabin",
+      "gp": 2,
+      "fpts": "3.20",
+      "fp_gp": "1.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "192",
+      "name": "Brooke McQuigge",
+      "gp": 1,
+      "fpts": "3.10",
+      "fp_gp": "3.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "13",
+      "name": "Hilary Knight",
+      "gp": 1,
+      "fpts": "3.00",
+      "fp_gp": "3.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "2",
+      "name": "Emily Brown",
+      "gp": 1,
+      "fpts": "2.90",
+      "fp_gp": "2.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "205",
+      "name": "Sarah Fillier",
+      "gp": 2,
+      "fpts": "2.80",
+      "fp_gp": "1.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "161",
+      "name": "Tereza Vanišová",
+      "gp": 1,
+      "fpts": "2.70",
+      "fp_gp": "2.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "16",
+      "name": "Jamie Lee Rattray",
+      "gp": 1,
+      "fpts": "2.55",
+      "fp_gp": "2.55"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "30",
+      "name": "Kristin O'Neill",
+      "gp": 2,
+      "fpts": "2.55",
+      "fp_gp": "1.28"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "203",
+      "name": "Anna Wilgren",
+      "gp": 1,
+      "fpts": "2.50",
+      "fp_gp": "2.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "56",
+      "name": "Savannah Harmon",
+      "gp": 1,
+      "fpts": "2.50",
+      "fp_gp": "2.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "280",
+      "name": "Casey O'Brien",
+      "gp": 2,
+      "fpts": "1.95",
+      "fp_gp": "0.98"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "71",
+      "name": "Jocelyne Larocque",
+      "gp": 1,
+      "fpts": "1.90",
+      "fp_gp": "1.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "245",
+      "name": "Kristýna Kaltounková",
+      "gp": 2,
+      "fpts": "1.90",
+      "fp_gp": "0.95"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "5",
+      "name": "Jessica DiGirolamo",
+      "gp": 2,
+      "fpts": "1.60",
+      "fp_gp": "0.80"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "98",
+      "name": "Maureen Murphy",
+      "gp": 2,
+      "fpts": "1.60",
+      "fp_gp": "0.80"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "4",
+      "name": "Shiann Darkangelo",
+      "gp": 2,
+      "fpts": "1.45",
+      "fp_gp": "0.72"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "272",
+      "name": "Skylar Irving",
+      "gp": 2,
+      "fpts": "1.40",
+      "fp_gp": "0.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "97",
+      "name": "Liz Schepers",
+      "gp": 1,
+      "fpts": "1.35",
+      "fp_gp": "1.35"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "249",
+      "name": "Anne Cherkowski",
+      "gp": 2,
+      "fpts": "1.30",
+      "fp_gp": "0.65"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "195",
+      "name": "Dominique Petrie",
+      "gp": 1,
+      "fpts": "1.30",
+      "fp_gp": "1.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "53",
+      "name": "Emily Clark",
+      "gp": 1,
+      "fpts": "1.30",
+      "fp_gp": "1.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "61",
+      "name": "Hayley Scamurra",
+      "gp": 2,
+      "fpts": "1.30",
+      "fp_gp": "0.65"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "99",
+      "name": "Mariah Keopple",
+      "gp": 1,
+      "fpts": "1.30",
+      "fp_gp": "1.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "51",
+      "name": "Amanda Boulier",
+      "gp": 2,
+      "fpts": "1.20",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "89",
+      "name": "Hannah Miller",
+      "gp": 1,
+      "fpts": "1.15",
+      "fp_gp": "1.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "74",
+      "name": "Allie Munroe",
+      "gp": 1,
+      "fpts": "1.10",
+      "fp_gp": "1.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "246",
+      "name": "Haley Winn",
+      "gp": 1,
+      "fpts": "1.10",
+      "fp_gp": "1.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "36",
+      "name": "Jessie Eldridge",
+      "gp": 1,
+      "fpts": "1.10",
+      "fp_gp": "1.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "49",
+      "name": "Lexie Adzija",
+      "gp": 1,
+      "fpts": "1.10",
+      "fp_gp": "1.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "183",
+      "name": "Shay Maloney",
+      "gp": 1,
+      "fpts": "1.10",
+      "fp_gp": "1.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "247",
+      "name": "Abby Hustler",
+      "gp": 1,
+      "fpts": "1.00",
+      "fp_gp": "1.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "47",
+      "name": "Micah Zandee-Hart",
+      "gp": 2,
+      "fpts": "1.00",
+      "fp_gp": "0.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "11",
+      "name": "Sophie Jaques",
+      "gp": 1,
+      "fpts": "1.00",
+      "fp_gp": "1.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "88",
+      "name": "Kateřina Mrázová",
+      "gp": 1,
+      "fpts": "0.95",
+      "fp_gp": "0.95"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "230",
+      "name": "Allyson Simpson",
+      "gp": 2,
+      "fpts": "0.90",
+      "fp_gp": "0.45"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "204",
+      "name": "Emmy Fecteau",
+      "gp": 2,
+      "fpts": "0.90",
+      "fp_gp": "0.45"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "57",
+      "name": "Gabbie Hughes",
+      "gp": 1,
+      "fpts": "0.90",
+      "fp_gp": "0.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "87",
+      "name": "Jaime Bourbonnais",
+      "gp": 2,
+      "fpts": "0.90",
+      "fp_gp": "0.45"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "191",
+      "name": "Katy Knoll",
+      "gp": 1,
+      "fpts": "0.90",
+      "fp_gp": "0.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "190",
+      "name": "Klára Hymlárová",
+      "gp": 1,
+      "fpts": "0.90",
+      "fp_gp": "0.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "138",
+      "name": "Mikyla Grant-Mentis",
+      "gp": 1,
+      "fpts": "0.90",
+      "fp_gp": "0.90"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "45",
+      "name": "Kayla Vespa",
+      "gp": 2,
+      "fpts": "0.80",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "208",
+      "name": "Megan Carter",
+      "gp": 1,
+      "fpts": "0.80",
+      "fp_gp": "0.80"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "21",
+      "name": "Taylor Fox",
+      "gp": 1,
+      "fpts": "0.80",
+      "fp_gp": "0.80"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "76",
+      "name": "Blayre Turnbull",
+      "gp": 1,
+      "fpts": "0.75",
+      "fp_gp": "0.75"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "50",
+      "name": "Ashton Bell",
+      "gp": 1,
+      "fpts": "0.70",
+      "fp_gp": "0.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "24",
+      "name": "Lee Stecklein",
+      "gp": 1,
+      "fpts": "0.70",
+      "fp_gp": "0.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "242",
+      "name": "Rory Guilday",
+      "gp": 1,
+      "fpts": "0.70",
+      "fp_gp": "0.70"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "157",
+      "name": "Catherine Dubois",
+      "gp": 2,
+      "fpts": "0.65",
+      "fp_gp": "0.32"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "62",
+      "name": "Aneta Tejralová",
+      "gp": 1,
+      "fpts": "0.60",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "65",
+      "name": "Jesse Compher",
+      "gp": 1,
+      "fpts": "0.60",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "40",
+      "name": "Paetyn Levis",
+      "gp": 2,
+      "fpts": "0.60",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "223",
+      "name": "Ronja Savolainen",
+      "gp": 1,
+      "fpts": "0.60",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "232",
+      "name": "Rylind MacKinnon",
+      "gp": 1,
+      "fpts": "0.60",
+      "fp_gp": "0.60"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "277",
+      "name": "Anna Bargman",
+      "gp": 2,
+      "fpts": "0.50",
+      "fp_gp": "0.25"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "63",
+      "name": "Daryl Watts",
+      "gp": 1,
+      "fpts": "0.50",
+      "fp_gp": "0.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "118",
+      "name": "Emma Greco",
+      "gp": 1,
+      "fpts": "0.50",
+      "fp_gp": "0.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "240",
+      "name": "Fanuza Kadirova",
+      "gp": 1,
+      "fpts": "0.50",
+      "fp_gp": "0.50"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "60",
+      "name": "Jincy Roese",
+      "gp": 2,
+      "fpts": "0.50",
+      "fp_gp": "0.25"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "253",
+      "name": "Nicole Gosling",
+      "gp": 2,
+      "fpts": "0.50",
+      "fp_gp": "0.25"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "58",
+      "name": "Brianne Jenner",
+      "gp": 1,
+      "fpts": "0.45",
+      "fp_gp": "0.45"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "207",
+      "name": "Lauren Bernard",
+      "gp": 2,
+      "fpts": "0.45",
+      "fp_gp": "0.22"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "38",
+      "name": "Brooke Hobson",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "306",
+      "name": "Darcie Lappan",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "86",
+      "name": "Emma Woods",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "220",
+      "name": "Mannon McMahon",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "72",
+      "name": "Rebecca Leslie",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "147",
+      "name": "Savannah Norcross",
+      "gp": 2,
+      "fpts": "0.40",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "17",
+      "name": "Theresa Schafzahl",
+      "gp": 1,
+      "fpts": "0.40",
+      "fp_gp": "0.40"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "101",
+      "name": "Alexa Vasko",
+      "gp": 1,
+      "fpts": "0.35",
+      "fp_gp": "0.35"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "209",
+      "name": "Izzy Daniel",
+      "gp": 1,
+      "fpts": "0.35",
+      "fp_gp": "0.35"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "259",
+      "name": "Abby Newhook",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "221",
+      "name": "Anna Meixner",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "102",
+      "name": "Claire Butorac",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "185",
+      "name": "Daniela Pejšová",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "199",
+      "name": "Dara Greig",
+      "gp": 2,
+      "fpts": "0.30",
+      "fp_gp": "0.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "1",
+      "name": "Hannah Brandt",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "310",
+      "name": "Madison Samoskevich",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "66",
+      "name": "Maggie Connors",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "46",
+      "name": "Olivia Zafuto",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "286",
+      "name": "Peyton Hemp",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "108",
+      "name": "Samantha Isbell",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "180",
+      "name": "Sydney Bard",
+      "gp": 1,
+      "fpts": "0.30",
+      "fp_gp": "0.30"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "196",
+      "name": "Cayla Barnes",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "26",
+      "name": "Claire Dalton",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "301",
+      "name": "Katie Chan",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "212",
+      "name": "Laura Kluge",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "241",
+      "name": "Sarah Wozniewicz",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "167",
+      "name": "Sidney Morin",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "219",
+      "name": "Stephanie Markowski",
+      "gp": 1,
+      "fpts": "0.20",
+      "fp_gp": "0.20"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "243",
+      "name": "Ella Huber",
+      "gp": 1,
+      "fpts": "0.15",
+      "fp_gp": "0.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "244",
+      "name": "Emma Gentry",
+      "gp": 1,
+      "fpts": "0.15",
+      "fp_gp": "0.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "217",
+      "name": "Taylor House",
+      "gp": 1,
+      "fpts": "0.15",
+      "fp_gp": "0.15"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "316",
+      "name": "Clara Van Wieren",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "182",
+      "name": "Hadley Hartmetz",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "237",
+      "name": "Jenna Buglioni",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "132",
+      "name": "Jessica Kondas",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "149",
+      "name": "Jill Saulnier",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "128",
+      "name": "Kaitlin Willoughby",
+      "gp": 2,
+      "fpts": "0.10",
+      "fp_gp": "0.05"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "295",
+      "name": "Marah Wagner",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "142",
+      "name": "Natalie Snodgrass",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "91",
+      "name": "Brooke Bryant",
+      "gp": 1,
+      "fpts": "0.05",
+      "fp_gp": "0.05"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "200",
+      "name": "Anna Kjellbin",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "116",
+      "name": "Clair DeGeorge",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "104",
+      "name": "Denisa Křížová",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "25",
+      "name": "Grace Zumwinkle",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "68",
+      "name": "Kali Flanagan",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "202",
+      "name": "Kelly Ann Nadeau",
+      "gp": 2,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "236",
+      "name": "Kendall Cooper",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "162",
+      "name": "Madison Bizal",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "188",
+      "name": "Mae Batherson",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "129",
+      "name": "Mellissa Channell-Watkins",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "115",
+      "name": "Michela Cava",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "252",
+      "name": "Michelle Karvinen",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "90",
+      "name": "Natalie Buchbinder",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "263",
+      "name": "Peyton Anderson",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "255",
+      "name": "Riley Brengman",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "313",
+      "name": "Sara Hjalmarsson",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    },
+    {
+      "season_id": "8",
+      "type": "skaters",
+      "player_id": "269",
+      "name": "Vanessa Upson",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00"
+    }
+  ]
+}
