@@ -29,10 +29,18 @@ jobs:
         run: python scripts/pwhl-game-fpts.py
       - name: Index regular-season game IDs
         run: python scripts/pwhl-season-index.py
-      - name: Aggregate available scored games
-        run: python scripts/pwhl-season-aggregate.py research/pwhl/game-fpts-sample.json --output research/pwhl/season-aggregate-sample.json
       - name: Import five completed historical games
         run: python scripts/pwhl-batch-import.py --season 2025-26 --limit 5
+      - name: Aggregate available scored games
+        shell: bash
+        run: |
+          shopt -s nullglob
+          games=(research/pwhl/batch/2025-26/*.json)
+          if (("${#games[@]}" > 0)); then
+            python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-sample.json
+          else
+            echo "No completed games imported; skipping aggregate"
+          fi
       - name: Commit research report only to research branch
         if: always()
         run: |
