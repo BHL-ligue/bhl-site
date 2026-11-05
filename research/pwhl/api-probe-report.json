@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-05T01:07:02.864605+00:00",
+  "testedAt": "2026-11-05T01:08:12.081605+00:00",
   "source": "HockeyTech PWHL",
   "seasonId": 8,
   "gameId": 215,
@@ -85,7 +85,86 @@
             }
           }
         }
-      }
+      },
+      "seasons": [
+        {
+          "id": "11",
+          "name": "2026-27 Regular Season",
+          "start": "2026-12-04",
+          "end": "2027-04-19",
+          "playoff": "0"
+        },
+        {
+          "id": "10",
+          "name": "2026-27 Pre-Season",
+          "start": "2026-10-01",
+          "end": "2026-11-30",
+          "playoff": "0"
+        },
+        {
+          "id": "9",
+          "name": "2026 Playoffs",
+          "start": "2026-04-28",
+          "end": "2026-05-28",
+          "playoff": "1"
+        },
+        {
+          "id": "8",
+          "name": "2025-26 Regular Season",
+          "start": "2025-11-21",
+          "end": "2026-04-27",
+          "playoff": "0"
+        },
+        {
+          "id": "7",
+          "name": "2025-26 Preseason",
+          "start": "2025-06-01",
+          "end": "2025-11-19",
+          "playoff": "0"
+        },
+        {
+          "id": "6",
+          "name": "2025 Playoffs",
+          "start": "2025-05-06",
+          "end": "2025-06-03",
+          "playoff": "1"
+        },
+        {
+          "id": "5",
+          "name": "2024-25 Regular Season",
+          "start": "2024-11-25",
+          "end": "2025-05-05",
+          "playoff": "0"
+        },
+        {
+          "id": "4",
+          "name": "2024-25 Preseason",
+          "start": "2024-11-01",
+          "end": "2024-11-29",
+          "playoff": "0"
+        },
+        {
+          "id": "3",
+          "name": "2024 Playoffs",
+          "start": "2024-05-06",
+          "end": "2024-06-10",
+          "playoff": "1"
+        },
+        {
+          "id": "1",
+          "name": "2024 Regular Season",
+          "start": "2024-01-01",
+          "end": "2024-05-27",
+          "playoff": "0"
+        },
+        {
+          "id": "2",
+          "name": "2024 Preseason",
+          "start": "2023-11-01",
+          "end": "2023-12-31",
+          "playoff": "0"
+        }
+      ]
     },
     "schedule": {
       "ok": true,
@@ -463,7 +542,34 @@
             }
           }
         }
-      }
+      },
+      "games_count": 120,
+      "sample_games": [
+        {
+          "id": "210",
+          "date": "Fri, Nov 21",
+          "home": "Minnesota",
+          "away": "Toronto"
+        },
+        {
+          "id": "211",
+          "date": "Fri, Nov 21",
+          "home": "Vancouver",
+          "away": "Seattle"
+        },
+        {
+          "id": "212",
+          "date": "Sat, Nov 22",
+          "home": "Ottawa",
+          "away": "New York"
+        },
+        {
+          "id": "213",
+          "date": "Sun, Nov 23",
+          "home": "Boston",
+          "away": "Montréal"
+        }
+      ]
     },
     "game_summary": {
       "ok": true,
@@ -602,6 +708,374 @@
             }
           }
         }
+      },
+      "game_meta": {
+        "id": "215",
+        "season_id": "8",
+        "date_played": "2025-11-26",
+        "home_team": "5",
+        "visiting_team": "9"
+      },
+      "summary_fields": [
+        "meta",
+        "txt_title",
+        "txt_scoring",
+        "txt_total",
+        "txt_shots",
+        "game_ident",
+        "game_date",
+        "game_length",
+        "status_title",
+        "status_value",
+        "periods",
+        "shootout",
+        "visitor",
+        "home",
+        "visitor_division",
+        "visitor_division_id",
+        "home_division",
+        "home_division_id",
+        "mvp_type",
+        "shootoutDetail",
+        "mvps",
+        "venue",
+        "referee1",
+        "referee2",
+        "linesman1",
+        "linesman2",
+        "officialsOnIce",
+        "officialsOffIce",
+        "homeShootout",
+        "visitorShootout",
+        "benchGoalCount",
+        "penalties",
+        "goals",
+        "goalies",
+        "home_team_lineup",
+        "visitor_team_lineup",
+        "game_date_iso_8601",
+        "coaches",
+        "pimBench",
+        "powerPlayGoals",
+        "powerPlayCount",
+        "goalCount",
+        "assistCount",
+        "pointsCount",
+        "pimTotal",
+        "infCount",
+        "shotsByPeriod",
+        "penaltyshots",
+        "totalFaceoffs",
+        "totalHits",
+        "totalGoals",
+        "totalShots",
+        "totalShotsOn",
+        "goalsByPeriod"
+      ],
+      "lineup_shapes": {
+        "goals": {
+          "type": "array",
+          "count": 6,
+          "sample": {
+            "type": "object",
+            "keys": [
+              "event",
+              "x_location",
+              "y_location",
+              "time",
+              "team_id",
+              "home",
+              "period_id",
+              "goal_type",
+              "location_set",
+              "power_play",
+              "empty_net",
+              "penalty_shot",
+              "short_handed",
+              "insurance_goal",
+              "game_winning",
+              "game_tieing",
+              "scorer_goal_num",
+              "s",
+              "goal_scorer",
+              "assist1_player",
+              "assist2_player",
+              "plus",
+              "minus"
+            ],
+            "sample": {
+              "event": "str",
+              "x_location": "str",
+              "y_location": "str",
+              "time": "str",
+              "team_id": "str",
+              "home": "str"
+            }
+          }
+        },
+        "goalies": {
+          "type": "object",
+          "keys": [
+            "visitor",
+            "home"
+          ],
+          "sample": {
+            "visitor": {
+              "type": "array",
+              "count": 2,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "period_start",
+                  "time_start",
+                  "period_end",
+                  "time_end",
+                  "saves",
+                  "secs",
+                  "seconds",
+                  "goals_against",
+                  "win",
+                  "loss",
+                  "shootout_loss",
+                  "ot_loss",
+                  "tie",
+                  "shutout",
+                  "shootout_goals_against",
+                  "shootout_saves",
+                  "secs_mmss",
+                  "shots_against"
+                ],
+                "sample": {
+                  "id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "period_start": "str",
+                  "time_start": "str"
+                }
+              }
+            },
+            "home": {
+              "type": "array",
+              "count": 1,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "period_start",
+                  "time_start",
+                  "period_end",
+                  "time_end",
+                  "saves",
+                  "secs",
+                  "seconds",
+                  "goals_against",
+                  "win",
+                  "loss",
+                  "shootout_loss",
+                  "ot_loss",
+                  "tie",
+                  "shutout",
+                  "shootout_goals_against",
+                  "shootout_saves",
+                  "secs_mmss",
+                  "shots_against"
+                ],
+                "sample": {
+                  "id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "period_start": "str",
+                  "time_start": "str"
+                }
+              }
+            }
+          }
+        },
+        "home_team_lineup": {
+          "type": "object",
+          "keys": [
+            "goalies",
+            "players"
+          ],
+          "sample": {
+            "goalies": {
+              "type": "array",
+              "count": 2,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "person_id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "start",
+                  "position",
+                  "position_str",
+                  "status",
+                  "rookie",
+                  "seconds",
+                  "time",
+                  "shots_against",
+                  "goals_against",
+                  "saves",
+                  "goals",
+                  "assists",
+                  "pim",
+                  "shots",
+                  "jersey_number"
+                ],
+                "sample": {
+                  "person_id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "start": "str",
+                  "position": "str"
+                }
+              }
+            },
+            "players": {
+              "type": "array",
+              "count": 19,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "person_id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "start",
+                  "position",
+                  "position_str",
+                  "status",
+                  "rookie",
+                  "goals",
+                  "assists",
+                  "plusminus",
+                  "pim",
+                  "faceoff_wins",
+                  "faceoff_attempts",
+                  "hits",
+                  "icings",
+                  "offsides",
+                  "shots",
+                  "shots_on",
+                  "power_play_goals",
+                  "short_handed_goals",
+                  "game_winning_goal",
+                  "shots_blocked_by_player",
+                  "shots_blocked",
+                  "jersey_number"
+                ],
+                "sample": {
+                  "person_id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "start": "str",
+                  "position": "str"
+                }
+              }
+            }
+          }
+        },
+        "visitor_team_lineup": {
+          "type": "object",
+          "keys": [
+            "goalies",
+            "players"
+          ],
+          "sample": {
+            "goalies": {
+              "type": "array",
+              "count": 2,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "person_id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "start",
+                  "position",
+                  "position_str",
+                  "status",
+                  "rookie",
+                  "seconds",
+                  "time",
+                  "shots_against",
+                  "goals_against",
+                  "saves",
+                  "goals",
+                  "assists",
+                  "pim",
+                  "shots",
+                  "jersey_number"
+                ],
+                "sample": {
+                  "person_id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "start": "str",
+                  "position": "str"
+                }
+              }
+            },
+            "players": {
+              "type": "array",
+              "count": 19,
+              "sample": {
+                "type": "object",
+                "keys": [
+                  "person_id",
+                  "player_id",
+                  "first_name",
+                  "last_name",
+                  "start",
+                  "position",
+                  "position_str",
+                  "status",
+                  "rookie",
+                  "goals",
+                  "assists",
+                  "plusminus",
+                  "pim",
+                  "faceoff_wins",
+                  "faceoff_attempts",
+                  "hits",
+                  "icings",
+                  "offsides",
+                  "shots",
+                  "shots_on",
+                  "power_play_goals",
+                  "short_handed_goals",
+                  "game_winning_goal",
+                  "shots_blocked_by_player",
+                  "shots_blocked",
+                  "jersey_number"
+                ],
+                "sample": {
+                  "person_id": "str",
+                  "player_id": "str",
+                  "first_name": "str",
+                  "last_name": "str",
+                  "start": "str",
+                  "position": "str"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "play_by_play": {
@@ -667,7 +1141,16 @@
             }
           }
         }
-      }
+      },
+      "event_types": [
+        "blocked_shot",
+        "faceoff",
+        "goal",
+        "goalie_change",
+        "hit",
+        "penalty",
+        "shot"
+      ]
     },
     "shifts": {
       "ok": true,
@@ -1077,7 +1560,250 @@
             }
           }
         }
-      }
+      },
+      "section_shapes": [
+        {
+          "keys": [
+            "sections"
+          ],
+          "data_shape": {
+            "type": "array",
+            "count": 1,
+            "sample": {
+              "type": "object",
+              "keys": [
+                "title",
+                "headers",
+                "data"
+              ],
+              "sample": {
+                "title": "str",
+                "headers": {
+                  "type": "object",
+                  "keys": [
+                    "rank",
+                    "rookie",
+                    "active",
+                    "name",
+                    "position",
+                    "team_code",
+                    "games_played",
+                    "goals",
+                    "assists",
+                    "points",
+                    "plus_minus",
+                    "penalty_minutes",
+                    "power_play_goals",
+                    "power_play_assists",
+                    "short_handed_goals",
+                    "short_handed_assists",
+                    "points_per_game",
+                    "faceoff_wins",
+                    "faceoff_attempts",
+                    "faceoff_pct",
+                    "penalty_minutes_per_game",
+                    "shots",
+                    "shooting_percentage",
+                    "shots_blocked_by_player",
+                    "hits",
+                    "hits_per_game_avg",
+                    "ice_time_minutes_seconds",
+                    "ice_time_per_game_avg",
+                    "player_id"
+                  ],
+                  "sample": {
+                    "rank": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    },
+                    "rookie": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    },
+                    "active": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    },
+                    "name": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    },
+                    "position": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    },
+                    "team_code": {
+                      "type": "object",
+                      "keys": [
+                        "properties"
+                      ],
+                      "sample": {
+                        "properties": {
+                          "type": "object",
+                          "keys": [
+                            "key",
+                            "hidden",
+                            "class",
+                            "label",
+                            "title",
+                            "sortable",
+                            "align",
+                            "highlight",
+                            "sortKey"
+                          ],
+                          "sample": {
+                            "key": "str",
+                            "hidden": "bool",
+                            "class": "str",
+                            "label": "str",
+                            "title": "str",
+                            "sortable": "bool"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "data": {
+                  "type": "array",
+                  "count": 0,
+                  "sample": null
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
