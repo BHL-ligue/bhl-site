@@ -4,6 +4,7 @@ on:
     branches: [research/pwhl-fantasy-data]
     paths:
       - 'scripts/pwhl-api-probe.py'
+      - 'scripts/pwhl-game-fpts.py'
       - '.github/workflows/pwhl-api-research.yml'
   workflow_dispatch:
 permissions:
