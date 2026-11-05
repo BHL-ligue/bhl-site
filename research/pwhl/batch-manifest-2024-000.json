@@ -1,0 +1,249 @@
+{
+  "season": "2024",
+  "season_id": 1,
+  "requested": 20,
+  "offset": 0,
+  "scored": [
+    {
+      "game": "10",
+      "date": "2024-01-13",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "11",
+      "date": "2024-01-13",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "12",
+      "date": "2024-01-14",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "13",
+      "date": "2024-01-16",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "14",
+      "date": "2024-01-17",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "15",
+      "date": "2024-01-17",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "16",
+      "date": "2024-01-20",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "17",
+      "date": "2024-01-20",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "18",
+      "date": "2024-01-23",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "19",
+      "date": "2024-01-24",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 3,
+        "scored": 3
+      }
+    },
+    {
+      "game": "2",
+      "date": "2024-01-01",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "20",
+      "date": "2024-01-24",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "21",
+      "date": "2024-01-26",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "22",
+      "date": "2024-01-27",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "23",
+      "date": "2024-01-27",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "24",
+      "date": "2024-01-28",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "25",
+      "date": "2024-02-03",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "26",
+      "date": "2024-02-04",
+      "skaters": {
+        "total": 36,
+        "scored": 36
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "27",
+      "date": "2024-02-04",
+      "skaters": {
+        "total": 38,
+        "scored": 38
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    },
+    {
+      "game": "28",
+      "date": "2024-02-14",
+      "skaters": {
+        "total": 37,
+        "scored": 37
+      },
+      "goalies": {
+        "total": 2,
+        "scored": 2
+      }
+    }
+  ],
+  "skipped": []
+}

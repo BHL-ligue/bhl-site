@@ -1,0 +1,619 @@
+{
+  "game_id": 19,
+  "date": "2024-01-24",
+  "season_id": "1",
+  "skaters": [
+    {
+      "id": "15",
+      "name": "Alina Müller",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 1,
+        "assists": 1,
+        "shots_on": "3",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "7"
+      },
+      "fpts": "6.75",
+      "missing": []
+    },
+    {
+      "id": "58",
+      "name": "Brianne Jenner",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "3",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "16"
+      },
+      "fpts": "4.20",
+      "missing": []
+    },
+    {
+      "id": "54",
+      "name": "Kristin Della Rovere",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 1,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "3.30",
+      "missing": []
+    },
+    {
+      "id": "49",
+      "name": "Lexie Adzija",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 1,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "3.30",
+      "missing": []
+    },
+    {
+      "id": "167",
+      "name": "Sidney Morin",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "2",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "3.10",
+      "missing": []
+    },
+    {
+      "id": "17",
+      "name": "Theresa Schafzahl",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 1,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "1"
+      },
+      "fpts": "3.05",
+      "missing": []
+    },
+    {
+      "id": "16",
+      "name": "Jamie Lee Rattray",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 1,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "3.00",
+      "missing": []
+    },
+    {
+      "id": "109",
+      "name": "Gigi Marvin",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "7"
+      },
+      "fpts": "2.85",
+      "missing": []
+    },
+    {
+      "id": "12",
+      "name": "Megan Keller",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "2.80",
+      "missing": []
+    },
+    {
+      "id": "142",
+      "name": "Natalie Snodgrass",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "2"
+      },
+      "fpts": "2.60",
+      "missing": []
+    },
+    {
+      "id": "61",
+      "name": "Hayley Scamurra",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "2.50",
+      "missing": []
+    },
+    {
+      "id": "18",
+      "name": "Sophie Shirley",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 1,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "2.50",
+      "missing": []
+    },
+    {
+      "id": "53",
+      "name": "Emily Clark",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "4",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "2"
+      },
+      "fpts": "1.30",
+      "missing": []
+    },
+    {
+      "id": "57",
+      "name": "Gabbie Hughes",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "3",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "4"
+      },
+      "fpts": "1.10",
+      "missing": []
+    },
+    {
+      "id": "1",
+      "name": "Hannah Brandt",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "9"
+      },
+      "fpts": "0.75",
+      "missing": []
+    },
+    {
+      "id": "63",
+      "name": "Daryl Watts",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "2",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "1"
+      },
+      "fpts": "0.65",
+      "missing": []
+    },
+    {
+      "id": "141",
+      "name": "Akane Shiga",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.30",
+      "missing": []
+    },
+    {
+      "id": "56",
+      "name": "Savannah Harmon",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.30",
+      "missing": []
+    },
+    {
+      "id": "60",
+      "name": "Jincy Roese",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.30",
+      "missing": []
+    },
+    {
+      "id": "137",
+      "name": "Fanni Garát-Gasparics",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.30",
+      "missing": []
+    },
+    {
+      "id": "8",
+      "name": "Loren Gabel",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "1",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.30",
+      "missing": []
+    },
+    {
+      "id": "88",
+      "name": "Kateřina Mrázová",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "5"
+      },
+      "fpts": "0.25",
+      "missing": []
+    },
+    {
+      "id": "62",
+      "name": "Aneta Tejralová",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "52",
+      "name": "Zoe Boyd",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "138",
+      "name": "Mikyla Grant-Mentis",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "50",
+      "name": "Ashton Bell",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "51",
+      "name": "Amanda Boulier",
+      "side": "home_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "2",
+      "name": "Emily Brown",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "111",
+      "name": "Taylor Wenczkowski",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "7",
+      "name": "Kaleigh Fratkin",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "110",
+      "name": "Amanda Pelkey",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "9",
+      "name": "Taylor Girard",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "11",
+      "name": "Sophie Jaques",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "13",
+      "name": "Hilary Knight",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "5",
+      "name": "Jessica DiGirolamo",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "4",
+      "name": "Shiann Darkangelo",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    },
+    {
+      "id": "10",
+      "name": "Jess Healey",
+      "side": "visitor_team_lineup",
+      "stats": {
+        "goals": 0,
+        "assists": 0,
+        "shots_on": "0",
+        "hits": "0",
+        "shots_blocked_by_player": "0",
+        "faceoff_wins": "0"
+      },
+      "fpts": "0.00",
+      "missing": []
+    }
+  ],
+  "goalies": [
+    {
+      "id": "6",
+      "name": "Aerin Frankel",
+      "side": "visitor",
+      "stats": {
+        "win": "1",
+        "goals_against": "2",
+        "saves": "37",
+        "shutout": "0",
+        "goals": 0,
+        "assists": 0
+      },
+      "fpts": "9.40",
+      "missing": []
+    },
+    {
+      "id": "59",
+      "name": "Emerance Maschmeyer",
+      "side": "home",
+      "stats": {
+        "win": "0",
+        "goals_against": "1",
+        "saves": "18",
+        "shutout": "0",
+        "goals": 0,
+        "assists": 0
+      },
+      "fpts": "2.60",
+      "missing": []
+    },
+    {
+      "id": "48",
+      "name": "Sandra Abstreiter",
+      "side": "home",
+      "stats": {
+        "win": "0",
+        "goals_against": "2",
+        "saves": "10",
+        "shutout": "0",
+        "goals": 0,
+        "assists": 0
+      },
+      "fpts": "0.00",
+      "missing": []
+    }
+  ],
+  "summary": {
+    "skaters": {
+      "total": 37,
+      "scored": 37
+    },
+    "goalies": {
+      "total": 3,
+      "scored": 3
+    }
+  }
+}
