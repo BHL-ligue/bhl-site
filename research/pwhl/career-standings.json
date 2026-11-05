@@ -1,0 +1,5647 @@
+{
+  "scope": "Only complete imported seasons. Not yet reconciled to official published totals.",
+  "coverage": {
+    "2024": {
+      "status": "complete",
+      "imported_games": 72,
+      "expected_games": 72
+    },
+    "2024-25": {
+      "status": "complete",
+      "imported_games": 90,
+      "expected_games": 90
+    },
+    "2025-26": {
+      "status": "complete",
+      "imported_games": 120,
+      "expected_games": 120
+    }
+  },
+  "players": 257,
+  "standings": [
+    {
+      "type": "goalies",
+      "player_id": "6",
+      "name": "Aerin Frankel",
+      "gp": 67,
+      "fpts": "414.40",
+      "fp_gp": "6.19",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 18,
+          "fpts": "92.00",
+          "fp_gp": "5.11"
+        },
+        {
+          "season": "2024-25",
+          "gp": 23,
+          "fpts": "119.20",
+          "fp_gp": "5.18"
+        },
+        {
+          "season": "2025-26",
+          "gp": 26,
+          "fpts": "203.20",
+          "fp_gp": "7.82"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "28",
+      "name": "Ann-Renée Desbiens",
+      "gp": 62,
+      "fpts": "405.70",
+      "fp_gp": "6.54",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 16,
+          "fpts": "83.20",
+          "fp_gp": "5.20"
+        },
+        {
+          "season": "2024-25",
+          "gp": 21,
+          "fpts": "125.60",
+          "fp_gp": "5.98"
+        },
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "196.90",
+          "fp_gp": "7.88"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "64",
+      "name": "Kristen Campbell",
+      "gp": 56,
+      "fpts": "280.30",
+      "fp_gp": "5.01",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "144.30",
+          "fp_gp": "6.56"
+        },
+        {
+          "season": "2024-25",
+          "gp": 21,
+          "fpts": "83.20",
+          "fp_gp": "3.96"
+        },
+        {
+          "season": "2025-26",
+          "gp": 13,
+          "fpts": "52.80",
+          "fp_gp": "4.06"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "155",
+      "name": "Corinne Schroeder",
+      "gp": 52,
+      "fpts": "275.40",
+      "fp_gp": "5.30",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 15,
+          "fpts": "91.00",
+          "fp_gp": "6.07"
+        },
+        {
+          "season": "2024-25",
+          "gp": 20,
+          "fpts": "115.00",
+          "fp_gp": "5.75"
+        },
+        {
+          "season": "2025-26",
+          "gp": 17,
+          "fpts": "69.40",
+          "fp_gp": "4.08"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "59",
+      "name": "Emerance Maschmeyer",
+      "gp": 60,
+      "fpts": "265.40",
+      "fp_gp": "4.42",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "105.10",
+          "fp_gp": "4.57"
+        },
+        {
+          "season": "2024-25",
+          "gp": 18,
+          "fpts": "74.10",
+          "fp_gp": "4.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 19,
+          "fpts": "86.20",
+          "fp_gp": "4.54"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "222",
+      "name": "Gwyneth Philips",
+      "gp": 43,
+      "fpts": "250.40",
+      "fp_gp": "5.82",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 15,
+          "fpts": "75.20",
+          "fp_gp": "5.01"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "175.20",
+          "fp_gp": "6.26"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "123",
+      "name": "Maddie Rooney",
+      "gp": 45,
+      "fpts": "213.00",
+      "fp_gp": "4.73",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 10,
+          "fpts": "52.00",
+          "fp_gp": "5.20"
+        },
+        {
+          "season": "2024-25",
+          "gp": 19,
+          "fpts": "76.80",
+          "fp_gp": "4.04"
+        },
+        {
+          "season": "2025-26",
+          "gp": 16,
+          "fpts": "84.20",
+          "fp_gp": "5.26"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "22",
+      "name": "Nicole Hensley",
+      "gp": 38,
+      "fpts": "193.90",
+      "fp_gp": "5.10",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 14,
+          "fpts": "73.90",
+          "fp_gp": "5.28"
+        },
+        {
+          "season": "2024-25",
+          "gp": 11,
+          "fpts": "53.60",
+          "fp_gp": "4.87"
+        },
+        {
+          "season": "2025-26",
+          "gp": 13,
+          "fpts": "66.40",
+          "fp_gp": "5.11"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "211",
+      "name": "Raygan Kirk",
+      "gp": 33,
+      "fpts": "166.00",
+      "fp_gp": "5.03",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 10,
+          "fpts": "44.20",
+          "fp_gp": "4.42"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "121.80",
+          "fp_gp": "5.30"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "228",
+      "name": "Kayle Osborne",
+      "gp": 37,
+      "fpts": "159.70",
+      "fp_gp": "4.32",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 10,
+          "fpts": "39.10",
+          "fp_gp": "3.91"
+        },
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "120.60",
+          "fp_gp": "4.47"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "85",
+      "name": "Elaine Chuli",
+      "gp": 27,
+      "fpts": "126.60",
+      "fp_gp": "4.69",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 8,
+          "fpts": "59.00",
+          "fp_gp": "7.38"
+        },
+        {
+          "season": "2024-25",
+          "gp": 11,
+          "fpts": "40.80",
+          "fp_gp": "3.71"
+        },
+        {
+          "season": "2025-26",
+          "gp": 8,
+          "fpts": "26.80",
+          "fp_gp": "3.35"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "250",
+      "name": "Hannah Murphy",
+      "gp": 12,
+      "fpts": "51.90",
+      "fp_gp": "4.32",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 12,
+          "fpts": "51.90",
+          "fp_gp": "4.32"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "41",
+      "name": "Abbey Levy",
+      "gp": 13,
+      "fpts": "41.40",
+      "fp_gp": "3.18",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 8,
+          "fpts": "26.00",
+          "fp_gp": "3.25"
+        },
+        {
+          "season": "2024-25",
+          "gp": 2,
+          "fpts": "0.60",
+          "fp_gp": "0.30"
+        },
+        {
+          "season": "2025-26",
+          "gp": 3,
+          "fpts": "14.80",
+          "fp_gp": "4.93"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "19",
+      "name": "Emma Söderberg",
+      "gp": 14,
+      "fpts": "41.40",
+      "fp_gp": "2.96",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 8,
+          "fpts": "29.60",
+          "fp_gp": "3.70"
+        },
+        {
+          "season": "2024-25",
+          "gp": 6,
+          "fpts": "11.80",
+          "fp_gp": "1.97"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "48",
+      "name": "Sandra Abstreiter",
+      "gp": 8,
+      "fpts": "36.90",
+      "fp_gp": "4.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 3,
+          "fpts": "6.60",
+          "fp_gp": "2.20"
+        },
+        {
+          "season": "2025-26",
+          "gp": 5,
+          "fpts": "30.30",
+          "fp_gp": "6.06"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "186",
+      "name": "Klára Peslarová",
+      "gp": 4,
+      "fpts": "23.80",
+      "fp_gp": "5.95",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 4,
+          "fpts": "23.80",
+          "fp_gp": "5.95"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "134",
+      "name": "Carly Jackson",
+      "gp": 3,
+      "fpts": "11.00",
+      "fp_gp": "3.67",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 1,
+          "fpts": "8.00",
+          "fp_gp": "8.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 2,
+          "fpts": "3.00",
+          "fp_gp": "1.50"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "70",
+      "name": "Erica Howe",
+      "gp": 3,
+      "fpts": "10.60",
+      "fp_gp": "3.53",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 3,
+          "fpts": "10.60",
+          "fp_gp": "3.53"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "238",
+      "name": "Sanni Ahola",
+      "gp": 2,
+      "fpts": "10.20",
+      "fp_gp": "5.10",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 2,
+          "fpts": "10.20",
+          "fp_gp": "5.10"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "154",
+      "name": "Lindsey Post",
+      "gp": 2,
+      "fpts": "9.00",
+      "fp_gp": "4.50",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 2,
+          "fpts": "9.00",
+          "fp_gp": "4.50"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "282",
+      "name": "Callie Shanahan",
+      "gp": 4,
+      "fpts": "7.80",
+      "fp_gp": "1.95",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 4,
+          "fpts": "7.80",
+          "fp_gp": "1.95"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "262",
+      "name": "Amanda Thiele",
+      "gp": 1,
+      "fpts": "6.20",
+      "fp_gp": "6.20",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 1,
+          "fpts": "6.20",
+          "fp_gp": "6.20"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "290",
+      "name": "Kendra Woodland",
+      "gp": 1,
+      "fpts": "0.80",
+      "fp_gp": "0.80",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 1,
+          "fpts": "0.80",
+          "fp_gp": "0.80"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "193",
+      "name": "Lucy Morgan",
+      "gp": 1,
+      "fpts": "0.80",
+      "fp_gp": "0.80",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 1,
+          "fpts": "0.80",
+          "fp_gp": "0.80"
+        }
+      ]
+    },
+    {
+      "type": "goalies",
+      "player_id": "166",
+      "name": "Marlène Boissonnault",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 1,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "31",
+      "name": "Marie-Philip Poulin",
+      "gp": 70,
+      "fpts": "282.95",
+      "fp_gp": "4.04",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "90.80",
+          "fp_gp": "4.32"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "120.05",
+          "fp_gp": "4.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 19,
+          "fpts": "72.10",
+          "fp_gp": "3.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "34",
+      "name": "Alex Carpenter",
+      "gp": 80,
+      "fpts": "273.40",
+      "fp_gp": "3.42",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "90.25",
+          "fp_gp": "3.76"
+        },
+        {
+          "season": "2024-25",
+          "gp": 26,
+          "fpts": "81.75",
+          "fp_gp": "3.14"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "101.40",
+          "fp_gp": "3.38"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "23",
+      "name": "Kelly Pannek",
+      "gp": 84,
+      "fpts": "250.95",
+      "fp_gp": "2.99",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "65.40",
+          "fp_gp": "2.72"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "59.90",
+          "fp_gp": "2.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "125.65",
+          "fp_gp": "4.19"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "21",
+      "name": "Taylor Fox",
+      "gp": 78,
+      "fpts": "247.45",
+      "fp_gp": "3.17",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 19,
+          "fpts": "53.05",
+          "fp_gp": "2.79"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "85.50",
+          "fp_gp": "2.95"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "108.90",
+          "fp_gp": "3.63"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "58",
+      "name": "Brianne Jenner",
+      "gp": 82,
+      "fpts": "235.40",
+      "fp_gp": "2.87",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "74.15",
+          "fp_gp": "3.09"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "56.70",
+          "fp_gp": "2.02"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "104.55",
+          "fp_gp": "3.48"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "32",
+      "name": "Laura Stacey",
+      "gp": 80,
+      "fpts": "229.50",
+      "fp_gp": "2.87",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "67.90",
+          "fp_gp": "2.95"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "81.35",
+          "fp_gp": "3.01"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "80.25",
+          "fp_gp": "2.68"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "20",
+      "name": "Kendall Coyne Schofield",
+      "gp": 77,
+      "fpts": "227.75",
+      "fp_gp": "2.96",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "60.00",
+          "fp_gp": "2.50"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "85.90",
+          "fp_gp": "2.86"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "81.85",
+          "fp_gp": "3.56"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "63",
+      "name": "Daryl Watts",
+      "gp": 81,
+      "fpts": "225.35",
+      "fp_gp": "2.78",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "61.60",
+          "fp_gp": "2.57"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "96.45",
+          "fp_gp": "3.22"
+        },
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "67.30",
+          "fp_gp": "2.49"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "75",
+      "name": "Sarah Nurse",
+      "gp": 64,
+      "fpts": "224.75",
+      "fp_gp": "3.51",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "88.45",
+          "fp_gp": "3.69"
+        },
+        {
+          "season": "2024-25",
+          "gp": 21,
+          "fpts": "65.50",
+          "fp_gp": "3.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 19,
+          "fpts": "70.80",
+          "fp_gp": "3.73"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "36",
+      "name": "Jessie Eldridge",
+      "gp": 84,
+      "fpts": "220.35",
+      "fp_gp": "2.62",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "56.10",
+          "fp_gp": "2.34"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "83.50",
+          "fp_gp": "2.78"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "80.75",
+          "fp_gp": "2.69"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "42",
+      "name": "Abby Roque",
+      "gp": 83,
+      "fpts": "216.70",
+      "fp_gp": "2.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "53.55",
+          "fp_gp": "2.23"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "82.15",
+          "fp_gp": "2.74"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "81.00",
+          "fp_gp": "2.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "89",
+      "name": "Hannah Miller",
+      "gp": 82,
+      "fpts": "215.80",
+      "fp_gp": "2.63",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "47.70",
+          "fp_gp": "2.07"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "86.55",
+          "fp_gp": "2.98"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "81.55",
+          "fp_gp": "2.72"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "15",
+      "name": "Alina Müller",
+      "gp": 80,
+      "fpts": "208.95",
+      "fp_gp": "2.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "58.15",
+          "fp_gp": "2.42"
+        },
+        {
+          "season": "2024-25",
+          "gp": 26,
+          "fpts": "63.25",
+          "fp_gp": "2.43"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "87.55",
+          "fp_gp": "2.92"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "78",
+      "name": "Susanna Tapani",
+      "gp": 86,
+      "fpts": "208.40",
+      "fp_gp": "2.42",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 26,
+          "fpts": "54.15",
+          "fp_gp": "2.08"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "77.95",
+          "fp_gp": "2.60"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "76.30",
+          "fp_gp": "2.54"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "13",
+      "name": "Hilary Knight",
+      "gp": 76,
+      "fpts": "205.00",
+      "fp_gp": "2.70",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "47.75",
+          "fp_gp": "1.99"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "105.10",
+          "fp_gp": "3.50"
+        },
+        {
+          "season": "2025-26",
+          "gp": 22,
+          "fpts": "52.15",
+          "fp_gp": "2.37"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "205",
+      "name": "Sarah Fillier",
+      "gp": 59,
+      "fpts": "199.20",
+      "fp_gp": "3.38",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "106.00",
+          "fp_gp": "3.53"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "93.20",
+          "fp_gp": "3.21"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "76",
+      "name": "Blayre Turnbull",
+      "gp": 84,
+      "fpts": "191.95",
+      "fp_gp": "2.29",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "49.65",
+          "fp_gp": "2.07"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "60.80",
+          "fp_gp": "2.03"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "81.50",
+          "fp_gp": "2.72"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "57",
+      "name": "Gabbie Hughes",
+      "gp": 81,
+      "fpts": "189.65",
+      "fp_gp": "2.34",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "57.30",
+          "fp_gp": "2.39"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "70.05",
+          "fp_gp": "2.42"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "62.30",
+          "fp_gp": "2.22"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "25",
+      "name": "Grace Zumwinkle",
+      "gp": 75,
+      "fpts": "185.90",
+      "fp_gp": "2.48",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "67.00",
+          "fp_gp": "2.79"
+        },
+        {
+          "season": "2024-25",
+          "gp": 22,
+          "fpts": "37.05",
+          "fp_gp": "1.68"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "81.85",
+          "fp_gp": "2.82"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "161",
+      "name": "Tereza Vanišová",
+      "gp": 83,
+      "fpts": "182.75",
+      "fp_gp": "2.20",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "41.70",
+          "fp_gp": "1.81"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "86.40",
+          "fp_gp": "2.88"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "54.65",
+          "fp_gp": "1.82"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "12",
+      "name": "Megan Keller",
+      "gp": 84,
+      "fpts": "181.90",
+      "fp_gp": "2.17",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "53.00",
+          "fp_gp": "2.21"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "52.40",
+          "fp_gp": "1.75"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "76.50",
+          "fp_gp": "2.55"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "11",
+      "name": "Sophie Jaques",
+      "gp": 77,
+      "fpts": "180.25",
+      "fp_gp": "2.34",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "33.90",
+          "fp_gp": "1.54"
+        },
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "72.45",
+          "fp_gp": "2.90"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "73.90",
+          "fp_gp": "2.46"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "53",
+      "name": "Emily Clark",
+      "gp": 84,
+      "fpts": "171.90",
+      "fp_gp": "2.05",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "54.25",
+          "fp_gp": "2.26"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "74.60",
+          "fp_gp": "2.49"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "43.05",
+          "fp_gp": "1.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "67",
+      "name": "Renata Fast",
+      "gp": 80,
+      "fpts": "167.60",
+      "fp_gp": "2.10",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "46.00",
+          "fp_gp": "1.92"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "80.85",
+          "fp_gp": "2.70"
+        },
+        {
+          "season": "2025-26",
+          "gp": 26,
+          "fpts": "40.75",
+          "fp_gp": "1.57"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "73",
+      "name": "Emma Maltais",
+      "gp": 84,
+      "fpts": "165.90",
+      "fp_gp": "1.98",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "66.30",
+          "fp_gp": "2.76"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "42.95",
+          "fp_gp": "1.43"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "56.65",
+          "fp_gp": "1.89"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "100",
+      "name": "Natalie Spooner",
+      "gp": 68,
+      "fpts": "163.75",
+      "fp_gp": "2.41",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "100.45",
+          "fp_gp": "4.19"
+        },
+        {
+          "season": "2024-25",
+          "gp": 14,
+          "fpts": "22.95",
+          "fp_gp": "1.64"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "40.35",
+          "fp_gp": "1.34"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "44",
+      "name": "Ella Shelton",
+      "gp": 78,
+      "fpts": "162.80",
+      "fp_gp": "2.09",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "66.30",
+          "fp_gp": "2.76"
+        },
+        {
+          "season": "2024-25",
+          "gp": 24,
+          "fpts": "57.25",
+          "fp_gp": "2.39"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "39.25",
+          "fp_gp": "1.31"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "189",
+      "name": "Britta Curl-Salemme",
+      "gp": 58,
+      "fpts": "160.70",
+      "fp_gp": "2.77",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "60.35",
+          "fp_gp": "2.16"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "100.35",
+          "fp_gp": "3.34"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "65",
+      "name": "Jesse Compher",
+      "gp": 84,
+      "fpts": "152.00",
+      "fp_gp": "1.81",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "26.65",
+          "fp_gp": "1.11"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "71.20",
+          "fp_gp": "2.37"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "54.15",
+          "fp_gp": "1.80"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "61",
+      "name": "Hayley Scamurra",
+      "gp": 79,
+      "fpts": "138.10",
+      "fp_gp": "1.75",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "45.15",
+          "fp_gp": "1.88"
+        },
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "22.85",
+          "fp_gp": "0.91"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "70.10",
+          "fp_gp": "2.34"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "88",
+      "name": "Kateřina Mrázová",
+      "gp": 67,
+      "fpts": "136.00",
+      "fp_gp": "2.03",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "63.00",
+          "fp_gp": "2.74"
+        },
+        {
+          "season": "2024-25",
+          "gp": 14,
+          "fpts": "30.75",
+          "fp_gp": "2.20"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "42.25",
+          "fp_gp": "1.41"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "30",
+      "name": "Kristin O'Neill",
+      "gp": 83,
+      "fpts": "132.30",
+      "fp_gp": "1.59",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "47.00",
+          "fp_gp": "2.04"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "37.60",
+          "fp_gp": "1.25"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "47.70",
+          "fp_gp": "1.59"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "72",
+      "name": "Rebecca Leslie",
+      "gp": 81,
+      "fpts": "130.20",
+      "fp_gp": "1.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "30.45",
+          "fp_gp": "1.27"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "15.60",
+          "fp_gp": "0.58"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "84.15",
+          "fp_gp": "2.80"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "115",
+      "name": "Michela Cava",
+      "gp": 84,
+      "fpts": "129.50",
+      "fp_gp": "1.54",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "34.60",
+          "fp_gp": "1.44"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "63.65",
+          "fp_gp": "2.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "31.25",
+          "fp_gp": "1.04"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "83",
+      "name": "Erin Ambrose",
+      "gp": 73,
+      "fpts": "127.05",
+      "fp_gp": "1.74",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "56.30",
+          "fp_gp": "2.35"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "46.15",
+          "fp_gp": "1.65"
+        },
+        {
+          "season": "2025-26",
+          "gp": 21,
+          "fpts": "24.60",
+          "fp_gp": "1.17"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "16",
+      "name": "Jamie Lee Rattray",
+      "gp": 84,
+      "fpts": "125.05",
+      "fp_gp": "1.49",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "44.55",
+          "fp_gp": "1.86"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "38.25",
+          "fp_gp": "1.28"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "42.25",
+          "fp_gp": "1.41"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "198",
+      "name": "Jenn Gardiner",
+      "gp": 60,
+      "fpts": "124.20",
+      "fp_gp": "2.07",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "59.05",
+          "fp_gp": "1.97"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "65.15",
+          "fp_gp": "2.17"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "4",
+      "name": "Shiann Darkangelo",
+      "gp": 83,
+      "fpts": "124.20",
+      "fp_gp": "1.50",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "10.20",
+          "fp_gp": "0.42"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "67.05",
+          "fp_gp": "2.31"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "46.95",
+          "fp_gp": "1.56"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "1",
+      "name": "Hannah Brandt",
+      "gp": 84,
+      "fpts": "124.05",
+      "fp_gp": "1.48",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "49.90",
+          "fp_gp": "2.08"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "50.80",
+          "fp_gp": "1.69"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "23.35",
+          "fp_gp": "0.78"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "98",
+      "name": "Maureen Murphy",
+      "gp": 73,
+      "fpts": "118.45",
+      "fp_gp": "1.62",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "57.70",
+          "fp_gp": "2.40"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "28.70",
+          "fp_gp": "1.02"
+        },
+        {
+          "season": "2025-26",
+          "gp": 21,
+          "fpts": "32.05",
+          "fp_gp": "1.53"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "169",
+      "name": "Claire Thompson",
+      "gp": 58,
+      "fpts": "114.45",
+      "fp_gp": "1.97",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "58.05",
+          "fp_gp": "1.94"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "56.40",
+          "fp_gp": "2.01"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "87",
+      "name": "Jaime Bourbonnais",
+      "gp": 82,
+      "fpts": "114.35",
+      "fp_gp": "1.39",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "46.20",
+          "fp_gp": "1.92"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "29.85",
+          "fp_gp": "1.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "38.30",
+          "fp_gp": "1.37"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "114",
+      "name": "Abby Boreen",
+      "gp": 69,
+      "fpts": "113.75",
+      "fp_gp": "1.65",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 9,
+          "fpts": "19.45",
+          "fp_gp": "2.16"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "50.00",
+          "fp_gp": "1.67"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "44.30",
+          "fp_gp": "1.48"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "210",
+      "name": "Julia Gosling",
+      "gp": 60,
+      "fpts": "112.30",
+      "fp_gp": "1.87",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "41.45",
+          "fp_gp": "1.38"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "70.85",
+          "fp_gp": "2.36"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "24",
+      "name": "Lee Stecklein",
+      "gp": 82,
+      "fpts": "109.55",
+      "fp_gp": "1.34",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "28.95",
+          "fp_gp": "1.21"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "34.70",
+          "fp_gp": "1.16"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "45.90",
+          "fp_gp": "1.64"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "224",
+      "name": "Danielle Serdachny",
+      "gp": 60,
+      "fpts": "104.05",
+      "fp_gp": "1.73",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "37.10",
+          "fp_gp": "1.24"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "66.95",
+          "fp_gp": "2.23"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "26",
+      "name": "Claire Dalton",
+      "gp": 80,
+      "fpts": "103.60",
+      "fp_gp": "1.30",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 20,
+          "fpts": "30.65",
+          "fp_gp": "1.53"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "33.85",
+          "fp_gp": "1.13"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "39.10",
+          "fp_gp": "1.30"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "17",
+      "name": "Theresa Schafzahl",
+      "gp": 80,
+      "fpts": "101.20",
+      "fp_gp": "1.26",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 20,
+          "fpts": "22.85",
+          "fp_gp": "1.14"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "23.95",
+          "fp_gp": "0.80"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "54.40",
+          "fp_gp": "1.81"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "35",
+      "name": "Jade Downie-Landry",
+      "gp": 77,
+      "fpts": "100.95",
+      "fp_gp": "1.31",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "53.60",
+          "fp_gp": "2.23"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "31.75",
+          "fp_gp": "1.06"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "15.60",
+          "fp_gp": "0.68"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "84",
+      "name": "Kati Tabin",
+      "gp": 82,
+      "fpts": "99.30",
+      "fp_gp": "1.21",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "25.90",
+          "fp_gp": "1.08"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "33.80",
+          "fp_gp": "1.21"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "39.60",
+          "fp_gp": "1.32"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "62",
+      "name": "Aneta Tejralová",
+      "gp": 76,
+      "fpts": "97.45",
+      "fp_gp": "1.28",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "28.80",
+          "fp_gp": "1.25"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "38.15",
+          "fp_gp": "1.27"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "30.50",
+          "fp_gp": "1.33"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "97",
+      "name": "Liz Schepers",
+      "gp": 75,
+      "fpts": "96.05",
+      "fp_gp": "1.28",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 19,
+          "fpts": "19.65",
+          "fp_gp": "1.03"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "29.00",
+          "fp_gp": "1.07"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "47.40",
+          "fp_gp": "1.63"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "49",
+      "name": "Lexie Adzija",
+      "gp": 83,
+      "fpts": "95.70",
+      "fp_gp": "1.15",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "38.00",
+          "fp_gp": "1.58"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "28.20",
+          "fp_gp": "0.97"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "29.50",
+          "fp_gp": "0.98"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "104",
+      "name": "Denisa Křížová",
+      "gp": 84,
+      "fpts": "95.00",
+      "fp_gp": "1.13",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "27.55",
+          "fp_gp": "1.15"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "39.20",
+          "fp_gp": "1.31"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "28.25",
+          "fp_gp": "0.94"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "71",
+      "name": "Jocelyne Larocque",
+      "gp": 83,
+      "fpts": "92.55",
+      "fp_gp": "1.12",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "33.60",
+          "fp_gp": "1.46"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "26.85",
+          "fp_gp": "0.90"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "32.10",
+          "fp_gp": "1.07"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "60",
+      "name": "Jincy Roese",
+      "gp": 79,
+      "fpts": "91.30",
+      "fp_gp": "1.16",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "21.60",
+          "fp_gp": "0.90"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "44.20",
+          "fp_gp": "1.64"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "25.50",
+          "fp_gp": "0.91"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "138",
+      "name": "Mikyla Grant-Mentis",
+      "gp": 68,
+      "fpts": "89.10",
+      "fp_gp": "1.31",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 13,
+          "fpts": "18.30",
+          "fp_gp": "1.41"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "34.65",
+          "fp_gp": "1.16"
+        },
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "36.15",
+          "fp_gp": "1.45"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "183",
+      "name": "Shay Maloney",
+      "gp": 60,
+      "fpts": "88.60",
+      "fp_gp": "1.48",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "47.80",
+          "fp_gp": "1.59"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "40.80",
+          "fp_gp": "1.36"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "40",
+      "name": "Paetyn Levis",
+      "gp": 83,
+      "fpts": "87.95",
+      "fp_gp": "1.06",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "15.85",
+          "fp_gp": "0.69"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "32.20",
+          "fp_gp": "1.07"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "39.90",
+          "fp_gp": "1.33"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "280",
+      "name": "Casey O'Brien",
+      "gp": 28,
+      "fpts": "86.40",
+      "fp_gp": "3.09",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "86.40",
+          "fp_gp": "3.09"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "196",
+      "name": "Cayla Barnes",
+      "gp": 60,
+      "fpts": "85.30",
+      "fp_gp": "1.42",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "47.00",
+          "fp_gp": "1.57"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "38.30",
+          "fp_gp": "1.28"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "223",
+      "name": "Ronja Savolainen",
+      "gp": 58,
+      "fpts": "85.00",
+      "fp_gp": "1.47",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "44.00",
+          "fp_gp": "1.57"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "41.00",
+          "fp_gp": "1.37"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "50",
+      "name": "Ashton Bell",
+      "gp": 81,
+      "fpts": "84.75",
+      "fp_gp": "1.05",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "27.30",
+          "fp_gp": "1.14"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "27.25",
+          "fp_gp": "1.01"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "30.20",
+          "fp_gp": "1.01"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "56",
+      "name": "Savannah Harmon",
+      "gp": 84,
+      "fpts": "83.55",
+      "fp_gp": "0.99",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "36.50",
+          "fp_gp": "1.52"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "22.70",
+          "fp_gp": "0.76"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "24.35",
+          "fp_gp": "0.81"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "203",
+      "name": "Anna Wilgren",
+      "gp": 60,
+      "fpts": "80.40",
+      "fp_gp": "1.34",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "39.30",
+          "fp_gp": "1.31"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "41.10",
+          "fp_gp": "1.37"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "167",
+      "name": "Sidney Morin",
+      "gp": 84,
+      "fpts": "79.25",
+      "fp_gp": "0.94",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "18.80",
+          "fp_gp": "0.78"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "27.55",
+          "fp_gp": "0.92"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "32.90",
+          "fp_gp": "1.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "157",
+      "name": "Catherine Dubois",
+      "gp": 69,
+      "fpts": "78.35",
+      "fp_gp": "1.14",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "21.35",
+          "fp_gp": "1.02"
+        },
+        {
+          "season": "2024-25",
+          "gp": 24,
+          "fpts": "34.30",
+          "fp_gp": "1.43"
+        },
+        {
+          "season": "2025-26",
+          "gp": 24,
+          "fpts": "22.70",
+          "fp_gp": "0.95"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "47",
+      "name": "Micah Zandee-Hart",
+      "gp": 78,
+      "fpts": "77.35",
+      "fp_gp": "0.99",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 19,
+          "fpts": "15.20",
+          "fp_gp": "0.80"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "41.00",
+          "fp_gp": "1.37"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "21.15",
+          "fp_gp": "0.73"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "68",
+      "name": "Kali Flanagan",
+      "gp": 84,
+      "fpts": "77.05",
+      "fp_gp": "0.92",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "21.00",
+          "fp_gp": "0.88"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "28.65",
+          "fp_gp": "0.96"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "27.40",
+          "fp_gp": "0.91"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "79",
+      "name": "Maggie Flaherty",
+      "gp": 76,
+      "fpts": "74.75",
+      "fp_gp": "0.98",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "22.65",
+          "fp_gp": "0.94"
+        },
+        {
+          "season": "2024-25",
+          "gp": 22,
+          "fpts": "11.40",
+          "fp_gp": "0.52"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "40.70",
+          "fp_gp": "1.36"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "51",
+      "name": "Amanda Boulier",
+      "gp": 78,
+      "fpts": "72.85",
+      "fp_gp": "0.93",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "28.55",
+          "fp_gp": "1.24"
+        },
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "25.80",
+          "fp_gp": "1.03"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "18.50",
+          "fp_gp": "0.62"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "181",
+      "name": "Hannah Bilka",
+      "gp": 30,
+      "fpts": "72.80",
+      "fp_gp": "2.43",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 16,
+          "fpts": "38.55",
+          "fp_gp": "2.41"
+        },
+        {
+          "season": "2025-26",
+          "gp": 14,
+          "fpts": "34.25",
+          "fp_gp": "2.45"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "9",
+      "name": "Taylor Girard",
+      "gp": 63,
+      "fpts": "71.40",
+      "fp_gp": "1.13",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "23.95",
+          "fp_gp": "1.04"
+        },
+        {
+          "season": "2024-25",
+          "gp": 23,
+          "fpts": "13.75",
+          "fp_gp": "0.60"
+        },
+        {
+          "season": "2025-26",
+          "gp": 17,
+          "fpts": "33.70",
+          "fp_gp": "1.98"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "246",
+      "name": "Haley Winn",
+      "gp": 30,
+      "fpts": "70.60",
+      "fp_gp": "2.35",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "70.60",
+          "fp_gp": "2.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "18",
+      "name": "Sophie Shirley",
+      "gp": 70,
+      "fpts": "69.40",
+      "fp_gp": "0.99",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 20,
+          "fpts": "19.60",
+          "fp_gp": "0.98"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "19.50",
+          "fp_gp": "0.70"
+        },
+        {
+          "season": "2025-26",
+          "gp": 22,
+          "fpts": "30.30",
+          "fp_gp": "1.38"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "220",
+      "name": "Mannon McMahon",
+      "gp": 60,
+      "fpts": "69.00",
+      "fp_gp": "1.15",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "33.75",
+          "fp_gp": "1.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "35.25",
+          "fp_gp": "1.18"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "192",
+      "name": "Brooke McQuigge",
+      "gp": 59,
+      "fpts": "68.50",
+      "fp_gp": "1.16",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "54.80",
+          "fp_gp": "1.89"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "13.70",
+          "fp_gp": "0.46"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "209",
+      "name": "Izzy Daniel",
+      "gp": 58,
+      "fpts": "68.10",
+      "fp_gp": "1.17",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "27.05",
+          "fp_gp": "0.90"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "41.05",
+          "fp_gp": "1.47"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "201",
+      "name": "Lina Ljungblom",
+      "gp": 50,
+      "fpts": "68.00",
+      "fp_gp": "1.36",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "31.95",
+          "fp_gp": "1.10"
+        },
+        {
+          "season": "2025-26",
+          "gp": 21,
+          "fpts": "36.05",
+          "fp_gp": "1.72"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "101",
+      "name": "Alexa Vasko",
+      "gp": 78,
+      "fpts": "66.45",
+      "fp_gp": "0.85",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "16.85",
+          "fp_gp": "0.70"
+        },
+        {
+          "season": "2024-25",
+          "gp": 24,
+          "fpts": "23.50",
+          "fp_gp": "0.98"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "26.10",
+          "fp_gp": "0.87"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "149",
+      "name": "Jill Saulnier",
+      "gp": 67,
+      "fpts": "63.85",
+      "fp_gp": "0.95",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 18,
+          "fpts": "11.20",
+          "fp_gp": "0.62"
+        },
+        {
+          "season": "2024-25",
+          "gp": 24,
+          "fpts": "22.20",
+          "fp_gp": "0.92"
+        },
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "30.45",
+          "fp_gp": "1.22"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "195",
+      "name": "Dominique Petrie",
+      "gp": 28,
+      "fpts": "63.60",
+      "fp_gp": "2.27",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 18,
+          "fpts": "40.65",
+          "fp_gp": "2.26"
+        },
+        {
+          "season": "2025-26",
+          "gp": 10,
+          "fpts": "22.95",
+          "fp_gp": "2.30"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "39",
+      "name": "Alexandra Labelle",
+      "gp": 71,
+      "fpts": "62.90",
+      "fp_gp": "0.89",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "15.25",
+          "fp_gp": "0.64"
+        },
+        {
+          "season": "2024-25",
+          "gp": 19,
+          "fpts": "25.50",
+          "fp_gp": "1.34"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "22.15",
+          "fp_gp": "0.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "229",
+      "name": "Maja Nylén Persson",
+      "gp": 53,
+      "fpts": "62.40",
+      "fp_gp": "1.18",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 23,
+          "fpts": "21.90",
+          "fp_gp": "0.95"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "40.50",
+          "fp_gp": "1.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "142",
+      "name": "Natalie Snodgrass",
+      "gp": 73,
+      "fpts": "62.40",
+      "fp_gp": "0.85",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "28.60",
+          "fp_gp": "1.24"
+        },
+        {
+          "season": "2024-25",
+          "gp": 21,
+          "fpts": "10.90",
+          "fp_gp": "0.52"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "22.90",
+          "fp_gp": "0.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "5",
+      "name": "Jessica DiGirolamo",
+      "gp": 83,
+      "fpts": "62.05",
+      "fp_gp": "0.75",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "17.85",
+          "fp_gp": "0.74"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "25.60",
+          "fp_gp": "0.85"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "18.60",
+          "fp_gp": "0.64"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "66",
+      "name": "Maggie Connors",
+      "gp": 84,
+      "fpts": "62.00",
+      "fp_gp": "0.74",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "22.50",
+          "fp_gp": "0.94"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "13.30",
+          "fp_gp": "0.44"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "26.20",
+          "fp_gp": "0.87"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "2",
+      "name": "Emily Brown",
+      "gp": 83,
+      "fpts": "61.30",
+      "fp_gp": "0.74",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "16.70",
+          "fp_gp": "0.70"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "22.90",
+          "fp_gp": "0.79"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "21.70",
+          "fp_gp": "0.72"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "245",
+      "name": "Kristýna Kaltounková",
+      "gp": 21,
+      "fpts": "59.55",
+      "fp_gp": "2.84",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 21,
+          "fpts": "59.55",
+          "fp_gp": "2.84"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "253",
+      "name": "Nicole Gosling",
+      "gp": 30,
+      "fpts": "58.90",
+      "fp_gp": "1.96",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "58.90",
+          "fp_gp": "1.96"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "86",
+      "name": "Emma Woods",
+      "gp": 84,
+      "fpts": "58.35",
+      "fp_gp": "0.69",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "22.95",
+          "fp_gp": "0.96"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "23.80",
+          "fp_gp": "0.79"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "11.60",
+          "fp_gp": "0.39"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "236",
+      "name": "Kendall Cooper",
+      "gp": 30,
+      "fpts": "58.10",
+      "fp_gp": "1.94",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "58.10",
+          "fp_gp": "1.94"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "38",
+      "name": "Brooke Hobson",
+      "gp": 76,
+      "fpts": "57.80",
+      "fp_gp": "0.76",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "20.50",
+          "fp_gp": "0.85"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "17.30",
+          "fp_gp": "0.60"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "20.00",
+          "fp_gp": "0.87"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "99",
+      "name": "Mariah Keopple",
+      "gp": 82,
+      "fpts": "56.70",
+      "fp_gp": "0.69",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "14.70",
+          "fp_gp": "0.61"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "25.40",
+          "fp_gp": "0.88"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "16.60",
+          "fp_gp": "0.57"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "74",
+      "name": "Allie Munroe",
+      "gp": 73,
+      "fpts": "56.65",
+      "fp_gp": "0.78",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "24.50",
+          "fp_gp": "1.02"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "20.20",
+          "fp_gp": "0.67"
+        },
+        {
+          "season": "2025-26",
+          "gp": 19,
+          "fpts": "11.95",
+          "fp_gp": "0.63"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "188",
+      "name": "Mae Batherson",
+      "gp": 55,
+      "fpts": "56.30",
+      "fp_gp": "1.02",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "10.85",
+          "fp_gp": "0.43"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "45.45",
+          "fp_gp": "1.52"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "230",
+      "name": "Allyson Simpson",
+      "gp": 60,
+      "fpts": "55.75",
+      "fp_gp": "0.93",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "27.15",
+          "fp_gp": "0.90"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "28.60",
+          "fp_gp": "0.95"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "227",
+      "name": "Gabby Rosenthal",
+      "gp": 55,
+      "fpts": "55.40",
+      "fp_gp": "1.01",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "29.10",
+          "fp_gp": "1.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 26,
+          "fpts": "26.30",
+          "fp_gp": "1.01"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "8",
+      "name": "Loren Gabel",
+      "gp": 53,
+      "fpts": "55.10",
+      "fp_gp": "1.04",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 17,
+          "fpts": "28.50",
+          "fp_gp": "1.68"
+        },
+        {
+          "season": "2024-25",
+          "gp": 20,
+          "fpts": "14.90",
+          "fp_gp": "0.74"
+        },
+        {
+          "season": "2025-26",
+          "gp": 16,
+          "fpts": "11.70",
+          "fp_gp": "0.73"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "191",
+      "name": "Katy Knoll",
+      "gp": 51,
+      "fpts": "55.00",
+      "fp_gp": "1.08",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 21,
+          "fpts": "11.65",
+          "fp_gp": "0.55"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "43.35",
+          "fp_gp": "1.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "129",
+      "name": "Mellissa Channell-Watkins",
+      "gp": 83,
+      "fpts": "54.10",
+      "fp_gp": "0.65",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "8.70",
+          "fp_gp": "0.36"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "27.10",
+          "fp_gp": "0.93"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "18.30",
+          "fp_gp": "0.61"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "206",
+      "name": "Elle Hartje",
+      "gp": 56,
+      "fpts": "53.75",
+      "fp_gp": "0.96",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "25.25",
+          "fp_gp": "0.94"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "28.50",
+          "fp_gp": "0.98"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "241",
+      "name": "Sarah Wozniewicz",
+      "gp": 30,
+      "fpts": "51.65",
+      "fp_gp": "1.72",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "51.65",
+          "fp_gp": "1.72"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "240",
+      "name": "Fanuza Kadirova",
+      "gp": 28,
+      "fpts": "49.75",
+      "fp_gp": "1.78",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "49.75",
+          "fp_gp": "1.78"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "259",
+      "name": "Abby Newhook",
+      "gp": 29,
+      "fpts": "49.25",
+      "fp_gp": "1.70",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "49.25",
+          "fp_gp": "1.70"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "247",
+      "name": "Abby Hustler",
+      "gp": 30,
+      "fpts": "49.20",
+      "fp_gp": "1.64",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "49.20",
+          "fp_gp": "1.64"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "190",
+      "name": "Klára Hymlárová",
+      "gp": 58,
+      "fpts": "48.70",
+      "fp_gp": "0.84",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "12.90",
+          "fp_gp": "0.44"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "35.80",
+          "fp_gp": "1.23"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "102",
+      "name": "Claire Butorac",
+      "gp": 80,
+      "fpts": "47.25",
+      "fp_gp": "0.59",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "11.30",
+          "fp_gp": "0.54"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "21.25",
+          "fp_gp": "0.73"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "14.70",
+          "fp_gp": "0.49"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "285",
+      "name": "Maddi Wheeler",
+      "gp": 29,
+      "fpts": "43.75",
+      "fp_gp": "1.51",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "43.75",
+          "fp_gp": "1.51"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "33",
+      "name": "Chloé Aurard-Bushee",
+      "gp": 48,
+      "fpts": "43.30",
+      "fp_gp": "0.90",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "25.50",
+          "fp_gp": "1.21"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "17.80",
+          "fp_gp": "0.66"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "125",
+      "name": "Victoria Bach",
+      "gp": 46,
+      "fpts": "42.30",
+      "fp_gp": "0.92",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 16,
+          "fpts": "19.40",
+          "fp_gp": "1.21"
+        },
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "22.90",
+          "fp_gp": "0.76"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "37",
+      "name": "Élizabeth Giguère",
+      "gp": 66,
+      "fpts": "42.15",
+      "fp_gp": "0.64",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "18.85",
+          "fp_gp": "0.79"
+        },
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "18.85",
+          "fp_gp": "0.65"
+        },
+        {
+          "season": "2025-26",
+          "gp": 13,
+          "fpts": "4.45",
+          "fp_gp": "0.34"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "221",
+      "name": "Anna Meixner",
+      "gp": 58,
+      "fpts": "41.95",
+      "fp_gp": "0.72",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "15.25",
+          "fp_gp": "0.54"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "26.70",
+          "fp_gp": "0.89"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "90",
+      "name": "Natalie Buchbinder",
+      "gp": 68,
+      "fpts": "41.75",
+      "fp_gp": "0.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "21.30",
+          "fp_gp": "0.89"
+        },
+        {
+          "season": "2024-25",
+          "gp": 19,
+          "fpts": "11.45",
+          "fp_gp": "0.60"
+        },
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "9.00",
+          "fp_gp": "0.36"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "249",
+      "name": "Anne Cherkowski",
+      "gp": 28,
+      "fpts": "40.30",
+      "fp_gp": "1.44",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "40.30",
+          "fp_gp": "1.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "219",
+      "name": "Stephanie Markowski",
+      "gp": 58,
+      "fpts": "39.00",
+      "fp_gp": "0.67",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "19.60",
+          "fp_gp": "0.70"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "19.40",
+          "fp_gp": "0.65"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "242",
+      "name": "Rory Guilday",
+      "gp": 30,
+      "fpts": "38.10",
+      "fp_gp": "1.27",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "38.10",
+          "fp_gp": "1.27"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "274",
+      "name": "Natálie Mlýnková",
+      "gp": 30,
+      "fpts": "37.55",
+      "fp_gp": "1.25",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "37.55",
+          "fp_gp": "1.25"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "199",
+      "name": "Dara Greig",
+      "gp": 58,
+      "fpts": "37.10",
+      "fp_gp": "0.64",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 29,
+          "fpts": "12.85",
+          "fp_gp": "0.44"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "24.25",
+          "fp_gp": "0.84"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "286",
+      "name": "Peyton Hemp",
+      "gp": 30,
+      "fpts": "36.50",
+      "fp_gp": "1.22",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "36.50",
+          "fp_gp": "1.22"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "208",
+      "name": "Megan Carter",
+      "gp": 49,
+      "fpts": "34.70",
+      "fp_gp": "0.71",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 19,
+          "fpts": "10.10",
+          "fp_gp": "0.53"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "24.60",
+          "fp_gp": "0.82"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "128",
+      "name": "Kaitlin Willoughby",
+      "gp": 79,
+      "fpts": "34.15",
+      "fp_gp": "0.43",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "5.25",
+          "fp_gp": "0.23"
+        },
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "4.50",
+          "fp_gp": "0.17"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "24.40",
+          "fp_gp": "0.84"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "180",
+      "name": "Sydney Bard",
+      "gp": 57,
+      "fpts": "34.05",
+      "fp_gp": "0.60",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 27,
+          "fpts": "16.35",
+          "fp_gp": "0.61"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "17.70",
+          "fp_gp": "0.59"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "252",
+      "name": "Michelle Karvinen",
+      "gp": 30,
+      "fpts": "33.95",
+      "fp_gp": "1.13",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "33.95",
+          "fp_gp": "1.13"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "272",
+      "name": "Skylar Irving",
+      "gp": 27,
+      "fpts": "33.90",
+      "fp_gp": "1.26",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "33.90",
+          "fp_gp": "1.26"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "156",
+      "name": "Gabrielle David",
+      "gp": 35,
+      "fpts": "33.75",
+      "fp_gp": "0.96",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "24.05",
+          "fp_gp": "1.05"
+        },
+        {
+          "season": "2024-25",
+          "gp": 3,
+          "fpts": "0.60",
+          "fp_gp": "0.20"
+        },
+        {
+          "season": "2025-26",
+          "gp": 9,
+          "fpts": "9.10",
+          "fp_gp": "1.01"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "185",
+      "name": "Daniela Pejšová",
+      "gp": 55,
+      "fpts": "32.30",
+      "fp_gp": "0.59",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "13.60",
+          "fp_gp": "0.49"
+        },
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "18.70",
+          "fp_gp": "0.69"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "52",
+      "name": "Zoe Boyd",
+      "gp": 51,
+      "fpts": "31.80",
+      "fp_gp": "0.62",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 16,
+          "fpts": "10.30",
+          "fp_gp": "0.64"
+        },
+        {
+          "season": "2024-25",
+          "gp": 23,
+          "fpts": "12.50",
+          "fp_gp": "0.54"
+        },
+        {
+          "season": "2025-26",
+          "gp": 12,
+          "fpts": "9.00",
+          "fp_gp": "0.75"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "118",
+      "name": "Emma Greco",
+      "gp": 80,
+      "fpts": "31.55",
+      "fp_gp": "0.39",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "6.40",
+          "fp_gp": "0.29"
+        },
+        {
+          "season": "2024-25",
+          "gp": 28,
+          "fpts": "15.35",
+          "fp_gp": "0.55"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "9.80",
+          "fp_gp": "0.33"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "243",
+      "name": "Ella Huber",
+      "gp": 30,
+      "fpts": "30.50",
+      "fp_gp": "1.02",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "30.50",
+          "fp_gp": "1.02"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "110",
+      "name": "Amanda Pelkey",
+      "gp": 48,
+      "fpts": "30.30",
+      "fp_gp": "0.63",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "9.85",
+          "fp_gp": "0.43"
+        },
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "20.45",
+          "fp_gp": "0.82"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "69",
+      "name": "Brittany Howard",
+      "gp": 23,
+      "fpts": "28.40",
+      "fp_gp": "1.23",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "28.40",
+          "fp_gp": "1.23"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "45",
+      "name": "Kayla Vespa",
+      "gp": 63,
+      "fpts": "28.00",
+      "fp_gp": "0.44",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "13.40",
+          "fp_gp": "0.58"
+        },
+        {
+          "season": "2024-25",
+          "gp": 10,
+          "fpts": "1.45",
+          "fp_gp": "0.14"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "13.15",
+          "fp_gp": "0.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "116",
+      "name": "Clair DeGeorge",
+      "gp": 75,
+      "fpts": "27.55",
+      "fp_gp": "0.37",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "7.40",
+          "fp_gp": "0.32"
+        },
+        {
+          "season": "2024-25",
+          "gp": 26,
+          "fpts": "11.75",
+          "fp_gp": "0.45"
+        },
+        {
+          "season": "2025-26",
+          "gp": 26,
+          "fpts": "8.40",
+          "fp_gp": "0.32"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "200",
+      "name": "Anna Kjellbin",
+      "gp": 55,
+      "fpts": "26.80",
+      "fp_gp": "0.49",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 25,
+          "fpts": "10.10",
+          "fp_gp": "0.40"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "16.70",
+          "fp_gp": "0.56"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "91",
+      "name": "Brooke Bryant",
+      "gp": 71,
+      "fpts": "26.05",
+      "fp_gp": "0.37",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "6.15",
+          "fp_gp": "0.28"
+        },
+        {
+          "season": "2024-25",
+          "gp": 26,
+          "fpts": "13.70",
+          "fp_gp": "0.53"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "6.20",
+          "fp_gp": "0.27"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "81",
+      "name": "Sarah Bujold",
+      "gp": 21,
+      "fpts": "25.25",
+      "fp_gp": "1.20",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "25.25",
+          "fp_gp": "1.20"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "27",
+      "name": "Jillian Dempsey",
+      "gp": 33,
+      "fpts": "25.15",
+      "fp_gp": "0.76",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "17.50",
+          "fp_gp": "0.73"
+        },
+        {
+          "season": "2024-25",
+          "gp": 9,
+          "fpts": "7.65",
+          "fp_gp": "0.85"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "277",
+      "name": "Anna Bargman",
+      "gp": 29,
+      "fpts": "23.40",
+      "fp_gp": "0.81",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "23.40",
+          "fp_gp": "0.81"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "207",
+      "name": "Lauren Bernard",
+      "gp": 53,
+      "fpts": "22.15",
+      "fp_gp": "0.42",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 23,
+          "fpts": "10.00",
+          "fp_gp": "0.43"
+        },
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "12.15",
+          "fp_gp": "0.40"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "182",
+      "name": "Hadley Hartmetz",
+      "gp": 29,
+      "fpts": "21.40",
+      "fp_gp": "0.74",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 2,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        },
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "21.40",
+          "fp_gp": "0.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "212",
+      "name": "Laura Kluge",
+      "gp": 38,
+      "fpts": "20.60",
+      "fp_gp": "0.54",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 13,
+          "fpts": "7.55",
+          "fp_gp": "0.58"
+        },
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "13.05",
+          "fp_gp": "0.52"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "256",
+      "name": "Olivia Mobley",
+      "gp": 10,
+      "fpts": "19.70",
+      "fp_gp": "1.97",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 10,
+          "fpts": "19.70",
+          "fp_gp": "1.97"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "231",
+      "name": "Noora Tulus",
+      "gp": 30,
+      "fpts": "19.20",
+      "fp_gp": "0.64",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "19.20",
+          "fp_gp": "0.64"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "244",
+      "name": "Emma Gentry",
+      "gp": 27,
+      "fpts": "19.05",
+      "fp_gp": "0.71",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "19.05",
+          "fp_gp": "0.71"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "232",
+      "name": "Rylind MacKinnon",
+      "gp": 50,
+      "fpts": "18.90",
+      "fp_gp": "0.38",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 22,
+          "fpts": "9.70",
+          "fp_gp": "0.44"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "9.20",
+          "fp_gp": "0.33"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "158",
+      "name": "Sarah Lefort",
+      "gp": 24,
+      "fpts": "18.85",
+      "fp_gp": "0.79",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "18.85",
+          "fp_gp": "0.79"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "313",
+      "name": "Sara Hjalmarsson",
+      "gp": 30,
+      "fpts": "18.50",
+      "fp_gp": "0.62",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "18.50",
+          "fp_gp": "0.62"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "204",
+      "name": "Emmy Fecteau",
+      "gp": 58,
+      "fpts": "18.40",
+      "fp_gp": "0.32",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 30,
+          "fpts": "9.55",
+          "fp_gp": "0.32"
+        },
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "8.85",
+          "fp_gp": "0.32"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "239",
+      "name": "Anna Shokhina",
+      "gp": 28,
+      "fpts": "18.00",
+      "fp_gp": "0.64",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "18.00",
+          "fp_gp": "0.64"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "80",
+      "name": "Ann-Sophie Bettez",
+      "gp": 15,
+      "fpts": "17.85",
+      "fp_gp": "1.19",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 15,
+          "fpts": "17.85",
+          "fp_gp": "1.19"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "109",
+      "name": "Gigi Marvin",
+      "gp": 24,
+      "fpts": "17.45",
+      "fp_gp": "0.73",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "17.45",
+          "fp_gp": "0.73"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "168",
+      "name": "Mélodie Daoust",
+      "gp": 6,
+      "fpts": "17.10",
+      "fp_gp": "2.85",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 6,
+          "fpts": "17.10",
+          "fp_gp": "2.85"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "316",
+      "name": "Clara Van Wieren",
+      "gp": 29,
+      "fpts": "17.00",
+      "fp_gp": "0.59",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "17.00",
+          "fp_gp": "0.59"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "317",
+      "name": "Kiara Zanon",
+      "gp": 30,
+      "fpts": "16.60",
+      "fp_gp": "0.55",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 30,
+          "fpts": "16.60",
+          "fp_gp": "0.55"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "162",
+      "name": "Madison Bizal",
+      "gp": 37,
+      "fpts": "16.10",
+      "fp_gp": "0.44",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "9.80",
+          "fp_gp": "0.47"
+        },
+        {
+          "season": "2025-26",
+          "gp": 16,
+          "fpts": "6.30",
+          "fp_gp": "0.39"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "294",
+      "name": "Lyndie Lobdell",
+      "gp": 25,
+      "fpts": "15.55",
+      "fp_gp": "0.62",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "15.55",
+          "fp_gp": "0.62"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "55",
+      "name": "Becca Gilmore",
+      "gp": 22,
+      "fpts": "15.35",
+      "fp_gp": "0.70",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "15.35",
+          "fp_gp": "0.70"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "147",
+      "name": "Savannah Norcross",
+      "gp": 43,
+      "fpts": "14.85",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 20,
+          "fpts": "5.05",
+          "fp_gp": "0.25"
+        },
+        {
+          "season": "2025-26",
+          "gp": 23,
+          "fpts": "9.80",
+          "fp_gp": "0.43"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "255",
+      "name": "Riley Brengman",
+      "gp": 28,
+      "fpts": "14.70",
+      "fp_gp": "0.52",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "14.70",
+          "fp_gp": "0.52"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "103",
+      "name": "Sophia Kunin",
+      "gp": 24,
+      "fpts": "14.65",
+      "fp_gp": "0.61",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "14.65",
+          "fp_gp": "0.61"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "248",
+      "name": "Anna Segedi",
+      "gp": 27,
+      "fpts": "14.60",
+      "fp_gp": "0.54",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "14.60",
+          "fp_gp": "0.54"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "7",
+      "name": "Kaleigh Fratkin",
+      "gp": 24,
+      "fpts": "14.50",
+      "fp_gp": "0.60",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "14.50",
+          "fp_gp": "0.60"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "289",
+      "name": "Kathryn Reilly",
+      "gp": 25,
+      "fpts": "14.50",
+      "fp_gp": "0.58",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 25,
+          "fpts": "14.50",
+          "fp_gp": "0.58"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "126",
+      "name": "Samantha Cogan",
+      "gp": 29,
+      "fpts": "14.05",
+      "fp_gp": "0.48",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "12.95",
+          "fp_gp": "0.56"
+        },
+        {
+          "season": "2025-26",
+          "gp": 6,
+          "fpts": "1.10",
+          "fp_gp": "0.18"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "217",
+      "name": "Taylor House",
+      "gp": 44,
+      "fpts": "13.15",
+      "fp_gp": "0.30",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 15,
+          "fpts": "7.70",
+          "fp_gp": "0.51"
+        },
+        {
+          "season": "2025-26",
+          "gp": 29,
+          "fpts": "5.45",
+          "fp_gp": "0.19"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "269",
+      "name": "Vanessa Upson",
+      "gp": 28,
+      "fpts": "12.10",
+      "fp_gp": "0.43",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "12.10",
+          "fp_gp": "0.43"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "263",
+      "name": "Peyton Anderson",
+      "gp": 28,
+      "fpts": "12.00",
+      "fp_gp": "0.43",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 28,
+          "fpts": "12.00",
+          "fp_gp": "0.43"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "159",
+      "name": "Leah Lum",
+      "gp": 23,
+      "fpts": "11.90",
+      "fp_gp": "0.52",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "11.90",
+          "fp_gp": "0.52"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "105",
+      "name": "Brittyn Fleming",
+      "gp": 23,
+      "fpts": "11.80",
+      "fp_gp": "0.51",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "11.80",
+          "fp_gp": "0.51"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "305",
+      "name": "Nina Jobst-Smith",
+      "gp": 20,
+      "fpts": "11.40",
+      "fp_gp": "0.57",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 20,
+          "fpts": "11.40",
+          "fp_gp": "0.57"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "163",
+      "name": "Catherine Daoust",
+      "gp": 25,
+      "fpts": "11.30",
+      "fp_gp": "0.45",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "11.10",
+          "fp_gp": "0.46"
+        },
+        {
+          "season": "2024-25",
+          "gp": 1,
+          "fpts": "0.20",
+          "fp_gp": "0.20"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "10",
+      "name": "Jess Healey",
+      "gp": 22,
+      "fpts": "10.70",
+      "fp_gp": "0.49",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "10.70",
+          "fp_gp": "0.49"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "283",
+      "name": "Nicole Vallario",
+      "gp": 11,
+      "fpts": "10.55",
+      "fp_gp": "0.96",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 11,
+          "fpts": "10.55",
+          "fp_gp": "0.96"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "141",
+      "name": "Akane Shiga",
+      "gp": 24,
+      "fpts": "10.45",
+      "fp_gp": "0.44",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "10.45",
+          "fp_gp": "0.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "264",
+      "name": "Brooke Becker",
+      "gp": 27,
+      "fpts": "9.50",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "9.50",
+          "fp_gp": "0.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "14",
+      "name": "Nicole Kosta",
+      "gp": 10,
+      "fpts": "9.30",
+      "fp_gp": "0.93",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 10,
+          "fpts": "9.30",
+          "fp_gp": "0.93"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "291",
+      "name": "Lily Delianedis",
+      "gp": 24,
+      "fpts": "8.40",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 24,
+          "fpts": "8.40",
+          "fp_gp": "0.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "310",
+      "name": "Madison Samoskevich",
+      "gp": 27,
+      "fpts": "7.85",
+      "fp_gp": "0.29",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 27,
+          "fpts": "7.85",
+          "fp_gp": "0.29"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "29",
+      "name": "Kennedy Marchment",
+      "gp": 9,
+      "fpts": "7.55",
+      "fp_gp": "0.84",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 9,
+          "fpts": "7.55",
+          "fp_gp": "0.84"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "148",
+      "name": "Madison Packer",
+      "gp": 23,
+      "fpts": "7.55",
+      "fp_gp": "0.33",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 23,
+          "fpts": "7.55",
+          "fp_gp": "0.33"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "117",
+      "name": "Abby Cook",
+      "gp": 18,
+      "fpts": "7.20",
+      "fp_gp": "0.40",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 18,
+          "fpts": "7.20",
+          "fp_gp": "0.40"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "137",
+      "name": "Fanni Garát-Gasparics",
+      "gp": 15,
+      "fpts": "6.80",
+      "fp_gp": "0.45",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 15,
+          "fpts": "6.80",
+          "fp_gp": "0.45"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "133",
+      "name": "Lauriane Rougeau",
+      "gp": 24,
+      "fpts": "6.40",
+      "fp_gp": "0.27",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 24,
+          "fpts": "6.40",
+          "fp_gp": "0.27"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "175",
+      "name": "Kelly Babstock",
+      "gp": 13,
+      "fpts": "6.00",
+      "fp_gp": "0.46",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 4,
+          "fpts": "2.50",
+          "fp_gp": "0.62"
+        },
+        {
+          "season": "2024-25",
+          "gp": 9,
+          "fpts": "3.50",
+          "fp_gp": "0.39"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "301",
+      "name": "Katie Chan",
+      "gp": 17,
+      "fpts": "5.95",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 17,
+          "fpts": "5.95",
+          "fp_gp": "0.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "108",
+      "name": "Samantha Isbell",
+      "gp": 22,
+      "fpts": "5.70",
+      "fp_gp": "0.26",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 10,
+          "fpts": "1.00",
+          "fp_gp": "0.10"
+        },
+        {
+          "season": "2024-25",
+          "gp": 4,
+          "fpts": "0.50",
+          "fp_gp": "0.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 8,
+          "fpts": "4.20",
+          "fp_gp": "0.52"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "254",
+      "name": "Mia Biotti",
+      "gp": 13,
+      "fpts": "5.65",
+      "fp_gp": "0.43",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 13,
+          "fpts": "5.65",
+          "fp_gp": "0.43"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "306",
+      "name": "Darcie Lappan",
+      "gp": 12,
+      "fpts": "5.60",
+      "fp_gp": "0.47",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 12,
+          "fpts": "5.60",
+          "fp_gp": "0.47"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "194",
+      "name": "Kaitlyn O'Donohoe",
+      "gp": 18,
+      "fpts": "5.50",
+      "fp_gp": "0.31",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 9,
+          "fpts": "1.50",
+          "fp_gp": "0.17"
+        },
+        {
+          "season": "2025-26",
+          "gp": 9,
+          "fpts": "4.00",
+          "fp_gp": "0.44"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "150",
+      "name": "Taylor Baker",
+      "gp": 25,
+      "fpts": "5.50",
+      "fp_gp": "0.22",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 22,
+          "fpts": "5.00",
+          "fp_gp": "0.23"
+        },
+        {
+          "season": "2024-25",
+          "gp": 3,
+          "fpts": "0.50",
+          "fp_gp": "0.17"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "131",
+      "name": "Olivia Knowles",
+      "gp": 35,
+      "fpts": "5.40",
+      "fp_gp": "0.15",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 20,
+          "fpts": "4.30",
+          "fp_gp": "0.22"
+        },
+        {
+          "season": "2024-25",
+          "gp": 12,
+          "fpts": "0.90",
+          "fp_gp": "0.08"
+        },
+        {
+          "season": "2025-26",
+          "gp": 3,
+          "fpts": "0.20",
+          "fp_gp": "0.07"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "132",
+      "name": "Jessica Kondas",
+      "gp": 15,
+      "fpts": "5.10",
+      "fp_gp": "0.34",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 1,
+          "fpts": "3.30",
+          "fp_gp": "3.30"
+        },
+        {
+          "season": "2025-26",
+          "gp": 14,
+          "fpts": "1.80",
+          "fp_gp": "0.13"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "54",
+      "name": "Kristin Della Rovere",
+      "gp": 14,
+      "fpts": "4.95",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 9,
+          "fpts": "4.60",
+          "fp_gp": "0.51"
+        },
+        {
+          "season": "2025-26",
+          "gp": 5,
+          "fpts": "0.35",
+          "fp_gp": "0.07"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "293",
+      "name": "Sydney Langseth",
+      "gp": 16,
+      "fpts": "4.80",
+      "fp_gp": "0.30",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 16,
+          "fpts": "4.80",
+          "fp_gp": "0.30"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "214",
+      "name": "Noemi Neubauerová",
+      "gp": 23,
+      "fpts": "4.60",
+      "fp_gp": "0.20",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 20,
+          "fpts": "4.60",
+          "fp_gp": "0.23"
+        },
+        {
+          "season": "2025-26",
+          "gp": 3,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "46",
+      "name": "Olivia Zafuto",
+      "gp": 19,
+      "fpts": "4.40",
+      "fp_gp": "0.23",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 13,
+          "fpts": "3.70",
+          "fp_gp": "0.28"
+        },
+        {
+          "season": "2025-26",
+          "gp": 6,
+          "fpts": "0.70",
+          "fp_gp": "0.12"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "237",
+      "name": "Jenna Buglioni",
+      "gp": 18,
+      "fpts": "4.35",
+      "fp_gp": "0.24",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 18,
+          "fpts": "4.35",
+          "fp_gp": "0.24"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "315",
+      "name": "Lauren Messier",
+      "gp": 5,
+      "fpts": "4.15",
+      "fp_gp": "0.83",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 5,
+          "fpts": "4.15",
+          "fp_gp": "0.83"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "292",
+      "name": "Jada Habisch",
+      "gp": 11,
+      "fpts": "3.90",
+      "fp_gp": "0.35",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 11,
+          "fpts": "3.90",
+          "fp_gp": "0.35"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "273",
+      "name": "Maya Labad",
+      "gp": 6,
+      "fpts": "3.70",
+      "fp_gp": "0.62",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 6,
+          "fpts": "3.70",
+          "fp_gp": "0.62"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "164",
+      "name": "Brigitte Laganière",
+      "gp": 17,
+      "fpts": "3.40",
+      "fp_gp": "0.20",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 17,
+          "fpts": "3.40",
+          "fp_gp": "0.20"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "295",
+      "name": "Marah Wagner",
+      "gp": 20,
+      "fpts": "3.10",
+      "fp_gp": "0.16",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 20,
+          "fpts": "3.10",
+          "fp_gp": "0.16"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "92",
+      "name": "Sydney Brodt",
+      "gp": 7,
+      "fpts": "2.65",
+      "fp_gp": "0.38",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 7,
+          "fpts": "2.65",
+          "fp_gp": "0.38"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "271",
+      "name": "Tamara Giaquinto",
+      "gp": 12,
+      "fpts": "2.60",
+      "fp_gp": "0.22",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 12,
+          "fpts": "2.60",
+          "fp_gp": "0.22"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "152",
+      "name": "Johanna Fällman",
+      "gp": 21,
+      "fpts": "2.50",
+      "fp_gp": "0.12",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 21,
+          "fpts": "2.50",
+          "fp_gp": "0.12"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "160",
+      "name": "Alexandra Poznikoff",
+      "gp": 8,
+      "fpts": "2.10",
+      "fp_gp": "0.26",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 8,
+          "fpts": "2.10",
+          "fp_gp": "0.26"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "251",
+      "name": "Dayle Ross",
+      "gp": 16,
+      "fpts": "2.10",
+      "fp_gp": "0.13",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 16,
+          "fpts": "2.10",
+          "fp_gp": "0.13"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "3",
+      "name": "Emma Buckles",
+      "gp": 15,
+      "fpts": "1.70",
+      "fp_gp": "0.11",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 15,
+          "fpts": "1.70",
+          "fp_gp": "0.11"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "82",
+      "name": "Dominika Lásková",
+      "gp": 12,
+      "fpts": "1.65",
+      "fp_gp": "0.14",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 7,
+          "fpts": "0.65",
+          "fp_gp": "0.09"
+        },
+        {
+          "season": "2024-25",
+          "gp": 5,
+          "fpts": "1.00",
+          "fp_gp": "0.20"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "111",
+      "name": "Taylor Wenczkowski",
+      "gp": 16,
+      "fpts": "1.65",
+      "fp_gp": "0.10",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 16,
+          "fpts": "1.65",
+          "fp_gp": "0.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "136",
+      "name": "Rosalie Demers",
+      "gp": 13,
+      "fpts": "1.60",
+      "fp_gp": "0.12",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 13,
+          "fpts": "1.60",
+          "fp_gp": "0.12"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "165",
+      "name": "Maude Poulin-Labelle",
+      "gp": 11,
+      "fpts": "1.20",
+      "fp_gp": "0.11",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 11,
+          "fpts": "1.20",
+          "fp_gp": "0.11"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "320",
+      "name": "Nadia Mattivi",
+      "gp": 6,
+      "fpts": "1.00",
+      "fp_gp": "0.17",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 6,
+          "fpts": "1.00",
+          "fp_gp": "0.17"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "107",
+      "name": "Sammy Davis",
+      "gp": 9,
+      "fpts": "0.85",
+      "fp_gp": "0.09",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 9,
+          "fpts": "0.85",
+          "fp_gp": "0.09"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "213",
+      "name": "Anneke Rankila",
+      "gp": 3,
+      "fpts": "0.60",
+      "fp_gp": "0.20",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 3,
+          "fpts": "0.60",
+          "fp_gp": "0.20"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "311",
+      "name": "Hanna Baskin",
+      "gp": 11,
+      "fpts": "0.60",
+      "fp_gp": "0.05",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 11,
+          "fpts": "0.60",
+          "fp_gp": "0.05"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "140",
+      "name": "Malia Schneider",
+      "gp": 5,
+      "fpts": "0.55",
+      "fp_gp": "0.11",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 2,
+          "fpts": "0.35",
+          "fp_gp": "0.18"
+        },
+        {
+          "season": "2025-26",
+          "gp": 3,
+          "fpts": "0.20",
+          "fp_gp": "0.07"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "202",
+      "name": "Kelly Ann Nadeau",
+      "gp": 10,
+      "fpts": "0.50",
+      "fp_gp": "0.05",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 4,
+          "fpts": "0.50",
+          "fp_gp": "0.12"
+        },
+        {
+          "season": "2025-26",
+          "gp": 6,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "146",
+      "name": "Alexa Gruschow",
+      "gp": 4,
+      "fpts": "0.40",
+      "fp_gp": "0.10",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 4,
+          "fpts": "0.40",
+          "fp_gp": "0.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "119",
+      "name": "Dominique Kremer",
+      "gp": 12,
+      "fpts": "0.40",
+      "fp_gp": "0.03",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 12,
+          "fpts": "0.40",
+          "fp_gp": "0.03"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "187",
+      "name": "Charlotte Akervik",
+      "gp": 2,
+      "fpts": "0.20",
+      "fp_gp": "0.10",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 2,
+          "fpts": "0.20",
+          "fp_gp": "0.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "279",
+      "name": "Kira Juodikis",
+      "gp": 4,
+      "fpts": "0.20",
+      "fp_gp": "0.05",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 4,
+          "fpts": "0.20",
+          "fp_gp": "0.05"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "321",
+      "name": "Sini Karjalainen",
+      "gp": 2,
+      "fpts": "0.20",
+      "fp_gp": "0.10",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 2,
+          "fpts": "0.20",
+          "fp_gp": "0.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "215",
+      "name": "Jessica Adolfsson",
+      "gp": 1,
+      "fpts": "0.10",
+      "fp_gp": "0.10",
+      "seasons": [
+        {
+          "season": "2024-25",
+          "gp": 1,
+          "fpts": "0.10",
+          "fp_gp": "0.10"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "288",
+      "name": "Vita Poniatovskaia",
+      "gp": 7,
+      "fpts": "0.10",
+      "fp_gp": "0.01",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 7,
+          "fpts": "0.10",
+          "fp_gp": "0.01"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "300",
+      "name": "Brianna Brooks",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 1,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "153",
+      "name": "Carley Olivier",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 1,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "298",
+      "name": "Emily Zumwinkle",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 1,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "127",
+      "name": "Jess Jones",
+      "gp": 5,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 5,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "296",
+      "name": "Olivia Wallin",
+      "gp": 2,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2025-26",
+          "gp": 2,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    },
+    {
+      "type": "skaters",
+      "player_id": "144",
+      "name": "Victoria Howran",
+      "gp": 1,
+      "fpts": "0.00",
+      "fp_gp": "0.00",
+      "seasons": [
+        {
+          "season": "2024",
+          "gp": 1,
+          "fpts": "0.00",
+          "fp_gp": "0.00"
+        }
+      ]
+    }
+  ]
+}
