@@ -1,0 +1,43 @@
+name: Refresh unlisted PWHL full statistics
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/pwhl-preview-full-stats.py'
+      - '.github/workflows/pwhl-preview-full-stats.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bhl-pwhl-preview-publish
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+          persist-credentials: true
+      - uses: actions/checkout@v4
+        with:
+          ref: research/pwhl-fantasy-data
+          path: research-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Aggregate complete per-game PWHL statistics
+        run: python site/scripts/pwhl-preview-full-stats.py research-source site/data/pwhl-fantasy-preview.json
+      - name: Commit preview data only
+        working-directory: site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pwhl-fantasy-preview.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh PWHL full-stat preview data [skip ci]"
+            git push origin HEAD:main
+          fi
