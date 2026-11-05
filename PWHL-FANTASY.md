@@ -28,3 +28,6 @@ Le premier chemin doit pointer vers les données importées de la branche `resea
 5. Ajouter repêchage, agents libres, échanges et automatisation des données avant l'ouverture de la compétition.
 
 Les identités, logos et attributions DG sont reportés. Les takeaways ne sont pas disponibles dans cette banque. La saison 2026-27 n'est pas présentée comme importée.
+
+## Temps de jeu
+TOI/GP ajouté aux tableaux et fiches : total publié lorsqu’il est cohérent, moyenne publiée par saison ou présences complètes si le total officiel est absent (notamment 2024). Carrière pondérée par les matchs joués, jamais une moyenne simple des saisons. PPTOI/PKTOI préparés mais non renseignés : aucun champ direct publié et aucune saison complète fiable dans la reconstruction des unités spéciales. Les intervalles incohérents ne sont pas assimilés à zéro. Banque de présences : 280 matchs exploitables / 282, deux matchs aux horloges incohérentes; contrôle des couvertures par joueuse. Aucune modification des FPTS.

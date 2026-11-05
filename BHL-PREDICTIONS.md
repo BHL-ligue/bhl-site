@@ -6,10 +6,10 @@
 - Repêchage : Tankathon 2027, première ronde espoir. Huit derniers au classement, tirage des trois premiers sans remplacement avec renormalisation des chances 32/21/15/10/8,5/6,5/4,5/2,5. Ordre inversé actuel pour les autres. Propriété des choix depuis Fantrax. Simulation sans effet sur les choix officiels.
 - Propositions : classement saisi par l'administrateur, avec bonus optionnel de profondeur par position parmi les cinq meilleurs disponibles. Aucun classement d'espoirs inventé.
 
-## Activation de base en attente d'approbation
-La validation automatique a refusé la migration de production faute d'autorisation explicite des changements de schéma et de droits. Ne pas contourner ce refus.
+## Base activée
+L’utilisateur a autorisé la publication et la migration de production. La centrale et les signatures multiples sont activées.
 
-Le script `database/bhl-draft-board-multiauthors.sql` est préparé mais non appliqué :
+Le script `database/bhl-draft-board-multiauthors.sql` a été appliqué :
 - Nouvelle table de centrale 2027, lecture publique; écriture limitée aux comptes dont le rôle est administrateur, RLS activée. Révisions pour empêcher l'écrasement d'une édition concurrente.
 - Deux colonnes d'attribution sur les articles; jusqu'à cinq journalistes distincts. Le serveur construit la signature et vérifie leurs attributions au compte soumetteur (administrateur : tous les journalistes). Les permissions de modification des articles et l'approbation existantes sont conservées.
 - Élargissement de la signature et adaptation de la vue des auteurs pour les filtres.
@@ -18,4 +18,7 @@ L'éditeur Admin permet de préparer et exporter la centrale pendant cette atten
 
 ## Vérifications
 `node --test tests/bhl-predictions.test.mjs` : cohérence des huit places, déterminisme, absence de prise en compte des scores futurs/partiels, fin de saison, loterie (30 000 essais), propriété des choix, unicité des espoirs, validation de classement.
-Vérifications navigateur locales : loterie trois gagnants; affichage des probabilités; écran de centrale; sélection « Corey Pronman et Scott Wheeler » sur données factices. Les écritures réelles ne sont pas testées avant activation autorisée de la base.
+Vérifications navigateur locales : loterie trois gagnants; affichage des probabilités; écran de centrale; sélection « Corey Pronman et Scott Wheeler » sur données factices. Les écritures ont été vérifiées dans des transactions annulées après validation; lecture publique et refus des écritures anonymes vérifiés.
+
+## Réglages du Tankathon
+Les visiteurs disposent de la simulation et du retour à l’ordre actuel. Les paramètres sont persistés dans la centrale et modifiables seulement par les comptes Admin via RLS. Force facultative /100 par espoir; sans note, valeur issue du rang. Score = (1 − poids des besoins) × force + poids des besoins × adéquation au club. L’Admin définit le poids (0–100 %) et le nombre de candidats parmi les meilleurs rangs (1–50). L’équipe actuelle de chaque espoir peut être renseignée dans la quatrième colonne. Ordre public : Choix, Équipe BHL, Évolution, Joueur, Position, Équipe, Rang de la centrale BHL.
