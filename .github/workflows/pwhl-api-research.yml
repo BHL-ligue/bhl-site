@@ -7,6 +7,7 @@ on:
       - 'scripts/pwhl-game-fpts.py'
       - 'scripts/pwhl-season-index.py'
       - 'scripts/pwhl-season-aggregate.py'
+      - 'scripts/pwhl-batch-import.py'
       - '.github/workflows/pwhl-api-research.yml'
   workflow_dispatch:
 permissions:
@@ -30,6 +31,8 @@ jobs:
         run: python scripts/pwhl-season-index.py
       - name: Aggregate available scored games
         run: python scripts/pwhl-season-aggregate.py research/pwhl/game-fpts-sample.json --output research/pwhl/season-aggregate-sample.json
+      - name: Import five completed historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --limit 5
       - name: Commit research report only to research branch
         if: always()
         run: |
@@ -40,6 +43,8 @@ jobs:
             if test -f research/pwhl/game-fpts-sample.json; then git add research/pwhl/game-fpts-sample.json; fi
             if test -f research/pwhl/season-game-index.json; then git add research/pwhl/season-game-index.json; fi
             if test -f research/pwhl/season-aggregate-sample.json; then git add research/pwhl/season-aggregate-sample.json; fi
+            if test -f research/pwhl/batch-manifest.json; then git add research/pwhl/batch-manifest.json; fi
+            if test -d research/pwhl/batch; then git add research/pwhl/batch/; fi
             if ! git diff --cached --quiet; then
               git commit -m "Record PWHL API feasibility results [skip ci]"
               git push origin HEAD:research/pwhl-fantasy-data
