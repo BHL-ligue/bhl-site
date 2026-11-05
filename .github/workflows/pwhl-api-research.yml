@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/pwhl-api-probe.py'
       - 'scripts/pwhl-game-fpts.py'
+      - 'scripts/pwhl-season-index.py'
+      - 'scripts/pwhl-season-aggregate.py'
       - '.github/workflows/pwhl-api-research.yml'
   workflow_dispatch:
 permissions:
@@ -24,6 +26,10 @@ jobs:
         run: python scripts/pwhl-api-probe.py --output research/pwhl/api-probe-report.json
       - name: Compute experimental fantasy scores for a real game
         run: python scripts/pwhl-game-fpts.py
+      - name: Index regular-season game IDs
+        run: python scripts/pwhl-season-index.py
+      - name: Aggregate available scored games
+        run: python scripts/pwhl-season-aggregate.py research/pwhl/game-fpts-sample.json --output research/pwhl/season-aggregate-sample.json
       - name: Commit research report only to research branch
         if: always()
         run: |
@@ -32,6 +38,8 @@ jobs:
           if test -f research/pwhl/api-probe-report.json; then
             git add research/pwhl/api-probe-report.json
             if test -f research/pwhl/game-fpts-sample.json; then git add research/pwhl/game-fpts-sample.json; fi
+            if test -f research/pwhl/season-game-index.json; then git add research/pwhl/season-game-index.json; fi
+            if test -f research/pwhl/season-aggregate-sample.json; then git add research/pwhl/season-aggregate-sample.json; fi
             if ! git diff --cached --quiet; then
               git commit -m "Record PWHL API feasibility results [skip ci]"
               git push origin HEAD:research/pwhl-fantasy-data
