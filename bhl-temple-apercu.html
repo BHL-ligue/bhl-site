@@ -42,7 +42,7 @@ function portraitSources(c){
 function updateHallPortrait(c){
  const card=[...document.querySelectorAll('.candidate')].find(el=>el.dataset.playerId===c.id);
  const img=card?.querySelector('.player-photo');if(!img)return;
- const head=card.querySelector('.head'),sources=portraitSources(c);
+ const head=card.querySelector('.head'),sources=[...(c.nhlId?['images/hall/'+c.nhlId+'.png']:[]),...portraitSources(c)];
  if(!sources.length)return;
  let index=0;
  img.onload=()=>{img.hidden=false;head.classList.remove('missing-portrait')};
@@ -71,7 +71,7 @@ function render(){
   const head=document.createElement('div');head.className='head';
   const club=clubFor(c.mainTeam);card.style.setProperty('--club-primary',club[2]);card.style.setProperty('--club-secondary',club[3]);const watermark=document.createElement('img');watermark.className='club-watermark';watermark.src=club[1]?'logos/'+club[1]:'';watermark.alt='';if(!club[1])watermark.hidden=true;
   const img=document.createElement('img');img.className='player-photo';img.alt='';img.loading='lazy';
-  const photoSources=portraitSources(c);
+  const photoSources=[...(c.nhlId?['images/hall/'+c.nhlId+'.png']:[]),...portraitSources(c)];
   let photoIndex=0;
   const fallbackPortrait=()=>{photoIndex++;if(photoIndex<photoSources.length)img.src=photoSources[photoIndex];else{img.onerror=null;img.hidden=true;head.classList.add('missing-portrait')}};
   img.onload=()=>{img.hidden=false;head.classList.remove('missing-portrait')};
@@ -133,7 +133,7 @@ async function start(){
    const totals=Array.isArray(data.seasonTotals)?data.seasonTotals:[];
    c.nhlSeasons=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0&&x.teamAbbrev).sort((a,b)=>Number(b.season)-Number(a.season));
    if(c.nhlSeasons.length)c.nhlTeam=String(c.nhlSeasons[0].teamAbbrev||'').toUpperCase();
-   updateHallPortrait(c);
+   if(document.querySelector('.candidate[data-player-id="'+c.id+'"] .player-photo[hidden]'))updateHallPortrait(c);
    const nhl=totals.filter(x=>String(x.leagueAbbrev||'').toUpperCase()==='NHL'&&Number(x.gamesPlayed)>0);
    if(!nhl.length)continue;
    const last=Math.max(...nhl.map(x=>Number(String(x.season).slice(0,4))));
