@@ -37,8 +37,11 @@ def main():
             if not gs.get("goals") and not gs.get("goalies",{}).get("home") and not gs.get("goalies",{}).get("visitor"):
                 manifest["skipped"].append({"game":game_id,"reason":"no_game_stats"});continue
             out=output/(str(game_id)+".json")
-            subprocess.run([sys.executable,"scripts/pwhl-game-fpts.py","--game-id",str(game_id),"--output",str(out)],check=True,stdout=subprocess.DEVNULL,timeout=40)
+            if not out.exists():
+                subprocess.run([sys.executable,"scripts/pwhl-game-fpts.py","--game-id",str(game_id),"--output",str(out)],check=True,stdout=subprocess.DEVNULL,timeout=40)
             report=json.loads(out.read_text())
+            if str(report.get("game_id"))!=str(game_id) or str(report.get("season_id"))!=str(season["season_id"]):
+                raise ValueError("cached game report has mismatched identity")
             if report["summary"]["skaters"]["scored"]==0:
                 out.unlink(missing_ok=True)
                 manifest["skipped"].append({"game":game_id,"reason":"no_scored_skaters"});continue
