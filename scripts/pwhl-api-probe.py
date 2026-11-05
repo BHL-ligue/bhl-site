@@ -58,6 +58,11 @@ def main():
                 report["tests"][name]["game_meta"]={k:summary.get("meta",{}).get(k) for k in ("id","season_id","date_played","home_team","visiting_team")}
                 report["tests"][name]["summary_fields"]=list(summary.keys())
                 report["tests"][name]["lineup_shapes"]={k:shape(v) for k,v in summary.items() if "lineup" in k.lower() or k in ("goalies","goals")}
+                tracked=("goals","assists","shots_on","hits","faceoff_wins","faceoff_attempts","shots_blocked_by_player","pim")
+                sides=("home_team_lineup","visitor_team_lineup")
+                players=[p for side in sides for p in summary.get(side,{}).get("players",[])]
+                report["tests"][name]["skater_field_coverage"]={field:{"present":sum(field in p for p in players),"nonempty":sum(p.get(field) not in (None,"") for p in players),"players":len(players)} for field in tracked}
+                report["tests"][name]["sample_player_stats"]=[{"id":p.get("player_id"),"name":(str(p.get("first_name",""))+" "+str(p.get("last_name",""))).strip(),"stats":{field:p.get(field) for field in tracked}} for p in players[:3]]
             elif name=="play_by_play" and isinstance(result,list):
                 report["tests"][name]["event_types"]=sorted({str(x.get("event")) for x in result if isinstance(x,dict)})
             elif name=="player_stats" and isinstance(result,list):
