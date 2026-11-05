@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-05T16:43:24.503092+00:00",
+  "updatedAt": "2026-11-05T17:39:56.920313+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -4710,7 +4710,8 @@
           "name": "Roger McQueen",
           "position": "RW",
           "eligiblePositions": [
-            "RW"
+            "RW",
+            "C"
           ],
           "status": "MINORS"
         },
@@ -12043,7 +12044,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 68.15,
+            "score": 67.85,
             "gamesPlayed": 25
           }
         },
@@ -12057,7 +12058,7 @@
           "home": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 47.0,
+            "score": 46.6,
             "gamesPlayed": 25
           }
         },
@@ -12065,13 +12066,13 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 46.15,
+            "score": 45.75,
             "gamesPlayed": 23
           },
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 49.4,
+            "score": 49.6,
             "gamesPlayed": 20
           }
         },
@@ -12085,7 +12086,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 55.25,
+            "score": 55.15,
             "gamesPlayed": 22
           }
         },
@@ -12141,7 +12142,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 68.15,
+            "score": 67.85,
             "gamesPlayed": 25
           }
         },
@@ -12155,7 +12156,7 @@
           "home": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 47.0,
+            "score": 46.6,
             "gamesPlayed": 25
           }
         },
@@ -12169,7 +12170,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 49.4,
+            "score": 49.6,
             "gamesPlayed": 20
           }
         },
@@ -12183,7 +12184,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 55.25,
+            "score": 55.15,
             "gamesPlayed": 22
           }
         },
@@ -12191,7 +12192,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 46.15,
+            "score": 45.75,
             "gamesPlayed": 23
           },
           "home": {
@@ -12239,7 +12240,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 68.15,
+            "score": 67.85,
             "gamesPlayed": 25
           }
         },
@@ -12253,7 +12254,7 @@
           "home": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 47.0,
+            "score": 46.6,
             "gamesPlayed": 25
           }
         },
@@ -12267,7 +12268,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 49.4,
+            "score": 49.6,
             "gamesPlayed": 20
           }
         },
@@ -12281,7 +12282,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 55.25,
+            "score": 55.15,
             "gamesPlayed": 22
           }
         },
@@ -12309,7 +12310,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 46.15,
+            "score": 45.75,
             "gamesPlayed": 23
           }
         }
@@ -18174,14 +18175,14 @@
       "totalPointsFor": 2899.65,
       "winPercentage": 0.933,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2283.05
+      "totalPointsAgainst": 2282.55
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
       "teamName": "Hartford Whalers",
       "rank": 2,
       "points": "13-2-0",
-      "totalPointsFor": 2593.65,
+      "totalPointsFor": 2593.35,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
       "totalPointsAgainst": 2274.55
@@ -18201,7 +18202,7 @@
       "teamName": "Ottawa Senators",
       "rank": 4,
       "points": "10-5-0",
-      "totalPointsFor": 2774.7,
+      "totalPointsFor": 2773.8,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2407.6
@@ -18214,7 +18215,7 @@
       "totalPointsFor": 2675.7,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2340.35
+      "totalPointsAgainst": 2339.95
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18234,14 +18235,14 @@
       "totalPointsFor": 2481.45,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 2386.9
+      "totalPointsAgainst": 2386.8
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
       "teamName": "Toronto Maple Leafs",
       "rank": 8,
       "points": "9-6-0",
-      "totalPointsFor": 2400.3,
+      "totalPointsFor": 2399.1,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
       "totalPointsAgainst": 2362.45
@@ -18251,10 +18252,10 @@
       "teamName": "Minnesota North Stars",
       "rank": 9,
       "points": "8-7-0",
-      "totalPointsFor": 2089.5,
+      "totalPointsFor": 2088.3,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2363.75
+      "totalPointsAgainst": 2363.95
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18264,7 +18265,7 @@
       "totalPointsFor": 2404.95,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2472.6
+      "totalPointsAgainst": 2472.3
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18291,10 +18292,10 @@
       "teamName": "Atlanta Thrashers",
       "rank": 13,
       "points": "3-12-0",
-      "totalPointsFor": 1881.75,
+      "totalPointsFor": 1882.35,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2380.45
+      "totalPointsAgainst": 2380.05
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18304,7 +18305,7 @@
       "totalPointsFor": 2084.7,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2380.3
+      "totalPointsAgainst": 2379.8
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18314,7 +18315,7 @@
       "totalPointsFor": 2039.4,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2362.35
+      "totalPointsAgainst": 2361.45
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18324,7 +18325,7 @@
       "totalPointsFor": 1883.1,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2399.9
+      "totalPointsAgainst": 2399.8
     }
   ],
   "matchups": [
@@ -18394,7 +18395,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 68.15,
+        "score": 67.85,
         "gamesPlayed": 25
       }
     },
@@ -18408,7 +18409,7 @@
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 47.0,
+        "score": 46.6,
         "gamesPlayed": 25
       }
     },
@@ -18416,13 +18417,13 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 46.15,
+        "score": 45.75,
         "gamesPlayed": 23
       },
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 49.4,
+        "score": 49.6,
         "gamesPlayed": 20
       }
     },
@@ -18436,7 +18437,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 55.25,
+        "score": 55.15,
         "gamesPlayed": 22
       }
     },
@@ -18492,7 +18493,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 68.15,
+        "score": 67.85,
         "gamesPlayed": 25
       }
     },
@@ -18506,7 +18507,7 @@
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 47.0,
+        "score": 46.6,
         "gamesPlayed": 25
       }
     },
@@ -18520,7 +18521,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 49.4,
+        "score": 49.6,
         "gamesPlayed": 20
       }
     },
@@ -18534,7 +18535,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 55.25,
+        "score": 55.15,
         "gamesPlayed": 22
       }
     },
@@ -18542,7 +18543,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 46.15,
+        "score": 45.75,
         "gamesPlayed": 23
       },
       "home": {
@@ -18590,7 +18591,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 68.15,
+        "score": 67.85,
         "gamesPlayed": 25
       }
     },
@@ -18604,7 +18605,7 @@
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 47.0,
+        "score": 46.6,
         "gamesPlayed": 25
       }
     },
@@ -18618,7 +18619,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 49.4,
+        "score": 49.6,
         "gamesPlayed": 20
       }
     },
@@ -18632,7 +18633,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 55.25,
+        "score": 55.15,
         "gamesPlayed": 22
       }
     },
@@ -18660,7 +18661,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 46.15,
+        "score": 45.75,
         "gamesPlayed": 23
       }
     }
