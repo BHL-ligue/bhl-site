@@ -6,6 +6,7 @@ on:
       - 'scripts/pwhl-batch-import.py'
       - 'scripts/pwhl-game-fpts.py'
       - 'scripts/pwhl-season-aggregate.py'
+      - 'scripts/pwhl-career-aggregate.py'
       - '.github/workflows/pwhl-history-research.yml'
   workflow_dispatch:
 concurrency:
@@ -58,12 +59,14 @@ jobs:
           if (( ${#games[@]} > 0 )); then
             python scripts/pwhl-season-aggregate.py "${games[@]}" --output research/pwhl/season-aggregate-2024-25.json
           fi
+      - name: Compute career standings from complete seasons only
+        run: python scripts/pwhl-career-aggregate.py
       - name: Persist historical research data
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/pwhl/batch/2024/ research/pwhl/batch/2024-25/ research/pwhl/season-aggregate-2024.json research/pwhl/season-aggregate-2024-25.json 2>/dev/null || true
+          git add research/pwhl/batch/2024/ research/pwhl/batch/2024-25/ research/pwhl/season-aggregate-2024.json research/pwhl/season-aggregate-2024-25.json research/pwhl/career-standings.json 2>/dev/null || true
           for manifest in research/pwhl/batch-manifest-2024-*.json research/pwhl/batch-manifest-2024-25-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
           if ! git diff --cached --quiet; then
             git commit -m "Record PWHL 2024 and 2024-25 historical research [skip ci]"
