@@ -29,8 +29,8 @@ jobs:
         run: python scripts/pwhl-game-fpts.py
       - name: Index regular-season game IDs
         run: python scripts/pwhl-season-index.py
-      - name: Import five completed historical games
-        run: python scripts/pwhl-batch-import.py --season 2025-26 --limit 5
+      - name: Import twenty completed historical games
+        run: python scripts/pwhl-batch-import.py --season 2025-26 --limit 20
       - name: Aggregate available scored games
         shell: bash
         run: |
