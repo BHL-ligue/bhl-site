@@ -9,7 +9,7 @@ def main():
         url="https://lscluster.hockeytech.com/feed/index.php?"+urllib.parse.urlencode(params)
         try:
             with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"BHL-PWHL-Research/0.3"}),timeout=30) as response: raw=response.read().decode("utf-8-sig")
-            match=re.match(r"^\\s*[\\w.$]+\\s*\\(\\s*([\\s\\S]*?)\\s*\\)\\s*;?\\s*$",raw)
+            match=re.match(r"^\s*[\w.$]+\s*\(\s*([\s\S]*?)\s*\)\s*;?\s*$",raw)
             data=json.loads(match.group(1) if match else raw)
             rows=[item.get("row",{}) for section in data for block in section.get("sections",[]) for item in block.get("data",[])]
             ids=sorted({str(row.get("game_id")) for row in rows if row.get("game_id")})
