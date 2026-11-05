@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Research-only PWHL per-game fantasy scoring; no production publication."""
-import json,urllib.request,urllib.parse,datetime,pathlib
+import json,urllib.request,urllib.parse,datetime,pathlib,argparse
 from decimal import Decimal
 URL="https://lscluster.hockeytech.com/feed/index.php"
 SKATER={"goals":3,"assists":2.5,"shots_on":0.3,"hits":0.1,"shots_blocked_by_player":0.2,"faceoff_wins":0.05}
 GOALIE={"win":4,"goals_against":-1,"saves":0.2,"shutout":4,"goals":3,"assists":2.5}
 def main():
-    game_id=215
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--game-id',type=int,default=215)
+    parser.add_argument('--output',default='research/pwhl/game-fpts-sample.json')
+    args=parser.parse_args()
+    game_id=args.game_id
     q=urllib.parse.urlencode(dict(feed="gc",tab="gamesummary",game_id=game_id,key="446521baf8c38984",client_code="pwhl",site_id=0,lang="en"))
     with urllib.request.urlopen(URL+"?"+q,timeout=30) as response:
         gs=json.load(response)["GC"]["Gamesummary"]
@@ -42,7 +46,7 @@ def main():
     for role in ("skaters","goalies"):
         result[role].sort(key=lambda p:(p["fpts"] is None,-float(p["fpts"] or 0)))
     result["summary"]={role:{"total":len(result[role]),"scored":sum(p["fpts"] is not None for p in result[role])} for role in ("skaters","goalies")}
-    path=pathlib.Path("research/pwhl/game-fpts-sample.json")
+    path=pathlib.Path(args.output)
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps({"summary":result["summary"],"top_skaters":result["skaters"][:3],"top_goalies":result["goalies"][:3]},ensure_ascii=False))
