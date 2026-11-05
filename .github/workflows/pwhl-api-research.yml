@@ -21,6 +21,8 @@ jobs:
           python-version: '3.12'
       - name: Query PWHL data API
         run: python scripts/pwhl-api-probe.py --output research/pwhl/api-probe-report.json
+      - name: Compute experimental fantasy scores for a real game
+        run: python scripts/pwhl-game-fpts.py
       - name: Commit research report only to research branch
         if: always()
         run: |
@@ -28,6 +30,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if test -f research/pwhl/api-probe-report.json; then
             git add research/pwhl/api-probe-report.json
+            if test -f research/pwhl/game-fpts-sample.json; then git add research/pwhl/game-fpts-sample.json; fi
             if ! git diff --cached --quiet; then
               git commit -m "Record PWHL API feasibility results [skip ci]"
               git push origin HEAD:research/pwhl-fantasy-data
