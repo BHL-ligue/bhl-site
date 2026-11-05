@@ -8,6 +8,7 @@ on:
       - 'scripts/pwhl-season-index.py'
       - 'scripts/pwhl-season-aggregate.py'
       - 'scripts/pwhl-batch-import.py'
+      - 'scripts/pwhl-validate-season.py'
       - '.github/workflows/pwhl-api-research.yml'
   workflow_dispatch:
 concurrency:
@@ -54,6 +55,8 @@ jobs:
           else
             echo "No completed games imported; skipping aggregate"
           fi
+      - name: Audit imported season and scoring completeness
+        run: python scripts/pwhl-validate-season.py
       - name: Commit research report only to research branch
         if: always()
         run: |
@@ -64,6 +67,7 @@ jobs:
             if test -f research/pwhl/game-fpts-sample.json; then git add research/pwhl/game-fpts-sample.json; fi
             if test -f research/pwhl/season-game-index.json; then git add research/pwhl/season-game-index.json; fi
             if test -f research/pwhl/season-aggregate-sample.json; then git add research/pwhl/season-aggregate-sample.json; fi
+            if test -f research/pwhl/season-validation.json; then git add research/pwhl/season-validation.json; fi
             for manifest in research/pwhl/batch-manifest-*.json; do if test -f "$manifest"; then git add "$manifest"; fi; done
             if test -d research/pwhl/batch; then git add research/pwhl/batch/; fi
             if ! git diff --cached --quiet; then
