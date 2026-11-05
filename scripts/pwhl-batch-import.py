@@ -30,15 +30,20 @@ def main():
     output.mkdir(parents=True,exist_ok=True)
     for game_id in ids[args.offset:args.offset+args.limit]:
         try:
+            out=output/(str(game_id)+".json")
+            if out.exists():
+                report=json.loads(out.read_text())
+                if str(report.get("game_id"))!=str(game_id) or str(report.get("season_id"))!=str(season["season_id"]):
+                    raise ValueError("cached game report has mismatched identity")
+                manifest["scored"].append({"game":game_id,"date":report.get("date"),"skaters":report["summary"]["skaters"],"goalies":report["summary"]["goalies"],"cached":True})
+                continue
             gs=fetch(game_id)
             meta=gs.get("meta",{})
             if str(meta.get("season_id"))!=str(season["season_id"]):
                 manifest["skipped"].append({"game":game_id,"reason":"season_mismatch"});continue
             if not gs.get("goals") and not gs.get("goalies",{}).get("home") and not gs.get("goalies",{}).get("visitor"):
                 manifest["skipped"].append({"game":game_id,"reason":"no_game_stats"});continue
-            out=output/(str(game_id)+".json")
-            if not out.exists():
-                subprocess.run([sys.executable,"scripts/pwhl-game-fpts.py","--game-id",str(game_id),"--output",str(out)],check=True,stdout=subprocess.DEVNULL,timeout=40)
+            subprocess.run([sys.executable,"scripts/pwhl-game-fpts.py","--game-id",str(game_id),"--output",str(out)],check=True,stdout=subprocess.DEVNULL,timeout=40)
             report=json.loads(out.read_text())
             if str(report.get("game_id"))!=str(game_id) or str(report.get("season_id"))!=str(season["season_id"]):
                 raise ValueError("cached game report has mismatched identity")
