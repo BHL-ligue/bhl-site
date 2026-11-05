@@ -17,13 +17,28 @@ def main():
             missing=[k for k in SKATER if p.get(k) in (None,"")]
             fpts=None if missing else str(sum((Decimal(str(p[k]))*Decimal(str(w)) for k,w in SKATER.items()),Decimal(0)).quantize(Decimal("0.01")))
             result["skaters"].append({"id":p.get("player_id"),"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in SKATER},"fpts":fpts,"missing":missing})
-    # Goalies: game-summary goalie records carry win, shutout and saves.
-    # Bench-only roster goalies must not be credited with a played game.
+    # The goalie summary may contain multiple stints for the same player.
+    # Combine stints; obtain goalie goals/assists from the roster lineup.
     for side in ("home","visitor"):
+        roster={str(p.get("player_id")):p for p in gs.get(side+"_team_lineup",{}).get("goalies",[])}
+        merged={}
         for p in gs.get("goalies",{}).get(side,[]):
+            pid=str(p.get("player_id"))
+            if pid not in merged:
+                merged[pid]={"player_id":pid,"first_name":p.get("first_name"),"last_name":p.get("last_name"),
+                             "win":"0","shutout":"0","saves":"0","goals_against":"0"}
+            target=merged[pid]
+            for k in ("saves","goals_against"):
+                target[k]=str(Decimal(target[k])+Decimal(str(p.get(k) or 0)))
+            for k in ("win","shutout"):
+                target[k]=str(max(Decimal(target[k]),Decimal(str(p.get(k) or 0))))
+        for pid,p in merged.items():
+            lineup=roster.get(pid,{})
+            for k in ("goals","assists"):
+                p[k]=lineup.get(k)
             missing=[k for k in GOALIE if p.get(k) in (None,"")]
             fpts=None if missing else str(sum((Decimal(str(p[k]))*Decimal(str(w)) for k,w in GOALIE.items()),Decimal(0)).quantize(Decimal("0.01")))
-            result["goalies"].append({"id":p.get("player_id"),"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in GOALIE},"fpts":fpts,"missing":missing})
+            result["goalies"].append({"id":pid,"name":str(p.get("first_name",""))+" "+str(p.get("last_name","")),"side":side,"stats":{k:p.get(k) for k in GOALIE},"fpts":fpts,"missing":missing})
     for role in ("skaters","goalies"):
         result[role].sort(key=lambda p:(p["fpts"] is None,-float(p["fpts"] or 0)))
     result["summary"]={role:{"total":len(result[role]),"scored":sum(p["fpts"] is not None for p in result[role])} for role in ("skaters","goalies")}
