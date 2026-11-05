@@ -62,10 +62,13 @@ def main():
                 sides=("home_team_lineup","visitor_team_lineup")
                 players=[p for side in sides for p in summary.get(side,{}).get("players",[])]
                 report["tests"][name]["skater_field_coverage"]={field:{"present":sum(field in p for p in players),"nonempty":sum(p.get(field) not in (None,"") for p in players),"players":len(players)} for field in tracked}
+                report["tests"][name]["turnover_like_fields"]=sorted({key for p in players for key in p if any(word in key.lower() for word in ("takeaway","giveaway","turnover","steal","possession","recover"))})
                 report["tests"][name]["sample_player_stats"]=[{"id":p.get("player_id"),"name":(str(p.get("first_name",""))+" "+str(p.get("last_name",""))).strip(),"stats":{field:p.get(field) for field in tracked}} for p in players[:3]]
             elif name=="play_by_play" and isinstance(result,list):
                 report["tests"][name]["event_types"]=sorted({str(x.get("event")) for x in result if isinstance(x,dict)})
+                report["tests"][name]["turnover_like_events"]=[str(x.get("event")) for x in result if isinstance(x,dict) and any(word in str(x.get("event","")).lower() for word in ("takeaway","giveaway","turnover","steal","possession","recover"))]
             elif name=="player_stats" and isinstance(result,list):
+                report["tests"][name]["turnover_like_headers"]=sorted({key for section in result for group in section.get("sections",[]) for key in group.get("headers",{}) if any(word in key.lower() for word in ("takeaway","giveaway","turnover","steal","possession","recover"))})
                 report["tests"][name]["section_shapes"]=[{"keys":list(x.keys()),"data_shape":shape(x.get("sections",x))} for x in result[:2]]
             print(name,"OK",json.dumps(report["tests"][name]["shape"],ensure_ascii=False)[:350])
         except Exception as exc:
