@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-07T20:35:04.068167+00:00",
+  "updatedAt": "2026-11-07T21:14:03.947058+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -11988,7 +11988,7 @@
           "home": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 98.2,
+            "score": 102.4,
             "gamesPlayed": 40
           }
         },
@@ -12080,7 +12080,7 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 128.3,
+            "score": 131.1,
             "gamesPlayed": 40
           },
           "home": {
@@ -12108,7 +12108,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 98.2,
+            "score": 102.4,
             "gamesPlayed": 40
           },
           "home": {
@@ -12198,7 +12198,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 128.3,
+            "score": 131.1,
             "gamesPlayed": 40
           }
         },
@@ -12234,7 +12234,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 98.2,
+            "score": 102.4,
             "gamesPlayed": 40
           },
           "home": {
@@ -12296,7 +12296,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 128.3,
+            "score": 131.1,
             "gamesPlayed": 40
           }
         },
@@ -18185,7 +18185,7 @@
       "totalPointsFor": 2731.05,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
-      "totalPointsAgainst": 2431.1
+      "totalPointsAgainst": 2433.9
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18205,7 +18205,7 @@
       "totalPointsFor": 2974.8,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2531.75
+      "totalPointsAgainst": 2535.95
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18225,7 +18225,7 @@
       "totalPointsFor": 2800.65,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2564.3
+      "totalPointsAgainst": 2568.5
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18255,7 +18255,7 @@
       "totalPointsFor": 2210.7,
       "winPercentage": 0.533,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2520.6
+      "totalPointsAgainst": 2523.4
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18285,7 +18285,7 @@
       "totalPointsFor": 2306.25,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2646.0
+      "totalPointsAgainst": 2650.2
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18325,7 +18325,7 @@
       "totalPointsFor": 1965.9,
       "winPercentage": 0.133,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2561.05
+      "totalPointsAgainst": 2563.85
     }
   ],
   "matchups": [
@@ -18339,7 +18339,7 @@
       "home": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 98.2,
+        "score": 102.4,
         "gamesPlayed": 40
       }
     },
@@ -18431,7 +18431,7 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 128.3,
+        "score": 131.1,
         "gamesPlayed": 40
       },
       "home": {
@@ -18459,7 +18459,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 98.2,
+        "score": 102.4,
         "gamesPlayed": 40
       },
       "home": {
@@ -18549,7 +18549,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 128.3,
+        "score": 131.1,
         "gamesPlayed": 40
       }
     },
@@ -18585,7 +18585,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 98.2,
+        "score": 102.4,
         "gamesPlayed": 40
       },
       "home": {
@@ -18647,7 +18647,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 128.3,
+        "score": 131.1,
         "gamesPlayed": 40
       }
     },
