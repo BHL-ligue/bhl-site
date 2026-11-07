@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-07T21:14:03.947058+00:00",
+  "updatedAt": "2026-11-07T21:50:10.480148+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -12002,7 +12002,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 116.2,
+            "score": 118.7,
             "gamesPlayed": 39
           }
         },
@@ -12100,7 +12100,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 116.2,
+            "score": 118.7,
             "gamesPlayed": 39
           }
         },
@@ -12220,7 +12220,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 116.2,
+            "score": 118.7,
             "gamesPlayed": 39
           },
           "home": {
@@ -18172,7 +18172,7 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "14-1-0",
-      "totalPointsFor": 3085.35,
+      "totalPointsFor": 3093.75,
       "winPercentage": 0.933,
       "gamesBack": 0.0,
       "totalPointsAgainst": 2397.0
@@ -18182,7 +18182,7 @@
       "teamName": "Hartford Whalers",
       "rank": 2,
       "points": "13-2-0",
-      "totalPointsFor": 2731.05,
+      "totalPointsFor": 2731.5,
       "winPercentage": 0.867,
       "gamesBack": 1.0,
       "totalPointsAgainst": 2433.9
@@ -18192,7 +18192,7 @@
       "teamName": "Detroit Red Wings",
       "rank": 3,
       "points": "11-4-0",
-      "totalPointsFor": 2780.7,
+      "totalPointsFor": 2788.2,
       "winPercentage": 0.733,
       "gamesBack": 3.0,
       "totalPointsAgainst": 2483.25
@@ -18215,7 +18215,7 @@
       "totalPointsFor": 2856.75,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2521.95
+      "totalPointsAgainst": 2524.45
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18232,7 +18232,7 @@
       "teamName": "New York Rangers",
       "rank": 7,
       "points": "9-6-0",
-      "totalPointsFor": 2650.95,
+      "totalPointsFor": 2651.85,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
       "totalPointsAgainst": 2544.6
@@ -18242,7 +18242,7 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 8,
       "points": "9-6-0",
-      "totalPointsFor": 2629.2,
+      "totalPointsFor": 2629.35,
       "winPercentage": 0.6,
       "gamesBack": 5.0,
       "totalPointsAgainst": 2517.45
@@ -18258,24 +18258,24 @@
       "totalPointsAgainst": 2523.4
     },
     {
+      "teamId": "adfljh3wmo2tig2e",
+      "teamName": "Nashville Predators",
+      "rank": 10,
+      "points": "7-8-0",
+      "totalPointsFor": 2536.8,
+      "winPercentage": 0.467,
+      "gamesBack": 7.0,
+      "totalPointsAgainst": 2639.1
+    },
+    {
       "teamId": "bvm8qt4omo2tig2f",
       "teamName": "Anaheim Mighty Ducks",
-      "rank": 10,
+      "rank": 11,
       "points": "7-8-0",
       "totalPointsFor": 2533.2,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2499.05
-    },
-    {
-      "teamId": "adfljh3wmo2tig2e",
-      "teamName": "Nashville Predators",
-      "rank": 11,
-      "points": "7-8-0",
-      "totalPointsFor": 2523.0,
-      "winPercentage": 0.467,
-      "gamesBack": 7.0,
-      "totalPointsAgainst": 2639.1
+      "totalPointsAgainst": 2501.55
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18285,7 +18285,7 @@
       "totalPointsFor": 2306.25,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 2650.2
+      "totalPointsAgainst": 2652.7
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18353,7 +18353,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 116.2,
+        "score": 118.7,
         "gamesPlayed": 39
       }
     },
@@ -18451,7 +18451,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 116.2,
+        "score": 118.7,
         "gamesPlayed": 39
       }
     },
@@ -18571,7 +18571,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 116.2,
+        "score": 118.7,
         "gamesPlayed": 39
       },
       "home": {
