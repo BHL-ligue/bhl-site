@@ -18,3 +18,20 @@
 #wjcDraftAdmin .wjc-keeper-check input{display:inline-block;width:18px;height:18px;flex:0 0 18px;margin:0;accent-color:#c00}
 #wjcDraftAdmin .wjc-admin-save{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid #dfe5ed;border-radius:10px;padding:12px 14px;box-shadow:0 -4px 18px #18243b12}
 @media(max-width:550px){#wjcDraftAdmin .wjc-archive-count{display:block;margin:8px 0 0 9px}#wjcDraftAdmin .wjc-archive-team th,#wjcDraftAdmin .wjc-archive-team td{padding:8px 5px}#wjcDraftAdmin .wjc-keeper-check span{font-size:11px}}
+
+/* Keep roster and DG names legible on light surfaces, including selected DGs. */
+#wjcDraftAdmin .wjc-admin-team > summary,
+#wjcDraftAdmin .wjc-archive-team > summary strong,
+#wjcDraftAdmin .wjc-scroll td:first-child,
+#wjcDraftAdmin .wjc-scroll td:first-child strong,
+#wjcDraftAdmin select,
+#wjcDraftAdmin option {
+  color: #1b2737;
+}
+#wjcDraftAdmin select {
+  color-scheme: light;
+}
+#wjcDraftAdmin .wjc-users option:checked {
+  color: #1b2737;
+  background: #dce7f4 linear-gradient(#dce7f4, #dce7f4);
+}
