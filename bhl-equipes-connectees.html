@@ -697,7 +697,7 @@ const teamScorerAliases={
  MONTREAL:['Montréal Canadiens','Montreal Canadiens','Montréal Maroons','Montreal Maroons'],
  OTTAWA:['Ottawa Senators','Edmonton Oilers']
 };
-function teamScorerKey(v){return String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function teamScorerKey(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
 function teamScorersLoad(){
  return teamScorersPromise||(teamScorersPromise=fetch('data/production/scorers.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Archives indisponibles');return r.json()}).then(d=>{if(!Array.isArray(d.rows))throw Error('Archives invalides');return d.rows}).catch(e=>{teamScorersPromise=null;throw e}));
 }
