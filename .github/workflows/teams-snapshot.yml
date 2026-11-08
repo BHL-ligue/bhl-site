@@ -1,0 +1,40 @@
+name: Instantané rapide des équipes BHL
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync-teams-snapshot.py'
+      - '.github/workflows/teams-snapshot.yml'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Actualiser les données publiques Google Sheets
+        run: python scripts/sync-teams-snapshot.py
+      - name: Publier l'instantané validé
+        run: |
+          git config user.name "BHL Team Snapshot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp data/teams-snapshot.json /tmp/bhl-teams-snapshot.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/bhl-teams-snapshot.json data/teams-snapshot.json
+            git add data/teams-snapshot.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Actualiser le cache des équipes BHL"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
