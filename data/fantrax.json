@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-08T07:59:37.800648+00:00",
+  "updatedAt": "2026-11-08T08:47:38.393186+00:00",
   "rosterPeriod": 6,
   "scoringPeriod": 6,
   "periodDates": {
@@ -11982,7 +11982,7 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 123.15,
+            "score": 123.0,
             "gamesPlayed": 51
           },
           "home": {
@@ -12094,7 +12094,7 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 123.15,
+            "score": 123.0,
             "gamesPlayed": 51
           },
           "home": {
@@ -12206,7 +12206,7 @@
           "away": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 123.15,
+            "score": 123.0,
             "gamesPlayed": 51
           },
           "home": {
@@ -18195,7 +18195,7 @@
       "totalPointsFor": 3012.75,
       "winPercentage": 0.733,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2571.8
+      "totalPointsAgainst": 2571.65
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18225,7 +18225,7 @@
       "totalPointsFor": 2876.25,
       "winPercentage": 0.667,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2664.85
+      "totalPointsAgainst": 2664.7
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18265,7 +18265,7 @@
       "totalPointsFor": 2641.2,
       "winPercentage": 0.467,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2728.15
+      "totalPointsAgainst": 2728.0
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18282,7 +18282,7 @@
       "teamName": "Chicago Blackhawks",
       "rank": 12,
       "points": "3-12-0",
-      "totalPointsFor": 2377.35,
+      "totalPointsFor": 2376.9,
       "winPercentage": 0.2,
       "gamesBack": 11.0,
       "totalPointsAgainst": 2787.55
@@ -18333,7 +18333,7 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 123.15,
+        "score": 123.0,
         "gamesPlayed": 51
       },
       "home": {
@@ -18445,7 +18445,7 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 123.15,
+        "score": 123.0,
         "gamesPlayed": 51
       },
       "home": {
@@ -18557,7 +18557,7 @@
       "away": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 123.15,
+        "score": 123.0,
         "gamesPlayed": 51
       },
       "home": {
