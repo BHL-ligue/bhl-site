@@ -58,6 +58,7 @@ jobs:
               cp /tmp/bhl-identities-latest.json data/player-identity-map.json
               if [ -f /tmp/bhl-current-period-latest.json ]; then cp /tmp/bhl-current-period-latest.json data/production/current-period.json; fi
               git add data/fantrax.json data/player-identity-map.json
+              if [ -f data/production/current-period.json ]; then git add data/production/current-period.json; fi
               if git diff --cached --quiet; then
                 break
               fi
