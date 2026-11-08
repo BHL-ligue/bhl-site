@@ -690,6 +690,7 @@ function gpControls(seasons){return '<div class="gp-controls"><label>Saison<sele
 function gpWire(data,organization){const draw=()=>{$('#gpResults').innerHTML=gpTable(data.combine(data.rows,organization,gpSeason,gpPhase));document.querySelectorAll('[data-gpsort]').forEach(b=>b.onclick=()=>{const k=b.dataset.gpsort;if(gpSort===k)gpDescending=!gpDescending;else{gpSort=k;gpDescending=k!=='name'}draw()})};$('#gpSeason').onchange=e=>{gpSeason=e.target.value;draw()};$('#gpPhase').onchange=e=>{gpPhase=e.target.value;draw()};$('#gpSearch').oninput=e=>{gpQuery=e.target.value.toLocaleLowerCase('fr');draw()};$('#gpStatus').onchange=e=>{gpStatus=e.target.value;draw()};$('#gpPosition').onchange=e=>{gpPosition=e.target.value;draw()};draw()}
 let teamScorersPromise=null;
 let teamScorersPhase='regular',teamScorersPosition='all',teamScorersSeason='',teamScorersSearch='';
+let teamScorersSort='fpts',teamScorersSortDescending=true;
 const teamScorerAliases={
  CLEVELAND:['Boston Bruins','Cleveland Barons'],COLORADO:['Colorado Avalanche','Winnipeg Jets'],
  DETROIT:['Detroit Red Wings','Detroit Cougars'],FLORIDA:['Florida Panthers','Vegas Golden Knights'],
@@ -708,7 +709,7 @@ function renderGamesPlayed(){
   const names=(teamScorerAliases[requested]||[TEAMS.find(t=>t.sheet===requested)?.name]).map(teamScorerKey);
   const organizationRows=rows.filter(r=>names.includes(teamScorerKey(r.team)));
   const seasons=[...new Set(organizationRows.map(r=>r.season).filter(Boolean))].sort().reverse();
-  $('#panel').innerHTML='<div class="section-head"><div><h3>Meilleurs pointeurs de l’histoire</h3><p>Production BHL des joueurs dans l’alignement partant de cette organisation, incluant ses anciennes identités.</p></div></div><div class="filters" style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0"><label>Période <select id="tsPhase"><option value="regular">Saison régulière</option><option value="playoffs">Séries éliminatoires</option><option value="all">Total combiné</option></select></label><label>Position <select id="tsPosition"><option value="all">Toutes</option><option value="forward">Attaquants</option><option value="defense">Défenseurs</option><option value="goalie">Gardiens</option></select></label><label>Saison <select id="tsSeason"><option value="">Toutes les saisons</option>'+seasons.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('')+'</select></label><label>Recherche <input id="tsSearch" type="search" placeholder="Nom du joueur"></label></div><div class="tablewrap"><table><thead><tr><th>Rang</th><th>Joueur</th><th>Départs</th><th>PJ</th><th>FPTS</th><th>FP/Départ</th><th>FP/GP</th></tr></thead><tbody id="tsRows"></tbody></table></div><p class="note">Seules les périodes archivées sont comptabilisées. Les FPTS proviennent de la même source que la page Pointeurs BHL. <a href="bhl-pointeurs.html">Classement complet de la ligue</a></p>';
+  $('#panel').innerHTML='<div class="section-head"><div><h3>Meilleurs pointeurs de l’histoire</h3><p>Production BHL des joueurs dans l’alignement partant de cette organisation, incluant ses anciennes identités.</p></div></div><div class="filters" style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0"><label>Période <select id="tsPhase"><option value="regular">Saison régulière</option><option value="playoffs">Séries éliminatoires</option><option value="all">Total combiné</option></select></label><label>Position <select id="tsPosition"><option value="all">Toutes</option><option value="forward">Attaquants</option><option value="defense">Défenseurs</option><option value="goalie">Gardiens</option></select></label><label>Saison <select id="tsSeason"><option value="">Toutes les saisons</option>'+seasons.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('')+'</select></label><label>Recherche <input id="tsSearch" type="search" placeholder="Nom du joueur"></label></div><div class="tablewrap"><table><thead><tr><th data-ts-sort="rank" role="button" tabindex="0">Rang</th><th data-ts-sort="name" role="button" tabindex="0">Joueur</th><th data-ts-sort="starts" role="button" tabindex="0">Départs</th><th data-ts-sort="gp" role="button" tabindex="0">PJ</th><th data-ts-sort="fpts" role="button" tabindex="0">FPTS</th><th data-ts-sort="perStart" role="button" tabindex="0">FP/Départ</th><th data-ts-sort="perGp" role="button" tabindex="0">FP/GP</th></tr></thead><tbody id="tsRows"></tbody></table></div><p class="note">Seules les périodes archivées sont comptabilisées. Les FPTS proviennent de la même source que la page Pointeurs BHL. <a href="bhl-pointeurs.html">Classement complet de la ligue</a></p>';
   $('#tsPhase').value=teamScorersPhase;$('#tsPosition').value=teamScorersPosition;$('#tsSeason').value=teamScorersSeason;$('#tsSearch').value=teamScorersSearch;
   const draw=()=>{
    const grouped=new Map();
@@ -718,12 +719,29 @@ function renderGamesPlayed(){
     if(!grouped.has(id))grouped.set(id,{id:r.id,name:r.name||'Identité non résolue',starts:0,gp:0,fpts:0});
     const v=grouped.get(id);v.starts+=Number(r.starts)||0;v.gp+=Number(r.gp)||0;v.fpts+=Number(r.fpts)||0;
    }
-   const filtered=[...grouped.values()].filter(v=>teamScorerKey(v.name).includes(teamScorerKey(teamScorersSearch))).sort((a,b)=>b.fpts-a.fpts||a.name.localeCompare(b.name,'fr'));
+   const filtered=[...grouped.values()].filter(v=>teamScorerKey(v.name).includes(teamScorerKey(teamScorersSearch))).sort((a,b)=>{
+    if(teamScorersSort==='name')return a.name.localeCompare(b.name,'fr')*(teamScorersSortDescending?-1:1);
+    const metric=v=>teamScorersSort==='starts'?v.starts:teamScorersSort==='gp'?v.gp:teamScorersSort==='perStart'?(v.starts?v.fpts/v.starts:0):teamScorersSort==='perGp'?(v.gp?v.fpts/v.gp:0):v.fpts;
+    const diff=metric(a)-metric(b);
+    return (teamScorersSortDescending?-diff:diff)||a.name.localeCompare(b.name,'fr');
+   });
+   document.querySelectorAll('[data-ts-sort]').forEach(th=>{
+    const active=th.dataset.tsSort===teamScorersSort||(th.dataset.tsSort==='rank'&&teamScorersSort==='fpts');
+    th.setAttribute('aria-sort',active?(teamScorersSortDescending?'descending':'ascending'):'none');
+    th.style.cursor='pointer';
+    th.title='Trier par '+th.textContent;
+    th.textContent=th.textContent.replace(/ [▲▼]$/,'')+(active?(teamScorersSortDescending?' ▼':' ▲'):'');
+   });
    $('#tsRows').innerHTML=filtered.map((v,i)=>'<tr><td>'+(i+1)+'</td><td><button type="button" class="player-profile" data-bhl-player-id="'+esc(v.id)+'" data-bhl-player-name="'+esc(v.name)+'">'+esc(v.name)+'</button></td><td>'+v.starts+'</td><td>'+v.gp+'</td><td><b>'+fmt(v.fpts,2)+'</b></td><td>'+ (v.starts?fmt(v.fpts/v.starts,2):'—')+'</td><td>'+(v.gp?fmt(v.fpts/v.gp,2):'—')+'</td></tr>').join('')||'<tr><td colspan="7">Aucun pointeur disponible.</td></tr>';
   };
   for(const [id,field] of [['tsPhase','teamScorersPhase'],['tsPosition','teamScorersPosition'],['tsSeason','teamScorersSeason'],['tsSearch','teamScorersSearch']]){
    $('#'+id).addEventListener(id==='tsSearch'?'input':'change',e=>{if(field==='teamScorersPhase')teamScorersPhase=e.target.value;else if(field==='teamScorersPosition')teamScorersPosition=e.target.value;else if(field==='teamScorersSeason')teamScorersSeason=e.target.value;else teamScorersSearch=e.target.value;draw()});
   }
+  document.querySelectorAll('[data-ts-sort]').forEach(th=>{
+   const activate=()=>{const key=th.dataset.tsSort==='rank'?'fpts':th.dataset.tsSort;if(teamScorersSort===key)teamScorersSortDescending=!teamScorersSortDescending;else{teamScorersSort=key;teamScorersSortDescending=key!=='name'}draw()};
+   th.addEventListener('click',activate);
+   th.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate()}});
+  });
   draw();
  }).catch(e=>{if(selected===requested&&currentTab==='gamesplayed')$('#panel').innerHTML='<div class="card">Impossible de charger les pointeurs : '+esc(e.message)+'</div>'});
 }
