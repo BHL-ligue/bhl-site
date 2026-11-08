@@ -384,7 +384,17 @@ const num=v=>{if(v===null||v===undefined||v==='')return null;const n=Number(Stri
 const fmt=(v,d=0)=>v===null||v===undefined||v===''?'—':Number.isFinite(Number(v))?Number(v).toLocaleString('fr-CA',{maximumFractionDigits:d}):v;
 const pct=v=>v===null||v===undefined||v===''?'—':(Number(v)*100).toLocaleString('fr-CA',{maximumFractionDigits:1})+' %';
 const money=v=>v===null||v===undefined?'—':Number(v).toLocaleString('fr-CA',{maximumFractionDigits:1})+' M$';
-function jsonp(sheet){return new Promise((resolve,reject)=>{const cb='bhlcb_'+sheet.toLowerCase().replace(/[^a-z0-9]/g,'')+'_'+Date.now();const script=document.createElement('script');const timer=setTimeout(()=>{cleanup();reject(new Error('Timeout API '+sheet));},20000);function cleanup(){clearTimeout(timer);try{delete window[cb]}catch(e){window[cb]=undefined}script.remove()}window[cb]=data=>{cleanup();resolve(data)};script.onerror=()=>{cleanup();reject(new Error('Impossible de charger '+sheet))};script.src=API+'?sheet='+encodeURIComponent(sheet)+'&callback='+cb;document.body.appendChild(script);});}
+function jsonp(sheet){
+ const key='bhl:teams-cache:v1:'+sheet;
+ if(sheet==='TEAMS'||sheet==='FORBES'){
+  try{
+   const cached=JSON.parse(localStorage.getItem(key)||'null');
+   if(cached&&cached.savedAt&&Date.now()-cached.savedAt<30*60*1000&&cached.data&&cached.data.ok){
+    return Promise.resolve(cached.data);
+   }
+  }catch(e){}
+ }
+ return new Promise((resolve,reject)=>{const cb='bhlcb_'+sheet.toLowerCase().replace(/[^a-z0-9]/g,'')+'_'+Date.now();const script=document.createElement('script');const timer=setTimeout(()=>{cleanup();reject(new Error('Timeout API '+sheet));},20000);function cleanup(){clearTimeout(timer);try{delete window[cb]}catch(e){window[cb]=undefined}script.remove()}window[cb]=data=>{cleanup();if((sheet==='TEAMS'||sheet==='FORBES')&&data&&data.ok){try{localStorage.setItem(key,JSON.stringify({savedAt:Date.now(),data}))}catch(e){}}resolve(data)};script.onerror=()=>{cleanup();reject(new Error('Impossible de charger '+sheet))};script.src=API+'?sheet='+encodeURIComponent(sheet)+'&callback='+cb;document.body.appendChild(script);});}
 // Deuxième source Google Sheets : protections BHL LOCKS, indépendante de l'API principale.
 const LOCKS_CODES={ANAHEIM:'ANA',ATLANTA:'ATL',CLEVELAND:'BOS',CALIFORNIE:'CAL',CHICAGO:'CHI',COLORADO:'COL',DETROIT:'DET',FLORIDA:'FLA',HARTFORD:'HAR',MINNESOTA:'MIN',MONTREAL:'MTL',NASHVILLE:'NSH',NEWYORK:'NYR',OTTAWA:'OTT','QUÉBEC':'QUE',TORONTO:'TOR'};
 function locksJsonp(sheet){return new Promise((resolve,reject)=>{const cb='bhlLocks_'+Date.now()+'_'+Math.random().toString(36).slice(2);const script=document.createElement('script');const timer=setTimeout(()=>{cleanup();reject(Error('Délai dépassé pour BHL LOCKS'))},20000);function cleanup(){clearTimeout(timer);delete window[cb];script.remove()}window[cb]=d=>{cleanup();resolve(d)};script.onerror=()=>{cleanup();reject(Error('Connexion à BHL LOCKS impossible'))};script.src=LOCKS_API+'?sheet='+encodeURIComponent(sheet)+'&callback='+cb;document.body.appendChild(script)})}
