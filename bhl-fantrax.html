@@ -240,6 +240,27 @@ async function start(){
   const priorRanks=new Map([...historical.entries()].sort((a,b)=>b[1].points-a[1].points||b[1].fpts-a[1].fpts).map(([id],i)=>[id,i+1]));
   const teamPeriodStats=new Map();
   for(const period of completed){const seen=new Set();for(const game of period.matchups)for(const side of [game.away,game.home]){const id=String(side?.teamId||'');if(!id||seen.has(id))continue;seen.add(id);const stat=teamPeriodStats.get(id)||{periods:0,gp:0,hasGp:true};stat.periods++;if(side.gamesPlayed==null||!Number.isFinite(Number(side.gamesPlayed)))stat.hasGp=false;else stat.gp+=Number(side.gamesPlayed);teamPeriodStats.set(id,stat);}}
+  const positionTotals=new Map();
+  let positionPeriods=0;
+  try{
+   const response=await fetch('data/production/scorers.json',{cache:'no-store'});
+   if(!response.ok)throw Error('Archive indisponible');
+   const archive=await response.json();
+   if(!Array.isArray(archive.rows))throw Error('Archive invalide');
+   positionPeriods=Number(archive.coverage?.find(c=>c.season==='2026-27'&&c.phase==='regular')?.periods)||0;
+   for(const p of archive.rows){
+    if(p.season!=='2026-27'||p.phase!=='regular')continue;
+    const key=String(p.team||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().trim();
+    const totals=positionTotals.get(key)||{forward:0,defense:0,goalie:0};
+    if(['forward','defense','goalie'].includes(p.positionGroup))totals[p.positionGroup]+=Number(p.fpts)||0;
+    positionTotals.set(key,totals);
+   }
+  }catch(error){console.warn('Statistiques des partants indisponibles',error)}
+  const positionFor=(name,group)=>{
+   const key=String(name||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().trim();
+   const totals=positionTotals.get(key);
+   return totals?number(totals[group]):'—';
+  };
   const standingsRows=data.standings.slice().sort((a,b)=>a.rank-b.rank);
   $('standings').innerHTML='<table class="bhl-standings-table"><thead><tr><th>Rang</th><th>Équipe</th><th>V</th><th>D</th><th>N</th><th>Points</th><th>Victoires %</th><th>Écart</th><th>FPTS pour</th><th>FPTS contre</th><th>Diff. FPTS</th><th>FP/GP</th><th>FP/Période</th><th>ATT</th><th>DÉF</th><th>GAR</th><th>9D</th><th>Forme</th><th>% Séries</th></tr></thead><tbody>'+standingsRows.map(t=>{
    const rec=record(t),points=t.totalPoints??(rec.w==null?'—':rec.w*2+(rec.d||0));
@@ -255,9 +276,10 @@ async function start(){
    const oldRank=priorRanks.get(String(t.teamId));
    const movement=oldRank&&previousPeriods.length?oldRank-Number(t.rank):null;
    const rankMovement=movement==null?'—':movement>0?'<span class="bhl-form-up">▲ '+movement+'</span>':movement<0?'<span class="bhl-form-down">▼ '+Math.abs(movement)+'</span>':'—';
-   return '<tr><td class="bhl-rank">'+fmt(t.rank)+'</td><td class="bhl-team-col">'+team+'</td><td class="num">'+number(rec.w)+'</td><td class="num">'+number(rec.l)+'</td><td class="num">'+number(rec.d)+'</td><td class="num bhl-points">'+number(points)+'</td><td class="num">'+(t.winPercentage==null?'—':Number(t.winPercentage).toFixed(3).replace(/^0/,''))+'</td><td class="num">'+number(t.gamesBack)+'</td><td class="num">'+number(t.totalPointsFor)+'</td><td class="num">'+number(against(t))+'</td><td class="num">'+diffFpts+'</td><td class="num">'+fpGp+'</td><td class="num">'+fpPeriod+'</td><td class="num" title="Données des partants indisponibles">—</td><td class="num" title="Données des partants indisponibles">—</td><td class="num" title="Données des partants indisponibles">—</td><td class="num">'+lastNine+'</td><td class="num">'+rankMovement+'</td><td class="num">'+(chance(t)==null?'—':chance(t)<0.001?'&lt; 0,1 %':chance(t)>0.999?'&gt; 99,9 %':pct(chance(t)))+'</td></tr>';
+   return '<tr><td class="bhl-rank">'+fmt(t.rank)+'</td><td class="bhl-team-col">'+team+'</td><td class="num">'+number(rec.w)+'</td><td class="num">'+number(rec.l)+'</td><td class="num">'+number(rec.d)+'</td><td class="num bhl-points">'+number(points)+'</td><td class="num">'+(t.winPercentage==null?'—':Number(t.winPercentage).toFixed(3).replace(/^0/,''))+'</td><td class="num">'+number(t.gamesBack)+'</td><td class="num">'+number(t.totalPointsFor)+'</td><td class="num">'+number(against(t))+'</td><td class="num">'+diffFpts+'</td><td class="num">'+fpGp+'</td><td class="num">'+fpPeriod+'</td><td class="num" title="Périodes terminées">'+positionFor(t.teamName,'forward')+'</td><td class="num" title="Périodes terminées">'+positionFor(t.teamName,'defense')+'</td><td class="num" title="Périodes terminées">'+positionFor(t.teamName,'goalie')+'</td><td class="num">'+lastNine+'</td><td class="num">'+rankMovement+'</td><td class="num">'+(chance(t)==null?'—':chance(t)<0.001?'&lt; 0,1 %':chance(t)>0.999?'&gt; 99,9 %':pct(chance(t)))+'</td></tr>';
   }).join('')+'</tbody></table>'+"<div class=\"bhl-standings-legend\"><h3>Comprendre le classement</h3><div class=\"bhl-legend-grid\"><p><strong>Rang :</strong> position actuelle.</p><p><strong>V / D / N :</strong> victoires, défaites et matchs nuls.</p><p><strong>Points :</strong> points au classement.</p><p><strong>Victoires % :</strong> pourcentage de victoires.</p><p><strong>Écart :</strong> retard sur la première place.</p><p><strong>FPTS pour :</strong> points fantasy produits.</p><p><strong>FPTS contre :</strong> points fantasy accordés.</p><p><strong>Diff. FPTS :</strong> FPTS pour moins FPTS contre.</p><p><strong>FP/GP :</strong> FPTS pour par match LNH joué par les joueurs de l’équipe, si disponible.</p><p><strong>FP/Période :</strong> FPTS pour par période complétée.</p><p><strong>9D :</strong> bilan V-D-N des trois dernières périodes complétées, jusqu’à neuf matchs.</p><p><strong>Forme :</strong> évolution du rang au cours des neuf derniers matchs : ▲ montée, ▼ baisse, — inchangé ou données insuffisantes; égalités historiques départagées provisoirement aux FPTS.</p><p><strong>% Séries :</strong> estimation BHL par 10 000 simulations du calendrier restant (8 places). Force : 70 % de la moyenne historique et 30 % des trois dernières périodes, ramenée vers la moyenne de la ligue avec trois périodes de référence. Variabilité observée des scores et incertitude sur la force estimée (plus importante en début de saison); un même score de période sert aux trois duels. Les périodes longues sont ajustées à leur durée. Les scores partiels en cours ne sont pas utilisés. Égalités finales simulées : FPTS, puis rang actuel (hypothèse de modèle). Ce sont des estimations, pas des qualifications garanties.</p></div></div>";
 
+  $('standings').insertAdjacentHTML('beforeend','<p class="muted" style="font-size:12px;margin-top:10px">ATT / DÉF / GAR : production des joueurs partants sur '+(positionPeriods?positionPeriods+' périodes terminées':'les périodes archivées')+'. La période en cours est exclue. « FPTS pour » cumule les affrontements Fantrax et utilise une autre base de calcul.</p>');
   const standingsTable=$('standings').querySelector('.bhl-standings-table');
   if(standingsTable){
    const headings=[...standingsTable.querySelectorAll('thead th')];
