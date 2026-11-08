@@ -384,8 +384,21 @@ const num=v=>{if(v===null||v===undefined||v==='')return null;const n=Number(Stri
 const fmt=(v,d=0)=>v===null||v===undefined||v===''?'—':Number.isFinite(Number(v))?Number(v).toLocaleString('fr-CA',{maximumFractionDigits:d}):v;
 const pct=v=>v===null||v===undefined||v===''?'—':(Number(v)*100).toLocaleString('fr-CA',{maximumFractionDigits:1})+' %';
 const money=v=>v===null||v===undefined?'—':Number(v).toLocaleString('fr-CA',{maximumFractionDigits:1})+' M$';
+let bhlTeamsSnapshotPromise=null;
+function bhlTeamsSnapshot(){
+ return bhlTeamsSnapshotPromise||(bhlTeamsSnapshotPromise=fetch('data/teams-snapshot.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Instantané non disponible');return r.json()}).then(d=>{if(!d.TEAMS?.ok||!d.FORBES?.ok)throw Error('Instantané incomplet');return d}).catch(()=>null));
+}
 function jsonp(sheet){
  const key='bhl:teams-cache:v1:'+sheet;
+ if(sheet==='TEAMS'||sheet==='FORBES'){
+  return bhlTeamsSnapshot().then(snapshot=>{
+   if(snapshot&&snapshot[sheet])return snapshot[sheet];
+   return jsonpFallback(sheet,key);
+  });
+ }
+ return jsonpFallback(sheet,key);
+}
+function jsonpFallback(sheet,key){
  if(sheet==='TEAMS'||sheet==='FORBES'){
   try{
    const cached=JSON.parse(localStorage.getItem(key)||'null');
