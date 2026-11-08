@@ -112,8 +112,7 @@ def main():
                     players[(team_name, fantrax_id, player_name, group)] += fpts
             checked += 1
         date += dt.timedelta(days=1)
-    if not checked:
-        raise RuntimeError("No completed NHL games found; preserve previous snapshot")
+    # A new period may have no completed games yet; publish zero provisional FPTS.
     output = {
         "source": "NHL public boxscores and play-by-play; provisional BHL calculation",
         "updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
