@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T21:15:21.360954+00:00",
+  "updatedAt": "2026-11-09T22:00:20.717739+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -741,7 +741,7 @@
         {
           "id": "02yjl",
           "name": "Leon Draisaitl",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -771,12 +771,12 @@
         {
           "id": "05kua",
           "name": "Emil Heineman",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "01z7v",
@@ -840,7 +840,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01zql",
@@ -9981,7 +9981,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.25
+        "score": 233.65
       },
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
@@ -10098,7 +10098,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.25
+        "score": 233.65
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
@@ -10215,7 +10215,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.25
+        "score": 233.65
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
@@ -11976,7 +11976,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.25,
+            "score": 233.65,
             "gamesPlayed": 66
           },
           "home": {
@@ -12102,7 +12102,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.25,
+            "score": 233.65,
             "gamesPlayed": 66
           },
           "home": {
@@ -12228,7 +12228,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.25,
+            "score": 233.65,
             "gamesPlayed": 66
           },
           "home": {
@@ -18182,7 +18182,7 @@
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3076.35,
+      "totalPointsFor": 3077.55,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2703.45
@@ -18195,7 +18195,7 @@
       "totalPointsFor": 3055.05,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2653.6
+      "totalPointsAgainst": 2654.0
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18215,7 +18215,7 @@
       "totalPointsFor": 2748.45,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2662.75
+      "totalPointsAgainst": 2663.15
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18255,7 +18255,7 @@
       "totalPointsFor": 2684.25,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 2700.05
+      "totalPointsAgainst": 2700.45
     },
     {
       "teamId": "p7f42l5emo2tig2e",
