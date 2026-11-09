@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T14:41:01.472148+00:00",
+  "updatedAt": "2026-11-09T15:38:00.916363+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -3299,16 +3299,6 @@
           "status": "INJURED_RESERVE"
         },
         {
-          "id": "06axc",
-          "name": "Samuel Honzek",
-          "position": "LW",
-          "eligiblePositions": [
-            "LW",
-            "C"
-          ],
-          "status": "MINORS"
-        },
-        {
           "id": "02azb",
           "name": "Mark Scheifele",
           "position": "C",
@@ -3362,6 +3352,15 @@
             "C"
           ],
           "status": "ACTIVE"
+        },
+        {
+          "id": "05rfa",
+          "name": "Isaac Howard",
+          "position": "LW",
+          "eligiblePositions": [
+            "LW"
+          ],
+          "status": "MINORS"
         },
         {
           "id": "02o7l",
@@ -3903,15 +3902,6 @@
           "status": "MINORS"
         },
         {
-          "id": "04r0j",
-          "name": "Michael Kesselring",
-          "position": "D",
-          "eligiblePositions": [
-            "D"
-          ],
-          "status": "RESERVE"
-        },
-        {
           "id": "04yi4",
           "name": "Pyotr Kochetkov",
           "position": "G",
@@ -4125,6 +4115,15 @@
             "C"
           ],
           "status": "ACTIVE"
+        },
+        {
+          "id": "031oq",
+          "name": "Brett Pesce",
+          "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "04an5",
@@ -4594,15 +4593,6 @@
           "status": "RESERVE"
         },
         {
-          "id": "02yjw",
-          "name": "Tristan Jarry",
-          "position": "G",
-          "eligiblePositions": [
-            "G"
-          ],
-          "status": "RESERVE"
-        },
-        {
           "id": "04f17",
           "name": "Fabian Zetterlund",
           "position": "LW",
@@ -4649,6 +4639,17 @@
             "RW"
           ],
           "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "042xa",
+          "name": "Ross Colton",
+          "position": "C",
+          "eligiblePositions": [
+            "LW",
+            "RW",
+            "C"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "016g3",
@@ -7062,7 +7063,8 @@
         "round": 9,
         "pick": 133,
         "playerId": "05rfa",
-        "teamId": "uzhvniysmo2tig2e"
+        "teamId": "uzhvniysmo2tig2e",
+        "playerName": "Isaac Howard"
       },
       {
         "round": 9,
@@ -7204,8 +7206,7 @@
         "round": 10,
         "pick": 154,
         "playerId": "06axc",
-        "teamId": "p7f42l5emo2tig2e",
-        "playerName": "Samuel Honzek"
+        "teamId": "p7f42l5emo2tig2e"
       },
       {
         "round": 10,
@@ -7661,8 +7662,7 @@
         "round": 14,
         "pick": 222,
         "playerId": "04r0j",
-        "teamId": "kplo9zwcmo2tig2f",
-        "playerName": "Michael Kesselring"
+        "teamId": "kplo9zwcmo2tig2f"
       },
       {
         "round": 14,
