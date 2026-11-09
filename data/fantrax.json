@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T20:23:22.027811+00:00",
+  "updatedAt": "2026-11-09T21:15:21.360954+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -3960,7 +3960,7 @@
         {
           "id": "02fzj",
           "name": "Blake Coleman",
-          "position": "LW",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW"
@@ -3975,7 +3975,7 @@
             "LW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01c13",
@@ -4017,12 +4017,12 @@
         {
           "id": "01zt0",
           "name": "Jason Zucker",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "042t5",
@@ -9929,12 +9929,12 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 147.15
+        "score": 146.95
       },
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 134.7
+        "score": 135.0
       }
     },
     {
@@ -10025,7 +10025,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.15
+        "score": 185.45
       }
     },
     {
@@ -10033,7 +10033,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 134.7
+        "score": 135.0
       },
       "home": {
         "teamId": "b2lquor7mo2tig2e",
@@ -10046,7 +10046,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 147.15
+        "score": 146.95
       },
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
@@ -10116,7 +10116,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.15
+        "score": 185.45
       }
     },
     {
@@ -10150,7 +10150,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 134.7
+        "score": 135.0
       },
       "home": {
         "teamId": "p7f42l5emo2tig2e",
@@ -10163,7 +10163,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 147.15
+        "score": 146.95
       },
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
@@ -10207,7 +10207,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.15
+        "score": 185.45
       }
     },
     {
@@ -11996,7 +11996,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.15,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12032,7 +12032,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 147.15,
+            "score": 146.95,
             "gamesPlayed": 61
           },
           "home": {
@@ -12046,7 +12046,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 134.7,
+            "score": 135.0,
             "gamesPlayed": 58
           },
           "home": {
@@ -12094,7 +12094,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.15,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12158,7 +12158,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 147.15,
+            "score": 146.95,
             "gamesPlayed": 61
           },
           "home": {
@@ -12172,7 +12172,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 134.7,
+            "score": 135.0,
             "gamesPlayed": 58
           },
           "home": {
@@ -12192,7 +12192,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.15,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12284,13 +12284,13 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 147.15,
+            "score": 146.95,
             "gamesPlayed": 61
           },
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 134.7,
+            "score": 135.0,
             "gamesPlayed": 58
           }
         }
@@ -18155,7 +18155,7 @@
       "totalPointsFor": 3232.5,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2540.7
+      "totalPointsAgainst": 2541.0
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18165,7 +18165,7 @@
       "totalPointsFor": 2912.25,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2552.45
+      "totalPointsAgainst": 2552.25
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18202,7 +18202,7 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 2978.7,
+      "totalPointsFor": 2979.6,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2733.55
@@ -18215,7 +18215,7 @@
       "totalPointsFor": 2748.45,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2662.95
+      "totalPointsAgainst": 2662.75
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18225,7 +18225,7 @@
       "totalPointsFor": 2834.4,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2724.6
+      "totalPointsAgainst": 2724.9
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18235,17 +18235,17 @@
       "totalPointsFor": 2709.0,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2802.05
+      "totalPointsAgainst": 2802.35
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "8-10-0",
-      "totalPointsFor": 2355.15,
+      "totalPointsFor": 2356.05,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2669.45
+      "totalPointsAgainst": 2669.25
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18265,7 +18265,7 @@
       "totalPointsFor": 2170.95,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2649.55
+      "totalPointsAgainst": 2649.85
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18285,17 +18285,17 @@
       "totalPointsFor": 2446.65,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2858.4
+      "totalPointsAgainst": 2858.7
     },
     {
       "teamId": "uzhvniysmo2tig2e",
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "3-15-0",
-      "totalPointsFor": 2334.45,
+      "totalPointsFor": 2333.85,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2673.15
+      "totalPointsAgainst": 2673.45
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
