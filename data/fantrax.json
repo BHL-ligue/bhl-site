@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T22:43:30.014474+00:00",
+  "updatedAt": "2026-11-09T23:23:25.767703+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -927,7 +927,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "066sp",
@@ -1038,7 +1038,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "070fm",
@@ -3625,7 +3625,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02ybo",
@@ -3653,7 +3653,7 @@
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02un7",
@@ -3727,7 +3727,7 @@
             "LW",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04f1z",
@@ -3811,7 +3811,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02g00",
@@ -4491,12 +4491,12 @@
         {
           "id": "031of",
           "name": "William Carrier",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02oar",
@@ -4634,13 +4634,13 @@
         {
           "id": "042xa",
           "name": "Ross Colton",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "016g3",
@@ -9981,7 +9981,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.65
+        "score": 233.45
       },
       "home": {
         "teamId": "4fmu58uhmo2tig2f",
@@ -10098,7 +10098,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.65
+        "score": 233.45
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
@@ -10215,7 +10215,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 233.65
+        "score": 233.45
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
@@ -11976,7 +11976,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.65,
+            "score": 233.45,
             "gamesPlayed": 66
           },
           "home": {
@@ -12102,7 +12102,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.65,
+            "score": 233.45,
             "gamesPlayed": 66
           },
           "home": {
@@ -12228,7 +12228,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 233.65,
+            "score": 233.45,
             "gamesPlayed": 66
           },
           "home": {
@@ -18182,7 +18182,7 @@
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3077.55,
+      "totalPointsFor": 3076.95,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2703.45
@@ -18195,7 +18195,7 @@
       "totalPointsFor": 3055.05,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2654.0
+      "totalPointsAgainst": 2653.8
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18215,7 +18215,7 @@
       "totalPointsFor": 2748.45,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2663.15
+      "totalPointsAgainst": 2662.95
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18255,7 +18255,7 @@
       "totalPointsFor": 2684.25,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 2700.45
+      "totalPointsAgainst": 2700.25
     },
     {
       "teamId": "p7f42l5emo2tig2e",

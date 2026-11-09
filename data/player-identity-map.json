@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-09T22:43:30.014474+00:00"
+    "rosterUpdatedAt": "2026-11-09T23:23:25.767703+00:00"
   },
   "players": {
     "02un4": {
@@ -1156,7 +1156,7 @@
       "nhlName": "Tom Willander",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "066sp": {
@@ -1300,7 +1300,7 @@
       "nhlName": "Alberts Smits",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "070fm": {
@@ -4583,7 +4583,7 @@
       "nhlName": "Arturs Silovs",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "02ybo": {
@@ -4619,7 +4619,7 @@
       "nhlName": "Josh Anderson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "02un7": {
@@ -4715,7 +4715,7 @@
       "nhlName": "Aliaksei Protas",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "04f1z": {
@@ -4823,7 +4823,7 @@
       "nhlName": "Sergei Bobrovsky",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "02g00": {
@@ -5681,13 +5681,13 @@
     "031of": {
       "fantraxName": "William Carrier",
       "bhlTeam": "Anaheim Mighty Ducks",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "CAR",
       "nhlId": 8477478,
       "nhlName": "William Carrier",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "02oar": {
@@ -6130,8 +6130,8 @@
       "status": "confirmed",
       "fantraxName": "Ross Colton",
       "bhlTeam": "Anaheim Mighty Ducks",
-      "position": "C",
-      "rosterStatus": "RESERVE",
+      "position": "RW",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     }
   },
