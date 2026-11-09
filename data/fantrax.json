@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T17:39:09.862986+00:00",
+  "updatedAt": "2026-11-09T19:28:23.572223+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -1340,7 +1340,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "06rqm",
@@ -1399,7 +1399,7 @@
         {
           "id": "04r0e",
           "name": "Pontus Holmberg",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -1428,7 +1428,7 @@
         {
           "id": "01c32",
           "name": "Brayden Schenn",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "C"
@@ -1442,7 +1442,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05x9t",
@@ -3046,7 +3046,7 @@
             "LW",
             "C"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04ln4",
@@ -3149,15 +3149,6 @@
           "position": "C",
           "eligiblePositions": [
             "RW",
-            "C"
-          ],
-          "status": "ACTIVE"
-        },
-        {
-          "id": "06hk9",
-          "name": "Vitali Pinchuk",
-          "position": "C",
-          "eligiblePositions": [
             "C"
           ],
           "status": "RESERVE"
@@ -6927,8 +6918,7 @@
         "round": 8,
         "pick": 113,
         "playerId": "06hk9",
-        "teamId": "uzhvniysmo2tig2e",
-        "playerName": "Vitali Pinchuk"
+        "teamId": "uzhvniysmo2tig2e"
       },
       {
         "round": 8,
