@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T12:30:24.066341+00:00",
+  "updatedAt": "2026-11-09T13:46:30.756769+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -4515,7 +4515,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03l0t",
@@ -4600,7 +4600,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04f17",
@@ -4623,13 +4623,13 @@
         {
           "id": "06ag2",
           "name": "James Hagens",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02ybl",
@@ -4685,7 +4685,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "04mv2",
@@ -4755,7 +4755,7 @@
         {
           "id": "051z0",
           "name": "Tim Stutzle",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
