@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T08:52:57.745747+00:00",
+  "updatedAt": "2026-11-09T09:46:30.303248+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -1530,7 +1530,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01f3e",
@@ -1606,7 +1606,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05r1l",
@@ -1722,15 +1722,6 @@
           "status": "RESERVE"
         },
         {
-          "id": "02o78",
-          "name": "Brett Kulak",
-          "position": "D",
-          "eligiblePositions": [
-            "D"
-          ],
-          "status": "ACTIVE"
-        },
-        {
           "id": "04gek",
           "name": "Sean Durzi",
           "position": "D",
@@ -1783,7 +1774,7 @@
           "eligiblePositions": [
             "G"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04zb4",
