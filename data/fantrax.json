@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-09T23:59:00.182995+00:00",
+  "updatedAt": "2026-11-10T00:54:27.560905+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -1358,7 +1358,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03mn8",
@@ -1497,6 +1497,15 @@
             "D"
           ],
           "status": "RESERVE"
+        },
+        {
+          "id": "03rew",
+          "name": "Erik Cernak",
+          "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "ACTIVE"
         }
       ]
     },
