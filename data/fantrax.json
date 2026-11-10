@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-10T16:23:33.166015+00:00",
+  "updatedAt": "2026-11-10T17:16:02.937993+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12412,7 +12412,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.1,
+            "score": 16.9,
             "gamesPlayed": 6
           },
           "home": {
@@ -12510,7 +12510,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.1,
+            "score": 16.9,
             "gamesPlayed": 6
           },
           "home": {
@@ -12608,7 +12608,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.1,
+            "score": 16.9,
             "gamesPlayed": 6
           },
           "home": {
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 2849.85,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2757.0
+      "totalPointsAgainst": 2756.8
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 2742.6,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2825.15
+      "totalPointsAgainst": 2824.95
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2073.9,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 2766.95
+      "totalPointsAgainst": 2766.75
     }
   ],
   "matchups": [
@@ -18420,7 +18420,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.1,
+        "score": 16.9,
         "gamesPlayed": 6
       },
       "home": {
@@ -18518,7 +18518,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.1,
+        "score": 16.9,
         "gamesPlayed": 6
       },
       "home": {
@@ -18616,7 +18616,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.1,
+        "score": 16.9,
         "gamesPlayed": 6
       },
       "home": {
