@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-10T06:14:13.620252+00:00",
+  "updatedAt": "2026-11-10T07:28:01.397183+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -18181,7 +18181,7 @@
       "teamName": "Ottawa Senators",
       "rank": 3,
       "points": "13-5-0",
-      "totalPointsFor": 3187.2,
+      "totalPointsFor": 3187.95,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2701.25
@@ -18191,7 +18191,7 @@
       "teamName": "Detroit Red Wings",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3109.95,
+      "totalPointsFor": 3121.05,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2678.4
@@ -18221,7 +18221,7 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "11-7-0",
-      "totalPointsFor": 2767.65,
+      "totalPointsFor": 2768.55,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
       "totalPointsAgainst": 2695.0
@@ -18231,7 +18231,7 @@
       "teamName": "New York Rangers",
       "rank": 8,
       "points": "10-8-0",
-      "totalPointsFor": 2841.75,
+      "totalPointsFor": 2849.85,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
       "totalPointsAgainst": 2756.6
@@ -18251,7 +18251,7 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "8-10-0",
-      "totalPointsFor": 2394.15,
+      "totalPointsFor": 2408.55,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
       "totalPointsAgainst": 2710.35
@@ -18261,7 +18261,7 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 11,
       "points": "7-11-0",
-      "totalPointsFor": 2694.75,
+      "totalPointsFor": 2695.05,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
       "totalPointsAgainst": 2713.8
@@ -18271,7 +18271,7 @@
       "teamName": "Atlanta Thrashers",
       "rank": 12,
       "points": "5-13-0",
-      "totalPointsFor": 2183.55,
+      "totalPointsFor": 2183.85,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
       "totalPointsAgainst": 2676.3
