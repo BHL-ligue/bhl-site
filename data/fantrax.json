@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-10T15:29:32.331808+00:00",
+  "updatedAt": "2026-11-10T16:23:33.166015+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -4215,12 +4215,12 @@
         {
           "id": "03rag",
           "name": "Jack Roslovic",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "RW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06ig3",
@@ -4290,13 +4290,13 @@
         {
           "id": "02wy7",
           "name": "Pavel Buchnevich",
-          "position": "RW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05td4",
@@ -10021,7 +10021,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 153.6
+        "score": 153.8
       }
     },
     {
@@ -10112,7 +10112,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 153.6
+        "score": 153.8
       }
     },
     {
@@ -10203,7 +10203,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 153.6
+        "score": 153.8
       }
     },
     {
@@ -12019,7 +12019,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 153.6,
+            "score": 153.8,
             "gamesPlayed": 59
           }
         },
@@ -12117,7 +12117,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 153.6,
+            "score": 153.8,
             "gamesPlayed": 59
           }
         },
@@ -12215,7 +12215,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 153.6,
+            "score": 153.8,
             "gamesPlayed": 59
           }
         },
@@ -12348,7 +12348,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.0,
+            "score": 22.3,
             "gamesPlayed": 7
           }
         },
@@ -12412,7 +12412,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 16.7,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
@@ -12474,7 +12474,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.0,
+            "score": 22.3,
             "gamesPlayed": 7
           }
         },
@@ -12510,7 +12510,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 16.7,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
@@ -12600,7 +12600,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.0,
+            "score": 22.3,
             "gamesPlayed": 7
           }
         },
@@ -12608,7 +12608,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 16.7,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 2913.45,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2583.35
+      "totalPointsAgainst": 2583.65
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18191,10 +18191,10 @@
       "teamName": "Detroit Red Wings",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3121.05,
+      "totalPointsFor": 3121.95,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2678.4
+      "totalPointsAgainst": 2678.6
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18204,7 +18204,7 @@
       "totalPointsFor": 3093.45,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2722.05
+      "totalPointsAgainst": 2722.25
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 2768.55,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2695.0
+      "totalPointsAgainst": 2695.3
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 2849.85,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2756.6
+      "totalPointsAgainst": 2757.0
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 2742.6,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2824.75
+      "totalPointsAgainst": 2825.15
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18254,14 +18254,14 @@
       "totalPointsFor": 2408.55,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2710.35
+      "totalPointsAgainst": 2710.65
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
       "teamName": "Anaheim Mighty Ducks",
       "rank": 11,
       "points": "7-11-0",
-      "totalPointsFor": 2695.05,
+      "totalPointsFor": 2695.65,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
       "totalPointsAgainst": 2713.8
@@ -18284,7 +18284,7 @@
       "totalPointsFor": 2331.3,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 2724.8
+      "totalPointsAgainst": 2725.0
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18301,7 +18301,7 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "3-15-0",
-      "totalPointsFor": 2383.95,
+      "totalPointsFor": 2385.15,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
       "totalPointsAgainst": 2690.5
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2073.9,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 2766.55
+      "totalPointsAgainst": 2766.95
     }
   ],
   "matchups": [
@@ -18356,7 +18356,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.0,
+        "score": 22.3,
         "gamesPlayed": 7
       }
     },
@@ -18420,7 +18420,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 16.7,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
@@ -18482,7 +18482,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.0,
+        "score": 22.3,
         "gamesPlayed": 7
       }
     },
@@ -18518,7 +18518,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 16.7,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
@@ -18608,7 +18608,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.0,
+        "score": 22.3,
         "gamesPlayed": 7
       }
     },
@@ -18616,7 +18616,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 16.7,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
