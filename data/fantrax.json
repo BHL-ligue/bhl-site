@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-10T18:46:42.613154+00:00",
+  "updatedAt": "2026-11-10T19:36:40.650399+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -1460,7 +1460,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02fzm",
@@ -1496,7 +1496,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rew",
@@ -12348,7 +12348,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.6,
+            "score": 23.4,
             "gamesPlayed": 7
           }
         },
@@ -12390,7 +12390,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 5.15,
+            "score": 5.45,
             "gamesPlayed": 3
           }
         },
@@ -12404,7 +12404,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 13.6,
+            "score": 13.9,
             "gamesPlayed": 5
           }
         },
@@ -12412,7 +12412,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.3,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
@@ -12474,7 +12474,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.6,
+            "score": 23.4,
             "gamesPlayed": 7
           }
         },
@@ -12510,13 +12510,13 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.3,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 5.15,
+            "score": 5.45,
             "gamesPlayed": 3
           }
         },
@@ -12530,7 +12530,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 13.6,
+            "score": 13.9,
             "gamesPlayed": 5
           }
         },
@@ -12600,7 +12600,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 22.6,
+            "score": 23.4,
             "gamesPlayed": 7
           }
         },
@@ -12608,7 +12608,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 17.3,
+            "score": 17.1,
             "gamesPlayed": 6
           },
           "home": {
@@ -12636,13 +12636,13 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 13.6,
+            "score": 13.9,
             "gamesPlayed": 5
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 5.15,
+            "score": 5.45,
             "gamesPlayed": 3
           }
         }
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3236.7,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2558.35
+      "totalPointsAgainst": 2558.65
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 2913.45,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2583.95
+      "totalPointsAgainst": 2584.75
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18191,7 +18191,7 @@
       "teamName": "Detroit Red Wings",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3121.95,
+      "totalPointsFor": 3125.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2678.6
@@ -18224,17 +18224,17 @@
       "totalPointsFor": 2768.55,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2695.6
+      "totalPointsAgainst": 2696.4
     },
     {
       "teamId": "l9ssazuemo2tig2e",
       "teamName": "New York Rangers",
       "rank": 8,
       "points": "10-8-0",
-      "totalPointsFor": 2849.85,
+      "totalPointsFor": 2850.75,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2757.2
+      "totalPointsAgainst": 2757.3
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 2742.6,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2825.35
+      "totalPointsAgainst": 2825.15
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18254,7 +18254,7 @@
       "totalPointsFor": 2408.55,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2710.95
+      "totalPointsAgainst": 2712.05
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18281,10 +18281,10 @@
       "teamName": "Florida Panthers",
       "rank": 13,
       "points": "4-14-0",
-      "totalPointsFor": 2331.3,
+      "totalPointsFor": 2332.2,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 2725.0
+      "totalPointsAgainst": 2725.3
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18301,10 +18301,10 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "3-15-0",
-      "totalPointsFor": 2384.55,
+      "totalPointsFor": 2385.15,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2690.5
+      "totalPointsAgainst": 2690.8
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2073.9,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 2767.15
+      "totalPointsAgainst": 2767.25
     }
   ],
   "matchups": [
@@ -18356,7 +18356,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.6,
+        "score": 23.4,
         "gamesPlayed": 7
       }
     },
@@ -18398,7 +18398,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 5.15,
+        "score": 5.45,
         "gamesPlayed": 3
       }
     },
@@ -18412,7 +18412,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 13.6,
+        "score": 13.9,
         "gamesPlayed": 5
       }
     },
@@ -18420,7 +18420,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.3,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
@@ -18482,7 +18482,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.6,
+        "score": 23.4,
         "gamesPlayed": 7
       }
     },
@@ -18518,13 +18518,13 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.3,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 5.15,
+        "score": 5.45,
         "gamesPlayed": 3
       }
     },
@@ -18538,7 +18538,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 13.6,
+        "score": 13.9,
         "gamesPlayed": 5
       }
     },
@@ -18608,7 +18608,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 22.6,
+        "score": 23.4,
         "gamesPlayed": 7
       }
     },
@@ -18616,7 +18616,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 17.3,
+        "score": 17.1,
         "gamesPlayed": 6
       },
       "home": {
@@ -18644,13 +18644,13 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 13.6,
+        "score": 13.9,
         "gamesPlayed": 5
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 5.15,
+        "score": 5.45,
         "gamesPlayed": 3
       }
     }
