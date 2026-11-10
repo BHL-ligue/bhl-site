@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-10T19:36:40.650399+00:00",
+  "updatedAt": "2026-11-10T20:26:04.852081+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12348,7 +12348,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 23.4,
+            "score": 23.0,
             "gamesPlayed": 7
           }
         },
@@ -12474,7 +12474,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 23.4,
+            "score": 23.0,
             "gamesPlayed": 7
           }
         },
@@ -12600,7 +12600,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 23.4,
+            "score": 23.0,
             "gamesPlayed": 7
           }
         },
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 2913.45,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2584.75
+      "totalPointsAgainst": 2584.35
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18191,7 +18191,7 @@
       "teamName": "Detroit Red Wings",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3125.25,
+      "totalPointsFor": 3124.05,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2678.6
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 2768.55,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2696.4
+      "totalPointsAgainst": 2696.0
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18254,7 +18254,7 @@
       "totalPointsFor": 2408.55,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2712.05
+      "totalPointsAgainst": 2711.65
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18356,7 +18356,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 23.4,
+        "score": 23.0,
         "gamesPlayed": 7
       }
     },
@@ -18482,7 +18482,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 23.4,
+        "score": 23.0,
         "gamesPlayed": 7
       }
     },
@@ -18608,7 +18608,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 23.4,
+        "score": 23.0,
         "gamesPlayed": 7
       }
     },
