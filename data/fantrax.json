@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-11T19:08:36.672516+00:00",
+  "updatedAt": "2026-11-11T20:04:10.845372+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -4613,13 +4613,13 @@
         {
           "id": "06ag2",
           "name": "James Hagens",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "02ybl",
@@ -4638,7 +4638,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "RESERVE"
         },
         {
           "id": "042xa",
@@ -12328,7 +12328,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.5,
+            "score": 52.7,
             "gamesPlayed": 15
           },
           "home": {
@@ -12426,7 +12426,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.5,
+            "score": 52.7,
             "gamesPlayed": 15
           },
           "home": {
@@ -12558,7 +12558,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.5,
+            "score": 52.7,
             "gamesPlayed": 15
           }
         },
@@ -18181,7 +18181,7 @@
       "teamName": "Ottawa Senators",
       "rank": 3,
       "points": "13-5-0",
-      "totalPointsFor": 3303.9,
+      "totalPointsFor": 3303.3,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2787.95
@@ -18191,7 +18191,7 @@
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3165.3,
+      "totalPointsFor": 3165.9,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2775.4
@@ -18211,10 +18211,10 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3109.05,
+      "totalPointsFor": 3108.45,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2847.85
+      "totalPointsAgainst": 2848.05
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2212.35,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2784.75
+      "totalPointsAgainst": 2784.95
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18294,7 +18294,7 @@
       "totalPointsFor": 2571.75,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2949.95
+      "totalPointsAgainst": 2950.15
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18336,7 +18336,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.5,
+        "score": 52.7,
         "gamesPlayed": 15
       },
       "home": {
@@ -18434,7 +18434,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.5,
+        "score": 52.7,
         "gamesPlayed": 15
       },
       "home": {
@@ -18566,7 +18566,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.5,
+        "score": 52.7,
         "gamesPlayed": 15
       }
     },
