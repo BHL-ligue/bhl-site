@@ -1,4 +1,4 @@
-import {initWjcDraftAdmin} from './bhl-wjc-draft-admin.js?v=2';
+import {initWjcDraftAdmin} from './bhl-wjc-draft-admin.js?v=4';
 import {initDraftBoardAdmin} from './bhl-draft-board-admin.js?v=lottery3';
 import {initJournalistsAdmin} from './bhl-news-journalists.js?v=coauthors1';
 import{initRulesAdmin}from'./bhl-rules-admin.js?v=2';import{initCaptainAdmin}from'./bhl-admin-captains.js?v=1';import{createClient}from'https://esm.sh/@supabase/supabase-js@2.57.4';import{SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY}from'./bhl-supabase.js';const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),$=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function msg(t,c=''){$('#status').textContent=t;$('#status').className='status '+c}
