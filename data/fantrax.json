@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-11T18:11:44.185810+00:00",
+  "updatedAt": "2026-11-11T19:08:36.672516+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12328,13 +12328,13 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.9,
+            "score": 52.5,
             "gamesPlayed": 15
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 43.15,
+            "score": 42.95,
             "gamesPlayed": 14
           }
         },
@@ -12376,7 +12376,7 @@
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 29.45,
+            "score": 29.65,
             "gamesPlayed": 9
           }
         },
@@ -12426,7 +12426,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.9,
+            "score": 52.5,
             "gamesPlayed": 15
           },
           "home": {
@@ -12460,7 +12460,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 43.15,
+            "score": 42.95,
             "gamesPlayed": 14
           }
         },
@@ -12502,7 +12502,7 @@
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 29.45,
+            "score": 29.65,
             "gamesPlayed": 9
           }
         },
@@ -12558,7 +12558,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 52.9,
+            "score": 52.5,
             "gamesPlayed": 15
           }
         },
@@ -12586,7 +12586,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 43.15,
+            "score": 42.95,
             "gamesPlayed": 14
           }
         },
@@ -12628,7 +12628,7 @@
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 29.45,
+            "score": 29.65,
             "gamesPlayed": 9
           }
         },
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3376.5,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2649.7
+      "totalPointsAgainst": 2649.5
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 2975.7,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2640.95
+      "totalPointsAgainst": 2641.15
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3303.9,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2788.15
+      "totalPointsAgainst": 2787.95
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18211,10 +18211,10 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3106.95,
+      "totalPointsFor": 3109.05,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2848.25
+      "totalPointsAgainst": 2847.85
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18254,7 +18254,7 @@
       "totalPointsFor": 2459.4,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2775.6
+      "totalPointsAgainst": 2775.8
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2212.35,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2785.35
+      "totalPointsAgainst": 2784.75
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18291,10 +18291,10 @@
       "teamName": "Chicago Blackhawks",
       "rank": 14,
       "points": "3-15-0",
-      "totalPointsFor": 2571.45,
+      "totalPointsFor": 2571.75,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2950.35
+      "totalPointsAgainst": 2949.95
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2120.25,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 2822.1
+      "totalPointsAgainst": 2822.3
     }
   ],
   "matchups": [
@@ -18336,13 +18336,13 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.9,
+        "score": 52.5,
         "gamesPlayed": 15
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 43.15,
+        "score": 42.95,
         "gamesPlayed": 14
       }
     },
@@ -18384,7 +18384,7 @@
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 29.45,
+        "score": 29.65,
         "gamesPlayed": 9
       }
     },
@@ -18434,7 +18434,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.9,
+        "score": 52.5,
         "gamesPlayed": 15
       },
       "home": {
@@ -18468,7 +18468,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 43.15,
+        "score": 42.95,
         "gamesPlayed": 14
       }
     },
@@ -18510,7 +18510,7 @@
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 29.45,
+        "score": 29.65,
         "gamesPlayed": 9
       }
     },
@@ -18566,7 +18566,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 52.9,
+        "score": 52.5,
         "gamesPlayed": 15
       }
     },
@@ -18594,7 +18594,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 43.15,
+        "score": 42.95,
         "gamesPlayed": 14
       }
     },
@@ -18636,7 +18636,7 @@
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 29.45,
+        "score": 29.65,
         "gamesPlayed": 9
       }
     },
