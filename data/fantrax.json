@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-11T16:20:25.375497+00:00",
+  "updatedAt": "2026-11-11T17:21:47.014531+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12320,7 +12320,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 41.2,
+            "score": 41.6,
             "gamesPlayed": 16
           }
         },
@@ -12432,7 +12432,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 41.2,
+            "score": 41.6,
             "gamesPlayed": 16
           }
         },
@@ -12544,7 +12544,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 41.2,
+            "score": 41.6,
             "gamesPlayed": 16
           }
         },
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3303.9,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2786.95
+      "totalPointsAgainst": 2787.35
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 2796.75,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2763.4
+      "totalPointsAgainst": 2763.8
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18264,7 +18264,7 @@
       "totalPointsFor": 2752.8,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 2778.7
+      "totalPointsAgainst": 2779.1
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18291,7 +18291,7 @@
       "teamName": "Chicago Blackhawks",
       "rank": 14,
       "points": "3-15-0",
-      "totalPointsFor": 2570.25,
+      "totalPointsFor": 2571.45,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
       "totalPointsAgainst": 2950.35
@@ -18328,7 +18328,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 41.2,
+        "score": 41.6,
         "gamesPlayed": 16
       }
     },
@@ -18440,7 +18440,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 41.2,
+        "score": 41.6,
         "gamesPlayed": 16
       }
     },
@@ -18552,7 +18552,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 41.2,
+        "score": 41.6,
         "gamesPlayed": 16
       }
     },
