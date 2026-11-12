@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-12T15:37:23.862539+00:00",
+  "updatedAt": "2026-11-12T16:39:17.594363+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12314,7 +12314,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.65,
+            "score": 49.55,
             "gamesPlayed": 19
           },
           "home": {
@@ -12328,7 +12328,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 72.55,
+            "score": 72.65,
             "gamesPlayed": 24
           },
           "home": {
@@ -12412,7 +12412,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 33.15,
+            "score": 33.25,
             "gamesPlayed": 18
           },
           "home": {
@@ -12426,7 +12426,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 72.55,
+            "score": 72.65,
             "gamesPlayed": 24
           },
           "home": {
@@ -12446,7 +12446,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.65,
+            "score": 49.55,
             "gamesPlayed": 19
           }
         },
@@ -12510,7 +12510,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 33.15,
+            "score": 33.25,
             "gamesPlayed": 18
           },
           "home": {
@@ -12558,7 +12558,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 72.55,
+            "score": 72.65,
             "gamesPlayed": 24
           }
         },
@@ -12572,7 +12572,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.65,
+            "score": 49.55,
             "gamesPlayed": 19
           }
         },
@@ -12608,7 +12608,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 33.15,
+            "score": 33.25,
             "gamesPlayed": 18
           },
           "home": {
@@ -18174,14 +18174,14 @@
       "totalPointsFor": 3059.1,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2710.8
+      "totalPointsAgainst": 2710.7
     },
     {
       "teamId": "pelw39b7mo2tig2f",
       "teamName": "Ottawa Senators",
       "rank": 3,
       "points": "13-5-0",
-      "totalPointsFor": 3362.85,
+      "totalPointsFor": 3363.15,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2847.55
@@ -18214,7 +18214,7 @@
       "totalPointsFor": 3160.65,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2918.3
+      "totalPointsAgainst": 2918.4
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 2839.8,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2822.95
+      "totalPointsAgainst": 2822.85
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 2965.95,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 2875.1
+      "totalPointsAgainst": 2875.2
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 2898.45,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2947.7
+      "totalPointsAgainst": 2947.8
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18261,7 +18261,7 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 11,
       "points": "7-11-0",
-      "totalPointsFor": 2833.8,
+      "totalPointsFor": 2833.5,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
       "totalPointsAgainst": 2835.35
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2296.95,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2845.9
+      "totalPointsAgainst": 2846.0
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18301,7 +18301,7 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "3-15-0",
-      "totalPointsFor": 2433.3,
+      "totalPointsFor": 2433.6,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
       "totalPointsAgainst": 2806.9
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2151.15,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 2865.0
+      "totalPointsAgainst": 2865.1
     }
   ],
   "matchups": [
@@ -18322,7 +18322,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.65,
+        "score": 49.55,
         "gamesPlayed": 19
       },
       "home": {
@@ -18336,7 +18336,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 72.55,
+        "score": 72.65,
         "gamesPlayed": 24
       },
       "home": {
@@ -18420,7 +18420,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 33.15,
+        "score": 33.25,
         "gamesPlayed": 18
       },
       "home": {
@@ -18434,7 +18434,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 72.55,
+        "score": 72.65,
         "gamesPlayed": 24
       },
       "home": {
@@ -18454,7 +18454,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.65,
+        "score": 49.55,
         "gamesPlayed": 19
       }
     },
@@ -18518,7 +18518,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 33.15,
+        "score": 33.25,
         "gamesPlayed": 18
       },
       "home": {
@@ -18566,7 +18566,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 72.55,
+        "score": 72.65,
         "gamesPlayed": 24
       }
     },
@@ -18580,7 +18580,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.65,
+        "score": 49.55,
         "gamesPlayed": 19
       }
     },
@@ -18616,7 +18616,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 33.15,
+        "score": 33.25,
         "gamesPlayed": 18
       },
       "home": {
