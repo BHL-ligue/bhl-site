@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-13T18:04:17.936765+00:00",
+  "updatedAt": "2026-11-13T18:54:28.594128+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12334,7 +12334,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.15,
+            "score": 83.55,
             "gamesPlayed": 32
           }
         },
@@ -12348,7 +12348,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 88.2,
+            "score": 88.4,
             "gamesPlayed": 34
           }
         },
@@ -12398,7 +12398,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.85,
+            "score": 98.05,
             "gamesPlayed": 29
           },
           "home": {
@@ -12460,7 +12460,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.15,
+            "score": 83.55,
             "gamesPlayed": 32
           }
         },
@@ -12474,7 +12474,7 @@
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 88.2,
+            "score": 88.4,
             "gamesPlayed": 34
           }
         },
@@ -12496,7 +12496,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.85,
+            "score": 98.05,
             "gamesPlayed": 29
           },
           "home": {
@@ -12586,7 +12586,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.15,
+            "score": 83.55,
             "gamesPlayed": 32
           }
         },
@@ -12594,13 +12594,13 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.85,
+            "score": 98.05,
             "gamesPlayed": 29
           },
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 88.2,
+            "score": 88.4,
             "gamesPlayed": 34
           }
         },
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3603.0,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2787.9
+      "totalPointsAgainst": 2788.3
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 3124.5,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2794.25
+      "totalPointsAgainst": 2794.45
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18184,17 +18184,17 @@
       "totalPointsFor": 3506.55,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2939.7
+      "totalPointsAgainst": 2940.1
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
       "teamName": "Detroit Red Wings",
       "rank": 4,
       "points": "13-5-0",
-      "totalPointsFor": 3319.65,
+      "totalPointsFor": 3320.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2891.85
+      "totalPointsAgainst": 2892.05
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18204,14 +18204,14 @@
       "totalPointsFor": 3316.95,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2934.3
+      "totalPointsAgainst": 2934.5
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3229.05,
+      "totalPointsFor": 3230.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3046.95
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 2956.2,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 2922.55
+      "totalPointsAgainst": 2922.75
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18251,10 +18251,10 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "8-10-0",
-      "totalPointsFor": 2649.6,
+      "totalPointsFor": 2650.2,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 2925.85
+      "totalPointsAgainst": 2926.05
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2379.3,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2954.25
+      "totalPointsAgainst": 2954.65
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18284,7 +18284,7 @@
       "totalPointsFor": 2555.7,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 2924.5
+      "totalPointsAgainst": 2924.7
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18342,7 +18342,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.15,
+        "score": 83.55,
         "gamesPlayed": 32
       }
     },
@@ -18356,7 +18356,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 88.2,
+        "score": 88.4,
         "gamesPlayed": 34
       }
     },
@@ -18406,7 +18406,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.85,
+        "score": 98.05,
         "gamesPlayed": 29
       },
       "home": {
@@ -18468,7 +18468,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.15,
+        "score": 83.55,
         "gamesPlayed": 32
       }
     },
@@ -18482,7 +18482,7 @@
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 88.2,
+        "score": 88.4,
         "gamesPlayed": 34
       }
     },
@@ -18504,7 +18504,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.85,
+        "score": 98.05,
         "gamesPlayed": 29
       },
       "home": {
@@ -18594,7 +18594,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.15,
+        "score": 83.55,
         "gamesPlayed": 32
       }
     },
@@ -18602,13 +18602,13 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.85,
+        "score": 98.05,
         "gamesPlayed": 29
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 88.2,
+        "score": 88.4,
         "gamesPlayed": 34
       }
     },
