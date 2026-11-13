@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-13T06:31:12.077026+00:00",
+  "updatedAt": "2026-11-13T07:50:21.741418+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12398,7 +12398,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.8,
+            "score": 97.85,
             "gamesPlayed": 29
           },
           "home": {
@@ -12496,7 +12496,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.8,
+            "score": 97.85,
             "gamesPlayed": 29
           },
           "home": {
@@ -12594,7 +12594,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 97.8,
+            "score": 97.85,
             "gamesPlayed": 29
           },
           "home": {
@@ -18194,7 +18194,7 @@
       "totalPointsFor": 3319.65,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2891.8
+      "totalPointsAgainst": 2891.85
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18204,7 +18204,7 @@
       "totalPointsFor": 3316.95,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2934.25
+      "totalPointsAgainst": 2934.3
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18251,7 +18251,7 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "8-10-0",
-      "totalPointsFor": 2649.45,
+      "totalPointsFor": 2649.6,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
       "totalPointsAgainst": 2925.85
@@ -18284,7 +18284,7 @@
       "totalPointsFor": 2555.7,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 2924.45
+      "totalPointsAgainst": 2924.5
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18406,7 +18406,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.8,
+        "score": 97.85,
         "gamesPlayed": 29
       },
       "home": {
@@ -18504,7 +18504,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.8,
+        "score": 97.85,
         "gamesPlayed": 29
       },
       "home": {
@@ -18602,7 +18602,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 97.8,
+        "score": 97.85,
         "gamesPlayed": 29
       },
       "home": {
