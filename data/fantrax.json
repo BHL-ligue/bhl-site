@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-13T18:54:28.594128+00:00",
+  "updatedAt": "2026-11-13T19:43:33.399466+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12334,7 +12334,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.55,
+            "score": 83.35,
             "gamesPlayed": 32
           }
         },
@@ -12460,7 +12460,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.55,
+            "score": 83.35,
             "gamesPlayed": 32
           }
         },
@@ -12586,7 +12586,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 83.55,
+            "score": 83.35,
             "gamesPlayed": 32
           }
         },
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3603.0,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2788.3
+      "totalPointsAgainst": 2788.1
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3506.55,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2940.1
+      "totalPointsAgainst": 2939.9
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2379.3,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 2954.65
+      "totalPointsAgainst": 2954.45
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18342,7 +18342,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.55,
+        "score": 83.35,
         "gamesPlayed": 32
       }
     },
@@ -18468,7 +18468,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.55,
+        "score": 83.35,
         "gamesPlayed": 32
       }
     },
@@ -18594,7 +18594,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 83.55,
+        "score": 83.35,
         "gamesPlayed": 32
       }
     },
