@@ -1,4 +1,4 @@
-import {articleByline} from './bhl-news-metadata.js?v=1';
+import {articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 import {renderCover} from './bhl-news-images.js?v=crop1';
 import {db,node,publicFields,articleLink} from './bhl-news-db.js?v=archive1';
 const lead=document.getElementById('actualites'),notice=document.getElementById('homeNewsNotice'),retry=document.getElementById('homeNewsRetry');

@@ -4,7 +4,7 @@
 import {articleTags} from './bhl-news-tag-ui.js?v=1';
 import {db,date,paragraphs,publicFields} from './bhl-news-db.js?v=inline1';
 import {renderCover} from './bhl-news-images.js?v=inline1';
-import {articleByline} from './bhl-news-metadata.js?v=1';
+import {articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 const $=id=>document.getElementById(id),id=new URLSearchParams(location.search).get('id');
 async function load(){if(!id||!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)){$('status').textContent='Article introuvable.';return;}
 const {data:a,error}=await db.from('bhl_news').select(publicFields+',body,body_format').eq('id',id).eq('status','published').maybeSingle();if(error){$('status').textContent='Impossible de charger cet article. Réessaie dans un instant.';return;}if(!a){$('status').textContent='Cet article est introuvable ou n’est pas publié.';return;}document.title=a.title+' — BHL';$('title').textContent=a.title;$('category').textContent=a.category;$('byline').textContent=articleByline(a);renderCover(db,$('cover'),a,{eager:true});paragraphs($('body'),a.body,a.body_format);$('body').after(articleTags(a));$('status').hidden=true;$('article').hidden=false;}

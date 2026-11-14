@@ -1,6 +1,6 @@
 import {articleIdentity} from './bhl-news-journalists.js?v=coauthors1';
 import {articleTags} from './bhl-news-tag-ui.js?v=1';
-import {today,seasonForDate,fillSeasons,articleByline} from './bhl-news-metadata.js?v=1';
+import {today,seasonForDate,fillSeasons,articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 import {attachCover,renderCover} from './bhl-news-images.js?v=inline1';
 import {attachEditor} from './bhl-news-editor.js?v=inline1';
 import {db,node,labels,date,articleLink,paragraphs} from './bhl-news-db.js?v=inline1';

@@ -2,5 +2,5 @@ export function today(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Americ
 export function seasonForDate(value){const year=Number(String(value).slice(0,4)),month=Number(String(value).slice(5,7));if(!year||!month)return '';const start=month>=7?year:year-1;return start+'-'+String((start+1)%100).padStart(2,'0');}
 export function articleDate(value){return /^\d{4}-\d{2}-\d{2}$/.test(value||'')?new Intl.DateTimeFormat('fr-CA',{dateStyle:'long',timeZone:'UTC'}).format(new Date(value+'T12:00:00Z')):'';}
 export function signature(article){return [article.reporter_name?.trim()||'Rédaction BHL',article.media_name?.trim()].filter(Boolean).join(' · ');}
-export function articleByline(article){return [signature(article),articleDate(article.article_date),article.season?'Saison '+article.season:''].filter(Boolean).join(' · ');}
+export function articleByline(article){return [signature(article),articleDate(article.article_date)].filter(Boolean).join(' · ');}
 export function fillSeasons(select,selected){const end=Number(today().slice(0,4))+1;const start=Math.min(2018,Number(String(selected).slice(0,4))||2018);select.replaceChildren();for(let y=end;y>=start;y--){const s=y+'-'+String((y+1)%100).padStart(2,'0');select.add(new Option(s,s));}select.value=selected||seasonForDate(today());}
