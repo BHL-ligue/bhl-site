@@ -1,5 +1,6 @@
 'use strict';
 let DATA,year,tab='standings',selectedTeam=null;
+let publicDraft=null,lastLiveCheck=null;
 let liveEdition={year:2027,teams:[]},liveUpdatedAt=null,liveLoadError='',liveLoading=false;
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const edition=()=>year===2027?liveEdition:DATA.editions.find(e=>e.year===year);
@@ -37,7 +38,7 @@ const playerKey=p=>norm(p.name).replace(/[^a-z0-9]/g,'')+'|'+p.birthYear;
 const cumulative=()=>{const m=new Map();for(const p of allAppearances()){const k=playerKey(p);if(!m.has(k))m.set(k,{...p,gp:0,points:0,appearances:0});const r=m.get(k);r.gp+=p.gp;r.points+=p.points;r.appearances++;}return [...m.values()].sort((a,b)=>b.points-a.points||a.name.localeCompare(b.name,'fr'));};
 const baseRender=render;
 let restoredInitialState=false;
-render=function(){if(!restoredInitialState){restoredInitialState=true;const params=new URLSearchParams(location.hash.slice(1));const y=Number(params.get('edition'));if(y===2027||DATA.editions.some(e=>e.year===y)){year=y;$('#year').value=y;}const section=params.get('section');if(['standings','teams','players','history','records','rules','sources'].includes(section))tab=section;const id=params.get('equipe');if(id&&edition().teams.some(t=>t.id===id)){selectedTeam=id;tab='teams';}}if(year===2027){renderUpcoming();syncPublicHash();return;}$('#podium').hidden=false;document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab==='standings')b.textContent='Classement';if(b.dataset.tab==='players')b.textContent='Pointeurs';});baseRender();updateEditionTabs();const e=edition();
+render=function(){if(!restoredInitialState){restoredInitialState=true;const params=new URLSearchParams(location.hash.slice(1));const y=Number(params.get('edition'));if(y===2027||DATA.editions.some(e=>e.year===y)){year=y;$('#year').value=y;}const section=params.get('section');if(['standings','teams','players','history','records','rules','sources','draft'].includes(section))tab=section;const id=params.get('equipe');if(id&&edition().teams.some(t=>t.id===id)){selectedTeam=id;tab='teams';}}const draftButton=$('[data-tab="draft"]');if(draftButton)draftButton.hidden=year!==2027;if(year!==2027&&tab==='draft')tab='teams';if(year===2027){renderUpcoming();syncPublicHash();return;}$('#podium').hidden=false;document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab==='standings')b.textContent='Classement';if(b.dataset.tab==='players')b.textContent='Pointeurs';});baseRender();updateEditionTabs();const e=edition();
  $('#status').textContent=`Édition ${year} · ${e.teams.length} équipes · ${e.teams.reduce((n,t)=>n+t.players.length,0)} joueurs`;
  document.querySelectorAll('.podium-card h2').forEach((h,i)=>{h.innerHTML=`<button data-team="${e.teams[i].id}">${esc(e.teams[i].name)}</button>`;});
  let summary=$('#edition-summary');if(!summary){summary=document.createElement('section');summary.id='edition-summary';summary.className='summary-grid';summary.setAttribute('aria-label','Faits saillants de l’édition');$('#podium').after(summary);}
@@ -56,7 +57,7 @@ showPlayer=function(name){if(year===2027){showUpcomingPlayer(name);return;}const
 };
 $('#player-dialog').addEventListener('click',e=>{if(e.target===$('#player-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 const initialParams=new URLSearchParams(location.hash.slice(1));
-if(DATA){const initialYear=Number(initialParams.get('edition'));if(initialYear===2027||DATA.editions.some(e=>e.year===initialYear)){year=initialYear;$('#year').value=year;}const initialTab=initialParams.get('section');if(['standings','teams','players','history','records','rules','sources'].includes(initialTab))tab=initialTab;const initialTeam=initialParams.get('equipe');if(initialTeam&&edition().teams.some(t=>t.id===initialTeam)){selectedTeam=initialTeam;tab='teams';}render();}
+if(DATA){const initialYear=Number(initialParams.get('edition'));if(initialYear===2027||DATA.editions.some(e=>e.year===initialYear)){year=initialYear;$('#year').value=year;}const initialTab=initialParams.get('section');if(['standings','teams','players','history','records','rules','sources','draft'].includes(initialTab))tab=initialTab;const initialTeam=initialParams.get('equipe');if(initialTeam&&edition().teams.some(t=>t.id===initialTeam)){selectedTeam=initialTeam;tab='teams';}render();}
 
 
 function setupEditionTabs(){
@@ -98,8 +99,8 @@ async function refreshPublicRosters(){
   if(!response.ok)throw Error('Alignements temporairement indisponibles');
   const rows=await response.json();if(!rows[0])throw Error('Édition 2027 en préparation');
   const changed=liveUpdatedAt!==rows[0].updated_at||!!liveLoadError;
-  liveUpdatedAt=rows[0].updated_at;liveLoadError='';prepareLiveEdition(rows[0].payload.teams||[]);
-  if(year===2027&&changed)render();
+  lastLiveCheck=new Date();publicDraft=rows[0].payload.draft||null;liveUpdatedAt=rows[0].updated_at;liveLoadError='';prepareLiveEdition(rows[0].payload.teams||[]);
+  if(year===2027&&(changed||tab==='draft'))render();
  }catch(error){liveLoadError=error.message;if(year===2027)render();}
  finally{liveLoading=false;}
 }
@@ -119,7 +120,8 @@ function renderUpcoming(){
   b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-pressed',String(b.dataset.tab===tab));
  });
  const c=$('#content');
- if(tab==='teams'&&selectedTeam){
+ if(tab==='draft'){renderPublicDraft();
+ }else if(tab==='teams'&&selectedTeam){
   const t=teams.find(t=>t.id===selectedTeam);
   if(!t){selectedTeam=null;renderUpcoming();return;}
   c.innerHTML='<button class="back" data-back>← Les équipes 2027</button><header class="team-hero">'+logo(t)+'<div><p class="eyebrow">ÉDITION 2027 · EFFECTIF EN PRÉPARATION</p><h2>'+esc(t.name)+'</h2><div class="chips"><span class="chip">'+t.players.length+' / '+t.capacity+' joueurs</span><span class="chip">'+Math.max(0,t.capacity-t.players.length)+' places à combler</span></div></div></header><h3 class="subhead">Patineurs</h3>'+upcomingRoster(t.players.filter(p=>p.role!=='GAR'))+'<h3 class="subhead">Gardiens</h3>'+upcomingRoster(t.players.filter(p=>p.role==='GAR'));
@@ -144,5 +146,24 @@ function showUpcomingPlayer(name){
  $('#player-detail').innerHTML='<p class="eyebrow">ÉDITION 2027 · EFFECTIF PRÉVISIONNEL</p><h2 id="profile-title">'+esc(p.name)+'</h2><div class="profile-header">'+logo(t)+'<div><strong>'+esc(t.name)+'</strong><p>'+esc(p.position)+' · Naissance '+esc(p.birthYear||'non renseignée')+'</p><span class="presence-badge">'+(p.source==='draft'?'Repêché en 2027':'Retour probable')+'</span></div></div>';
  $('#player-dialog').setAttribute('aria-labelledby','profile-title');$('#player-dialog').showModal();
 }
-setInterval(()=>{if(!document.hidden)refreshPublicRosters();},30000);
+setInterval(()=>{if(!document.hidden)refreshPublicRosters();},5000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshPublicRosters();});
+
+function renderPublicDraft(){
+ const board=publicDraft,picks=board?.picks||[],done=board?.completed||0;
+ const states={setup:'En préparation',open:'En cours',paused:'En pause',complete:'Terminé'};
+ const current=picks[done],team=id=>liveEdition.teams.find(t=>t.id===id);
+ const nextTeam=team(current?.teamId);
+ const label=states[board?.status]||'Chargement';
+ const headline=liveLoadError?'Connexion interrompue':board?.status==='open'&&current?'Au tour de '+(nextTeam?.name||'l’équipe suivante'):label;
+ $('#content').innerHTML=head('Repêchage · 2027','Ordre officiel et sélections du pool du Championnat mondial junior.')+
+ '<section class="draft-live-card"><div><span class="presence-badge">'+esc(label)+'</span><h3>'+esc(headline)+'</h3><p>'+
+ (board?.status==='complete'?'Toutes les sélections ont été effectuées.':current?'Prochain choix : nº '+current.number:'L’ordre sera affiché après son enregistrement par l’administration.')+
+ '</p></div><a class="draft-room-link" href="bhl-mondial-repechage.html">Accès des DG →</a></section>'+
+ '<div class="draft-progress"><strong>'+done+' / '+picks.length+' choix effectués</strong><progress value="'+done+'" max="'+(picks.length||1)+'" aria-label="Progression du repêchage"></progress></div>'+
+ (liveLoadError?'<p class="note" role="status">Actualisation interrompue. Les dernières données reçues restent affichées; nouvelle tentative automatique.</p>':'<p class="note">Actualisation automatique toutes les 5 secondes'+(lastLiveCheck?' · Vérifié à '+lastLiveCheck.toLocaleTimeString('fr-CA'):'')+'</p>')+
+ (picks.length?table([['Choix'],['Équipe','team-col'],['Joueur','name-col'],['Position'],['Naissance'],['Pays'],['Statut']],picks.map((pick,i)=>{
+ const t=team(pick.teamId),p=pick.player,isCurrent=i===done&&board.status!=='complete';
+ return '<tr class="'+(isCurrent?'draft-current':'')+'"><td class="rank">'+pick.number+'</td><td class="team-col">'+(t?teamLink(t):esc(pick.teamId))+'</td><td class="name-col">'+(p?playerLink(p):'<span class="note">'+(isCurrent&&board.status==='open'?'Sélection en attente':'À venir')+'</span>')+'</td><td>'+esc(p?.position||'—')+'</td><td>'+esc(p?.birthYear||'—')+'</td><td>'+esc(p?.country||'—')+'</td><td><span class="presence-badge">'+(p?'Sélectionné':isCurrent?(board.status==='open'?'Au tour actuel':'Prochain choix'):'À venir')+'</span></td></tr>';
+ })):'<p class="empty">'+(liveLoadError?'Le repêchage est temporairement indisponible.':board?'Aucun choix enregistré pour le moment.':'Chargement du repêchage…')+'</p>');
+}
