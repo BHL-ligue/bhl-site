@@ -1,6 +1,6 @@
 import {articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 import {renderCover} from './bhl-news-images.js?v=crop1';
-import {db,node,publicFields,articleLink} from './bhl-news-db.js?v=archive1';
+import {db,node,publicFields,articleLink} from './bhl-news-db.js?v=team-banners1';
 const lead=document.getElementById('actualites'),notice=document.getElementById('homeNewsNotice'),retry=document.getElementById('homeNewsRetry');
 function card(a,featured=false){const el=node('article',undefined,featured?'feature':'news-card');const content=node('div',undefined,featured?'feature-content':'news-body');content.append(node('span',a.category,featured?'tag':'category'));const h=node(featured?'h2':'h3');const link=node('a',a.title,'news-open');link.href=articleLink(a.id);h.append(link);content.append(h,node('p',a.summary));content.append(node('div',articleByline(a),'meta'));if(featured&&a.cover_path){el.classList.add('has-cover');const photo=node('figure',undefined,'news-cover feature-photo');el.append(photo);renderCover(db,photo,a,{compact:true,eager:true});}
 if(!featured){const visual=node('div',undefined,'thumb');const logo=node('img');logo.src='BHLlogo.png';logo.alt='';logo.width=90;logo.height=90;logo.style.objectFit='contain';visual.append(logo);if(a.cover_path){const photo=node('figure',undefined,'news-cover thumb-photo');visual.append(photo);renderCover(db,photo,a,{compact:true});}el.append(visual);}el.append(content);return el;}

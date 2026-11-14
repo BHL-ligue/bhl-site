@@ -1,4 +1,4 @@
-import {db} from './bhl-news-db.js?v=inline1';
+import {db} from './bhl-news-db.js?v=team-banners1';
 import {coverURL,validCoverPath} from './bhl-news-images.js?v=inline1';
 import {chooseInlineCrop} from './bhl-news-crop.js?v=inline1';
 export function registerArticleImages(Quill){

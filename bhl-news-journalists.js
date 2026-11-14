@@ -1,4 +1,4 @@
-import {node} from './bhl-news-db.js?v=journalists1';
+import {node} from './bhl-news-db.js?v=team-banners1';
 export async function articleIdentity(db,form,user,profile,onChange){
  let reporterQuery=db.from('bhl_journalists').select('*').order('name');if(profile.role!=='admin')reporterQuery=reporterQuery.eq('owner_id',user.id);
  const [jr,tr,capability]=await Promise.all([reporterQuery,db.from('bhl_teams').select('team_id,team_name').order('team_name'),db.from('bhl_news').select('journalist_ids').limit(0)]);

@@ -1,3 +1,4 @@
+import {validBannerPath} from './bhl-news-banners.js?v=1';
 export const ARTICLE_COLORS=['#191919','#626b75','#cc0000'];
 const colorMap=new Map([['rgb(25,25,25)','#191919'],['rgb(98,107,117)','#626b75'],['rgb(204,0,0)','#cc0000'],...ARTICLE_COLORS.map(c=>[c,c])]);
 export function articleColor(value){return colorMap.get(String(value).replace(/\s/g,'').toLowerCase())||null;}
@@ -10,6 +11,7 @@ export function safeLink(value){try{const u=new URL(String(value).trim());return
 export function richFragment(html){const parsed=new DOMParser().parseFromString(String(html),'text/html');const out=document.createDocumentFragment();
  function copy(source,parent){for(const child of source.childNodes){if(child.nodeType===3){parent.append(document.createTextNode(child.textContent.replace(/\u00a0/g,' ')));continue;}if(child.nodeType!==1||blocked.has(child.tagName))continue;
  if(!allowed.has(child.tagName)){copy(child,parent);continue;}
+ if(child.tagName==='IMG'&&validBannerPath(child.getAttribute('data-bhl-banner'))){const img=document.createElement('img');img.dataset.bhlBanner=child.getAttribute('data-bhl-banner');img.src=img.dataset.bhlBanner;img.alt=(child.getAttribute('alt')||'Bannière d’équipe').slice(0,200);img.className='bhl-team-banner';parent.append(img);continue;}
  if(child.tagName==='IMG'){const path=child.getAttribute('data-bhl-image');if(!/^[0-9a-f-]{36}\/[0-9a-f-]{36}[.]webp$/.test(path||''))continue;const img=document.createElement('img');img.dataset.bhlImage=path;img.alt=(child.getAttribute('alt')||'Photo de l’article').slice(0,200);img.className='bhl-inline-image';parent.append(img);continue;}
  const el=document.createElement(child.tagName.toLowerCase());
  if(child.tagName==='A'){const href=safeLink(child.getAttribute('href'));if(href){el.href=href;el.rel='noopener noreferrer';el.target='_blank';}}

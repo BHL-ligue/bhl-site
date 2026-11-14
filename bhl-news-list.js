@@ -1,7 +1,7 @@
-import {articleTags,articleTeams} from './bhl-news-tag-ui.js?v=1';
+import {articleTags,articleTeams} from './bhl-news-tag-ui.js?v=team-banners1';
 import {articleByline,signature} from './bhl-news-metadata.js?v=date-only-20261114';
 import {renderCover} from './bhl-news-images.js?v=crop1';
-import {db,node,date,publicFields,articleLink} from './bhl-news-db.js?v=journalists1';
+import {db,node,date,publicFields,articleLink} from './bhl-news-db.js?v=team-banners1';
 const grid=document.getElementById('newsGrid'),lead=document.getElementById('actualites'),notice=document.getElementById('newsNotice');
 const search=document.getElementById('newsSearch'),count=document.getElementById('newsCount'),more=document.getElementById('newsMore');
 const seasonSelect=document.getElementById('newsSeason');

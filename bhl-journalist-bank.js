@@ -1,4 +1,4 @@
-import {db,node} from './bhl-news-db.js?v=journalists1';
+import {db,node} from './bhl-news-db.js?v=team-banners1';
 const status=document.getElementById('bankStatus'),mine=document.getElementById('myJournalists'),available=document.getElementById('availableJournalists'),reload=document.getElementById('reloadBank');
 let user,profile,busy=false;
 function message(text){status.textContent=text}
