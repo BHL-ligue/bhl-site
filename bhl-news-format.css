@@ -32,3 +32,5 @@
  .article .byline{font-size:12px;line-height:1.5}
  .article{padding:20px 18px}
 }
+
+@media(min-width:601px){.article .bhl-article-body,#reader .bhl-article-body{font-size:17px}}
