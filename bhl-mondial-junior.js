@@ -62,7 +62,7 @@ if(DATA){const initialYear=Number(initialParams.get('edition'));if(initialYear==
 function setupEditionTabs(){
  const nav=document.createElement('nav');
  nav.className='edition-tabs';nav.setAttribute('aria-label','Éditions du Mondial junior');
- nav.innerHTML=[2027,...DATA.editions.map(e=>e.year)].map(value=>'<button type="button" data-edition="'+value+'">'+value+(value===2027?' · En préparation':'')+'</button>').join('');
+ nav.innerHTML=[2027,...DATA.editions.map(e=>e.year)].map(value=>'<button type="button" data-edition="'+value+'">'+value+'</button>').join('');
  $('.heading').after(nav);
  nav.addEventListener('click',event=>{
   const button=event.target.closest('[data-edition]');if(!button)return;
