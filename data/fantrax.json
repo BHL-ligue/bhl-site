@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-14T23:21:30.648644+00:00",
+  "updatedAt": "2026-11-14T23:55:16.568592+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12342,7 +12342,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 103.75,
+            "score": 106.25,
             "gamesPlayed": 34
           },
           "home": {
@@ -12418,7 +12418,7 @@
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 81.65,
+            "score": 84.15,
             "gamesPlayed": 31
           }
         },
@@ -12440,7 +12440,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 103.75,
+            "score": 106.25,
             "gamesPlayed": 34
           },
           "home": {
@@ -12524,7 +12524,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 81.65,
+            "score": 84.15,
             "gamesPlayed": 31
           },
           "home": {
@@ -12538,7 +12538,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 103.75,
+            "score": 106.25,
             "gamesPlayed": 34
           },
           "home": {
@@ -12622,7 +12622,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 81.65,
+            "score": 84.15,
             "gamesPlayed": 31
           },
           "home": {
@@ -18181,7 +18181,7 @@
       "teamName": "Ottawa Senators",
       "rank": 3,
       "points": "13-5-0",
-      "totalPointsFor": 3537.45,
+      "totalPointsFor": 3539.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 2989.85
@@ -18194,7 +18194,7 @@
       "totalPointsFor": 3362.7,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2954.5
+      "totalPointsAgainst": 2957.0
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18204,14 +18204,14 @@
       "totalPointsFor": 3335.1,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 2982.05
+      "totalPointsAgainst": 2984.55
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3286.35,
+      "totalPointsFor": 3294.15,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3102.1
@@ -18221,7 +18221,7 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "11-7-0",
-      "totalPointsFor": 3056.7,
+      "totalPointsFor": 3067.2,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
       "totalPointsAgainst": 2949.65
@@ -18241,7 +18241,7 @@
       "teamName": "Nashville Predators",
       "rank": 9,
       "points": "8-10-0",
-      "totalPointsFor": 3051.6,
+      "totalPointsFor": 3074.4,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
       "totalPointsAgainst": 3104.65
@@ -18261,17 +18261,17 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 11,
       "points": "7-11-0",
-      "totalPointsFor": 2933.7,
+      "totalPointsFor": 2944.5,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 2991.5
+      "totalPointsAgainst": 2994.0
     },
     {
       "teamId": "p7f42l5emo2tig2e",
       "teamName": "Atlanta Thrashers",
       "rank": 12,
       "points": "5-13-0",
-      "totalPointsFor": 2445.3,
+      "totalPointsFor": 2464.65,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
       "totalPointsAgainst": 3007.85
@@ -18281,10 +18281,10 @@
       "teamName": "Florida Panthers",
       "rank": 13,
       "points": "4-14-0",
-      "totalPointsFor": 2587.05,
+      "totalPointsFor": 2588.25,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 2961.2
+      "totalPointsAgainst": 2963.7
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18294,7 +18294,7 @@
       "totalPointsFor": 2739.45,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 3180.35
+      "totalPointsAgainst": 3182.85
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18304,14 +18304,14 @@
       "totalPointsFor": 2529.15,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 2947.95
+      "totalPointsAgainst": 2950.45
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
       "teamName": "California Golden Seals",
       "rank": 16,
       "points": "2-16-0",
-      "totalPointsFor": 2314.2,
+      "totalPointsFor": 2324.25,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
       "totalPointsAgainst": 2981.15
@@ -18350,7 +18350,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 103.75,
+        "score": 106.25,
         "gamesPlayed": 34
       },
       "home": {
@@ -18426,7 +18426,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 81.65,
+        "score": 84.15,
         "gamesPlayed": 31
       }
     },
@@ -18448,7 +18448,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 103.75,
+        "score": 106.25,
         "gamesPlayed": 34
       },
       "home": {
@@ -18532,7 +18532,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 81.65,
+        "score": 84.15,
         "gamesPlayed": 31
       },
       "home": {
@@ -18546,7 +18546,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 103.75,
+        "score": 106.25,
         "gamesPlayed": 34
       },
       "home": {
@@ -18630,7 +18630,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 81.65,
+        "score": 84.15,
         "gamesPlayed": 31
       },
       "home": {
