@@ -5,11 +5,29 @@ export async function articleIdentity(db,form,user,profile,onChange){
  if(jr.error||tr.error)throw jr.error||tr.error;
  const multiReady=!capability.error,reporters=jr.data||[],teams=tr.data||[],old=document.getElementById('reporterName'),select=node('select');select.id='reporterName';select.required=true;old.replaceWith(select);
  const note=node('p','Choisis la signature principale parmi tes journalistes.','muted');select.parentElement.append(note);
- const coauthors=node('fieldset'),legend=node('legend','Coauteurs (facultatif)'),coOptions=node('div');coauthors.hidden=!multiReady;coauthors.append(legend,node('p',multiReady?'Ajoute jusqu’à quatre journalistes. Ils apparaîtront ensemble dans la signature; les droits de modification de l’article restent ceux du compte qui le soumet.':'La signature multiple est préparée; son activation dans la base de données est en attente.','muted'),coOptions);select.parentElement.after(coauthors);
+ const coauthors=node('div',undefined,'article-coauthors'),coLabel=node('span','Coauteurs (facultatif)','coauthor-label'),dropdown=node('details',undefined,'coauthor-dropdown'),toggle=node('summary'),panel=node('div',undefined,'coauthor-panel'),search=node('input'),coOptions=node('div',undefined,'coauthor-options'),selection=node('div',undefined,'coauthor-selected'),feedback=node('p','','coauthor-feedback');
+ coauthors.hidden=!multiReady;search.type='search';search.placeholder='Rechercher un journaliste…';search.setAttribute('aria-label','Rechercher un coauteur');feedback.setAttribute('role','status');
+ panel.append(search,coOptions);dropdown.append(toggle,panel);coauthors.append(coLabel,dropdown,selection,node('p','Jusqu’à 4 coauteurs, en plus de la signature principale.','coauthor-hint'),feedback);select.parentElement.after(coauthors);
+ dropdown.addEventListener('keydown',event=>{if(event.key==='Escape'){dropdown.open=false;toggle.focus();}});
+ document.addEventListener('click',event=>{if(!dropdown.contains(event.target))dropdown.open=false;});
+ search.addEventListener('input',drawCo);
  const bankLink=node('a','Choisir un journaliste dans la banque →');bankLink.href='bhl-journalistes.html';bankLink.target='_blank';bankLink.rel='noopener';select.parentElement.append(bankLink);
  const refresh=node('button','Actualiser ma liste','secondary');refresh.type='button';select.parentElement.append(refresh);
  let selected=[];
- function drawCo(){coOptions.replaceChildren();for(const r of reporters.filter(r=>r.id!==select.value)){const label=node('label'),input=node('input');input.type='checkbox';input.value=r.id;input.checked=selected.includes(r.id);input.disabled=!multiReady;label.append(input,document.createTextNode(' '+r.name));label.style.display='block';coOptions.append(label);input.onchange=()=>{const ids=[...coOptions.querySelectorAll('input:checked')].map(i=>i.value);if(ids.length>4){input.checked=false;note.textContent='Maximum de cinq auteurs au total.';return;}selected=ids;onChange();};}}
+ function updateCoSummary(){
+  toggle.textContent=selected.length?selected.length+' coauteur'+(selected.length>1?'s':'')+' sélectionné'+(selected.length>1?'s':''):'Choisir des coauteurs';
+  selection.replaceChildren(...selected.map(id=>node('span',reporters.find(r=>r.id===id)?.name||'Journaliste conservé','coauthor-chip')));
+  coOptions.querySelectorAll('input').forEach(input=>input.disabled=!multiReady||(!input.checked&&selected.length>=4));
+ }
+ function drawCo(){
+  coOptions.replaceChildren();const query=search.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const matches=reporters.filter(r=>r.id!==select.value&&r.name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query));
+  for(const r of matches){const label=node('label',undefined,'coauthor-option'),input=node('input'),identity=node('span'),name=node('strong',r.name);input.type='checkbox';input.value=r.id;input.checked=selected.includes(r.id);identity.append(name);if(r.media_name)identity.append(node('small',r.media_name));label.append(input,identity);coOptions.append(label);
+   input.onchange=()=>{feedback.textContent='';if(input.checked){if(selected.length>=4){input.checked=false;feedback.textContent='Maximum de 4 coauteurs.';return;}selected.push(r.id);}else selected=selected.filter(id=>id!==r.id);updateCoSummary();onChange();};
+  }
+  if(!matches.length)coOptions.append(node('p',query?'Aucun journaliste trouvé.':'Aucun autre journaliste disponible.','coauthor-hint'));
+  updateCoSummary();
+ }
  function fill(){const v=select.value;select.replaceChildren(new Option('Choisir un journaliste',''));for(const r of reporters)select.add(new Option(r.name,r.id));select.value=v;drawCo();}
  refresh.onclick=async()=>{refresh.disabled=true;try{let q=db.from('bhl_journalists').select('*').order('name');if(profile.role!=='admin')q=q.eq('owner_id',user.id);const {data,error}=await q;if(error)throw error;reporters.splice(0,reporters.length,...data);fill();}catch(error){note.textContent=error.message;}finally{refresh.disabled=false;}};
  const field=node('fieldset',undefined,'article-team-tags'),options=node('div',undefined,'article-tag-options');field.append(node('legend','Équipes mentionnées'),node('p','Coche toutes les équipes dont parle cet article.','muted'));for(const team of teams){const label=node('label'),input=node('input');input.type='checkbox';input.value=team.team_id;label.append(input,document.createTextNode(team.team_name));options.append(label);}field.append(options);form.querySelector('.article-metadata-grid').after(field);
