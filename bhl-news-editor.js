@@ -1,5 +1,5 @@
 import {attachBanners,registerBanners} from './bhl-news-banners.js?v=1';
-import {registerArticleImages,attachInlineImages} from './bhl-news-inline-images.js?v=team-banners1';
+import {registerArticleImages,attachInlineImages} from './bhl-news-inline-images.js?v=full-image1';
 import {cleanHTML,richFragment,ARTICLE_COLORS} from './bhl-news-format.js?v=team-banners1';
 export async function attachEditor(textarea,onChange,options={}){
  let preservedHTML=null;

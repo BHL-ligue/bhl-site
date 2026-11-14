@@ -8,3 +8,12 @@ for(const [sw,sh] of [[1600,900],[900,1600],[1200,1200]])for(const [w,h] of [[96
  const scale=1600/w,exported=cropGeometry(sw,sh,w*scale,h*scale,zoom,p.x*scale,p.y*scale);close(exported.left,p.left*scale);close(exported.top,p.top*scale);close(exported.width,p.width*scale);close(exported.height,p.height*scale);
 }
 console.log('Crop bounds and preview/export agreement passed for square, landscape, portrait and zoomed images.');
+for(const [sw,sh] of [[656,389],[800,1800],[1800,800]])for(const [w,h] of [[960,540],[960,960]]){
+ const fit=Math.min(w/sw,h/sh)/Math.max(w/sw,h/sh);
+ const p=cropGeometry(sw,sh,w,h,fit);
+ assert.ok(p.left>=-1e-7&&p.top>=-1e-7,'Full image starts inside frame');
+ assert.ok(p.left+p.width<=w+1e-7&&p.top+p.height<=h+1e-7,'Full image ends inside frame');
+ const ratio=1600/w,exported=cropGeometry(sw,sh,w*ratio,h*ratio,fit);
+ close(exported.left,p.left*ratio);close(exported.top,p.top*ratio);
+}
+console.log('Full table, portrait and landscape fit without clipping in square and rectangle frames.');

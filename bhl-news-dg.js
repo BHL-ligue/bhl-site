@@ -2,7 +2,7 @@ import {articleIdentity} from './bhl-news-journalists.js?v=team-banners1';
 import {articleTags} from './bhl-news-tag-ui.js?v=team-banners1';
 import {today,seasonForDate,fillSeasons,articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 import {attachCover,renderCover} from './bhl-news-images.js?v=inline1';
-import {attachEditor} from './bhl-news-editor.js?v=team-banners1';
+import {attachEditor} from './bhl-news-editor.js?v=full-image1';
 import {db,node,labels,date,articleLink,paragraphs} from './bhl-news-db.js?v=team-banners1';
 const $=id=>document.getElementById(id), form=$('articleForm');
 const view=document.body.dataset.articlePage||'hub';
