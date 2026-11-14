@@ -104,15 +104,15 @@ async function refreshPublicRosters(){
  finally{liveLoading=false;}
 }
 function upcomingRoster(players){
- if(!players.length)return '<p class="empty">Aucun joueur confirmé pour le moment.</p>';
- return table([['Joueur','name-col'],['Position'],['Naissance'],['Pays'],['Statut']],players.map(p=>'<tr><td class="name-col">'+playerLink(p)+'</td><td>'+esc(p.position)+'</td><td>'+esc(p.birthYear||'—')+'</td><td>'+(p.country?esc(p.country):icon(p,'countryImage'))+'</td><td><span class="presence-badge">'+(p.source==='draft'?'Repêché en 2027':'Retour confirmé')+'</span></td></tr>'),'roster');
+ if(!players.length)return '<p class="empty">Aucun joueur prévu pour le moment.</p>';
+ return table([['Joueur','name-col'],['Position'],['Naissance'],['Pays'],['Statut']],players.map(p=>'<tr><td class="name-col">'+playerLink(p)+'</td><td>'+esc(p.position)+'</td><td>'+esc(p.birthYear||'—')+'</td><td>'+(p.country?esc(p.country):icon(p,'countryImage'))+'</td><td><span class="presence-badge">'+(p.source==='draft'?'Repêché en 2027':'Retour probable')+'</span></td></tr>'),'roster');
 }
 function renderUpcoming(){
  const teams=liveEdition.teams,players=teams.flatMap(t=>t.players),capacity=teams.reduce((n,t)=>n+t.capacity,0);
  $('#podium').hidden=true;
  let summary=$('#edition-summary');if(!summary){summary=document.createElement('section');summary.id='edition-summary';summary.className='summary-grid';$('#podium').after(summary);}
- summary.innerHTML='<article class="summary-card"><small>Édition en préparation</small><strong>2027</strong><span>Effectifs confirmés par la BHL</span></article><article class="summary-card"><small>Joueurs confirmés</small><strong>'+players.length+' / '+capacity+'</strong><span>'+teams.length+' équipes</span></article><article class="summary-card"><small>Places à combler</small><strong>'+Math.max(0,capacity-players.length)+'</strong><span>À compléter au repêchage</span></article>';
- $('#status').textContent=liveLoadError?'2027 · '+liveLoadError:liveUpdatedAt?'2027 · Alignements enregistrés dans le Portail Admin · actualisation automatique':'2027 · Chargement des alignements confirmés…';
+ summary.innerHTML='<article class="summary-card"><small>Édition en préparation</small><strong>2027</strong><span>Effectifs prévisionnels de la BHL</span></article><article class="summary-card"><small>Joueurs prévus</small><strong>'+players.length+' / '+capacity+'</strong><span>'+teams.length+' équipes</span></article><article class="summary-card"><small>Places à combler</small><strong>'+Math.max(0,capacity-players.length)+'</strong><span>À compléter au repêchage</span></article>';
+ $('#status').textContent=liveLoadError?'2027 · '+liveLoadError:liveUpdatedAt?'2027 · Alignements enregistrés dans le Portail Admin · actualisation automatique':'2027 · Chargement des alignements prévisionnels…';
  document.querySelectorAll('[data-tab]').forEach(b=>{
   if(b.dataset.tab==='standings')b.textContent='Vue d’ensemble';
   if(b.dataset.tab==='players')b.textContent='Alignements';
@@ -124,13 +124,13 @@ function renderUpcoming(){
   if(!t){selectedTeam=null;renderUpcoming();return;}
   c.innerHTML='<button class="back" data-back>← Les équipes 2027</button><header class="team-hero">'+logo(t)+'<div><p class="eyebrow">ÉDITION 2027 · EFFECTIF EN PRÉPARATION</p><h2>'+esc(t.name)+'</h2><div class="chips"><span class="chip">'+t.players.length+' / '+t.capacity+' joueurs</span><span class="chip">'+Math.max(0,t.capacity-t.players.length)+' places à combler</span></div></div></header><h3 class="subhead">Patineurs</h3>'+upcomingRoster(t.players.filter(p=>p.role!=='GAR'))+'<h3 class="subhead">Gardiens</h3>'+upcomingRoster(t.players.filter(p=>p.role==='GAR'));
  }else if(tab==='teams'){
-  c.innerHTML=head('Les équipes · 2027','Les joueurs présents sont ajoutés après enregistrement dans le Portail Admin.')+'<div class="team-grid">'+teams.map(t=>'<button class="team-card" data-team="'+esc(t.id)+'">'+logo(t)+'<div><h3>'+esc(t.name)+'</h3><p>'+t.players.length+' / '+t.capacity+' joueurs confirmés</p><b>'+Math.max(0,t.capacity-t.players.length)+' places à combler →</b></div></button>').join('')+'</div>';
+  c.innerHTML=head('Les équipes · 2027','Les joueurs présents sont ajoutés après enregistrement dans le Portail Admin.')+'<div class="team-grid">'+teams.map(t=>'<button class="team-card" data-team="'+esc(t.id)+'">'+logo(t)+'<div><h3>'+esc(t.name)+'</h3><p>'+t.players.length+' / '+t.capacity+' joueurs prévus</p><b>'+Math.max(0,t.capacity-t.players.length)+' places à combler →</b></div></button>').join('')+'</div>';
  }else if(tab==='players'){
-  c.innerHTML=head('Les alignements confirmés','Retours de 2026 et sélections du repêchage 2027.')+'<div class="filters"><label>Recherche<input id="live-player-search" type="search" placeholder="Nom ou position"></label><label>Équipe<select id="live-team-filter"><option value="">Toutes les équipes</option>'+teams.map(t=>'<option value="'+esc(t.id)+'">'+esc(t.name)+'</option>').join('')+'</select></label></div><div id="live-players"></div>';
+  c.innerHTML=head('Les alignements prévisionnels','Retours de 2026 et sélections du repêchage 2027.')+'<div class="filters"><label>Recherche<input id="live-player-search" type="search" placeholder="Nom ou position"></label><label>Équipe<select id="live-team-filter"><option value="">Toutes les équipes</option>'+teams.map(t=>'<option value="'+esc(t.id)+'">'+esc(t.name)+'</option>').join('')+'</select></label></div><div id="live-players"></div>';
   const filter=()=>{const q=norm($('#live-player-search').value),id=$('#live-team-filter').value;const rows=teams.filter(t=>!id||t.id===id).flatMap(t=>t.players.map(p=>({...p,team:t}))).filter(p=>norm(p.name+' '+p.position).includes(q));$('#live-players').innerHTML=upcomingRoster(rows);};
   $('#live-player-search').oninput=filter;$('#live-team-filter').onchange=filter;filter();
  }else if(tab==='standings'){
-  c.innerHTML=head('Les effectifs se construisent','Édition 2027 en préparation.')+table([['Équipe','team-col'],['Joueurs confirmés'],['Places à combler']],teams.map(t=>'<tr><td class="team-col">'+teamLink(t)+'</td><td>'+t.players.length+' / '+t.capacity+'</td><td>'+Math.max(0,t.capacity-t.players.length)+'</td></tr>'));
+  c.innerHTML=head('Les effectifs se construisent','Édition 2027 en préparation.')+table([['Équipe','team-col'],['Joueurs prévus'],['Places à combler']],teams.map(t=>'<tr><td class="team-col">'+teamLink(t)+'</td><td>'+t.players.length+' / '+t.capacity+'</td><td>'+Math.max(0,t.capacity-t.players.length)+'</td></tr>'));
  }else{
   baseRender();$('#podium').hidden=true;
   document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab==='standings')b.textContent='Vue d’ensemble';if(b.dataset.tab==='players')b.textContent='Alignements';});
@@ -141,7 +141,7 @@ function renderUpcoming(){
 }
 function showUpcomingPlayer(name){
  const t=liveEdition.teams.find(t=>t.players.some(p=>p.name===name)),p=t?.players.find(p=>p.name===name);if(!p)return;
- $('#player-detail').innerHTML='<p class="eyebrow">ÉDITION 2027 · PRÉSENCE CONFIRMÉE</p><h2 id="profile-title">'+esc(p.name)+'</h2><div class="profile-header">'+logo(t)+'<div><strong>'+esc(t.name)+'</strong><p>'+esc(p.position)+' · Naissance '+esc(p.birthYear||'non renseignée')+'</p><span class="presence-badge">'+(p.source==='draft'?'Repêché en 2027':'Retour confirmé')+'</span></div></div>';
+ $('#player-detail').innerHTML='<p class="eyebrow">ÉDITION 2027 · EFFECTIF PRÉVISIONNEL</p><h2 id="profile-title">'+esc(p.name)+'</h2><div class="profile-header">'+logo(t)+'<div><strong>'+esc(t.name)+'</strong><p>'+esc(p.position)+' · Naissance '+esc(p.birthYear||'non renseignée')+'</p><span class="presence-badge">'+(p.source==='draft'?'Repêché en 2027':'Retour probable')+'</span></div></div>';
  $('#player-dialog').setAttribute('aria-labelledby','profile-title');$('#player-dialog').showModal();
 }
 setInterval(()=>{if(!document.hidden)refreshPublicRosters();},30000);
