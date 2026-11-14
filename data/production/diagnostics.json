@@ -134,8 +134,8 @@
       "difference": 2.2,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "A": 2.5
+        "A": 2.5,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -1017,8 +1017,8 @@
       "difference": 1.3,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": 0.3,
         "Blk": 0.2,
+        "SOG": 0.3,
         "Hit": 0.8
       },
       "reason": "score_difference"
@@ -1614,8 +1614,8 @@
       "difference": 1.15,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 1.1,
-        "FOW": 0.05
+        "FOW": 0.05,
+        "Hit": 1.1
       },
       "reason": "score_difference"
     },
@@ -3658,8 +3658,8 @@
       "difference": -0.35,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "FOW": -0.05
+        "FOW": -0.05,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -4644,8 +4644,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
         "Blk": -0.2,
+        "SOG": -0.3,
         "Hit": 0.4
       },
       "reason": "score_difference"
@@ -4929,8 +4929,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -4958,8 +4958,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -5239,8 +5239,8 @@
       "difference": 0.05,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.1,
-        "FOW": -0.05
+        "FOW": -0.05,
+        "Hit": 0.1
       },
       "reason": "score_difference"
     },
