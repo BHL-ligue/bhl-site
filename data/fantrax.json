@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-15T18:52:03.962595+00:00",
+  "updatedAt": "2026-11-15T19:31:22.633701+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12334,7 +12334,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.4,
+            "score": 132.2,
             "gamesPlayed": 51
           }
         },
@@ -12460,7 +12460,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.4,
+            "score": 132.2,
             "gamesPlayed": 51
           }
         },
@@ -12586,7 +12586,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.4,
+            "score": 132.2,
             "gamesPlayed": 51
           }
         },
@@ -18161,10 +18161,10 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "17-1-0",
-      "totalPointsFor": 3759.3,
+      "totalPointsFor": 3758.7,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2943.5
+      "totalPointsAgainst": 2943.3
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3709.35,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3072.6
+      "totalPointsAgainst": 3072.4
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18211,7 +18211,7 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3374.7,
+      "totalPointsFor": 3376.2,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3209.35
@@ -18231,7 +18231,7 @@
       "teamName": "New York Rangers",
       "rank": 8,
       "points": "10-8-0",
-      "totalPointsFor": 3188.7,
+      "totalPointsFor": 3189.6,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
       "totalPointsAgainst": 3143.15
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2508.0,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3122.0
+      "totalPointsAgainst": 3121.8
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18342,7 +18342,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.4,
+        "score": 132.2,
         "gamesPlayed": 51
       }
     },
@@ -18468,7 +18468,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.4,
+        "score": 132.2,
         "gamesPlayed": 51
       }
     },
@@ -18594,7 +18594,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.4,
+        "score": 132.2,
         "gamesPlayed": 51
       }
     },
