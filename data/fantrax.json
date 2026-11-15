@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-15T06:14:25.250497+00:00",
+  "updatedAt": "2026-11-15T07:23:20.522380+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12342,7 +12342,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.7,
+            "score": 126.8,
             "gamesPlayed": 43
           },
           "home": {
@@ -12384,7 +12384,7 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.25,
+            "score": 175.2,
             "gamesPlayed": 54
           },
           "home": {
@@ -12440,7 +12440,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.7,
+            "score": 126.8,
             "gamesPlayed": 43
           },
           "home": {
@@ -12482,7 +12482,7 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.25,
+            "score": 175.2,
             "gamesPlayed": 54
           },
           "home": {
@@ -12538,7 +12538,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.7,
+            "score": 126.8,
             "gamesPlayed": 43
           },
           "home": {
@@ -12580,7 +12580,7 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.25,
+            "score": 175.2,
             "gamesPlayed": 54
           },
           "home": {
@@ -18161,7 +18161,7 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "17-1-0",
-      "totalPointsFor": 3758.25,
+      "totalPointsFor": 3758.1,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
       "totalPointsAgainst": 2942.5
@@ -18194,7 +18194,7 @@
       "totalPointsFor": 3491.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3038.1
+      "totalPointsAgainst": 3038.2
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18214,14 +18214,14 @@
       "totalPointsFor": 3374.7,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3209.3
+      "totalPointsAgainst": 3209.25
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "11-7-0",
-      "totalPointsFor": 3128.55,
+      "totalPointsFor": 3128.85,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
       "totalPointsAgainst": 3070.15
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 3188.7,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3143.0
+      "totalPointsAgainst": 3142.95
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 3164.1,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3200.2
+      "totalPointsAgainst": 3200.15
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18264,7 +18264,7 @@
       "totalPointsFor": 3055.2,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 3089.2
+      "totalPointsAgainst": 3089.3
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18294,7 +18294,7 @@
       "totalPointsFor": 2861.7,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 3296.9
+      "totalPointsAgainst": 3297.0
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18350,7 +18350,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.7,
+        "score": 126.8,
         "gamesPlayed": 43
       },
       "home": {
@@ -18392,7 +18392,7 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.25,
+        "score": 175.2,
         "gamesPlayed": 54
       },
       "home": {
@@ -18448,7 +18448,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.7,
+        "score": 126.8,
         "gamesPlayed": 43
       },
       "home": {
@@ -18490,7 +18490,7 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.25,
+        "score": 175.2,
         "gamesPlayed": 54
       },
       "home": {
@@ -18546,7 +18546,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.7,
+        "score": 126.8,
         "gamesPlayed": 43
       },
       "home": {
@@ -18588,7 +18588,7 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.25,
+        "score": 175.2,
         "gamesPlayed": 54
       },
       "home": {
