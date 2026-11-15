@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-15T18:09:52.890751+00:00",
+  "updatedAt": "2026-11-15T18:52:03.962595+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12334,7 +12334,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 131.7,
+            "score": 132.4,
             "gamesPlayed": 51
           }
         },
@@ -12384,13 +12384,13 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.6,
+            "score": 175.4,
             "gamesPlayed": 54
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.1,
+            "score": 118.4,
             "gamesPlayed": 49
           }
         },
@@ -12460,7 +12460,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 131.7,
+            "score": 132.4,
             "gamesPlayed": 51
           }
         },
@@ -12482,7 +12482,7 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.6,
+            "score": 175.4,
             "gamesPlayed": 54
           },
           "home": {
@@ -12516,7 +12516,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.1,
+            "score": 118.4,
             "gamesPlayed": 49
           }
         },
@@ -12580,13 +12580,13 @@
           "away": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 175.6,
+            "score": 175.4,
             "gamesPlayed": 54
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 131.7,
+            "score": 132.4,
             "gamesPlayed": 51
           }
         },
@@ -12642,7 +12642,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.1,
+            "score": 118.4,
             "gamesPlayed": 49
           }
         }
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3759.3,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2942.5
+      "totalPointsAgainst": 2943.5
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3709.35,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3071.9
+      "totalPointsAgainst": 3072.6
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18214,7 +18214,7 @@
       "totalPointsFor": 3374.7,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3209.55
+      "totalPointsAgainst": 3209.35
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 3188.7,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3143.35
+      "totalPointsAgainst": 3143.15
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 3164.1,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3200.45
+      "totalPointsAgainst": 3200.25
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2508.0,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3121.3
+      "totalPointsAgainst": 3122.0
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18284,7 +18284,7 @@
       "totalPointsFor": 2688.6,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3060.25
+      "totalPointsAgainst": 3060.55
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18304,7 +18304,7 @@
       "totalPointsFor": 2664.3,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 3050.35
+      "totalPointsAgainst": 3050.65
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18342,7 +18342,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 131.7,
+        "score": 132.4,
         "gamesPlayed": 51
       }
     },
@@ -18392,13 +18392,13 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.6,
+        "score": 175.4,
         "gamesPlayed": 54
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.1,
+        "score": 118.4,
         "gamesPlayed": 49
       }
     },
@@ -18468,7 +18468,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 131.7,
+        "score": 132.4,
         "gamesPlayed": 51
       }
     },
@@ -18490,7 +18490,7 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.6,
+        "score": 175.4,
         "gamesPlayed": 54
       },
       "home": {
@@ -18524,7 +18524,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.1,
+        "score": 118.4,
         "gamesPlayed": 49
       }
     },
@@ -18588,13 +18588,13 @@
       "away": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 175.6,
+        "score": 175.4,
         "gamesPlayed": 54
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 131.7,
+        "score": 132.4,
         "gamesPlayed": 51
       }
     },
@@ -18650,7 +18650,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.1,
+        "score": 118.4,
         "gamesPlayed": 49
       }
     }
