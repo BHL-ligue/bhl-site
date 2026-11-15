@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-15T16:18:22.665360+00:00",
+  "updatedAt": "2026-11-15T16:59:13.359899+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -10003,7 +10003,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 159.6
+        "score": 159.8
       },
       "home": {
         "teamId": "pelw39b7mo2tig2f",
@@ -10034,7 +10034,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.65
+        "score": 185.45
       }
     },
     {
@@ -10120,12 +10120,12 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 159.6
+        "score": 159.8
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.65
+        "score": 185.45
       }
     },
     {
@@ -10216,7 +10216,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 185.65
+        "score": 185.45
       }
     },
     {
@@ -10242,7 +10242,7 @@
       "home": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 159.6
+        "score": 159.8
       }
     }
   ],
@@ -11977,7 +11977,7 @@
           "home": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 159.6,
+            "score": 159.8,
             "gamesPlayed": 59
           }
         },
@@ -12005,7 +12005,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.65,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12097,13 +12097,13 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 159.6,
+            "score": 159.8,
             "gamesPlayed": 59
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.65,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12201,7 +12201,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 185.65,
+            "score": 185.45,
             "gamesPlayed": 60
           }
         },
@@ -12223,7 +12223,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 159.6,
+            "score": 159.8,
             "gamesPlayed": 59
           },
           "home": {
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3709.35,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3071.7
+      "totalPointsAgainst": 3071.9
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18211,10 +18211,10 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "13-5-0",
-      "totalPointsFor": 3375.3,
+      "totalPointsFor": 3374.7,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3209.35
+      "totalPointsAgainst": 3209.55
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18234,17 +18234,17 @@
       "totalPointsFor": 3188.7,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3143.55
+      "totalPointsAgainst": 3143.35
     },
     {
       "teamId": "adfljh3wmo2tig2e",
       "teamName": "Nashville Predators",
       "rank": 9,
       "points": "8-10-0",
-      "totalPointsFor": 3163.5,
+      "totalPointsFor": 3164.1,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3200.65
+      "totalPointsAgainst": 3200.45
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
