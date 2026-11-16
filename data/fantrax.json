@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-16T00:01:03.089595+00:00",
+  "updatedAt": "2026-11-16T01:18:26.604947+00:00",
   "rosterPeriod": 7,
   "scoringPeriod": 7,
   "periodDates": {
@@ -12314,70 +12314,70 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 123.45,
-            "gamesPlayed": 46
+            "score": 127.35,
+            "gamesPlayed": 47
           },
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 138.35,
-            "gamesPlayed": 55
+            "score": 139.5,
+            "gamesPlayed": 59
           }
         },
         {
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 188.05,
-            "gamesPlayed": 51
+            "score": 191.65,
+            "gamesPlayed": 55
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.2,
-            "gamesPlayed": 51
+            "score": 132.7,
+            "gamesPlayed": 55
           }
         },
         {
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.8,
-            "gamesPlayed": 43
+            "score": 129.35,
+            "gamesPlayed": 47
           },
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
             "score": 145.4,
-            "gamesPlayed": 51
+            "gamesPlayed": 52
           }
         },
         {
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 112.35,
-            "gamesPlayed": 48
+            "score": 115.75,
+            "gamesPlayed": 51
           },
           "home": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 151.7,
-            "gamesPlayed": 53
+            "score": 157.2,
+            "gamesPlayed": 57
           }
         },
         {
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 123.9,
-            "gamesPlayed": 49
+            "score": 124.0,
+            "gamesPlayed": 50
           },
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 117.65,
-            "gamesPlayed": 45
+            "score": 118.05,
+            "gamesPlayed": 50
           }
         },
         {
@@ -12390,92 +12390,92 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.4,
-            "gamesPlayed": 49
+            "score": 118.5,
+            "gamesPlayed": 50
           }
         },
         {
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 133.4,
-            "gamesPlayed": 48
+            "score": 134.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.7,
-            "gamesPlayed": 51
+            "score": 133.1,
+            "gamesPlayed": 58
           }
         },
         {
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 110.15,
-            "gamesPlayed": 48
+            "score": 111.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 107.1,
-            "gamesPlayed": 41
+            "score": 112.4,
+            "gamesPlayed": 43
           }
         },
         {
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 188.05,
-            "gamesPlayed": 51
+            "score": 191.65,
+            "gamesPlayed": 55
           },
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 138.35,
-            "gamesPlayed": 55
+            "score": 139.5,
+            "gamesPlayed": 59
           }
         },
         {
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.8,
-            "gamesPlayed": 43
+            "score": 129.35,
+            "gamesPlayed": 47
           },
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 123.45,
-            "gamesPlayed": 46
+            "score": 127.35,
+            "gamesPlayed": 47
           }
         },
         {
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 112.35,
-            "gamesPlayed": 48
+            "score": 115.75,
+            "gamesPlayed": 51
           },
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.2,
-            "gamesPlayed": 51
+            "score": 132.7,
+            "gamesPlayed": 55
           }
         },
         {
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 123.9,
-            "gamesPlayed": 49
+            "score": 124.0,
+            "gamesPlayed": 50
           },
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
             "score": 145.4,
-            "gamesPlayed": 51
+            "gamesPlayed": 52
           }
         },
         {
@@ -12488,92 +12488,92 @@
           "home": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 151.7,
-            "gamesPlayed": 53
+            "score": 157.2,
+            "gamesPlayed": 57
           }
         },
         {
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 133.4,
-            "gamesPlayed": 48
+            "score": 134.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 117.65,
-            "gamesPlayed": 45
+            "score": 118.05,
+            "gamesPlayed": 50
           }
         },
         {
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 110.15,
-            "gamesPlayed": 48
+            "score": 111.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.4,
-            "gamesPlayed": 49
+            "score": 118.5,
+            "gamesPlayed": 50
           }
         },
         {
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 107.1,
-            "gamesPlayed": 41
+            "score": 112.4,
+            "gamesPlayed": 43
           },
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.7,
-            "gamesPlayed": 51
+            "score": 133.1,
+            "gamesPlayed": 58
           }
         },
         {
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 126.8,
-            "gamesPlayed": 43
+            "score": 129.35,
+            "gamesPlayed": 47
           },
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 138.35,
-            "gamesPlayed": 55
+            "score": 139.5,
+            "gamesPlayed": 59
           }
         },
         {
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 112.35,
-            "gamesPlayed": 48
+            "score": 115.75,
+            "gamesPlayed": 51
           },
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 188.05,
-            "gamesPlayed": 51
+            "score": 191.65,
+            "gamesPlayed": 55
           }
         },
         {
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 123.9,
-            "gamesPlayed": 49
+            "score": 124.0,
+            "gamesPlayed": 50
           },
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 123.45,
-            "gamesPlayed": 46
+            "score": 127.35,
+            "gamesPlayed": 47
           }
         },
         {
@@ -12586,64 +12586,64 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 132.2,
-            "gamesPlayed": 51
+            "score": 132.7,
+            "gamesPlayed": 55
           }
         },
         {
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 133.4,
-            "gamesPlayed": 48
+            "score": 134.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
             "score": 145.4,
-            "gamesPlayed": 51
+            "gamesPlayed": 52
           }
         },
         {
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 110.15,
-            "gamesPlayed": 48
+            "score": 111.45,
+            "gamesPlayed": 52
           },
           "home": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 151.7,
-            "gamesPlayed": 53
+            "score": 157.2,
+            "gamesPlayed": 57
           }
         },
         {
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 107.1,
-            "gamesPlayed": 41
+            "score": 112.4,
+            "gamesPlayed": 43
           },
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 117.65,
-            "gamesPlayed": 45
+            "score": 118.05,
+            "gamesPlayed": 50
           }
         },
         {
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.7,
-            "gamesPlayed": 51
+            "score": 133.1,
+            "gamesPlayed": 58
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 118.4,
-            "gamesPlayed": 49
+            "score": 118.5,
+            "gamesPlayed": 50
           }
         }
       ]
@@ -18164,7 +18164,7 @@
       "totalPointsFor": 3758.7,
       "winPercentage": 0.944,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 2943.3
+      "totalPointsAgainst": 2949.4
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18174,7 +18174,7 @@
       "totalPointsFor": 3283.95,
       "winPercentage": 0.778,
       "gamesBack": 3.0,
-      "totalPointsAgainst": 2938.75
+      "totalPointsAgainst": 2943.05
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18184,7 +18184,7 @@
       "totalPointsFor": 3709.35,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3072.4
+      "totalPointsAgainst": 3077.45
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18194,7 +18194,7 @@
       "totalPointsFor": 3491.25,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3038.1
+      "totalPointsAgainst": 3041.8
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18204,7 +18204,7 @@
       "totalPointsFor": 3429.9,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3068.05
+      "totalPointsAgainst": 3074.5
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18214,7 +18214,7 @@
       "totalPointsFor": 3376.2,
       "winPercentage": 0.722,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3209.35
+      "totalPointsAgainst": 3216.35
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18224,7 +18224,7 @@
       "totalPointsFor": 3128.85,
       "winPercentage": 0.611,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3070.15
+      "totalPointsAgainst": 3075.2
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18234,7 +18234,7 @@
       "totalPointsFor": 3189.6,
       "winPercentage": 0.556,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3143.15
+      "totalPointsAgainst": 3144.85
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18244,7 +18244,7 @@
       "totalPointsFor": 3164.1,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3200.25
+      "totalPointsAgainst": 3204.95
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18254,7 +18254,7 @@
       "totalPointsFor": 2756.25,
       "winPercentage": 0.444,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3065.0
+      "totalPointsAgainst": 3065.8
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18264,7 +18264,7 @@
       "totalPointsFor": 3055.2,
       "winPercentage": 0.389,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 3089.3
+      "totalPointsAgainst": 3093.1
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18274,7 +18274,7 @@
       "totalPointsFor": 2508.0,
       "winPercentage": 0.278,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3121.8
+      "totalPointsAgainst": 3131.4
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18284,7 +18284,7 @@
       "totalPointsFor": 2688.6,
       "winPercentage": 0.222,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3060.55
+      "totalPointsAgainst": 3067.0
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18294,7 +18294,7 @@
       "totalPointsFor": 2861.7,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 3297.0
+      "totalPointsAgainst": 3307.05
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18304,7 +18304,7 @@
       "totalPointsFor": 2664.3,
       "winPercentage": 0.167,
       "gamesBack": 14.0,
-      "totalPointsAgainst": 3050.65
+      "totalPointsAgainst": 3061.55
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18314,7 +18314,7 @@
       "totalPointsFor": 2393.1,
       "winPercentage": 0.111,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3091.25
+      "totalPointsAgainst": 3093.35
     }
   ],
   "matchups": [
@@ -18322,70 +18322,70 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 123.45,
-        "gamesPlayed": 46
+        "score": 127.35,
+        "gamesPlayed": 47
       },
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 138.35,
-        "gamesPlayed": 55
+        "score": 139.5,
+        "gamesPlayed": 59
       }
     },
     {
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 188.05,
-        "gamesPlayed": 51
+        "score": 191.65,
+        "gamesPlayed": 55
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.2,
-        "gamesPlayed": 51
+        "score": 132.7,
+        "gamesPlayed": 55
       }
     },
     {
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.8,
-        "gamesPlayed": 43
+        "score": 129.35,
+        "gamesPlayed": 47
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
         "score": 145.4,
-        "gamesPlayed": 51
+        "gamesPlayed": 52
       }
     },
     {
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 112.35,
-        "gamesPlayed": 48
+        "score": 115.75,
+        "gamesPlayed": 51
       },
       "home": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 151.7,
-        "gamesPlayed": 53
+        "score": 157.2,
+        "gamesPlayed": 57
       }
     },
     {
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 123.9,
-        "gamesPlayed": 49
+        "score": 124.0,
+        "gamesPlayed": 50
       },
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 117.65,
-        "gamesPlayed": 45
+        "score": 118.05,
+        "gamesPlayed": 50
       }
     },
     {
@@ -18398,92 +18398,92 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.4,
-        "gamesPlayed": 49
+        "score": 118.5,
+        "gamesPlayed": 50
       }
     },
     {
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 133.4,
-        "gamesPlayed": 48
+        "score": 134.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.7,
-        "gamesPlayed": 51
+        "score": 133.1,
+        "gamesPlayed": 58
       }
     },
     {
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 110.15,
-        "gamesPlayed": 48
+        "score": 111.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 107.1,
-        "gamesPlayed": 41
+        "score": 112.4,
+        "gamesPlayed": 43
       }
     },
     {
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 188.05,
-        "gamesPlayed": 51
+        "score": 191.65,
+        "gamesPlayed": 55
       },
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 138.35,
-        "gamesPlayed": 55
+        "score": 139.5,
+        "gamesPlayed": 59
       }
     },
     {
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.8,
-        "gamesPlayed": 43
+        "score": 129.35,
+        "gamesPlayed": 47
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 123.45,
-        "gamesPlayed": 46
+        "score": 127.35,
+        "gamesPlayed": 47
       }
     },
     {
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 112.35,
-        "gamesPlayed": 48
+        "score": 115.75,
+        "gamesPlayed": 51
       },
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.2,
-        "gamesPlayed": 51
+        "score": 132.7,
+        "gamesPlayed": 55
       }
     },
     {
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 123.9,
-        "gamesPlayed": 49
+        "score": 124.0,
+        "gamesPlayed": 50
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
         "score": 145.4,
-        "gamesPlayed": 51
+        "gamesPlayed": 52
       }
     },
     {
@@ -18496,92 +18496,92 @@
       "home": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 151.7,
-        "gamesPlayed": 53
+        "score": 157.2,
+        "gamesPlayed": 57
       }
     },
     {
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 133.4,
-        "gamesPlayed": 48
+        "score": 134.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 117.65,
-        "gamesPlayed": 45
+        "score": 118.05,
+        "gamesPlayed": 50
       }
     },
     {
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 110.15,
-        "gamesPlayed": 48
+        "score": 111.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.4,
-        "gamesPlayed": 49
+        "score": 118.5,
+        "gamesPlayed": 50
       }
     },
     {
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 107.1,
-        "gamesPlayed": 41
+        "score": 112.4,
+        "gamesPlayed": 43
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.7,
-        "gamesPlayed": 51
+        "score": 133.1,
+        "gamesPlayed": 58
       }
     },
     {
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 126.8,
-        "gamesPlayed": 43
+        "score": 129.35,
+        "gamesPlayed": 47
       },
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 138.35,
-        "gamesPlayed": 55
+        "score": 139.5,
+        "gamesPlayed": 59
       }
     },
     {
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 112.35,
-        "gamesPlayed": 48
+        "score": 115.75,
+        "gamesPlayed": 51
       },
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 188.05,
-        "gamesPlayed": 51
+        "score": 191.65,
+        "gamesPlayed": 55
       }
     },
     {
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 123.9,
-        "gamesPlayed": 49
+        "score": 124.0,
+        "gamesPlayed": 50
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 123.45,
-        "gamesPlayed": 46
+        "score": 127.35,
+        "gamesPlayed": 47
       }
     },
     {
@@ -18594,64 +18594,64 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 132.2,
-        "gamesPlayed": 51
+        "score": 132.7,
+        "gamesPlayed": 55
       }
     },
     {
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 133.4,
-        "gamesPlayed": 48
+        "score": 134.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
         "score": 145.4,
-        "gamesPlayed": 51
+        "gamesPlayed": 52
       }
     },
     {
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 110.15,
-        "gamesPlayed": 48
+        "score": 111.45,
+        "gamesPlayed": 52
       },
       "home": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 151.7,
-        "gamesPlayed": 53
+        "score": 157.2,
+        "gamesPlayed": 57
       }
     },
     {
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 107.1,
-        "gamesPlayed": 41
+        "score": 112.4,
+        "gamesPlayed": 43
       },
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 117.65,
-        "gamesPlayed": 45
+        "score": 118.05,
+        "gamesPlayed": 50
       }
     },
     {
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.7,
-        "gamesPlayed": 51
+        "score": 133.1,
+        "gamesPlayed": 58
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 118.4,
-        "gamesPlayed": 49
+        "score": 118.5,
+        "gamesPlayed": 50
       }
     }
   ]
