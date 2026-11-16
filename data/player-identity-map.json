@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-16T11:47:10.767426+00:00"
+    "rosterUpdatedAt": "2026-11-16T14:12:22.187398+00:00"
   },
   "players": {
     "02un4": {
@@ -64,7 +64,7 @@
       "nhlName": "Gavin McKenna",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06lvc": {
@@ -112,7 +112,7 @@
       "nhlName": "Zach Benson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04ye8": {
@@ -124,7 +124,7 @@
       "nhlName": "Jordan Spence",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05ww8": {
@@ -178,13 +178,13 @@
     "03eb0": {
       "fantraxName": "Ryan Donato",
       "bhlTeam": "Nashville Predators",
-      "position": "C",
+      "position": "LW",
       "nhlTeam": "CHI",
       "nhlId": 8477987,
       "nhlName": "Ryan Donato",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "03w5m": {
@@ -250,7 +250,7 @@
     "05ltt": {
       "fantraxName": "Alex Laferriere",
       "bhlTeam": "Nashville Predators",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "LAK",
       "nhlId": 8482155,
       "nhlName": "Alex Laferriere",
@@ -268,7 +268,7 @@
       "nhlName": "Will Cuylle",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "05ran": {
@@ -286,13 +286,13 @@
     "05gd9": {
       "fantraxName": "Zack Bolduc",
       "bhlTeam": "Nashville Predators",
-      "position": "LW",
+      "position": "RW",
       "nhlTeam": "MTL",
       "nhlId": 8482737,
       "nhlName": "Zachary Bolduc",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "031pl": {
@@ -352,7 +352,7 @@
       "nhlName": "Braden Schneider",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "05rjg": {
@@ -364,7 +364,7 @@
       "nhlName": "Danila Yurov",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "04mtp": {
@@ -610,13 +610,13 @@
     "0457b": {
       "fantraxName": "Casey Mittelstadt",
       "bhlTeam": "Toronto Maple Leafs",
-      "position": "LW",
+      "position": "C",
       "nhlTeam": "BOS",
       "nhlId": 8479999,
       "nhlName": "Casey Mittelstadt",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05r1c": {
@@ -724,7 +724,7 @@
       "nhlName": "Logan Cooley",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "INJURED_RESERVE",
       "onCurrentRoster": true
     },
     "05j3d": {
@@ -3839,7 +3839,7 @@
       "nhlName": "Ryan Nugent-Hopkins",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04ln4": {
@@ -4055,7 +4055,7 @@
       "nhlName": "Viggo Björck",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "03e7p": {
@@ -4187,7 +4187,7 @@
       "nhlName": "Alex Vlasic",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05ubx": {
@@ -4211,7 +4211,7 @@
       "nhlName": "Logan Stanley",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "051uw": {
@@ -4607,7 +4607,7 @@
       "nhlName": "Sean Monahan",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "02o70": {
@@ -5735,7 +5735,7 @@
       "nhlName": "William Karlsson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "04uqa": {
@@ -5771,7 +5771,7 @@
       "nhlName": "Nick Robertson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06sn9": {
@@ -5849,7 +5849,7 @@
     "02ybl": {
       "fantraxName": "Valeri Nichushkin",
       "bhlTeam": "Anaheim Mighty Ducks",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "CBJ",
       "nhlId": 8477501,
       "nhlName": "Valeri Nichushkin",
@@ -6029,7 +6029,7 @@
     "02uws": {
       "fantraxName": "Mathew Barzal",
       "bhlTeam": "Anaheim Mighty Ducks",
-      "position": "C",
+      "position": "RW",
       "nhlTeam": "NYI",
       "nhlId": 8478445,
       "nhlName": "Mathew Barzal",
