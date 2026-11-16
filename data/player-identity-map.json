@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-16T21:49:59.936786+00:00"
+    "rosterUpdatedAt": "2026-11-16T22:32:25.086528+00:00"
   },
   "players": {
     "02un4": {
@@ -3665,7 +3665,7 @@
     "06bdr": {
       "fantraxName": "Roman Kantserov",
       "bhlTeam": "Québec Nordiques",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "CHI",
       "nhlId": 8484390,
       "nhlName": "Roman Kantserov",
@@ -3683,7 +3683,7 @@
       "nhlName": "Mats Zuccarello",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05y3a": {
@@ -3707,7 +3707,7 @@
       "nhlName": "Jean-Gabriel Pageau",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06hj9": {
@@ -3725,7 +3725,7 @@
     "03rfx": {
       "fantraxName": "Tommy Novak",
       "bhlTeam": "Québec Nordiques",
-      "position": "LW",
+      "position": "C",
       "nhlTeam": "PIT",
       "nhlId": 8478438,
       "nhlName": "Tommy Novak",
@@ -6263,6 +6263,18 @@
       "fantraxName": "Juuso Valimaki",
       "bhlTeam": "Anaheim Mighty Ducks",
       "position": "D",
+      "rosterStatus": "RESERVE",
+      "onCurrentRoster": true
+    },
+    "04ld9": {
+      "nhlId": 8481523,
+      "nhlName": "Kirby Dach",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Kirby Dach",
+      "bhlTeam": "Québec Nordiques",
+      "position": "C",
       "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     }
