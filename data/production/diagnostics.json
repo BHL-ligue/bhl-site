@@ -77,10 +77,10 @@
     {
       "season": "2026-27",
       "compared": 112,
-      "matching": 105,
-      "mismatches": 7,
+      "matching": 104,
+      "mismatches": 8,
       "unresolvedPlayerPeriods": 0,
-      "scoreDifferencePeriods": 7,
+      "scoreDifferencePeriods": 8,
       "categoryOnlyPeriods": 0
     }
   ],
@@ -89,7 +89,7 @@
     "SOG": 51,
     "SV": 41,
     "FOW": 28,
-    "Blk": 20,
+    "Blk": 21,
     "Tk": 3,
     "A": 2
   },
@@ -5226,6 +5226,20 @@
       "unresolved": [],
       "categoryDifferences": {
         "SV": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Boston Bruins",
+      "official": 120.55,
+      "calculated": 120.75,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
       },
       "reason": "score_difference"
     },
