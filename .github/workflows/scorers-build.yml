@@ -1,6 +1,11 @@
 name: Reconstituer les pointeurs BHL
 on:
   workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: 'Recalculer aussi les anciennes saisons (maintenance)'
+        type: boolean
+        default: false
   schedule:
     # 03:00 America/Toronto in both EST and EDT; the extra run retries safely.
     - cron: '0 7,8 * * 1'
@@ -11,6 +16,7 @@ on:
     paths:
       - 'scripts/bhl_periods.py'
       - 'tests/test-bhl-periods.py'
+      - 'tests/test-scorer-current.py'
       - 'scripts/build-bhl-scorers.py'
       - 'scripts/build-home-leaders.py'
       - 'scripts/analyze-hit-discrepancies.py'
@@ -38,14 +44,21 @@ jobs:
           python-version: '3.12'
       - name: Vérifier les clôtures de période BHL et les changements d’heure
         run: python tests/test-bhl-periods.py
+      - name: Vérifier la conservation des saisons archivées
+        run: python tests/test-scorer-current.py
       - name: Vérifier le calcul
         run: python tests/test-production-audit.py
       - name: Actualiser les alignements de la saison courante
         run: python scripts/archive-fantrax-ownership.py --current
       - name: Conserver le relevé précédent pour contrôler la couverture
         run: cp data/production/scorers.json /tmp/bhl-scorers-before.json
-      - name: Reconstituer les contributions des partants pour toutes les saisons
-        run: python scripts/build-bhl-scorers.py
+      - name: Actualiser les contributions des partants (archives conservées)
+        run: |
+          if [ "${{ inputs.full_rebuild }}" = "true" ]; then
+            python scripts/build-bhl-scorers.py
+          else
+            python scripts/build-bhl-scorers.py --current
+          fi
       - name: Préparer les meneurs de l’accueil et les liens de profils
         run: python scripts/build-home-leaders.py
       - name: Analyser les écarts de mises en échec 2023-24

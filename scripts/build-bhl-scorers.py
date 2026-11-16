@@ -1,6 +1,7 @@
 """Build transparent BHL starter-contribution standings from archived lineups.
 Does not adjust individual points to force a match with official team totals.
 """
+import argparse
 import concurrent.futures as cf
 import collections
 import datetime as dt
@@ -9,6 +10,10 @@ import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('bhl_audit',ROOT/'scripts/audit-bhl-production.py');audit=importlib.util.module_from_spec(spec);spec.loader.exec_module(audit)
+def merge_seasons(existing,refreshed,seasons):
+ """Replace only refreshed seasons; never re-fetch or change older archives."""
+ return [r for r in existing if r['season'] not in seasons]+list(refreshed)
+
 def aggregate(reports,directory):
  rows={};coverage=[]
  for report in reports:
@@ -48,11 +53,12 @@ def diagnostics(reports):
  return {'schemaVersion':1,'status':'diagnostic_only','seasons':seasons,'categoryFrequency':dict(categories.most_common()),'mismatches':examples}
 
 def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--current',action='store_true',help='Refresh the latest season while preserving published historical seasons');args=parser.parse_args()
  out=ROOT/'data/production';(out/'audits').mkdir(parents=True,exist_ok=True)
  manifest=json.loads((ROOT/'data/ownership/index.json').read_text());directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];reports=[]
  # A retired/injured player may have no games in one season. Resolve a name
  # only if it maps to a single NHL ID across the entire archived range.
- seasons=sorted(s['season'] for s in manifest['seasons']);lookups=[]
+ all_seasons=sorted(s['season'] for s in manifest['seasons']);seasons=all_seasons[-1:] if args.current else all_seasons;lookups=[]
  def get_names(job):
   season,kind=job;year=int(season[:4]);return kind,audit.nhl_report(kind,'summary',season_id=str(year)+str(year+1))
  with cf.ThreadPoolExecutor(max_workers=4) as pool:lookups=list(pool.map(get_names,[(s,k) for s in seasons for k in ['skater','goalie']]))
@@ -75,6 +81,10 @@ def main():
   # Fantrax retained a fictitious third round after the COVID interruption.
   if season=='2019-20':report['periods']=[p for p in report['periods'] if p['phase']!='playoffs' or p['period']<=23]
   reports.append(report)
+ if args.current:
+  for report in reports:
+   if report.get('status')=='blocked' or any(p.get('status')=='blocked' for p in report.get('periods',[])):
+    raise RuntimeError('Current-season reports incomplete; keeping published statistics for the next retry')
  # Preserve individual BHL starting-lineup periods for true single-start records.
  starts=[]
  for report in reports:
@@ -83,12 +93,25 @@ def main():
     for player in team.get('players',[]):
      if player.get('points') is None:continue
      starts.append({'id':player['fantraxId'],'name':player.get('name') or directory.get(player['fantraxId'],{}).get('name'),'season':report['season'],'phase':period['phase'],'period':period['period'],'team':team['team'],'position':player['position'],'kind':'goalie' if player['position']=='G' else 'skater','fpts':player['points'],'gp':player.get('gamesPlayed') or 0,'goals':player.get('stats',{}).get('G') or 0,'assists':player.get('stats',{}).get('A') or 0,'stats':player.get('stats',{}),'review':not team.get('validated',False)})
+ if args.current and (out/'starts.json').exists():
+  previous_starts=json.loads((out/'starts.json').read_text())
+  starts=merge_seasons(previous_starts.get('rows',[]),starts,seasons)
  (out/'starts.json').write_text(json.dumps({'schemaVersion':1,'status':'provisional','rows':starts},ensure_ascii=False,separators=(',',':')))
  rows,coverage=aggregate(reports,directory)
+ if args.current and (out/'scorers.json').exists():
+  previous=json.loads((out/'scorers.json').read_text())
+  rows=merge_seasons(previous['rows'],rows,seasons)
+  coverage=merge_seasons(previous.get('coverage',[]),coverage,seasons)
  report_diagnostics=diagnostics(reports)
+ if args.current and (out/'diagnostics.json').exists():
+  previous_diagnostics=json.loads((out/'diagnostics.json').read_text())
+  report_diagnostics['seasons']=merge_seasons(previous_diagnostics.get('seasons',[]),report_diagnostics['seasons'],seasons)
+  report_diagnostics['mismatches']=merge_seasons(previous_diagnostics.get('mismatches',[]),report_diagnostics['mismatches'],seasons)
+  frequencies=collections.Counter(code for r in report_diagnostics['mismatches'] for code in r.get('categoryDifferences',{}))
+  report_diagnostics['categoryFrequency']=dict(frequencies.most_common())
  (out/'diagnostics.json').write_text(json.dumps(report_diagnostics,ensure_ascii=False,indent=2)+'\n')
- result={'schemaVersion':1,'updatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'reconstructed','metric':'FPTS produced while ACTIVE for a BHL team, using the historical position and season scoring settings','completedPeriodsOnly':True,'careerRankingOfficial':False,'seasons':sorted((r['season'] for r in reports),reverse=True),'coverage':coverage,'rows':rows,'unresolvedIds':sorted({r['id'] for r in rows if r['missingStarts']})}
+ result={'schemaVersion':1,'updatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'reconstructed','metric':'FPTS produced while ACTIVE for a BHL team, using the historical position and season scoring settings','completedPeriodsOnly':True,'careerRankingOfficial':False,'seasons':sorted(set(r['season'] for r in rows),reverse=True),'coverage':coverage,'rows':rows,'unresolvedIds':sorted({r['id'] for r in rows if r['missingStarts']})}
  (out/'scorers.json').write_text(json.dumps(result,ensure_ascii=False,separators=(',',':'))+'\n')
- summary={'seasons':len(reports),'records':len(rows),'periods':sum(c['checkedPeriods'] for c in coverage),'matchingTeamPeriods':sum(c['matchingComparisons'] for c in coverage),'teamPeriods':sum(c['comparisons'] for c in coverage),'unresolvedIds':len(result['unresolvedIds']),'blockedPeriods':sum(len(c['blockedPeriods']) for c in coverage),'diagnosticMismatches':len(report_diagnostics['mismatches'])}
+ summary={'seasons':len(result['seasons']),'records':len(rows),'periods':sum(c['checkedPeriods'] for c in coverage),'matchingTeamPeriods':sum(c['matchingComparisons'] for c in coverage),'teamPeriods':sum(c['comparisons'] for c in coverage),'unresolvedIds':len(result['unresolvedIds']),'blockedPeriods':sum(len(c['blockedPeriods']) for c in coverage),'diagnosticMismatches':len(report_diagnostics['mismatches'])}
  (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print('SCORERS_SUMMARY',json.dumps(summary),flush=True)
 if __name__=='__main__':main()
