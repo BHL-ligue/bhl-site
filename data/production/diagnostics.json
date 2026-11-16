@@ -77,17 +77,17 @@
     {
       "season": "2026-27",
       "compared": 112,
-      "matching": 104,
-      "mismatches": 8,
+      "matching": 99,
+      "mismatches": 13,
       "unresolvedPlayerPeriods": 0,
-      "scoreDifferencePeriods": 8,
+      "scoreDifferencePeriods": 13,
       "categoryOnlyPeriods": 0
     }
   ],
   "categoryFrequency": {
-    "Hit": 287,
-    "SOG": 51,
-    "SV": 41,
+    "Hit": 289,
+    "SOG": 54,
+    "SV": 43,
     "FOW": 28,
     "Blk": 21,
     "Tk": 3,
@@ -5162,6 +5162,21 @@
     {
       "season": "2026-27",
       "phase": "regular",
+      "period": 7,
+      "team": "Québec Nordiques",
+      "official": 140.8,
+      "calculated": 140.3,
+      "difference": -0.5,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2,
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
       "period": 5,
       "team": "New York Rangers",
       "official": 177.45,
@@ -5180,6 +5195,34 @@
       "team": "Boston Bruins",
       "official": 138.7,
       "calculated": 139.0,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Hartford Whalers",
+      "official": 136.75,
+      "calculated": 137.05,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Anaheim Mighty Ducks",
+      "official": 133.2,
+      "calculated": 133.5,
       "difference": 0.3,
       "unresolved": [],
       "categoryDifferences": {
@@ -5233,13 +5276,13 @@
       "season": "2026-27",
       "phase": "regular",
       "period": 7,
-      "team": "Boston Bruins",
-      "official": 120.55,
-      "calculated": 120.75,
-      "difference": 0.2,
+      "team": "California Golden Seals",
+      "official": 115.5,
+      "calculated": 115.3,
+      "difference": -0.2,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2
+        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -5269,6 +5312,35 @@
       "categoryDifferences": {
         "Blk": 0.2,
         "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Montréal Canadiens",
+      "official": 153.4,
+      "calculated": 153.5,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Boston Bruins",
+      "official": 120.55,
+      "calculated": 120.65,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2,
+        "Hit": -0.1
       },
       "reason": "score_difference"
     }
