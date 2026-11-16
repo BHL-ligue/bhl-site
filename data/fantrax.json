@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-16T14:12:22.187398+00:00",
+  "updatedAt": "2026-11-16T16:13:54.712532+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -623,7 +623,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06fzv",
@@ -665,12 +665,12 @@
         {
           "id": "02unz",
           "name": "Nick Schmaltz",
-          "position": "RW",
+          "position": "C",
           "eligiblePositions": [
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04mv3",
@@ -681,7 +681,7 @@
             "RW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03kra",
@@ -708,7 +708,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03rip",
@@ -732,7 +732,7 @@
         {
           "id": "02yjl",
           "name": "Leon Draisaitl",
-          "position": "RW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -762,12 +762,12 @@
         {
           "id": "05kua",
           "name": "Emil Heineman",
-          "position": "LW",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "01z7v",
@@ -776,7 +776,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04z51",
@@ -854,12 +854,12 @@
         {
           "id": "02noo",
           "name": "Mark Jankowski",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03924",
@@ -877,7 +877,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "0618g",
@@ -886,7 +886,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05ltj",
@@ -904,7 +904,7 @@
           "eligiblePositions": [
             "LW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         }
       ]
     },
@@ -2137,7 +2137,7 @@
         {
           "id": "03d09",
           "name": "Alex Tuch",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
@@ -2269,6 +2269,15 @@
           "status": "ACTIVE"
         },
         {
+          "id": "03ebr",
+          "name": "Michael Amadio",
+          "position": "RW",
+          "eligiblePositions": [
+            "RW"
+          ],
+          "status": "ACTIVE"
+        },
+        {
           "id": "03uzr",
           "name": "Matthew Tkachuk",
           "position": "RW",
@@ -2278,24 +2287,14 @@
           "status": "ACTIVE"
         },
         {
-          "id": "05uao",
-          "name": "Collin Graf",
-          "position": "RW",
-          "eligiblePositions": [
-            "LW",
-            "RW"
-          ],
-          "status": "RESERVE"
-        },
-        {
           "id": "04qza",
           "name": "Martin Pospisil",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05g2s",
@@ -2382,7 +2381,7 @@
         {
           "id": "06bap",
           "name": "Easton Cowan",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -2688,11 +2687,12 @@
           "status": "RESERVE"
         },
         {
-          "id": "04qya",
-          "name": "Filip Hallander",
-          "position": "C",
+          "id": "04zor",
+          "name": "Nils Hoglander",
+          "position": "LW",
           "eligiblePositions": [
-            "C"
+            "LW",
+            "RW"
           ],
           "status": "RESERVE"
         },
@@ -3356,7 +3356,7 @@
         {
           "id": "02nok",
           "name": "Tomas Hertl",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
@@ -3402,21 +3402,12 @@
         {
           "id": "04zo0",
           "name": "Pavel Dorofeyev",
-          "position": "LW",
+          "position": "RW",
           "eligiblePositions": [
             "LW",
             "RW"
           ],
           "status": "ACTIVE"
-        },
-        {
-          "id": "05962",
-          "name": "J.J. Moser",
-          "position": "D",
-          "eligiblePositions": [
-            "D"
-          ],
-          "status": "RESERVE"
         },
         {
           "id": "05tcz",
@@ -3434,7 +3425,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05xrx",
@@ -3593,6 +3584,15 @@
             "C"
           ],
           "status": "ACTIVE"
+        },
+        {
+          "id": "04f0o",
+          "name": "Filip Chytil",
+          "position": "C",
+          "eligiblePositions": [
+            "C"
+          ],
+          "status": "ACTIVE"
         }
       ]
     },
@@ -3719,6 +3719,16 @@
             "RW"
           ],
           "status": "MINORS"
+        },
+        {
+          "id": "06kkx",
+          "name": "Arttu Hyry",
+          "position": "C",
+          "eligiblePositions": [
+            "RW",
+            "C"
+          ],
+          "status": "ACTIVE"
         },
         {
           "id": "0243f",
@@ -4556,15 +4566,6 @@
           "status": "ACTIVE"
         },
         {
-          "id": "03c0c",
-          "name": "Josh Manson",
-          "position": "D",
-          "eligiblePositions": [
-            "D"
-          ],
-          "status": "RESERVE"
-        },
-        {
           "id": "04zo3",
           "name": "Nick Robertson",
           "position": "LW",
@@ -4631,6 +4632,15 @@
             "RW"
           ],
           "status": "ACTIVE"
+        },
+        {
+          "id": "048x7",
+          "name": "Juuso Valimaki",
+          "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "03rik",
@@ -6534,8 +6544,7 @@
         "round": 4,
         "pick": 56,
         "playerId": "05uao",
-        "teamId": "jbmeb32tmo2tig2e",
-        "playerName": "Collin Graf"
+        "teamId": "jbmeb32tmo2tig2e"
       },
       {
         "round": 4,
@@ -6659,8 +6668,7 @@
         "round": 5,
         "pick": 74,
         "playerId": "05962",
-        "teamId": "p7f42l5emo2tig2e",
-        "playerName": "J.J. Moser"
+        "teamId": "p7f42l5emo2tig2e"
       },
       {
         "round": 5,
@@ -6792,8 +6800,7 @@
         "round": 6,
         "pick": 93,
         "playerId": "03c0c",
-        "teamId": "bvm8qt4omo2tig2f",
-        "playerName": "Josh Manson"
+        "teamId": "bvm8qt4omo2tig2f"
       },
       {
         "round": 6,

@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-16T14:12:22.187398+00:00"
+    "rosterUpdatedAt": "2026-11-16T16:13:54.712532+00:00"
   },
   "players": {
     "02un4": {
@@ -772,7 +772,7 @@
       "nhlName": "Jamie Oleksiak",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "06fzv": {
@@ -826,13 +826,13 @@
     "02unz": {
       "fantraxName": "Nick Schmaltz",
       "bhlTeam": "Ottawa Senators",
-      "position": "RW",
+      "position": "C",
       "nhlTeam": "UTA",
       "nhlId": 8477951,
       "nhlName": "Nick Schmaltz",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04mv3": {
@@ -844,7 +844,7 @@
       "nhlName": "Alex Newhook",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "03kra": {
@@ -880,7 +880,7 @@
       "nhlName": "Kaapo Kakko",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "048w3": {
@@ -922,7 +922,7 @@
     "02yjl": {
       "fantraxName": "Leon Draisaitl",
       "bhlTeam": "Ottawa Senators",
-      "position": "RW",
+      "position": "C",
       "nhlTeam": "EDM",
       "nhlId": 8477934,
       "nhlName": "Leon Draisaitl",
@@ -958,13 +958,13 @@
     "05kua": {
       "fantraxName": "Emil Heineman",
       "bhlTeam": "Ottawa Senators",
-      "position": "LW",
+      "position": "RW",
       "nhlTeam": "NYI",
       "nhlId": 8482476,
       "nhlName": "Emil Heineman",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "01z7v": {
@@ -976,7 +976,7 @@
       "nhlName": "Sean Couturier",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04z51": {
@@ -1096,7 +1096,7 @@
       "nhlName": "Dmitry Orlov",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "0618g": {
@@ -1108,7 +1108,7 @@
       "nhlName": "Cole Knuble",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05ltj": {
@@ -1132,7 +1132,7 @@
       "nhlName": "Mason Marchment",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "05riz": {
@@ -2667,7 +2667,7 @@
     "03d09": {
       "fantraxName": "Alex Tuch",
       "bhlTeam": "Montréal Canadiens",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "WSH",
       "nhlId": 8477949,
       "nhlName": "Alex Tuch",
@@ -2846,26 +2846,26 @@
     },
     "05uao": {
       "fantraxName": "Collin Graf",
-      "bhlTeam": "Montréal Canadiens",
+      "bhlTeam": null,
       "position": "RW",
       "nhlTeam": "SJS",
       "nhlId": 8484911,
       "nhlName": "Collin Graf",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "04qza": {
       "fantraxName": "Martin Pospisil",
       "bhlTeam": "Montréal Canadiens",
-      "position": "C",
+      "position": "RW",
       "nhlTeam": null,
       "nhlId": 8481028,
       "nhlName": "Martin Pospisil",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06axz": {
@@ -2968,7 +2968,7 @@
     "06bap": {
       "fantraxName": "Easton Cowan",
       "bhlTeam": "Montréal Canadiens",
-      "position": "LW",
+      "position": "C",
       "nhlTeam": "TOR",
       "nhlId": 8484158,
       "nhlName": "Easton Cowan",
@@ -3363,15 +3363,15 @@
     },
     "04qya": {
       "fantraxName": "Filip Hallander",
-      "bhlTeam": "New York Rangers",
+      "bhlTeam": null,
       "position": "C",
       "nhlTeam": "EDM",
       "nhlId": 8480842,
       "nhlName": "Filip Hallander",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "06nke": {
       "fantraxName": "Jackson Smith",
@@ -4229,7 +4229,7 @@
     "02nok": {
       "fantraxName": "Tomas Hertl",
       "bhlTeam": "Atlanta Thrashers",
-      "position": "C",
+      "position": "LW",
       "nhlTeam": "VGK",
       "nhlId": 8476881,
       "nhlName": "Tomas Hertl",
@@ -4277,7 +4277,7 @@
     "04zo0": {
       "fantraxName": "Pavel Dorofeyev",
       "bhlTeam": "Atlanta Thrashers",
-      "position": "LW",
+      "position": "RW",
       "nhlTeam": "NYR",
       "nhlId": 8481604,
       "nhlName": "Pavel Dorofeyev",
@@ -4288,15 +4288,15 @@
     },
     "05962": {
       "fantraxName": "J.J. Moser",
-      "bhlTeam": "Atlanta Thrashers",
+      "bhlTeam": null,
       "position": "D",
       "nhlTeam": "TBL",
       "nhlId": 8482655,
       "nhlName": "J.J. Moser",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "05tcz": {
       "fantraxName": "Oliver Kapanen",
@@ -4319,7 +4319,7 @@
       "nhlName": "Matthew Wood",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "05xrx": {
@@ -5177,13 +5177,13 @@
     "02noo": {
       "fantraxName": "Mark Jankowski",
       "bhlTeam": "Ottawa Senators",
-      "position": "C",
+      "position": "LW",
       "nhlTeam": "CAR",
       "nhlId": 8476873,
       "nhlName": "Mark Jankowski",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "04apb": {
@@ -5752,15 +5752,15 @@
     },
     "03c0c": {
       "fantraxName": "Josh Manson",
-      "bhlTeam": "Anaheim Mighty Ducks",
+      "bhlTeam": null,
       "position": "D",
       "nhlTeam": "COL",
       "nhlId": 8476312,
       "nhlName": "Josh Manson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "04zo3": {
       "fantraxName": "Nick Robertson",
@@ -6202,6 +6202,66 @@
       "status": "unresolved",
       "fantraxName": "Zachary Jones",
       "bhlTeam": "Colorado Avalanche",
+      "position": "D",
+      "rosterStatus": "RESERVE",
+      "onCurrentRoster": true
+    },
+    "03ebr": {
+      "nhlId": 8478020,
+      "nhlName": "Michael Amadio",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Michael Amadio",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "RW",
+      "rosterStatus": "ACTIVE",
+      "onCurrentRoster": true
+    },
+    "04zor": {
+      "nhlId": 8481535,
+      "nhlName": "Nils Hoglander",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Nils Hoglander",
+      "bhlTeam": "New York Rangers",
+      "position": "LW",
+      "rosterStatus": "RESERVE",
+      "onCurrentRoster": true
+    },
+    "04f0o": {
+      "nhlId": 8480078,
+      "nhlName": "Filip Chytil",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Filip Chytil",
+      "bhlTeam": "Atlanta Thrashers",
+      "position": "C",
+      "rosterStatus": "ACTIVE",
+      "onCurrentRoster": true
+    },
+    "06kkx": {
+      "nhlId": 8484938,
+      "nhlName": "Arttu Hyry",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Arttu Hyry",
+      "bhlTeam": "Florida Panthers",
+      "position": "C",
+      "rosterStatus": "ACTIVE",
+      "onCurrentRoster": true
+    },
+    "048x7": {
+      "nhlId": 8479976,
+      "nhlName": "Juuso Välimäki",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Juuso Valimaki",
+      "bhlTeam": "Anaheim Mighty Ducks",
       "position": "D",
       "rosterStatus": "RESERVE",
       "onCurrentRoster": true
