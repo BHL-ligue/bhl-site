@@ -2,6 +2,7 @@
 No fabricated stats: a period is published only when every required NHL report succeeds.
 """
 import datetime as dt
+import bhl_periods
 import json
 import urllib.parse
 import urllib.request
@@ -73,12 +74,11 @@ def main():
     # NHL reports have calendar-date boundaries, while Fantrax periods use
     # a local timezone offset. Convert to the NHL's Eastern date.
     for period in period_list:
-        start=date_only(period["startDate"])
-        end=date_only(period["endDate"])
+        start,end=bhl_periods.window(period)
         # Keep the opening date: Fantrax periods begin before NHL evening games.
         first=start.isoformat()
         last=end.isoformat()
-        if first>dt.datetime.now(dt.timezone.utc).date().isoformat():continue
+        if not bhl_periods.complete(period):continue
         try:
             sk=report("skater","summary",season,first,last)
             try:
@@ -121,7 +121,7 @@ def main():
             if p:
                 used.add(p["nhlId"]);chosen.append({**p,"slot":pos})
         output.append({"period":period["period"],"start":first,"end":last,"players":chosen,
-                       "candidates":len(candidates),"complete":last<dt.datetime.now(dt.timezone.utc).date().isoformat()})
+                       "candidates":len(candidates),"complete":True})
     if not output:raise RuntimeError("No weekly periods with complete official NHL reports")
     dest=DATA/"bhl-weekly-stars.json"
     dest.write_text(json.dumps({"updatedAt":dt.datetime.now(dt.timezone.utc).isoformat(),

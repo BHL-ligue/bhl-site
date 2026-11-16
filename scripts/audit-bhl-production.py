@@ -3,6 +3,9 @@ Reads public Fantrax lineups and NHL reports; never changes official scores.
 """
 import concurrent.futures as cf
 import datetime as dt
+import sys
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
+import bhl_periods
 import json
 from pathlib import Path
 import unicodedata
@@ -124,7 +127,13 @@ def main(season='2025-26',completed_only=False):
   archive=json.loads((ROOT/('data/ownership/'+season+'.json')).read_text());
   report['archivedPeriods']=len(archive['periods']);report['excludedOpenPeriods']=[]
   if completed_only:
-   now=dt.datetime.now(dt.timezone.utc);report['excludedOpenPeriods']=[p['number'] for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])>now];archive['periods']=[p for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])<=now]
+   now=dt.datetime.now(dt.timezone.utc)
+   if season==bhl_periods.current_season(now):
+    report['excludedOpenPeriods']=[p['number'] for p in archive['periods'] if not bhl_periods.complete(p,now)]
+    archive['periods']=[bhl_periods.audit_period(p) for p in archive['periods'] if bhl_periods.complete(p,now)]
+   else:
+    report['excludedOpenPeriods']=[p['number'] for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])>now]
+    archive['periods']=[p for p in archive['periods'] if dt.datetime.fromisoformat(p['end'])<=now]
   directory=json.loads((ROOT/'data/ownership/players.json').read_text())['players'];identities=confirmed_identities(json.loads((ROOT/'data/player-identity-map.json').read_text())['players'],json.loads((ROOT/'data/historical-player-identities.json').read_text()).get('players',{}))
   with cf.ThreadPoolExecutor(max_workers=4) as pool:
    names=list(pool.map(lambda kind:(kind,nhl_report(kind,'summary')),['skater','goalie']));season_rows=dict(names)

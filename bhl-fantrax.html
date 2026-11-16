@@ -148,11 +148,20 @@
  }
  body.addEventListener('click',e=>{const button=e.target.closest('[data-star-id]');if(button&&window.BHLPlayerStats?.open)window.BHLPlayerStats.open(button.dataset.starId,button.dataset.starName)});
  selector.addEventListener('change',render);
- fetch('data/bhl-weekly-stars.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('not published');return r.json()}).then(data=>{
+ let starsLoading=false;
+ function refreshWeeklyStars(){
+ if(starsLoading)return;starsLoading=true;
+ const previous=selector.value,followLatest=!periods.length||previous===String(periods[0]?.period);
+ return fetch('data/bhl-weekly-stars.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('not published');return r.json()}).then(data=>{
   periods=(data.periods||[]).filter(p=>p.complete===true&&Array.isArray(p.players)&&p.players.length>0).sort((a,b)=>b.period-a.period);
   selector.replaceChildren(...periods.map(p=>new Option('Période '+p.period+' · '+p.start+' au '+p.end+(p.complete?'':' (en cours)'),String(p.period))));
+  if(!followLatest&&periods.some(p=>String(p.period)===previous))selector.value=previous;
   render();
- }).catch(()=>{body.className='bhl-stars-empty';body.textContent='Les sélections hebdomadaires seront disponibles après la première synchronisation officielle.'});
+ }).catch(()=>{if(!periods.length){body.className='bhl-stars-empty';body.textContent='Les sélections hebdomadaires seront disponibles après la première synchronisation officielle.';}}).finally(()=>{starsLoading=false;});
+ }
+ refreshWeeklyStars();
+ setInterval(()=>{if(!document.hidden)refreshWeeklyStars();},300000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshWeeklyStars();});
 })();
 </script></section><section class="bhl-season-view" id="bhl-view-standings" role="tabpanel" aria-labelledby="bhl-tab-standings"><section class="panel"><h2>Classement · Standings Fantrax</h2><p class="muted">Classement synchronisé depuis Fantrax (Standings). Le classement FORBES demeure disponible dans sa page dédiée.</p><div id="standings" class="scroll"></div></section>
 </section><section class="bhl-season-view" id="bhl-view-rosters" role="tabpanel" aria-labelledby="bhl-tab-rosters" hidden><section class="panel"><h2>Effectifs <span id="rosterPeriod"></span></h2><div class="bar"><label>Organisation<select id="team"></select></label><label>Rechercher un joueur<input id="search" type="search" placeholder="Nom du joueur"></label><label>Statut<select id="status"><option value="">Tous</option><option value="ACTIVE">Actif</option><option value="RESERVE">Banc</option><option value="INJURED_RESERVE">Blessés</option><option value="MINORS">Mineures</option></select></label></div><p id="count" class="muted"></p><div id="rosters" class="scroll"></div><p class="muted">Les statistiques individuelles et les points fantasy par joueur ne sont pas fournis par cette synchronisation.</p></section></section><section class="bhl-season-view" id="bhl-view-calendar" role="tabpanel" aria-labelledby="bhl-tab-calendar"><section class="panel"><h2 id="period">Affrontements</h2><p id="dates" class="muted"></p><div id="games" class="games"></div></section>

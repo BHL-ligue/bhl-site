@@ -99,11 +99,12 @@ function render(){
  if(!rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=8;td.className='empty';td.textContent='Aucun résultat disponible pour ces filtres.';tr.append(td);body.append(tr)}
  $('status').textContent=rows.length+' joueurs · données historiques provisoires';
 }
+let scorerUpdatedAt=null,scorerRefreshing=false;
 async function init(){
  try{
   const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)throw Error('Archives non encore publiées');
   const data=await response.json();if(!Array.isArray(data.rows))throw Error('Format des données invalide');
-  dataset=data.rows;try{const ids=await fetch('data/player-identity-map.json',{cache:'force-cache'});if(ids.ok)playerIdentities=(await ids.json()).players||{}}catch(e){console.warn('Photos non disponibles',e)}const seasons=[...new Set(dataset.map(x=>x.season))].sort().reverse();
+  scorerUpdatedAt=data.updatedAt;dataset=data.rows;try{const ids=await fetch('data/player-identity-map.json',{cache:'force-cache'});if(ids.ok)playerIdentities=(await ids.json()).players||{}}catch(e){console.warn('Photos non disponibles',e)}const seasons=[...new Set(dataset.map(x=>x.season))].sort().reverse();
   for(const season of seasons)$('season').append(new Option(season,season));
   const now=new Date(),year=now.getFullYear()-(now.getMonth()<8?1:0);
   const currentSeason=year+'-'+String((year+1)%100).padStart(2,'0');
@@ -113,6 +114,25 @@ async function init(){
   render();
  }catch(e){$('status').textContent='Le calcul historique est en cours de préparation : '+e.message;$('results').innerHTML='<tr><td colspan="8" class="empty">Les résultats apparaîtront après une reconstitution validée et publiée.</td></tr>'}
 }
+async function refreshScorers(){
+ if(scorerRefreshing)return;scorerRefreshing=true;
+ try{
+  const response=await fetch('data/production/scorers.json',{cache:'no-store'});if(!response.ok)return;
+  const data=await response.json();if(!Array.isArray(data.rows)||!data.updatedAt||data.updatedAt===scorerUpdatedAt)return;
+  if(!dataset.length){await init();return;}
+  dataset=data.rows;scorerUpdatedAt=data.updatedAt;
+  const teams=[...new Set(dataset.map(x=>x.team).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));
+  for(const [id,values]of [['season',[...new Set(dataset.map(x=>x.season))].sort().reverse()],['team',teams],['organization',[...new Set(teams.map(orgFor))].sort((a,b)=>a.localeCompare(b,'fr'))]]){
+   const select=$(id),chosen=select.value,existing=new Set([...select.options].map(o=>o.value));
+   for(const value of values)if(!existing.has(value))select.append(new Option(value,value));
+   select.value=chosen;
+  }
+  render();
+ }catch(error){console.warn('Actualisation des statistiques reportée',error);}
+ finally{scorerRefreshing=false;}
+}
+setInterval(()=>{if(!document.hidden)refreshScorers();},300000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshScorers();});
 ['phase','season','team','organization','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));init();
 document.querySelectorAll('.table-sort').forEach(btn=>btn.addEventListener('click',()=>{
  const field=btn.dataset.sort,old=window.bhlSort||'fpts-desc';
