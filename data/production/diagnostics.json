@@ -76,8 +76,8 @@
     },
     {
       "season": "2026-27",
-      "compared": 96,
-      "matching": 89,
+      "compared": 112,
+      "matching": 105,
       "mismatches": 7,
       "unresolvedPlayerPeriods": 0,
       "scoreDifferencePeriods": 7,
@@ -3948,34 +3948,6 @@
       "reason": "score_difference"
     },
     {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 5,
-      "team": "New York Rangers",
-      "official": 177.45,
-      "calculated": 177.15,
-      "difference": -0.3,
-      "unresolved": [],
-      "categoryDifferences": {
-        "SOG": -0.3
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 5,
-      "team": "Boston Bruins",
-      "official": 138.7,
-      "calculated": 139.0,
-      "difference": 0.3,
-      "unresolved": [],
-      "categoryDifferences": {
-        "SOG": 0.3
-      },
-      "reason": "score_difference"
-    },
-    {
       "season": "2022-23",
       "phase": "regular",
       "period": 14,
@@ -4421,48 +4393,6 @@
       "unresolved": [],
       "categoryDifferences": {
         "Blk": -0.2
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 2,
-      "team": "Florida Panthers",
-      "official": 72.0,
-      "calculated": 72.2,
-      "difference": 0.2,
-      "unresolved": [],
-      "categoryDifferences": {
-        "Blk": 0.2
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 5,
-      "team": "Detroit Red Wings",
-      "official": 145.65,
-      "calculated": 145.85,
-      "difference": 0.2,
-      "unresolved": [],
-      "categoryDifferences": {
-        "SV": 0.2
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 6,
-      "team": "Nashville Predators",
-      "official": 159.8,
-      "calculated": 159.6,
-      "difference": -0.2,
-      "unresolved": [],
-      "categoryDifferences": {
-        "SV": -0.2
       },
       "reason": "score_difference"
     },
@@ -4935,35 +4865,6 @@
       "reason": "score_difference"
     },
     {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 4,
-      "team": "Minnesota North Stars",
-      "official": 142.15,
-      "calculated": 142.05,
-      "difference": -0.1,
-      "unresolved": [],
-      "categoryDifferences": {
-        "Hit": -0.1
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 6,
-      "team": "Montréal Canadiens",
-      "official": 185.45,
-      "calculated": 185.35,
-      "difference": -0.1,
-      "unresolved": [],
-      "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": 0.2
-      },
-      "reason": "score_difference"
-    },
-    {
       "season": "2019-20",
       "phase": "regular",
       "period": 1,
@@ -5255,6 +5156,105 @@
       "unresolved": [],
       "categoryDifferences": {
         "FOW": 0.05
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "New York Rangers",
+      "official": 177.45,
+      "calculated": 177.15,
+      "difference": -0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": -0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "Boston Bruins",
+      "official": 138.7,
+      "calculated": 139.0,
+      "difference": 0.3,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SOG": 0.3
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 2,
+      "team": "Florida Panthers",
+      "official": 72.0,
+      "calculated": 72.2,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 5,
+      "team": "Detroit Red Wings",
+      "official": 145.65,
+      "calculated": 145.85,
+      "difference": 0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 6,
+      "team": "Nashville Predators",
+      "official": 159.8,
+      "calculated": 159.6,
+      "difference": -0.2,
+      "unresolved": [],
+      "categoryDifferences": {
+        "SV": -0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 4,
+      "team": "Minnesota North Stars",
+      "official": 142.15,
+      "calculated": 142.05,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": -0.1
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 6,
+      "team": "Montréal Canadiens",
+      "official": 185.45,
+      "calculated": 185.35,
+      "difference": -0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Blk": 0.2,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     }
