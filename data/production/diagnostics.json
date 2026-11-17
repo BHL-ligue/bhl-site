@@ -5310,8 +5310,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "SOG": -0.3,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "SOG": -0.3
       },
       "reason": "score_difference"
     },
@@ -5325,8 +5325,8 @@
       "difference": 0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": -0.1,
-        "Blk": 0.2
+        "Blk": 0.2,
+        "Hit": -0.1
       },
       "reason": "score_difference"
     },
@@ -5340,8 +5340,8 @@
       "difference": 0.05,
       "unresolved": [],
       "categoryDifferences": {
-        "FOW": -0.05,
-        "Hit": 0.1
+        "Hit": 0.1,
+        "FOW": -0.05
       },
       "reason": "score_difference"
     }
