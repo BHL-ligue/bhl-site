@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-17T05:41:07.611092+00:00",
+  "updatedAt": "2026-11-17T06:43:27.735254+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -18187,7 +18187,7 @@
       "teamName": "Detroit Red Wings",
       "rank": 3,
       "points": "16-5-0",
-      "totalPointsFor": 3559.2,
+      "totalPointsFor": 3561.6,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3078.8
@@ -18197,7 +18197,7 @@
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "15-6-0",
-      "totalPointsFor": 3502.2,
+      "totalPointsFor": 3502.65,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
       "totalPointsAgainst": 3104.2
@@ -18217,7 +18217,7 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "14-7-0",
-      "totalPointsFor": 3444.0,
+      "totalPointsFor": 3446.7,
       "winPercentage": 0.667,
       "gamesBack": 6.0,
       "totalPointsAgainst": 3272.45
@@ -18227,7 +18227,7 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "12-9-0",
-      "totalPointsFor": 3195.3,
+      "totalPointsFor": 3198.0,
       "winPercentage": 0.571,
       "gamesBack": 8.0,
       "totalPointsAgainst": 3125.1
@@ -18257,7 +18257,7 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "9-12-0",
-      "totalPointsFor": 2820.45,
+      "totalPointsFor": 2836.95,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
       "totalPointsAgainst": 3133.35
@@ -18277,7 +18277,7 @@
       "teamName": "Florida Panthers",
       "rank": 12,
       "points": "7-14-0",
-      "totalPointsFor": 2768.7,
+      "totalPointsFor": 2780.4,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
       "totalPointsAgainst": 3108.45
@@ -18287,7 +18287,7 @@
       "teamName": "Chicago Blackhawks",
       "rank": 13,
       "points": "5-16-0",
-      "totalPointsFor": 2912.25,
+      "totalPointsFor": 2920.65,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
       "totalPointsAgainst": 3363.65
@@ -18297,7 +18297,7 @@
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "5-16-0",
-      "totalPointsFor": 2566.35,
+      "totalPointsFor": 2568.0,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
       "totalPointsAgainst": 3198.85
@@ -18307,7 +18307,7 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "4-17-0",
-      "totalPointsFor": 2713.5,
+      "totalPointsFor": 2713.95,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3105.7
