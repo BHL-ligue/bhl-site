@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-16T23:19:42.586645+00:00",
+  "updatedAt": "2026-11-16T23:59:56.440008+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -722,7 +722,7 @@
         {
           "id": "06snb",
           "name": "Benjamin Kindel",
-          "position": "C",
+          "position": "RW",
           "eligiblePositions": [
             "RW",
             "C"
@@ -752,7 +752,7 @@
         {
           "id": "06mb0",
           "name": "Matvei Gridin",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
@@ -854,7 +854,7 @@
         {
           "id": "02noo",
           "name": "Mark Jankowski",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "C"
@@ -1221,7 +1221,7 @@
           "eligiblePositions": [
             "LW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "06fzw",
@@ -1299,15 +1299,6 @@
           "status": "RESERVE"
         },
         {
-          "id": "060pq",
-          "name": "Alex Bump",
-          "position": "LW",
-          "eligiblePositions": [
-            "LW"
-          ],
-          "status": "RESERVE"
-        },
-        {
           "id": "03167",
           "name": "Bo Horvat",
           "position": "C",
@@ -1341,7 +1332,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06rqm",
@@ -1415,7 +1406,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "06imq",
@@ -1424,12 +1415,12 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "01c32",
           "name": "Brayden Schenn",
-          "position": "C",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "C"
@@ -2493,7 +2484,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "059e0",
@@ -2550,7 +2541,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "04zj8",
@@ -7416,8 +7407,7 @@
         "round": 12,
         "pick": 183,
         "playerId": "060pq",
-        "teamId": "fdy3gp6lmo2tig2e",
-        "playerName": "Alex Bump"
+        "teamId": "fdy3gp6lmo2tig2e"
       },
       {
         "round": 12,
@@ -18187,7 +18177,7 @@
       "teamName": "Ottawa Senators",
       "rank": 2,
       "points": "16-5-0",
-      "totalPointsFor": 3794.4,
+      "totalPointsFor": 3793.5,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3123.45
@@ -18257,7 +18247,7 @@
       "teamName": "Nashville Predators",
       "rank": 9,
       "points": "10-11-0",
-      "totalPointsFor": 3206.55,
+      "totalPointsFor": 3205.35,
       "winPercentage": 0.476,
       "gamesBack": 10.0,
       "totalPointsAgainst": 3228.15

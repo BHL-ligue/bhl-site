@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-16T23:19:42.586645+00:00"
+    "rosterUpdatedAt": "2026-11-16T23:59:56.440008+00:00"
   },
   "players": {
     "02un4": {
@@ -910,7 +910,7 @@
     "06snb": {
       "fantraxName": "Benjamin Kindel",
       "bhlTeam": "Ottawa Senators",
-      "position": "C",
+      "position": "RW",
       "nhlTeam": "PIT",
       "nhlId": null,
       "nhlName": null,
@@ -946,7 +946,7 @@
     "06mb0": {
       "fantraxName": "Matvei Gridin",
       "bhlTeam": "Ottawa Senators",
-      "position": "RW",
+      "position": "LW",
       "nhlTeam": "CGY",
       "nhlId": 8484860,
       "nhlName": "Matvei Gridin",
@@ -1528,7 +1528,7 @@
       "nhlName": "Jamie Benn",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06fzw": {
@@ -1629,15 +1629,15 @@
     },
     "060pq": {
       "fantraxName": "Alex Bump",
-      "bhlTeam": "Detroit Red Wings",
+      "bhlTeam": null,
       "position": "LW",
       "nhlTeam": "PHI",
       "nhlId": 8483731,
       "nhlName": "Alex Bump",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "03167": {
       "fantraxName": "Bo Horvat",
@@ -1684,7 +1684,7 @@
       "nhlName": "Brayden Point",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "INJURED_RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "06rqm": {
@@ -1780,7 +1780,7 @@
       "nhlName": "Linus Karlsson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "06imq": {
@@ -1792,13 +1792,13 @@
       "nhlName": "Maxim Shabanov",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "01c32": {
       "fantraxName": "Brayden Schenn",
       "bhlTeam": "Detroit Red Wings",
-      "position": "C",
+      "position": "LW",
       "nhlTeam": "NYI",
       "nhlId": 8475170,
       "nhlName": "Brayden Schenn",
@@ -3118,7 +3118,7 @@
       "nhlName": "Jesperi Kotkaniemi",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "059e0": {
@@ -3190,7 +3190,7 @@
       "nhlName": "Michael Misa",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "04zj8": {
@@ -5177,7 +5177,7 @@
     "02noo": {
       "fantraxName": "Mark Jankowski",
       "bhlTeam": "Ottawa Senators",
-      "position": "LW",
+      "position": "C",
       "nhlTeam": "CAR",
       "nhlId": 8476873,
       "nhlName": "Mark Jankowski",
