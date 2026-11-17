@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-17T20:27:49.350165+00:00",
+  "updatedAt": "2026-11-17T21:21:04.270186+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -3335,7 +3335,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "042t2",
@@ -3344,7 +3344,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "051uw",
@@ -3520,7 +3520,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03mkm",
