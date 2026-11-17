@@ -5340,8 +5340,8 @@
       "difference": 0.05,
       "unresolved": [],
       "categoryDifferences": {
-        "Hit": 0.1,
-        "FOW": -0.05
+        "FOW": -0.05,
+        "Hit": 0.1
       },
       "reason": "score_difference"
     }
