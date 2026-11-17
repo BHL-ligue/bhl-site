@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-17T14:41:39.993751+00:00",
+  "updatedAt": "2026-11-17T15:34:33.390375+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -9957,12 +9957,12 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 115.5
+        "score": 115.3
       },
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 140.8
+        "score": 140.3
       }
     },
     {
@@ -9970,7 +9970,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 120.55
+        "score": 120.75
       },
       "home": {
         "teamId": "adfljh3wmo2tig2e",
@@ -10009,7 +10009,7 @@
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 136.75
+        "score": 137.05
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
@@ -10048,7 +10048,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 115.5
+        "score": 115.3
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
@@ -10061,7 +10061,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 120.55
+        "score": 120.75
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
@@ -10079,7 +10079,7 @@
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 140.8
+        "score": 140.3
       }
     },
     {
@@ -10100,7 +10100,7 @@
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 136.75
+        "score": 137.05
       },
       "home": {
         "teamId": "fdy3gp6lmo2tig2e",
@@ -10152,12 +10152,12 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 120.55
+        "score": 120.75
       },
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 115.5
+        "score": 115.3
       }
     },
     {
@@ -10191,12 +10191,12 @@
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 136.75
+        "score": 137.05
       },
       "home": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 140.8
+        "score": 140.3
       }
     },
     {
@@ -12376,13 +12376,13 @@
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 136.75,
+            "score": 137.05,
             "gamesPlayed": 54
           },
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 140.8,
+            "score": 140.3,
             "gamesPlayed": 52
           }
         },
@@ -12418,13 +12418,13 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 120.55,
+            "score": 120.75,
             "gamesPlayed": 53
           },
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 115.5,
+            "score": 115.3,
             "gamesPlayed": 45
           }
         },
@@ -12474,7 +12474,7 @@
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 136.75,
+            "score": 137.05,
             "gamesPlayed": 54
           },
           "home": {
@@ -12508,7 +12508,7 @@
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 140.8,
+            "score": 140.3,
             "gamesPlayed": 52
           }
         },
@@ -12516,7 +12516,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 120.55,
+            "score": 120.75,
             "gamesPlayed": 53
           },
           "home": {
@@ -12530,7 +12530,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 115.5,
+            "score": 115.3,
             "gamesPlayed": 45
           },
           "home": {
@@ -12572,7 +12572,7 @@
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 136.75,
+            "score": 137.05,
             "gamesPlayed": 54
           },
           "home": {
@@ -12614,7 +12614,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 120.55,
+            "score": 120.75,
             "gamesPlayed": 53
           },
           "home": {
@@ -12628,13 +12628,13 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 115.5,
+            "score": 115.3,
             "gamesPlayed": 45
           },
           "home": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 140.8,
+            "score": 140.3,
             "gamesPlayed": 52
           }
         },
@@ -18190,27 +18190,27 @@
       "totalPointsFor": 3561.6,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3078.8
+      "totalPointsAgainst": 3079.1
     },
     {
       "teamId": "69yb2d10mo2tig2e",
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "15-6-0",
-      "totalPointsFor": 3502.65,
+      "totalPointsFor": 3501.15,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3104.2
+      "totalPointsAgainst": 3104.3
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
       "teamName": "Hartford Whalers",
       "rank": 5,
       "points": "15-6-0",
-      "totalPointsFor": 3334.2,
+      "totalPointsFor": 3335.1,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3009.0
+      "totalPointsAgainst": 3008.5
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18240,7 +18240,7 @@
       "totalPointsFor": 3261.9,
       "winPercentage": 0.524,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3193.2
+      "totalPointsAgainst": 3193.4
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18250,7 +18250,7 @@
       "totalPointsFor": 3207.15,
       "winPercentage": 0.476,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 3252.05
+      "totalPointsAgainst": 3252.25
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18260,7 +18260,7 @@
       "totalPointsFor": 2836.95,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3133.35
+      "totalPointsAgainst": 3132.85
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18270,7 +18270,7 @@
       "totalPointsFor": 3090.0,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3147.55
+      "totalPointsAgainst": 3147.85
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18280,7 +18280,7 @@
       "totalPointsFor": 2780.4,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3108.45
+      "totalPointsAgainst": 3108.25
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18307,20 +18307,20 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "4-17-0",
-      "totalPointsFor": 2713.95,
+      "totalPointsFor": 2714.55,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3105.7
+      "totalPointsAgainst": 3105.5
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
       "teamName": "California Golden Seals",
       "rank": 16,
       "points": "2-19-0",
-      "totalPointsFor": 2418.3,
+      "totalPointsFor": 2417.7,
       "winPercentage": 0.095,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3167.65
+      "totalPointsAgainst": 3167.35
     }
   ],
   "matchups": [
