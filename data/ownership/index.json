@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "source": "Fantrax getTeamRosters / getLeagueInfo",
-  "updatedAt": "2026-11-16T19:37:24.281741+00:00",
+  "updatedAt": "2026-11-17T01:54:06.198406+00:00",
   "seasons": [
     {
       "season": "2026-27",
       "leagueId": "32q8rjpomo2tig1z",
       "file": "2026-27.json",
-      "periods": 7,
-      "availablePeriods": 7,
-      "players": 550,
+      "periods": 8,
+      "availablePeriods": 8,
+      "players": 558,
       "missingPeriods": []
     },
     {
