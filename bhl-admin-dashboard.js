@@ -138,7 +138,7 @@ async function articleStats(){
  const failed=responses.some(r=>r.error);
  if(failed){metric('news','—');$('#articleSummary').textContent='Le bilan des articles est temporairement indisponible.'}
  else{const count=Object.fromEntries(states.map((state,i)=>[state,responses[i].count||0]));metric('news',count.pending);$('#articleSummary').textContent=count.pending+' à approuver · '+count.published+' publiés · '+count.draft+' brouillons · '+count.rejected+' à revoir'}
- const {data,error}=await db.from('bhl_news').select('id,title,status,updated_at').order('updated_at',{ascending:false}).limit(5);
+ const {data,error}=await db.from('bhl_news').select('id,title,status,updated_at').order('article_date',{ascending:false,nullsFirst:false}).order('published_at',{ascending:false,nullsFirst:false}).order('created_at',{ascending:false}).order('id').limit(5);
  if(error){$('#recentArticles').textContent='Les articles récents ne sont pas disponibles pour le moment.';return}
  const root=$('#recentArticles');root.replaceChildren();const labels={pending:'À approuver',published:'Publié',draft:'Brouillon',rejected:'À revoir'};
  for(const article of data||[]){const a=document.createElement('a');a.href='bhl-articles-modifier.html?id='+encodeURIComponent(article.id);const title=document.createElement('span');title.textContent=article.title||'Sans titre';const state=document.createElement('span');state.className='role-badge';state.textContent=labels[article.status]||article.status;a.append(title,state);root.append(a)}
