@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {normalizeGrid,readGrid,parseGridPaste} from '../bhl-news-grid-model.mjs';
+const data=normalizeGrid({title:'Évaluation',columns:['Joueur','Pos.','SK'],rows:[['Nick Suzuki','C',8],['Autre','D']]});
+assert.deepEqual(data.rows,[['Nick Suzuki','C','8'],['Autre','D','']]);
+assert.deepEqual(readGrid(JSON.stringify(data)),data);
+assert.deepEqual(parseGridPaste('Joueur\tPosition\tCote\nNick Suzuki\tC\t8').rows,[['Nick Suzuki','C','8']]);
+assert.deepEqual(parseGridPaste('Élément|Information|Valeur\nA|B|3').columns,['Élément','Information','Valeur']);
+assert.equal(normalizeGrid({columns:Array(9).fill('x'),rows:[]}),null);
+assert.equal(normalizeGrid({columns:['x'],rows:Array(31).fill([])}),null);
+assert.equal(readGrid('{bad json'),null);
+assert.equal(normalizeGrid({columns:['x'],rows:['bad']}),null);
+assert.equal(normalizeGrid({columns:['x'],rows:[["<script>alert(1)</script>"]]}).rows[0][0],'<script>alert(1)</script>');
+assert.equal(data.columns.length,3);
+console.log('Grid normalization, serialization, spreadsheet paste and limits passed.');
