@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const source=readFileSync('bhl-mondial-junior.js','utf8');
 let html='';
 const context={publicDraft:null,liveEdition:{teams:[{id:'a',name:'Équipe A'}]},liveLoadError:'',lastLiveCheck:null,
- $:()=>({set innerHTML(value){html=value}}),esc:s=>String(s??'').replace(/</g,'&lt;'),
+ $:()=>({set innerHTML(value){html=value},insertAdjacentHTML(position,value){html+=value}}),esc:s=>String(s??'').replace(/</g,'&lt;'),
  head:t=>t,teamLink:t=>t.name,playerLink:p=>p.name,
  table:(headers,rows)=>rows.join('')};
 vm.createContext(context);
@@ -23,3 +23,5 @@ context.liveLoadError='offline';
 assert.match(render({status:'open',completed:1,picks}),/dernières données reçues/);
 assert.match(html,/Joueur Test/);
 console.log('Public draft board: loading, setup, live picks, unequal repeated picks, pause, completion and stale connection passed.');
+
+context.liveLoadError="";assert.match(render({status:"setup",completed:0,picks:[],targets:[{name:"Cible potentielle",birthYear:2008}],available:[]}),/Cible potentielle/);assert.match(html,/Présence à confirmer/);assert.doesNotMatch(html,/data-player="Cible potentielle"/);

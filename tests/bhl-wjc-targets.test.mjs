@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {normalizeTargets,parseTargets,confirmTarget} from '../bhl-wjc-targets.mjs';
+import {available,validateConfig} from '../bhl-wjc-draft-model.mjs';
+const config={teams:[],players:[],order:[],targets:normalizeTargets([{name:'Joueur test',position:'C',birthYear:'2008',country:'Canada'}])};
+assert.equal(available(config).length,0);
+assert.equal(config.targets[0].birthYear,2008);
+const next=confirmTarget(config,config.targets[0].id);
+assert.equal(next.targets.length,0);assert.equal(next.players.length,1);assert.equal(available(next).length,1);
+assert.equal(config.targets.length,1);assert.equal(config.players.length,0);
+assert.equal(next.players[0].birthYear,2008);assert.equal(next.players[0].keeperTeamId,'');
+assert.throws(()=>normalizeTargets([{name:'Joueur test'}],next.players));
+assert.throws(()=>normalizeTargets([{name:'Éric Test'},{name:'Eric Test'}]));
+assert.throws(()=>normalizeTargets([{name:'A',birthYear:'invalide'}]));
+assert.equal(parseTargets('Nom A;D;Canada;2008\nNom B').length,2);
+assert.doesNotThrow(()=>validateConfig(config));
+console.log('Potential targets remain undraftable until promotion; duplicate, year, import and metadata checks passed.');

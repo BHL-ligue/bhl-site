@@ -166,4 +166,11 @@ function renderPublicDraft(){
  const t=team(pick.teamId),p=pick.player,isCurrent=i===done&&board.status!=='complete';
  return '<tr class="'+(isCurrent?'draft-current':'')+'"><td class="rank">'+pick.number+'</td><td class="team-col">'+(t?teamLink(t):esc(pick.teamId))+'</td><td class="name-col">'+(p?playerLink(p):'<span class="note">'+(isCurrent&&board.status==='open'?'Sélection en attente':'À venir')+'</span>')+'</td><td>'+esc(p?.position||'—')+'</td><td>'+esc(p?.birthYear||'—')+'</td><td>'+esc(p?.country||'—')+'</td><td><span class="presence-badge">'+(p?'Sélectionné':isCurrent?(board.status==='open'?'Au tour actuel':'Prochain choix'):'À venir')+'</span></td></tr>';
  })):'<p class="empty">'+(liveLoadError?'Le repêchage est temporairement indisponible.':board?'Aucun choix enregistré pour le moment.':'Chargement du repêchage…')+'</p>');
+ $('#content').insertAdjacentHTML('beforeend',publicDraftCandidates(board));
+}
+
+function publicDraftCandidates(board){
+ if(!board)return '';
+ const block=(title,note,rows,pending)=>head(title,note)+(rows.length?table([['Joueur','name-col'],['Position'],['Naissance'],['Pays'],['Statut']],rows.map(p=>'<tr><td class="name-col"><strong>'+esc(p.name)+'</strong></td><td>'+esc(p.position||'—')+'</td><td>'+esc(p.birthYear||'—')+'</td><td>'+esc(p.country||'—')+'</td><td><span class="'+(pending?'potential-badge':'presence-badge')+'">'+(pending?'Présence à confirmer':'Disponible au repêchage')+'</span></td></tr>')):'<p class="empty">'+(pending?'Les cibles seront affichées dès leur ajout par l’administration.':'La liste des joueurs disponibles sera ajoutée par l’administration.')+'</p>');
+ return '<section class="draft-candidates">'+block('Cibles potentielles','Liste préliminaire · Ces présences restent à confirmer.',board.targets||[],true)+block('Joueurs disponibles','Banque de joueurs rendus disponibles par l’administration.',board.available||[],false)+'</section>';
 }
