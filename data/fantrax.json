@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-18T05:55:15.922365+00:00",
+  "updatedAt": "2026-11-18T06:57:31.973563+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12706,13 +12706,13 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.6,
+            "score": 49.85,
             "gamesPlayed": 16
           },
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 52.6,
+            "score": 52.55,
             "gamesPlayed": 17
           }
         },
@@ -12768,7 +12768,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 17.25,
+            "score": 21.25,
             "gamesPlayed": 13
           }
         },
@@ -12810,7 +12810,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 52.6,
+            "score": 52.55,
             "gamesPlayed": 17
           }
         },
@@ -12832,7 +12832,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.6,
+            "score": 49.85,
             "gamesPlayed": 16
           },
           "home": {
@@ -12866,7 +12866,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 17.25,
+            "score": 21.25,
             "gamesPlayed": 13
           }
         },
@@ -12908,7 +12908,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 52.6,
+            "score": 52.55,
             "gamesPlayed": 17
           }
         },
@@ -12958,13 +12958,13 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 49.6,
+            "score": 49.85,
             "gamesPlayed": 16
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 17.25,
+            "score": 21.25,
             "gamesPlayed": 13
           }
         },
@@ -18178,7 +18178,7 @@
       "teamName": "Ottawa Senators",
       "rank": 2,
       "points": "16-5-0",
-      "totalPointsFor": 3917.25,
+      "totalPointsFor": 3926.55,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3271.8
@@ -18188,37 +18188,37 @@
       "teamName": "Detroit Red Wings",
       "rank": 3,
       "points": "16-5-0",
-      "totalPointsFor": 3663.75,
+      "totalPointsFor": 3673.8,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3182.1
+      "totalPointsAgainst": 3186.1
     },
     {
       "teamId": "69yb2d10mo2tig2e",
       "teamName": "Québec Nordiques",
       "rank": 4,
       "points": "15-6-0",
-      "totalPointsFor": 3619.65,
+      "totalPointsFor": 3637.05,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3198.15
+      "totalPointsAgainst": 3202.15
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
       "teamName": "Hartford Whalers",
       "rank": 5,
       "points": "15-6-0",
-      "totalPointsFor": 3435.45,
+      "totalPointsFor": 3447.75,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3139.0
+      "totalPointsAgainst": 3138.95
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "14-7-0",
-      "totalPointsFor": 3570.15,
+      "totalPointsFor": 3573.75,
       "winPercentage": 0.667,
       "gamesBack": 6.0,
       "totalPointsAgainst": 3383.65
@@ -18228,27 +18228,27 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "12-9-0",
-      "totalPointsFor": 3279.0,
+      "totalPointsFor": 3290.55,
       "winPercentage": 0.571,
       "gamesBack": 8.0,
-      "totalPointsAgainst": 3252.15
+      "totalPointsAgainst": 3252.1
     },
     {
       "teamId": "l9ssazuemo2tig2e",
       "teamName": "New York Rangers",
       "rank": 8,
       "points": "11-10-0",
-      "totalPointsFor": 3301.5,
+      "totalPointsFor": 3325.65,
       "winPercentage": 0.524,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3323.75
+      "totalPointsAgainst": 3324.0
     },
     {
       "teamId": "adfljh3wmo2tig2e",
       "teamName": "Nashville Predators",
       "rank": 9,
       "points": "10-11-0",
-      "totalPointsFor": 3294.3,
+      "totalPointsFor": 3309.9,
       "winPercentage": 0.476,
       "gamesBack": 10.0,
       "totalPointsAgainst": 3366.4
@@ -18258,27 +18258,27 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "9-12-0",
-      "totalPointsFor": 2950.35,
+      "totalPointsFor": 2950.8,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3248.9
+      "totalPointsAgainst": 3249.15
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
       "teamName": "Anaheim Mighty Ducks",
       "rank": 11,
       "points": "7-14-0",
-      "totalPointsFor": 3210.75,
+      "totalPointsFor": 3233.7,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3254.6
+      "totalPointsAgainst": 3258.55
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
       "teamName": "Florida Panthers",
       "rank": 12,
       "points": "7-14-0",
-      "totalPointsFor": 2874.0,
+      "totalPointsFor": 2874.75,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
       "totalPointsAgainst": 3228.7
@@ -18298,7 +18298,7 @@
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "5-16-0",
-      "totalPointsFor": 2689.2,
+      "totalPointsFor": 2682.0,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
       "totalPointsAgainst": 3357.15
@@ -18308,7 +18308,7 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "4-17-0",
-      "totalPointsFor": 2808.6,
+      "totalPointsFor": 2817.9,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3229.7
@@ -18318,10 +18318,10 @@
       "teamName": "California Golden Seals",
       "rank": 16,
       "points": "2-19-0",
-      "totalPointsFor": 2539.5,
+      "totalPointsFor": 2572.2,
       "winPercentage": 0.095,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3283.25
+      "totalPointsAgainst": 3283.5
     }
   ],
   "matchups": [
@@ -18371,13 +18371,13 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.6,
+        "score": 49.85,
         "gamesPlayed": 16
       },
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 52.6,
+        "score": 52.55,
         "gamesPlayed": 17
       }
     },
@@ -18433,7 +18433,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 17.25,
+        "score": 21.25,
         "gamesPlayed": 13
       }
     },
@@ -18475,7 +18475,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 52.6,
+        "score": 52.55,
         "gamesPlayed": 17
       }
     },
@@ -18497,7 +18497,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.6,
+        "score": 49.85,
         "gamesPlayed": 16
       },
       "home": {
@@ -18531,7 +18531,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 17.25,
+        "score": 21.25,
         "gamesPlayed": 13
       }
     },
@@ -18573,7 +18573,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 52.6,
+        "score": 52.55,
         "gamesPlayed": 17
       }
     },
@@ -18623,13 +18623,13 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 49.6,
+        "score": 49.85,
         "gamesPlayed": 16
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 17.25,
+        "score": 21.25,
         "gamesPlayed": 13
       }
     },
