@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-18T17:30:49.389367+00:00",
+  "updatedAt": "2026-11-18T18:20:46.816176+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12768,7 +12768,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 21.25,
+            "score": 21.05,
             "gamesPlayed": 13
           }
         },
@@ -12866,7 +12866,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 21.25,
+            "score": 21.05,
             "gamesPlayed": 13
           }
         },
@@ -12964,7 +12964,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 21.25,
+            "score": 21.05,
             "gamesPlayed": 13
           }
         },
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 3673.8,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3186.1
+      "totalPointsAgainst": 3185.9
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18201,7 +18201,7 @@
       "totalPointsFor": 3637.05,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3202.25
+      "totalPointsAgainst": 3202.05
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18271,7 +18271,7 @@
       "totalPointsFor": 3233.7,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3258.55
+      "totalPointsAgainst": 3258.35
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18433,7 +18433,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 21.25,
+        "score": 21.05,
         "gamesPlayed": 13
       }
     },
@@ -18531,7 +18531,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 21.25,
+        "score": 21.05,
         "gamesPlayed": 13
       }
     },
@@ -18629,7 +18629,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 21.25,
+        "score": 21.05,
         "gamesPlayed": 13
       }
     },
