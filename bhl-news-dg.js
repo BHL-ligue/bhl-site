@@ -2,7 +2,7 @@ import {articleIdentity} from './bhl-news-journalists.js?v=article-grid1';
 import {articleTags} from './bhl-news-tag-ui.js?v=article-grid1';
 import {today,seasonForDate,fillSeasons,articleByline} from './bhl-news-metadata.js?v=date-only-20261114';
 import {attachCover,renderCover} from './bhl-news-images.js?v=inline1';
-import {attachEditor} from './bhl-news-editor.js?v=article-grid1';
+import {attachEditor} from './bhl-news-editor.js?v=long-articles1';
 import {db,node,labels,date,articleLink,paragraphs} from './bhl-news-db.js?v=article-grid1';
 const $=id=>document.getElementById(id), form=$('articleForm');
 const view=document.body.dataset.articlePage||'hub';
@@ -30,7 +30,7 @@ async function loadMine(reset=true){if(!['edit','pending','drafts'].includes(vie
 async function loadReview(reset=true){if(profile.role!=='admin'||view!=='review')return;if(reset){reviewPage=0;queue=[];}const {data,error:e}=await db.from('bhl_news').select('*').eq('status','pending').order('article_date',{ascending:false,nullsFirst:false}).order('published_at',{ascending:false,nullsFirst:false}).order('created_at',{ascending:false}).order('id').range(reviewPage*20,reviewPage*20+19);if(e)throw e;queue.push(...data);$('queue').replaceChildren(...(queue.length?queue.map(a=>item(a,true)):[emptyState('Tout est à jour','Aucun article ne demande ton approbation pour le moment.')]));$('moreReview').classList.toggle('hidden',data.length<20);}
 function validateDraft(){
  const optional=['summary','reporterName','mediaName','body'].map($),required=optional.map(el=>el.required);
- try{optional.forEach(el=>el.required=false);if(!form.reportValidity())return false;if(rich.value().body.length>20000){message('Article trop long : raccourcis le texte ou simplifie la mise en forme.');return false;}return true;}finally{optional.forEach((el,i)=>el.required=required[i]);}
+ try{optional.forEach(el=>el.required=false);if(!form.reportValidity())return false;if(rich.value().body.length>200000){message('Article trop long : raccourcis le texte ou simplifie la mise en forme.');return false;}return true;}finally{optional.forEach((el,i)=>el.required=required[i]);}
 }
 async function persist(state){const isDraft=state==='draft';if(busy||!editable()||!(isDraft?validateDraft():form.reportValidity()&&rich.valid()))return;if(state==='pending'&&current?.status!=='pending'&&!confirm('Soumettre cet article à l’administration? Il restera en attente jusqu’à son approbation.'))return;setBusy(true);try{const payload=values();const required=isDraft?['title','category','article_date','season']:['title','category','summary','body','article_date','season','reporter_name','media_name'];if(required.some(k=>!payload[k]))throw new Error(isDraft?'Ajoute un titre à ton brouillon.':'Complète les champs avant de soumettre ton article.');
 // A reserved UUID is reused after an ambiguous network failure to avoid duplicate submissions.

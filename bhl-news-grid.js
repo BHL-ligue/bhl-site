@@ -27,7 +27,7 @@ export function attachGrid(editor,Quill,toolbar){
   const tools=el('div',undefined,'bhl-grid-actions'),preview=el('div',undefined,'bhl-grid-preview'),feedback=el('p','','bhl-grid-feedback');feedback.setAttribute('role','status');
   function button(label,action,parent=tools){const b=el('button',label);b.type='button';b.onclick=action;parent.append(b);return b;}
   button('Grille simple',()=>{if(!confirmReset())return;data={title:title.value,columns:['Élément','Information','Valeur'],rows:[['','',''],['','',''],['','','']]};draw();},presets);
-  button('Joueurs et cotes',()=>{if(!confirmReset())return;data={title:title.value,columns:['Palier','Joueur','Pos.','SK','PS','HS','CO','SH'],rows:[Array(8).fill(''),Array(8).fill(''),Array(8).fill('')]};draw();},presets);
+  button('Joueurs et cotes',()=>{if(!confirmReset())return;data={title:title.value,columns:['Joueur','Pos.','Palier','SK','PS','HS','CO','SH'],rows:[Array(8).fill(''),Array(8).fill(''),Array(8).fill('')]};draw();},presets);
   function confirmReset(){return !data.rows.some(r=>r.some(v=>v.trim()))||confirm('Remplacer les cellules de cette grille par le modèle choisi?');}
   const addRow=button('+ Ligne',()=>{if(data.rows.length<GRID_LIMITS.rows){data.rows.push(Array(data.columns.length).fill(''));draw();}});
   const addColumn=button('+ Colonne',()=>{if(data.columns.length<GRID_LIMITS.columns){data.columns.push('Colonne '+(data.columns.length+1));data.rows.forEach(r=>r.push(''));draw();}});
@@ -38,7 +38,7 @@ export function attachGrid(editor,Quill,toolbar){
   button(replacing?'Enregistrer la grille':'Insérer la grille',()=>{
    if(!editor.isEnabled())return;data.title=title.value;const value=normalizeGrid(data);if(!value||!value.rows.some(r=>r.some(v=>v.trim()))){feedback.textContent='Ajoute au moins une cellule de contenu.';return;}
    const rendered=createGridElement(value);const oldLength=replacing?.outerHTML.length||0;
-   if(editor.getSemanticHTML().length-oldLength+rendered.outerHTML.length>19500){feedback.textContent='Cette grille rendrait l’article trop long. Réduis le nombre de lignes ou le texte dans les cases.';return;}
+   if(editor.getSemanticHTML().length-oldLength+rendered.outerHTML.length>199500){feedback.textContent='Cette grille rendrait l’article trop long. Réduis le nombre de lignes ou le texte dans les cases.';return;}
    const index=replacing?editor.getIndex(Quill.find(replacing)):Math.min(range.index,editor.getLength()-1);
    editor.history.cutoff();if(replacing)editor.deleteText(index,1,'user');editor.insertEmbed(index,'articleGrid',value,'user');if(!replacing)editor.insertText(index+1,'\n','user');editor.setSelection(index+2,0,'silent');selected=null;dialog.close();editor.focus();
   },actions).className='primary';
