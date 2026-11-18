@@ -88,7 +88,7 @@
     "Hit": 289,
     "SOG": 52,
     "SV": 41,
-    "FOW": 29,
+    "FOW": 28,
     "Blk": 20,
     "Tk": 3,
     "A": 2
@@ -5267,8 +5267,22 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Blk": 0.2
+      },
+      "reason": "score_difference"
+    },
+    {
+      "season": "2026-27",
+      "phase": "regular",
+      "period": 7,
+      "team": "Montréal Canadiens",
+      "official": 153.65,
+      "calculated": 153.75,
+      "difference": 0.1,
+      "unresolved": [],
+      "categoryDifferences": {
+        "Hit": 0.1
       },
       "reason": "score_difference"
     },
@@ -5283,21 +5297,6 @@
       "unresolved": [],
       "categoryDifferences": {
         "Hit": -0.1
-      },
-      "reason": "score_difference"
-    },
-    {
-      "season": "2026-27",
-      "phase": "regular",
-      "period": 7,
-      "team": "Montréal Canadiens",
-      "official": 153.7,
-      "calculated": 153.75,
-      "difference": 0.05,
-      "unresolved": [],
-      "categoryDifferences": {
-        "FOW": -0.05,
-        "Hit": 0.1
       },
       "reason": "score_difference"
     }
