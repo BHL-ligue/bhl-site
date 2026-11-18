@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-18T16:31:53.698785+00:00",
+  "updatedAt": "2026-11-18T17:30:49.389367+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12720,7 +12720,7 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 44.35,
+            "score": 44.45,
             "gamesPlayed": 17
           },
           "home": {
@@ -12754,7 +12754,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 41.75,
+            "score": 41.65,
             "gamesPlayed": 18
           }
         },
@@ -12846,13 +12846,13 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 44.35,
+            "score": 44.45,
             "gamesPlayed": 17
           },
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 41.75,
+            "score": 41.65,
             "gamesPlayed": 18
           }
         },
@@ -12950,7 +12950,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 41.75,
+            "score": 41.65,
             "gamesPlayed": 18
           }
         },
@@ -12972,7 +12972,7 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 44.35,
+            "score": 44.45,
             "gamesPlayed": 17
           },
           "home": {
@@ -18181,7 +18181,7 @@
       "totalPointsFor": 3926.55,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3271.75
+      "totalPointsAgainst": 3271.65
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18201,7 +18201,7 @@
       "totalPointsFor": 3637.05,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3202.15
+      "totalPointsAgainst": 3202.25
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18218,10 +18218,10 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "14-7-0",
-      "totalPointsFor": 3573.6,
+      "totalPointsFor": 3573.9,
       "winPercentage": 0.667,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3383.65
+      "totalPointsAgainst": 3383.55
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18251,7 +18251,7 @@
       "totalPointsFor": 3309.9,
       "winPercentage": 0.476,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 3366.4
+      "totalPointsAgainst": 3366.3
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18278,10 +18278,10 @@
       "teamName": "Florida Panthers",
       "rank": 12,
       "points": "7-14-0",
-      "totalPointsFor": 2874.75,
+      "totalPointsFor": 2874.45,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3228.7
+      "totalPointsAgainst": 3228.8
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18311,7 +18311,7 @@
       "totalPointsFor": 2817.9,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3229.7
+      "totalPointsAgainst": 3229.8
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18385,7 +18385,7 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 44.35,
+        "score": 44.45,
         "gamesPlayed": 17
       },
       "home": {
@@ -18419,7 +18419,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 41.75,
+        "score": 41.65,
         "gamesPlayed": 18
       }
     },
@@ -18511,13 +18511,13 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 44.35,
+        "score": 44.45,
         "gamesPlayed": 17
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 41.75,
+        "score": 41.65,
         "gamesPlayed": 18
       }
     },
@@ -18615,7 +18615,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 41.75,
+        "score": 41.65,
         "gamesPlayed": 18
       }
     },
@@ -18637,7 +18637,7 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 44.35,
+        "score": 44.45,
         "gamesPlayed": 17
       },
       "home": {
