@@ -8,7 +8,7 @@ export function normalizeTargets(targets=[],players=[]){
   const birthYear=p.birthYear==null||p.birthYear===''?null:Number(p.birthYear);
   if(birthYear!==null&&(!Number.isInteger(birthYear)||birthYear<1900||birthYear>2100))throw Error('Année de naissance invalide pour '+name+'.');
   const epUrl=String(p.epUrl||'').trim();
-  if(epUrl&&!/^https:\/\/(?:www\.)?eliteprospects\.com\/player\/\d+(?:\/[a-z0-9-]+)?\/?$/i.test(epUrl))throw Error('Lien Elite Prospects invalide pour '+name+'.');
+  if(epUrl){let url;try{url=new URL(epUrl);}catch{throw Error('Lien Elite Prospects invalide pour '+name+'.');}if(url.protocol!=='https:'||!['eliteprospects.com','www.eliteprospects.com'].includes(url.hostname)||!/^\/player\/\d+(?:\/[^/?#]+)?\/?$/u.test(decodeURIComponent(url.pathname)))throw Error('Lien Elite Prospects invalide pour '+name+'.');}
   used.add(key);ids.add(id);return {id,name,position:String(p.position||'').trim().slice(0,24),country:String(p.country||'').trim().slice(0,80),birthYear,epUrl};
  });
 }
