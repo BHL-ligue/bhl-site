@@ -1,4 +1,4 @@
-import {normalizeTargets,parseTargets,confirmTarget} from './bhl-wjc-targets.mjs?v=ep2';
+import {normalizeTargets,parseTargets,confirmTarget} from './bhl-wjc-targets.mjs?v=ep3';
 import {YEAR,EMPTY,parsePlayers,summary,validateConfig,slug} from './bhl-wjc-draft-model.mjs?v=1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fields='year,status,config,selections,revision,updated_at';
