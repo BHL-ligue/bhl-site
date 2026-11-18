@@ -1,4 +1,4 @@
-import {normalizeTargets,parseTargets,confirmTarget} from './bhl-wjc-targets.mjs?v=1';
+import {normalizeTargets,parseTargets,confirmTarget} from './bhl-wjc-targets.mjs?v=ep2';
 import {YEAR,EMPTY,parsePlayers,summary,validateConfig,slug} from './bhl-wjc-draft-model.mjs?v=1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fields='year,status,config,selections,revision,updated_at';
@@ -31,7 +31,9 @@ export async function initWjcDraftAdmin(db,target){
  renderTeams();renderSummary();renderArchive();renderTargets();
  const on=(id,fn)=>target.querySelector('#'+id).onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{await fn();}catch(error){tell(error.message,true);}finally{if(b.isConnected)b.disabled=false;}};
  on('wjc-add-target',()=>{readInputs();const name=target.querySelector('#wjc-target-name');config.targets=normalizeTargets([...(config.targets||[]),{name:name.value,position:target.querySelector('#wjc-target-position').value,country:target.querySelector('#wjc-target-country').value,birthYear:target.querySelector('#wjc-target-birth').value,epUrl:target.querySelector('#wjc-target-ep').value}],config.players);for(const id of ['name','position','country','birth','ep'])target.querySelector('#wjc-target-'+id).value='';mark();renderTargets();name.focus();});
- on('wjc-import-targets',()=>{readInputs();const input=target.querySelector('#wjc-target-import');const incoming=parseTargets(input.value);if(!incoming.length)throw Error('Ajoute au moins un nom.');config.targets=normalizeTargets([...(config.targets||[]),...incoming],config.players);input.value='';mark();renderTargets();});
+ on('wjc-import-targets',()=>{readInputs();const input=target.querySelector('#wjc-target-import');const incoming=parseTargets(input.value);if(!incoming.length)throw Error('Ajoute au moins un nom.');const existing=new Map((config.targets||[]).map(p=>[slug(p.name),p]));
+  for(const p of incoming){const key=slug(p.name),prior=existing.get(key);existing.set(key,prior?{...prior,...p,id:prior.id,epUrl:p.epUrl||prior.epUrl||''}:p);}
+  config.targets=normalizeTargets([...existing.values()],config.players);input.value='';mark();renderTargets();});
  on('wjc-refresh',async()=>{if(dirty&&!confirm('Abandonner les modifications non enregistrées et recharger ?'))return;await load();});
  on('wjc-save',async()=>{await action('save',structuredClone(read()));tell('Préparation enregistrée. Le repêchage peut être ouvert quand tout est prêt.');});
  on('wjc-open',async()=>{if(dirty)throw Error('Enregistre la préparation avant d’ouvrir le repêchage.');validateConfig(config,state.selections,true);if(confirm('Ouvrir le repêchage pour les DG participants ?'))await action('open');});
