@@ -5267,8 +5267,8 @@
       "difference": -0.1,
       "unresolved": [],
       "categoryDifferences": {
-        "Blk": 0.2,
-        "SOG": -0.3
+        "SOG": -0.3,
+        "Blk": 0.2
       },
       "reason": "score_difference"
     },
