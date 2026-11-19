@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-19T16:51:35.590325+00:00",
+  "updatedAt": "2026-11-19T17:43:44.982343+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12678,7 +12678,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 52.1,
+            "score": 52.7,
             "gamesPlayed": 20
           },
           "home": {
@@ -12804,7 +12804,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 52.1,
+            "score": 52.7,
             "gamesPlayed": 20
           },
           "home": {
@@ -12930,7 +12930,7 @@
           "away": {
             "teamId": "4fmu58uhmo2tig2f",
             "teamName": "Toronto Maple Leafs",
-            "score": 52.1,
+            "score": 52.7,
             "gamesPlayed": 20
           },
           "home": {
@@ -18211,7 +18211,7 @@
       "totalPointsFor": 3486.6,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3163.5
+      "totalPointsAgainst": 3164.1
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18261,7 +18261,7 @@
       "totalPointsFor": 2973.9,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3287.75
+      "totalPointsAgainst": 3288.35
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 2599.05,
       "winPercentage": 0.095,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3321.45
+      "totalPointsAgainst": 3322.05
     }
   ],
   "matchups": [
@@ -18343,7 +18343,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 52.1,
+        "score": 52.7,
         "gamesPlayed": 20
       },
       "home": {
@@ -18469,7 +18469,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 52.1,
+        "score": 52.7,
         "gamesPlayed": 20
       },
       "home": {
@@ -18595,7 +18595,7 @@
       "away": {
         "teamId": "4fmu58uhmo2tig2f",
         "teamName": "Toronto Maple Leafs",
-        "score": 52.1,
+        "score": 52.7,
         "gamesPlayed": 20
       },
       "home": {
