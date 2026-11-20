@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-20T17:37:53.555104+00:00",
+  "updatedAt": "2026-11-20T18:36:50.105648+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -4678,7 +4678,8 @@
           "name": "Nikita Klepov",
           "position": "LW",
           "eligiblePositions": [
-            "LW"
+            "LW",
+            "RW"
           ],
           "status": "MINORS"
         },
@@ -12670,7 +12671,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 78.65,
+            "score": 78.45,
             "gamesPlayed": 32
           }
         },
@@ -12726,7 +12727,7 @@
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 91.75,
+            "score": 92.15,
             "gamesPlayed": 33
           }
         },
@@ -12734,7 +12735,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 87.4,
+            "score": 87.2,
             "gamesPlayed": 33
           },
           "home": {
@@ -12790,7 +12791,7 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 78.65,
+            "score": 78.45,
             "gamesPlayed": 32
           },
           "home": {
@@ -12824,7 +12825,7 @@
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 91.75,
+            "score": 92.15,
             "gamesPlayed": 33
           }
         },
@@ -12860,7 +12861,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 87.4,
+            "score": 87.2,
             "gamesPlayed": 33
           },
           "home": {
@@ -12916,13 +12917,13 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 78.65,
+            "score": 78.45,
             "gamesPlayed": 32
           },
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 91.75,
+            "score": 92.15,
             "gamesPlayed": 33
           }
         },
@@ -12986,7 +12987,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 87.4,
+            "score": 87.2,
             "gamesPlayed": 33
           },
           "home": {
@@ -18171,7 +18172,7 @@
       "totalPointsFor": 4145.85,
       "winPercentage": 0.952,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 3301.85
+      "totalPointsAgainst": 3301.65
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18181,14 +18182,14 @@
       "totalPointsFor": 4104.9,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3423.5
+      "totalPointsAgainst": 3423.9
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
       "teamName": "Detroit Red Wings",
       "rank": 3,
       "points": "16-5-0",
-      "totalPointsFor": 3786.3,
+      "totalPointsFor": 3785.7,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3321.9
@@ -18221,7 +18222,7 @@
       "totalPointsFor": 3690.9,
       "winPercentage": 0.667,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3523.15
+      "totalPointsAgainst": 3523.55
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18241,7 +18242,7 @@
       "totalPointsFor": 3509.4,
       "winPercentage": 0.524,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3461.45
+      "totalPointsAgainst": 3461.25
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18251,7 +18252,7 @@
       "totalPointsFor": 3404.7,
       "winPercentage": 0.476,
       "gamesBack": 10.0,
-      "totalPointsAgainst": 3492.25
+      "totalPointsAgainst": 3492.05
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18291,27 +18292,27 @@
       "totalPointsFor": 3259.65,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3662.35
+      "totalPointsAgainst": 3662.15
     },
     {
       "teamId": "p7f42l5emo2tig2e",
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "5-16-0",
-      "totalPointsFor": 2785.05,
+      "totalPointsFor": 2784.45,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3518.85
+      "totalPointsAgainst": 3519.25
     },
     {
       "teamId": "uzhvniysmo2tig2e",
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "4-17-0",
-      "totalPointsFor": 2971.35,
+      "totalPointsFor": 2972.55,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3362.6
+      "totalPointsAgainst": 3362.4
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18321,7 +18322,7 @@
       "totalPointsFor": 2701.05,
       "winPercentage": 0.095,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3410.05
+      "totalPointsAgainst": 3409.85
     }
   ],
   "matchups": [
@@ -18335,7 +18336,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 78.65,
+        "score": 78.45,
         "gamesPlayed": 32
       }
     },
@@ -18391,7 +18392,7 @@
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 91.75,
+        "score": 92.15,
         "gamesPlayed": 33
       }
     },
@@ -18399,7 +18400,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 87.4,
+        "score": 87.2,
         "gamesPlayed": 33
       },
       "home": {
@@ -18455,7 +18456,7 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 78.65,
+        "score": 78.45,
         "gamesPlayed": 32
       },
       "home": {
@@ -18489,7 +18490,7 @@
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 91.75,
+        "score": 92.15,
         "gamesPlayed": 33
       }
     },
@@ -18525,7 +18526,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 87.4,
+        "score": 87.2,
         "gamesPlayed": 33
       },
       "home": {
@@ -18581,13 +18582,13 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 78.65,
+        "score": 78.45,
         "gamesPlayed": 32
       },
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 91.75,
+        "score": 92.15,
         "gamesPlayed": 33
       }
     },
@@ -18651,7 +18652,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 87.4,
+        "score": 87.2,
         "gamesPlayed": 33
       },
       "home": {
