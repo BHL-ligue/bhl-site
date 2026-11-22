@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-22T15:57:36.622763+00:00",
+  "updatedAt": "2026-11-22T16:39:46.726068+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12685,7 +12685,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 162.0,
+            "score": 162.3,
             "gamesPlayed": 47
           }
         },
@@ -12783,7 +12783,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 162.0,
+            "score": 162.3,
             "gamesPlayed": 47
           }
         },
@@ -12903,7 +12903,7 @@
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 162.0,
+            "score": 162.3,
             "gamesPlayed": 47
           },
           "home": {
@@ -18209,7 +18209,7 @@
       "teamName": "Hartford Whalers",
       "rank": 5,
       "points": "15-6-0",
-      "totalPointsFor": 3809.4,
+      "totalPointsFor": 3810.3,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
       "totalPointsAgainst": 3460.7
@@ -18232,7 +18232,7 @@
       "totalPointsFor": 3601.5,
       "winPercentage": 0.571,
       "gamesBack": 8.0,
-      "totalPointsAgainst": 3559.75
+      "totalPointsAgainst": 3560.05
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18262,7 +18262,7 @@
       "totalPointsFor": 3271.05,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3559.25
+      "totalPointsAgainst": 3559.55
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18292,7 +18292,7 @@
       "totalPointsFor": 3439.65,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3820.95
+      "totalPointsAgainst": 3821.25
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18350,7 +18350,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 162.0,
+        "score": 162.3,
         "gamesPlayed": 47
       }
     },
@@ -18448,7 +18448,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 162.0,
+        "score": 162.3,
         "gamesPlayed": 47
       }
     },
@@ -18568,7 +18568,7 @@
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 162.0,
+        "score": 162.3,
         "gamesPlayed": 47
       },
       "home": {
