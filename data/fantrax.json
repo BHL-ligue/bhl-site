@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-22T20:26:19.607413+00:00",
+  "updatedAt": "2026-11-22T21:14:17.839628+00:00",
   "rosterPeriod": 8,
   "scoringPeriod": 8,
   "periodDates": {
@@ -12685,7 +12685,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 165.9,
+            "score": 165.8,
             "gamesPlayed": 48
           }
         },
@@ -12769,7 +12769,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 138.7,
+            "score": 138.6,
             "gamesPlayed": 47
           }
         },
@@ -12783,7 +12783,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 165.9,
+            "score": 165.8,
             "gamesPlayed": 48
           }
         },
@@ -12867,7 +12867,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 138.7,
+            "score": 138.6,
             "gamesPlayed": 47
           }
         },
@@ -12903,7 +12903,7 @@
           "away": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 165.9,
+            "score": 165.8,
             "gamesPlayed": 48
           },
           "home": {
@@ -12965,7 +12965,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 138.7,
+            "score": 138.6,
             "gamesPlayed": 47
           }
         },
@@ -18169,7 +18169,7 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "20-1-0",
-      "totalPointsFor": 4321.2,
+      "totalPointsFor": 4331.4,
       "winPercentage": 0.952,
       "gamesBack": 0.0,
       "totalPointsAgainst": 3468.35
@@ -18179,7 +18179,7 @@
       "teamName": "Ottawa Senators",
       "rank": 2,
       "points": "16-5-0",
-      "totalPointsFor": 4258.95,
+      "totalPointsFor": 4259.25,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
       "totalPointsAgainst": 3571.9
@@ -18189,10 +18189,10 @@
       "teamName": "Detroit Red Wings",
       "rank": 3,
       "points": "16-5-0",
-      "totalPointsFor": 3915.3,
+      "totalPointsFor": 3924.3,
       "winPercentage": 0.762,
       "gamesBack": 4.0,
-      "totalPointsAgainst": 3462.95
+      "totalPointsAgainst": 3462.85
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18202,14 +18202,14 @@
       "totalPointsFor": 3880.95,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3502.55
+      "totalPointsAgainst": 3502.45
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
       "teamName": "Hartford Whalers",
       "rank": 5,
       "points": "15-6-0",
-      "totalPointsFor": 3813.0,
+      "totalPointsFor": 3820.8,
       "winPercentage": 0.714,
       "gamesBack": 5.0,
       "totalPointsAgainst": 3473.4
@@ -18219,7 +18219,7 @@
       "teamName": "Montréal Canadiens",
       "rank": 6,
       "points": "14-7-0",
-      "totalPointsFor": 3894.6,
+      "totalPointsFor": 3896.7,
       "winPercentage": 0.667,
       "gamesBack": 6.0,
       "totalPointsAgainst": 3644.0
@@ -18229,17 +18229,17 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 7,
       "points": "12-9-0",
-      "totalPointsFor": 3621.3,
+      "totalPointsFor": 3623.1,
       "winPercentage": 0.571,
       "gamesBack": 8.0,
-      "totalPointsAgainst": 3572.95
+      "totalPointsAgainst": 3572.85
     },
     {
       "teamId": "l9ssazuemo2tig2e",
       "teamName": "New York Rangers",
       "rank": 8,
       "points": "11-10-0",
-      "totalPointsFor": 3678.0,
+      "totalPointsFor": 3677.7,
       "winPercentage": 0.524,
       "gamesBack": 9.0,
       "totalPointsAgainst": 3574.7
@@ -18259,10 +18259,10 @@
       "teamName": "Minnesota North Stars",
       "rank": 10,
       "points": "9-12-0",
-      "totalPointsFor": 3286.35,
+      "totalPointsFor": 3287.55,
       "winPercentage": 0.429,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3570.35
+      "totalPointsAgainst": 3570.25
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18272,7 +18272,7 @@
       "totalPointsFor": 3491.4,
       "winPercentage": 0.333,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3572.4
+      "totalPointsAgainst": 3572.3
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18292,14 +18292,14 @@
       "totalPointsFor": 3439.65,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3836.35
+      "totalPointsAgainst": 3836.25
     },
     {
       "teamId": "p7f42l5emo2tig2e",
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "5-16-0",
-      "totalPointsFor": 2949.3,
+      "totalPointsFor": 2950.2,
       "winPercentage": 0.238,
       "gamesBack": 15.0,
       "totalPointsAgainst": 3685.5
@@ -18309,7 +18309,7 @@
       "teamName": "Boston Bruins",
       "rank": 15,
       "points": "4-17-0",
-      "totalPointsFor": 3104.25,
+      "totalPointsFor": 3105.75,
       "winPercentage": 0.19,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3537.7
@@ -18350,7 +18350,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 165.9,
+        "score": 165.8,
         "gamesPlayed": 48
       }
     },
@@ -18434,7 +18434,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 138.7,
+        "score": 138.6,
         "gamesPlayed": 47
       }
     },
@@ -18448,7 +18448,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 165.9,
+        "score": 165.8,
         "gamesPlayed": 48
       }
     },
@@ -18532,7 +18532,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 138.7,
+        "score": 138.6,
         "gamesPlayed": 47
       }
     },
@@ -18568,7 +18568,7 @@
       "away": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 165.9,
+        "score": 165.8,
         "gamesPlayed": 48
       },
       "home": {
@@ -18630,7 +18630,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 138.7,
+        "score": 138.6,
         "gamesPlayed": 47
       }
     },
