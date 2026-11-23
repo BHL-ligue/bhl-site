@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T15:02:20.701274+00:00",
+  "updatedAt": "2026-11-23T16:06:19.579541+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -1021,7 +1021,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "02nq2",
@@ -1030,7 +1030,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05tas",
@@ -18328,7 +18328,7 @@
       "teamName": "Boston Bruins",
       "rank": 16,
       "points": "4-20-0",
-      "totalPointsFor": 3120.75,
+      "totalPointsFor": 3113.25,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
       "totalPointsAgainst": 3581.25
