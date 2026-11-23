@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T14:02:15.131082+00:00",
+  "updatedAt": "2026-11-23T15:02:20.701274+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -486,6 +486,15 @@
             "D"
           ],
           "status": "INJURED_RESERVE"
+        },
+        {
+          "id": "04qvi",
+          "name": "Nils Lundkvist",
+          "position": "D",
+          "eligiblePositions": [
+            "D"
+          ],
+          "status": "RESERVE"
         },
         {
           "id": "0457b",
@@ -3428,7 +3437,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "RESERVE"
+          "status": "MINORS"
         },
         {
           "id": "065d1",
@@ -3485,7 +3494,7 @@
             "RW",
             "C"
           ],
-          "status": "MINORS"
+          "status": "ACTIVE"
         },
         {
           "id": "01ztp",
@@ -3494,7 +3503,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03w5s",
@@ -10016,7 +10025,7 @@
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 141.55
+        "score": 139.05
       }
     },
     {
@@ -10107,7 +10116,7 @@
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 141.55
+        "score": 139.05
       }
     },
     {
@@ -10198,7 +10207,7 @@
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 141.55
+        "score": 139.05
       }
     },
     {
@@ -12727,7 +12736,7 @@
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 141.55,
+            "score": 139.05,
             "gamesPlayed": 54
           }
         },
@@ -12825,7 +12834,7 @@
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 141.55,
+            "score": 139.05,
             "gamesPlayed": 54
           }
         },
@@ -12923,7 +12932,7 @@
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 141.55,
+            "score": 139.05,
             "gamesPlayed": 54
           }
         },
@@ -18182,7 +18191,7 @@
       "totalPointsFor": 4293.45,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3596.7
+      "totalPointsAgainst": 3594.2
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18212,7 +18221,7 @@
       "totalPointsFor": 3918.6,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3673.8
+      "totalPointsAgainst": 3671.3
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18302,7 +18311,7 @@
       "totalPointsFor": 3024.75,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3704.4
+      "totalPointsAgainst": 3701.9
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
