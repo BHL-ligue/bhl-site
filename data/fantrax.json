@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T20:54:43.144517+00:00",
+  "updatedAt": "2026-11-23T21:41:48.709928+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -4266,7 +4266,7 @@
         {
           "id": "00qru",
           "name": "Steven Stamkos",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW",
@@ -4281,7 +4281,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03rmx",
@@ -4328,7 +4328,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "RESERVE"
+          "status": "INJURED_RESERVE"
         },
         {
           "id": "03rae",
@@ -4417,12 +4417,12 @@
         {
           "id": "01gjn",
           "name": "Erik Haula",
-          "position": "LW",
+          "position": "C",
           "eligiblePositions": [
             "LW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "03kng",
@@ -10013,7 +10013,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 165.2
+        "score": 165.4
       }
     },
     {
@@ -10104,7 +10104,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 165.2
+        "score": 165.4
       }
     },
     {
@@ -10195,7 +10195,7 @@
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 165.2
+        "score": 165.4
       }
     },
     {
@@ -12751,7 +12751,7 @@
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 165.2,
+            "score": 165.4,
             "gamesPlayed": 55
           }
         },
@@ -12849,7 +12849,7 @@
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 165.2,
+            "score": 165.4,
             "gamesPlayed": 55
           }
         },
@@ -12947,7 +12947,7 @@
           "home": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 165.2,
+            "score": 165.4,
             "gamesPlayed": 55
           }
         },
@@ -18212,7 +18212,7 @@
       "totalPointsFor": 3955.95,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3527.5
+      "totalPointsAgainst": 3527.7
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
@@ -18252,7 +18252,7 @@
       "totalPointsFor": 3633.9,
       "winPercentage": 0.5,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3629.05
+      "totalPointsAgainst": 3629.25
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18292,7 +18292,7 @@
       "totalPointsFor": 3526.05,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3637.05
+      "totalPointsAgainst": 3637.25
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
