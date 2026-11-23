@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T19:03:22.222209+00:00",
+  "updatedAt": "2026-11-23T20:04:19.517253+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -1458,12 +1458,12 @@
         {
           "id": "05ltl",
           "name": "Ian Moore",
-          "position": "RW",
+          "position": "D",
           "eligiblePositions": [
             "D",
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "02nqk",
@@ -1490,7 +1490,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "0322w",
@@ -9995,7 +9995,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 166.65
+        "score": 167.05
       },
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
@@ -10052,7 +10052,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.3
+        "score": 199.1
       }
     },
     {
@@ -10112,7 +10112,7 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 166.65
+        "score": 167.05
       },
       "home": {
         "teamId": "uzhvniysmo2tig2e",
@@ -10143,7 +10143,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.3
+        "score": 199.1
       }
     },
     {
@@ -10229,12 +10229,12 @@
       "away": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 166.65
+        "score": 167.05
       },
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.3
+        "score": 199.1
       }
     },
     {
@@ -12703,13 +12703,13 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 166.65,
+            "score": 167.05,
             "gamesPlayed": 58
           },
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.3,
+            "score": 199.1,
             "gamesPlayed": 55
           }
         },
@@ -12807,7 +12807,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.3,
+            "score": 199.1,
             "gamesPlayed": 55
           }
         },
@@ -12829,7 +12829,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 166.65,
+            "score": 167.05,
             "gamesPlayed": 58
           },
           "home": {
@@ -12905,7 +12905,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.3,
+            "score": 199.1,
             "gamesPlayed": 55
           }
         },
@@ -12955,7 +12955,7 @@
           "away": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 166.65,
+            "score": 167.05,
             "gamesPlayed": 58
           },
           "home": {
@@ -18179,20 +18179,20 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "23-1-0",
-      "totalPointsFor": 4368.0,
+      "totalPointsFor": 4367.4,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 3506.3
+      "totalPointsAgainst": 3506.7
     },
     {
       "teamId": "pelw39b7mo2tig2f",
       "teamName": "Ottawa Senators",
       "rank": 2,
       "points": "18-6-0",
-      "totalPointsFor": 4293.45,
+      "totalPointsFor": 4294.65,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3594.2
+      "totalPointsAgainst": 3594.0
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18282,7 +18282,7 @@
       "totalPointsFor": 3146.85,
       "winPercentage": 0.333,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3550.95
+      "totalPointsAgainst": 3551.35
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18302,7 +18302,7 @@
       "totalPointsFor": 3444.75,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3890.15
+      "totalPointsAgainst": 3889.95
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18312,7 +18312,7 @@
       "totalPointsFor": 3024.75,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3701.9
+      "totalPointsAgainst": 3701.7
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18332,7 +18332,7 @@
       "totalPointsFor": 3113.25,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3581.25
+      "totalPointsAgainst": 3581.65
     }
   ],
   "matchups": [
