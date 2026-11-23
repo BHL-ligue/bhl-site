@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T16:06:19.579541+00:00",
+  "updatedAt": "2026-11-23T17:07:56.026152+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -2305,7 +2305,7 @@
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05g2s",
@@ -2333,15 +2333,6 @@
             "D"
           ],
           "status": "ACTIVE"
-        },
-        {
-          "id": "060v8",
-          "name": "Elias Pettersson",
-          "position": "D",
-          "eligiblePositions": [
-            "D"
-          ],
-          "status": "RESERVE"
         },
         {
           "id": "03rf8",
@@ -2396,6 +2387,15 @@
           "eligiblePositions": [
             "LW",
             "RW",
+            "C"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "id": "031nw",
+          "name": "Michael McCarron",
+          "position": "C",
+          "eligiblePositions": [
             "C"
           ],
           "status": "ACTIVE"

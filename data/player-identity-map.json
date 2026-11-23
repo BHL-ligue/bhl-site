@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-23T16:06:19.579541+00:00"
+    "rosterUpdatedAt": "2026-11-23T17:07:56.026152+00:00"
   },
   "players": {
     "02un4": {
@@ -2865,7 +2865,7 @@
       "nhlName": "Martin Pospisil",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "06axz": {
@@ -2894,7 +2894,7 @@
     },
     "060v8": {
       "fantraxName": "Elias Pettersson",
-      "bhlTeam": "Montréal Canadiens",
+      "bhlTeam": null,
       "position": "D",
       "nhlTeam": "VAN",
       "nhlId": 8483678,
@@ -2902,8 +2902,8 @@
       "aliases": [],
       "status": "confirmed",
       "verificationSource": "NHL.com official player profile",
-      "rosterStatus": "RESERVE",
-      "onCurrentRoster": true
+      "rosterStatus": null,
+      "onCurrentRoster": false
     },
     "03rf8": {
       "fantraxName": "Vince Dunn",
@@ -6312,6 +6312,18 @@
       "bhlTeam": "Toronto Maple Leafs",
       "position": "D",
       "rosterStatus": "RESERVE",
+      "onCurrentRoster": true
+    },
+    "031nw": {
+      "nhlId": 8477446,
+      "nhlName": "Michael McCarron",
+      "nhlTeam": null,
+      "aliases": [],
+      "status": "confirmed",
+      "fantraxName": "Michael McCarron",
+      "bhlTeam": "Montréal Canadiens",
+      "position": "C",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     }
   },
