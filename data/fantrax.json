@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T21:41:48.709928+00:00",
+  "updatedAt": "2026-11-23T22:34:01.010672+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -1941,7 +1941,7 @@
           "eligiblePositions": [
             "RW"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "05m17",
@@ -2055,6 +2055,16 @@
           "status": "ACTIVE"
         },
         {
+          "id": "04f80",
+          "name": "Morgan Barron",
+          "position": "C",
+          "eligiblePositions": [
+            "LW",
+            "C"
+          ],
+          "status": "ACTIVE"
+        },
+        {
           "id": "02ybj",
           "name": "Anthony Mantha",
           "position": "LW",
@@ -2085,7 +2095,7 @@
         {
           "id": "03ee4",
           "name": "Victor Olofsson",
-          "position": "RW",
+          "position": "LW",
           "eligiblePositions": [
             "LW",
             "RW"
@@ -2102,16 +2112,6 @@
           "status": "MINORS"
         },
         {
-          "id": "02nol",
-          "name": "Teuvo Teravainen",
-          "position": "LW",
-          "eligiblePositions": [
-            "LW",
-            "RW"
-          ],
-          "status": "ACTIVE"
-        },
-        {
           "id": "04zp9",
           "name": "Mavrik Bourque",
           "position": "C",
@@ -2119,7 +2119,7 @@
             "RW",
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "05lu8",
@@ -7200,8 +7200,7 @@
         "round": 10,
         "pick": 150,
         "playerId": "02nol",
-        "teamId": "gqpb7szpmo2tig2e",
-        "playerName": "Teuvo Teravainen"
+        "teamId": "gqpb7szpmo2tig2e"
       },
       {
         "round": 10,
@@ -18319,7 +18318,7 @@
       "teamName": "California Golden Seals",
       "rank": 15,
       "points": "5-19-0",
-      "totalPointsFor": 2913.3,
+      "totalPointsFor": 2913.9,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
       "totalPointsAgainst": 3589.45
