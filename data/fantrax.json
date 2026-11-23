@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-23T12:40:04.750101+00:00",
+  "updatedAt": "2026-11-23T14:02:15.131082+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -3959,7 +3959,7 @@
             "LW",
             "C"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "RESERVE"
         },
         {
           "id": "06hcy",
@@ -3969,16 +3969,6 @@
             "RW"
           ],
           "status": "MINORS"
-        },
-        {
-          "id": "031pn",
-          "name": "Nick Paul",
-          "position": "RW",
-          "eligiblePositions": [
-            "RW",
-            "C"
-          ],
-          "status": "RESERVE"
         },
         {
           "id": "05wwg",
@@ -4146,7 +4136,7 @@
           "eligiblePositions": [
             "D"
           ],
-          "status": "INJURED_RESERVE"
+          "status": "RESERVE"
         },
         {
           "id": "04an5",
@@ -7571,8 +7561,7 @@
         "round": 13,
         "pick": 206,
         "playerId": "031pn",
-        "teamId": "kplo9zwcmo2tig2f",
-        "playerName": "Nick Paul"
+        "teamId": "kplo9zwcmo2tig2f"
       },
       {
         "round": 13,
