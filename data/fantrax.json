@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-24T14:23:56.353381+00:00",
+  "updatedAt": "2026-11-24T15:28:46.884933+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -9955,7 +9955,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 143.95
+        "score": 144.15
       },
       "home": {
         "teamId": "adfljh3wmo2tig2e",
@@ -9981,12 +9981,12 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 147.3
+        "score": 147.5
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 164.0
+        "score": 163.8
       }
     },
     {
@@ -9999,7 +9999,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.45
+        "score": 132.75
       }
     },
     {
@@ -10020,7 +10020,7 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 158.55
+        "score": 158.85
       },
       "home": {
         "teamId": "uzhvniysmo2tig2e",
@@ -10051,7 +10051,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.1
+        "score": 199.7
       }
     },
     {
@@ -10072,12 +10072,12 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 143.95
+        "score": 144.15
       },
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 164.0
+        "score": 163.8
       }
     },
     {
@@ -10090,7 +10090,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.45
+        "score": 132.75
       }
     },
     {
@@ -10098,7 +10098,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 147.3
+        "score": 147.5
       },
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
@@ -10137,12 +10137,12 @@
       "away": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 158.55
+        "score": 158.85
       },
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.1
+        "score": 199.7
       }
     },
     {
@@ -10168,7 +10168,7 @@
       "home": {
         "teamId": "l9ssazuemo2tig2e",
         "teamName": "New York Rangers",
-        "score": 164.0
+        "score": 163.8
       }
     },
     {
@@ -10181,7 +10181,7 @@
       "home": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 132.45
+        "score": 132.75
       }
     },
     {
@@ -10189,7 +10189,7 @@
       "away": {
         "teamId": "fdy3gp6lmo2tig2e",
         "teamName": "Detroit Red Wings",
-        "score": 143.95
+        "score": 144.15
       },
       "home": {
         "teamId": "gqpb7szpmo2tig2e",
@@ -10215,7 +10215,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 147.3
+        "score": 147.5
       },
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
@@ -10233,7 +10233,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 199.1
+        "score": 199.7
       }
     },
     {
@@ -10259,7 +10259,7 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 158.55
+        "score": 158.85
       }
     }
   ],
@@ -12680,7 +12680,7 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 158.55,
+            "score": 158.85,
             "gamesPlayed": 56
           }
         },
@@ -12708,7 +12708,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.1,
+            "score": 199.7,
             "gamesPlayed": 55
           }
         },
@@ -12716,7 +12716,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 147.3,
+            "score": 147.5,
             "gamesPlayed": 55
           },
           "home": {
@@ -12744,7 +12744,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 143.95,
+            "score": 144.15,
             "gamesPlayed": 53
           },
           "home": {
@@ -12764,7 +12764,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.45,
+            "score": 132.75,
             "gamesPlayed": 56
           }
         },
@@ -12778,7 +12778,7 @@
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 164.0,
+            "score": 163.8,
             "gamesPlayed": 52
           }
         },
@@ -12800,13 +12800,13 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 158.55,
+            "score": 158.85,
             "gamesPlayed": 56
           },
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.1,
+            "score": 199.7,
             "gamesPlayed": 55
           }
         },
@@ -12842,7 +12842,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 147.3,
+            "score": 147.5,
             "gamesPlayed": 55
           },
           "home": {
@@ -12862,7 +12862,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.45,
+            "score": 132.75,
             "gamesPlayed": 56
           }
         },
@@ -12870,13 +12870,13 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 143.95,
+            "score": 144.15,
             "gamesPlayed": 53
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 164.0,
+            "score": 163.8,
             "gamesPlayed": 52
           }
         },
@@ -12904,7 +12904,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 199.1,
+            "score": 199.7,
             "gamesPlayed": 55
           }
         },
@@ -12926,7 +12926,7 @@
           "away": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 158.55,
+            "score": 158.85,
             "gamesPlayed": 56
           },
           "home": {
@@ -12960,7 +12960,7 @@
           "home": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 132.45,
+            "score": 132.75,
             "gamesPlayed": 56
           }
         },
@@ -12968,13 +12968,13 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 147.3,
+            "score": 147.5,
             "gamesPlayed": 55
           },
           "home": {
             "teamId": "l9ssazuemo2tig2e",
             "teamName": "New York Rangers",
-            "score": 164.0,
+            "score": 163.8,
             "gamesPlayed": 52
           }
         },
@@ -12996,7 +12996,7 @@
           "away": {
             "teamId": "fdy3gp6lmo2tig2e",
             "teamName": "Detroit Red Wings",
-            "score": 143.95,
+            "score": 144.15,
             "gamesPlayed": 53
           },
           "home": {
@@ -18178,10 +18178,10 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "23-1-0",
-      "totalPointsFor": 4479.9,
+      "totalPointsFor": 4481.7,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 3531.95
+      "totalPointsAgainst": 3532.25
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 4381.35,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3635.75
+      "totalPointsAgainst": 3636.65
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18211,17 +18211,17 @@
       "totalPointsFor": 4007.25,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3727.7
+      "totalPointsAgainst": 3728.0
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
       "teamName": "Detroit Red Wings",
       "rank": 5,
       "points": "17-7-0",
-      "totalPointsFor": 4001.55,
+      "totalPointsFor": 4002.15,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3598.7
+      "totalPointsAgainst": 3598.5
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18231,17 +18231,17 @@
       "totalPointsFor": 3952.05,
       "winPercentage": 0.667,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3623.8
+      "totalPointsAgainst": 3623.6
     },
     {
       "teamId": "l9ssazuemo2tig2e",
       "teamName": "New York Rangers",
       "rank": 7,
       "points": "14-10-0",
-      "totalPointsFor": 3792.3,
+      "totalPointsFor": 3791.7,
       "winPercentage": 0.583,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3671.8
+      "totalPointsAgainst": 3672.2
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18261,7 +18261,7 @@
       "totalPointsFor": 3377.85,
       "winPercentage": 0.458,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3648.85
+      "totalPointsAgainst": 3649.05
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18271,14 +18271,14 @@
       "totalPointsFor": 3649.05,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3707.2
+      "totalPointsAgainst": 3707.7
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
       "teamName": "Florida Panthers",
       "rank": 11,
       "points": "8-16-0",
-      "totalPointsFor": 3168.0,
+      "totalPointsFor": 3168.9,
       "winPercentage": 0.333,
       "gamesBack": 15.0,
       "totalPointsAgainst": 3612.9
@@ -18288,10 +18288,10 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 12,
       "points": "7-17-0",
-      "totalPointsFor": 3586.2,
+      "totalPointsFor": 3586.8,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3724.0
+      "totalPointsAgainst": 3723.8
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18301,17 +18301,17 @@
       "totalPointsFor": 3485.55,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3942.35
+      "totalPointsAgainst": 3943.25
     },
     {
       "teamId": "p7f42l5emo2tig2e",
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "6-18-0",
-      "totalPointsFor": 3061.8,
+      "totalPointsFor": 3062.7,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3730.45
+      "totalPointsAgainst": 3731.05
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 2974.5,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3639.7
+      "totalPointsAgainst": 3640.1
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18331,7 +18331,7 @@
       "totalPointsFor": 3148.95,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3639.6
+      "totalPointsAgainst": 3639.9
     }
   ],
   "matchups": [
