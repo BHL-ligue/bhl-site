@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-24T20:20:30.662368+00:00",
+  "updatedAt": "2026-11-24T21:18:00.959608+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13017,7 +13017,7 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 20.3,
+            "score": 20.7,
             "gamesPlayed": 8
           },
           "home": {
@@ -13037,7 +13037,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 37.5,
+            "score": 37.8,
             "gamesPlayed": 7
           }
         },
@@ -13149,7 +13149,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 20.3,
+            "score": 20.7,
             "gamesPlayed": 8
           }
         },
@@ -13163,7 +13163,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 37.5,
+            "score": 37.8,
             "gamesPlayed": 7
           }
         },
@@ -13275,7 +13275,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 20.3,
+            "score": 20.7,
             "gamesPlayed": 8
           }
         },
@@ -13289,7 +13289,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 37.5,
+            "score": 37.8,
             "gamesPlayed": 7
           }
         },
@@ -18178,7 +18178,7 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "23-1-0",
-      "totalPointsFor": 4481.7,
+      "totalPointsFor": 4482.6,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
       "totalPointsAgainst": 3532.25
@@ -18231,7 +18231,7 @@
       "totalPointsFor": 3952.05,
       "winPercentage": 0.667,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3623.6
+      "totalPointsAgainst": 3623.9
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18241,7 +18241,7 @@
       "totalPointsFor": 3791.7,
       "winPercentage": 0.583,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3672.2
+      "totalPointsAgainst": 3672.6
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18258,7 +18258,7 @@
       "teamName": "Minnesota North Stars",
       "rank": 9,
       "points": "11-13-0",
-      "totalPointsFor": 3377.85,
+      "totalPointsFor": 3379.05,
       "winPercentage": 0.458,
       "gamesBack": 12.0,
       "totalPointsAgainst": 3648.75
@@ -18281,7 +18281,7 @@
       "totalPointsFor": 3168.9,
       "winPercentage": 0.333,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3612.9
+      "totalPointsAgainst": 3613.2
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18301,7 +18301,7 @@
       "totalPointsFor": 3484.65,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3943.25
+      "totalPointsAgainst": 3943.65
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 2974.5,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3639.8
+      "totalPointsAgainst": 3640.2
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18331,7 +18331,7 @@
       "totalPointsFor": 3148.95,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3639.6
+      "totalPointsAgainst": 3639.9
     }
   ],
   "matchups": [
@@ -18339,7 +18339,7 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 20.3,
+        "score": 20.7,
         "gamesPlayed": 8
       },
       "home": {
@@ -18359,7 +18359,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 37.5,
+        "score": 37.8,
         "gamesPlayed": 7
       }
     },
@@ -18471,7 +18471,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 20.3,
+        "score": 20.7,
         "gamesPlayed": 8
       }
     },
@@ -18485,7 +18485,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 37.5,
+        "score": 37.8,
         "gamesPlayed": 7
       }
     },
@@ -18597,7 +18597,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 20.3,
+        "score": 20.7,
         "gamesPlayed": 8
       }
     },
@@ -18611,7 +18611,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 37.5,
+        "score": 37.8,
         "gamesPlayed": 7
       }
     },
