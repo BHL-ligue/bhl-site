@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-24T18:20:22.384529+00:00",
+  "updatedAt": "2026-11-24T19:25:33.323297+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13023,7 +13023,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 13.6,
+            "score": 13.3,
             "gamesPlayed": 9
           }
         },
@@ -13107,7 +13107,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 20.05,
+            "score": 19.65,
             "gamesPlayed": 10
           }
         },
@@ -13135,7 +13135,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 13.6,
+            "score": 13.3,
             "gamesPlayed": 9
           }
         },
@@ -13233,7 +13233,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 20.05,
+            "score": 19.65,
             "gamesPlayed": 10
           }
         },
@@ -13247,7 +13247,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 13.6,
+            "score": 13.3,
             "gamesPlayed": 9
           }
         },
@@ -13339,7 +13339,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 20.05,
+            "score": 19.65,
             "gamesPlayed": 10
           },
           "home": {
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 4381.35,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3636.65
+      "totalPointsAgainst": 3636.25
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18211,7 +18211,7 @@
       "totalPointsFor": 4007.25,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3728.0
+      "totalPointsAgainst": 3727.6
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18261,7 +18261,7 @@
       "totalPointsFor": 3377.85,
       "winPercentage": 0.458,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3649.05
+      "totalPointsAgainst": 3648.75
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18271,7 +18271,7 @@
       "totalPointsFor": 3649.05,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3707.7
+      "totalPointsAgainst": 3707.3
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18288,7 +18288,7 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 12,
       "points": "7-17-0",
-      "totalPointsFor": 3586.8,
+      "totalPointsFor": 3585.6,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3723.8
@@ -18298,7 +18298,7 @@
       "teamName": "Chicago Blackhawks",
       "rank": 13,
       "points": "6-18-0",
-      "totalPointsFor": 3485.55,
+      "totalPointsFor": 3484.65,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
       "totalPointsAgainst": 3943.25
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 2974.5,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3640.1
+      "totalPointsAgainst": 3639.8
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18331,7 +18331,7 @@
       "totalPointsFor": 3148.95,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3639.9
+      "totalPointsAgainst": 3639.6
     }
   ],
   "matchups": [
@@ -18345,7 +18345,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 13.6,
+        "score": 13.3,
         "gamesPlayed": 9
       }
     },
@@ -18429,7 +18429,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 20.05,
+        "score": 19.65,
         "gamesPlayed": 10
       }
     },
@@ -18457,7 +18457,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 13.6,
+        "score": 13.3,
         "gamesPlayed": 9
       }
     },
@@ -18555,7 +18555,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 20.05,
+        "score": 19.65,
         "gamesPlayed": 10
       }
     },
@@ -18569,7 +18569,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 13.6,
+        "score": 13.3,
         "gamesPlayed": 9
       }
     },
@@ -18661,7 +18661,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 20.05,
+        "score": 19.65,
         "gamesPlayed": 10
       },
       "home": {
