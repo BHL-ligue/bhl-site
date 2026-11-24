@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-24T19:25:33.323297+00:00",
+  "updatedAt": "2026-11-24T20:20:30.662368+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -2915,7 +2915,7 @@
             "RW",
             "C"
           ],
-          "status": "RESERVE"
+          "status": "ACTIVE"
         },
         {
           "id": "03j8l",
@@ -2942,7 +2942,7 @@
           "eligiblePositions": [
             "C"
           ],
-          "status": "ACTIVE"
+          "status": "RESERVE"
         },
         {
           "id": "06bdr",
@@ -13107,7 +13107,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 19.65,
+            "score": 19.85,
             "gamesPlayed": 10
           }
         },
@@ -13233,7 +13233,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 19.65,
+            "score": 19.85,
             "gamesPlayed": 10
           }
         },
@@ -13339,7 +13339,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 19.65,
+            "score": 19.85,
             "gamesPlayed": 10
           },
           "home": {
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 4381.35,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3636.25
+      "totalPointsAgainst": 3636.45
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18211,7 +18211,7 @@
       "totalPointsFor": 4007.25,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3727.6
+      "totalPointsAgainst": 3727.8
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18271,7 +18271,7 @@
       "totalPointsFor": 3649.05,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3707.3
+      "totalPointsAgainst": 3707.5
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18288,7 +18288,7 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 12,
       "points": "7-17-0",
-      "totalPointsFor": 3585.6,
+      "totalPointsFor": 3586.2,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3723.8
@@ -18429,7 +18429,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 19.65,
+        "score": 19.85,
         "gamesPlayed": 10
       }
     },
@@ -18555,7 +18555,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 19.65,
+        "score": 19.85,
         "gamesPlayed": 10
       }
     },
@@ -18661,7 +18661,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 19.65,
+        "score": 19.85,
         "gamesPlayed": 10
       },
       "home": {
