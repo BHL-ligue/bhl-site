@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-24T06:36:52.445201+00:00",
+  "updatedAt": "2026-11-24T08:00:31.396186+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -18248,7 +18248,7 @@
       "teamName": "Toronto Maple Leafs",
       "rank": 8,
       "points": "12-12-0",
-      "totalPointsFor": 3697.2,
+      "totalPointsFor": 3697.35,
       "winPercentage": 0.5,
       "gamesBack": 11.0,
       "totalPointsAgainst": 3699.7
@@ -18308,7 +18308,7 @@
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "6-18-0",
-      "totalPointsFor": 3061.95,
+      "totalPointsFor": 3061.8,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
       "totalPointsAgainst": 3730.45
@@ -18318,7 +18318,7 @@
       "teamName": "California Golden Seals",
       "rank": 15,
       "points": "5-19-0",
-      "totalPointsFor": 2974.65,
+      "totalPointsFor": 2974.5,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
       "totalPointsAgainst": 3639.7
@@ -18328,7 +18328,7 @@
       "teamName": "Boston Bruins",
       "rank": 16,
       "points": "4-20-0",
-      "totalPointsFor": 3148.8,
+      "totalPointsFor": 3148.95,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
       "totalPointsAgainst": 3639.6
