@@ -4,7 +4,7 @@
   "source": {
     "roster": "data/fantrax.json",
     "details": "data/fantrax-player-details.json",
-    "rosterUpdatedAt": "2026-11-23T23:27:37.342159+00:00"
+    "rosterUpdatedAt": "2026-11-24T00:17:27.181416+00:00"
   },
   "players": {
     "02un4": {
@@ -112,7 +112,7 @@
       "nhlName": "Zach Benson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "04ye8": {
@@ -184,7 +184,7 @@
       "nhlName": "Ryan Donato",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "03w5m": {
@@ -208,7 +208,7 @@
       "nhlName": "Ridly Greig",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "06axy": {
@@ -232,7 +232,7 @@
       "nhlName": "Denton Mateychuk",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "03zul": {
@@ -244,7 +244,7 @@
       "nhlName": "Filip Gustavsson",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "INJURED_RESERVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "05ltt": {
@@ -268,7 +268,7 @@
       "nhlName": "Will Cuylle",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05ran": {
@@ -292,7 +292,7 @@
       "nhlName": "Zachary Bolduc",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "RESERVE",
       "onCurrentRoster": true
     },
     "031pl": {
@@ -352,7 +352,7 @@
       "nhlName": "Braden Schneider",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "RESERVE",
+      "rosterStatus": "ACTIVE",
       "onCurrentRoster": true
     },
     "05rjg": {
@@ -388,7 +388,7 @@
       "nhlName": "Brandon Hagel",
       "aliases": [],
       "status": "confirmed",
-      "rosterStatus": "ACTIVE",
+      "rosterStatus": "INJURED_RESERVE",
       "onCurrentRoster": true
     },
     "04bii": {
