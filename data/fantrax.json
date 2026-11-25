@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-25T02:23:23.935345+00:00",
+  "updatedAt": "2026-11-25T03:26:07.253530+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13031,7 +13031,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 14.9,
+            "score": 18.4,
             "gamesPlayed": 12
           },
           "home": {
@@ -13045,7 +13045,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 26.5,
+            "score": 29.3,
             "gamesPlayed": 9
           },
           "home": {
@@ -13059,14 +13059,14 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 7.55,
+            "score": 7.85,
             "gamesPlayed": 8
           },
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 12.35,
-            "gamesPlayed": 7
+            "score": 15.45,
+            "gamesPlayed": 8
           }
         },
         {
@@ -13087,13 +13087,13 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 7.1,
+            "score": 9.8,
             "gamesPlayed": 6
           },
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 33.15,
+            "score": 37.3,
             "gamesPlayed": 12
           }
         },
@@ -13101,13 +13101,13 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 29.5,
+            "score": 33.3,
             "gamesPlayed": 11
           },
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 21.75,
+            "score": 27.2,
             "gamesPlayed": 14
           }
         },
@@ -13121,7 +13121,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 32.65,
+            "score": 32.95,
             "gamesPlayed": 11
           }
         },
@@ -13129,7 +13129,7 @@
           "away": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 14.9,
+            "score": 18.4,
             "gamesPlayed": 12
           },
           "home": {
@@ -13143,7 +13143,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 26.5,
+            "score": 29.3,
             "gamesPlayed": 9
           },
           "home": {
@@ -13157,7 +13157,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 7.55,
+            "score": 7.85,
             "gamesPlayed": 8
           },
           "home": {
@@ -13185,21 +13185,21 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 7.1,
+            "score": 9.8,
             "gamesPlayed": 6
           },
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 12.35,
-            "gamesPlayed": 7
+            "score": 15.45,
+            "gamesPlayed": 8
           }
         },
         {
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 29.5,
+            "score": 33.3,
             "gamesPlayed": 11
           },
           "home": {
@@ -13219,7 +13219,7 @@
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 33.15,
+            "score": 37.3,
             "gamesPlayed": 12
           }
         },
@@ -13227,13 +13227,13 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 32.65,
+            "score": 32.95,
             "gamesPlayed": 11
           },
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 21.75,
+            "score": 27.2,
             "gamesPlayed": 14
           }
         },
@@ -13241,7 +13241,7 @@
           "away": {
             "teamId": "gqpb7szpmo2tig2e",
             "teamName": "California Golden Seals",
-            "score": 26.5,
+            "score": 29.3,
             "gamesPlayed": 9
           },
           "home": {
@@ -13255,13 +13255,13 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 7.55,
+            "score": 7.85,
             "gamesPlayed": 8
           },
           "home": {
             "teamId": "uzhvniysmo2tig2e",
             "teamName": "Boston Bruins",
-            "score": 14.9,
+            "score": 18.4,
             "gamesPlayed": 12
           }
         },
@@ -13283,7 +13283,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 7.1,
+            "score": 9.8,
             "gamesPlayed": 6
           },
           "home": {
@@ -13297,7 +13297,7 @@
           "away": {
             "teamId": "adfljh3wmo2tig2e",
             "teamName": "Nashville Predators",
-            "score": 29.5,
+            "score": 33.3,
             "gamesPlayed": 11
           },
           "home": {
@@ -13317,15 +13317,15 @@
           "home": {
             "teamId": "p7f42l5emo2tig2e",
             "teamName": "Atlanta Thrashers",
-            "score": 12.35,
-            "gamesPlayed": 7
+            "score": 15.45,
+            "gamesPlayed": 8
           }
         },
         {
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 32.65,
+            "score": 32.95,
             "gamesPlayed": 11
           },
           "home": {
@@ -13339,13 +13339,13 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 21.75,
+            "score": 27.2,
             "gamesPlayed": 14
           },
           "home": {
             "teamId": "pelw39b7mo2tig2f",
             "teamName": "Ottawa Senators",
-            "score": 33.15,
+            "score": 37.3,
             "gamesPlayed": 12
           }
         }
@@ -18181,17 +18181,17 @@
       "totalPointsFor": 4482.6,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 3536.35
+      "totalPointsAgainst": 3542.85
     },
     {
       "teamId": "pelw39b7mo2tig2f",
       "teamName": "Ottawa Senators",
       "rank": 2,
       "points": "18-6-0",
-      "totalPointsFor": 4392.0,
+      "totalPointsFor": 4405.2,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3638.95
+      "totalPointsAgainst": 3647.1
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18201,17 +18201,17 @@
       "totalPointsFor": 3921.3,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3557.3
+      "totalPointsAgainst": 3563.9
     },
     {
       "teamId": "jbmeb32tmo2tig2e",
       "teamName": "Montréal Canadiens",
       "rank": 4,
       "points": "17-7-0",
-      "totalPointsFor": 4016.55,
+      "totalPointsFor": 4017.45,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3729.7
+      "totalPointsAgainst": 3735.15
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18221,17 +18221,17 @@
       "totalPointsFor": 4002.15,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3605.65
+      "totalPointsAgainst": 3613.2
     },
     {
       "teamId": "69yb2d10mo2tig2e",
       "teamName": "Québec Nordiques",
       "rank": 6,
       "points": "16-8-0",
-      "totalPointsFor": 3952.65,
+      "totalPointsFor": 3961.95,
       "winPercentage": 0.667,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3627.95
+      "totalPointsAgainst": 3635.2
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18251,7 +18251,7 @@
       "totalPointsFor": 3697.35,
       "winPercentage": 0.5,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3704.2
+      "totalPointsAgainst": 3708.3
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18261,37 +18261,37 @@
       "totalPointsFor": 3379.35,
       "winPercentage": 0.458,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3655.05
+      "totalPointsAgainst": 3657.85
     },
     {
       "teamId": "adfljh3wmo2tig2e",
       "teamName": "Nashville Predators",
       "rank": 10,
       "points": "10-14-0",
-      "totalPointsFor": 3651.75,
+      "totalPointsFor": 3664.5,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3709.7
+      "totalPointsAgainst": 3715.15
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
       "teamName": "Florida Panthers",
       "rank": 11,
       "points": "8-16-0",
-      "totalPointsFor": 3169.5,
+      "totalPointsFor": 3171.3,
       "winPercentage": 0.333,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3616.2
+      "totalPointsAgainst": 3622.8
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
       "teamName": "Anaheim Mighty Ducks",
       "rank": 12,
       "points": "7-17-0",
-      "totalPointsFor": 3589.8,
+      "totalPointsFor": 3607.2,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3732.35
+      "totalPointsAgainst": 3740.6
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18301,24 +18301,24 @@
       "totalPointsFor": 3484.65,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3953.05
+      "totalPointsAgainst": 3959.35
     },
     {
       "teamId": "p7f42l5emo2tig2e",
       "teamName": "Atlanta Thrashers",
       "rank": 14,
       "points": "6-18-0",
-      "totalPointsFor": 3062.7,
+      "totalPointsFor": 3071.1,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3732.15
+      "totalPointsAgainst": 3735.15
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
       "teamName": "California Golden Seals",
       "rank": 15,
       "points": "5-19-0",
-      "totalPointsFor": 2985.9,
+      "totalPointsFor": 3001.8,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
       "totalPointsAgainst": 3640.6
@@ -18328,10 +18328,10 @@
       "teamName": "Boston Bruins",
       "rank": 16,
       "points": "4-20-0",
-      "totalPointsFor": 3157.05,
+      "totalPointsFor": 3167.25,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3640.4
+      "totalPointsAgainst": 3640.7
     }
   ],
   "matchups": [
@@ -18353,7 +18353,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 14.9,
+        "score": 18.4,
         "gamesPlayed": 12
       },
       "home": {
@@ -18367,7 +18367,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 26.5,
+        "score": 29.3,
         "gamesPlayed": 9
       },
       "home": {
@@ -18381,14 +18381,14 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 7.55,
+        "score": 7.85,
         "gamesPlayed": 8
       },
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 12.35,
-        "gamesPlayed": 7
+        "score": 15.45,
+        "gamesPlayed": 8
       }
     },
     {
@@ -18409,13 +18409,13 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 7.1,
+        "score": 9.8,
         "gamesPlayed": 6
       },
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 33.15,
+        "score": 37.3,
         "gamesPlayed": 12
       }
     },
@@ -18423,13 +18423,13 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 29.5,
+        "score": 33.3,
         "gamesPlayed": 11
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 21.75,
+        "score": 27.2,
         "gamesPlayed": 14
       }
     },
@@ -18443,7 +18443,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 32.65,
+        "score": 32.95,
         "gamesPlayed": 11
       }
     },
@@ -18451,7 +18451,7 @@
       "away": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 14.9,
+        "score": 18.4,
         "gamesPlayed": 12
       },
       "home": {
@@ -18465,7 +18465,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 26.5,
+        "score": 29.3,
         "gamesPlayed": 9
       },
       "home": {
@@ -18479,7 +18479,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 7.55,
+        "score": 7.85,
         "gamesPlayed": 8
       },
       "home": {
@@ -18507,21 +18507,21 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 7.1,
+        "score": 9.8,
         "gamesPlayed": 6
       },
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 12.35,
-        "gamesPlayed": 7
+        "score": 15.45,
+        "gamesPlayed": 8
       }
     },
     {
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 29.5,
+        "score": 33.3,
         "gamesPlayed": 11
       },
       "home": {
@@ -18541,7 +18541,7 @@
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 33.15,
+        "score": 37.3,
         "gamesPlayed": 12
       }
     },
@@ -18549,13 +18549,13 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 32.65,
+        "score": 32.95,
         "gamesPlayed": 11
       },
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 21.75,
+        "score": 27.2,
         "gamesPlayed": 14
       }
     },
@@ -18563,7 +18563,7 @@
       "away": {
         "teamId": "gqpb7szpmo2tig2e",
         "teamName": "California Golden Seals",
-        "score": 26.5,
+        "score": 29.3,
         "gamesPlayed": 9
       },
       "home": {
@@ -18577,13 +18577,13 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 7.55,
+        "score": 7.85,
         "gamesPlayed": 8
       },
       "home": {
         "teamId": "uzhvniysmo2tig2e",
         "teamName": "Boston Bruins",
-        "score": 14.9,
+        "score": 18.4,
         "gamesPlayed": 12
       }
     },
@@ -18605,7 +18605,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 7.1,
+        "score": 9.8,
         "gamesPlayed": 6
       },
       "home": {
@@ -18619,7 +18619,7 @@
       "away": {
         "teamId": "adfljh3wmo2tig2e",
         "teamName": "Nashville Predators",
-        "score": 29.5,
+        "score": 33.3,
         "gamesPlayed": 11
       },
       "home": {
@@ -18639,15 +18639,15 @@
       "home": {
         "teamId": "p7f42l5emo2tig2e",
         "teamName": "Atlanta Thrashers",
-        "score": 12.35,
-        "gamesPlayed": 7
+        "score": 15.45,
+        "gamesPlayed": 8
       }
     },
     {
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 32.65,
+        "score": 32.95,
         "gamesPlayed": 11
       },
       "home": {
@@ -18661,13 +18661,13 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 21.75,
+        "score": 27.2,
         "gamesPlayed": 14
       },
       "home": {
         "teamId": "pelw39b7mo2tig2f",
         "teamName": "Ottawa Senators",
-        "score": 33.15,
+        "score": 37.3,
         "gamesPlayed": 12
       }
     }
