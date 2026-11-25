@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-25T14:50:11.697663+00:00",
+  "updatedAt": "2026-11-25T15:45:53.144626+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13107,7 +13107,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 30.05,
+            "score": 30.45,
             "gamesPlayed": 14
           }
         },
@@ -13233,7 +13233,7 @@
           "home": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 30.05,
+            "score": 30.45,
             "gamesPlayed": 14
           }
         },
@@ -13339,7 +13339,7 @@
           "away": {
             "teamId": "bvm8qt4omo2tig2f",
             "teamName": "Anaheim Mighty Ducks",
-            "score": 30.05,
+            "score": 30.45,
             "gamesPlayed": 14
           },
           "home": {
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 4407.15,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3650.15
+      "totalPointsAgainst": 3650.55
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18211,7 +18211,7 @@
       "totalPointsFor": 4025.85,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3738.0
+      "totalPointsAgainst": 3738.4
     },
     {
       "teamId": "fdy3gp6lmo2tig2e",
@@ -18271,7 +18271,7 @@
       "totalPointsFor": 3664.8,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3718.0
+      "totalPointsAgainst": 3718.4
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18288,7 +18288,7 @@
       "teamName": "Anaheim Mighty Ducks",
       "rank": 12,
       "points": "7-17-0",
-      "totalPointsFor": 3616.8,
+      "totalPointsFor": 3618.0,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
       "totalPointsAgainst": 3743.85
@@ -18429,7 +18429,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 30.05,
+        "score": 30.45,
         "gamesPlayed": 14
       }
     },
@@ -18555,7 +18555,7 @@
       "home": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 30.05,
+        "score": 30.45,
         "gamesPlayed": 14
       }
     },
@@ -18661,7 +18661,7 @@
       "away": {
         "teamId": "bvm8qt4omo2tig2f",
         "teamName": "Anaheim Mighty Ducks",
-        "score": 30.05,
+        "score": 30.45,
         "gamesPlayed": 14
       },
       "home": {
