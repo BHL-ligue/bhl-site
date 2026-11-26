@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-26T07:58:54.572314+00:00",
+  "updatedAt": "2026-11-26T08:59:04.024853+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13051,7 +13051,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 86.7,
+            "score": 86.75,
             "gamesPlayed": 26
           }
         },
@@ -13121,7 +13121,7 @@
           "home": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 85.1,
+            "score": 85.15,
             "gamesPlayed": 27
           }
         },
@@ -13177,7 +13177,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 86.7,
+            "score": 86.75,
             "gamesPlayed": 26
           }
         },
@@ -13227,7 +13227,7 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 85.1,
+            "score": 85.15,
             "gamesPlayed": 27
           },
           "home": {
@@ -13303,7 +13303,7 @@
           "home": {
             "teamId": "kplo9zwcmo2tig2f",
             "teamName": "Hartford Whalers",
-            "score": 86.7,
+            "score": 86.75,
             "gamesPlayed": 26
           }
         },
@@ -13325,7 +13325,7 @@
           "away": {
             "teamId": "jbmeb32tmo2tig2e",
             "teamName": "Montréal Canadiens",
-            "score": 85.1,
+            "score": 85.15,
             "gamesPlayed": 27
           },
           "home": {
@@ -18198,7 +18198,7 @@
       "teamName": "Hartford Whalers",
       "rank": 3,
       "points": "18-6-0",
-      "totalPointsFor": 4131.45,
+      "totalPointsFor": 4131.6,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
       "totalPointsAgainst": 3692.0
@@ -18208,7 +18208,7 @@
       "teamName": "Montréal Canadiens",
       "rank": 4,
       "points": "17-7-0",
-      "totalPointsFor": 4173.9,
+      "totalPointsFor": 4174.05,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
       "totalPointsAgainst": 3864.6
@@ -18221,7 +18221,7 @@
       "totalPointsFor": 4152.6,
       "winPercentage": 0.708,
       "gamesBack": 6.0,
-      "totalPointsAgainst": 3749.6
+      "totalPointsAgainst": 3749.65
     },
     {
       "teamId": "69yb2d10mo2tig2e",
@@ -18241,7 +18241,7 @@
       "totalPointsFor": 3930.9,
       "winPercentage": 0.583,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3832.35
+      "totalPointsAgainst": 3832.4
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18251,7 +18251,7 @@
       "totalPointsFor": 3861.3,
       "winPercentage": 0.5,
       "gamesBack": 11.0,
-      "totalPointsAgainst": 3850.4
+      "totalPointsAgainst": 3850.45
     },
     {
       "teamId": "1bn2dvarmo2tig2f",
@@ -18271,7 +18271,7 @@
       "totalPointsFor": 3795.3,
       "winPercentage": 0.417,
       "gamesBack": 13.0,
-      "totalPointsAgainst": 3864.5
+      "totalPointsAgainst": 3864.55
     },
     {
       "teamId": "3fyp69fcmo2tig2f",
@@ -18291,7 +18291,7 @@
       "totalPointsFor": 3682.2,
       "winPercentage": 0.292,
       "gamesBack": 16.0,
-      "totalPointsAgainst": 3871.55
+      "totalPointsAgainst": 3871.6
     },
     {
       "teamId": "mmvzhj4amo2tig2e",
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 3116.25,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3787.5
+      "totalPointsAgainst": 3787.55
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18373,7 +18373,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 86.7,
+        "score": 86.75,
         "gamesPlayed": 26
       }
     },
@@ -18443,7 +18443,7 @@
       "home": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 85.1,
+        "score": 85.15,
         "gamesPlayed": 27
       }
     },
@@ -18499,7 +18499,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 86.7,
+        "score": 86.75,
         "gamesPlayed": 26
       }
     },
@@ -18549,7 +18549,7 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 85.1,
+        "score": 85.15,
         "gamesPlayed": 27
       },
       "home": {
@@ -18625,7 +18625,7 @@
       "home": {
         "teamId": "kplo9zwcmo2tig2f",
         "teamName": "Hartford Whalers",
-        "score": 86.7,
+        "score": 86.75,
         "gamesPlayed": 26
       }
     },
@@ -18647,7 +18647,7 @@
       "away": {
         "teamId": "jbmeb32tmo2tig2e",
         "teamName": "Montréal Canadiens",
-        "score": 85.1,
+        "score": 85.15,
         "gamesPlayed": 27
       },
       "home": {
