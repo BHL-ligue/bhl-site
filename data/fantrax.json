@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-26T15:34:20.819063+00:00",
+  "updatedAt": "2026-11-26T16:39:31.809948+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13037,7 +13037,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 78.85,
+            "score": 78.65,
             "gamesPlayed": 21
           }
         },
@@ -13163,7 +13163,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 78.85,
+            "score": 78.65,
             "gamesPlayed": 21
           }
         },
@@ -13289,7 +13289,7 @@
           "home": {
             "teamId": "b2lquor7mo2tig2e",
             "teamName": "Colorado Avalanche",
-            "score": 78.85,
+            "score": 78.65,
             "gamesPlayed": 21
           }
         },
@@ -18178,7 +18178,7 @@
       "teamName": "Colorado Avalanche",
       "rank": 1,
       "points": "23-1-0",
-      "totalPointsFor": 4605.75,
+      "totalPointsFor": 4605.15,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
       "totalPointsAgainst": 3654.35
@@ -18231,7 +18231,7 @@
       "totalPointsFor": 4115.1,
       "winPercentage": 0.667,
       "gamesBack": 7.0,
-      "totalPointsAgainst": 3760.5
+      "totalPointsAgainst": 3760.3
     },
     {
       "teamId": "l9ssazuemo2tig2e",
@@ -18281,7 +18281,7 @@
       "totalPointsFor": 3252.6,
       "winPercentage": 0.333,
       "gamesBack": 15.0,
-      "totalPointsAgainst": 3746.2
+      "totalPointsAgainst": 3746.0
     },
     {
       "teamId": "bvm8qt4omo2tig2f",
@@ -18331,7 +18331,7 @@
       "totalPointsFor": 3268.5,
       "winPercentage": 0.167,
       "gamesBack": 19.0,
-      "totalPointsAgainst": 3751.05
+      "totalPointsAgainst": 3750.85
     }
   ],
   "matchups": [
@@ -18359,7 +18359,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 78.85,
+        "score": 78.65,
         "gamesPlayed": 21
       }
     },
@@ -18485,7 +18485,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 78.85,
+        "score": 78.65,
         "gamesPlayed": 21
       }
     },
@@ -18611,7 +18611,7 @@
       "home": {
         "teamId": "b2lquor7mo2tig2e",
         "teamName": "Colorado Avalanche",
-        "score": 78.85,
+        "score": 78.65,
         "gamesPlayed": 21
       }
     },
