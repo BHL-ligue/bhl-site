@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-26T21:22:33.504510+00:00",
+  "updatedAt": "2026-11-26T22:21:46.733480+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -303,6 +303,7 @@
           "name": "Dylan Cozens",
           "position": "C",
           "eligiblePositions": [
+            "RW",
             "C"
           ],
           "status": "ACTIVE"
