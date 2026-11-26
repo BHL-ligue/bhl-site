@@ -2,7 +2,7 @@
   "leagueId": "32q8rjpomo2tig1z",
   "leagueName": "BHL Béliveau Hockey League",
   "season": 2026,
-  "updatedAt": "2026-11-26T05:35:33.475470+00:00",
+  "updatedAt": "2026-11-26T06:33:03.337505+00:00",
   "rosterPeriod": 9,
   "scoringPeriod": 9,
   "periodDates": {
@@ -13017,13 +13017,13 @@
           "away": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 55.4,
+            "score": 55.45,
             "gamesPlayed": 24
           },
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 55.4,
+            "score": 55.5,
             "gamesPlayed": 27
           }
         },
@@ -13059,7 +13059,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 35.05,
+            "score": 34.95,
             "gamesPlayed": 23
           },
           "home": {
@@ -13087,7 +13087,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 60.8,
+            "score": 60.85,
             "gamesPlayed": 21
           },
           "home": {
@@ -13135,7 +13135,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 55.4,
+            "score": 55.5,
             "gamesPlayed": 27
           }
         },
@@ -13149,7 +13149,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 55.4,
+            "score": 55.45,
             "gamesPlayed": 24
           }
         },
@@ -13157,7 +13157,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 35.05,
+            "score": 34.95,
             "gamesPlayed": 23
           },
           "home": {
@@ -13185,7 +13185,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 60.8,
+            "score": 60.85,
             "gamesPlayed": 21
           },
           "home": {
@@ -13247,7 +13247,7 @@
           "home": {
             "teamId": "mmvzhj4amo2tig2e",
             "teamName": "Chicago Blackhawks",
-            "score": 55.4,
+            "score": 55.5,
             "gamesPlayed": 27
           }
         },
@@ -13255,7 +13255,7 @@
           "away": {
             "teamId": "3fyp69fcmo2tig2f",
             "teamName": "Florida Panthers",
-            "score": 35.05,
+            "score": 34.95,
             "gamesPlayed": 23
           },
           "home": {
@@ -13275,7 +13275,7 @@
           "home": {
             "teamId": "1bn2dvarmo2tig2f",
             "teamName": "Minnesota North Stars",
-            "score": 55.4,
+            "score": 55.45,
             "gamesPlayed": 24
           }
         },
@@ -13283,7 +13283,7 @@
           "away": {
             "teamId": "69yb2d10mo2tig2e",
             "teamName": "Québec Nordiques",
-            "score": 60.8,
+            "score": 60.85,
             "gamesPlayed": 21
           },
           "home": {
@@ -18181,7 +18181,7 @@
       "totalPointsFor": 4604.55,
       "winPercentage": 0.958,
       "gamesBack": 0.0,
-      "totalPointsAgainst": 3654.4
+      "totalPointsAgainst": 3654.35
     },
     {
       "teamId": "pelw39b7mo2tig2f",
@@ -18191,7 +18191,7 @@
       "totalPointsFor": 4511.7,
       "winPercentage": 0.75,
       "gamesBack": 5.0,
-      "totalPointsAgainst": 3772.9
+      "totalPointsAgainst": 3772.95
     },
     {
       "teamId": "kplo9zwcmo2tig2f",
@@ -18241,7 +18241,7 @@
       "totalPointsFor": 3930.9,
       "winPercentage": 0.583,
       "gamesBack": 9.0,
-      "totalPointsAgainst": 3832.3
+      "totalPointsAgainst": 3832.35
     },
     {
       "teamId": "4fmu58uhmo2tig2f",
@@ -18261,7 +18261,7 @@
       "totalPointsFor": 3483.15,
       "winPercentage": 0.458,
       "gamesBack": 12.0,
-      "totalPointsAgainst": 3784.5
+      "totalPointsAgainst": 3784.6
     },
     {
       "teamId": "adfljh3wmo2tig2e",
@@ -18301,7 +18301,7 @@
       "totalPointsFor": 3610.95,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 4065.45
+      "totalPointsAgainst": 4065.5
     },
     {
       "teamId": "p7f42l5emo2tig2e",
@@ -18311,7 +18311,7 @@
       "totalPointsFor": 3219.0,
       "winPercentage": 0.25,
       "gamesBack": 17.0,
-      "totalPointsAgainst": 3863.5
+      "totalPointsAgainst": 3863.45
     },
     {
       "teamId": "gqpb7szpmo2tig2e",
@@ -18321,7 +18321,7 @@
       "totalPointsFor": 3116.25,
       "winPercentage": 0.208,
       "gamesBack": 18.0,
-      "totalPointsAgainst": 3787.35
+      "totalPointsAgainst": 3787.5
     },
     {
       "teamId": "uzhvniysmo2tig2e",
@@ -18339,13 +18339,13 @@
       "away": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 55.4,
+        "score": 55.45,
         "gamesPlayed": 24
       },
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 55.4,
+        "score": 55.5,
         "gamesPlayed": 27
       }
     },
@@ -18381,7 +18381,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 35.05,
+        "score": 34.95,
         "gamesPlayed": 23
       },
       "home": {
@@ -18409,7 +18409,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 60.8,
+        "score": 60.85,
         "gamesPlayed": 21
       },
       "home": {
@@ -18457,7 +18457,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 55.4,
+        "score": 55.5,
         "gamesPlayed": 27
       }
     },
@@ -18471,7 +18471,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 55.4,
+        "score": 55.45,
         "gamesPlayed": 24
       }
     },
@@ -18479,7 +18479,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 35.05,
+        "score": 34.95,
         "gamesPlayed": 23
       },
       "home": {
@@ -18507,7 +18507,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 60.8,
+        "score": 60.85,
         "gamesPlayed": 21
       },
       "home": {
@@ -18569,7 +18569,7 @@
       "home": {
         "teamId": "mmvzhj4amo2tig2e",
         "teamName": "Chicago Blackhawks",
-        "score": 55.4,
+        "score": 55.5,
         "gamesPlayed": 27
       }
     },
@@ -18577,7 +18577,7 @@
       "away": {
         "teamId": "3fyp69fcmo2tig2f",
         "teamName": "Florida Panthers",
-        "score": 35.05,
+        "score": 34.95,
         "gamesPlayed": 23
       },
       "home": {
@@ -18597,7 +18597,7 @@
       "home": {
         "teamId": "1bn2dvarmo2tig2f",
         "teamName": "Minnesota North Stars",
-        "score": 55.4,
+        "score": 55.45,
         "gamesPlayed": 24
       }
     },
@@ -18605,7 +18605,7 @@
       "away": {
         "teamId": "69yb2d10mo2tig2e",
         "teamName": "Québec Nordiques",
-        "score": 60.8,
+        "score": 60.85,
         "gamesPlayed": 21
       },
       "home": {
